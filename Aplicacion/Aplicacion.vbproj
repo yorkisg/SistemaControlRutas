@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>Z:\SALA CONTROL GPS\Sistema Yorkis no Tocar\</PublishUrl>
+    <PublishUrl>Z:\SALA CONTROL GPS\Sistema Yorkis no Tocar\Actualizaciones\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -23,8 +23,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\hac-c-08088\SALA CONTROL GPS\Sistema Yorkis no Tocar\</InstallUrl>
-    <ApplicationRevision>2</ApplicationRevision>
+    <InstallUrl>\\domhac\SALA CONTROL GPS\Sistema Yorkis no Tocar\Actualizaciones\</InstallUrl>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -126,6 +126,7 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
+    <Import Include="System.Deployment.Application" />
     <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Drawing.Design" />

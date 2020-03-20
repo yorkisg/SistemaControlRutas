@@ -32,6 +32,7 @@ Partial Class AccesoAplicacion
         Me.BotonSalir = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.rolusuario = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -113,12 +114,22 @@ Partial Class AccesoAplicacion
         Me.rolusuario.Text = "rolusuario"
         Me.rolusuario.Visible = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(218, 101)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 23
+        Me.Button1.Text = "Actualizar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'AccesoAplicacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(228, 136)
+        Me.ClientSize = New System.Drawing.Size(337, 136)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.rolusuario)
         Me.Controls.Add(Me.BotonSalir)
         Me.Controls.Add(Me.BotonEntrar)
@@ -145,4 +156,5 @@ Partial Class AccesoAplicacion
     Friend WithEvents BotonSalir As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
     Friend WithEvents rolusuario As System.Windows.Forms.Label
+    Friend WithEvents Button1 As Button
 End Class

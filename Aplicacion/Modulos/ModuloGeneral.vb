@@ -1,7 +1,5 @@
 ﻿
-
 Imports System.Reflection
-Imports System.Deployment.Application
 
 
 Module ModuloGeneral
@@ -39,6 +37,7 @@ Module ModuloGeneral
 
             'Comprobamos si existen actualizaciones disponibles e iniciamos la aplicacion
             'ComprobarActualizacion()
+            ComprobarActualizacion2()
 
         Catch myerror As Exception
 
@@ -218,10 +217,10 @@ Module ModuloGeneral
                     End If
                 Else
                     ' Display a message that the app MUST reboot. Display the minimum required version.
-                    MessageBox.Show("This application has detected a mandatory update from your current " & _
-                        "version to version " & info.MinimumRequiredVersion.ToString() & _
-                        ". The application will now install the update and restart.", _
-                        "Update Available", MessageBoxButtons.OK, _
+                    MessageBox.Show("This application has detected a mandatory update from your current " &
+                        "version to version " & info.MinimumRequiredVersion.ToString() &
+                        ". The application will now install the update and restart.",
+                        "Update Available", MessageBoxButtons.OK,
                         MessageBoxIcon.Information)
                 End If
 
@@ -239,5 +238,5 @@ Module ModuloGeneral
         End If
     End Sub
 
-   
+
 End Module
