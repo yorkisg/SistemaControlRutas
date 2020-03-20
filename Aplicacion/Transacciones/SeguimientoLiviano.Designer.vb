@@ -693,7 +693,7 @@ Partial Class SeguimientoLiviano
         Me.TextBox6.BackColor = System.Drawing.Color.AliceBlue
         Me.TextBox6.Enabled = False
         Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox6.Location = New System.Drawing.Point(367, 80)
+        Me.TextBox6.Location = New System.Drawing.Point(367, 108)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(46, 23)
         Me.TextBox6.TabIndex = 96
@@ -720,7 +720,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox15
         '
-        Me.TextBox15.Location = New System.Drawing.Point(367, 197)
+        Me.TextBox15.Location = New System.Drawing.Point(367, 196)
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(46, 23)
         Me.TextBox15.TabIndex = 100
@@ -729,7 +729,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(367, 153)
+        Me.TextBox11.Location = New System.Drawing.Point(367, 152)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(46, 23)
         Me.TextBox11.TabIndex = 99
@@ -738,7 +738,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(367, 51)
+        Me.TextBox10.Location = New System.Drawing.Point(367, 64)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(46, 23)
         Me.TextBox10.TabIndex = 98
@@ -747,7 +747,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(367, 22)
+        Me.TextBox9.Location = New System.Drawing.Point(367, 20)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(46, 23)
         Me.TextBox9.TabIndex = 97
