@@ -1,6 +1,4 @@
 ﻿
-Imports System.Windows.Forms.DataVisualization.Charting
-Imports System.Configuration
 
 Module ModuloConsulta
 

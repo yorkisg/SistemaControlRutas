@@ -1,17 +1,8 @@
 ﻿
 
 Imports System.Reflection
-Imports System.Windows.Forms
-Imports System.Windows.Forms.DataVisualization.Charting
-'Imports System.IO
-'Imports System.Xml
-'Imports System.Double
-'Imports System.String
-'Imports System.Math
-'Imports System.Configuration
 Imports System.Deployment.Application
-Imports System.Drawing
-Imports System.Drawing.Imaging
+
 
 Module ModuloGeneral
 
