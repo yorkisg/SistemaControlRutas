@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43E45C02-E397-467B-B5A6-7CE48DC33D8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Aplicacion.My.MyApplication</StartupObject>
+    <RootNamespace>Aplicacion</RootNamespace>
+    <AssemblyName>Sistema de Gestión de Rutas</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Sistema de Gestión de Rutas.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Sistema de Gestión de Rutas.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="MySql.Data" />
+    <Import Include="MySql.Data.MySqlClient" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing.Design" />
+    <Import Include="System.Drawing.Drawing2D" />
+    <Import Include="System.IO" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms.Design" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Consultas\ConsultaChofer.Designer.vb">
+      <DependentUpon>ConsultaChofer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaChofer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaHistorialVehiculo.Designer.vb">
+      <DependentUpon>ConsultaHistorialVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaHistorialVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaInfraccion.Designer.vb">
+      <DependentUpon>ConsultaInfraccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaInfraccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaProducto.Designer.vb">
+      <DependentUpon>ConsultaProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaRuta.Designer.vb">
+      <DependentUpon>ConsultaRuta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaRuta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaVehiculo.Designer.vb">
+      <DependentUpon>ConsultaVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\GuiaTelefonica.Designer.vb">
+      <DependentUpon>GuiaTelefonica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\GuiaTelefonica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ListadoGeneralVehiculo.Designer.vb">
+      <DependentUpon>ListadoGeneralVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ListadoGeneralVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ReporteInfraccion.Designer.vb">
+      <DependentUpon>ReporteInfraccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ReporteInfraccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ListadoResumenVehiculo.Designer.vb">
+      <DependentUpon>ListadoResumenVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ListadoResumenVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaHistorialVehiculo.Designer.vb">
+      <DependentUpon>EstadisticaHistorialVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaHistorialVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaInfraccion.Designer.vb">
+      <DependentUpon>EstadisticaInfraccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaInfraccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaProducto.Designer.vb">
+      <DependentUpon>EstadisticaProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaRuta.Designer.vb">
+      <DependentUpon>EstadisticaRuta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaRuta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaUbicacionDestino.Designer.vb">
+      <DependentUpon>EstadisticaUbicacionDestino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Estadisticas\EstadisticaUbicacionDestino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\ListadoChofer.Designer.vb">
+      <DependentUpon>ListadoChofer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\ListadoChofer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\ListadoDestino.Designer.vb">
+      <DependentUpon>ListadoDestino.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\ListadoDestino.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\ListadoEstado.Designer.vb">
+      <DependentUpon>ListadoEstado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\ListadoEstado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\ListadoFlota.Designer.vb">
+      <DependentUpon>ListadoFlota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\ListadoFlota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\ListadoPersona.Designer.vb">
+      <DependentUpon>ListadoPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\ListadoPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\ListadoProducto.Designer.vb">
+      <DependentUpon>ListadoProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\ListadoProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\ListadoSitioCarga.Designer.vb">
+      <DependentUpon>ListadoSitioCarga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\ListadoSitioCarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listados\ListadoVehiculo.Designer.vb">
+      <DependentUpon>ListadoVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Listados\ListadoVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroChofer.Designer.vb">
+      <DependentUpon>MaestroChofer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroChofer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroEstado.Designer.vb">
+      <DependentUpon>MaestroEstado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroEstado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroFlota.Designer.vb">
+      <DependentUpon>MaestroFlota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroFlota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroIncidencia.Designer.vb">
+      <DependentUpon>MaestroIncidencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroIncidencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroInfraccion.Designer.vb">
+      <DependentUpon>MaestroInfraccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroInfraccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroPersona.Designer.vb">
+      <DependentUpon>MaestroPersona.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroPersona.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroProducto.Designer.vb">
+      <DependentUpon>MaestroProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroSitioCarga.Designer.vb">
+      <DependentUpon>MaestroSitioCarga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroSitioCarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maestros\MaestroVehiculo.Designer.vb">
+      <DependentUpon>MaestroVehiculo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroVehiculo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloConsulta.vb" />
+    <Compile Include="Modulos\ModuloEstadistica.vb" />
+    <Compile Include="Modulos\ModuloGeneral.vb" />
+    <Compile Include="Modulos\ModuloListado.vb" />
+    <Compile Include="Modulos\ModuloSeguimientoCarga.vb" />
+    <Compile Include="Modulos\ModuloSeguimientoLiviano.vb" />
+    <Compile Include="Modulos\ModuloSeguimientoTaller.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Principal\AccesoAplicacion.Designer.vb">
+      <DependentUpon>AccesoAplicacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\AccesoAplicacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\Principal.Designer.vb">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\Principal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\RegistrarReporteTaller.Designer.vb">
+      <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\RegistrarReporteTaller.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ResumenMateriaPrima.Designer.vb">
+      <DependentUpon>ResumenMateriaPrima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ResumenMateriaPrima.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\SeguimientoCarga.Designer.vb">
+      <DependentUpon>SeguimientoCarga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\SeguimientoCarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\SeguimientoLiviano.Designer.vb">
+      <DependentUpon>SeguimientoLiviano.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\SeguimientoLiviano.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\SeguimientoTaller.Designer.vb">
+      <DependentUpon>SeguimientoTaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\SeguimientoTaller.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Consultas\ConsultaChofer.resx">
+      <DependentUpon>ConsultaChofer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaHistorialVehiculo.resx">
+      <DependentUpon>ConsultaHistorialVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaInfraccion.resx">
+      <DependentUpon>ConsultaInfraccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaProducto.resx">
+      <DependentUpon>ConsultaProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaRuta.resx">
+      <DependentUpon>ConsultaRuta.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaVehiculo.resx">
+      <DependentUpon>ConsultaVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\GuiaTelefonica.resx">
+      <DependentUpon>GuiaTelefonica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ListadoGeneralVehiculo.resx">
+      <DependentUpon>ListadoGeneralVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ReporteInfraccion.resx">
+      <DependentUpon>ReporteInfraccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ListadoResumenVehiculo.resx">
+      <DependentUpon>ListadoResumenVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\EstadisticaHistorialVehiculo.resx">
+      <DependentUpon>EstadisticaHistorialVehiculo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\EstadisticaInfraccion.resx">
+      <DependentUpon>EstadisticaInfraccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\EstadisticaProducto.resx">
+      <DependentUpon>EstadisticaProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\EstadisticaRuta.resx">
+      <DependentUpon>EstadisticaRuta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estadisticas\EstadisticaUbicacionDestino.resx">
+      <DependentUpon>EstadisticaUbicacionDestino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\ListadoChofer.resx">
+      <DependentUpon>ListadoChofer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\ListadoDestino.resx">
+      <DependentUpon>ListadoDestino.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\ListadoEstado.resx">
+      <DependentUpon>ListadoEstado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\ListadoFlota.resx">
+      <DependentUpon>ListadoFlota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\ListadoPersona.resx">
+      <DependentUpon>ListadoPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\ListadoProducto.resx">
+      <DependentUpon>ListadoProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\ListadoSitioCarga.resx">
+      <DependentUpon>ListadoSitioCarga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listados\ListadoVehiculo.resx">
+      <DependentUpon>ListadoVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroChofer.resx">
+      <DependentUpon>MaestroChofer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroEstado.resx">
+      <DependentUpon>MaestroEstado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroFlota.resx">
+      <DependentUpon>MaestroFlota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroIncidencia.resx">
+      <DependentUpon>MaestroIncidencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroInfraccion.resx">
+      <DependentUpon>MaestroInfraccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroPersona.resx">
+      <DependentUpon>MaestroPersona.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroProducto.resx">
+      <DependentUpon>MaestroProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroSitioCarga.resx">
+      <DependentUpon>MaestroSitioCarga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroVehiculo.resx">
+      <DependentUpon>MaestroVehiculo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\AccesoAplicacion.resx">
+      <DependentUpon>AccesoAplicacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\Principal.resx">
+      <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\RegistrarReporteTaller.resx">
+      <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ResumenMateriaPrima.resx">
+      <DependentUpon>ResumenMateriaPrima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\SeguimientoCarga.resx">
+      <DependentUpon>SeguimientoCarga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\SeguimientoLiviano.resx">
+      <DependentUpon>SeguimientoLiviano.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\SeguimientoTaller.resx">
+      <DependentUpon>SeguimientoTaller.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icono.ico" />
+    <Content Include="Recursos\Abierto1.png" />
+    <Content Include="Recursos\Abierto2.png" />
+    <Content Include="Recursos\Accidentado.png" />
+    <Content Include="Recursos\Aceptar.png" />
+    <Content Include="Recursos\Advertencia.png" />
+    <Content Include="Recursos\Agregar.png" />
+    <Content Include="Recursos\AgregarNuevo.png" />
+    <Content Include="Recursos\AgregarReporte.png" />
+    <Content Include="Recursos\Alerta.png" />
+    <Content Include="Recursos\Analista.png" />
+    <Content Include="Recursos\Archivo 1.ico" />
+    <Content Include="Recursos\Archivo2.png" />
+    <None Include="Recursos\Bandera.png" />
+    <Content Include="Recursos\Bus.png" />
+    <Content Include="Recursos\Buscar.png" />
+    <Content Include="Recursos\CambiarEstado.png" />
+    <None Include="Recursos\Camion.png" />
+    <Content Include="Recursos\CantidadVehiculo.png" />
+    <Content Include="Recursos\CargadoEsperandoDocumentos.png" />
+    <Content Include="Recursos\CargadoEsperandoPorSalir.png" />
+    <Content Include="Recursos\CECON 1.png" />
+    <Content Include="Recursos\CECON 3.png" />
+    <Content Include="Recursos\Cerrado.png" />
+    <Content Include="Recursos\Cerrar.gif" />
+    <Content Include="Recursos\Choferes.png" />
+    <Content Include="Recursos\Consultar3.png" />
+    <Content Include="Recursos\ConsultarChofer.png" />
+    <Content Include="Recursos\ConsultarInfracciones.gif" />
+    <Content Include="Recursos\ConsultarVehiculo.png" />
+    <Content Include="Recursos\ControldePeso1.png" />
+    <Content Include="Recursos\ControldePeso2.png" />
+    <Content Include="Recursos\ControldePeso3.png" />
+    <Content Include="Recursos\ControlDeRutas2.png" />
+    <Content Include="Recursos\ControlDeRutas3.png" />
+    <Content Include="Recursos\ControlDeRutas4.png" />
+    <Content Include="Recursos\ControlDeRutas5.png" />
+    <None Include="Recursos\Critico.png" />
+    <None Include="Recursos\Copair.png" />
+    <Content Include="Recursos\DeRegresoCargado.png" />
+    <Content Include="Recursos\DeRegresoConRetorno.png" />
+    <Content Include="Recursos\DeRegresoVacio.png" />
+    <Content Include="Recursos\Detenido.png" />
+    <Content Include="Recursos\EditarDatos.png" />
+    <Content Include="Recursos\EditarRuta.png" />
+    <Content Include="Recursos\Eliminar.png" />
+    <Content Include="Recursos\EliminarRuta.png" />
+    <Content Include="Recursos\EnElClienteEnElProveedor.png" />
+    <Content Include="Recursos\EnElSitioDeCarga.png" />
+    <Content Include="Recursos\EnProcesoDeCarga.png" />
+    <Content Include="Recursos\EnProcesoDeDescarga.png" />
+    <Content Include="Recursos\EnReparacion.png" />
+    <Content Include="Recursos\EnRutaCargado.png" />
+    <Content Include="Recursos\EnRutaVacio.png" />
+    <Content Include="Recursos\EnTaller.png" />
+    <Content Include="Recursos\EsperandoAutorizacionParaSalir.png" />
+    <Content Include="Recursos\EsperandoPorSalir.png" />
+    <Content Include="Recursos\EstadisticaRuta.png" />
+    <Content Include="Recursos\Estadisticas.png" />
+    <Content Include="Recursos\Estados.png" />
+    <Content Include="Recursos\ExportarExcell.png" />
+    <None Include="Recursos\Extensiones.png" />
+    <Content Include="Recursos\Filtro.png" />
+    <Content Include="Recursos\Flota.png" />
+    <Content Include="Recursos\FondoPantalla.png" />
+    <Content Include="Recursos\Guardar.png" />
+    <Content Include="Recursos\Guia2.png" />
+    <Content Include="Recursos\Historial.png" />
+    <Content Include="Recursos\HistorialInfraccion.png" />
+    <Content Include="Recursos\Icono6.ico" />
+    <Content Include="Recursos\ImprimirReporte.png" />
+    <Content Include="Recursos\Incidencias.png" />
+    <None Include="Recursos\Intermedio.png" />
+    <Content Include="Recursos\LibroNovedades.png" />
+    <Content Include="Recursos\Limpiar.png" />
+    <Content Include="Recursos\Lista.ico" />
+    <Content Include="Recursos\ListadoActual.png" />
+    <Content Include="Recursos\ListadoGrupo.png" />
+    <Content Include="Recursos\ListadoResumen.png" />
+    <Content Include="Recursos\Listas.gif" />
+    <Content Include="Recursos\ListasProductos.png" />
+    <Content Include="Recursos\ListasUbicaciones.png" />
+    <Content Include="Recursos\Liviano.ico" />
+    <Content Include="Recursos\Login.ico" />
+    <Content Include="Recursos\Login.png" />
+    <Content Include="Recursos\Logo.jpg" />
+    <Content Include="Recursos\LogoPcp.png" />
+    <None Include="Recursos\Malo.png" />
+    <Content Include="Recursos\Mapa 2.png" />
+    <Content Include="Recursos\Mapas2.png" />
+    <Content Include="Recursos\MateriaPrima3.png" />
+    <Content Include="Recursos\MateriaPrimaCompeltada.png" />
+    <Content Include="Recursos\MateriaPrimaMensual.png" />
+    <Content Include="Recursos\Modificar.gif" />
+    <Content Include="Recursos\ModificarReporte.png" />
+    <Content Include="Recursos\Operativo.png" />
+    <Content Include="Recursos\OrganizacionElTunal.png" />
+    <Content Include="Recursos\ParadaIrregular.png" />
+    <None Include="Recursos\Pegar.gif" />
+    <Content Include="Recursos\PendientePorRevision.png" />
+    <Content Include="Recursos\PernoctaAutorizada.png" />
+    <Content Include="Recursos\Peso 3.png" />
+    <Content Include="Recursos\Peso.png" />
+    <Content Include="Recursos\Producto2.png" />
+    <Content Include="Recursos\Proveedor.png" />
+    <Content Include="Recursos\PuntoAsistencial.png" />
+    <Content Include="Recursos\RealizandoMovimientos.png" />
+    <Content Include="Recursos\RegistrarInfraccion.gif" />
+    <Content Include="Recursos\RegistrarrNovedad.png" />
+    <Content Include="Recursos\RegistroFallaMecanica.gif" />
+    <Content Include="Recursos\Retirar.png" />
+    <Content Include="Recursos\Robado.png" />
+    <Content Include="Recursos\RutaCancelada.png" />
+    <Content Include="Recursos\Rutas.png" />
+    <Content Include="Recursos\Salir.png" />
+    <Content Include="Recursos\SinReporte.png" />
+    <Content Include="Recursos\SinRevision.png" />
+    <Content Include="Recursos\Taller.png" />
+    <Content Include="Recursos\Taller2.ico" />
+    <Content Include="Recursos\Taller2.png" />
+    <Content Include="Recursos\Taller3.png" />
+    <Content Include="Recursos\Turno.png" />
+    <Content Include="Recursos\Vehiculo2.png" />
+    <Content Include="Recursos\Vehiculos.ico" />
+    <Content Include="Recursos\VehiculosCarretera.ico" />
+    <Content Include="Recursos\Version.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
