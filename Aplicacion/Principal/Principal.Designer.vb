@@ -362,7 +362,7 @@ Partial Class Principal
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Panel1.BackColor = System.Drawing.Color.SlateGray
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Panel1.Controls.Add(Me.ToolStrip1)

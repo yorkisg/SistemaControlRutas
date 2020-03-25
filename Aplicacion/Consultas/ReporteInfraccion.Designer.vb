@@ -22,21 +22,22 @@ Partial Class ReporteInfraccion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title2 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteInfraccion))
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -57,7 +58,7 @@ Partial Class ReporteInfraccion
         Me.ColumnaFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Menu = New System.Windows.Forms.ToolStrip()
+        Me.Menu2 = New System.Windows.Forms.ToolStrip()
         Me.BotonConsultar2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonLimpiar2 = New System.Windows.Forms.ToolStripButton()
@@ -70,13 +71,12 @@ Partial Class ReporteInfraccion
         Me.BotonLimpiar = New System.Windows.Forms.ToolStripButton()
         Me.BotonExportar = New System.Windows.Forms.ToolStripButton()
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Menu.SuspendLayout()
+        Me.Menu2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStripSeparator2
@@ -117,6 +117,14 @@ Partial Class ReporteInfraccion
         Me.GroupBox1.TabIndex = 80
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SELECCIONAR PERÍODO DE FECHAS"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(158, 146)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(109, 23)
+        Me.TextBox4.TabIndex = 85
+        Me.TextBox4.Visible = False
         '
         'RadioButton2
         '
@@ -239,14 +247,14 @@ Partial Class ReporteInfraccion
         Me.DataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaChofer, Me.ColumnaCantidad, Me.ColumnaVelocidad, Me.ColumnaImagen, Me.ColumnaPromedio, Me.ColumnaFlota})
         Me.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill
@@ -263,9 +271,9 @@ Partial Class ReporteInfraccion
         'ColumnaChofer
         '
         Me.ColumnaChofer.DataPropertyName = "Chofer"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
         Me.ColumnaChofer.HeaderText = "CHOFER"
         Me.ColumnaChofer.MinimumWidth = 135
         Me.ColumnaChofer.Name = "ColumnaChofer"
@@ -275,8 +283,8 @@ Partial Class ReporteInfraccion
         '
         Me.ColumnaCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaCantidad.DataPropertyName = "Cantidad de Infracciones"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaCantidad.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaCantidad.DefaultCellStyle = DataGridViewCellStyle3
         Me.ColumnaCantidad.HeaderText = "CANTIDAD DE INFRACCIONES"
         Me.ColumnaCantidad.MinimumWidth = 105
         Me.ColumnaCantidad.Name = "ColumnaCantidad"
@@ -287,8 +295,8 @@ Partial Class ReporteInfraccion
         '
         Me.ColumnaVelocidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaVelocidad.DataPropertyName = "Maxima Velocidad"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle4
         Me.ColumnaVelocidad.FillWeight = 31.74049!
         Me.ColumnaVelocidad.HeaderText = "MÁXIMA VELOCIDAD KM/H"
         Me.ColumnaVelocidad.MinimumWidth = 100
@@ -308,8 +316,8 @@ Partial Class ReporteInfraccion
         '
         Me.ColumnaPromedio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaPromedio.DataPropertyName = "Promedio del Periodo"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaPromedio.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaPromedio.DefaultCellStyle = DataGridViewCellStyle5
         Me.ColumnaPromedio.HeaderText = "PROMEDIO DEL VIAJE KM/H"
         Me.ColumnaPromedio.MinimumWidth = 105
         Me.ColumnaPromedio.Name = "ColumnaPromedio"
@@ -319,9 +327,9 @@ Partial Class ReporteInfraccion
         'ColumnaFlota
         '
         Me.ColumnaFlota.DataPropertyName = "Flota"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle6
         Me.ColumnaFlota.HeaderText = "FLOTA"
         Me.ColumnaFlota.MinimumWidth = 115
         Me.ColumnaFlota.Name = "ColumnaFlota"
@@ -340,37 +348,37 @@ Partial Class ReporteInfraccion
         '
         'Chart1
         '
-        ChartArea2.AxisX.LineColor = System.Drawing.Color.LightBlue
-        ChartArea2.AxisX2.LineColor = System.Drawing.Color.LightBlue
-        ChartArea2.AxisY.LineColor = System.Drawing.Color.LightBlue
-        ChartArea2.AxisY2.LineColor = System.Drawing.Color.LightBlue
-        ChartArea2.CursorX.SelectionColor = System.Drawing.Color.Red
-        ChartArea2.CursorY.SelectionColor = System.Drawing.Color.Red
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
+        ChartArea1.AxisX.LineColor = System.Drawing.Color.LightBlue
+        ChartArea1.AxisX2.LineColor = System.Drawing.Color.LightBlue
+        ChartArea1.AxisY.LineColor = System.Drawing.Color.LightBlue
+        ChartArea1.AxisY2.LineColor = System.Drawing.Color.LightBlue
+        ChartArea1.CursorX.SelectionColor = System.Drawing.Color.Red
+        ChartArea1.CursorY.SelectionColor = System.Drawing.Color.Red
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
         Me.Chart1.Location = New System.Drawing.Point(6, 22)
         Me.Chart1.Name = "Chart1"
-        Series2.ChartArea = "ChartArea1"
-        Series2.CustomProperties = "PointWidth=0.3"
-        Series2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Series2.IsValueShownAsLabel = True
-        Series2.IsVisibleInLegend = False
-        Series2.Name = "Estados"
-        Me.Chart1.Series.Add(Series2)
+        Series1.ChartArea = "ChartArea1"
+        Series1.CustomProperties = "PointWidth=0.3"
+        Series1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.IsValueShownAsLabel = True
+        Series1.IsVisibleInLegend = False
+        Series1.Name = "Estados"
+        Me.Chart1.Series.Add(Series1)
         Me.Chart1.Size = New System.Drawing.Size(289, 177)
         Me.Chart1.TabIndex = 2
-        Title2.Name = "Title1"
-        Me.Chart1.Titles.Add(Title2)
+        Title1.Name = "Title1"
+        Me.Chart1.Titles.Add(Title1)
         '
-        'Menu
+        'Menu2
         '
-        Me.Menu.BackColor = System.Drawing.SystemColors.Control
-        Me.Menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonConsultar2, Me.ToolStripSeparator4, Me.BotonLimpiar2, Me.ToolStripSeparator6, Me.BotonExportar2, Me.ToolStripSeparator7, Me.BotonSalir2, Me.ToolStripSeparator8})
-        Me.Menu.Location = New System.Drawing.Point(0, 0)
-        Me.Menu.Name = "Menu"
-        Me.Menu.Size = New System.Drawing.Size(926, 25)
-        Me.Menu.TabIndex = 89
-        Me.Menu.Text = "ToolStrip1"
+        Me.Menu2.BackColor = System.Drawing.SystemColors.Control
+        Me.Menu2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonConsultar2, Me.ToolStripSeparator4, Me.BotonLimpiar2, Me.ToolStripSeparator6, Me.BotonExportar2, Me.ToolStripSeparator7, Me.BotonSalir2, Me.ToolStripSeparator8})
+        Me.Menu2.Location = New System.Drawing.Point(0, 0)
+        Me.Menu2.Name = "Menu2"
+        Me.Menu2.Size = New System.Drawing.Size(926, 25)
+        Me.Menu2.TabIndex = 89
+        Me.Menu2.Text = "ToolStrip1"
         '
         'BotonConsultar2
         '
@@ -456,21 +464,13 @@ Partial Class ReporteInfraccion
         Me.BotonSalir.Size = New System.Drawing.Size(49, 22)
         Me.BotonSalir.Text = "Salir"
         '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(158, 146)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(109, 23)
-        Me.TextBox4.TabIndex = 85
-        Me.TextBox4.Visible = False
-        '
         'ReporteInfraccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(926, 426)
-        Me.Controls.Add(Me.Menu)
+        Me.Controls.Add(Me.Menu2)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -487,8 +487,8 @@ Partial Class ReporteInfraccion
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Menu.ResumeLayout(False)
-        Me.Menu.PerformLayout()
+        Me.Menu2.ResumeLayout(False)
+        Me.Menu2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -516,7 +516,7 @@ Partial Class ReporteInfraccion
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Menu As System.Windows.Forms.ToolStrip
+    Friend WithEvents Menu2 As System.Windows.Forms.ToolStrip
     Friend WithEvents BotonConsultar2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BotonLimpiar2 As System.Windows.Forms.ToolStripButton

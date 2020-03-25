@@ -132,9 +132,9 @@ Partial Class MaestroVehiculo
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label3.Location = New System.Drawing.Point(12, 25)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(18, 15)
+        Me.Label3.Size = New System.Drawing.Size(44, 15)
         Me.Label3.TabIndex = 54
-        Me.Label3.Text = "ID"
+        Me.Label3.Text = "PLACA"
         '
         'Label1
         '

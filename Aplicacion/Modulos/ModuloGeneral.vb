@@ -1,7 +1,6 @@
 ﻿
 Imports System.Reflection
 
-
 Module ModuloGeneral
 
     'Variables globales de conexion de datos.
@@ -37,7 +36,7 @@ Module ModuloGeneral
 
             'Comprobamos si existen actualizaciones disponibles e iniciamos la aplicacion
             'ComprobarActualizacion()
-            ComprobarActualizacion2()
+            isVersionOK()
 
         Catch myerror As Exception
 
@@ -158,39 +157,6 @@ Module ModuloGeneral
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub ComprobarActualizacion()
-        'Metodo usado para comprobar si existe algun cambio que actualizar
-
-        Dim info As UpdateCheckInfo = Nothing
-
-        If (ApplicationDeployment.IsNetworkDeployed) Then
-
-            Dim AD As ApplicationDeployment = ApplicationDeployment.CurrentDeployment
-
-            Try
-                info = AD.CheckForDetailedUpdate()
-            Catch dde As DeploymentDownloadException
-
-            Catch ioe As InvalidOperationException
-
-            End Try
-
-            If (info.UpdateAvailable) Then
-
-                Try
-                    AD.Update()
-
-                    Application.Restart()
-                Catch dde As DeploymentDownloadException
-
-                End Try
-
-            End If
-
-        End If
-
-    End Sub
-
-    Public Sub ComprobarActualizacion2()
 
         Dim info As UpdateCheckInfo = Nothing
 
@@ -238,5 +204,40 @@ Module ModuloGeneral
         End If
     End Sub
 
+    Public Function isVersionOK() As Boolean
+
+        Dim info As UpdateCheckInfo = Nothing
+
+        If ApplicationDeployment.IsNetworkDeployed Then
+            Dim ad As ApplicationDeployment = ApplicationDeployment.CurrentDeployment
+
+            Try
+                info = ad.CheckForDetailedUpdate()
+            Catch __unusedDeploymentDownloadException1__ As DeploymentDownloadException
+                Return False
+            Catch __unusedInvalidDeploymentException2__ As InvalidDeploymentException
+                Return False
+            Catch __unusedInvalidOperationException3__ As InvalidOperationException
+                Return False
+            End Try
+
+            If info.UpdateAvailable Then
+
+                Try
+                    ad.Update()
+                    Application.Restart()
+                    Environment.[Exit](0)
+                Catch __unusedDeploymentDownloadException1__ As DeploymentDownloadException
+                End Try
+
+                Return False
+            End If
+
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
 
 End Module
