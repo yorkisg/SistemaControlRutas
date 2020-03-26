@@ -9,8 +9,8 @@ Module ModuloListado
         'Metodo para cargar el datagridview.
 
         'Conexion a la BD.
-        Dim sql As String = "SELECT idchofer, nombrechofer, tipochofer, telefono1, telefono2, estadochofer " _
-            & " FROM chofer " _
+        Dim sql As String = "SELECT idchofer, nombrechofer, tipochofer, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
+            & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadochofer FROM chofer " _
             & " WHERE estadochofer = '" & ListadoChofer.TextBox1.Text & "' " _
             & " AND tipochofer = '" & ListadoChofer.TextBox2.Text & "' " _
             & " ORDER BY nombrechofer ASC"

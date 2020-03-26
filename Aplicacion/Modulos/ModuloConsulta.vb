@@ -793,6 +793,29 @@ Module ModuloConsulta
 
     End Sub
 
+    Public Sub ObtenerChoferListado()
+        'Este metodo permite obtener el ID del chofer y sus datos
+
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
+
+        Adaptador = New MySqlDataAdapter("SELECT idchofer, nombrechofer, tipochofer, telefono1, telefono2, estadochofer " _
+                                          & " FROM chofer WHERE idchofer = '" & ListadoChofer.TextBox3.Text & "' ", cnn)
+        Adaptador.Fill(Tabla)
+
+        For Each row As DataRow In Tabla.Rows
+
+            MaestroChofer.TextBox1.Text = row("idchofer").ToString
+            MaestroChofer.TextBox2.Text = row("nombrechofer").ToString
+            MaestroChofer.ComboTipoChofer.Text = row("tipochofer").ToString
+            MaestroChofer.TextBox3.Text = row("telefono1").ToString
+            MaestroChofer.TextBox4.Text = row("telefono2").ToString
+            MaestroChofer.ComboEstadoChofer.Text = row("estadochofer").ToString
+
+        Next
+
+    End Sub
+
     Public Sub CargarImagenesReporteVelocidad()
         'En este metodo especificamos cuales son las imagenes que se cargaran en el 
         'CellFormatting del DataGridView1

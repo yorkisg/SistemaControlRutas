@@ -69,17 +69,16 @@ Public Class ListadoChofer
 
             If MaestroChofer.Visible = True Then
                 'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
+                'Llamamos al metodo para obtener los datos del chofer y luego editarlos en el MaestroChofer
 
-                MaestroChofer.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                MaestroChofer.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-                MaestroChofer.ComboTipoChofer.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
-                MaestroChofer.TextBox3.Text = CStr(DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value)
-                MaestroChofer.TextBox4.Text = CStr(DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(4).Value)
-                MaestroChofer.ComboEstadoChofer.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(5).Value
+                'Guardamos el id en el textbox
+                TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
 
-                'Se activa el uso del boton modificar del formulario "MaestroChofer"
+                'Enviamos datos al formulario
+                ObtenerChoferListado()
+                MaestroChofer.Show()
+
                 MaestroChofer.BotonModificar.Enabled = True
-                'Se desactiva el uso del boton guardar del formulario "MaestroChofer"
                 MaestroChofer.BotonGuardar.Enabled = False
 
                 'Se cierra el formulario ListadoChofer
@@ -253,17 +252,16 @@ Public Class ListadoChofer
 
             If MaestroChofer.Visible = True Then
                 'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
+                'Llamamos al metodo para obtener los datos del chofer y luego editarlos en el MaestroChofer
 
-                MaestroChofer.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                MaestroChofer.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-                MaestroChofer.ComboTipoChofer.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
-                MaestroChofer.TextBox3.Text = CStr(DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value)
-                MaestroChofer.TextBox4.Text = CStr(DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(4).Value)
-                MaestroChofer.ComboEstadoChofer.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(5).Value
+                'Guardamos el id en el textbox
+                TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
 
-                'Se activa el uso del boton modificar del formulario "MaestroChofer"
+                'Enviamos datos al formulario
+                ObtenerChoferListado()
+                MaestroChofer.Show()
+
                 MaestroChofer.BotonModificar.Enabled = True
-                'Se desactiva el uso del boton guardar del formulario "MaestroChofer"
                 MaestroChofer.BotonGuardar.Enabled = False
 
                 'Se cierra el formulario ListadoChofer

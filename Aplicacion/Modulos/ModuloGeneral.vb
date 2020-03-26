@@ -36,7 +36,7 @@ Module ModuloGeneral
 
             'Comprobamos si existen actualizaciones disponibles e iniciamos la aplicacion
             'ComprobarActualizacion()
-            isVersionOK()
+            ComprobarActualizacion2()
 
         Catch myerror As Exception
 
@@ -204,7 +204,7 @@ Module ModuloGeneral
         End If
     End Sub
 
-    Public Function isVersionOK() As Boolean
+    Public Function ComprobarActualizacion2() As Boolean
 
         Dim info As UpdateCheckInfo = Nothing
 
