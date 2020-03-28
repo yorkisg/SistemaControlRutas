@@ -6,6 +6,7 @@ Public Class ReporteInfraccion
 
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
+        AlternarFilasGeneral(DataGridView1)
 
         'Se coloca la fecha actual
         DateTimePicker1.Value = Today
@@ -13,7 +14,7 @@ Public Class ReporteInfraccion
 
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
-        EnableDoubleBuffered(Chart1)
+        EnableDoubleBuffered(DataGridView1)
 
         'Seleccionamos "Carga" al inicio del formulario
         RadioButton1.Checked = True
@@ -39,7 +40,7 @@ Public Class ReporteInfraccion
             If DateTimePicker1.Value <= DateTimePicker2.Value Then
 
                 CargarGridListadoReporteInfraccion()
-                GenerarChartListadoInfraccionEstados()
+                CargarListadoInfraccion()
 
                 CargarImagenesReporteVelocidad()
 
@@ -162,7 +163,7 @@ Public Class ReporteInfraccion
 
             End If
 
-            If TipoFlota = "GRANEL" Then
+            If TipoFlota = "GRANEL" Or TipoFlota = "AMBULANCIAS" Then
 
                 e.CellStyle.ForeColor = Color.Green
 

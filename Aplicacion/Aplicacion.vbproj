@@ -13,20 +13,22 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>Z:\SALA CONTROL GPS\Sistema Yorkis no Tocar\Actualizaciones\</PublishUrl>
+    <PublishUrl>C:\Users\hac08088\Desktop\Prueba\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
+    <UpdateMode>Background</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\domhac\SALA CONTROL GPS\Sistema Yorkis no Tocar\Actualizaciones\Sistema de Gestión de Rutas\</InstallUrl>
+    <InstallUrl>//HAC-C-08088/Users/hac08088/Desktop/Prueba/</InstallUrl>
+    <UpdateUrl>//HAC-C-08088/Users/hac08088/Desktop/Prueba/</UpdateUrl>
     <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>

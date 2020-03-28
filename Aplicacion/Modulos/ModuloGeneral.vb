@@ -30,13 +30,13 @@ Module ModuloGeneral
 
                 cnn.ConnectionString = "server=172.16.8.88;user=cecon01;password=1234;database=bdsaladecontrolgps;port=3306"
                 cnn.Open()
+
+                'Comprobamos si existen actualizaciones disponibles e iniciamos la aplicacion
+                ComprobarActualizacion()
+
                 MsgBox("Conexión Exitosa.", MsgBoxStyle.Information, "Exito.")
 
             End If
-
-            'Comprobamos si existen actualizaciones disponibles e iniciamos la aplicacion
-            'ComprobarActualizacion()
-            ComprobarActualizacion2()
 
         Catch myerror As Exception
 
@@ -153,7 +153,7 @@ Module ModuloGeneral
     End Sub
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''COMPROBAR ACTUALIZACION (NO USADO AUN)''''''''''''
+    '''''''COMPROBAR ACTUALIZACION (EN PRUEBA Y DESARROLLO)''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub ComprobarActualizacion()
@@ -166,10 +166,10 @@ Module ModuloGeneral
             Try
                 info = AD.CheckForDetailedUpdate()
             Catch dde As DeploymentDownloadException
-                MessageBox.Show("La nueva version de la aplicación no puede ser descargada aun. " + ControlChars.Lf & ControlChars.Lf & "Por favor verifique su conexión, o intente mas tarde. Error: " + dde.Message)
+                MessageBox.Show("La nueva versión de la aplicación no puede ser descargada aun. " + ControlChars.Lf & ControlChars.Lf & "Por favor verifique su conexión, o intente mas tarde. Error: " + dde.Message)
                 Return
             Catch ioe As InvalidOperationException
-                MessageBox.Show("Esta aplciación no puede ser actualizada. A ocurrido algun problema. Error: " & ioe.Message)
+                MessageBox.Show("Esta aplicación no puede ser actualizada en este momento. Error: " & ioe.Message)
                 Return
             End Try
 
@@ -177,7 +177,7 @@ Module ModuloGeneral
                 Dim doUpdate As Boolean = True
 
                 If (Not info.IsUpdateRequired) Then
-                    Dim dr As DialogResult = MessageBox.Show("Una nueva actualziación esta disponible. Le gustaria actualizar la aplicación en este momento?", "Actualización disponible.", MessageBoxButtons.OKCancel)
+                    Dim dr As DialogResult = MessageBox.Show("Una nueva actualización esta disponible. Le gustaria descargarla en este momento?", "Actualización disponible", MessageBoxButtons.OKCancel)
                     If (Not System.Windows.Forms.DialogResult.OK = dr) Then
                         doUpdate = False
                     End If
@@ -186,7 +186,7 @@ Module ModuloGeneral
                     MessageBox.Show("This application has detected a mandatory update from your current " &
                         "version to version " & info.MinimumRequiredVersion.ToString() &
                         ". The application will now install the update and restart.",
-                        "Update Available", MessageBoxButtons.OK,
+                        "Actualización disponible", MessageBoxButtons.OK,
                         MessageBoxIcon.Information)
                 End If
 
@@ -202,42 +202,7 @@ Module ModuloGeneral
                 End If
             End If
         End If
+
     End Sub
-
-    Public Function ComprobarActualizacion2() As Boolean
-
-        Dim info As UpdateCheckInfo = Nothing
-
-        If ApplicationDeployment.IsNetworkDeployed Then
-            Dim ad As ApplicationDeployment = ApplicationDeployment.CurrentDeployment
-
-            Try
-                info = ad.CheckForDetailedUpdate()
-            Catch __unusedDeploymentDownloadException1__ As DeploymentDownloadException
-                Return False
-            Catch __unusedInvalidDeploymentException2__ As InvalidDeploymentException
-                Return False
-            Catch __unusedInvalidOperationException3__ As InvalidOperationException
-                Return False
-            End Try
-
-            If info.UpdateAvailable Then
-
-                Try
-                    ad.Update()
-                    Application.Restart()
-                    Environment.[Exit](0)
-                Catch __unusedDeploymentDownloadException1__ As DeploymentDownloadException
-                End Try
-
-                Return False
-            End If
-
-            Return True
-        Else
-            Return False
-        End If
-
-    End Function
 
 End Module

@@ -135,6 +135,12 @@
   <metadata name="ColumnaFlota.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="DataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Menu2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>145, 3</value>
   </metadata>
@@ -153,12 +159,12 @@
   <data name="BotonLimpiar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrboMwEIRpz5FKvUNQ7hkhxD+uwm1AvMT7
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrboMwEIRpz5FKvUNQ7hkhxA8Ow21AvMT7
         TbLxuF6XJKR1kEa2wPMxu7CW9XMdhI5Cp3/0LZ5/Ks/dcuz7vgyC4LKuK+1pHEdyHOcsXLuQE8xt21LX
         dVpVVVFRFBTHsYRGUUSu6z5BPhAbB4ZhoGma5Ao1TUNlWVKSJBIgUhJe4nkeQ2QZGgAzCwAY6rqmNE2f
         ylK9gvcXsCyLPog96kZJKCXLMpkkDEN5Zhfw2LwtBEnQjzzPzQEAMgTloCcAGSfgRPM8y94AAr0NQApu
         LvpiBICJhQQQzG8D2LxdjRJwA7dJeL8L8H3/+moOHu/jt1f/gR4oW3ye7q9hYoiamUZNrwZ8iZ1tMM48
-        7hh9eKwbcaSHKOxNC/EAAAAASUVORK5CYII=
+        7hh9eKwbayOHH1XhZW4AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BotonExportar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -241,12 +247,12 @@
   <data name="BotonLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrboMwEIRpz5FKvUNQ7hkhxF9uwm1AvMT7
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrboMwEIRpz5FKvUNQ7hkhxC/Owm1AvMT7
         TbLxuF6XJKR1kEa2wPMxu7CW9XMdhI5Cp3/0LZ5/Ks/dcuz7vgyC4LKuK+1pHEdyHOcsXLuQE8xt21LX
         dVpVVVFRFBTHsYRGUUSu6z5BPhAbB4ZhoGma5Ao1TUNlWVKSJBIgUhJe4nkeQ2QZGgAzCwAY6rqmNE2f
         ylK9gvcXsCyLPog96kZJKCXLMpkkDEN5Zhfw2LwtBEnQjzzPzQEAMgTloCcAGSfgRPM8y94AAr0NQApu
         LvpiBICJhQQQzG8D2LxdjRJwA7dJeL8L8H3/+moOHu/jt1f/gR4oW3ye7q9hYoiamUZNrwZ8iZ1tMM48
-        7hh9eKwbdfqHLoEEcW0AAAAASUVORK5CYII=
+        7hh9eKwbb3mHJas/8eAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BotonExportar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

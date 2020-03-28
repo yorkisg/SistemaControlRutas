@@ -463,58 +463,11 @@ Module ModuloConsulta
 
     End Sub
 
-    Public Sub GenerarChartListadoInfraccionEstados()
-        'Metodo que permite generar un grafico de acuerdo a los valores obtenidos desde la BD
-        'ListadoReporteInfraccion
+    Public Sub CargarListadoInfraccion()
+        'Metodo para cargar el datagridview.
 
-        Dim Command As New MySqlCommand("SELECT COUNT(estadovehiculo) AS 'Conteo', estadovehiculo AS 'Estado' " _
-                                    & " FROM registroinfraccion, vehiculo " _
-                                    & " WHERE registroinfraccion.vehiculo = vehiculo.idvehiculo " _
-                                    & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
-                                    & " AND clasificacionvehiculo = '" & ReporteInfraccion.TextBox3.Text & "' " _
-                                    & " GROUP BY estadovehiculo " _
-                                    & " ORDER BY estadovehiculo ASC", cnn)
 
-        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ReporteInfraccion.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ReporteInfraccion.DateTimePicker2.Value
 
-        Dim adaptador As New MySqlDataAdapter(Command)
-        Dim Tabla As New DataTable
-        adaptador.Fill(Tabla)
-
-        'Enlace de datos con las barras (series)
-        ReporteInfraccion.Chart1.Series("Estados").XValueMember = "Estado"
-        ReporteInfraccion.Chart1.Series("Estados").YValueMembers = "Conteo"
-
-        'Para ocultar las grillas
-        ReporteInfraccion.Chart1.ChartAreas(0).AxisX.MajorGrid.Enabled = False
-        ReporteInfraccion.Chart1.ChartAreas(0).AxisX.MinorGrid.Enabled = False
-        ReporteInfraccion.Chart1.ChartAreas(0).AxisY.MajorGrid.Enabled = False
-        ReporteInfraccion.Chart1.ChartAreas(0).AxisY.MinorGrid.Enabled = False
-
-        'Establecemos el grafico en 3D
-        ReporteInfraccion.Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
-
-        'Para cambiar la fuente de los ejes Y, X
-        ReporteInfraccion.Chart1.ChartAreas(0).AxisX.LabelStyle.Font = New Font("Segoe UI", 9)
-        ReporteInfraccion.Chart1.ChartAreas(0).AxisY.LabelStyle.Font = New Font("Segoe UI", 9)
-
-        'Para cambiar color del fondo
-        ReporteInfraccion.Chart1.ChartAreas(0).BackColor = Color.GhostWhite
-
-        'Color de las barras (series)
-        ReporteInfraccion.Chart1.Series(0).Color = Color.CornflowerBlue
-
-        ReporteInfraccion.Chart1.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = False
-        ReporteInfraccion.Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Angle = -55
-
-        'Limpiamos y actualizamos el grafico como tal
-        ReporteInfraccion.Chart1.Series(0).Points.Clear()
-        ReporteInfraccion.Chart1.DataSource = ""
-
-        'Enlace de datos
-        ReporteInfraccion.Chart1.DataSource = Tabla
 
     End Sub
 
@@ -545,16 +498,16 @@ Module ModuloConsulta
     Public Sub CargarGridGeneralVehiculo()
         'Metodo que genera la carga de datos en el DataGridview2.
 
-        Dim sql As String = "SELECT vehiculo, nombrechofer, nombreproducto, nombresitiocarga, nombredestino, nombresubflota, nombreestado " _
+        Dim sql As String = "Select vehiculo, nombrechofer, nombreproducto, nombresitiocarga, nombredestino, nombresubflota, nombreestado " _
                          & " FROM ruta, chofer, subflota, vehiculo, destino, producto, sitiocarga, estadoruta  " _
                          & " WHERE ruta.chofer = chofer.idchofer " _
-                         & " AND ruta.vehiculo = vehiculo.idvehiculo  " _
-                         & " AND vehiculo.subflota = subflota.idsubflota  " _
-                         & " AND ruta.destino = destino.iddestino  " _
-                         & " AND ruta.producto = producto.idproducto  " _
-                         & " AND ruta.sitiocarga = sitiocarga.idsitiocarga  " _
-                         & " AND ruta.estadoruta = estadoruta.idestado " _
-                         & " AND estado = 'ACTIVA' " _
+                         & " And ruta.vehiculo = vehiculo.idvehiculo  " _
+                         & " And vehiculo.subflota = subflota.idsubflota  " _
+                         & " And ruta.destino = destino.iddestino  " _
+                         & " And ruta.producto = producto.idproducto  " _
+                         & " And ruta.sitiocarga = sitiocarga.idsitiocarga  " _
+                         & " And ruta.estadoruta = estadoruta.idestado " _
+                         & " And estado = 'ACTIVA' " _
                          & " AND nombreestado NOT IN ('EN TALLER') " _
                          & " ORDER BY nombresubflota ASC, nombreproducto ASC, nombresitiocarga ASC, nombreestado ASC "
 
