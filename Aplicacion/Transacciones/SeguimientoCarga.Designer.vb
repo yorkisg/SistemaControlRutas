@@ -175,14 +175,14 @@ Partial Class SeguimientoCarga
         'Arbol
         '
         Me.Arbol.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.Arbol.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Arbol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Arbol.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Arbol.FullRowSelect = True
         Me.Arbol.ItemHeight = 18
-        Me.Arbol.Location = New System.Drawing.Point(6, 6)
+        Me.Arbol.Location = New System.Drawing.Point(6, 3)
         Me.Arbol.Name = "Arbol"
         Me.Arbol.ShowNodeToolTips = True
-        Me.Arbol.Size = New System.Drawing.Size(167, 253)
+        Me.Arbol.Size = New System.Drawing.Size(167, 256)
         Me.Arbol.TabIndex = 20
         '
         'DateTimePicker1
