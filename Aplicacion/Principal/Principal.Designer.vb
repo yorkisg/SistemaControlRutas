@@ -357,12 +357,12 @@ Partial Class Principal
         '
         Me.MenuSalir2.Image = CType(resources.GetObject("MenuSalir2.Image"), System.Drawing.Image)
         Me.MenuSalir2.Name = "MenuSalir2"
-        Me.MenuSalir2.Size = New System.Drawing.Size(152, 22)
+        Me.MenuSalir2.Size = New System.Drawing.Size(101, 22)
         Me.MenuSalir2.Text = "Salir"
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.Panel1.BackColor = System.Drawing.Color.SeaGreen
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Panel1.Controls.Add(Me.ToolStrip1)

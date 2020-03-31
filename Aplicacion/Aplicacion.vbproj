@@ -13,7 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>C:\Users\hac08088\Desktop\Prueba\</PublishUrl>
+    <PublishUrl>C:\Sistema de Gestion de Rutas\Actualizacion\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -23,9 +23,9 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>//HAC-C-08088/Prueba/</InstallUrl>
+    <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
     <UpdateUrl>//HAC-C-08088/Users/hac08088/Desktop/Prueba/</UpdateUrl>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
