@@ -362,7 +362,7 @@ Partial Class Principal
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.SeaGreen
+        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Panel1.Controls.Add(Me.ToolStrip1)
@@ -406,7 +406,7 @@ Partial Class Principal
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripButton1.Text = "31.03.2019"
+        Me.ToolStripButton1.Text = "01.04.2020"
         '
         'ToolStripLabel2
         '

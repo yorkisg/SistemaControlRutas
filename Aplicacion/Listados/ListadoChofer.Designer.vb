@@ -54,13 +54,13 @@ Partial Class ListadoChofer
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
@@ -283,6 +283,13 @@ Partial Class ListadoChofer
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
         Me.DataGridView.TabIndex = 74
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(149, 128)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 75
+        '
         'Column1
         '
         Me.Column1.DataPropertyName = "idchofer"
@@ -311,14 +318,14 @@ Partial Class ListadoChofer
         '
         'Column4
         '
-        Me.Column4.DataPropertyName = "telefono1"
+        Me.Column4.DataPropertyName = "Telefono1"
         Me.Column4.HeaderText = "TELÉFONO 1"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         '
         'Column6
         '
-        Me.Column6.DataPropertyName = "telefono2"
+        Me.Column6.DataPropertyName = "Telefono2"
         Me.Column6.HeaderText = "TELÉFONO 2"
         Me.Column6.Name = "Column6"
         Me.Column6.ReadOnly = True
@@ -331,13 +338,6 @@ Partial Class ListadoChofer
         Me.Column7.Name = "Column7"
         Me.Column7.ReadOnly = True
         Me.Column7.Width = 150
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(149, 128)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 75
         '
         'ListadoChofer
         '
@@ -392,11 +392,11 @@ Partial Class ListadoChofer
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents TextBox3 As TextBox
 End Class

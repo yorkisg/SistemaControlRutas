@@ -223,6 +223,7 @@ Public Class ListadoChofer
             & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadochofer FROM chofer " _
             & " WHERE estadochofer = '" & TextBox1.Text & "' " _
             & " AND tipochofer = '" & TextBox2.Text & "' " _
+            & " AND nombrechofer LIKE '%" & busqueda & "%' " _
             & " ORDER BY nombrechofer ASC", cnn)
 
         Dim Tabla As New DataTable

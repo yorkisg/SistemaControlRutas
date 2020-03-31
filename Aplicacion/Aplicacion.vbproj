@@ -24,8 +24,8 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <UpdateUrl>//HAC-C-08088/Users/hac08088/Desktop/Prueba/</UpdateUrl>
-    <ApplicationRevision>3</ApplicationRevision>
+    <UpdateUrl>//HAC-C-08088/Actualizacion/</UpdateUrl>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
