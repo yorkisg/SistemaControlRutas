@@ -24,17 +24,17 @@ Partial Class SeguimientoLiviano
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SeguimientoLiviano))
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonGuiaTelefonica = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
@@ -62,14 +62,6 @@ Partial Class SeguimientoLiviano
         Me.Panel6 = New System.Windows.Forms.TabControl()
         Me.Pagina4 = New System.Windows.Forms.TabPage()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pagina5 = New System.Windows.Forms.TabPage()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -135,6 +127,18 @@ Partial Class SeguimientoLiviano
         Me.vehiculo = New System.Windows.Forms.ToolStripLabel()
         Me.MenuHistorial = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EliminarItemToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuRuta2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.MenuEliminar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ColumnaIDegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -154,6 +158,7 @@ Partial Class SeguimientoLiviano
         Me.MenuOpciones.SuspendLayout()
         Me.ToolStrip4.SuspendLayout()
         Me.MenuHistorial.SuspendLayout()
+        Me.MenuRuta2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -293,24 +298,24 @@ Partial Class SeguimientoLiviano
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID2, Me.ColumnaTipoVehiculo2, Me.ColumnaImagen, Me.ColumnaEstadoVehiculo2})
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle16.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView1.Location = New System.Drawing.Point(709, 28)
         Me.DataGridView1.MultiSelect = False
@@ -318,10 +323,10 @@ Partial Class SeguimientoLiviano
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 45
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.ShowEditingIcon = False
         Me.DataGridView1.Size = New System.Drawing.Size(392, 574)
@@ -331,8 +336,8 @@ Partial Class SeguimientoLiviano
         '
         Me.ID2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ID2.DataPropertyName = "idvehiculo"
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ID2.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ID2.DefaultCellStyle = DataGridViewCellStyle2
         Me.ID2.FillWeight = 19.49362!
         Me.ID2.HeaderText = "VEHICULO"
         Me.ID2.Name = "ID2"
@@ -344,9 +349,9 @@ Partial Class SeguimientoLiviano
         '
         Me.ColumnaTipoVehiculo2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaTipoVehiculo2.DataPropertyName = "nombretipo"
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaTipoVehiculo2.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaTipoVehiculo2.DefaultCellStyle = DataGridViewCellStyle3
         Me.ColumnaTipoVehiculo2.FillWeight = 26.29328!
         Me.ColumnaTipoVehiculo2.HeaderText = "TIPO"
         Me.ColumnaTipoVehiculo2.Name = "ColumnaTipoVehiculo2"
@@ -366,9 +371,9 @@ Partial Class SeguimientoLiviano
         'ColumnaEstadoVehiculo2
         '
         Me.ColumnaEstadoVehiculo2.DataPropertyName = "condicionvehiculo"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstadoVehiculo2.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstadoVehiculo2.DefaultCellStyle = DataGridViewCellStyle4
         Me.ColumnaEstadoVehiculo2.FillWeight = 380.7106!
         Me.ColumnaEstadoVehiculo2.HeaderText = "ESTADO VEHICULO"
         Me.ColumnaEstadoVehiculo2.Name = "ColumnaEstadoVehiculo2"
@@ -416,16 +421,16 @@ Partial Class SeguimientoLiviano
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.ButtonFace
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ButtonFace
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.ColumnaChofer, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDegistro, Me.Column2, Me.ColumnaChofer, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView2.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView2.Location = New System.Drawing.Point(3, 3)
@@ -434,71 +439,11 @@ Partial Class SeguimientoLiviano
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.RowHeadersWidth = 45
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(677, 241)
         Me.DataGridView2.TabIndex = 62
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "idregistroinfraccion"
-        Me.Column1.HeaderText = "ID REGISTRO"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "vehiculo"
-        Me.Column2.HeaderText = "VEHICULO"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Visible = False
-        '
-        'ColumnaChofer
-        '
-        Me.ColumnaChofer.DataPropertyName = "nombrechofer"
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "velocidad"
-        Me.Column4.HeaderText = "VELOCIDAD"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "clasificacion"
-        Me.Column5.HeaderText = "CLASIFICACION"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Visible = False
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "estadovehiculo"
-        Me.Column6.HeaderText = "ESTADO"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
-        '
-        'Column7
-        '
-        Me.Column7.DataPropertyName = "fecha"
-        Me.Column7.HeaderText = "FECHA"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "hora"
-        Me.Column8.HeaderText = "HORA"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
         '
         'Pagina5
         '
@@ -522,14 +467,14 @@ Partial Class SeguimientoLiviano
         Me.DataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.ButtonFace
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ButtonFace
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.ColumnaChofer4, Me.DataGridViewTextBoxColumn12, Me.Column9, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16})
         Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
@@ -540,8 +485,8 @@ Partial Class SeguimientoLiviano
         Me.DataGridView3.ReadOnly = True
         Me.DataGridView3.RowHeadersVisible = False
         Me.DataGridView3.RowHeadersWidth = 45
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView3.Size = New System.Drawing.Size(677, 241)
         Me.DataGridView3.TabIndex = 64
@@ -571,8 +516,8 @@ Partial Class SeguimientoLiviano
         'DataGridViewTextBoxColumn12
         '
         Me.DataGridViewTextBoxColumn12.DataPropertyName = "descripcion"
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridViewTextBoxColumn12.HeaderText = "DESCRIPCION"
         Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
         Me.DataGridViewTextBoxColumn12.ReadOnly = True
@@ -1145,6 +1090,92 @@ Partial Class SeguimientoLiviano
         Me.EliminarItemToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.EliminarItemToolStripMenuItem.Text = "Eliminar Item"
         '
+        'MenuRuta2
+        '
+        Me.MenuRuta2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuEliminar, Me.ToolStripSeparator14})
+        Me.MenuRuta2.Name = "MenuRuta"
+        Me.MenuRuta2.Size = New System.Drawing.Size(145, 32)
+        '
+        'MenuEliminar
+        '
+        Me.MenuEliminar.Image = CType(resources.GetObject("MenuEliminar.Image"), System.Drawing.Image)
+        Me.MenuEliminar.Name = "MenuEliminar"
+        Me.MenuEliminar.Size = New System.Drawing.Size(144, 22)
+        Me.MenuEliminar.Text = "Eliminar Item"
+        '
+        'ToolStripSeparator14
+        '
+        Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
+        Me.ToolStripSeparator14.Size = New System.Drawing.Size(141, 6)
+        '
+        'ColumnaIDegistro
+        '
+        Me.ColumnaIDegistro.DataPropertyName = "idregistroinfraccion"
+        Me.ColumnaIDegistro.HeaderText = "ID REGISTRO"
+        Me.ColumnaIDegistro.Name = "ColumnaIDegistro"
+        Me.ColumnaIDegistro.ReadOnly = True
+        Me.ColumnaIDegistro.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "vehiculo"
+        Me.Column2.HeaderText = "VEHICULO"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Visible = False
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.DataPropertyName = "nombrechofer"
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "velocidad"
+        Me.Column4.HeaderText = "VELOCIDAD"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "clasificacion"
+        Me.Column5.HeaderText = "CLASIFICACION"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "estadovehiculo"
+        Me.Column6.HeaderText = "ESTADO"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "fecha"
+        Me.Column7.HeaderText = "FECHA"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "hora"
+        Me.Column8.HeaderText = "HORA"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        '
+        'TextBox19
+        '
+        Me.TextBox19.Location = New System.Drawing.Point(521, 353)
+        Me.TextBox19.Name = "TextBox19"
+        Me.TextBox19.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox19.TabIndex = 87
+        Me.TextBox19.Visible = False
+        '
         'SeguimientoLiviano
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1159,6 +1190,7 @@ Partial Class SeguimientoLiviano
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox14)
+        Me.Controls.Add(Me.TextBox19)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -1190,6 +1222,7 @@ Partial Class SeguimientoLiviano
         Me.ToolStrip4.ResumeLayout(False)
         Me.ToolStrip4.PerformLayout()
         Me.MenuHistorial.ResumeLayout(False)
+        Me.MenuRuta2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1258,14 +1291,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents TextBox18 As System.Windows.Forms.TextBox
     Friend WithEvents BotonBuscar2 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ColumnaChofer4 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -1294,4 +1319,16 @@ Partial Class SeguimientoLiviano
     Friend WithEvents EliminarItemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BotonChofer As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents MenuRuta2 As ContextMenuStrip
+    Friend WithEvents MenuEliminar As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator14 As ToolStripSeparator
+    Friend WithEvents ColumnaIDegistro As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox19 As TextBox
 End Class

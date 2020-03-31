@@ -14,6 +14,16 @@ Public Class AccesoAplicacion
 
     End Sub
 
+    Private Sub AccesoAplicacion_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        'Cierre formal del formulario
+
+        'Desconexion de la BD y cierre de la aplicacion.
+        DesconectarBaseDeDatos()
+
+        Close()
+
+    End Sub
+
     Private Sub BotonEntrar_Click(sender As Object, e As EventArgs) Handles BotonEntrar.Click
         'Boton Login
 

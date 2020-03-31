@@ -239,11 +239,70 @@ Public Class SeguimientoLiviano
 
                 'Seleccionamos y pasamos el valor al TextBox.
                 TextBox16.Text = DataGridView2.Item("ColumnaChofer", DataGridView2.SelectedRows(0).Index).Value
+
                 ObtenerChoferSeguimientoLivianoInfraccion()
+
+                TextBox19.Text = DataGridView2.Item("ColumnaIDegistro", DataGridView2.SelectedRows(0).Index).Value
 
             End If
 
         Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub DataGridView2_MouseClick(sender As Object, e As MouseEventArgs) Handles DataGridView2.MouseClick
+        'Metodo o evento que permite generar menu contextual con click derecho
+
+        Try
+
+            If DataGridView2.RowCount > 0 Or DataGridView2.SelectedRows.Count = 1 Then
+
+                DataGridView2.ContextMenuStrip = MenuRuta2
+
+            Else
+
+                DataGridView2.ContextMenuStrip = Nothing
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+
+        End Try
+
+    End Sub
+
+    Private Sub DataGridView2_MouseDown(sender As Object, e As MouseEventArgs) Handles DataGridView2.MouseDown
+        'Metodo o evento que permite seleccionar filas con el click derecho
+
+        Dim Indice As Integer
+        Dim Dato As DataGridView.HitTestInfo = DataGridView2.HitTest(e.X, e.Y)
+
+        Try
+
+            If e.Button = MouseButtons.Right Then
+
+                If Dato.Type = DataGridViewHitTestType.Cell Then
+
+                    If Dato.RowIndex >= 0 Then
+
+                        Indice = Dato.RowIndex
+                        DataGridView2.CurrentCell = DataGridView2.Rows(Dato.RowIndex).Cells(Dato.ColumnIndex)
+                        DataGridView2.Rows(Dato.RowIndex).Selected = True
+                        DataGridView2.ContextMenuStrip = MenuRuta2
+
+                    End If
+
+                End If
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -568,6 +627,28 @@ Public Class SeguimientoLiviano
 
         MaestroChofer.BotonBuscar.Enabled = False
         MaestroChofer.ShowDialog()
+
+    End Sub
+
+    Private Sub MenuEliminar_Click(sender As Object, e As EventArgs) Handles MenuEliminar.Click
+        'Metodo que permite eliminar items del historial
+
+        Try
+
+            If DataGridView2.RowCount > 0 And DataGridView2.SelectedRows.Count = 1 Then
+
+                EliminarItemLiviano()
+
+                'Luego de eliminar nos posicionamos en la fila ya seleccionada anteriormente
+                'DataGridView1.CurrentCell = DataGridView1(Columna, Fila)
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+
+        End Try
 
     End Sub
 

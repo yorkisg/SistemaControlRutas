@@ -340,5 +340,34 @@ Module ModuloSeguimientoLiviano
 
     End Sub
 
+    Public Sub EliminarItemLiviano()
+        'Metodo que permite eliminar la ruta seleccionada
+
+        Dim Mensaje As DialogResult
+
+        Mensaje = MessageBox.Show("Desea eliminar este Item?", "Aviso.", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        'Si la respuesta es "Si"
+        If Mensaje = DialogResult.Yes Then
+
+            'Se elimina el registro
+            Dim db As New MySqlCommand("DELETE FROM registroinfraccion WHERE idregistroinfraccion = '" & SeguimientoLiviano.TextBox19.Text & "' ", cnn)
+            db.ExecuteNonQuery()
+
+            'Se carga el historial actualizado
+            CargarGridHistorialInfraccionLiviano()
+
+            'Se carga el listado actualizado
+            'CargarGridRutaCarga()
+
+            MsgBox("Item eliminado con Exito.", MsgBoxStyle.Information, "Exito.")
+
+        End If
+
+        'Si la seleccion es "No" Se elimina la seleccion de la fila.
+        SeguimientoLiviano.DataGridView2.ClearSelection()
+
+    End Sub
+
 
 End Module

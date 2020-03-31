@@ -130,6 +130,17 @@ Public Class Principal
         AccesoAplicacion.Close()
 
     End Sub
+    Private Sub Principal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+
+        'Desconexion de la BD y cierre de la aplicacion.
+        DesconectarBaseDeDatos()
+
+        'Dispose o Close, cualquiera de los dos sirve
+        Close()
+
+        AccesoAplicacion.Close()
+
+    End Sub
 
     Private Sub MenuChoferes_Click(sender As Object, e As EventArgs) Handles MenuChoferes.Click
         'Formulario MaestroChofer
