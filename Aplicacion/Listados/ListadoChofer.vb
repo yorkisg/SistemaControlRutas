@@ -219,10 +219,11 @@ Public Class ListadoChofer
     Function Filtrar(ByVal busqueda As String) As DataTable
         'Funcion que carga los datos de acuerdo a lo ingresado en el TextBox
 
-        Dim cmd As New MySqlCommand("SELECT idchofer, nombrechofer, tipochofer, telefono1, telefono2, estadochofer " _
-                                    & " FROM chofer WHERE nombrechofer LIKE '%" & busqueda & "%' " _
-                                    & " AND estadochofer = '" & TextBox1.Text & "' " _
-                                    & " AND tipochofer = '" & TextBox2.Text & "' ", cnn)
+        Dim cmd As New MySqlCommand("SELECT idchofer, nombrechofer, tipochofer, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
+            & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadochofer FROM chofer " _
+            & " WHERE estadochofer = '" & TextBox1.Text & "' " _
+            & " AND tipochofer = '" & TextBox2.Text & "' " _
+            & " ORDER BY nombrechofer ASC", cnn)
 
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter(cmd)

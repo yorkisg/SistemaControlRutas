@@ -31,14 +31,6 @@ Public Class Principal
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
 
-        'Control de rutas: carga
-        SeguimientoCarga.TextBox15.Text = DateTime.Now.ToShortTimeString()
-        SeguimientoCarga.DateTimePicker1.Value = Today
-
-        SerieRutaCarga()
-        SerieInfraccionRutaLiviano()
-        SerieIncidenciaRutaLiviano()
-
         'Vehiculos
         MaestroVehiculo.TextBox5.Text = DateTime.Now.ToShortTimeString()
         MaestroVehiculo.DateTimePicker1.Value = Today
@@ -55,11 +47,6 @@ Public Class Principal
         MaestroIncidencia.TextBox5.Text = DateTime.Now.ToShortTimeString()
         MaestroIncidencia.DateTimePicker1.Value = Today
 
-        'Control de rutas: Livianos
-        SeguimientoLiviano.TextBox5.Text = DateTime.Now.ToShortTimeString()
-        SeguimientoLiviano.TextBox8.Text = DateTime.Now.ToShortTimeString()
-        'SeguimientoLiviano.DateTimePicker1.Value = Today
-        'SeguimientoLiviano.DateTimePicker2.Value = Today
 
     End Sub
 
@@ -130,6 +117,7 @@ Public Class Principal
         AccesoAplicacion.Close()
 
     End Sub
+
     Private Sub Principal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
         'Desconexion de la BD y cierre de la aplicacion.

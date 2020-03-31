@@ -7,6 +7,8 @@ Public Class SeguimientoLiviano
     Private Sub SeguimientoLiviano_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
+        InicializarTimer()
+
         'Llamada al metodo que permite cargar el listview de opciones proveniente del Modulo.
         CargarArbolLiviano()
 
@@ -57,6 +59,26 @@ Public Class SeguimientoLiviano
             Close()
 
         End If
+
+    End Sub
+
+    Private Sub InicializarTimer()
+        'Metodo que inicializa el timer
+
+        Timer1.Start()
+        Timer1.Interval = 1000
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
+
+        'Control de rutas: Livianos
+        SerieInfraccionRutaLiviano()
+        SerieIncidenciaRutaLiviano()
+
+        TextBox5.Text = DateTime.Now.ToShortTimeString()
+        TextBox8.Text = DateTime.Now.ToShortTimeString()
 
     End Sub
 

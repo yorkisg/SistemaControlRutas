@@ -7,6 +7,8 @@ Public Class SeguimientoCarga
     Private Sub SeguimientoCarga_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
+        InicializarTimer()
+
         'Llamada al metodo que permite cargar el arbol de opciones proveniente del Modulo.
         CargarArbolCarga()
 
@@ -52,6 +54,26 @@ Public Class SeguimientoCarga
             Close()
 
         End If
+
+    End Sub
+
+    Private Sub InicializarTimer()
+        'Metodo que inicializa el timer
+
+        Timer1.Start()
+        Timer1.Interval = 1000
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
+
+        'Control de rutas: carga
+        SerieRutaCarga()
+
+        TextBox15.Text = DateTime.Now.ToShortTimeString()
+        DateTimePicker1.Value = Today
+
 
     End Sub
 

@@ -62,6 +62,14 @@ Partial Class SeguimientoLiviano
         Me.Panel6 = New System.Windows.Forms.TabControl()
         Me.Pagina4 = New System.Windows.Forms.TabPage()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaIDegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pagina5 = New System.Windows.Forms.TabPage()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -130,15 +138,8 @@ Partial Class SeguimientoLiviano
         Me.MenuRuta2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.MenuEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ColumnaIDegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -444,6 +445,66 @@ Partial Class SeguimientoLiviano
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(677, 241)
         Me.DataGridView2.TabIndex = 62
+        '
+        'ColumnaIDegistro
+        '
+        Me.ColumnaIDegistro.DataPropertyName = "idregistroinfraccion"
+        Me.ColumnaIDegistro.HeaderText = "ID REGISTRO"
+        Me.ColumnaIDegistro.Name = "ColumnaIDegistro"
+        Me.ColumnaIDegistro.ReadOnly = True
+        Me.ColumnaIDegistro.Visible = False
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "vehiculo"
+        Me.Column2.HeaderText = "VEHICULO"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Visible = False
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.DataPropertyName = "nombrechofer"
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "velocidad"
+        Me.Column4.HeaderText = "VELOCIDAD"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "clasificacion"
+        Me.Column5.HeaderText = "CLASIFICACION"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Visible = False
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "estadovehiculo"
+        Me.Column6.HeaderText = "ESTADO"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        Me.Column6.Visible = False
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "fecha"
+        Me.Column7.HeaderText = "FECHA"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "hora"
+        Me.Column8.HeaderText = "HORA"
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
         '
         'Pagina5
         '
@@ -1108,66 +1169,6 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator14.Name = "ToolStripSeparator14"
         Me.ToolStripSeparator14.Size = New System.Drawing.Size(141, 6)
         '
-        'ColumnaIDegistro
-        '
-        Me.ColumnaIDegistro.DataPropertyName = "idregistroinfraccion"
-        Me.ColumnaIDegistro.HeaderText = "ID REGISTRO"
-        Me.ColumnaIDegistro.Name = "ColumnaIDegistro"
-        Me.ColumnaIDegistro.ReadOnly = True
-        Me.ColumnaIDegistro.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "vehiculo"
-        Me.Column2.HeaderText = "VEHICULO"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Visible = False
-        '
-        'ColumnaChofer
-        '
-        Me.ColumnaChofer.DataPropertyName = "nombrechofer"
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "velocidad"
-        Me.Column4.HeaderText = "VELOCIDAD"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "clasificacion"
-        Me.Column5.HeaderText = "CLASIFICACION"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Visible = False
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "estadovehiculo"
-        Me.Column6.HeaderText = "ESTADO"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
-        '
-        'Column7
-        '
-        Me.Column7.DataPropertyName = "fecha"
-        Me.Column7.HeaderText = "FECHA"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "hora"
-        Me.Column8.HeaderText = "HORA"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        '
         'TextBox19
         '
         Me.TextBox19.Location = New System.Drawing.Point(521, 353)
@@ -1175,6 +1176,9 @@ Partial Class SeguimientoLiviano
         Me.TextBox19.Size = New System.Drawing.Size(100, 20)
         Me.TextBox19.TabIndex = 87
         Me.TextBox19.Visible = False
+        '
+        'Timer1
+        '
         '
         'SeguimientoLiviano
         '
@@ -1331,4 +1335,5 @@ Partial Class SeguimientoLiviano
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents Timer1 As Timer
 End Class

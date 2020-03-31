@@ -362,7 +362,7 @@ Partial Class Principal
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ButtonShadow
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Panel1.Controls.Add(Me.ToolStrip1)

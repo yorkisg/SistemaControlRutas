@@ -612,13 +612,13 @@
         TWHWjU228WI87x4Eff9MjtlD/IAcZrMZP8P3+H8RFHNXRW8K256yT7Y7/XTEfs1VRXnaZ9NFCE6DKrPh
         VmvX+Zv2np6RHh+sr6/P0dvb293a2vrGjh07cgh4uTefy6KLLCWWKJkTtGpuQkTaI3kJ28K2f2OPzLyh
         KXKf5gPFwU3/VFSkfiFGj3PVEXVIezOt5FmTPl+/iUhczVQtLy9vc0pKyrqQkJCVBM/jxL7mDQH4zAPE
-        QoktIRZDDL+xTZQEBa0MXrZw3fycFYbQ558oJcnQMeneje2LyjI/VZjjbolFSMQBjePB1MXryTtVxPAj
+        QoktIRZDDL+xTZQEBa0MXrZw3fycFYbQ558oJcnQMeneje2LyjI/VZhjb4lFSMQBjePB1MXryTtVxPAj
         Z19sOSmvmAx4V5LuIT/uJzbPSUg0+YsVriCWQO5QQYr5KSEZqvyw59a8KP3R+l9F7Nv4V3nZ5o8U5brP
         p0zI4cxe6fefwncFOTsDO2SqhnUgDlEOrAi/vX+Q2AIns+ha44RIJElBYfOeePibypzQ4lW7pD9YeyRy
         z8b35IcyboSVp/7XW0Jk+zXvhm+Jx3fMigOjKv53t0eIyYhh/IhzEqIOemjO6ofWLNYs3JJcEv69Jw9h
         YJUdyOjnDKyVOlhUpv00dNvqbzuJnhUEsBuJhGCwmU9MSkxJDMfyeBzBwBovf5oOrDtS9kpL005E/mLz
         FfnBjMHIvemtC4yrvisJDsYyorntTLOIQHD8hhBDFeYeWOeQwPrYwrVz1fJ0HD7O4YTPfmkPvsCKXoI9
-        //CXFjkPMCaw4mzjUaV91cjxO97/A+qcYPTS+ccwAAAAAElFTkSuQmCC
+        //CXFjkPMCaw4mzjUaV91cjxO97/A+HeYPOMeCuKAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ToolStripLabel1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -771,7 +771,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABS
-        CQAAAk1TRnQBSQFMAgEBAgEAAZgBAAGYAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CQAAAk1TRnQBSQFMAgEBAgEAAaABAAGgAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -814,7 +814,7 @@
 </value>
   </data>
   <metadata name="ToolStrip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>946, 21</value>
+    <value>363, 53</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
