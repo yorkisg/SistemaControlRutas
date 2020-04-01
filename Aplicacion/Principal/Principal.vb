@@ -40,8 +40,8 @@ Public Class Principal
         MaestroInfraccion.DateTimePicker1.Value = Today
 
         'Cuadro resumen
-        ResumenMateriaPrima.TextBox5.Text = DateTime.Now.ToShortTimeString()
-        ResumenMateriaPrima.DateTimePicker1.Value = Today
+        CuadroResumenMateriaPrima.TextBox5.Text = DateTime.Now.ToShortTimeString()
+        CuadroResumenMateriaPrima.DateTimePicker1.Value = Today
 
         'Incidencias
         MaestroIncidencia.TextBox5.Text = DateTime.Now.ToShortTimeString()
@@ -227,21 +227,21 @@ Public Class Principal
     Private Sub MenuConsultaGrupoProducto_Click(sender As Object, e As EventArgs) Handles MenuConsultaGrupoProducto.Click
         'Formulario ResumenMateriaPrima
 
-        ResumenMateriaPrima.ShowDialog()
+        CuadroResumenMateriaPrima.ShowDialog()
 
     End Sub
 
     Private Sub MenuListadoCompelto_Click(sender As Object, e As EventArgs) Handles MenuListadoCompelto.Click
         'Formulario ListadoGeneralVehiculo
 
-        ListadoGeneralVehiculo.ShowDialog()
+        ConsultaGeneralVehiculo.ShowDialog()
 
     End Sub
 
     Private Sub MenuResumenRuta_Click(sender As Object, e As EventArgs) Handles MenuResumenRuta.Click
         'Formulario ListadoResumenVehiculo
 
-        ListadoResumenVehiculo.ShowDialog()
+        ConsultaResumenVehiculo.ShowDialog()
 
     End Sub
 

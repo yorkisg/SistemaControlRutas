@@ -850,21 +850,21 @@ Public Class SeguimientoCarga
     Private Sub BotonListado_Click(sender As Object, e As EventArgs) Handles BotonListado.Click
         'Llamada al formulario "ListadoVehiculoCarretera" para chequear cual es el total de vehiculos en carretera actualizado.
 
-        ListadoGeneralVehiculo.ShowDialog()
+        ConsultaGeneralVehiculo.ShowDialog()
 
     End Sub
 
     Private Sub BotonResumen_Click(sender As Object, e As EventArgs) Handles BotonResumen.Click
         'Llamada al formulario "ListadoResumenVehiculo" para chequear un resumen por grupo de vehiculos y productos
 
-        ListadoResumenVehiculo.ShowDialog()
+        ConsultaResumenVehiculo.ShowDialog()
 
     End Sub
 
     Private Sub BotonCuadroResumen_Click(sender As Object, e As EventArgs) Handles BotonCuadroResumen.Click
         'Llamada al formulario ResumenMateriaPrima
 
-        ResumenMateriaPrima.Show()
+        CuadroResumenMateriaPrima.Show()
 
     End Sub
 

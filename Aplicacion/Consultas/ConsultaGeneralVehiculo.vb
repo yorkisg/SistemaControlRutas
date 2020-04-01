@@ -1,14 +1,14 @@
 ﻿
-Public Class ListadoResumenVehiculo
+Public Class ConsultaGeneralVehiculo
 
-    Private Sub ListadoResumenVehiculo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ListadoVehiculoCarretera_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
 
         'Se llama al metodo en el Load del formulario para que el datagridview cargue los datos inmediatamente
-        CargarGridResumenVehiculo()
+        CargarGridGeneralVehiculo()
 
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
@@ -18,7 +18,7 @@ Public Class ListadoResumenVehiculo
 
     End Sub
 
-    Private Sub ListadoResumenVehiculo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ListadoGeneralVehiculo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
             Dispose()
@@ -74,17 +74,6 @@ Public Class ListadoResumenVehiculo
             Close()
 
         End If
-
-    End Sub
-
-    Private Sub LimpiarComponentes()
-        'Metodo que permite limpiar todos los controles del formulario.
-
-        'Abrimos el ciclo que recorre todas las filas del datagridview
-        For i As Integer = 0 To DataGridView.RowCount - 1
-            'Eliminamos elemento por elemento
-            DataGridView.Rows.Remove(DataGridView.CurrentRow)
-        Next
 
     End Sub
 
@@ -209,7 +198,7 @@ Public Class ListadoResumenVehiculo
 
         End If
 
-        If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaFlota") Then
+        If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaSubflota") Then
 
             TipoFlota = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 
@@ -238,6 +227,17 @@ Public Class ListadoResumenVehiculo
             End If
 
         End If
+
+    End Sub
+
+    Private Sub LimpiarComponentes()
+        'Metodo que permite limpiar todos los controles del formulario.
+
+        'Abrimos el ciclo que recorre todas las filas del datagridview
+        For i As Integer = 0 To DataGridView.RowCount - 1
+            'Eliminamos elemento por elemento
+            DataGridView.Rows.Remove(DataGridView.CurrentRow)
+        Next
 
     End Sub
 

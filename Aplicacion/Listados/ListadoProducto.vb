@@ -40,11 +40,11 @@ Public Class ListadoProducto
 
         If DataGridView.RowCount > 0 Then
 
-            If ResumenMateriaPrima.Visible = True Then
+            If CuadroResumenMateriaPrima.Visible = True Then
                 'si el formulario "ResumenMateriaPrima" esta activo, se carga la informacion seleccionada del datagridview.
 
-                ResumenMateriaPrima.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                ResumenMateriaPrima.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                CuadroResumenMateriaPrima.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                CuadroResumenMateriaPrima.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 'Se cierra el formulario ListadoProducto
                 Tabla.Clear()
@@ -177,11 +177,11 @@ Public Class ListadoProducto
 
         If DataGridView.RowCount > 0 Then
 
-            If ResumenMateriaPrima.Visible = True Then
+            If CuadroResumenMateriaPrima.Visible = True Then
                 'si el formulario "ResumenMateriaPrima" esta activo, se carga la informacion seleccionada del datagridview.
 
-                ResumenMateriaPrima.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                ResumenMateriaPrima.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                CuadroResumenMateriaPrima.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                CuadroResumenMateriaPrima.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 'Se cierra el formulario ListadoProducto
                 Tabla.Clear()

@@ -1,5 +1,5 @@
 ﻿
-Public Class ResumenMateriaPrima
+Public Class CuadroResumenMateriaPrima
 
     Private Sub ResumenMateriaPrima_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

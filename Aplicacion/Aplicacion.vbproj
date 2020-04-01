@@ -24,8 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <UpdateUrl>//HAC-C-08088/Actualizacion/</UpdateUrl>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -189,10 +188,10 @@
     <Compile Include="Consultas\GuiaTelefonica.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\ListadoGeneralVehiculo.Designer.vb">
-      <DependentUpon>ListadoGeneralVehiculo.vb</DependentUpon>
+    <Compile Include="Consultas\ConsultaGeneralVehiculo.Designer.vb">
+      <DependentUpon>ConsultaGeneralVehiculo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ListadoGeneralVehiculo.vb">
+    <Compile Include="Consultas\ConsultaGeneralVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\ReporteInfraccion.Designer.vb">
@@ -201,10 +200,10 @@
     <Compile Include="Consultas\ReporteInfraccion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\ListadoResumenVehiculo.Designer.vb">
-      <DependentUpon>ListadoResumenVehiculo.vb</DependentUpon>
+    <Compile Include="Consultas\ConsultaResumenVehiculo.Designer.vb">
+      <DependentUpon>ConsultaResumenVehiculo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ListadoResumenVehiculo.vb">
+    <Compile Include="Consultas\ConsultaResumenVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estadisticas\EstadisticaHistorialVehiculo.Designer.vb">
@@ -373,34 +372,34 @@
     <Compile Include="Principal\Principal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transacciones\RegistrarReporteTaller.Designer.vb">
+    <Compile Include="Seguimiento de Taller\RegistrarReporteTaller.Designer.vb">
       <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\RegistrarReporteTaller.vb">
+    <Compile Include="Seguimiento de Taller\RegistrarReporteTaller.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\ResumenMateriaPrima.Designer.vb">
-      <DependentUpon>ResumenMateriaPrima.vb</DependentUpon>
+    <Compile Include="Consultas\CuadroResumenMateriaPrima.Designer.vb">
+      <DependentUpon>CuadroResumenMateriaPrima.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ResumenMateriaPrima.vb">
+    <Compile Include="Consultas\CuadroResumenMateriaPrima.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transacciones\SeguimientoCarga.Designer.vb">
+    <Compile Include="Seguimiento de Vehiculos\SeguimientoCarga.Designer.vb">
       <DependentUpon>SeguimientoCarga.vb</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\SeguimientoCarga.vb">
+    <Compile Include="Seguimiento de Vehiculos\SeguimientoCarga.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transacciones\SeguimientoLiviano.Designer.vb">
+    <Compile Include="Seguimiento de Vehiculos\SeguimientoLiviano.Designer.vb">
       <DependentUpon>SeguimientoLiviano.vb</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\SeguimientoLiviano.vb">
+    <Compile Include="Seguimiento de Vehiculos\SeguimientoLiviano.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transacciones\SeguimientoTaller.Designer.vb">
+    <Compile Include="Seguimiento de Taller\SeguimientoTaller.Designer.vb">
       <DependentUpon>SeguimientoTaller.vb</DependentUpon>
     </Compile>
-    <Compile Include="Transacciones\SeguimientoTaller.vb">
+    <Compile Include="Seguimiento de Taller\SeguimientoTaller.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -427,14 +426,14 @@
     <EmbeddedResource Include="Consultas\GuiaTelefonica.resx">
       <DependentUpon>GuiaTelefonica.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ListadoGeneralVehiculo.resx">
-      <DependentUpon>ListadoGeneralVehiculo.vb</DependentUpon>
+    <EmbeddedResource Include="Consultas\ConsultaGeneralVehiculo.resx">
+      <DependentUpon>ConsultaGeneralVehiculo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ReporteInfraccion.resx">
       <DependentUpon>ReporteInfraccion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ListadoResumenVehiculo.resx">
-      <DependentUpon>ListadoResumenVehiculo.vb</DependentUpon>
+    <EmbeddedResource Include="Consultas\ConsultaResumenVehiculo.resx">
+      <DependentUpon>ConsultaResumenVehiculo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas\EstadisticaHistorialVehiculo.resx">
       <DependentUpon>EstadisticaHistorialVehiculo.vb</DependentUpon>
@@ -515,19 +514,19 @@
     <EmbeddedResource Include="Principal\Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transacciones\RegistrarReporteTaller.resx">
+    <EmbeddedResource Include="Seguimiento de Taller\RegistrarReporteTaller.resx">
       <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ResumenMateriaPrima.resx">
-      <DependentUpon>ResumenMateriaPrima.vb</DependentUpon>
+    <EmbeddedResource Include="Consultas\CuadroResumenMateriaPrima.resx">
+      <DependentUpon>CuadroResumenMateriaPrima.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transacciones\SeguimientoCarga.resx">
+    <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoCarga.resx">
       <DependentUpon>SeguimientoCarga.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transacciones\SeguimientoLiviano.resx">
+    <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoLiviano.resx">
       <DependentUpon>SeguimientoLiviano.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transacciones\SeguimientoTaller.resx">
+    <EmbeddedResource Include="Seguimiento de Taller\SeguimientoTaller.resx">
       <DependentUpon>SeguimientoTaller.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

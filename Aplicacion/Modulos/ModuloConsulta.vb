@@ -521,16 +521,16 @@ Module ModuloConsulta
         'Llenado del datagridview
         Adaptador.Fill(DataSet, "listadoactual")
         Tabla = DataSet.Tables("listadoactual")
-        ListadoGeneralVehiculo.DataGridView.DataSource = DataSet.Tables("listadoactual")
+        ConsultaGeneralVehiculo.DataGridView.DataSource = DataSet.Tables("listadoactual")
 
         'Parametros para editar apariencia del datagridview.
-        With ListadoGeneralVehiculo.DataGridView
+        With ConsultaGeneralVehiculo.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
         'Mostramos la cantidad de registros encontrados
-        ListadoGeneralVehiculo.Contador.Text = ListadoGeneralVehiculo.DataGridView.RowCount
+        ConsultaGeneralVehiculo.Contador.Text = ConsultaGeneralVehiculo.DataGridView.RowCount
 
     End Sub
 
@@ -651,16 +651,16 @@ Module ModuloConsulta
         'Llenado del datagridview
         Adaptador.Fill(DataSet, "listadoresumen")
         Tabla = DataSet.Tables("listadoresumen")
-        ListadoResumenVehiculo.DataGridView.DataSource = DataSet.Tables("listadoresumen")
+        ConsultaResumenVehiculo.DataGridView.DataSource = DataSet.Tables("listadoresumen")
 
         'Parametros para editar apariencia del datagridview.
-        With ListadoResumenVehiculo.DataGridView
+        With ConsultaResumenVehiculo.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
         'Traemos los numeros desde el Datagridview hacia los textbox.  
-        ListadoResumenVehiculo.Contador.Text = (Int(Sumar("ColumnaUnidades", ListadoResumenVehiculo.DataGridView)))
+        ConsultaResumenVehiculo.Contador.Text = (Int(Sumar("ColumnaUnidades", ConsultaResumenVehiculo.DataGridView)))
 
     End Sub
 
@@ -673,8 +673,8 @@ Module ModuloConsulta
                         & " AND ruta.estadoruta = estadoruta.idestado   " _
                         & " AND ruta.sitiocarga = sitiocarga.idsitiocarga " _
                         & " AND estado = 'ACTIVA'   " _
-                        & " AND idsitiocarga = '" & ResumenMateriaPrima.TextBox1.Text & "'  " _
-                        & " AND idproducto = '" & ResumenMateriaPrima.TextBox4.Text & "'  " _
+                        & " AND idsitiocarga = '" & CuadroResumenMateriaPrima.TextBox1.Text & "'  " _
+                        & " AND idproducto = '" & CuadroResumenMateriaPrima.TextBox4.Text & "'  " _
                         & " GROUP BY nombreestado   " _
                         & " ORDER BY nombreestado ASC "
 
@@ -688,16 +688,16 @@ Module ModuloConsulta
         'Llenado del datagridview
         Adaptador.Fill(DataSet, "resumenmaiz")
         Tabla = DataSet.Tables("resumenmaiz")
-        ResumenMateriaPrima.DataGridView.DataSource = DataSet.Tables("resumenmaiz")
+        CuadroResumenMateriaPrima.DataGridView.DataSource = DataSet.Tables("resumenmaiz")
 
         'Parametros para editar apariencia del datagridview.
-        With ResumenMateriaPrima.DataGridView
+        With CuadroResumenMateriaPrima.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
         'Se elimina la seleccion del datagridview
-        ResumenMateriaPrima.DataGridView.ClearSelection()
+        CuadroResumenMateriaPrima.DataGridView.ClearSelection()
 
     End Sub
 
