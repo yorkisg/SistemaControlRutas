@@ -27,6 +27,15 @@ Partial Class Principal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Principal))
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.usuariorol = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuMaestros = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuChoferes = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuProductos = New System.Windows.Forms.ToolStripMenuItem()
@@ -65,15 +74,6 @@ Partial Class Principal
         Me.MenuEstados = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuSalir2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.usuariorol = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -90,6 +90,71 @@ Partial Class Principal
         Me.MenuStrip1.Size = New System.Drawing.Size(984, 25)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuPrincipal"
+        '
+        'Timer1
+        '
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
+        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.Panel1.Controls.Add(Me.ToolStrip1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 25)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(984, 537)
+        Me.Panel1.TabIndex = 11
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.usuariorol, Me.ToolStripSeparator2, Me.ToolStripButton1, Me.ToolStripLabel2, Me.ToolStripSeparator1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 512)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(984, 25)
+        Me.ToolStrip1.TabIndex = 0
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Image = CType(resources.GetObject("ToolStripLabel1.Image"), System.Drawing.Image)
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(66, 22)
+        Me.ToolStripLabel1.Text = "Usuario:"
+        '
+        'usuariorol
+        '
+        Me.usuariorol.Name = "usuariorol"
+        Me.usuariorol.Size = New System.Drawing.Size(0, 22)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
+        Me.ToolStripButton1.Text = "01.04.2020"
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripLabel2.Image = CType(resources.GetObject("ToolStripLabel2.Image"), System.Drawing.Image)
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(65, 22)
+        Me.ToolStripLabel2.Text = "Versión:"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'MenuMaestros
         '
@@ -147,41 +212,41 @@ Partial Class Principal
         '
         Me.MenuSeguimientoCarga.Image = CType(resources.GetObject("MenuSeguimientoCarga.Image"), System.Drawing.Image)
         Me.MenuSeguimientoCarga.Name = "MenuSeguimientoCarga"
-        Me.MenuSeguimientoCarga.Size = New System.Drawing.Size(308, 22)
+        Me.MenuSeguimientoCarga.Size = New System.Drawing.Size(289, 22)
         Me.MenuSeguimientoCarga.Text = "Seguimiento a Vehiculos de Carga"
         '
         'MenuSeguimientoLiviano
         '
         Me.MenuSeguimientoLiviano.Image = CType(resources.GetObject("MenuSeguimientoLiviano.Image"), System.Drawing.Image)
         Me.MenuSeguimientoLiviano.Name = "MenuSeguimientoLiviano"
-        Me.MenuSeguimientoLiviano.Size = New System.Drawing.Size(308, 22)
+        Me.MenuSeguimientoLiviano.Size = New System.Drawing.Size(289, 22)
         Me.MenuSeguimientoLiviano.Text = "Seguimiento a Vehiculos Livianos"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(305, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(286, 6)
         '
         'MenuSeguimientoTaller
         '
         Me.MenuSeguimientoTaller.Image = CType(resources.GetObject("MenuSeguimientoTaller.Image"), System.Drawing.Image)
         Me.MenuSeguimientoTaller.Name = "MenuSeguimientoTaller"
-        Me.MenuSeguimientoTaller.Size = New System.Drawing.Size(308, 22)
+        Me.MenuSeguimientoTaller.Size = New System.Drawing.Size(289, 22)
         Me.MenuSeguimientoTaller.Text = "Gestión de Taller (80%)"
         '
         'MenuSeguimientoTransporte
         '
         Me.MenuSeguimientoTransporte.Image = CType(resources.GetObject("MenuSeguimientoTransporte.Image"), System.Drawing.Image)
         Me.MenuSeguimientoTransporte.Name = "MenuSeguimientoTransporte"
-        Me.MenuSeguimientoTransporte.Size = New System.Drawing.Size(308, 22)
-        Me.MenuSeguimientoTransporte.Text = "Gestión de Transportes (Proximamente)"
+        Me.MenuSeguimientoTransporte.Size = New System.Drawing.Size(289, 22)
+        Me.MenuSeguimientoTransporte.Text = "Gestión de Cámaras (Proximamente)"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(305, 6)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(286, 6)
         '
         'MenuConsultas
         '
@@ -359,71 +424,6 @@ Partial Class Principal
         Me.MenuSalir2.Name = "MenuSalir2"
         Me.MenuSalir2.Size = New System.Drawing.Size(101, 22)
         Me.MenuSalir2.Text = "Salir"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
-        Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.Panel1.Controls.Add(Me.ToolStrip1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 25)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(984, 537)
-        Me.Panel1.TabIndex = 11
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.usuariorol, Me.ToolStripSeparator2, Me.ToolStripButton1, Me.ToolStripLabel2, Me.ToolStripSeparator1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 512)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(984, 25)
-        Me.ToolStrip1.TabIndex = 0
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Image = CType(resources.GetObject("ToolStripLabel1.Image"), System.Drawing.Image)
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(66, 22)
-        Me.ToolStripLabel1.Text = "Usuario:"
-        '
-        'usuariorol
-        '
-        Me.usuariorol.Name = "usuariorol"
-        Me.usuariorol.Size = New System.Drawing.Size(0, 22)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripButton1.Text = "01.04.2020"
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripLabel2.Image = CType(resources.GetObject("ToolStripLabel2.Image"), System.Drawing.Image)
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(65, 22)
-        Me.ToolStripLabel2.Text = "Versión:"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'Timer1
-        '
         '
         'Principal
         '

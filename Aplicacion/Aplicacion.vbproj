@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -561,6 +561,7 @@
     <None Include="Recursos\Bandera.png" />
     <Content Include="Recursos\Bus.png" />
     <Content Include="Recursos\Buscar.png" />
+    <None Include="Recursos\Camara.png" />
     <Content Include="Recursos\CambiarEstado.png" />
     <None Include="Recursos\Camion.png" />
     <Content Include="Recursos\CantidadVehiculo.png" />
