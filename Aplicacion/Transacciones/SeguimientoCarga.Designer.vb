@@ -94,12 +94,7 @@ Partial Class SeguimientoCarga
         Me.BotonBuscar1 = New System.Windows.Forms.Button()
         Me.BotonAgregar4 = New System.Windows.Forms.Button()
         Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonGuardar2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonBuscar4 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.BotonAgregar2 = New System.Windows.Forms.Button()
@@ -646,18 +641,12 @@ Partial Class SeguimientoCarga
         '
         Me.ToolStrip3.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ToolStrip3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator2, Me.BotonGuardar2, Me.ToolStripButton1, Me.ToolStripSeparator6, Me.ToolStripButton2, Me.ToolStripSeparator4})
+        Me.ToolStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar2})
         Me.ToolStrip3.Location = New System.Drawing.Point(3, 262)
         Me.ToolStrip3.Name = "ToolStrip3"
         Me.ToolStrip3.Size = New System.Drawing.Size(668, 25)
         Me.ToolStrip3.TabIndex = 113
         Me.ToolStrip3.Text = "ToolStrip3"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'BotonGuardar2
         '
@@ -668,32 +657,6 @@ Partial Class SeguimientoCarga
         Me.BotonGuardar2.Name = "BotonGuardar2"
         Me.BotonGuardar2.Size = New System.Drawing.Size(100, 22)
         Me.BotonGuardar2.Text = "Registrar Ruta"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(89, 22)
-        Me.ToolStripButton1.Text = "Copiar Ruta"
-        '
-        'ToolStripSeparator6
-        '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(84, 22)
-        Me.ToolStripButton2.Text = "Pegar Ruta"
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
         '
         'BotonBuscar4
         '
@@ -1471,11 +1434,6 @@ Partial Class SeguimientoCarga
     Friend WithEvents ColumnaEstadoVehiculo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ColumnaImagen2 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents ColumnaEstadoVehiculo2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ColumnaIDRuta As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ColunmaVehiculo As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ColumnaChofer As System.Windows.Forms.DataGridViewTextBoxColumn
