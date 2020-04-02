@@ -190,7 +190,7 @@ Public Class ListadoFlota
             Dim TipoFlota As String
 
             'Indicamos sobre cual columna trabajaremos.
-            If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaTipo") Then
+            If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaClasificacion") Then
 
                 TipoFlota = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 

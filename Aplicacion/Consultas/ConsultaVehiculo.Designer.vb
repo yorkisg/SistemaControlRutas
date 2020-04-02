@@ -49,15 +49,15 @@ Partial Class ConsultaVehiculo
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ColumnaRuta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Columnasitiocarga = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaDestino = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ToolStrip1.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -257,7 +257,7 @@ Partial Class ConsultaVehiculo
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaRuta, Me.ColumnaVehiculo, Me.ColumnaChofer, Me.ColumnaProducto, Me.Columnasitiocarga, Me.ColumnaDestino, Me.ColumnaFecha, Me.ColumnaHora})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaRuta, Me.ColumnaVehiculo, Me.ColumnaChofer, Me.ColumnaProducto, Me.ColumnaUbicacion, Me.ColumnaDestino, Me.ColumnaFecha, Me.ColumnaHora})
         Me.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(3, 19)
@@ -268,6 +268,17 @@ Partial Class ConsultaVehiculo
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(745, 584)
         Me.DataGridView.TabIndex = 78
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.DataGridView)
+        Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GroupBox3.Location = New System.Drawing.Point(321, 28)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(751, 606)
+        Me.GroupBox3.TabIndex = 88
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "DETALLE DE CONSULTA"
         '
         'ColumnaRuta
         '
@@ -309,15 +320,15 @@ Partial Class ConsultaVehiculo
         Me.ColumnaProducto.Name = "ColumnaProducto"
         Me.ColumnaProducto.ReadOnly = True
         '
-        'Columnasitiocarga
+        'ColumnaUbicacion
         '
-        Me.Columnasitiocarga.DataPropertyName = "nombresitiocarga"
+        Me.ColumnaUbicacion.DataPropertyName = "nombresitiocarga"
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Columnasitiocarga.DefaultCellStyle = DataGridViewCellStyle4
-        Me.Columnasitiocarga.FillWeight = 31.74049!
-        Me.Columnasitiocarga.HeaderText = "SITIO DE CARGA"
-        Me.Columnasitiocarga.Name = "Columnasitiocarga"
-        Me.Columnasitiocarga.ReadOnly = True
+        Me.ColumnaUbicacion.DefaultCellStyle = DataGridViewCellStyle4
+        Me.ColumnaUbicacion.FillWeight = 31.74049!
+        Me.ColumnaUbicacion.HeaderText = "SITIO DE CARGA"
+        Me.ColumnaUbicacion.Name = "ColumnaUbicacion"
+        Me.ColumnaUbicacion.ReadOnly = True
         '
         'ColumnaDestino
         '
@@ -349,17 +360,6 @@ Partial Class ConsultaVehiculo
         Me.ColumnaHora.Name = "ColumnaHora"
         Me.ColumnaHora.ReadOnly = True
         Me.ColumnaHora.Width = 75
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.DataGridView)
-        Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox3.Location = New System.Drawing.Point(321, 28)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(751, 606)
-        Me.GroupBox3.TabIndex = 88
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "DETALLE DE CONSULTA"
         '
         'ConsultaVehiculo
         '
@@ -409,12 +409,12 @@ Partial Class ConsultaVehiculo
     Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents ColumnaRuta As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaVehiculo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaProducto As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Columnasitiocarga As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaDestino As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaFecha As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaHora As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaHora As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaFecha As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaRuta As DataGridViewTextBoxColumn
 End Class

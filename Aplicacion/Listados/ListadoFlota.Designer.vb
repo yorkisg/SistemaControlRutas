@@ -36,13 +36,13 @@ Partial Class ListadoFlota
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ColumnaIDEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaNombreEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaSubflota = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaClasificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -134,7 +134,7 @@ Partial Class ListadoFlota
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDEstado, Me.ColumnaNombreEstado, Me.ColumnaFlota, Me.ColumnaTipo})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaSubflota, Me.ColumnaFlota, Me.ColumnaClasificacion})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 28)
         Me.DataGridView.MultiSelect = False
@@ -147,41 +147,6 @@ Partial Class ListadoFlota
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
         Me.DataGridView.TabIndex = 25
-        '
-        'ColumnaIDEstado
-        '
-        Me.ColumnaIDEstado.DataPropertyName = "idsubflota"
-        Me.ColumnaIDEstado.HeaderText = "ID FLOTA"
-        Me.ColumnaIDEstado.Name = "ColumnaIDEstado"
-        Me.ColumnaIDEstado.ReadOnly = True
-        Me.ColumnaIDEstado.Visible = False
-        Me.ColumnaIDEstado.Width = 150
-        '
-        'ColumnaNombreEstado
-        '
-        Me.ColumnaNombreEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaNombreEstado.DataPropertyName = "nombresubflota"
-        Me.ColumnaNombreEstado.HeaderText = "SUBFLOTA"
-        Me.ColumnaNombreEstado.Name = "ColumnaNombreEstado"
-        Me.ColumnaNombreEstado.ReadOnly = True
-        '
-        'ColumnaFlota
-        '
-        Me.ColumnaFlota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaFlota.DataPropertyName = "nombreflota"
-        Me.ColumnaFlota.HeaderText = "FLOTA"
-        Me.ColumnaFlota.MinimumWidth = 300
-        Me.ColumnaFlota.Name = "ColumnaFlota"
-        Me.ColumnaFlota.ReadOnly = True
-        '
-        'ColumnaTipo
-        '
-        Me.ColumnaTipo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaTipo.DataPropertyName = "tiposubflota"
-        Me.ColumnaTipo.HeaderText = "CLASIFICACIÓN"
-        Me.ColumnaTipo.MinimumWidth = 300
-        Me.ColumnaTipo.Name = "ColumnaTipo"
-        Me.ColumnaTipo.ReadOnly = True
         '
         'ToolStrip2
         '
@@ -208,6 +173,41 @@ Partial Class ListadoFlota
         Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
+        '
+        'ColumnaID
+        '
+        Me.ColumnaID.DataPropertyName = "idsubflota"
+        Me.ColumnaID.HeaderText = "ID FLOTA"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Visible = False
+        Me.ColumnaID.Width = 150
+        '
+        'ColumnaSubflota
+        '
+        Me.ColumnaSubflota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaSubflota.DataPropertyName = "nombresubflota"
+        Me.ColumnaSubflota.HeaderText = "SUBFLOTA"
+        Me.ColumnaSubflota.Name = "ColumnaSubflota"
+        Me.ColumnaSubflota.ReadOnly = True
+        '
+        'ColumnaFlota
+        '
+        Me.ColumnaFlota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaFlota.DataPropertyName = "nombreflota"
+        Me.ColumnaFlota.HeaderText = "FLOTA"
+        Me.ColumnaFlota.MinimumWidth = 300
+        Me.ColumnaFlota.Name = "ColumnaFlota"
+        Me.ColumnaFlota.ReadOnly = True
+        '
+        'ColumnaClasificacion
+        '
+        Me.ColumnaClasificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaClasificacion.DataPropertyName = "tiposubflota"
+        Me.ColumnaClasificacion.HeaderText = "CLASIFICACIÓN"
+        Me.ColumnaClasificacion.MinimumWidth = 300
+        Me.ColumnaClasificacion.Name = "ColumnaClasificacion"
+        Me.ColumnaClasificacion.ReadOnly = True
         '
         'ListadoFlota
         '
@@ -245,8 +245,8 @@ Partial Class ListadoFlota
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ColumnaIDEstado As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaNombreEstado As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaFlota As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaTipo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaSubflota As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaClasificacion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaFlota As DataGridViewTextBoxColumn
 End Class

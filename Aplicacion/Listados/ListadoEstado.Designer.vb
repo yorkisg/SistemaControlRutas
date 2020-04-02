@@ -36,11 +36,11 @@ Partial Class ListadoEstado
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ColumnaIDEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaNombreEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -132,7 +132,7 @@ Partial Class ListadoEstado
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDEstado, Me.ColumnaNombreEstado})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaEstado})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 28)
         Me.DataGridView.MultiSelect = False
@@ -145,23 +145,6 @@ Partial Class ListadoEstado
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
         Me.DataGridView.TabIndex = 24
-        '
-        'ColumnaIDEstado
-        '
-        Me.ColumnaIDEstado.DataPropertyName = "idestado"
-        Me.ColumnaIDEstado.HeaderText = "ID ESTADO"
-        Me.ColumnaIDEstado.Name = "ColumnaIDEstado"
-        Me.ColumnaIDEstado.ReadOnly = True
-        Me.ColumnaIDEstado.Visible = False
-        Me.ColumnaIDEstado.Width = 150
-        '
-        'ColumnaNombreEstado
-        '
-        Me.ColumnaNombreEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaNombreEstado.DataPropertyName = "nombreestado"
-        Me.ColumnaNombreEstado.HeaderText = "ESTADO"
-        Me.ColumnaNombreEstado.Name = "ColumnaNombreEstado"
-        Me.ColumnaNombreEstado.ReadOnly = True
         '
         'ToolStrip2
         '
@@ -188,6 +171,23 @@ Partial Class ListadoEstado
         Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
+        '
+        'ColumnaID
+        '
+        Me.ColumnaID.DataPropertyName = "idestado"
+        Me.ColumnaID.HeaderText = "ID ESTADO"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Visible = False
+        Me.ColumnaID.Width = 150
+        '
+        'ColumnaEstado
+        '
+        Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaEstado.DataPropertyName = "nombreestado"
+        Me.ColumnaEstado.HeaderText = "ESTADO"
+        Me.ColumnaEstado.Name = "ColumnaEstado"
+        Me.ColumnaEstado.ReadOnly = True
         '
         'ListadoEstado
         '
@@ -221,10 +221,10 @@ Partial Class ListadoEstado
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents TextBox As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents ColumnaIDEstado As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaNombreEstado As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
 End Class

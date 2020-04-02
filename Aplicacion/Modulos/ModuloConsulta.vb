@@ -668,12 +668,10 @@ Module ModuloConsulta
         'Metodo que genera la carga de datos en el DataGridview
 
         Dim sql As String = " SELECT COUNT(vehiculo) AS 'Unidades', nombreestado AS 'Estado' " _
-                        & " FROM ruta, estadoruta, producto, sitiocarga " _
+                        & " FROM ruta, estadoruta, producto " _
                         & " WHERE ruta.producto = producto.idproducto " _
                         & " AND ruta.estadoruta = estadoruta.idestado   " _
-                        & " AND ruta.sitiocarga = sitiocarga.idsitiocarga " _
                         & " AND estado = 'ACTIVA'   " _
-                        & " AND idsitiocarga = '" & CuadroResumenMateriaPrima.TextBox1.Text & "'  " _
                         & " AND idproducto = '" & CuadroResumenMateriaPrima.TextBox4.Text & "'  " _
                         & " GROUP BY nombreestado   " _
                         & " ORDER BY nombreestado ASC "

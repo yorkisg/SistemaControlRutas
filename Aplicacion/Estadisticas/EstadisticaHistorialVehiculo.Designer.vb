@@ -25,13 +25,13 @@ Partial Class EstadisticaHistorialVehiculo
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EstadisticaHistorialVehiculo))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
@@ -45,11 +45,11 @@ Partial Class EstadisticaHistorialVehiculo
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ColumnaPesoProveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaPesoTunal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculosRecibidos = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -198,7 +198,7 @@ Partial Class EstadisticaHistorialVehiculo
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaPesoProveedor, Me.ColumnaPesoTunal, Me.ColumnaVehiculosRecibidos})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaVehiculo, Me.ColumnaCantidad, Me.ColumnaEstado})
         Me.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(3, 19)
@@ -211,38 +211,6 @@ Partial Class EstadisticaHistorialVehiculo
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(718, 286)
         Me.DataGridView.TabIndex = 49
-        '
-        'ColumnaPesoProveedor
-        '
-        Me.ColumnaPesoProveedor.DataPropertyName = "Vehiculo"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.Format = "N2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.ColumnaPesoProveedor.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnaPesoProveedor.HeaderText = "VEHICULO"
-        Me.ColumnaPesoProveedor.Name = "ColumnaPesoProveedor"
-        Me.ColumnaPesoProveedor.ReadOnly = True
-        '
-        'ColumnaPesoTunal
-        '
-        Me.ColumnaPesoTunal.DataPropertyName = "Conteo"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.Format = "N0"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.ColumnaPesoTunal.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnaPesoTunal.HeaderText = "CANTIDAD"
-        Me.ColumnaPesoTunal.Name = "ColumnaPesoTunal"
-        Me.ColumnaPesoTunal.ReadOnly = True
-        '
-        'ColumnaVehiculosRecibidos
-        '
-        Me.ColumnaVehiculosRecibidos.DataPropertyName = "Estado"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Red
-        Me.ColumnaVehiculosRecibidos.DefaultCellStyle = DataGridViewCellStyle4
-        Me.ColumnaVehiculosRecibidos.HeaderText = "ESTADO"
-        Me.ColumnaVehiculosRecibidos.Name = "ColumnaVehiculosRecibidos"
-        Me.ColumnaVehiculosRecibidos.ReadOnly = True
         '
         'GroupBox4
         '
@@ -277,6 +245,38 @@ Partial Class EstadisticaHistorialVehiculo
         Me.Chart1.Text = "Chart1"
         Title1.Name = "Title1"
         Me.Chart1.Titles.Add(Title1)
+        '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.DataPropertyName = "Vehiculo"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.Format = "N2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.ColumnaVehiculo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnaVehiculo.HeaderText = "VEHICULO"
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        '
+        'ColumnaCantidad
+        '
+        Me.ColumnaCantidad.DataPropertyName = "Conteo"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.Format = "N0"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.ColumnaCantidad.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ColumnaCantidad.HeaderText = "CANTIDAD"
+        Me.ColumnaCantidad.Name = "ColumnaCantidad"
+        Me.ColumnaCantidad.ReadOnly = True
+        '
+        'ColumnaEstado
+        '
+        Me.ColumnaEstado.DataPropertyName = "Estado"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Red
+        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle4
+        Me.ColumnaEstado.HeaderText = "ESTADO"
+        Me.ColumnaEstado.Name = "ColumnaEstado"
+        Me.ColumnaEstado.ReadOnly = True
         '
         'EstadisticaHistorialVehiculo
         '
@@ -321,7 +321,7 @@ Partial Class EstadisticaHistorialVehiculo
     Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
-    Friend WithEvents ColumnaPesoProveedor As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaPesoTunal As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaVehiculosRecibidos As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaCantidad As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
 End Class

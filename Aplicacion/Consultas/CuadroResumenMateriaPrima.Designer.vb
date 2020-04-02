@@ -30,10 +30,6 @@ Partial Class CuadroResumenMateriaPrima
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.X = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Columnasitiocarga = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.BotonBuscar1 = New System.Windows.Forms.Button()
@@ -54,6 +50,9 @@ Partial Class CuadroResumenMateriaPrima
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaImagen = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -113,7 +112,7 @@ Partial Class CuadroResumenMateriaPrima
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaUnidades, Me.X, Me.ColumnaEstado, Me.Columnasitiocarga})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaUnidades, Me.ColumnaImagen, Me.ColumnaEstado})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 161)
         Me.DataGridView.MultiSelect = False
@@ -126,39 +125,6 @@ Partial Class CuadroResumenMateriaPrima
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(382, 173)
         Me.DataGridView.TabIndex = 25
-        '
-        'ColumnaUnidades
-        '
-        Me.ColumnaUnidades.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaUnidades.DataPropertyName = "Unidades"
-        Me.ColumnaUnidades.HeaderText = "UNIDADES"
-        Me.ColumnaUnidades.Name = "ColumnaUnidades"
-        Me.ColumnaUnidades.ReadOnly = True
-        '
-        'X
-        '
-        Me.X.HeaderText = ""
-        Me.X.MinimumWidth = 20
-        Me.X.Name = "X"
-        Me.X.ReadOnly = True
-        Me.X.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.X.Width = 25
-        '
-        'ColumnaEstado
-        '
-        Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaEstado.DataPropertyName = "Estado"
-        Me.ColumnaEstado.HeaderText = "ESTADO ACTUAL"
-        Me.ColumnaEstado.Name = "ColumnaEstado"
-        Me.ColumnaEstado.ReadOnly = True
-        '
-        'Columnasitiocarga
-        '
-        Me.Columnasitiocarga.DataPropertyName = "nombresitiocarga"
-        Me.Columnasitiocarga.HeaderText = "SITIO DE CARGA"
-        Me.Columnasitiocarga.Name = "Columnasitiocarga"
-        Me.Columnasitiocarga.ReadOnly = True
-        Me.Columnasitiocarga.Visible = False
         '
         'TextBox1
         '
@@ -334,11 +300,36 @@ Partial Class CuadroResumenMateriaPrima
         Me.DateTimePicker1.TabIndex = 87
         Me.DateTimePicker1.Value = New Date(2019, 3, 12, 18, 55, 59, 0)
         '
-        'ResumenMateriaPrima
+        'ColumnaUnidades
+        '
+        Me.ColumnaUnidades.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaUnidades.DataPropertyName = "Unidades"
+        Me.ColumnaUnidades.HeaderText = "UNIDADES"
+        Me.ColumnaUnidades.Name = "ColumnaUnidades"
+        Me.ColumnaUnidades.ReadOnly = True
+        '
+        'ColumnaImagen
+        '
+        Me.ColumnaImagen.HeaderText = ""
+        Me.ColumnaImagen.MinimumWidth = 20
+        Me.ColumnaImagen.Name = "ColumnaImagen"
+        Me.ColumnaImagen.ReadOnly = True
+        Me.ColumnaImagen.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ColumnaImagen.Width = 25
+        '
+        'ColumnaEstado
+        '
+        Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaEstado.DataPropertyName = "Estado"
+        Me.ColumnaEstado.HeaderText = "ESTADO ACTUAL"
+        Me.ColumnaEstado.Name = "ColumnaEstado"
+        Me.ColumnaEstado.ReadOnly = True
+        '
+        'CuadroResumenMateriaPrima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(406, 362)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TextBox5)
@@ -358,7 +349,7 @@ Partial Class CuadroResumenMateriaPrima
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "ResumenMateriaPrima"
+        Me.Name = "CuadroResumenMateriaPrima"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cuadro Resumen"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -386,10 +377,6 @@ Partial Class CuadroResumenMateriaPrima
     Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents total As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents ColumnaUnidades As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents X As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents ColumnaEstado As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Columnasitiocarga As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -399,4 +386,7 @@ Partial Class CuadroResumenMateriaPrima
     Friend WithEvents BotonSalir As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ColumnaImagen As DataGridViewImageColumn
+    Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUnidades As DataGridViewTextBoxColumn
 End Class

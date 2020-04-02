@@ -377,7 +377,7 @@ Public Class ListadoChofer
             Dim TipoChofer As String
 
             'Indicamos sobre cual columna trabajaremos.
-            If DataGridView.Columns(e.ColumnIndex).Name.Equals("Column5") Then
+            If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaClasificacion") Then
 
                 TipoChofer = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 

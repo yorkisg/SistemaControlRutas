@@ -38,14 +38,14 @@ Partial Class ListadoPersona
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.Columnaidsitiocarga = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Columnanombresitiocarga = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTelefono1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTelefono2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTelefono1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTelefono2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaDepartamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -137,7 +137,7 @@ Partial Class ListadoPersona
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Columnaidsitiocarga, Me.Columnanombresitiocarga, Me.ColumnaTelefono1, Me.ColumnaTelefono2, Me.ColumnaEstado})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaNombre, Me.ColumnaTelefono1, Me.ColumnaTelefono2, Me.ColumnaDepartamento})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 28)
         Me.DataGridView.MultiSelect = False
@@ -157,55 +157,6 @@ Partial Class ListadoPersona
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
         Me.DataGridView.TabIndex = 30
-        '
-        'Columnaidsitiocarga
-        '
-        Me.Columnaidsitiocarga.DataPropertyName = "idpersona"
-        Me.Columnaidsitiocarga.FillWeight = 304.5685!
-        Me.Columnaidsitiocarga.HeaderText = "ID PERSONAL"
-        Me.Columnaidsitiocarga.Name = "Columnaidsitiocarga"
-        Me.Columnaidsitiocarga.ReadOnly = True
-        Me.Columnaidsitiocarga.Visible = False
-        Me.Columnaidsitiocarga.Width = 120
-        '
-        'Columnanombresitiocarga
-        '
-        Me.Columnanombresitiocarga.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Columnanombresitiocarga.DataPropertyName = "nombrepersona"
-        Me.Columnanombresitiocarga.FillWeight = 48.85788!
-        Me.Columnanombresitiocarga.HeaderText = "NOMBRE"
-        Me.Columnanombresitiocarga.Name = "Columnanombresitiocarga"
-        Me.Columnanombresitiocarga.ReadOnly = True
-        '
-        'ColumnaTelefono1
-        '
-        Me.ColumnaTelefono1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaTelefono1.DataPropertyName = "telefono1"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.ColumnaTelefono1.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnaTelefono1.FillWeight = 48.85788!
-        Me.ColumnaTelefono1.HeaderText = "TELÉFONO 1"
-        Me.ColumnaTelefono1.Name = "ColumnaTelefono1"
-        Me.ColumnaTelefono1.ReadOnly = True
-        '
-        'ColumnaTelefono2
-        '
-        Me.ColumnaTelefono2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaTelefono2.DataPropertyName = "telefono2"
-        Me.ColumnaTelefono2.FillWeight = 48.85788!
-        Me.ColumnaTelefono2.HeaderText = "TELÉFONO 2"
-        Me.ColumnaTelefono2.Name = "ColumnaTelefono2"
-        Me.ColumnaTelefono2.ReadOnly = True
-        '
-        'ColumnaEstado
-        '
-        Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaEstado.DataPropertyName = "descripcion"
-        Me.ColumnaEstado.FillWeight = 48.85788!
-        Me.ColumnaEstado.HeaderText = "DEPARTAMENTO"
-        Me.ColumnaEstado.Name = "ColumnaEstado"
-        Me.ColumnaEstado.ReadOnly = True
-        Me.ColumnaEstado.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'ToolStrip2
         '
@@ -232,6 +183,55 @@ Partial Class ListadoPersona
         Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
+        '
+        'ColumnaID
+        '
+        Me.ColumnaID.DataPropertyName = "idpersona"
+        Me.ColumnaID.FillWeight = 304.5685!
+        Me.ColumnaID.HeaderText = "ID PERSONAL"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Visible = False
+        Me.ColumnaID.Width = 120
+        '
+        'ColumnaNombre
+        '
+        Me.ColumnaNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaNombre.DataPropertyName = "nombrepersona"
+        Me.ColumnaNombre.FillWeight = 48.85788!
+        Me.ColumnaNombre.HeaderText = "NOMBRE"
+        Me.ColumnaNombre.Name = "ColumnaNombre"
+        Me.ColumnaNombre.ReadOnly = True
+        '
+        'ColumnaTelefono1
+        '
+        Me.ColumnaTelefono1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaTelefono1.DataPropertyName = "telefono1"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.ColumnaTelefono1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnaTelefono1.FillWeight = 48.85788!
+        Me.ColumnaTelefono1.HeaderText = "TELÉFONO 1"
+        Me.ColumnaTelefono1.Name = "ColumnaTelefono1"
+        Me.ColumnaTelefono1.ReadOnly = True
+        '
+        'ColumnaTelefono2
+        '
+        Me.ColumnaTelefono2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaTelefono2.DataPropertyName = "telefono2"
+        Me.ColumnaTelefono2.FillWeight = 48.85788!
+        Me.ColumnaTelefono2.HeaderText = "TELÉFONO 2"
+        Me.ColumnaTelefono2.Name = "ColumnaTelefono2"
+        Me.ColumnaTelefono2.ReadOnly = True
+        '
+        'ColumnaDepartamento
+        '
+        Me.ColumnaDepartamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaDepartamento.DataPropertyName = "descripcion"
+        Me.ColumnaDepartamento.FillWeight = 48.85788!
+        Me.ColumnaDepartamento.HeaderText = "DEPARTAMENTO"
+        Me.ColumnaDepartamento.Name = "ColumnaDepartamento"
+        Me.ColumnaDepartamento.ReadOnly = True
+        Me.ColumnaDepartamento.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
         '
         'ListadoPersona
         '
@@ -269,9 +269,9 @@ Partial Class ListadoPersona
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents Columnaidsitiocarga As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Columnanombresitiocarga As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaTelefono1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaTelefono2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaEstado As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaNombre As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaDepartamento As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaTelefono2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaTelefono1 As DataGridViewTextBoxColumn
 End Class

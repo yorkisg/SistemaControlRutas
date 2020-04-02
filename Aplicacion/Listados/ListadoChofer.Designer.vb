@@ -55,12 +55,12 @@ Partial Class ListadoChofer
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaClasificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTelefono1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTelefono2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
@@ -269,7 +269,7 @@ Partial Class ListadoChofer
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column3, Me.Column5, Me.Column4, Me.Column6, Me.Column7})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaChofer, Me.ColumnaNombre, Me.ColumnaClasificacion, Me.ColumnaTelefono1, Me.ColumnaTelefono2, Me.ColumnaEstado})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 28)
         Me.DataGridView.MultiSelect = False
@@ -290,54 +290,54 @@ Partial Class ListadoChofer
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 75
         '
-        'Column1
+        'ColumnaChofer
         '
-        Me.Column1.DataPropertyName = "idchofer"
-        Me.Column1.HeaderText = "ID CHOFER"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Visible = False
+        Me.ColumnaChofer.DataPropertyName = "idchofer"
+        Me.ColumnaChofer.HeaderText = "ID CHOFER"
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        Me.ColumnaChofer.Visible = False
         '
-        'Column3
+        'ColumnaNombre
         '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column3.DataPropertyName = "nombrechofer"
+        Me.ColumnaNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaNombre.DataPropertyName = "nombrechofer"
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Column3.DefaultCellStyle = DataGridViewCellStyle2
-        Me.Column3.HeaderText = "NOMBRE"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 240
+        Me.ColumnaNombre.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnaNombre.HeaderText = "NOMBRE"
+        Me.ColumnaNombre.Name = "ColumnaNombre"
+        Me.ColumnaNombre.ReadOnly = True
+        Me.ColumnaNombre.Width = 240
         '
-        'Column5
+        'ColumnaClasificacion
         '
-        Me.Column5.DataPropertyName = "tipochofer"
-        Me.Column5.HeaderText = "CLASIFICACIÓN"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
+        Me.ColumnaClasificacion.DataPropertyName = "tipochofer"
+        Me.ColumnaClasificacion.HeaderText = "CLASIFICACIÓN"
+        Me.ColumnaClasificacion.Name = "ColumnaClasificacion"
+        Me.ColumnaClasificacion.ReadOnly = True
         '
-        'Column4
+        'ColumnaTelefono1
         '
-        Me.Column4.DataPropertyName = "Telefono1"
-        Me.Column4.HeaderText = "TELÉFONO 1"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
+        Me.ColumnaTelefono1.DataPropertyName = "Telefono1"
+        Me.ColumnaTelefono1.HeaderText = "TELÉFONO 1"
+        Me.ColumnaTelefono1.Name = "ColumnaTelefono1"
+        Me.ColumnaTelefono1.ReadOnly = True
         '
-        'Column6
+        'ColumnaTelefono2
         '
-        Me.Column6.DataPropertyName = "Telefono2"
-        Me.Column6.HeaderText = "TELÉFONO 2"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
+        Me.ColumnaTelefono2.DataPropertyName = "Telefono2"
+        Me.ColumnaTelefono2.HeaderText = "TELÉFONO 2"
+        Me.ColumnaTelefono2.Name = "ColumnaTelefono2"
+        Me.ColumnaTelefono2.ReadOnly = True
         '
-        'Column7
+        'ColumnaEstado
         '
-        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.Column7.DataPropertyName = "estadochofer"
-        Me.Column7.HeaderText = "ESTADO"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        Me.Column7.Width = 150
+        Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaEstado.DataPropertyName = "estadochofer"
+        Me.ColumnaEstado.HeaderText = "ESTADO"
+        Me.ColumnaEstado.Name = "ColumnaEstado"
+        Me.ColumnaEstado.ReadOnly = True
+        Me.ColumnaEstado.Width = 150
         '
         'ListadoChofer
         '
@@ -393,10 +393,10 @@ Partial Class ListadoChofer
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaClasificacion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaTelefono2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaTelefono1 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaNombre As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
 End Class

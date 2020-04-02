@@ -26,8 +26,6 @@ Partial Class ListadoDestino
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListadoDestino))
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.Columnaidsitiocarga = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Columnanombresitiocarga = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -42,6 +40,8 @@ Partial Class ListadoDestino
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
@@ -67,7 +67,7 @@ Partial Class ListadoDestino
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Columnaidsitiocarga, Me.Columnanombresitiocarga})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaUbicacion})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 28)
         Me.DataGridView.MultiSelect = False
@@ -80,23 +80,6 @@ Partial Class ListadoDestino
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
         Me.DataGridView.TabIndex = 27
-        '
-        'Columnaidsitiocarga
-        '
-        Me.Columnaidsitiocarga.DataPropertyName = "iddestino"
-        Me.Columnaidsitiocarga.HeaderText = "ID SITIO CARGA"
-        Me.Columnaidsitiocarga.Name = "Columnaidsitiocarga"
-        Me.Columnaidsitiocarga.ReadOnly = True
-        Me.Columnaidsitiocarga.Visible = False
-        Me.Columnaidsitiocarga.Width = 150
-        '
-        'Columnanombresitiocarga
-        '
-        Me.Columnanombresitiocarga.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Columnanombresitiocarga.DataPropertyName = "nombredestino"
-        Me.Columnanombresitiocarga.HeaderText = "UBICACIÓN"
-        Me.Columnanombresitiocarga.Name = "Columnanombresitiocarga"
-        Me.Columnanombresitiocarga.ReadOnly = True
         '
         'ToolStrip1
         '
@@ -197,6 +180,23 @@ Partial Class ListadoDestino
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
         '
+        'ColumnaID
+        '
+        Me.ColumnaID.DataPropertyName = "iddestino"
+        Me.ColumnaID.HeaderText = "ID SITIO CARGA"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Visible = False
+        Me.ColumnaID.Width = 150
+        '
+        'ColumnaUbicacion
+        '
+        Me.ColumnaUbicacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaUbicacion.DataPropertyName = "nombredestino"
+        Me.ColumnaUbicacion.HeaderText = "UBICACIÓN"
+        Me.ColumnaUbicacion.Name = "ColumnaUbicacion"
+        Me.ColumnaUbicacion.ReadOnly = True
+        '
         'ListadoDestino
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -235,6 +235,6 @@ Partial Class ListadoDestino
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents Columnaidsitiocarga As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Columnanombresitiocarga As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
 End Class

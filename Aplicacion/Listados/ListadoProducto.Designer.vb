@@ -26,8 +26,6 @@ Partial Class ListadoProducto
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListadoProducto))
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ColumnaIDProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaNombreProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -42,6 +40,8 @@ Partial Class ListadoProducto
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaNombreProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
@@ -67,7 +67,7 @@ Partial Class ListadoProducto
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDProducto, Me.ColumnaNombreProducto})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaNombreProducto})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 28)
         Me.DataGridView.MultiSelect = False
@@ -80,23 +80,6 @@ Partial Class ListadoProducto
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
         Me.DataGridView.TabIndex = 19
-        '
-        'ColumnaIDProducto
-        '
-        Me.ColumnaIDProducto.DataPropertyName = "idproducto"
-        Me.ColumnaIDProducto.HeaderText = "ID PRODUCTO"
-        Me.ColumnaIDProducto.Name = "ColumnaIDProducto"
-        Me.ColumnaIDProducto.ReadOnly = True
-        Me.ColumnaIDProducto.Visible = False
-        Me.ColumnaIDProducto.Width = 150
-        '
-        'ColumnaNombreProducto
-        '
-        Me.ColumnaNombreProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaNombreProducto.DataPropertyName = "nombreproducto"
-        Me.ColumnaNombreProducto.HeaderText = "PRODUCTO"
-        Me.ColumnaNombreProducto.Name = "ColumnaNombreProducto"
-        Me.ColumnaNombreProducto.ReadOnly = True
         '
         'ToolStrip1
         '
@@ -198,6 +181,23 @@ Partial Class ListadoProducto
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
         '
+        'ColumnaID
+        '
+        Me.ColumnaID.DataPropertyName = "idproducto"
+        Me.ColumnaID.HeaderText = "ID PRODUCTO"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Visible = False
+        Me.ColumnaID.Width = 150
+        '
+        'ColumnaNombreProducto
+        '
+        Me.ColumnaNombreProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaNombreProducto.DataPropertyName = "nombreproducto"
+        Me.ColumnaNombreProducto.HeaderText = "PRODUCTO"
+        Me.ColumnaNombreProducto.Name = "ColumnaNombreProducto"
+        Me.ColumnaNombreProducto.ReadOnly = True
+        '
         'ListadoProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -232,10 +232,10 @@ Partial Class ListadoProducto
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents ColumnaIDProducto As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaNombreProducto As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaNombreProducto As DataGridViewTextBoxColumn
 End Class

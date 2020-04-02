@@ -39,7 +39,7 @@ Partial Class ListadoVehiculo
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ColumnaIDVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaTipo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaSublota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaClasificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -163,7 +163,7 @@ Partial Class ListadoVehiculo
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDVehiculo, Me.ColumnaTipo, Me.ColumnaSublota, Me.ColumnaClasificacion, Me.ColumnaEstadoActual, Me.ColumnaImagen, Me.ColumnaCondicion})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaTipo, Me.ColumnaSublota, Me.ColumnaClasificacion, Me.ColumnaEstadoActual, Me.ColumnaImagen, Me.ColumnaCondicion})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 28)
         Me.DataGridView.MultiSelect = False
@@ -177,13 +177,13 @@ Partial Class ListadoVehiculo
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
         Me.DataGridView.TabIndex = 73
         '
-        'ColumnaIDVehiculo
+        'ColumnaID
         '
-        Me.ColumnaIDVehiculo.DataPropertyName = "idvehiculo"
-        Me.ColumnaIDVehiculo.HeaderText = "VEHÍCULO"
-        Me.ColumnaIDVehiculo.Name = "ColumnaIDVehiculo"
-        Me.ColumnaIDVehiculo.ReadOnly = True
-        Me.ColumnaIDVehiculo.Width = 120
+        Me.ColumnaID.DataPropertyName = "idvehiculo"
+        Me.ColumnaID.HeaderText = "VEHÍCULO"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Width = 120
         '
         'ColumnaTipo
         '
@@ -270,11 +270,11 @@ Partial Class ListadoVehiculo
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents ColumnaIDVehiculo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaTipo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaSublota As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaClasificacion As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaEstadoActual As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaImagen As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents ColumnaCondicion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaCondicion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaImagen As DataGridViewImageColumn
+    Friend WithEvents ColumnaEstadoActual As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaClasificacion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaSublota As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaTipo As DataGridViewTextBoxColumn
 End Class

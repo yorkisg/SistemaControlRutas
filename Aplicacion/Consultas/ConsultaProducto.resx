@@ -126,21 +126,21 @@
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEgSURBVDhPY2AYFECFJ1FUgS+hnhSsxpMmAna8CkMuu5t5
         /OvSzNT/vU1NROGu2sb/zsYZ97UYQtnAhpgqJ4b5O8b8fnU/+f/Pt5lY8Z9vW/7/+/v2/68Pjf8j7LO+
-        WmmnBqMEn71+bGt8VPTvj0/SsBvwfff/P1/X/s9Li/1gqpJYgTXs7fUTNjYE2v/98jIDxZBfHzv///48
+        WmmnBqMEn71+bGt8VPTvj0/SsBvwfff/P1/X/s9Li/1gqpJYgTXs7fUTNjYE2P/98jIDxZBfHzv///48
         839PZ+RXU9XERXgjzkoz5np9feS/769RvTJ/fvxvA6X4E0TFuq50/Med66Lgrrh9LuO/mnTcC6I0wxTZ
         m0V+fXAt/v/Pd6X/PS1T3pCkGaRYgT/h/63zMcBQb/8PYg+MAbvXx/63VEr+kh6WE0eWCwzlol/J8SRq
-        kawZpEGeP96BLI2kagIAXBzkNvY9frYAAAAASUVORK5CYII=
+        kawZpEGeP96BLI2kagIAWaTkNYVpI54AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BotonLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrjoJAEIRZz7Em3kHjPTeEcDj4DeEV3m/c
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrjoJAEIRZz7Em3kHjPTeEcDf4D+EV3m/c
         3q6RnmWVjaNJZSbS9Vnd0pZ1/3yyzqzrC534+WH1/DnOXdcVnufdlmWhPQ3DQLZtf7FrF3KFuWkaattW
         qyxLyvOcoihS0DAMyXGcJ8gHYqOg73sax1GdUF3XVBQFxXGsAJyS8COu6wpEtaEBMIsAgKGqKkqS5Kmt
         dVbw/gLmedaFuKNvtIRW0jRVSYIgUDW7gMfhbSFIgnlkWWYOAFAgaAczAcg4gSSapknNBhDobQBSyHAx
         FyMATCIkgGB+GyDm7WmUQAa4TSL3XYDv+9//7cHj91x7W98DvVAX/ntaPHgFQQ2/zvW6vRpw5NvFYJ1l
-        3bH68Fg/zWaJj5Efg30AAAAASUVORK5CYII=
+        3bH68Fg/sXmJfeZrgUcAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BotonExportar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -181,13 +181,13 @@
         TWHWjU228WI87x4Eff9MjtlD/IAcZrMZP8P3+H8RFHNXRW8K256yT7Y7/XTEfs1VRXnaZ9NFCE6DKrPh
         VmvX+Zv2np6RHh+sr6/P0dvb293a2vrGjh07cgh4uTefy6KLLCWWKJkTtGpuQkTaI3kJ28K2f2OPzLyh
         KXKf5gPFwU3/VFSkfiFGj3PVEXVIezOt5FmTPl+/iUhczVQtLy9vc0pKyrqQkJCVBM/jxL7mDQH4zAPE
-        QoktIRZDDL+xTZQEBa0MXrZw3fycFYbQ558oJcnQMeneje2LyjI/VZhjb4lFSMQBjePB1MXryTtVxPAj
-        Z19sOSmvmAx4V5LuIT/uJzbPSUg0+YsVriCWQO5QQYr5KSEZqvyw59a8KP3R+l9F7Nv4V3nZ5o8U5brP
-        p0zI4cxe6fefwncFOTsDO2SqhnUgDlEOrAi/vX+Q2AIns+ha44RIJElBYfOeePibypzQ4lW7pD9YeyRy
-        z8b35IcyboSVp/7XW0Jk+zXvhm+Jx3fMigOjKv53t0eIyYhh/IhzEqIOemjO6ofWLNYs3JJcEv69Jw9h
-        YJUdyOjnDKyVOlhUpv00dNvqbzuJnhUEsBuJhGCwmU9MSkxJDMfyeBzBwBovf5oOrDtS9kpL005E/mLz
-        FfnBjMHIvemtC4yrvisJDsYyorntTLOIQHD8hhBDFeYeWOeQwPrYwrVz1fJ0HD7O4YTPfmkPvsCKXoI9
-        //CXFjkPMCaw4mzjUaV91cjxO97/A+HeYPOMeCuKAAAAAElFTkSuQmCC
+        QoktIRZDDL+xTZQEBa0MXrZw3fycFYbQ558oJcnQMeneje2LyjI/VZhVt8QiJOKAxvFg6uL15J0qYviR
+        sy+2nJRXTAa8K0n3kB/3E5vnJCSa/MUKVxBLIHeoIMX8lJAMVX7Yc2telP5o/a8i9m38q7xs80eKct3n
+        UybkcGav9PtP4buCnJ2BHTJVwzoQhygHVoTf3j9IbIGTWXStcUIkkqSgsHlPPPxNZU5o8apd0h+sPRK5
+        Z+N78kMZN8LKU//rLSGy/Zp3w7fE4ztmxYFRFf+72yPEZMQwfsQ5CVEHPTRn9UNrFmsWbkkuCf/ek4cw
+        sMoOZPRzBtZKHSwq034aum31t51EzwoC2I1EQjDYzCcmJaYkhmN5PI5gYI2XP00H1h0pe6WlaScif7H5
+        ivxgxmDk3vTWBcZV35UEB2MZ0dx2pllEIDh+Q4ihCnMPrHNIYH1s4dq5ank6Dh/ncMJnv7QHX2BFL8Ge
+        f/hLi5wHGBNYcbbxqNK+auT4He//AdkgYPJF60pUAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="BotonSalir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -239,7 +239,7 @@
   <metadata name="ColumnaProducto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Columnasitiocarga.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ColumnaUbicacion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="ColumnaDestino.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
