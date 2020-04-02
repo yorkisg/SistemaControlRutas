@@ -65,6 +65,69 @@ Module ModuloSeguimientoCarga
 
     End Sub
 
+    Public Sub CargarArbolCarga2()
+
+        'Adaptadores
+        Dim Padres As New MySqlDataAdapter("SELECT idflota, nombreflota FROM flota", cnn)
+
+        Dim Hijos As New MySqlDataAdapter(" SELECT idsubflota, nombresubflota, flota " _
+                                        & " FROM subflota WHERE tiposubflota = 'CARGA' " _
+                                        & " ORDER BY nombresubflota ASC", cnn)
+        Dim Dataset As New DataSet
+
+        'Llenar el DataSet
+        Padres.Fill(Dataset, "Padres")
+        Hijos.Fill(Dataset, "Hijos")
+
+        'Creamos una relación a través del campo idflota (flota) común en ambos objetos DataTable.
+        Dim ColumnaPadre As DataColumn = Dataset.Tables("Padres").Columns("idflota")
+
+        Dim ColumnaHijo As DataColumn = Dataset.Tables("Hijos").Columns("flota") 'clave foranea en tabla hijos (subflota)
+
+        Dim Relacion As New DataRelation("Padres_Hijos", ColumnaPadre, ColumnaHijo, True)
+
+        'Añadimos la relación al objeto DataSet.
+        Dataset.Relations.Add(Relacion)
+
+        With SeguimientoCarga.Arbol
+
+            'Para que no se repinte el control TreeView hasta que se hayan creado los nodos.
+            .BeginUpdate()
+
+            'Limpiamos el control TreeView.
+            .Nodes.Clear()
+
+            'Añadimos un objeto TreeNode ra¡z para cada objeto Padre existente en el objeto DataTable llamado Padres.
+            For Each padre As DataRow In Dataset.Tables("Padres").Rows
+
+                'Creamos el nodo padre.
+                Dim NodoPadre As New TreeNode(padre.Item("nombreflota").ToString)
+
+                'Lo añadimos a la colección Nodes del control TreeView.
+                SeguimientoCarga.Arbol.Nodes.Add(NodoPadre)
+
+                'Añadimos un objeto TreeNode hijo por cada objeto Hijo existente en el objeto Padre actual.
+                For Each hijo In padre.GetChildRows("Padres_Hijos")
+
+                    'Creamos el nodo hijo
+                    Dim NodoHijo As New TreeNode(hijo.Item("nombresubflota").ToString)
+
+                    'Lo añadimos al nodo padre
+                    NodoPadre.Nodes.Add(NodoHijo)
+
+                Next
+
+            Next
+
+            'Editamos la apariencia del arbol
+            .Font = New Font("Calibri", 9)
+            .ExpandAll()
+            .EndUpdate()
+
+        End With
+
+    End Sub
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''METODOS PARA CARGAR DATAGRIDVIEW DE CARGA'''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -74,8 +137,8 @@ Module ModuloSeguimientoCarga
 
         Dim sql As String = "SELECT idvehiculo, nombretipo, estadoactual, condicionvehiculo FROM vehiculo, subflota, tipovehiculo " _
                        & " WHERE vehiculo.subflota = subflota.idsubflota " _
-                       & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
-                       & " AND nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _
+                       & " And vehiculo.tipovehiculo = tipovehiculo.idtipo " _
+                       & " And nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _
                        & " AND condicionvehiculo <> 'ROBADO / EXTRAVIADO' " _
                        & " ORDER BY idvehiculo ASC "
 

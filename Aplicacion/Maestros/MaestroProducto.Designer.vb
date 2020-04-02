@@ -145,7 +145,7 @@ Partial Class MaestroProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(351, 131)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.BotonBuscar)

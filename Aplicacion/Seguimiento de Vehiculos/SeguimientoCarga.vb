@@ -10,10 +10,12 @@ Public Class SeguimientoCarga
         InicializarTimer()
 
         'Llamada al metodo que permite cargar el arbol de opciones proveniente del Modulo.
-        CargarArbolCarga()
+        'CargarArbolCarga()
+        CargarArbolCarga2() 'EN PRUEBA Y REESTRUCTURACION
 
         'Validamos que el primer item seleccionado en el arbol sea el primero
-        Arbol.SelectedNode = Arbol.Nodes(0)
+        'Arbol.SelectedNode = Arbol.Nodes(0)
+        Arbol.SelectedNode = Arbol.Nodes(0).Nodes(0)
 
         'Se habilita la serie correlativa para el ID de las rutas.
         SerieRutaCarga()
@@ -51,7 +53,9 @@ Public Class SeguimientoCarga
         Else
 
             'Cierre formal de la ventana sin liberar recursos
-            Close()
+            'Close()
+            'Cierre formal del formulario liberando recursos
+            Dispose()
 
         End If
 

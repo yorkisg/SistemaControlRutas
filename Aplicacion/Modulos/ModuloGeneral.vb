@@ -69,42 +69,6 @@ Module ModuloGeneral
     ''''''''''''''''''''''''METODOS DE APOYO'''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-    Public Sub ExportarAExcell(ByVal DataGridView As DataGridView)
-        'Metodo que permite exportar contenido de DataGridView a Excel.
-
-        Dim obj_Excel As Object
-        Dim obj_hoja As Object
-        Dim obj_libro As Object
-        Dim LETEXCEL() As String = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"}
-
-        Dim i As Integer
-        Dim j As Integer
-
-        obj_Excel = CreateObject("Excel.Application")
-        obj_libro = obj_Excel.Workbooks.Add()
-        obj_hoja = obj_libro.Worksheets(1)
-
-        For i = 0 To DataGridView.Columns.Count - 1
-            obj_hoja.Range(LETEXCEL(i) & "1").Value = DataGridView.Columns(i).HeaderText
-        Next
-
-        'Ponemos en negrita los encabezados
-        obj_hoja.Range("A1:N1").Font.Bold = True
-        'obj_hoja.HorizontalAlignment = 3
-
-        'Recorremos el datagridview y exportamos celda a celda
-        For i = 0 To DataGridView.Columns.Count - 1
-
-            For j = 0 To DataGridView.RowCount - 1
-                obj_hoja.range(LETEXCEL(i) & j + 2).value = DataGridView(i, j).Value
-            Next
-
-        Next
-
-        obj_Excel.Visible = True
-
-    End Sub
-
     Public Sub Exportar(ByVal DataGridView As DataGridView)
 
         Dim exApp As New Microsoft.Office.Interop.Excel.Application
