@@ -27,13 +27,13 @@ Partial Class SeguimientoLiviano
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonGuiaTelefonica = New System.Windows.Forms.ToolStripButton()
@@ -54,31 +54,12 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.ImagensList = New System.Windows.Forms.ImageList(Me.components)
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ID2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTipoVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaImagen = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ColumnaEstadoVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel6 = New System.Windows.Forms.TabControl()
         Me.Pagina4 = New System.Windows.Forms.TabPage()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.ColumnaIDegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pagina5 = New System.Windows.Forms.TabPage()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn16 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4 = New System.Windows.Forms.TabControl()
         Me.Pagina1 = New System.Windows.Forms.TabPage()
         Me.Arbol = New System.Windows.Forms.TreeView()
@@ -140,6 +121,25 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTipoVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaImagen = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ColumnaEstadoVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaIDRegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVelocidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaClasificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaIDRegistro2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaClasificacion2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFecha2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaHora2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -308,7 +308,7 @@ Partial Class SeguimientoLiviano
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID2, Me.ColumnaTipoVehiculo2, Me.ColumnaImagen, Me.ColumnaEstadoVehiculo2})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaTipoVehiculo, Me.ColumnaImagen, Me.ColumnaEstadoVehiculo})
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 8.25!)
@@ -332,54 +332,6 @@ Partial Class SeguimientoLiviano
         Me.DataGridView1.ShowEditingIcon = False
         Me.DataGridView1.Size = New System.Drawing.Size(392, 574)
         Me.DataGridView1.TabIndex = 45
-        '
-        'ID2
-        '
-        Me.ID2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ID2.DataPropertyName = "idvehiculo"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ID2.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ID2.FillWeight = 19.49362!
-        Me.ID2.HeaderText = "VEHICULO"
-        Me.ID2.Name = "ID2"
-        Me.ID2.ReadOnly = True
-        Me.ID2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ID2.Width = 80
-        '
-        'ColumnaTipoVehiculo2
-        '
-        Me.ColumnaTipoVehiculo2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaTipoVehiculo2.DataPropertyName = "nombretipo"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaTipoVehiculo2.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnaTipoVehiculo2.FillWeight = 26.29328!
-        Me.ColumnaTipoVehiculo2.HeaderText = "TIPO"
-        Me.ColumnaTipoVehiculo2.Name = "ColumnaTipoVehiculo2"
-        Me.ColumnaTipoVehiculo2.ReadOnly = True
-        Me.ColumnaTipoVehiculo2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ColumnaTipoVehiculo2.Width = 92
-        '
-        'ColumnaImagen
-        '
-        Me.ColumnaImagen.FillWeight = 7.659054!
-        Me.ColumnaImagen.HeaderText = ""
-        Me.ColumnaImagen.Name = "ColumnaImagen"
-        Me.ColumnaImagen.ReadOnly = True
-        Me.ColumnaImagen.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ColumnaImagen.Width = 25
-        '
-        'ColumnaEstadoVehiculo2
-        '
-        Me.ColumnaEstadoVehiculo2.DataPropertyName = "condicionvehiculo"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstadoVehiculo2.DefaultCellStyle = DataGridViewCellStyle4
-        Me.ColumnaEstadoVehiculo2.FillWeight = 380.7106!
-        Me.ColumnaEstadoVehiculo2.HeaderText = "ESTADO VEHICULO"
-        Me.ColumnaEstadoVehiculo2.Name = "ColumnaEstadoVehiculo2"
-        Me.ColumnaEstadoVehiculo2.ReadOnly = True
-        Me.ColumnaEstadoVehiculo2.Width = 175
         '
         'TextBox1
         '
@@ -431,7 +383,7 @@ Partial Class SeguimientoLiviano
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDegistro, Me.Column2, Me.ColumnaChofer, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDRegistro, Me.ColumnaVehiculo, Me.ColumnaChofer, Me.ColumnaVelocidad, Me.ColumnaClasificacion, Me.ColumnaEstado2, Me.ColumnaFecha, Me.ColumnaHora})
         Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView2.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView2.Location = New System.Drawing.Point(3, 3)
@@ -445,66 +397,6 @@ Partial Class SeguimientoLiviano
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(677, 241)
         Me.DataGridView2.TabIndex = 62
-        '
-        'ColumnaIDegistro
-        '
-        Me.ColumnaIDegistro.DataPropertyName = "idregistroinfraccion"
-        Me.ColumnaIDegistro.HeaderText = "ID REGISTRO"
-        Me.ColumnaIDegistro.Name = "ColumnaIDegistro"
-        Me.ColumnaIDegistro.ReadOnly = True
-        Me.ColumnaIDegistro.Visible = False
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "vehiculo"
-        Me.Column2.HeaderText = "VEHICULO"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Visible = False
-        '
-        'ColumnaChofer
-        '
-        Me.ColumnaChofer.DataPropertyName = "nombrechofer"
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "velocidad"
-        Me.Column4.HeaderText = "VELOCIDAD"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "clasificacion"
-        Me.Column5.HeaderText = "CLASIFICACION"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Visible = False
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "estadovehiculo"
-        Me.Column6.HeaderText = "ESTADO"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        Me.Column6.Visible = False
-        '
-        'Column7
-        '
-        Me.Column7.DataPropertyName = "fecha"
-        Me.Column7.HeaderText = "FECHA"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "hora"
-        Me.Column8.HeaderText = "HORA"
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
         '
         'Pagina5
         '
@@ -537,7 +429,7 @@ Partial Class SeguimientoLiviano
         DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn10, Me.ColumnaChofer4, Me.DataGridViewTextBoxColumn12, Me.Column9, Me.DataGridViewTextBoxColumn15, Me.DataGridViewTextBoxColumn16})
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaIDRegistro2, Me.ColumnaVehiculo2, Me.ColumnaChofer2, Me.ColumnaDescripcion, Me.ColumnaClasificacion2, Me.ColumnaFecha2, Me.ColumnaHora2})
         Me.DataGridView3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView3.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView3.Location = New System.Drawing.Point(3, 3)
@@ -551,59 +443,6 @@ Partial Class SeguimientoLiviano
         Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView3.Size = New System.Drawing.Size(677, 241)
         Me.DataGridView3.TabIndex = 64
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "idregistroincidencia"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "ID REGISTRO"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
-        Me.DataGridViewTextBoxColumn9.ReadOnly = True
-        Me.DataGridViewTextBoxColumn9.Visible = False
-        '
-        'DataGridViewTextBoxColumn10
-        '
-        Me.DataGridViewTextBoxColumn10.DataPropertyName = "vehiculo"
-        Me.DataGridViewTextBoxColumn10.HeaderText = "VEHICULO"
-        Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
-        Me.DataGridViewTextBoxColumn10.ReadOnly = True
-        '
-        'ColumnaChofer4
-        '
-        Me.ColumnaChofer4.DataPropertyName = "nombrechofer"
-        Me.ColumnaChofer4.HeaderText = "CHOFER"
-        Me.ColumnaChofer4.Name = "ColumnaChofer4"
-        Me.ColumnaChofer4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn12
-        '
-        Me.DataGridViewTextBoxColumn12.DataPropertyName = "descripcion"
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn12.DefaultCellStyle = DataGridViewCellStyle10
-        Me.DataGridViewTextBoxColumn12.HeaderText = "DESCRIPCION"
-        Me.DataGridViewTextBoxColumn12.Name = "DataGridViewTextBoxColumn12"
-        Me.DataGridViewTextBoxColumn12.ReadOnly = True
-        '
-        'Column9
-        '
-        Me.Column9.DataPropertyName = "clasificacion"
-        Me.Column9.HeaderText = "CLASIFICACION"
-        Me.Column9.Name = "Column9"
-        Me.Column9.ReadOnly = True
-        Me.Column9.Visible = False
-        '
-        'DataGridViewTextBoxColumn15
-        '
-        Me.DataGridViewTextBoxColumn15.DataPropertyName = "fecha"
-        Me.DataGridViewTextBoxColumn15.HeaderText = "FECHA"
-        Me.DataGridViewTextBoxColumn15.Name = "DataGridViewTextBoxColumn15"
-        Me.DataGridViewTextBoxColumn15.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn16
-        '
-        Me.DataGridViewTextBoxColumn16.DataPropertyName = "hora"
-        Me.DataGridViewTextBoxColumn16.HeaderText = "HORA"
-        Me.DataGridViewTextBoxColumn16.Name = "DataGridViewTextBoxColumn16"
-        Me.DataGridViewTextBoxColumn16.ReadOnly = True
         '
         'Panel4
         '
@@ -1180,6 +1019,167 @@ Partial Class SeguimientoLiviano
         'Timer1
         '
         '
+        'ColumnaID
+        '
+        Me.ColumnaID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaID.DataPropertyName = "idvehiculo"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaID.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnaID.FillWeight = 19.49362!
+        Me.ColumnaID.HeaderText = "VEHICULO"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ColumnaID.Width = 80
+        '
+        'ColumnaTipoVehiculo
+        '
+        Me.ColumnaTipoVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaTipoVehiculo.DataPropertyName = "nombretipo"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaTipoVehiculo.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ColumnaTipoVehiculo.FillWeight = 26.29328!
+        Me.ColumnaTipoVehiculo.HeaderText = "TIPO"
+        Me.ColumnaTipoVehiculo.Name = "ColumnaTipoVehiculo"
+        Me.ColumnaTipoVehiculo.ReadOnly = True
+        Me.ColumnaTipoVehiculo.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ColumnaTipoVehiculo.Width = 92
+        '
+        'ColumnaImagen
+        '
+        Me.ColumnaImagen.FillWeight = 7.659054!
+        Me.ColumnaImagen.HeaderText = ""
+        Me.ColumnaImagen.Name = "ColumnaImagen"
+        Me.ColumnaImagen.ReadOnly = True
+        Me.ColumnaImagen.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ColumnaImagen.Width = 25
+        '
+        'ColumnaEstadoVehiculo
+        '
+        Me.ColumnaEstadoVehiculo.DataPropertyName = "condicionvehiculo"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstadoVehiculo.DefaultCellStyle = DataGridViewCellStyle4
+        Me.ColumnaEstadoVehiculo.FillWeight = 380.7106!
+        Me.ColumnaEstadoVehiculo.HeaderText = "ESTADO VEHICULO"
+        Me.ColumnaEstadoVehiculo.Name = "ColumnaEstadoVehiculo"
+        Me.ColumnaEstadoVehiculo.ReadOnly = True
+        Me.ColumnaEstadoVehiculo.Width = 175
+        '
+        'ColumnaIDRegistro
+        '
+        Me.ColumnaIDRegistro.DataPropertyName = "idregistroinfraccion"
+        Me.ColumnaIDRegistro.HeaderText = "ID REGISTRO"
+        Me.ColumnaIDRegistro.Name = "ColumnaIDRegistro"
+        Me.ColumnaIDRegistro.ReadOnly = True
+        Me.ColumnaIDRegistro.Visible = False
+        '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
+        Me.ColumnaVehiculo.HeaderText = "VEHICULO"
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        Me.ColumnaVehiculo.Visible = False
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.DataPropertyName = "nombrechofer"
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        '
+        'ColumnaVelocidad
+        '
+        Me.ColumnaVelocidad.DataPropertyName = "velocidad"
+        Me.ColumnaVelocidad.HeaderText = "VELOCIDAD"
+        Me.ColumnaVelocidad.Name = "ColumnaVelocidad"
+        Me.ColumnaVelocidad.ReadOnly = True
+        '
+        'ColumnaClasificacion
+        '
+        Me.ColumnaClasificacion.DataPropertyName = "clasificacion"
+        Me.ColumnaClasificacion.HeaderText = "CLASIFICACION"
+        Me.ColumnaClasificacion.Name = "ColumnaClasificacion"
+        Me.ColumnaClasificacion.ReadOnly = True
+        Me.ColumnaClasificacion.Visible = False
+        '
+        'ColumnaEstado2
+        '
+        Me.ColumnaEstado2.DataPropertyName = "estadovehiculo"
+        Me.ColumnaEstado2.HeaderText = "ESTADO"
+        Me.ColumnaEstado2.Name = "ColumnaEstado2"
+        Me.ColumnaEstado2.ReadOnly = True
+        Me.ColumnaEstado2.Visible = False
+        '
+        'ColumnaFecha
+        '
+        Me.ColumnaFecha.DataPropertyName = "fecha"
+        Me.ColumnaFecha.HeaderText = "FECHA"
+        Me.ColumnaFecha.Name = "ColumnaFecha"
+        Me.ColumnaFecha.ReadOnly = True
+        '
+        'ColumnaHora
+        '
+        Me.ColumnaHora.DataPropertyName = "hora"
+        Me.ColumnaHora.HeaderText = "HORA"
+        Me.ColumnaHora.Name = "ColumnaHora"
+        Me.ColumnaHora.ReadOnly = True
+        '
+        'ColumnaIDRegistro2
+        '
+        Me.ColumnaIDRegistro2.DataPropertyName = "idregistroincidencia"
+        Me.ColumnaIDRegistro2.HeaderText = "ID REGISTRO"
+        Me.ColumnaIDRegistro2.Name = "ColumnaIDRegistro2"
+        Me.ColumnaIDRegistro2.ReadOnly = True
+        Me.ColumnaIDRegistro2.Visible = False
+        '
+        'ColumnaVehiculo2
+        '
+        Me.ColumnaVehiculo2.DataPropertyName = "vehiculo"
+        Me.ColumnaVehiculo2.HeaderText = "VEHICULO"
+        Me.ColumnaVehiculo2.Name = "ColumnaVehiculo2"
+        Me.ColumnaVehiculo2.ReadOnly = True
+        '
+        'ColumnaChofer2
+        '
+        Me.ColumnaChofer2.DataPropertyName = "nombrechofer"
+        Me.ColumnaChofer2.HeaderText = "CHOFER"
+        Me.ColumnaChofer2.Name = "ColumnaChofer2"
+        Me.ColumnaChofer2.ReadOnly = True
+        '
+        'ColumnaDescripcion
+        '
+        Me.ColumnaDescripcion.DataPropertyName = "descripcion"
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaDescripcion.DefaultCellStyle = DataGridViewCellStyle10
+        Me.ColumnaDescripcion.HeaderText = "DESCRIPCION"
+        Me.ColumnaDescripcion.Name = "ColumnaDescripcion"
+        Me.ColumnaDescripcion.ReadOnly = True
+        '
+        'ColumnaClasificacion2
+        '
+        Me.ColumnaClasificacion2.DataPropertyName = "clasificacion"
+        Me.ColumnaClasificacion2.HeaderText = "CLASIFICACION"
+        Me.ColumnaClasificacion2.Name = "ColumnaClasificacion2"
+        Me.ColumnaClasificacion2.ReadOnly = True
+        Me.ColumnaClasificacion2.Visible = False
+        '
+        'ColumnaFecha2
+        '
+        Me.ColumnaFecha2.DataPropertyName = "fecha"
+        Me.ColumnaFecha2.HeaderText = "FECHA"
+        Me.ColumnaFecha2.Name = "ColumnaFecha2"
+        Me.ColumnaFecha2.ReadOnly = True
+        '
+        'ColumnaHora2
+        '
+        Me.ColumnaHora2.DataPropertyName = "hora"
+        Me.ColumnaHora2.HeaderText = "HORA"
+        Me.ColumnaHora2.Name = "ColumnaHora2"
+        Me.ColumnaHora2.ReadOnly = True
+        '
         'SeguimientoLiviano
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1295,13 +1295,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents TextBox18 As System.Windows.Forms.TextBox
     Friend WithEvents BotonBuscar2 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents DataGridViewTextBoxColumn9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn10 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn12 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn15 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn16 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents BotonConsulta2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BotonConsulta1 As System.Windows.Forms.ToolStripButton
@@ -1315,10 +1308,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BotonVehiculo As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ID2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaTipoVehiculo2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaImagen As System.Windows.Forms.DataGridViewImageColumn
-    Friend WithEvents ColumnaEstadoVehiculo2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents MenuHistorial As ContextMenuStrip
     Friend WithEvents EliminarItemToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BotonChofer As ToolStripButton
@@ -1326,14 +1315,25 @@ Partial Class SeguimientoLiviano
     Friend WithEvents MenuRuta2 As ContextMenuStrip
     Friend WithEvents MenuEliminar As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator14 As ToolStripSeparator
-    Friend WithEvents ColumnaIDegistro As DataGridViewTextBoxColumn
-    Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents TextBox19 As TextBox
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaTipoVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEstadoVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaImagen As DataGridViewImageColumn
+    Friend WithEvents ColumnaIDRegistro As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaVelocidad As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaClasificacion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEstado2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaFecha As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaHora As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaIDRegistro2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaVehiculo2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaDescripcion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaClasificacion2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaFecha2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaHora2 As DataGridViewTextBoxColumn
 End Class

@@ -328,7 +328,7 @@ Public Class SeguimientoCarga
 
                 'Seleccionamos y pasamos el valor al TextBox.
                 'Usado para el detalle de ruta
-                TextBox1.Text = DataGridView1.Item("ID", DataGridView1.SelectedRows(0).Index).Value
+                TextBox1.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
                 TextBox16.Text = DataGridView1.Item("ColumnaEstadoVehiculo2", DataGridView1.SelectedRows(0).Index).Value
 
                 'Si se esta registrando informacion en otro ID de vehiculo y no se guarda
@@ -643,14 +643,14 @@ Public Class SeguimientoCarga
 
                 ComboBox1.Text = DataGridView2.Rows(DataGridView2.CurrentRow.Index).Cells(7).Value()
 
-                TextBox24.Text = DataGridView2.Item("ColumnaIDRuta", DataGridView2.SelectedRows(0).Index).Value
+                TextBox24.Text = DataGridView2.Item("ColumnaID2", DataGridView2.SelectedRows(0).Index).Value
                 ObtenerRutaCarga()
 
                 TextBox6.Text = DataGridView2.Item("ColumnaProducto", DataGridView2.SelectedRows(0).Index).Value
                 'Llamamos al metodo ObtenerProducto para obtener el ID del producto.
                 ObtenerProductoRutaCarga()
 
-                TextBox3.Text = DataGridView2.Item("Columnasitiocarga", DataGridView2.SelectedRows(0).Index).Value
+                TextBox3.Text = DataGridView2.Item("ColumnaUbicacion", DataGridView2.SelectedRows(0).Index).Value
                 'Llamamos al metodo Obtenersitiocarga para obtener el ID de la sitiocarga.
                 ObtenerSitioCargaRutaCarga()
 

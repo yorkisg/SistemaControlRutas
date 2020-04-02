@@ -391,30 +391,6 @@ Module ModuloSeguimientoCarga
         'En este metodo especificamos cuales son las imagenes que se cargaran en el 
         'CellFormatting del DataGridView1
 
-        'Cargamos las imágenes desde el archivo y las guardamos en sus respectivas variables
-
-        'CARGAMOS DESDE LA CARPETA RECURSOS LA CUAL ES COPIADA EN LA CARPETA DEBUG Y RELEASE
-        'EnRutaVacio = Image.FromFile(Application.StartupPath & "\Recursos\EnRutaVacio.png")
-        'EnRutaCargado = Image.FromFile(Application.StartupPath & "\Recursos\EnRutaCargado.png")
-        'DeRegresoConRetorno = Image.FromFile(Application.StartupPath & "\Recursos\DeRegresoConRetorno.png")
-        'DeRegresoCargado = Image.FromFile(Application.StartupPath & "\Recursos\DeRegresoCargado.png")
-        'DeRegresoVacio = Image.FromFile(Application.StartupPath & "\Recursos\DeRegresoVacio.png")
-        'OrganizacionElTunal = Image.FromFile(Application.StartupPath & "\Recursos\OrganizacionElTunal.png")
-        'PernoctaAutorizada = Image.FromFile(Application.StartupPath & "\Recursos\PernoctaAutorizada.png")
-        'EnProcesoDeCarga = Image.FromFile(Application.StartupPath & "\Recursos\EnProcesoDeCarga.png")
-        'EnProcesoDeDescarga = Image.FromFile(Application.StartupPath & "\Recursos\EnProcesoDeDescarga.png")
-        'CargadoEsperandoPorSalir = Image.FromFile(Application.StartupPath & "\Recursos\CargadoEsperandoPorSalir.png")
-        'CargadoEsperandoDocumentos = Image.FromFile(Application.StartupPath & "\Recursos\CargadoEsperandoDocumentos.png")
-        'EsperandoAutorizacionParaSalir = Image.FromFile(Application.StartupPath & "\Recursos\EsperandoAutorizacionParaSalir.png")
-        'Detenido = Image.FromFile(Application.StartupPath & "\Recursos\Detenido.png")
-        'Accidentado = Image.FromFile(Application.StartupPath & "\Recursos\Accidentado.png")
-        'ParadaIrregular = Image.FromFile(Application.StartupPath & "\Recursos\ParadaIrregular.png")
-        'EnTaller = Image.FromFile(Application.StartupPath & "\Recursos\EnTaller.png")
-        'EsperandoPorSalir = Image.FromFile(Application.StartupPath & "\Recursos\EsperandoPorSalir.png")
-        'EnElClienteEnElProveedor = Image.FromFile(Application.StartupPath & "\Recursos\EnElClienteEnElProveedor.png")
-        'RealizandoMovimientos = Image.FromFile(Application.StartupPath & "\Recursos\RealizandoMovimientos.png")
-        'RutaCancelada = Image.FromFile(Application.StartupPath & "\Recursos\RutaCancelada.png")
-
         'CARGAMOS E IMPLEMENTAMOS DESDE LA CARPETA RESOURCES SIN NECESIDAD DE COPIAR EN DEBUG Y RELEASE
         EnRutaVacio = My.Resources.EnRutaVacio
         EnRutaCargado = My.Resources.EnRutaCargado
@@ -442,14 +418,6 @@ Module ModuloSeguimientoCarga
     Public Sub CargarImagenesEstadoVehiculoCarga()
         'En este metodo especificamos cuales son las imagenes que se cargaran en el 
         'CellFormatting del DataGridView1
-
-        'Cargamos las imágenes de la columna de Estados del Vehiculo
-
-        'CARGAMOS DESDE LA CARPETA RECURSOS LA CUAL ES COPIADA EN LA CARPETA DEBUG Y RELEASE
-        'Operativo = Image.FromFile(Application.StartupPath & "\Recursos\Operativo.png")
-        'EnReparacion = Image.FromFile(Application.StartupPath & "\Recursos\EnReparacion.png")
-        'SinReporte = Image.FromFile(Application.StartupPath & "\Recursos\SinReporte.png")
-        'Robado = Image.FromFile(Application.StartupPath & "\Recursos\Robado.png")
 
         Operativo = My.Resources.Operativo
         EnReparacion = My.Resources.EnReparacion

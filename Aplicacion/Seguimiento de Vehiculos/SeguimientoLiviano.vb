@@ -122,7 +122,7 @@ Public Class SeguimientoLiviano
 
             Dim EstadoVehiculo As String
 
-            If DataGridView1.Columns(e.ColumnIndex).Name.Equals("ColumnaEstadoVehiculo2") Then
+            If DataGridView1.Columns(e.ColumnIndex).Name.Equals("ColumnaEstadoVehiculo") Then
 
                 EstadoVehiculo = (DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 
@@ -178,9 +178,9 @@ Public Class SeguimientoLiviano
 
                 'Seleccionamos y pasamos el valor al TextBox.
                 'Usado para el detalle de ruta
-                TextBox2.Text = DataGridView1.Item("ID2", DataGridView1.SelectedRows(0).Index).Value
-                TextBox3.Text = DataGridView1.Item("ID2", DataGridView1.SelectedRows(0).Index).Value
-                TextBox14.Text = DataGridView1.Item("ID2", DataGridView1.SelectedRows(0).Index).Value
+                TextBox2.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
+                TextBox3.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
+                TextBox14.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
 
                 LimpiarComponentesInfraccionLiviano()
                 LimpiarComponentesIncidenciaLiviano()
@@ -264,7 +264,7 @@ Public Class SeguimientoLiviano
 
                 ObtenerChoferSeguimientoLivianoInfraccion()
 
-                TextBox19.Text = DataGridView2.Item("ColumnaIDegistro", DataGridView2.SelectedRows(0).Index).Value
+                TextBox19.Text = DataGridView2.Item("ColumnaIDRegistro", DataGridView2.SelectedRows(0).Index).Value
 
             End If
 
@@ -341,7 +341,7 @@ Public Class SeguimientoLiviano
             If DataGridView3.RowCount > 0 And DataGridView3.SelectedRows.Count = 1 Then
 
                 'Seleccionamos y pasamos el valor al TextBox.
-                TextBox17.Text = DataGridView3.Item("ColumnaChofer4", DataGridView3.SelectedRows(0).Index).Value
+                TextBox17.Text = DataGridView3.Item("ColumnaChofer2", DataGridView3.SelectedRows(0).Index).Value
                 ObtenerChoferSeguimientoLivianoIncidencia()
 
             End If
