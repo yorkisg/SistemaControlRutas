@@ -50,9 +50,9 @@ Public Class EstadisticaInfraccion
                 'Si la respuesta es "Si"
                 If Mensaje = DialogResult.Yes Then
 
-                    ExportarAExcell(DataGridView)
-                    ExportarAExcell(DataGridView1)
-                    ExportarAExcell(DataGridView2)
+                    Exportar(DataGridView)
+                    Exportar(DataGridView1)
+                    Exportar(DataGridView2)
 
                 End If
 

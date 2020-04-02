@@ -476,11 +476,11 @@ Public Class SeguimientoTaller
 
                     If Panel7.SelectedIndex = 0 Then
 
-                        ExportarAExcell(DataGridView2)
+                        Exportar(DataGridView2)
 
                     ElseIf Panel7.SelectedIndex = 1 Then
 
-                        ExportarAExcell(DataGridView3)
+                        Exportar(DataGridView3)
 
                     End If
 

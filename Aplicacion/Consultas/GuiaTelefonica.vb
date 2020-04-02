@@ -55,15 +55,15 @@ Public Class GuiaTelefonica
 
                     If Panel8.SelectedIndex = 0 Then
 
-                        ExportarAExcell(DataGridView1)
+                        Exportar(DataGridView1)
 
                     ElseIf Panel8.SelectedIndex = 1 Then
 
-                        ExportarAExcell(DataGridView2)
+                        Exportar(DataGridView2)
 
                     ElseIf Panel8.SelectedIndex = 2 Then
 
-                        ExportarAExcell(DataGridView3)
+                        Exportar(DataGridView3)
 
                     End If
 

@@ -105,6 +105,46 @@ Module ModuloGeneral
 
     End Sub
 
+    Public Sub Exportar(ByVal DataGridView As DataGridView)
+
+        Dim exApp As New Microsoft.Office.Interop.Excel.Application
+        Dim exLibro As Microsoft.Office.Interop.Excel.Workbook
+        Dim exHoja As Microsoft.Office.Interop.Excel.Worksheet
+
+        exLibro = exApp.Workbooks.Add
+        exHoja = exLibro.Worksheets.Add()
+
+        Dim NCol As Integer = DataGridView.ColumnCount
+        Dim NRow As Integer = DataGridView.RowCount
+
+        For i As Integer = 1 To NCol
+
+            exHoja.Cells.Item(1, i) = DataGridView.Columns(i - 1).Name.ToString
+
+        Next
+
+        For Fila As Integer = 0 To NRow - 1
+
+            For Col As Integer = 0 To NCol - 1
+
+                exHoja.Cells.Item(Fila + 2, Col + 1) = DataGridView.Rows(Fila).Cells(Col).Value
+
+            Next
+
+        Next
+
+        exHoja.Rows.Item(1).Font.Bold = 1
+        exHoja.Rows.Item(1).HorizontalAlignment = 3
+        exHoja.Columns.AutoFit()
+
+        exApp.Application.Visible = True
+
+        exHoja = Nothing
+        exLibro = Nothing
+        exApp = Nothing
+
+    End Sub
+
     Public Sub AlternarFilasGeneral(ByVal DataGridView As DataGridView)
         'En este metodo especificamos cuales son los colores de las filas y los alternamos
         'con el color blanco y el color de seleccion de filas
@@ -226,5 +266,6 @@ Module ModuloGeneral
         End If
 
     End Sub
+
 
 End Module

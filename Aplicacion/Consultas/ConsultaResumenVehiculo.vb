@@ -39,7 +39,7 @@ Public Class ConsultaResumenVehiculo
                 'Si la respuesta es "Si"
                 If Mensaje = DialogResult.Yes Then
 
-                    ExportarAExcell(DataGridView)
+                    Exportar(DataGridView)
 
                 End If
 

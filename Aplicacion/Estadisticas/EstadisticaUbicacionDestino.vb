@@ -43,8 +43,8 @@ Public Class EstadisticasitiocargaDestino
                 'Si la respuesta es "Si"
                 If Mensaje = DialogResult.Yes Then
 
-                    ExportarAExcell(DataGridView)
-                    ExportarAExcell(DataGridView1)
+                    Exportar(DataGridView)
+                    Exportar(DataGridView1)
 
                 End If
 
