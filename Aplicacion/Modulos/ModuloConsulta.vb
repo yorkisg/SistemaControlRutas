@@ -368,64 +368,6 @@ Module ModuloConsulta
     End Sub
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    ''''''''''''''''''''''''CONSULTA HISTORIAL DE CAMBIOS DE ESTADO '''''''''''''''''''''''
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-    Public Sub CargarGridHistorialVehiculo()
-        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
-
-        Dim Command As New MySqlCommand("SELECT idhistorialvehiculo, vehiculo, estadohistorial, fecha, hora " _
-                           & " FROM historialvehiculo " _
-                           & " WHERE vehiculo = '" & ConsultaHistorialVehiculo.TextBox1.Text & "' " _
-                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
-                           & " ORDER BY idhistorialvehiculo DESC, fecha DESC, hora DESC ", cnn)
-
-        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaHistorialVehiculo.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaHistorialVehiculo.DateTimePicker2.Value
-
-        'Llenado del datagridview
-        Dim adaptador As New MySqlDataAdapter(Command)
-        Dim Tabla As New DataTable
-        adaptador.Fill(Tabla)
-        ConsultaHistorialVehiculo.DataGridView.DataSource = Tabla
-
-        'Parametros para editar apariencia del datagridview.
-        With ConsultaHistorialVehiculo.DataGridView
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-    End Sub
-
-    Public Sub CargarGridHistorialVehiculoGeneral()
-        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
-
-        Dim Command As New MySqlCommand("SELECT idhistorialvehiculo, vehiculo, estadohistorial, fecha, hora " _
-                           & " FROM historialvehiculo " _
-                           & " WHERE fecha BETWEEN @fecha1 AND @fecha2 " _
-                           & " AND estadohistorial = 'EN REPARACIÓN' " _
-                           & " ORDER BY idhistorialvehiculo DESC, fecha DESC, hora DESC ", cnn)
-
-        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaHistorialVehiculo.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaHistorialVehiculo.DateTimePicker2.Value
-
-        'Llenado del datagridview
-        Dim adaptador As New MySqlDataAdapter(Command)
-        Dim Tabla As New DataTable
-        adaptador.Fill(Tabla)
-        ConsultaHistorialVehiculo.DataGridView.DataSource = Tabla
-
-        'Parametros para editar apariencia del datagridview.
-        With ConsultaHistorialVehiculo.DataGridView
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-    End Sub
-
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''REPORTE INFRACCIONES DE VELOCIDAD ''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 

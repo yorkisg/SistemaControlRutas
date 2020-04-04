@@ -16,9 +16,6 @@ Public Class MaestroVehiculo
         'Decimos que el primer elemento activo del combo es "Activo"
         ' ComboEstado.SelectedItem = "OPERATIVO"
 
-        'Se habilita la serie correlativa para el siguiente ID.
-        SerieHistorial()
-
         'Metodo que viene del modulo ModuloRuta, que permite obtener los datos 
         'para modificar los estados de los vehiculos
         ObtenerVehiculoCarga()
@@ -67,11 +64,6 @@ Public Class MaestroVehiculo
 
             Dim db As New MySqlCommand("UPDATE vehiculo SET subflota = '" & TextBox2.Text & "', tipovehiculo = '" & TextBox3.Text & "', clasificacionvehiculo = '" & ComboClasificacion.Text & "', condicionvehiculo = '" & ComboCondicion.Text & "', estadoactual = '" & ComboEstado.Text & "' WHERE idvehiculo = '" & TextBox1.Text & "' ", cnn)
             db.ExecuteNonQuery()
-
-            SerieHistorial()
-
-            Dim db2 As New MySqlCommand("INSERT INTO historialvehiculo (idhistorialvehiculo, vehiculo, estadohistorial, fecha, hora) VALUES ('" & TextBox4.Text & "', '" & TextBox1.Text & "', '" & ComboCondicion.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", cnn)
-            db2.ExecuteNonQuery()
 
             'Se desactiva el uso del boton modificar.
             BotonModificar.Enabled = False
@@ -416,23 +408,6 @@ Public Class MaestroVehiculo
         Return Convert.ToBoolean(con.ExecuteScalar())
 
     End Function
-
-    Private Sub SerieHistorial()
-        'Metodo que permite generar una serie correlativa de numeros enteros. 
-        'Usado para generar automaticamente el ID de un producto.
-
-        'Se obtiene el ultimo ID del chofer.
-        Dim Command As New MySqlCommand("SELECT MAX(idhistorialvehiculo) FROM historialvehiculo", cnn)
-        Dim numero As Integer
-
-        'El ID obtenido de la BD se incrementa.
-        numero = Command.ExecuteScalar
-        numero = numero + 1
-
-        'Se da formato al ID obtenido de la BD.
-        TextBox4.Text = Format(numero, "000000000")
-
-    End Sub
 
 
 End Class

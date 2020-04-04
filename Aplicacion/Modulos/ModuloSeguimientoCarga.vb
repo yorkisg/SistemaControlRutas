@@ -45,6 +45,8 @@ Module ModuloSeguimientoCarga
 
         Adaptador.Fill(Datatable)
 
+        SeguimientoCarga.Arbol.Nodes.Add("Nodo raiz")
+
         With SeguimientoCarga.Arbol
 
             .BeginUpdate()
@@ -66,6 +68,7 @@ Module ModuloSeguimientoCarga
     End Sub
 
     Public Sub CargarArbolCarga2()
+        'Metodo donde generamos el arbol de opciones de acuerdo a las flotas, subflotas y grupos registrados en BD
 
         'Adaptadores
         Dim Padres As New MySqlDataAdapter("SELECT idflota, nombreflota FROM flota", cnn)
@@ -135,7 +138,7 @@ Module ModuloSeguimientoCarga
     Public Sub CargarGridRutaCarga()
         'Metodo que genera la carga de datos en el DataGridview1 
 
-        Dim sql As String = "SELECT idvehiculo, nombretipo, estadoactual, condicionvehiculo FROM vehiculo, subflota, tipovehiculo " _
+        Dim sql As String = "Select idvehiculo, nombretipo, estadoactual, condicionvehiculo FROM vehiculo, subflota, tipovehiculo " _
                        & " WHERE vehiculo.subflota = subflota.idsubflota " _
                        & " And vehiculo.tipovehiculo = tipovehiculo.idtipo " _
                        & " And nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _

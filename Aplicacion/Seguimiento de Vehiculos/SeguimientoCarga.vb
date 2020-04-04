@@ -14,7 +14,6 @@ Public Class SeguimientoCarga
         CargarArbolCarga2() 'EN PRUEBA Y REESTRUCTURACION
 
         'Validamos que el primer item seleccionado en el arbol sea el primero
-        'Arbol.SelectedNode = Arbol.Nodes(0)
         Arbol.SelectedNode = Arbol.Nodes(0).Nodes(0)
 
         'Se habilita la serie correlativa para el ID de las rutas.

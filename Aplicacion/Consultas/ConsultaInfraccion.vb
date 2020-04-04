@@ -19,7 +19,7 @@ Public Class ConsultaInfraccion
 
     End Sub
 
-    Private Sub ConsultaHistorialVehiculo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ConsultaInfraccion_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         Dispose()

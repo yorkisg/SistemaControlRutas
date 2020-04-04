@@ -156,7 +156,7 @@ Public Class Principal
     Private Sub MenuSeguimientoCarga_Click(sender As Object, e As EventArgs) Handles MenuSeguimientoCarga.Click
         'Formulario SeguimientoCarga
 
-        SeguimientoCarga.Show()
+        SeguimientoCarga.ShowDialog()
 
 
     End Sub
@@ -164,7 +164,7 @@ Public Class Principal
     Private Sub MenuSeguimientoLiviano_Click(sender As Object, e As EventArgs) Handles MenuSeguimientoLiviano.Click
         'Formulario SeguimientoLiviano
 
-        SeguimientoLiviano.Show()
+        SeguimientoLiviano.ShowDialog()
 
     End Sub
 
@@ -210,13 +210,6 @@ Public Class Principal
 
     End Sub
 
-    Private Sub MenuConsultarHistorial_Click(sender As Object, e As EventArgs) Handles MenuConsultarHistorial.Click
-        'Formulario ConsultaHistorialVehiculo
-
-        ConsultaHistorialVehiculo.ShowDialog()
-
-    End Sub
-
     Private Sub MenuGuiaTelefonica_Click(sender As Object, e As EventArgs) Handles MenuGuiaTelefonica.Click
         'Formulario GuiaTelefonica
 
@@ -256,13 +249,6 @@ Public Class Principal
         'Formulario MaestroEstado
 
         MaestroEstado.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuHistorialDeTaller_Click(sender As Object, e As EventArgs) Handles MenuHistorialDeTaller.Click
-        'Formulario EstadisticaHistorialVehiculo
-
-        EstadisticaHistorialVehiculo.ShowDialog()
 
     End Sub
 

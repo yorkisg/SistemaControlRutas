@@ -157,12 +157,6 @@
     <Compile Include="Consultas\ConsultaChofer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\ConsultaHistorialVehiculo.Designer.vb">
-      <DependentUpon>ConsultaHistorialVehiculo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\ConsultaHistorialVehiculo.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Consultas\ConsultaInfraccion.Designer.vb">
       <DependentUpon>ConsultaInfraccion.vb</DependentUpon>
     </Compile>
@@ -209,12 +203,6 @@
       <DependentUpon>ConsultaResumenVehiculo.vb</DependentUpon>
     </Compile>
     <Compile Include="Consultas\ConsultaResumenVehiculo.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estadisticas\EstadisticaHistorialVehiculo.Designer.vb">
-      <DependentUpon>EstadisticaHistorialVehiculo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Estadisticas\EstadisticaHistorialVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estadisticas\EstadisticaInfraccion.Designer.vb">
@@ -412,9 +400,6 @@
     <EmbeddedResource Include="Consultas\ConsultaChofer.resx">
       <DependentUpon>ConsultaChofer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ConsultaHistorialVehiculo.resx">
-      <DependentUpon>ConsultaHistorialVehiculo.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaInfraccion.resx">
       <DependentUpon>ConsultaInfraccion.vb</DependentUpon>
     </EmbeddedResource>
@@ -439,10 +424,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaResumenVehiculo.resx">
       <DependentUpon>ConsultaResumenVehiculo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas\EstadisticaHistorialVehiculo.resx">
-      <DependentUpon>EstadisticaHistorialVehiculo.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas\EstadisticaInfraccion.resx">
       <DependentUpon>EstadisticaInfraccion.vb</DependentUpon>

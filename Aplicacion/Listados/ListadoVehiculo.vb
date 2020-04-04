@@ -76,18 +76,6 @@ Public Class ListadoVehiculo
 
             End If
 
-            If ConsultaHistorialVehiculo.Visible = True Then
-                'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
-
-                ConsultaHistorialVehiculo.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
-
-                'Se cierra el formulario ListadoVehiculo
-                Tabla.Clear()
-                DataSet.Clear()
-                Dispose()
-
-            End If
-
             If MaestroInfraccion.Visible = True Then
                 'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
 
@@ -251,18 +239,6 @@ Public Class ListadoVehiculo
                 'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
 
                 ConsultaVehiculo.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
-
-                'Se cierra el formulario ListadoVehiculo
-                Tabla.Clear()
-                DataSet.Clear()
-                Dispose()
-
-            End If
-
-            If ConsultaHistorialVehiculo.Visible = True Then
-                'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
-
-                ConsultaHistorialVehiculo.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
 
                 'Se cierra el formulario ListadoVehiculo
                 Tabla.Clear()
