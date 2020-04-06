@@ -3,13 +3,16 @@ Public Class ConsultaSeguimientoTaller
 
     Private Sub ConsultaSeguimientoTaller_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ObtenerCantidadFlotas()
-        ObtenerCantidadSistemas()
-        ObtenerCantidadTipo()
+        'ObtenerCantidadFallasFlotas()
+        ObtenerCantidadFallasSistemas()
+        'ObtenerCantidadFallasTipo()
+        'ObtenerPromedioFallasMensual()
+
+        CalcularTotales()
 
     End Sub
 
-    Public Sub ObtenerCantidadFlotas()
+    Public Sub ObtenerCantidadFallasFlotas()
         'Metodo para cargar el datagridview de la Guia Telefonica
 
         'Conexion a la BD.
@@ -40,11 +43,11 @@ Public Class ConsultaSeguimientoTaller
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        CalcularTotal()
+        CalcularTotalFallasFlotas()
 
     End Sub
 
-    Public Sub CalcularTotal()
+    Public Sub CalcularTotalFallasFlotas()
 
         Dim Total As New Double
 
@@ -58,15 +61,16 @@ Public Class ConsultaSeguimientoTaller
 
     End Sub
 
-    Public Sub ObtenerCantidadSistemas()
+    Public Sub ObtenerCantidadFallasSistemas()
         'Metodo para cargar el datagridview de la Guia Telefonica
 
         'Conexion a la BD.
-        Dim sql As String = " SELECT COUNT(area) AS 'Cantidad', area AS 'Area' " _
-                             & " FROM registrotaller " _
-                             & " AND MONTH(fechaingreso) = MONTH(CURDATE()) " _
-                             & " GROUP BY area " _
-                             & " ORDER BY area ASC "
+        Dim sql As String = " SELECT area AS 'Area', COUNT(idregistrotaller) AS 'Cantidad', " _
+              & " CONCAT(ROUND((COUNT(area) * 100 / (SELECT COUNT(*) FROM registrotaller WHERE MONTH(fechaingreso) = MONTH(CURDATE()))),1),' %') AS 'Porcentaje' " _
+              & " FROM registrotaller " _
+              & " WHERE MONTH(fechaingreso) = MONTH(CURDATE()) " _
+              & " GROUP BY area " _
+              & " ORDER BY area ASC "
 
         Dim connection As New MySqlConnection(connectionString)
 
@@ -86,11 +90,11 @@ Public Class ConsultaSeguimientoTaller
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        CalcularTotalSistemas()
+        CalcularTotalFallasSistemas()
 
     End Sub
 
-    Public Sub CalcularTotalSistemas()
+    Public Sub CalcularTotalFallasSistemas()
 
         Dim Total As New Double
 
@@ -104,7 +108,7 @@ Public Class ConsultaSeguimientoTaller
 
     End Sub
 
-    Public Sub ObtenerCantidadTipo()
+    Public Sub ObtenerCantidadFallasTipo()
         'Metodo para cargar el datagridview de la Guia Telefonica
 
         'Conexion a la BD.
@@ -133,6 +137,44 @@ Public Class ConsultaSeguimientoTaller
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
+
+    End Sub
+
+    Public Sub ObtenerPromedioFallasMensual()
+        'Este metodo permite obtener los estados de los vehiculos para luego ser modificados
+        'Se despliega el formulario MaestroVehiculo
+
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
+
+        Adaptador = New MySqlDataAdapter("SELECT ROUND((COUNT(idregistrotaller)/29),2) AS 'Promedio' " _
+                                        & " From registrotaller " _
+                                        & " WHERE MONTH(fechaingreso) = MONTH(CURDATE()) ", cnn)
+
+        Adaptador.Fill(Tabla)
+
+        For Each row As DataRow In Tabla.Rows
+
+            TextBox2.Text = row("Promedio").ToString
+
+        Next
+
+    End Sub
+
+    Public Sub CalcularTotales()
+
+        TextBox1.Text = 396
+
+        TextBox2.Text = 6
+
+        'Calculamos el promedio de unidades operativas por mes
+        TextBox3.Text = (TextBox1.Text) - (TextBox2.Text)
+
+        'Calculamos el peso porcentual %
+        TextBox4.Text = (TextBox3.Text / TextBox1.Text).ToString("0%")
+
+        'Calculamos el comlemento del peso porcentual %
+        TextBox5.Text = ((100 - Val(TextBox4.Text)) / 100).ToString("0%")
 
     End Sub
 
