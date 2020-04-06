@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -365,6 +365,12 @@
     <Compile Include="Principal\Principal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Seguimiento de Taller\ConsultaSeguimientoTaller.Designer.vb">
+      <DependentUpon>ConsultaSeguimientoTaller.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Seguimiento de Taller\ConsultaSeguimientoTaller.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguimiento de Taller\RegistrarReporteTaller.Designer.vb">
       <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
     </Compile>
@@ -499,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguimiento de Taller\ConsultaSeguimientoTaller.resx">
+      <DependentUpon>ConsultaSeguimientoTaller.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguimiento de Taller\RegistrarReporteTaller.resx">
       <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>

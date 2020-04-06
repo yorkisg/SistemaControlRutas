@@ -33,14 +33,14 @@ Partial Class SeguimientoTaller
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaTipoVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -62,6 +62,14 @@ Partial Class SeguimientoTaller
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFechaIngreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFechaSalida = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaArea = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFalla = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaImagen1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ColumnaEstadoReporte = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -75,15 +83,6 @@ Partial Class SeguimientoTaller
         Me.MenuModificarReporte = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.Panel7 = New System.Windows.Forms.TabControl()
-        Me.Pagina1 = New System.Windows.Forms.TabPage()
-        Me.Pagina2 = New System.Windows.Forms.TabPage()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.flota = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
-        Me.vehiculo = New System.Windows.Forms.ToolStripLabel()
         Me.ColumnaID2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFlota2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -93,14 +92,15 @@ Partial Class SeguimientoTaller
         Me.ColumnaFalla2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaImagen2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ColumnaEstadoReporte2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFechaIngreso = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFechaSalida = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaArea = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFalla = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaImagen1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ColumnaEstadoReporte = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel7 = New System.Windows.Forms.TabControl()
+        Me.Pagina1 = New System.Windows.Forms.TabPage()
+        Me.Pagina2 = New System.Windows.Forms.TabPage()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.flota = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.vehiculo = New System.Windows.Forms.ToolStripLabel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -360,6 +360,87 @@ Partial Class SeguimientoTaller
         Me.DataGridView2.Size = New System.Drawing.Size(796, 622)
         Me.DataGridView2.TabIndex = 84
         '
+        'ColumnaID
+        '
+        Me.ColumnaID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaID.DataPropertyName = "idregistrotaller"
+        Me.ColumnaID.FillWeight = 100.0846!
+        Me.ColumnaID.HeaderText = "REPORTE"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Width = 95
+        '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
+        Me.ColumnaVehiculo.HeaderText = "VEHICULO"
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        Me.ColumnaVehiculo.Visible = False
+        '
+        'ColumnaFechaIngreso
+        '
+        Me.ColumnaFechaIngreso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaFechaIngreso.DataPropertyName = "fechaingreso"
+        Me.ColumnaFechaIngreso.FillWeight = 100.0846!
+        Me.ColumnaFechaIngreso.HeaderText = "FECHA INGRESO"
+        Me.ColumnaFechaIngreso.Name = "ColumnaFechaIngreso"
+        Me.ColumnaFechaIngreso.ReadOnly = True
+        Me.ColumnaFechaIngreso.Width = 95
+        '
+        'ColumnaFechaSalida
+        '
+        Me.ColumnaFechaSalida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaFechaSalida.DataPropertyName = "fechasalida"
+        Me.ColumnaFechaSalida.FillWeight = 100.0846!
+        Me.ColumnaFechaSalida.HeaderText = "FECHA DE SALIDA"
+        Me.ColumnaFechaSalida.Name = "ColumnaFechaSalida"
+        Me.ColumnaFechaSalida.ReadOnly = True
+        Me.ColumnaFechaSalida.Width = 95
+        '
+        'ColumnaArea
+        '
+        Me.ColumnaArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaArea.DataPropertyName = "area"
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaArea.DefaultCellStyle = DataGridViewCellStyle8
+        Me.ColumnaArea.FillWeight = 100.0846!
+        Me.ColumnaArea.HeaderText = "AREA"
+        Me.ColumnaArea.Name = "ColumnaArea"
+        Me.ColumnaArea.ReadOnly = True
+        Me.ColumnaArea.Width = 120
+        '
+        'ColumnaFalla
+        '
+        Me.ColumnaFalla.DataPropertyName = "nombrefalla"
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaFalla.DefaultCellStyle = DataGridViewCellStyle9
+        Me.ColumnaFalla.FillWeight = 100.0846!
+        Me.ColumnaFalla.HeaderText = "FALLA"
+        Me.ColumnaFalla.Name = "ColumnaFalla"
+        Me.ColumnaFalla.ReadOnly = True
+        '
+        'ColumnaImagen1
+        '
+        Me.ColumnaImagen1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaImagen1.FillWeight = 99.49239!
+        Me.ColumnaImagen1.HeaderText = ""
+        Me.ColumnaImagen1.Name = "ColumnaImagen1"
+        Me.ColumnaImagen1.ReadOnly = True
+        Me.ColumnaImagen1.Width = 28
+        '
+        'ColumnaEstadoReporte
+        '
+        Me.ColumnaEstadoReporte.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaEstadoReporte.DataPropertyName = "estado"
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstadoReporte.DefaultCellStyle = DataGridViewCellStyle10
+        Me.ColumnaEstadoReporte.FillWeight = 100.0846!
+        Me.ColumnaEstadoReporte.HeaderText = "ESTADO"
+        Me.ColumnaEstadoReporte.Name = "ColumnaEstadoReporte"
+        Me.ColumnaEstadoReporte.ReadOnly = True
+        Me.ColumnaEstadoReporte.Width = 90
+        '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(242, 104)
@@ -490,84 +571,6 @@ Partial Class SeguimientoTaller
         Me.DataGridView3.Size = New System.Drawing.Size(796, 622)
         Me.DataGridView3.TabIndex = 119
         '
-        'Panel7
-        '
-        Me.Panel7.Controls.Add(Me.Pagina1)
-        Me.Panel7.Controls.Add(Me.Pagina2)
-        Me.Panel7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel7.ImageList = Me.ImageList1
-        Me.Panel7.Location = New System.Drawing.Point(12, 28)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.SelectedIndex = 0
-        Me.Panel7.Size = New System.Drawing.Size(810, 656)
-        Me.Panel7.TabIndex = 120
-        '
-        'Pagina1
-        '
-        Me.Pagina1.BackColor = System.Drawing.Color.White
-        Me.Pagina1.Controls.Add(Me.DataGridView2)
-        Me.Pagina1.ImageIndex = 0
-        Me.Pagina1.Location = New System.Drawing.Point(4, 24)
-        Me.Pagina1.Name = "Pagina1"
-        Me.Pagina1.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina1.Size = New System.Drawing.Size(802, 628)
-        Me.Pagina1.TabIndex = 0
-        Me.Pagina1.Text = "SEGUIMIENTO"
-        '
-        'Pagina2
-        '
-        Me.Pagina2.BackColor = System.Drawing.Color.White
-        Me.Pagina2.Controls.Add(Me.DataGridView3)
-        Me.Pagina2.ImageIndex = 1
-        Me.Pagina2.Location = New System.Drawing.Point(4, 24)
-        Me.Pagina2.Name = "Pagina2"
-        Me.Pagina2.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina2.Size = New System.Drawing.Size(802, 628)
-        Me.Pagina2.TabIndex = 1
-        Me.Pagina2.Text = "REPORTES ABIERTOS"
-        '
-        'ImageList1
-        '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "MateriaPrimaCompeltada.png")
-        Me.ImageList1.Images.SetKeyName(1, "ConsultarInfracciones.gif")
-        '
-        'ToolStrip4
-        '
-        Me.ToolStrip4.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ToolStrip4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel3, Me.flota, Me.ToolStripLabel4, Me.vehiculo})
-        Me.ToolStrip4.Location = New System.Drawing.Point(0, 687)
-        Me.ToolStrip4.Name = "ToolStrip4"
-        Me.ToolStrip4.Size = New System.Drawing.Size(1241, 25)
-        Me.ToolStrip4.TabIndex = 121
-        Me.ToolStrip4.Text = "ToolStrip4"
-        '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(46, 22)
-        Me.ToolStripLabel3.Text = "FLOTA:"
-        '
-        'flota
-        '
-        Me.flota.Name = "flota"
-        Me.flota.Size = New System.Drawing.Size(0, 22)
-        '
-        'ToolStripLabel4
-        '
-        Me.ToolStripLabel4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(68, 22)
-        Me.ToolStripLabel4.Text = "VEHÍCULO:"
-        '
-        'vehiculo
-        '
-        Me.vehiculo.Name = "vehiculo"
-        Me.vehiculo.Size = New System.Drawing.Size(0, 22)
-        '
         'ColumnaID2
         '
         Me.ColumnaID2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -658,86 +661,83 @@ Partial Class SeguimientoTaller
         Me.ColumnaEstadoReporte2.ReadOnly = True
         Me.ColumnaEstadoReporte2.Width = 80
         '
-        'ColumnaID
+        'Panel7
         '
-        Me.ColumnaID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaID.DataPropertyName = "idregistrotaller"
-        Me.ColumnaID.FillWeight = 100.0846!
-        Me.ColumnaID.HeaderText = "REPORTE"
-        Me.ColumnaID.Name = "ColumnaID"
-        Me.ColumnaID.ReadOnly = True
-        Me.ColumnaID.Width = 95
+        Me.Panel7.Controls.Add(Me.Pagina1)
+        Me.Panel7.Controls.Add(Me.Pagina2)
+        Me.Panel7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel7.ImageList = Me.ImageList1
+        Me.Panel7.Location = New System.Drawing.Point(12, 28)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.SelectedIndex = 0
+        Me.Panel7.Size = New System.Drawing.Size(810, 656)
+        Me.Panel7.TabIndex = 120
         '
-        'ColumnaVehiculo
+        'Pagina1
         '
-        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
-        Me.ColumnaVehiculo.HeaderText = "VEHICULO"
-        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
-        Me.ColumnaVehiculo.ReadOnly = True
-        Me.ColumnaVehiculo.Visible = False
+        Me.Pagina1.BackColor = System.Drawing.Color.White
+        Me.Pagina1.Controls.Add(Me.DataGridView2)
+        Me.Pagina1.ImageIndex = 0
+        Me.Pagina1.Location = New System.Drawing.Point(4, 24)
+        Me.Pagina1.Name = "Pagina1"
+        Me.Pagina1.Padding = New System.Windows.Forms.Padding(3)
+        Me.Pagina1.Size = New System.Drawing.Size(802, 628)
+        Me.Pagina1.TabIndex = 0
+        Me.Pagina1.Text = "SEGUIMIENTO"
         '
-        'ColumnaFechaIngreso
+        'Pagina2
         '
-        Me.ColumnaFechaIngreso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaFechaIngreso.DataPropertyName = "fechaingreso"
-        Me.ColumnaFechaIngreso.FillWeight = 100.0846!
-        Me.ColumnaFechaIngreso.HeaderText = "FECHA INGRESO"
-        Me.ColumnaFechaIngreso.Name = "ColumnaFechaIngreso"
-        Me.ColumnaFechaIngreso.ReadOnly = True
-        Me.ColumnaFechaIngreso.Width = 95
+        Me.Pagina2.BackColor = System.Drawing.Color.White
+        Me.Pagina2.Controls.Add(Me.DataGridView3)
+        Me.Pagina2.ImageIndex = 1
+        Me.Pagina2.Location = New System.Drawing.Point(4, 24)
+        Me.Pagina2.Name = "Pagina2"
+        Me.Pagina2.Padding = New System.Windows.Forms.Padding(3)
+        Me.Pagina2.Size = New System.Drawing.Size(802, 628)
+        Me.Pagina2.TabIndex = 1
+        Me.Pagina2.Text = "REPORTES ABIERTOS"
         '
-        'ColumnaFechaSalida
+        'ImageList1
         '
-        Me.ColumnaFechaSalida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaFechaSalida.DataPropertyName = "fechasalida"
-        Me.ColumnaFechaSalida.FillWeight = 100.0846!
-        Me.ColumnaFechaSalida.HeaderText = "FECHA DE SALIDA"
-        Me.ColumnaFechaSalida.Name = "ColumnaFechaSalida"
-        Me.ColumnaFechaSalida.ReadOnly = True
-        Me.ColumnaFechaSalida.Width = 95
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "MateriaPrimaCompeltada.png")
+        Me.ImageList1.Images.SetKeyName(1, "ConsultarInfracciones.gif")
         '
-        'ColumnaArea
+        'ToolStrip4
         '
-        Me.ColumnaArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaArea.DataPropertyName = "area"
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaArea.DefaultCellStyle = DataGridViewCellStyle8
-        Me.ColumnaArea.FillWeight = 100.0846!
-        Me.ColumnaArea.HeaderText = "AREA"
-        Me.ColumnaArea.Name = "ColumnaArea"
-        Me.ColumnaArea.ReadOnly = True
-        Me.ColumnaArea.Width = 120
+        Me.ToolStrip4.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ToolStrip4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel3, Me.flota, Me.ToolStripLabel4, Me.vehiculo})
+        Me.ToolStrip4.Location = New System.Drawing.Point(0, 687)
+        Me.ToolStrip4.Name = "ToolStrip4"
+        Me.ToolStrip4.Size = New System.Drawing.Size(1241, 25)
+        Me.ToolStrip4.TabIndex = 121
+        Me.ToolStrip4.Text = "ToolStrip4"
         '
-        'ColumnaFalla
+        'ToolStripLabel3
         '
-        Me.ColumnaFalla.DataPropertyName = "nombrefalla"
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaFalla.DefaultCellStyle = DataGridViewCellStyle9
-        Me.ColumnaFalla.FillWeight = 100.0846!
-        Me.ColumnaFalla.HeaderText = "FALLA"
-        Me.ColumnaFalla.Name = "ColumnaFalla"
-        Me.ColumnaFalla.ReadOnly = True
+        Me.ToolStripLabel3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(46, 22)
+        Me.ToolStripLabel3.Text = "FLOTA:"
         '
-        'ColumnaImagen1
+        'flota
         '
-        Me.ColumnaImagen1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaImagen1.FillWeight = 99.49239!
-        Me.ColumnaImagen1.HeaderText = ""
-        Me.ColumnaImagen1.Name = "ColumnaImagen1"
-        Me.ColumnaImagen1.ReadOnly = True
-        Me.ColumnaImagen1.Width = 28
+        Me.flota.Name = "flota"
+        Me.flota.Size = New System.Drawing.Size(0, 22)
         '
-        'ColumnaEstadoReporte
+        'ToolStripLabel4
         '
-        Me.ColumnaEstadoReporte.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaEstadoReporte.DataPropertyName = "estado"
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstadoReporte.DefaultCellStyle = DataGridViewCellStyle10
-        Me.ColumnaEstadoReporte.FillWeight = 100.0846!
-        Me.ColumnaEstadoReporte.HeaderText = "ESTADO"
-        Me.ColumnaEstadoReporte.Name = "ColumnaEstadoReporte"
-        Me.ColumnaEstadoReporte.ReadOnly = True
-        Me.ColumnaEstadoReporte.Width = 90
+        Me.ToolStripLabel4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel4.Name = "ToolStripLabel4"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(68, 22)
+        Me.ToolStripLabel4.Text = "VEHÍCULO:"
+        '
+        'vehiculo
+        '
+        Me.vehiculo.Name = "vehiculo"
+        Me.vehiculo.Size = New System.Drawing.Size(0, 22)
         '
         'SeguimientoTaller
         '
