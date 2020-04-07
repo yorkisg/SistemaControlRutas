@@ -1,14 +1,22 @@
 ﻿
+Imports System.Windows.Forms.DataVisualization.Charting
+
 Public Class ConsultaSeguimientoTaller
 
     Private Sub ConsultaSeguimientoTaller_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'ObtenerCantidadFallasFlotas()
+
+        ObtenerCantidadFallasFlotas()
         ObtenerCantidadFallasSistemas()
-        'ObtenerCantidadFallasTipo()
-        'ObtenerPromedioFallasMensual()
+        ObtenerCantidadFallasTipo()
+        ObtenerPromedioFallasMensual()
 
         CalcularTotales()
+
+        GenerarChart()
+
+        CalcularUnidadesReportadas2()
+        generarchart2()
 
     End Sub
 
@@ -163,18 +171,164 @@ Public Class ConsultaSeguimientoTaller
 
     Public Sub CalcularTotales()
 
-        TextBox1.Text = 396
+        'TextBox1.Text = 396
+        'TextBox2.Text = 6
 
-        TextBox2.Text = 6
-
-        'Calculamos el promedio de unidades operativas por mes
+        'Calculamos el promedio de unidades operativas por mes: TOTAL FLOTA - PROMEDIO DE UNIDADES REPORTADAS / DIA
         TextBox3.Text = (TextBox1.Text) - (TextBox2.Text)
 
-        'Calculamos el peso porcentual %
+        'Calculamos el peso porcentual %: PROMEDIO DE UNIDADES OPERATIVAS POR MES / TOTAL FLOTA
         TextBox4.Text = (TextBox3.Text / TextBox1.Text).ToString("0%")
 
-        'Calculamos el comlemento del peso porcentual %
+        'Calculamos el complemento del peso porcentual %: 100% - PROMEDIO DE UNIDADES OPERATIVAS POR MES / TOTAL FLOTA
         TextBox5.Text = ((100 - Val(TextBox4.Text)) / 100).ToString("0%")
+
+    End Sub
+
+    Public Sub CalcularUnidadesReportadas()
+        'Este metodo permite obtener los estados de los vehiculos para luego ser modificados
+        'Se despliega el formulario MaestroVehiculo
+
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
+
+        Adaptador = New MySqlDataAdapter("SELECT Case estado As 'Estado', COUNT(estado) As 'Cantidad' " _
+                                & " FROM registrotaller " _
+                                & " WHERE Month(fechaingreso) = Month(CURDATE()) " _
+                                & " GROUP BY estado ", cnn)
+
+        Adaptador.Fill(Tabla)
+
+        For Each row As DataRow In Tabla.Rows
+
+            'TextBox2.Text = row("Promedio").ToString
+            ' TextBox2.Text = row("Promedio").ToString
+
+        Next
+
+
+    End Sub
+
+    Public Sub CalcularUnidadesReportadas2()
+        'Metodo para cargar el datagridview de la Guia Telefonica
+
+        'Conexion a la BD.
+        Dim sql As String = "SELECT estado As 'Estado', COUNT(estado) As 'Cantidad' " _
+                                & " FROM registrotaller " _
+                                & " WHERE Month(fechaingreso) = Month(CURDATE()) " _
+                                & " GROUP BY estado "
+
+        Dim connection As New MySqlConnection(connectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview.
+        Adaptador.Fill(DataSet, "55")
+        Tabla = DataSet.Tables("55")
+        DataGridView5.DataSource = DataSet.Tables("55")
+
+        'Parametros para editar apariencia del datagridview.
+        With DataGridView5
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        CalcularEstados()
+
+    End Sub
+
+    Public Sub CalcularEstados()
+
+        'TextBox6.Text = DataGridView5.Item(1, 0).Value.ToString()
+        TextBox6.Text = TextBox1.Text
+        TextBox7.Text = DataGridView5.Item(1, 1).Value.ToString()
+
+    End Sub
+
+    Public Sub GenerarChart()
+        'Metodo que permite generar un grafico de acuerdo a los valores obtenidos desde la BD
+
+        Dim connection As New MySqlConnection(connectionString)
+
+        Dim sql As String = "Select estado As 'Estado', COUNT(estado) AS 'Cantidad' " _
+                            & " FROM registrotaller " _
+                            & " WHERE MONTH(fechaingreso) = MONTH(CURDATE()) " _
+                            & " GROUP BY estado "
+
+        Dim Adaptador As New MySqlDataAdapter(sql, cnn)
+        Dim Dataset As New DataSet()
+        Adaptador.Fill(Dataset, "HOLA")
+
+        'Enlace de datos con las barras (series)
+        Chart1.Series("Rutas").XValueMember = "Estado"
+        Chart1.Series("Rutas").YValueMembers = "Cantidad"
+
+        'Para ocultar las grillas
+        Chart1.ChartAreas(0).AxisX.MajorGrid.Enabled = False
+        Chart1.ChartAreas(0).AxisX.MinorGrid.Enabled = False
+        Chart1.ChartAreas(0).AxisY.MajorGrid.Enabled = False
+        Chart1.ChartAreas(0).AxisY.MinorGrid.Enabled = False
+
+        'Establecemos el grafico en 3D
+        Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
+
+        'Para cambiar la fuente de los ejes Y, X
+        Chart1.ChartAreas(0).AxisX.LabelStyle.Font = New Font("Segoe UI", 8)
+        Chart1.ChartAreas(0).AxisY.LabelStyle.Font = New Font("Segoe UI", 9)
+
+        'Color de las barras (series)
+        Chart1.Series(0).Color = Color.IndianRed
+
+        Chart1.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = False
+        Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Angle = -55
+
+        'Limpiamos y actualizamos el grafico como tal
+        Chart1.Series(0).Points.Clear()
+        Chart1.DataSource = ""
+
+        'Enlace de datos
+        Chart1.DataSource = Dataset.Tables("HOLA")
+
+    End Sub
+
+    Public Sub generarchart2()
+
+        'Obtenemos los valores desde los textbox 
+        Dim y As Double() = {TextBox6.Text, TextBox7.Text}
+
+        'Titulos de las leyendas
+        Dim x As String() = {"Reportadas", "Entregadas"}
+
+        Chart2.Series.Clear()
+        Chart2.Titles.Clear()
+        Chart2.Series.Add("Serie")
+
+        'Llenamos los valores provenientes de los textbox en las coordenades x, y
+        Chart2.Series("Serie").Points.DataBindXY(x, y)
+
+        'Indicamos el tipo de grafico y sus colores
+        Chart2.Series("Serie").ChartType = SeriesChartType.Pie
+        Chart2.Series("Serie").Points(0).Color = Color.ForestGreen
+        Chart2.Series("Serie").Points(1).Color = Color.OrangeRed
+
+        'Definimos en que parte apareceran los numeros del label
+        Chart2.Series("Serie")("PieLabelStyle") = "Inside"
+        Chart2.Series("Serie").IsValueShownAsLabel = True
+
+        'Expresamos con %porcentaje el valor
+        Chart2.Series(0).LegendText = "#VALX (#PERCENT)"
+
+        'Cambiams el tipo de fuente del label
+        Chart2.Legends(0).Font = New Font("Segoe UI", 8)
+        Chart2.Series(0).Font = New Font("Segoe UI", 9, FontStyle.Bold)
+
+        'Personalizacion del Area
+        Chart2.ChartAreas(0).Area3DStyle.Inclination = 45
+        Chart2.ChartAreas("Area").Area3DStyle.Enable3D = True
+
 
     End Sub
 

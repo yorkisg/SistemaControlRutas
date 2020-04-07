@@ -23,16 +23,25 @@ Partial Class ConsultaSeguimientoTaller
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaSeguimientoTaller))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonFiltrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -56,6 +65,10 @@ Partial Class ConsultaSeguimientoTaller
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -67,6 +80,13 @@ Partial Class ConsultaSeguimientoTaller
         Me.ColumnaArea = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaCantidad2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaPorcentaje = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
@@ -74,6 +94,11 @@ Partial Class ConsultaSeguimientoTaller
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -82,7 +107,7 @@ Partial Class ConsultaSeguimientoTaller
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(975, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1098, 25)
         Me.ToolStrip1.TabIndex = 74
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -148,14 +173,14 @@ Partial Class ConsultaSeguimientoTaller
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaFlota, Me.ColumnaCantidad})
         Me.DataGridView2.GridColor = System.Drawing.SystemColors.Menu
@@ -171,9 +196,9 @@ Partial Class ConsultaSeguimientoTaller
         'ColumnaFlota
         '
         Me.ColumnaFlota.DataPropertyName = "Flota"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle2
         Me.ColumnaFlota.HeaderText = "FLOTA"
         Me.ColumnaFlota.MinimumWidth = 120
         Me.ColumnaFlota.Name = "ColumnaFlota"
@@ -183,8 +208,8 @@ Partial Class ConsultaSeguimientoTaller
         '
         Me.ColumnaCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaCantidad.DataPropertyName = "Cantidad"
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaCantidad.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaCantidad.DefaultCellStyle = DataGridViewCellStyle3
         Me.ColumnaCantidad.HeaderText = "CANTIDAD"
         Me.ColumnaCantidad.MinimumWidth = 70
         Me.ColumnaCantidad.Name = "ColumnaCantidad"
@@ -207,7 +232,7 @@ Partial Class ConsultaSeguimientoTaller
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.TextBox1.Location = New System.Drawing.Point(6, 148)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(92, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(60, 22)
         Me.TextBox1.TabIndex = 83
         '
         'GroupBox5
@@ -226,7 +251,7 @@ Partial Class ConsultaSeguimientoTaller
         Me.GroupBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupBox5.Location = New System.Drawing.Point(12, 28)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(276, 505)
+        Me.GroupBox5.Size = New System.Drawing.Size(279, 313)
         Me.GroupBox5.TabIndex = 87
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "UNIDADES REPORTADAS (MES ACTUAL)"
@@ -235,7 +260,7 @@ Partial Class ConsultaSeguimientoTaller
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(104, 279)
+        Me.Label5.Location = New System.Drawing.Point(72, 279)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(12, 15)
         Me.Label5.TabIndex = 92
@@ -245,9 +270,9 @@ Partial Class ConsultaSeguimientoTaller
         '
         Me.TextBox5.Enabled = False
         Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox5.Location = New System.Drawing.Point(122, 277)
+        Me.TextBox5.Location = New System.Drawing.Point(90, 277)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(92, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(60, 22)
         Me.TextBox5.TabIndex = 91
         '
         'TextBox4
@@ -256,7 +281,7 @@ Partial Class ConsultaSeguimientoTaller
         Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.TextBox4.Location = New System.Drawing.Point(6, 277)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(92, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(60, 22)
         Me.TextBox4.TabIndex = 90
         '
         'Label4
@@ -275,9 +300,9 @@ Partial Class ConsultaSeguimientoTaller
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label2.Location = New System.Drawing.Point(6, 173)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(253, 15)
+        Me.Label2.Size = New System.Drawing.Size(249, 15)
         Me.Label2.TabIndex = 88
-        Me.Label2.Text = "PROMEDIO DE UNIDADES REPORTADAS / MES"
+        Me.Label2.Text = "PROMEDIO DE UNIDADES REPORTADAS / DIA"
         '
         'Label1
         '
@@ -295,7 +320,7 @@ Partial Class ConsultaSeguimientoTaller
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.TextBox3.Location = New System.Drawing.Point(6, 234)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(92, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(60, 22)
         Me.TextBox3.TabIndex = 86
         '
         'TextBox2
@@ -304,8 +329,46 @@ Partial Class ConsultaSeguimientoTaller
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.TextBox2.Location = New System.Drawing.Point(6, 191)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(92, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(60, 22)
         Me.TextBox2.TabIndex = 85
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox7.Location = New System.Drawing.Point(12, 516)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(60, 22)
+        Me.TextBox7.TabIndex = 96
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox6.Location = New System.Drawing.Point(12, 473)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(60, 22)
+        Me.TextBox6.TabIndex = 95
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label7.Location = New System.Drawing.Point(12, 498)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(139, 15)
+        Me.Label7.TabIndex = 94
+        Me.Label7.Text = "UNIDADES ENTREGADAS"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label6.Location = New System.Drawing.Point(12, 455)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(124, 15)
+        Me.Label6.TabIndex = 93
+        Me.Label6.Text = "UNIDADES EN TALLER"
         '
         'GroupBox1
         '
@@ -313,7 +376,7 @@ Partial Class ConsultaSeguimientoTaller
         Me.GroupBox1.Controls.Add(Me.ToolStrip2)
         Me.GroupBox1.Controls.Add(Me.DataGridView3)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(294, 28)
+        Me.GroupBox1.Location = New System.Drawing.Point(297, 28)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(593, 237)
         Me.GroupBox1.TabIndex = 91
@@ -330,14 +393,14 @@ Partial Class ConsultaSeguimientoTaller
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Menu
@@ -353,9 +416,9 @@ Partial Class ConsultaSeguimientoTaller
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "Tipo"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewTextBoxColumn3.HeaderText = "TIPO VEHICULO"
         Me.DataGridViewTextBoxColumn3.MinimumWidth = 170
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
@@ -364,8 +427,8 @@ Partial Class ConsultaSeguimientoTaller
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "Cantidad"
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn4.HeaderText = "CANTIDAD"
         Me.DataGridViewTextBoxColumn4.MinimumWidth = 70
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
@@ -405,17 +468,17 @@ Partial Class ConsultaSeguimientoTaller
         Me.DataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaArea, Me.ColumnaCantidad2, Me.ColumnaPorcentaje})
-        Me.DataGridView3.GridColor = System.Drawing.SystemColors.Menu
+        Me.DataGridView3.GridColor = System.Drawing.SystemColors.MenuBar
         Me.DataGridView3.Location = New System.Drawing.Point(6, 22)
         Me.DataGridView3.Name = "DataGridView3"
         Me.DataGridView3.ReadOnly = True
@@ -428,9 +491,9 @@ Partial Class ConsultaSeguimientoTaller
         'ColumnaArea
         '
         Me.ColumnaArea.DataPropertyName = "Area"
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaArea.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaArea.DefaultCellStyle = DataGridViewCellStyle8
         Me.ColumnaArea.HeaderText = "AREA / SISTEMA"
         Me.ColumnaArea.MinimumWidth = 170
         Me.ColumnaArea.Name = "ColumnaArea"
@@ -439,8 +502,8 @@ Partial Class ConsultaSeguimientoTaller
         'ColumnaCantidad2
         '
         Me.ColumnaCantidad2.DataPropertyName = "Cantidad"
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaCantidad2.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaCantidad2.DefaultCellStyle = DataGridViewCellStyle9
         Me.ColumnaCantidad2.HeaderText = "CANTIDAD"
         Me.ColumnaCantidad2.MinimumWidth = 70
         Me.ColumnaCantidad2.Name = "ColumnaCantidad2"
@@ -449,19 +512,148 @@ Partial Class ConsultaSeguimientoTaller
         'ColumnaPorcentaje
         '
         Me.ColumnaPorcentaje.DataPropertyName = "Porcentaje"
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaPorcentaje.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaPorcentaje.DefaultCellStyle = DataGridViewCellStyle10
         Me.ColumnaPorcentaje.HeaderText = "PORCENTAJE"
         Me.ColumnaPorcentaje.MinimumWidth = 70
         Me.ColumnaPorcentaje.Name = "ColumnaPorcentaje"
         Me.ColumnaPorcentaje.ReadOnly = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Chart1)
+        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GroupBox2.Location = New System.Drawing.Point(297, 271)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(337, 230)
+        Me.GroupBox2.TabIndex = 92
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "UNIDADES REPORTADAS VS UNIDADES ENTREGADAS"
+        '
+        'Chart1
+        '
+        ChartArea1.AxisX.LineColor = System.Drawing.Color.LightBlue
+        ChartArea1.AxisX2.LineColor = System.Drawing.Color.LightBlue
+        ChartArea1.AxisY.LineColor = System.Drawing.Color.LightBlue
+        ChartArea1.AxisY2.LineColor = System.Drawing.Color.LightBlue
+        ChartArea1.CursorX.SelectionColor = System.Drawing.Color.Red
+        ChartArea1.CursorY.SelectionColor = System.Drawing.Color.Red
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Me.Chart1.Location = New System.Drawing.Point(6, 22)
+        Me.Chart1.Name = "Chart1"
+        Series1.ChartArea = "ChartArea1"
+        Series1.CustomProperties = "PointWidth=0.3"
+        Series1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.IsValueShownAsLabel = True
+        Series1.IsVisibleInLegend = False
+        Series1.Name = "Rutas"
+        Me.Chart1.Series.Add(Series1)
+        Me.Chart1.Size = New System.Drawing.Size(325, 202)
+        Me.Chart1.TabIndex = 4
+        Title1.Name = "Title1"
+        Me.Chart1.Titles.Add(Title1)
+        '
+        'DataGridView5
+        '
+        Me.DataGridView5.AllowUserToAddRows = False
+        Me.DataGridView5.AllowUserToDeleteRows = False
+        Me.DataGridView5.AllowUserToResizeRows = False
+        Me.DataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView5.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView5.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView5.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.DataGridView5.GridColor = System.Drawing.SystemColors.Menu
+        Me.DataGridView5.Location = New System.Drawing.Point(12, 347)
+        Me.DataGridView5.Name = "DataGridView5"
+        Me.DataGridView5.ReadOnly = True
+        Me.DataGridView5.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DataGridView5.RowHeadersVisible = False
+        Me.DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView5.Size = New System.Drawing.Size(264, 105)
+        Me.DataGridView5.TabIndex = 97
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Estado"
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle12
+        Me.DataGridViewTextBoxColumn5.HeaderText = "ESTADO"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 120
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Cantidad"
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle13
+        Me.DataGridViewTextBoxColumn6.HeaderText = "CANTIDAD"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 100
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Chart2)
+        Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GroupBox3.Location = New System.Drawing.Point(640, 271)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(337, 230)
+        Me.GroupBox3.TabIndex = 93
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "UNIDADES REPORTADAS VS UNIDADES ENTREGADAS"
+        '
+        'Chart2
+        '
+        ChartArea2.Name = "Area"
+        Me.Chart2.ChartAreas.Add(ChartArea2)
+        Legend1.Alignment = System.Drawing.StringAlignment.Center
+        Legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom
+        Legend1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Legend1.IsTextAutoFit = False
+        Legend1.MaximumAutoSize = 100.0!
+        Legend1.Name = "Legend1"
+        Legend1.TitleFont = Nothing
+        Me.Chart2.Legends.Add(Legend1)
+        Me.Chart2.Location = New System.Drawing.Point(6, 22)
+        Me.Chart2.Name = "Chart2"
+        Series2.ChartArea = "Area"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series2.Legend = "Legend1"
+        Series2.Name = "Serie"
+        Me.Chart2.Series.Add(Series2)
+        Me.Chart2.Size = New System.Drawing.Size(325, 202)
+        Me.Chart2.TabIndex = 0
+        Me.Chart2.Text = "Chart2"
         '
         'ConsultaSeguimientoTaller
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
-        Me.ClientSize = New System.Drawing.Size(975, 602)
+        Me.ClientSize = New System.Drawing.Size(1098, 646)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.DataGridView5)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.ToolStrip1)
@@ -480,6 +672,11 @@ Partial Class ConsultaSeguimientoTaller
         Me.ToolStrip2.ResumeLayout(False)
         Me.ToolStrip2.PerformLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -520,4 +717,15 @@ Partial Class ConsultaSeguimientoTaller
     Friend WithEvents ColumnaPorcentaje As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaCantidad2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaArea As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents DataGridView5 As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
 End Class

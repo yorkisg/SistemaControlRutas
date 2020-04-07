@@ -163,7 +163,9 @@ Public Class RegistrarReporteTaller
         Adaptador.Fill(DataTable)
 
         For i = 0 To DataTable.Rows.Count - 1
+
             Dato.Add(DataTable.Rows(i)("nombrefalla").ToString())
+
         Next
 
         TextBox4.AutoCompleteSource = AutoCompleteSource.CustomSource

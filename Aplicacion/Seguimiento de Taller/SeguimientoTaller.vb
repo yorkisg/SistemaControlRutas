@@ -672,4 +672,5 @@ Public Class SeguimientoTaller
 
     End Sub
 
+
 End Class

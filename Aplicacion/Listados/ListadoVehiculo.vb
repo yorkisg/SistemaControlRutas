@@ -184,7 +184,9 @@ Public Class ListadoVehiculo
         'TextBox que permite filtrar de acuerdo a lo establecido en la funcion "Filtrar".
 
         If Filtrar(TextBox.Text).Rows.Count > 0 Then
+
             DataGridView.DataSource = Filtrar(TextBox.Text)
+
         End If
 
     End Sub
@@ -200,7 +202,9 @@ Public Class ListadoVehiculo
 
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter(cmd)
+
         Adaptador.Fill(Tabla)
+
         Return Tabla
 
     End Function
@@ -304,8 +308,10 @@ Public Class ListadoVehiculo
 
         'Abrimos el ciclo que recorre todas las filas del datagridview
         For i As Integer = 0 To DataGridView.RowCount - 1
+
             'Eliminamos elemento por elemento
             DataGridView.Rows.Remove(DataGridView.CurrentRow)
+
         Next
 
     End Sub

@@ -309,6 +309,7 @@ Partial Class Principal
         'MenuConfiguracion
         '
         Me.MenuConfiguracion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuFlotas, Me.MenuEstados})
+        Me.MenuConfiguracion.Enabled = False
         Me.MenuConfiguracion.Image = CType(resources.GetObject("MenuConfiguracion.Image"), System.Drawing.Image)
         Me.MenuConfiguracion.Name = "MenuConfiguracion"
         Me.MenuConfiguracion.Size = New System.Drawing.Size(117, 21)
@@ -316,6 +317,7 @@ Partial Class Principal
         '
         'MenuFlotas
         '
+        Me.MenuFlotas.Enabled = False
         Me.MenuFlotas.Image = CType(resources.GetObject("MenuFlotas.Image"), System.Drawing.Image)
         Me.MenuFlotas.Name = "MenuFlotas"
         Me.MenuFlotas.Size = New System.Drawing.Size(183, 22)
