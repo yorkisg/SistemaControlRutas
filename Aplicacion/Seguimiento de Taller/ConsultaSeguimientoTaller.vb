@@ -5,7 +5,6 @@ Public Class ConsultaSeguimientoTaller
 
     Private Sub ConsultaSeguimientoTaller_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
         ObtenerCantidadFallasFlotas()
         ObtenerCantidadFallasSistemas()
         ObtenerCantidadFallasTipo()
@@ -13,10 +12,10 @@ Public Class ConsultaSeguimientoTaller
 
         CalcularTotales()
 
-        GenerarChart()
+        ObtenerReportesMensual()
 
-        CalcularUnidadesReportadas2()
-        generarchart2()
+        GenerarChartReportesMensual()
+        GenerarChartReportesDiarios()
 
     End Sub
 
@@ -52,6 +51,7 @@ Public Class ConsultaSeguimientoTaller
         End With
 
         CalcularTotalFallasFlotas()
+        DataGridView2.ClearSelection()
 
     End Sub
 
@@ -99,6 +99,7 @@ Public Class ConsultaSeguimientoTaller
         End With
 
         CalcularTotalFallasSistemas()
+        DataGridView3.ClearSelection()
 
     End Sub
 
@@ -146,6 +147,8 @@ Public Class ConsultaSeguimientoTaller
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        DataGridView1.ClearSelection()
+
     End Sub
 
     Public Sub ObtenerPromedioFallasMensual()
@@ -185,38 +188,14 @@ Public Class ConsultaSeguimientoTaller
 
     End Sub
 
-    Public Sub CalcularUnidadesReportadas()
-        'Este metodo permite obtener los estados de los vehiculos para luego ser modificados
-        'Se despliega el formulario MaestroVehiculo
-
-        Dim Adaptador As New MySqlDataAdapter
-        Dim Tabla As New DataTable
-
-        Adaptador = New MySqlDataAdapter("SELECT Case estado As 'Estado', COUNT(estado) As 'Cantidad' " _
-                                & " FROM registrotaller " _
-                                & " WHERE Month(fechaingreso) = Month(CURDATE()) " _
-                                & " GROUP BY estado ", cnn)
-
-        Adaptador.Fill(Tabla)
-
-        For Each row As DataRow In Tabla.Rows
-
-            'TextBox2.Text = row("Promedio").ToString
-            ' TextBox2.Text = row("Promedio").ToString
-
-        Next
-
-
-    End Sub
-
-    Public Sub CalcularUnidadesReportadas2()
+    Public Sub ObtenerReportesMensual()
         'Metodo para cargar el datagridview de la Guia Telefonica
 
         'Conexion a la BD.
-        Dim sql As String = "SELECT estado As 'Estado', COUNT(estado) As 'Cantidad' " _
-                                & " FROM registrotaller " _
-                                & " WHERE Month(fechaingreso) = Month(CURDATE()) " _
-                                & " GROUP BY estado "
+        Dim sql As String = " SELECT estado As 'Estado', COUNT(estado) As 'Cantidad' " _
+                            & " FROM registrotaller " _
+                            & " WHERE Month(fechaingreso) = Month(CURDATE())  " _
+                            & " GROUP BY estado "
 
         Dim connection As New MySqlConnection(connectionString)
 
@@ -226,75 +205,35 @@ Public Class ConsultaSeguimientoTaller
         DataSet = New DataSet()
 
         'Llenado del datagridview.
-        Adaptador.Fill(DataSet, "55")
-        Tabla = DataSet.Tables("55")
-        DataGridView5.DataSource = DataSet.Tables("55")
+        Adaptador.Fill(DataSet, "tabla")
+        Tabla = DataSet.Tables("tabla")
+        DataGridView4.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With DataGridView5
+        With DataGridView4
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        CalcularEstados()
+        CalcularTotales2()
+        DataGridView4.ClearSelection()
 
     End Sub
 
-    Public Sub CalcularEstados()
+    Public Sub CalcularTotales2()
 
         'TextBox6.Text = DataGridView5.Item(1, 0).Value.ToString()
         TextBox6.Text = TextBox1.Text
-        TextBox7.Text = DataGridView5.Item(1, 1).Value.ToString()
+        TextBox7.Text = DataGridView4.Item(1, 1).Value.ToString()
+
+        'Calculo de unidades reportadas y entregadas diario
+        TextBox8.Text = Math.Round((TextBox6.Text / 30), 2)
+        TextBox9.Text = Math.Round((TextBox7.Text / 30), 2)
 
     End Sub
 
-    Public Sub GenerarChart()
-        'Metodo que permite generar un grafico de acuerdo a los valores obtenidos desde la BD
-
-        Dim connection As New MySqlConnection(connectionString)
-
-        Dim sql As String = "Select estado As 'Estado', COUNT(estado) AS 'Cantidad' " _
-                            & " FROM registrotaller " _
-                            & " WHERE MONTH(fechaingreso) = MONTH(CURDATE()) " _
-                            & " GROUP BY estado "
-
-        Dim Adaptador As New MySqlDataAdapter(sql, cnn)
-        Dim Dataset As New DataSet()
-        Adaptador.Fill(Dataset, "HOLA")
-
-        'Enlace de datos con las barras (series)
-        Chart1.Series("Rutas").XValueMember = "Estado"
-        Chart1.Series("Rutas").YValueMembers = "Cantidad"
-
-        'Para ocultar las grillas
-        Chart1.ChartAreas(0).AxisX.MajorGrid.Enabled = False
-        Chart1.ChartAreas(0).AxisX.MinorGrid.Enabled = False
-        Chart1.ChartAreas(0).AxisY.MajorGrid.Enabled = False
-        Chart1.ChartAreas(0).AxisY.MinorGrid.Enabled = False
-
-        'Establecemos el grafico en 3D
-        Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
-
-        'Para cambiar la fuente de los ejes Y, X
-        Chart1.ChartAreas(0).AxisX.LabelStyle.Font = New Font("Segoe UI", 8)
-        Chart1.ChartAreas(0).AxisY.LabelStyle.Font = New Font("Segoe UI", 9)
-
-        'Color de las barras (series)
-        Chart1.Series(0).Color = Color.IndianRed
-
-        Chart1.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = False
-        Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Angle = -55
-
-        'Limpiamos y actualizamos el grafico como tal
-        Chart1.Series(0).Points.Clear()
-        Chart1.DataSource = ""
-
-        'Enlace de datos
-        Chart1.DataSource = Dataset.Tables("HOLA")
-
-    End Sub
-
-    Public Sub generarchart2()
+    Public Sub GenerarChartReportesMensual()
+        'Grafico que muestra el total de unidades reportadas y entregadas por mes
 
         'Obtenemos los valores desde los textbox 
         Dim y As Double() = {TextBox6.Text, TextBox7.Text}
@@ -328,6 +267,45 @@ Public Class ConsultaSeguimientoTaller
         'Personalizacion del Area
         Chart2.ChartAreas(0).Area3DStyle.Inclination = 45
         Chart2.ChartAreas("Area").Area3DStyle.Enable3D = True
+
+
+    End Sub
+
+    Public Sub GenerarChartReportesDiarios()
+        'Grafico que muestra el total de unidades reportadas y entregadas diario
+
+        'Obtenemos los valores desde los textbox 
+        Dim y As Double() = {TextBox8.Text, TextBox9.Text}
+
+        'Titulos de las leyendas
+        Dim x As String() = {"Reportadas", "Entregadas"}
+
+        Chart3.Series.Clear()
+        Chart3.Titles.Clear()
+        Chart3.Series.Add("Serie")
+
+        'Llenamos los valores provenientes de los textbox en las coordenades x, y
+        Chart3.Series("Serie").Points.DataBindXY(x, y)
+
+        'Indicamos el tipo de grafico y sus colores
+        Chart3.Series("Serie").ChartType = SeriesChartType.Pie
+        Chart3.Series("Serie").Points(0).Color = Color.MediumBlue
+        Chart3.Series("Serie").Points(1).Color = Color.PaleVioletRed
+
+        'Definimos en que parte apareceran los numeros del label
+        Chart3.Series("Serie")("PieLabelStyle") = "Inside"
+        Chart3.Series("Serie").IsValueShownAsLabel = True
+
+        'Expresamos con %porcentaje el valor
+        Chart3.Series(0).LegendText = "#VALX (#PERCENT)"
+
+        'Cambiams el tipo de fuente del label
+        Chart3.Legends(0).Font = New Font("Segoe UI", 8)
+        Chart3.Series(0).Font = New Font("Segoe UI", 9, FontStyle.Bold)
+
+        'Personalizacion del Area
+        Chart3.ChartAreas(0).Area3DStyle.Inclination = 45
+        Chart3.ChartAreas("Area").Area3DStyle.Enable3D = True
 
 
     End Sub

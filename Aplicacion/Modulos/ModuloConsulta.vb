@@ -403,13 +403,41 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        ReporteInfraccion.DataGridView.ClearSelection()
+
     End Sub
 
     Public Sub CargarListadoInfraccion()
         'Metodo para cargar el datagridview.
 
+        Dim sql As String = "SELECT COUNT(idregistroinfraccion) AS 'Conteo', vehiculo AS 'Vehiculo' " _
+                            & " FROM registroinfraccion, vehiculo " _
+                            & " WHERE registroinfraccion.vehiculo = vehiculo.idvehiculo " _
+                            & " AND MONTH(fecha) = MONTH(CURDATE()) " _
+                            & " AND clasificacionvehiculo = '" & ReporteInfraccion.TextBox3.Text & "' " _
+                            & " GROUP BY vehiculo " _
+                            & " ORDER BY COUNT(idregistroinfraccion) DESC " _
+                            & " LIMIT 8 "
 
+        Dim connection As New MySqlConnection(connectionString)
 
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview
+        Adaptador.Fill(DataSet, "reporte")
+        Tabla = DataSet.Tables("reporte")
+        ReporteInfraccion.DataGridView1.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ReporteInfraccion.DataGridView1
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ReporteInfraccion.DataGridView1.ClearSelection()
 
     End Sub
 

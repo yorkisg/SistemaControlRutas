@@ -51,8 +51,6 @@ Public Class ReporteInfraccion
                 'Colocamos la palabra concatenada con la variable para formar el titulo del tabpage
                 GroupBox2.Text = "PRIMEROS 15 INFRACTORES DEL PERÍODO: " & FechaDesde & FechaHasta & " - " & TextBox4.Text
 
-                DataGridView.ClearSelection()
-
             Else
 
                 MsgBox("La fecha inicial no puede ser mayor a la fecha final.", MsgBoxStyle.Exclamation, "Error.")
