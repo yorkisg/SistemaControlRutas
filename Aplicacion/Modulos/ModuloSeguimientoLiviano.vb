@@ -50,6 +50,7 @@ Module ModuloSeguimientoLiviano
                        & " WHERE vehiculo.subflota = subflota.idsubflota " _
                        & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
                        & " AND nombresubflota = '" & SeguimientoLiviano.TextBox1.Text & "' " _
+                       & " AND condicionvehiculo <> 'INACTIVO' " _
                        & " ORDER BY idvehiculo ASC "
 
         Dim connection As New MySqlConnection(connectionString)

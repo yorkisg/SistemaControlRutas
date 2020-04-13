@@ -395,7 +395,7 @@ Partial Class Principal
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripButton1.Text = "07.04.2020"
+        Me.ToolStripButton1.Text = "12.04.2020"
         '
         'ToolStripLabel2
         '

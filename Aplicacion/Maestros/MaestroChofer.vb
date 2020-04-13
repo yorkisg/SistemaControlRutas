@@ -38,7 +38,7 @@ Public Class MaestroChofer
 
             Dim db As New MySqlCommand("INSERT INTO chofer (idchofer, nombrechofer, tipochofer, telefono1, telefono2, estadochofer) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & ComboTipoChofer.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "', '" & ComboEstadoChofer.Text & "')", cnn)
             db.ExecuteNonQuery()
-            MsgBox("Chofer registrado con Exito.", MsgBoxStyle.Information, "Exito.")
+            MsgBox("Personal registrado con Exito.", MsgBoxStyle.Information, "Exito.")
 
             'Se limpian todos los componentes del formulario para un nuevo uso.
             LimpiarComponentes()

@@ -11,10 +11,12 @@ Public Class SeguimientoCarga
 
         'Llamada al metodo que permite cargar el arbol de opciones proveniente del Modulo.
         'CargarArbolCarga()
-        CargarArbolCarga2() 'EN PRUEBA Y REESTRUCTURACION
+        'CargarArbolCarga2() 
+        CargarArbolCarga3() 'EN PRUEBA Y REESTRUCTURACION
 
         'Validamos que el primer item seleccionado en el arbol sea el primero
-        Arbol.SelectedNode = Arbol.Nodes(0).Nodes(0)
+        'Arbol.SelectedNode = Arbol.Nodes(0).Nodes(0) 'SELECCIONAMOS EL PRIMER HIJO
+        Arbol.SelectedNode = Arbol.Nodes(0) 'SELECCIONAMOS EL PRIMER PADRE
 
         'Se habilita la serie correlativa para el ID de las rutas.
         SerieRutaCarga()
@@ -109,6 +111,13 @@ Public Class SeguimientoCarga
             MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
+
+    End Sub
+
+    Private Sub Arbol_BeforeCollapse(ByVal sender As Object, ByVal e As TreeViewCancelEventArgs) Handles Arbol.BeforeCollapse
+        'Evento que permite que los nodos del arbol se cierren
+
+        e.Cancel = True
 
     End Sub
 

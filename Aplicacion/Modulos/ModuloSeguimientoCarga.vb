@@ -131,6 +131,71 @@ Module ModuloSeguimientoCarga
 
     End Sub
 
+    Public Sub CargarArbolCarga3()
+        'Metodo donde generamos el arbol de opciones de acuerdo a las flotas, subflotas y grupos registrados en BD
+
+        'Adaptadores
+        Dim Padres As New MySqlDataAdapter("SELECT idsubflota, nombresubflota, flota " _
+                                        & " FROM subflota WHERE tiposubflota = 'CARGA' " _
+                                        & " ORDER BY nombresubflota ASC", cnn)
+
+        Dim Hijos As New MySqlDataAdapter(" SELECT idgrupo, nombregrupo, subflota " _
+                                        & " FROM grupo ORDER BY idgrupo ASC", cnn)
+        Dim Dataset As New DataSet
+
+        'Llenar el DataSet
+        Padres.Fill(Dataset, "Padres")
+        Hijos.Fill(Dataset, "Hijos")
+
+        'Creamos una relación a través del campo idflota (flota) común en ambos objetos DataTable.
+        Dim ColumnaPadre As DataColumn = Dataset.Tables("Padres").Columns("idsubflota")
+
+        Dim ColumnaHijo As DataColumn = Dataset.Tables("Hijos").Columns("subflota") 'clave foranea en tabla hijos (subflota)
+
+        Dim Relacion As New DataRelation("Padres_Hijos", ColumnaPadre, ColumnaHijo, True)
+
+        'Añadimos la relación al objeto DataSet.
+        Dataset.Relations.Add(Relacion)
+
+        With SeguimientoCarga.Arbol
+
+            'Para que no se repinte el control TreeView hasta que se hayan creado los nodos.
+            .BeginUpdate()
+
+            'Limpiamos el control TreeView.
+            .Nodes.Clear()
+
+            'Añadimos un objeto TreeNode ra¡z para cada objeto Padre existente en el objeto DataTable llamado Padres.
+            For Each padre As DataRow In Dataset.Tables("Padres").Rows
+
+                'Creamos el nodo padre.
+                Dim NodoPadre As New TreeNode(padre.Item("nombresubflota").ToString)
+
+                'Lo añadimos a la colección Nodes del control TreeView.
+                SeguimientoCarga.Arbol.Nodes.Add(NodoPadre)
+
+                'Añadimos un objeto TreeNode hijo por cada objeto Hijo existente en el objeto Padre actual.
+                For Each hijo In padre.GetChildRows("Padres_Hijos")
+
+                    'Creamos el nodo hijo
+                    Dim NodoHijo As New TreeNode(hijo.Item("nombregrupo").ToString)
+
+                    'Lo añadimos al nodo padre
+                    NodoPadre.Nodes.Add(NodoHijo)
+
+                Next
+
+            Next
+
+            'Editamos la apariencia del arbol
+            .Font = New Font("Calibri", 9)
+            .ExpandAll()
+            .EndUpdate()
+
+        End With
+
+    End Sub
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''METODOS PARA CARGAR DATAGRIDVIEW DE CARGA'''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -138,10 +203,50 @@ Module ModuloSeguimientoCarga
     Public Sub CargarGridRutaCarga()
         'Metodo que genera la carga de datos en el DataGridview1 
 
-        Dim sql As String = "Select idvehiculo, nombretipo, estadoactual, condicionvehiculo FROM vehiculo, subflota, tipovehiculo " _
+        Dim sql As String = "SELECT idvehiculo, nombretipo, estadoactual, condicionvehiculo " _
+                       & " FROM vehiculo, subflota, tipovehiculo " _
                        & " WHERE vehiculo.subflota = subflota.idsubflota " _
-                       & " And vehiculo.tipovehiculo = tipovehiculo.idtipo " _
-                       & " And nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _
+                       & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
+                       & " AND nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _
+                       & " AND condicionvehiculo <> 'ROBADO / EXTRAVIADO' " _
+                       & " ORDER BY idvehiculo ASC "
+
+        Dim connection As New MySqlConnection(connectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+
+        'Llenado del datagridview.
+        Adaptador.Fill(DataSet, "flota_vehiculo")
+        Tabla = DataSet.Tables("flota_vehiculo")
+        SeguimientoCarga.DataGridView1.DataSource = DataSet.Tables("flota_vehiculo")
+
+        'Parametros para editar apariencia del datagridview.
+        With SeguimientoCarga.DataGridView1
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 8) 'Fuente para Headers
+        End With
+
+        'Llamada al metodo para cargar imagenes
+        CargarImagenesHistorialCarga()
+        CargarImagenesEstadoVehiculoCarga()
+
+        SeguimientoCarga.DataGridView1.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridRutaCarga2()
+        'Metodo que genera la carga de datos en el DataGridview1 
+
+        Dim sql As String = "SELECT idvehiculo, nombretipo, estadoactual, condicionvehiculo " _
+                       & " FROM vehiculo, subflota, grupo, tipovehiculo " _
+                       & " WHERE vehiculo.grupo = grupo.idgrupo " _
+                       & " AND grupo.subflota = subflota.idsubflota " _
+                       & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
+                       & " AND nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _
                        & " AND condicionvehiculo <> 'ROBADO / EXTRAVIADO' " _
                        & " ORDER BY idvehiculo ASC "
 

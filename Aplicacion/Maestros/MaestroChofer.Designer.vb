@@ -229,7 +229,7 @@ Partial Class MaestroChofer
         Me.ComboTipoChofer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboTipoChofer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ComboTipoChofer.FormattingEnabled = True
-        Me.ComboTipoChofer.Items.AddRange(New Object() {"CARGA", "LIVIANO"})
+        Me.ComboTipoChofer.Items.AddRange(New Object() {"CARGA", "LIVIANO", "PERSONAL"})
         Me.ComboTipoChofer.Location = New System.Drawing.Point(12, 131)
         Me.ComboTipoChofer.Name = "ComboTipoChofer"
         Me.ComboTipoChofer.Size = New System.Drawing.Size(280, 23)
@@ -260,7 +260,7 @@ Partial Class MaestroChofer
         Me.MaximizeBox = False
         Me.Name = "MaestroChofer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Archivo de Choferes"
+        Me.Text = "Archivo de Personal El Tunal"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
