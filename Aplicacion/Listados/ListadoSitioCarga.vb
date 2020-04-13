@@ -153,7 +153,7 @@ Public Class Listadositiocarga
     Function Filtrar(ByVal busqueda As String) As DataTable
         'Funcion que carga los datos de acuerdo a lo ingresado en el TextBox
 
-        Dim cmd As New MySqlCommand("SELECT idsitiocarga, nombresitiocarga FROM sitiocarga WHERE nombresitiocarga LIKE '%" & busqueda & "%' ", cnn)
+        Dim cmd As New MySqlCommand("SELECT idsitiocarga, nombresitiocarga FROM sitiocarga WHERE nombresitiocarga LIKE '%" & busqueda & "%' ", Conexion)
 
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter(cmd)

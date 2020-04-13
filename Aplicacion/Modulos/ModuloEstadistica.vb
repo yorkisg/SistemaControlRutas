@@ -17,7 +17,7 @@ Module ModuloEstadistica
                         & " GROUP BY vehiculo " _
                         & " ORDER BY COUNT(*) DESC"
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -42,13 +42,13 @@ Module ModuloEstadistica
         'EstadisticaRuta
 
         'Conexion a la BD.
-        Dim sql As String = "SELECT COUNT(*) AS 'Conteo', nombrechofer AS 'Chofer' FROM ruta, chofer, estadoruta " _
-                        & " WHERE ruta.chofer = chofer.idchofer AND ruta.estadoruta = estadoruta.idestado " _
+        Dim sql As String = "SELECT COUNT(*) AS 'Conteo', nombrepersonal AS 'Personal' FROM ruta, personal, estadoruta " _
+                        & " WHERE ruta.personal = personal.idpersonal AND ruta.estadoruta = estadoruta.idestado " _
                         & " AND nombreestado IN ('EN RUTA CARGADO','EN RUTA VACIO') " _
-                        & " GROUP BY nombrechofer " _
+                        & " GROUP BY nombrepersonal " _
                         & " ORDER BY COUNT(*) DESC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -79,7 +79,7 @@ Module ModuloEstadistica
                 & " AND nombreestado IN ('EN RUTA CARGADO','EN RUTA VACIO') " _
                 & " GROUP BY nombresubflota "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -109,7 +109,7 @@ Module ModuloEstadistica
                         & " GROUP BY vehiculo " _
                         & " ORDER BY Conteo DESC"
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -134,12 +134,12 @@ Module ModuloEstadistica
         'EstadisticaInfraccion
 
         'Conexion a la BD.
-        Dim sql As String = "SELECT COUNT(velocidad) AS 'Conteo', nombrechofer AS 'Chofer' FROM registroinfraccion, chofer " _
-                        & " WHERE registroinfraccion.chofer = chofer.idchofer " _
-                        & " GROUP BY nombrechofer " _
+        Dim sql As String = "SELECT COUNT(velocidad) AS 'Conteo', nombrepersonal AS 'Personal' FROM registroinfraccion, personal " _
+                        & " WHERE registroinfraccion.personal = personal.idpersonal " _
+                        & " GROUP BY nombrepersonal " _
                         & " ORDER BY Conteo DESC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -171,7 +171,7 @@ Module ModuloEstadistica
                                 & " GROUP BY nombresubflota " _
                                 & " ORDER BY nombresubflota ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -204,7 +204,7 @@ Module ModuloEstadistica
                             & " GROUP BY nombresitiocarga " _
                             & " ORDER BY Conteo DESC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -237,7 +237,7 @@ Module ModuloEstadistica
                             & " GROUP BY nombredestino " _
                             & " ORDER BY Conteo DESC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -270,7 +270,7 @@ Module ModuloEstadistica
                             & " GROUP BY nombreproducto " _
                             & " ORDER BY Conteo DESC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -298,7 +298,7 @@ Module ModuloEstadistica
         'Metodo que permite generar un grafico de acuerdo a los valores obtenidos desde la BD
         'EstadisticaProducto
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         Dim sql As String = "SELECT nombreproducto AS 'Producto', COUNT(nombreproducto) AS 'Conteo' " _
                         & " FROM ruta, producto, estadoruta " _
@@ -309,7 +309,7 @@ Module ModuloEstadistica
                         & " ORDER BY Conteo DESC " _
                         & " LIMIT 5"
 
-        Dim Adaptador As New MySqlDataAdapter(sql, cnn)
+        Dim Adaptador As New MySqlDataAdapter(sql, Conexion)
         Dim Dataset As New DataSet()
         Adaptador.Fill(Dataset, "historialproducto")
 
@@ -350,7 +350,7 @@ Module ModuloEstadistica
         'Metodo que permite generar un grafico de acuerdo a los valores obtenidos desde la BD
         'EstadisticaInfraccion
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         Dim sql As String = "SELECT COUNT(velocidad) AS 'Conteo', nombresubflota AS 'Flota' " _
                                 & " FROM registroinfraccion, vehiculo, subflota " _
@@ -359,7 +359,7 @@ Module ModuloEstadistica
                                 & " GROUP BY nombresubflota " _
                                 & " ORDER BY nombresubflota ASC "
 
-        Dim Adaptador As New MySqlDataAdapter(sql, cnn)
+        Dim Adaptador As New MySqlDataAdapter(sql, Conexion)
         Dim Dataset As New DataSet()
         Adaptador.Fill(Dataset, "historialinfracciones")
 
@@ -400,7 +400,7 @@ Module ModuloEstadistica
         'Metodo que permite generar un grafico de acuerdo a los valores obtenidos desde la BD
         'EstadisticaRuta
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         Dim sql As String = "SELECT COUNT(*) AS 'Conteo', nombresubflota AS 'Flota' FROM ruta, estadoruta, vehiculo, subflota " _
                 & " WHERE ruta.estadoruta = estadoruta.idestado AND ruta.vehiculo = vehiculo.idvehiculo " _
@@ -408,7 +408,7 @@ Module ModuloEstadistica
                 & " AND nombreestado IN ('EN RUTA CARGADO','EN RUTA VACIO') " _
                 & " GROUP BY nombresubflota "
 
-        Dim Adaptador As New MySqlDataAdapter(sql, cnn)
+        Dim Adaptador As New MySqlDataAdapter(sql, Conexion)
         Dim Dataset As New DataSet()
         Adaptador.Fill(Dataset, "historialrutas")
 

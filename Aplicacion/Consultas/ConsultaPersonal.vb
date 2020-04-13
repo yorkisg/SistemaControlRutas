@@ -1,7 +1,7 @@
 ﻿
-Public Class ConsultaChofer
+Public Class ConsultaPersonal
 
-    Private Sub ConsultaChofer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ConsultaPersonal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Se llama el metodo para alternar colores entre filas
@@ -18,7 +18,7 @@ Public Class ConsultaChofer
 
     End Sub
 
-    Private Sub ConsultaChofer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ConsultaPersonal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         Dispose()
@@ -33,7 +33,7 @@ Public Class ConsultaChofer
             'La fecha inicial no puede ser mayor que la fecha final
             If DateTimePicker1.Value <= DateTimePicker2.Value Then
 
-                CargarGridChofer()
+                CargarGridPersonal()
 
                 If TextBox1.Text = "" Then
 
@@ -41,7 +41,7 @@ Public Class ConsultaChofer
 
                 ElseIf TextBox1.Text <> "" Then
 
-                    CargarGridChoferTop5()
+                    CargarGridPersonalTop5()
 
                 End If
 
@@ -63,7 +63,7 @@ Public Class ConsultaChofer
     Private Sub BotonBuscar_Click(sender As Object, e As EventArgs) Handles BotonBuscar.Click
         'Llamada al formulario ListadoChofer
 
-        ListadoChofer.ShowDialog()
+        ListadoPersonal.ShowDialog()
 
     End Sub
 

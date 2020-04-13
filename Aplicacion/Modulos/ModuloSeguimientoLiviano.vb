@@ -15,7 +15,7 @@ Module ModuloSeguimientoLiviano
 
         Adaptador = New MySqlDataAdapter("SELECT nombresubflota FROM subflota " _
                                    & " WHERE tiposubflota = 'LIVIANO' " _
-                                   & " ORDER BY nombresubflota ASC", cnn)
+                                   & " ORDER BY nombresubflota ASC", Conexion)
 
         Adaptador.Fill(Datatable)
 
@@ -53,7 +53,7 @@ Module ModuloSeguimientoLiviano
                        & " AND condicionvehiculo <> 'INACTIVO' " _
                        & " ORDER BY idvehiculo ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -81,14 +81,14 @@ Module ModuloSeguimientoLiviano
     Public Sub CargarGridHistorialInfraccionLiviano()
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausula LIKE y LIMIT
 
-        Dim sql As String = "SELECT idregistroinfraccion, vehiculo, nombrechofer, velocidad, estadovehiculo, fecha, hora " _
-                       & " FROM registroinfraccion, chofer " _
-                       & " WHERE registroinfraccion.chofer = chofer.idchofer " _
+        Dim sql As String = "SELECT idregistroinfraccion, vehiculo, nombrepersonal, velocidad, estadovehiculo, fecha, hora " _
+                       & " FROM registroinfraccion, personal " _
+                       & " WHERE registroinfraccion.personal = personal.idpersonal " _
                        & " AND vehiculo = '" & SeguimientoLiviano.TextBox2.Text & "' " _
                        & " ORDER BY idregistroinfraccion DESC" _
                        & " LIMIT 30 "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -98,7 +98,7 @@ Module ModuloSeguimientoLiviano
         'Llenado del datagridview
         Adaptador.Fill(DataSet, "ruta_vehiculos2")
         Tabla = DataSet.Tables("ruta_vehiculos2")
-        SeguimientoLiviano.DataGridView2.DataSource = DataSet.Tables("ruta_vehiculos2")
+        SeguimientoLiviano.DataGridView2.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With SeguimientoLiviano.DataGridView2
@@ -116,14 +116,14 @@ Module ModuloSeguimientoLiviano
     Public Sub CargarGridHistorialIncidenciaLiviano()
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausula LIKE y LIMIT
 
-        Dim sql As String = "SELECT idregistroincidencia, vehiculo, nombrechofer, descripcion, clasificacion, fecha, hora " _
-                       & " FROM registroincidencia, chofer " _
-                       & " WHERE registroincidencia.chofer = chofer.idchofer " _
+        Dim sql As String = "SELECT idregistroincidencia, vehiculo, nombrepersonal, descripcion, clasificacion, fecha, hora " _
+                       & " FROM registroincidencia, personal " _
+                       & " WHERE registroincidencia.personal = personal.idpersonal " _
                        & " AND vehiculo = '" & SeguimientoLiviano.TextBox14.Text & "' " _
                        & " ORDER BY idregistroincidencia DESC " _
                        & " LIMIT 30 "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -156,18 +156,18 @@ Module ModuloSeguimientoLiviano
         'Este metodo permite obtener los estados de los vehiculos para luego ser modificados
         'Se despliega el formulario MaestroVehiculo
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT nombresubflota, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
+        Adaptador = New MySqlDataAdapter("SELECT nombresubflota, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
                                           & " FROM vehiculo, subflota, tipovehiculo " _
                                           & " WHERE vehiculo.subflota = subflota.idsubflota " _
                                           & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
-                                          & " AND idvehiculo = '" & SeguimientoLiviano.TextBox2.Text & "' ", cnn)
+                                          & " AND idvehiculo = '" & SeguimientoLiviano.TextBox2.Text & "' ", Conexion)
 
-        Adaptador2.Fill(Tabla2)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
+        For Each row As DataRow In Tabla.Rows
 
             MaestroVehiculo.ComboFlota.Text = row("nombresubflota").ToString
             MaestroVehiculo.ComboTipo.Text = row("nombretipo").ToString
@@ -179,37 +179,37 @@ Module ModuloSeguimientoLiviano
 
     End Sub
 
-    Public Sub ObtenerChoferSeguimientoLivianoInfraccion()
+    Public Sub ObtenerpersonalSeguimientoLivianoInfraccion()
         'Este metodo permite obtener el ID del chofer
 
         Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT idchofer FROM chofer WHERE nombrechofer = '" & SeguimientoLiviano.TextBox16.Text & "' ", cnn)
+        Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & SeguimientoLiviano.TextBox16.Text & "' ", Conexion)
 
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows
 
-            SeguimientoLiviano.TextBox6.Text = row("idchofer").ToString
+            SeguimientoLiviano.TextBox6.Text = row("idpersonal").ToString
 
         Next
 
     End Sub
 
-    Public Sub ObtenerChoferSeguimientoLivianoIncidencia()
+    Public Sub ObtenerpersonalSeguimientoLivianoIncidencia()
         'Este metodo permite obtener el ID del chofer
 
         Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT idchofer FROM chofer WHERE nombrechofer = '" & SeguimientoLiviano.TextBox17.Text & "' ", cnn)
+        Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & SeguimientoLiviano.TextBox17.Text & "' ", Conexion)
 
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows
 
-            SeguimientoLiviano.TextBox18.Text = row("idchofer").ToString
+            SeguimientoLiviano.TextBox18.Text = row("idpersonal").ToString
 
         Next
 
@@ -224,7 +224,7 @@ Module ModuloSeguimientoLiviano
         'Usado para generar automaticamente el ID.
 
         'Se obtiene el ultimo ID.
-        Dim Command As New MySqlCommand("SELECT MAX(idregistroinfraccion) FROM registroinfraccion", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idregistroinfraccion) FROM registroinfraccion", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.
@@ -241,7 +241,7 @@ Module ModuloSeguimientoLiviano
         'Usado para generar automaticamente el ID.
 
         'Se obtiene el ultimo ID.
-        Dim Command As New MySqlCommand("SELECT MAX(idregistroincidencia) FROM registroincidencia", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idregistroincidencia) FROM registroincidencia", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.
@@ -352,7 +352,7 @@ Module ModuloSeguimientoLiviano
         If Mensaje = DialogResult.Yes Then
 
             'Se elimina el registro
-            Dim db As New MySqlCommand("DELETE FROM registroinfraccion WHERE idregistroinfraccion = '" & SeguimientoLiviano.TextBox19.Text & "' ", cnn)
+            Dim db As New MySqlCommand("DELETE FROM registroinfraccion WHERE idregistroinfraccion = '" & SeguimientoLiviano.TextBox19.Text & "' ", Conexion)
             db.ExecuteNonQuery()
 
             'Se carga el historial actualizado

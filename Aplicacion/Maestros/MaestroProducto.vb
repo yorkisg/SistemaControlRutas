@@ -32,7 +32,7 @@ Public Class MaestroProducto
         If ValidarComponentes() = True Then
 
             'Se agrega el producto en la tabla producto
-            Dim db As New MySqlCommand("INSERT INTO producto (idproducto, nombreproducto) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "')", cnn)
+            Dim db As New MySqlCommand("INSERT INTO producto (idproducto, nombreproducto) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "')", Conexion)
             db.ExecuteNonQuery()
 
             MsgBox("Producto registrado con Exito.", MsgBoxStyle.Information, "Exito.")
@@ -59,7 +59,7 @@ Public Class MaestroProducto
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("UPDATE producto SET nombreproducto = '" & TextBox2.Text & "' WHERE idproducto = '" & TextBox1.Text & "' ", cnn)
+            Dim db As New MySqlCommand("UPDATE producto SET nombreproducto = '" & TextBox2.Text & "' WHERE idproducto = '" & TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Producto modificado con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -105,7 +105,7 @@ Public Class MaestroProducto
         'Usado para generar automaticamente el ID de un producto.
 
         'Se obtiene el ultimo ID del chofer.
-        Dim Command As New MySqlCommand("SELECT MAX(idproducto) FROM producto", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idproducto) FROM producto", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.

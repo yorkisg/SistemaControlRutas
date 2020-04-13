@@ -30,7 +30,7 @@ Public Class MaestroEstado
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("INSERT INTO estadoruta (idestado, nombreestado) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "')", cnn)
+            Dim db As New MySqlCommand("INSERT INTO estadoruta (idestado, nombreestado) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "')", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Estado registrado con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -49,7 +49,7 @@ Public Class MaestroEstado
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("UPDATE estadoruta SET nombreestado = '" & TextBox2.Text & "' WHERE idestado = '" & TextBox1.Text & "' ", cnn)
+            Dim db As New MySqlCommand("UPDATE estadoruta SET nombreestado = '" & TextBox2.Text & "' WHERE idestado = '" & TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Estado modificado con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -94,7 +94,7 @@ Public Class MaestroEstado
         'Usado para generar automaticamente el ID.
 
         'Se obtiene el ultimo ID del chofer.
-        Dim Command As New MySqlCommand("SELECT MAX(idestado) FROM estadoruta", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idestado) FROM estadoruta", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.

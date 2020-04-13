@@ -28,16 +28,16 @@ Partial Class EstadisticaRuta
         Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonExportar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
@@ -47,16 +47,16 @@ Partial Class EstadisticaRuta
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaRutas2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaRutas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaRutas2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaRutas3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaRutas = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,6 +177,28 @@ Partial Class EstadisticaRuta
         Me.DataGridView.Size = New System.Drawing.Size(496, 286)
         Me.DataGridView.TabIndex = 49
         '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.DataPropertyName = "Vehiculo"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.Format = "N2"
+        DataGridViewCellStyle2.NullValue = Nothing
+        Me.ColumnaVehiculo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        '
+        'ColumnaRutas2
+        '
+        Me.ColumnaRutas2.DataPropertyName = "Conteo"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.Format = "N0"
+        DataGridViewCellStyle3.NullValue = Nothing
+        Me.ColumnaRutas2.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ColumnaRutas2.HeaderText = "RUTAS GENERADAS"
+        Me.ColumnaRutas2.Name = "ColumnaRutas2"
+        Me.ColumnaRutas2.ReadOnly = True
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
@@ -263,50 +285,6 @@ Partial Class EstadisticaRuta
         Me.DataGridView2.Size = New System.Drawing.Size(496, 286)
         Me.DataGridView2.TabIndex = 51
         '
-        'ColumnaChofer
-        '
-        Me.ColumnaChofer.DataPropertyName = "Chofer"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.Format = "N2"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle6
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
-        '
-        'ColumnaRutas
-        '
-        Me.ColumnaRutas.DataPropertyName = "Conteo"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.Format = "N0"
-        DataGridViewCellStyle7.NullValue = Nothing
-        Me.ColumnaRutas.DefaultCellStyle = DataGridViewCellStyle7
-        Me.ColumnaRutas.HeaderText = "RUTAS GENERADAS"
-        Me.ColumnaRutas.Name = "ColumnaRutas"
-        Me.ColumnaRutas.ReadOnly = True
-        '
-        'ColumnaVehiculo
-        '
-        Me.ColumnaVehiculo.DataPropertyName = "Vehiculo"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.Format = "N2"
-        DataGridViewCellStyle2.NullValue = Nothing
-        Me.ColumnaVehiculo.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
-        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
-        Me.ColumnaVehiculo.ReadOnly = True
-        '
-        'ColumnaRutas2
-        '
-        Me.ColumnaRutas2.DataPropertyName = "Conteo"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.Format = "N0"
-        DataGridViewCellStyle3.NullValue = Nothing
-        Me.ColumnaRutas2.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnaRutas2.HeaderText = "RUTAS GENERADAS"
-        Me.ColumnaRutas2.Name = "ColumnaRutas2"
-        Me.ColumnaRutas2.ReadOnly = True
-        '
         'ColumnaFlota
         '
         Me.ColumnaFlota.DataPropertyName = "Flota"
@@ -328,6 +306,28 @@ Partial Class EstadisticaRuta
         Me.ColumnaRutas3.HeaderText = "RUTAS GENERADAS"
         Me.ColumnaRutas3.Name = "ColumnaRutas3"
         Me.ColumnaRutas3.ReadOnly = True
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.DataPropertyName = "Personal"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.Format = "N2"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle6
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        '
+        'ColumnaRutas
+        '
+        Me.ColumnaRutas.DataPropertyName = "Conteo"
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.Format = "N0"
+        DataGridViewCellStyle7.NullValue = Nothing
+        Me.ColumnaRutas.DefaultCellStyle = DataGridViewCellStyle7
+        Me.ColumnaRutas.HeaderText = "RUTAS GENERADAS"
+        Me.ColumnaRutas.Name = "ColumnaRutas"
+        Me.ColumnaRutas.ReadOnly = True
         '
         'EstadisticaRuta
         '
@@ -375,8 +375,8 @@ Partial Class EstadisticaRuta
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaRutas2 As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaRutas As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaFlota As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaRutas3 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaRutas As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
 End Class

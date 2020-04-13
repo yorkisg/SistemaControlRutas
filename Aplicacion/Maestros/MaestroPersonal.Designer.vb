@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MaestroChofer
+Partial Class MaestroPersonal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class MaestroChofer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MaestroChofer))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MaestroPersonal))
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -40,11 +40,11 @@ Partial Class MaestroChofer
         Me.BotonBuscar = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboEstadoChofer = New System.Windows.Forms.ComboBox()
+        Me.ComboEstadoPersona = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboTipoChofer = New System.Windows.Forms.ComboBox()
+        Me.ComboTipoPersona = New System.Windows.Forms.ComboBox()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -181,17 +181,17 @@ Partial Class MaestroChofer
         Me.Label4.TabIndex = 44
         Me.Label4.Text = "ESTADO"
         '
-        'ComboEstadoChofer
+        'ComboEstadoPersona
         '
-        Me.ComboEstadoChofer.BackColor = System.Drawing.Color.AliceBlue
-        Me.ComboEstadoChofer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboEstadoChofer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.ComboEstadoChofer.FormattingEnabled = True
-        Me.ComboEstadoChofer.Items.AddRange(New Object() {"ACTIVO", "DE REPOSO", "DE PERMISO", "DE VACACIONES", "INACTIVO"})
-        Me.ComboEstadoChofer.Location = New System.Drawing.Point(12, 263)
-        Me.ComboEstadoChofer.Name = "ComboEstadoChofer"
-        Me.ComboEstadoChofer.Size = New System.Drawing.Size(280, 23)
-        Me.ComboEstadoChofer.TabIndex = 45
+        Me.ComboEstadoPersona.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboEstadoPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboEstadoPersona.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ComboEstadoPersona.FormattingEnabled = True
+        Me.ComboEstadoPersona.Items.AddRange(New Object() {"ACTIVO", "DE REPOSO", "DE PERMISO", "DE VACACIONES", "INACTIVO"})
+        Me.ComboEstadoPersona.Location = New System.Drawing.Point(12, 263)
+        Me.ComboEstadoPersona.Name = "ComboEstadoPersona"
+        Me.ComboEstadoPersona.Size = New System.Drawing.Size(280, 23)
+        Me.ComboEstadoPersona.TabIndex = 45
         '
         'Label5
         '
@@ -223,29 +223,29 @@ Partial Class MaestroChofer
         Me.Label6.TabIndex = 48
         Me.Label6.Text = "CLASIFICACIÓN"
         '
-        'ComboTipoChofer
+        'ComboTipoPersona
         '
-        Me.ComboTipoChofer.BackColor = System.Drawing.Color.AliceBlue
-        Me.ComboTipoChofer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboTipoChofer.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.ComboTipoChofer.FormattingEnabled = True
-        Me.ComboTipoChofer.Items.AddRange(New Object() {"CARGA", "LIVIANO", "PERSONAL"})
-        Me.ComboTipoChofer.Location = New System.Drawing.Point(12, 131)
-        Me.ComboTipoChofer.Name = "ComboTipoChofer"
-        Me.ComboTipoChofer.Size = New System.Drawing.Size(280, 23)
-        Me.ComboTipoChofer.TabIndex = 49
+        Me.ComboTipoPersona.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboTipoPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboTipoPersona.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ComboTipoPersona.FormattingEnabled = True
+        Me.ComboTipoPersona.Items.AddRange(New Object() {"CARGA", "LIVIANO", "PERSONAL"})
+        Me.ComboTipoPersona.Location = New System.Drawing.Point(12, 131)
+        Me.ComboTipoPersona.Name = "ComboTipoPersona"
+        Me.ComboTipoPersona.Size = New System.Drawing.Size(280, 23)
+        Me.ComboTipoPersona.TabIndex = 49
         '
-        'MaestroChofer
+        'MaestroPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(351, 298)
-        Me.Controls.Add(Me.ComboTipoChofer)
+        Me.Controls.Add(Me.ComboTipoPersona)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.ComboEstadoChofer)
+        Me.Controls.Add(Me.ComboEstadoPersona)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.BotonBuscar)
@@ -258,7 +258,7 @@ Partial Class MaestroChofer
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "MaestroChofer"
+        Me.Name = "MaestroPersonal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Archivo de Personal El Tunal"
         Me.ToolStrip1.ResumeLayout(False)
@@ -282,12 +282,12 @@ Partial Class MaestroChofer
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BotonSalir As System.Windows.Forms.ToolStripButton
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents ComboEstadoChofer As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboEstadoPersona As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ComboTipoChofer As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboTipoPersona As System.Windows.Forms.ComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
 
 End Class

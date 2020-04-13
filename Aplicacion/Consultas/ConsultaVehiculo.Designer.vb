@@ -301,7 +301,7 @@ Partial Class ConsultaVehiculo
         '
         'ColumnaChofer
         '
-        Me.ColumnaChofer.DataPropertyName = "nombrechofer"
+        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
         Me.ColumnaChofer.FillWeight = 31.74049!
@@ -409,10 +409,10 @@ Partial Class ConsultaVehiculo
     Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaHora As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaFecha As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn

@@ -42,7 +42,7 @@ Public Class MaestroVehiculo
 
         ElseIf ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("INSERT INTO vehiculo (idvehiculo, subflota, tipovehiculo, clasificacionvehiculo ,condicionvehiculo, estadoactual, estadorevision) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox6.Text & "', '" & ComboCondicion.Text & "', '" & ComboEstado.Text & "', 'OPERATIVO')", cnn)
+            Dim db As New MySqlCommand("INSERT INTO vehiculo (idvehiculo, subflota, tipovehiculo, clasificacionvehiculo ,condicionvehiculo, estadoactual, estadorevision) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox6.Text & "', '" & ComboCondicion.Text & "', '" & ComboEstado.Text & "', 'OPERATIVO')", Conexion)
             db.ExecuteNonQuery()
 
             'Se limpian todos los componentes del formulario para un nuevo uso.
@@ -62,7 +62,7 @@ Public Class MaestroVehiculo
         'Se valida que no haya algun campo vacio.
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("UPDATE vehiculo SET subflota = '" & TextBox2.Text & "', tipovehiculo = '" & TextBox3.Text & "', clasificacionvehiculo = '" & ComboClasificacion.Text & "', condicionvehiculo = '" & ComboCondicion.Text & "', estadoactual = '" & ComboEstado.Text & "' WHERE idvehiculo = '" & TextBox1.Text & "' ", cnn)
+            Dim db As New MySqlCommand("UPDATE vehiculo SET subflota = '" & TextBox2.Text & "', tipovehiculo = '" & TextBox3.Text & "', clasificacionvehiculo = '" & ComboClasificacion.Text & "', condicionvehiculo = '" & ComboCondicion.Text & "', estadoactual = '" & ComboEstado.Text & "' WHERE idvehiculo = '" & TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
 
             'Se desactiva el uso del boton modificar.
@@ -113,7 +113,7 @@ Public Class MaestroVehiculo
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter
 
-        Adaptador = New MySqlDataAdapter("SELECT * FROM subflota ORDER BY nombresubflota ASC", cnn)
+        Adaptador = New MySqlDataAdapter("SELECT * FROM subflota ORDER BY nombresubflota ASC", Conexion)
         Adaptador.Fill(Tabla)
 
         ComboFlota.DataSource = Tabla
@@ -128,7 +128,7 @@ Public Class MaestroVehiculo
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter
 
-        Adaptador = New MySqlDataAdapter("SELECT * FROM tipovehiculo ORDER BY nombretipo ASC", cnn)
+        Adaptador = New MySqlDataAdapter("SELECT * FROM tipovehiculo ORDER BY nombretipo ASC", Conexion)
         Adaptador.Fill(Tabla)
 
         ComboTipo.DataSource = Tabla
@@ -140,22 +140,22 @@ Public Class MaestroVehiculo
     Private Sub CargarComboCondicion()
         'Metodo que permite cargar el Combobox desde la BD.
 
-        Dim Tabla2 As New DataTable
-        Dim Adaptador2 As New MySqlDataAdapter
+        Dim Tabla As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
 
-        Adaptador2 = New MySqlDataAdapter("SELECT idcondicionvehiculo, nombrecondicion FROM condicionvehiculo ORDER BY idcondicionvehiculo ASC", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT idcondicionvehiculo, nombrecondicion FROM condicionvehiculo ORDER BY idcondicionvehiculo ASC", Conexion)
+        Adaptador.Fill(Tabla)
 
-        ComboCondicion.DataSource = Tabla2
+        ComboCondicion.DataSource = Tabla
         ComboCondicion.DisplayMember = "nombrecondicion"
         ComboCondicion.ValueMember = "idcondicionvehiculo"
 
         ComboCondicion.DrawMode = DrawMode.OwnerDrawVariable 'PARA PODER PONER NUESTRAS IMAGENES
         ComboCondicion.DropDownHeight = 480 'PARA QUE MUESTRE TODOS LOS ELEMENTOS. DEPENDE DEL NUMERO DE ELEMENTOS Y SU ALTURA
 
-        'Generamos un ciclo para obtener cada nombre de la consulta guardada en el Tabla2
+        'Generamos un ciclo para obtener cada nombre de la consulta guardada en el Tabla
         'cada valor obtenido es agregado al ArrayList declarado al inicio de la clase
-        For Each dr As DataRow In Tabla2.Rows
+        For Each dr As DataRow In Tabla.Rows
 
             'guardamos cada registro en el arreglo
             Arreglo2.Add(dr("nombrecondicion"))
@@ -170,7 +170,7 @@ Public Class MaestroVehiculo
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter
 
-        Adaptador = New MySqlDataAdapter("SELECT idestado, nombreestado FROM estadoruta ORDER BY nombreestado ASC", cnn)
+        Adaptador = New MySqlDataAdapter("SELECT idestado, nombreestado FROM estadoruta ORDER BY nombreestado ASC", Conexion)
         Adaptador.Fill(Tabla)
 
         ComboEstado.DataSource = Tabla
@@ -180,7 +180,7 @@ Public Class MaestroVehiculo
         ComboEstado.DrawMode = DrawMode.OwnerDrawVariable 'PARA PODER PONER NUESTRAS IMAGENES
         ComboEstado.DropDownHeight = 480 'PARA QUE MUESTRE TODOS LOS ELEMENTOS. DEPENDE DEL NUMERO DE ELEMENTOS Y SU ALTURA
 
-        'Generamos un ciclo para obtener cada nombre de la consulta guardada en el Tabla2
+        'Generamos un ciclo para obtener cada nombre de la consulta guardada en el Tabla
         'cada valor obtenido es agregado al ArrayList declarado al inicio de la clase
         For Each dr As DataRow In Tabla.Rows
 
@@ -194,13 +194,13 @@ Public Class MaestroVehiculo
     Private Sub ComboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboTipo.SelectedIndexChanged
         'Este metodo permite obtener el ID de cada item seleccionado. 
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT idtipo FROM tipovehiculo WHERE nombretipo = ('" & ComboTipo.Text & "') ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT idtipo FROM tipovehiculo WHERE nombretipo = ('" & ComboTipo.Text & "') ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
+        For Each row As DataRow In Tabla.Rows
             TextBox3.Text = row("idtipo").ToString
         Next
 
@@ -209,13 +209,13 @@ Public Class MaestroVehiculo
     Private Sub ComboFlota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboFlota.SelectedIndexChanged
         'Este metodo permite obtener el ID de cada item seleccionado. 
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT idsubflota FROM subflota WHERE nombresubflota = ('" & ComboFlota.Text & "') ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT idsubflota FROM subflota WHERE nombresubflota = ('" & ComboFlota.Text & "') ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
+        For Each row As DataRow In Tabla.Rows
             TextBox2.Text = row("idsubflota").ToString
         Next
 
@@ -404,7 +404,7 @@ Public Class MaestroVehiculo
         'para evitar registrar duplicados.
 
         Dim sql As String = "SELECT COUNT(idvehiculo) > 0 FROM vehiculo WHERE idvehiculo = '" & id & "' "
-        Dim con As New MySqlCommand(sql, cnn)
+        Dim con As New MySqlCommand(sql, Conexion)
         Return Convert.ToBoolean(con.ExecuteScalar())
 
     End Function

@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>8</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -151,10 +151,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\ConsultaChofer.Designer.vb">
-      <DependentUpon>ConsultaChofer.vb</DependentUpon>
+    <Compile Include="Consultas\ConsultaPersonal.Designer.vb">
+      <DependentUpon>ConsultaPersonal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ConsultaChofer.vb">
+    <Compile Include="Consultas\ConsultaPersonal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\ConsultaInfraccion.Designer.vb">
@@ -229,10 +229,10 @@
     <Compile Include="Estadisticas\EstadisticaUbicacionDestino.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listados\ListadoChofer.Designer.vb">
-      <DependentUpon>ListadoChofer.vb</DependentUpon>
+    <Compile Include="Listados\ListadoPersonal.Designer.vb">
+      <DependentUpon>ListadoPersonal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Listados\ListadoChofer.vb">
+    <Compile Include="Listados\ListadoPersonal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Listados\ListadoDestino.Designer.vb">
@@ -253,12 +253,6 @@
     <Compile Include="Listados\ListadoFlota.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Listados\ListadoPersona.Designer.vb">
-      <DependentUpon>ListadoPersona.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Listados\ListadoPersona.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Listados\ListadoProducto.Designer.vb">
       <DependentUpon>ListadoProducto.vb</DependentUpon>
     </Compile>
@@ -277,10 +271,10 @@
     <Compile Include="Listados\ListadoVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maestros\MaestroChofer.Designer.vb">
-      <DependentUpon>MaestroChofer.vb</DependentUpon>
+    <Compile Include="Maestros\MaestroPersonal.Designer.vb">
+      <DependentUpon>MaestroPersonal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maestros\MaestroChofer.vb">
+    <Compile Include="Maestros\MaestroPersonal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maestros\MaestroEstado.Designer.vb">
@@ -305,12 +299,6 @@
       <DependentUpon>MaestroInfraccion.vb</DependentUpon>
     </Compile>
     <Compile Include="Maestros\MaestroInfraccion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maestros\MaestroPersona.Designer.vb">
-      <DependentUpon>MaestroPersona.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maestros\MaestroPersona.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maestros\MaestroProducto.Designer.vb">
@@ -371,16 +359,22 @@
     <Compile Include="Seguimiento de Taller\ConsultaSeguimientoTaller.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultas\CuadroResumenMateriaPrima.Designer.vb">
+      <DependentUpon>CuadroResumenMateriaPrima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CuadroResumenMateriaPrima.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguimiento de Taller\RegistrarReporteTaller.Designer.vb">
       <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
     </Compile>
     <Compile Include="Seguimiento de Taller\RegistrarReporteTaller.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\CuadroResumenMateriaPrima.Designer.vb">
-      <DependentUpon>CuadroResumenMateriaPrima.vb</DependentUpon>
+    <Compile Include="Seguimiento de Taller\SeguimientoTaller.Designer.vb">
+      <DependentUpon>SeguimientoTaller.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\CuadroResumenMateriaPrima.vb">
+    <Compile Include="Seguimiento de Taller\SeguimientoTaller.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Seguimiento de Vehiculos\SeguimientoCarga.Designer.vb">
@@ -395,16 +389,11 @@
     <Compile Include="Seguimiento de Vehiculos\SeguimientoLiviano.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Seguimiento de Taller\SeguimientoTaller.Designer.vb">
-      <DependentUpon>SeguimientoTaller.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Seguimiento de Taller\SeguimientoTaller.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Consultas\ConsultaChofer.resx">
-      <DependentUpon>ConsultaChofer.vb</DependentUpon>
+    <EmbeddedResource Include="Consultas\ConsultaPersonal.resx">
+      <DependentUpon>ConsultaPersonal.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaInfraccion.resx">
       <DependentUpon>ConsultaInfraccion.vb</DependentUpon>
@@ -443,8 +432,8 @@
     <EmbeddedResource Include="Estadisticas\EstadisticaUbicacionDestino.resx">
       <DependentUpon>EstadisticaUbicacionDestino.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listados\ListadoChofer.resx">
-      <DependentUpon>ListadoChofer.vb</DependentUpon>
+    <EmbeddedResource Include="Listados\ListadoPersonal.resx">
+      <DependentUpon>ListadoPersonal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listados\ListadoDestino.resx">
       <DependentUpon>ListadoDestino.vb</DependentUpon>
@@ -455,9 +444,6 @@
     <EmbeddedResource Include="Listados\ListadoFlota.resx">
       <DependentUpon>ListadoFlota.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Listados\ListadoPersona.resx">
-      <DependentUpon>ListadoPersona.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Listados\ListadoProducto.resx">
       <DependentUpon>ListadoProducto.vb</DependentUpon>
     </EmbeddedResource>
@@ -466,9 +452,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Listados\ListadoVehiculo.resx">
       <DependentUpon>ListadoVehiculo.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maestros\MaestroChofer.resx">
-      <DependentUpon>MaestroChofer.vb</DependentUpon>
+    <EmbeddedResource Include="Maestros\MaestroPersonal.resx">
+      <DependentUpon>MaestroPersonal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maestros\MaestroEstado.resx">
       <DependentUpon>MaestroEstado.vb</DependentUpon>
@@ -481,9 +468,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maestros\MaestroInfraccion.resx">
       <DependentUpon>MaestroInfraccion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maestros\MaestroPersona.resx">
-      <DependentUpon>MaestroPersona.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maestros\MaestroProducto.resx">
       <DependentUpon>MaestroProducto.vb</DependentUpon>
@@ -505,24 +489,29 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguimiento de Taller\ConsultaSeguimientoTaller.resx">
       <DependentUpon>ConsultaSeguimientoTaller.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Seguimiento de Taller\RegistrarReporteTaller.resx">
-      <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CuadroResumenMateriaPrima.resx">
       <DependentUpon>CuadroResumenMateriaPrima.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoCarga.resx">
-      <DependentUpon>SeguimientoCarga.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoLiviano.resx">
-      <DependentUpon>SeguimientoLiviano.vb</DependentUpon>
+    <EmbeddedResource Include="Seguimiento de Taller\RegistrarReporteTaller.resx">
+      <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguimiento de Taller\SeguimientoTaller.resx">
       <DependentUpon>SeguimientoTaller.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoCarga.resx">
+      <DependentUpon>SeguimientoCarga.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoLiviano.resx">
+      <DependentUpon>SeguimientoLiviano.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

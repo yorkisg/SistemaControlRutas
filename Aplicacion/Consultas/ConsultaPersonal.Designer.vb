@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ConsultaChofer
+Partial Class ConsultaPersonal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,17 +22,17 @@ Partial Class ConsultaChofer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaChofer))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaPersonal))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonFiltrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -55,6 +55,9 @@ Partial Class ConsultaChofer
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaProducto2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaViaje2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.ColumnaRuta = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -66,9 +69,6 @@ Partial Class ConsultaChofer
         Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaProducto2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaViaje2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -316,6 +316,36 @@ Partial Class ConsultaChofer
         Me.DataGridView1.Size = New System.Drawing.Size(297, 422)
         Me.DataGridView1.TabIndex = 50
         '
+        'ColumnaVehiculo2
+        '
+        Me.ColumnaVehiculo2.DataPropertyName = "vehiculo"
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.Format = "N2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.ColumnaVehiculo2.DefaultCellStyle = DataGridViewCellStyle8
+        Me.ColumnaVehiculo2.HeaderText = "VEHÍCULO"
+        Me.ColumnaVehiculo2.Name = "ColumnaVehiculo2"
+        Me.ColumnaVehiculo2.ReadOnly = True
+        '
+        'ColumnaProducto2
+        '
+        Me.ColumnaProducto2.DataPropertyName = "nombreproducto"
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.Format = "N0"
+        DataGridViewCellStyle9.NullValue = Nothing
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaProducto2.DefaultCellStyle = DataGridViewCellStyle9
+        Me.ColumnaProducto2.HeaderText = "PRODUCTO"
+        Me.ColumnaProducto2.Name = "ColumnaProducto2"
+        Me.ColumnaProducto2.ReadOnly = True
+        '
+        'ColumnaViaje2
+        '
+        Me.ColumnaViaje2.DataPropertyName = "Fecha2"
+        Me.ColumnaViaje2.HeaderText = "ÚLTIMO VIAJE"
+        Me.ColumnaViaje2.Name = "ColumnaViaje2"
+        Me.ColumnaViaje2.ReadOnly = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
@@ -359,7 +389,7 @@ Partial Class ConsultaChofer
         '
         'ColumnaChofer
         '
-        Me.ColumnaChofer.DataPropertyName = "nombrechofer"
+        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
         Me.ColumnaChofer.FillWeight = 31.74049!
@@ -430,37 +460,7 @@ Partial Class ConsultaChofer
         Me.ColumnaHora.ReadOnly = True
         Me.ColumnaHora.Width = 75
         '
-        'ColumnaVehiculo2
-        '
-        Me.ColumnaVehiculo2.DataPropertyName = "vehiculo"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.Format = "N2"
-        DataGridViewCellStyle8.NullValue = Nothing
-        Me.ColumnaVehiculo2.DefaultCellStyle = DataGridViewCellStyle8
-        Me.ColumnaVehiculo2.HeaderText = "VEHÍCULO"
-        Me.ColumnaVehiculo2.Name = "ColumnaVehiculo2"
-        Me.ColumnaVehiculo2.ReadOnly = True
-        '
-        'ColumnaProducto2
-        '
-        Me.ColumnaProducto2.DataPropertyName = "nombreproducto"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.Format = "N0"
-        DataGridViewCellStyle9.NullValue = Nothing
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaProducto2.DefaultCellStyle = DataGridViewCellStyle9
-        Me.ColumnaProducto2.HeaderText = "PRODUCTO"
-        Me.ColumnaProducto2.Name = "ColumnaProducto2"
-        Me.ColumnaProducto2.ReadOnly = True
-        '
-        'ColumnaViaje2
-        '
-        Me.ColumnaViaje2.DataPropertyName = "Fecha2"
-        Me.ColumnaViaje2.HeaderText = "ÚLTIMO VIAJE"
-        Me.ColumnaViaje2.Name = "ColumnaViaje2"
-        Me.ColumnaViaje2.ReadOnly = True
-        '
-        'ConsultaChofer
+        'ConsultaPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -474,7 +474,7 @@ Partial Class ConsultaChofer
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "ConsultaChofer"
+        Me.Name = "ConsultaPersonal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consultar Rutas por Choferes"
         Me.ToolStrip1.ResumeLayout(False)
@@ -515,7 +515,6 @@ Partial Class ConsultaChofer
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaProducto2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaViaje2 As DataGridViewTextBoxColumn
@@ -523,6 +522,7 @@ Partial Class ConsultaChofer
     Friend WithEvents ColumnaFecha As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn

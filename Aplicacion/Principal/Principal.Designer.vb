@@ -28,7 +28,6 @@ Partial Class Principal
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuMaestros = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuChoferes = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuProductos = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menusitiocargaes = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuVehiculos = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,18 +91,11 @@ Partial Class Principal
         'MenuMaestros
         '
         Me.MenuMaestros.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MenuMaestros.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuChoferes, Me.MenuProductos, Me.Menusitiocargaes, Me.MenuVehiculos, Me.MenuPersonal})
+        Me.MenuMaestros.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuPersonal, Me.MenuProductos, Me.Menusitiocargaes, Me.MenuVehiculos})
         Me.MenuMaestros.Image = CType(resources.GetObject("MenuMaestros.Image"), System.Drawing.Image)
         Me.MenuMaestros.Name = "MenuMaestros"
         Me.MenuMaestros.Size = New System.Drawing.Size(129, 21)
         Me.MenuMaestros.Text = "Datos Maestros"
-        '
-        'MenuChoferes
-        '
-        Me.MenuChoferes.Image = CType(resources.GetObject("MenuChoferes.Image"), System.Drawing.Image)
-        Me.MenuChoferes.Name = "MenuChoferes"
-        Me.MenuChoferes.Size = New System.Drawing.Size(165, 22)
-        Me.MenuChoferes.Text = "Choferes"
         '
         'MenuProductos
         '
@@ -444,7 +436,6 @@ Partial Class Principal
     Friend WithEvents MenuConsultas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuSalir As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuSalir2 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuChoferes As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuProductos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Menusitiocargaes As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuVehiculos As System.Windows.Forms.ToolStripMenuItem

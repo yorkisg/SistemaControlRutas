@@ -262,7 +262,7 @@ Public Class SeguimientoLiviano
                 'Seleccionamos y pasamos el valor al TextBox.
                 TextBox16.Text = DataGridView2.Item("ColumnaChofer", DataGridView2.SelectedRows(0).Index).Value
 
-                ObtenerChoferSeguimientoLivianoInfraccion()
+                ObtenerpersonalSeguimientoLivianoInfraccion()
 
                 TextBox19.Text = DataGridView2.Item("ColumnaIDRegistro", DataGridView2.SelectedRows(0).Index).Value
 
@@ -342,7 +342,7 @@ Public Class SeguimientoLiviano
 
                 'Seleccionamos y pasamos el valor al TextBox.
                 TextBox17.Text = DataGridView3.Item("ColumnaChofer2", DataGridView3.SelectedRows(0).Index).Value
-                ObtenerChoferSeguimientoLivianoIncidencia()
+                ObtenerpersonalSeguimientoLivianoIncidencia()
 
             End If
 
@@ -387,7 +387,7 @@ Public Class SeguimientoLiviano
             'Se valida que no haya algun campo vacio
             If ValidarComponentesInfraccionLiviano() = True Then
 
-                Dim db As New MySqlCommand("INSERT INTO registroinfraccion (idregistroinfraccion, vehiculo, chofer, velocidad, estadovehiculo, fecha, hora) VALUES ('" & TextBox9.Text & "', '" & TextBox2.Text & "', '" & TextBox6.Text & "', '" & TextBox4.Text & "', '" & TextBox11.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", cnn)
+                Dim db As New MySqlCommand("INSERT INTO registroinfraccion (idregistroinfraccion, vehiculo, chofer, velocidad, estadovehiculo, fecha, hora) VALUES ('" & TextBox9.Text & "', '" & TextBox2.Text & "', '" & TextBox6.Text & "', '" & TextBox4.Text & "', '" & TextBox11.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", Conexion)
                 db.ExecuteNonQuery()
                 MsgBox("Infracción registrada con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -418,7 +418,7 @@ Public Class SeguimientoLiviano
             'Se valida que no haya algun campo vacio
             If ValidarComponentesIncidenciaLiviano() = True Then
 
-                Dim db As New MySqlCommand("INSERT INTO registroincidencia (idregistroincidencia, vehiculo, chofer, descripcion, clasificacion, fecha, hora) VALUES ('" & TextBox12.Text & "', '" & TextBox3.Text & "', '" & TextBox18.Text & "', '" & TextBox7.Text & "', '" & TextBox13.Text & "', '" & fecha & "', '" & TextBox8.Text & "')", cnn)
+                Dim db As New MySqlCommand("INSERT INTO registroincidencia (idregistroincidencia, vehiculo, chofer, descripcion, clasificacion, fecha, hora) VALUES ('" & TextBox12.Text & "', '" & TextBox3.Text & "', '" & TextBox18.Text & "', '" & TextBox7.Text & "', '" & TextBox13.Text & "', '" & fecha & "', '" & TextBox8.Text & "')", Conexion)
                 db.ExecuteNonQuery()
                 MsgBox("Incidencia registrada con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -449,17 +449,17 @@ Public Class SeguimientoLiviano
     Private Sub BotonBuscar_Click(sender As Object, e As EventArgs) Handles BotonBuscar1.Click
         'Llama al formulario ListadoPersona.
 
-        ListadoChofer.ComboEstadoChofer.Enabled = False
-        ListadoChofer.ShowDialog()
+        ListadoPersonal.ComboEstadoPersona.Enabled = False
+        ListadoPersonal.ShowDialog()
 
     End Sub
 
     Private Sub BotonBuscar2_Click(sender As Object, e As EventArgs) Handles BotonBuscar2.Click
         'Llama al formulario ListadoPersona.
 
-        ListadoChofer.ComboEstadoChofer.Enabled = False
-        ListadoChofer.ComboTipoChofer.SelectedItem = "LIVIANO"
-        ListadoChofer.ShowDialog()
+        ListadoPersonal.ComboEstadoPersona.Enabled = False
+        ListadoPersonal.ComboTipoPersona.SelectedItem = "LIVIANO"
+        ListadoPersonal.ShowDialog()
 
 
     End Sub
@@ -508,7 +508,7 @@ Public Class SeguimientoLiviano
 
                 MaestroInfraccion.RadioButton2.Checked = True
 
-                ObtenerChoferInfraccionCarga()
+                ObtenerPersonalInfraccionCarga()
                 MaestroInfraccion.ShowDialog()
 
                 'Posicionamos el currencell en el vehiculo que clickeamos anteriormente
@@ -537,7 +537,7 @@ Public Class SeguimientoLiviano
                 MaestroIncidencia.BotonBuscar.Enabled = False
                 MaestroIncidencia.BotonBuscar2.Enabled = False
 
-                ObtenerChoferIncidenciaCarga()
+                ObtenerPersonaIncidenciaCarga()
                 MaestroIncidencia.ShowDialog()
 
                 'Posicionamos el currencell en el vehiculo que clickeamos anteriormente
@@ -645,10 +645,10 @@ Public Class SeguimientoLiviano
     End Sub
 
     Private Sub BotonChofer_Click(sender As Object, e As EventArgs) Handles BotonChofer.Click
-        'Llamada al formulario MaestroChofer
+        'Llamada al formulario MaestroPersonal
 
-        MaestroChofer.BotonBuscar.Enabled = False
-        MaestroChofer.ShowDialog()
+        MaestroPersonal.BotonBuscar.Enabled = False
+        MaestroPersonal.ShowDialog()
 
     End Sub
 

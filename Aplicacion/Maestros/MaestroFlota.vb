@@ -33,7 +33,7 @@ Public Class MaestroFlota
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("INSERT INTO subflota (idsubflota, nombresubflota, flota, tiposubflota) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & ComboTipo.Text & "')", cnn)
+            Dim db As New MySqlCommand("INSERT INTO subflota (idsubflota, nombresubflota, flota, tiposubflota) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & ComboTipo.Text & "')", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Flota registrada con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -52,7 +52,7 @@ Public Class MaestroFlota
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("UPDATE subflota SET nombresubflota = '" & TextBox2.Text & "', tiposubflota = '" & ComboTipo.Text & "' WHERE idsubflota = '" & TextBox1.Text & "' ", cnn)
+            Dim db As New MySqlCommand("UPDATE subflota SET nombresubflota = '" & TextBox2.Text & "', tiposubflota = '" & ComboTipo.Text & "' WHERE idsubflota = '" & TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Flota modificada con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -97,7 +97,7 @@ Public Class MaestroFlota
         'Usado para generar automaticamente el ID.
 
         'Se obtiene el ultimo ID del chofer.
-        Dim Command As New MySqlCommand("SELECT MAX(idsubflota) FROM subflota", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idsubflota) FROM subflota", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.

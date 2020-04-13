@@ -1,7 +1,7 @@
 ﻿
-Public Class MaestroPersona
+Public Class MaestroPersonal
 
-    Private Sub MaestroPersona_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub MaestroPersonal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Si la llamada no proviene del formulario GuiaTelefonica, entonces incrementamos la serie del chofer
@@ -9,7 +9,9 @@ Public Class MaestroPersona
 
             Serie()
 
-            ComboDescripcion.SelectedItem = "TRANSPORTE"
+            'Inicializamos los combobox
+            ComboEstadoPersona.SelectedItem = "ACTIVO"
+            ComboTipoPersona.SelectedItem = "CARGA"
 
         End If
 
@@ -19,7 +21,7 @@ Public Class MaestroPersona
 
     End Sub
 
-    Private Sub MaestroPersona_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub MaestroPersonal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         LimpiarComponentes()
@@ -34,7 +36,7 @@ Public Class MaestroPersona
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("INSERT INTO personal (idpersona, nombrepersona, telefono1, telefono2, descripcion) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "', '" & ComboDescripcion.Text & "')", cnn)
+            Dim db As New MySqlCommand("INSERT INTO personal (idpersonal, nombrepersonal, tipopersonal, telefono1, telefono2, estadopersonal) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & ComboTipoPersona.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "', '" & ComboEstadoPersona.Text & "')", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Personal registrado con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -63,7 +65,7 @@ Public Class MaestroPersona
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("UPDATE personal SET nombrepersona = '" & TextBox2.Text & "', telefono1 = '" & TextBox3.Text & "', telefono2 = '" & TextBox4.Text & "', descripcion = '" & ComboDescripcion.Text & "' WHERE idpersona = '" & TextBox1.Text & "' ", cnn)
+            Dim db As New MySqlCommand("UPDATE personal SET nombrepersonal = '" & TextBox2.Text & "', telefono1 = '" & TextBox3.Text & "', telefono2 = '" & TextBox4.Text & "', estadochofer = '" & ComboEstadoPersona.Text & "', tipopersonal = '" & ComboTipoPersona.Text & "' WHERE idpersonal = '" & TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Personal modificado con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -71,6 +73,8 @@ Public Class MaestroPersona
             BotonModificar.Enabled = False
             'Se activa el uso del boton guardar.
             BotonGuardar.Enabled = True
+            'Se desactiva el uso del boton buscar.
+            BotonBuscar.Enabled = True
             'Se limpian todos los componentes del formulario para un nuevo uso.
             LimpiarComponentes()
             'Se habilita el metodo para incrementar el siguiente ID.
@@ -82,7 +86,16 @@ Public Class MaestroPersona
             'Si la llamada proviene del formulario GuiaTelefonica, entonces se cierra al modificar el registro seleccionado
             If GuiaTelefonica.Visible = True Then
 
-                CargarGridGuiaPersona()
+                If GuiaTelefonica.Panel8.SelectedIndex = 0 Then
+
+                    CargarGridGuiaPersonalCarga()
+
+                ElseIf GuiaTelefonica.Panel8.SelectedIndex = 1 Then
+
+                    CargarGridGuiaPersonalLiviano()
+
+                End If
+
                 Dispose()
 
             End If
@@ -94,7 +107,7 @@ Public Class MaestroPersona
     Private Sub BotonBuscar_Click(sender As Object, e As EventArgs) Handles BotonBuscar.Click
         'Boton buscar
 
-        ListadoPersona.ShowDialog()
+        ListadoPersonal.ShowDialog()
 
     End Sub
 
@@ -140,7 +153,7 @@ Public Class MaestroPersona
         TextBox2.Text = ""
         TextBox3.Text = ""
         TextBox4.Text = ""
-        ComboDescripcion.Text = ""
+        ComboEstadoPersona.Text = ""
 
     End Sub
 
@@ -149,7 +162,7 @@ Public Class MaestroPersona
         'Usado para generar automaticamente el ID.
 
         'Se obtiene el ultimo ID.
-        Dim Command As New MySqlCommand("SELECT MAX(idpersona) FROM personal", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idpersonal) FROM personal", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.
@@ -187,14 +200,36 @@ Public Class MaestroPersona
         End If
 
         'Valida que el combobox no este nulo o vacio
-        If String.IsNullOrEmpty(ComboDescripcion.Text) Then
-            ErrorProvider1.SetError(ComboDescripcion, "No puede dejar campos en blanco.")
+        If String.IsNullOrEmpty(ComboEstadoPersona.Text) Then
+            ErrorProvider1.SetError(ComboEstadoPersona, "No puede dejar campos en blanco.")
             Validar = False
         End If
 
         Return Validar
 
     End Function
+
+    Private Sub TextBox3_Leave(sender As Object, e As EventArgs) Handles TextBox3.Leave
+        'Metodo para colocar el texto al borrar el numero
+
+        If TextBox3.Text = "" Then
+
+            TextBox3.Text = "N/A"
+
+        End If
+
+    End Sub
+
+    Private Sub TextBox4_Leave(sender As Object, e As EventArgs) Handles TextBox4.Leave
+        'Metodo para colocar el texto al borrar el numero
+
+        If TextBox4.Text = "" Then
+
+            TextBox4.Text = "N/A"
+
+        End If
+
+    End Sub
 
 
 End Class

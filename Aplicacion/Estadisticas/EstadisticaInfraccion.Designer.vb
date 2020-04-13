@@ -26,23 +26,27 @@ Partial Class EstadisticaInfraccion
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim Title1 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EstadisticaInfraccion))
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaInfracciones2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaInfracciones3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -52,10 +56,6 @@ Partial Class EstadisticaInfraccion
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaInfracciones = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaInfracciones2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaInfracciones3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox4.SuspendLayout()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -137,6 +137,28 @@ Partial Class EstadisticaInfraccion
         Me.DataGridView.Size = New System.Drawing.Size(496, 286)
         Me.DataGridView.TabIndex = 80
         '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.DataPropertyName = "Vehiculo"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaVehiculo.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnaVehiculo.FillWeight = 139.6582!
+        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
+        Me.ColumnaVehiculo.MinimumWidth = 120
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        '
+        'ColumnaInfracciones2
+        '
+        Me.ColumnaInfracciones2.DataPropertyName = "Conteo"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaInfracciones2.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ColumnaInfracciones2.FillWeight = 31.74049!
+        Me.ColumnaInfracciones2.HeaderText = "INFRACCIONES"
+        Me.ColumnaInfracciones2.MinimumWidth = 200
+        Me.ColumnaInfracciones2.Name = "ColumnaInfracciones2"
+        Me.ColumnaInfracciones2.ReadOnly = True
+        '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.DataGridView2)
@@ -179,6 +201,28 @@ Partial Class EstadisticaInfraccion
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(496, 286)
         Me.DataGridView2.TabIndex = 51
+        '
+        'ColumnaFlota
+        '
+        Me.ColumnaFlota.DataPropertyName = "Flota"
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.Format = "N2"
+        DataGridViewCellStyle5.NullValue = Nothing
+        Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle5
+        Me.ColumnaFlota.HeaderText = "FLOTA"
+        Me.ColumnaFlota.Name = "ColumnaFlota"
+        Me.ColumnaFlota.ReadOnly = True
+        '
+        'ColumnaInfracciones3
+        '
+        Me.ColumnaInfracciones3.DataPropertyName = "Conteo"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.Format = "N0"
+        DataGridViewCellStyle6.NullValue = Nothing
+        Me.ColumnaInfracciones3.DefaultCellStyle = DataGridViewCellStyle6
+        Me.ColumnaInfracciones3.HeaderText = "INFRACCIONES"
+        Me.ColumnaInfracciones3.Name = "ColumnaInfracciones3"
+        Me.ColumnaInfracciones3.ReadOnly = True
         '
         'GroupBox1
         '
@@ -261,7 +305,7 @@ Partial Class EstadisticaInfraccion
         '
         'ColumnaChofer
         '
-        Me.ColumnaChofer.DataPropertyName = "Chofer"
+        Me.ColumnaChofer.DataPropertyName = "Personal"
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle9.Format = "N2"
         DataGridViewCellStyle9.NullValue = Nothing
@@ -280,50 +324,6 @@ Partial Class EstadisticaInfraccion
         Me.ColumnaInfracciones.HeaderText = "INFRACCIONES"
         Me.ColumnaInfracciones.Name = "ColumnaInfracciones"
         Me.ColumnaInfracciones.ReadOnly = True
-        '
-        'ColumnaVehiculo
-        '
-        Me.ColumnaVehiculo.DataPropertyName = "Vehiculo"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaVehiculo.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnaVehiculo.FillWeight = 139.6582!
-        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
-        Me.ColumnaVehiculo.MinimumWidth = 120
-        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
-        Me.ColumnaVehiculo.ReadOnly = True
-        '
-        'ColumnaInfracciones2
-        '
-        Me.ColumnaInfracciones2.DataPropertyName = "Conteo"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaInfracciones2.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnaInfracciones2.FillWeight = 31.74049!
-        Me.ColumnaInfracciones2.HeaderText = "INFRACCIONES"
-        Me.ColumnaInfracciones2.MinimumWidth = 200
-        Me.ColumnaInfracciones2.Name = "ColumnaInfracciones2"
-        Me.ColumnaInfracciones2.ReadOnly = True
-        '
-        'ColumnaFlota
-        '
-        Me.ColumnaFlota.DataPropertyName = "Flota"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.Format = "N2"
-        DataGridViewCellStyle5.NullValue = Nothing
-        Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle5
-        Me.ColumnaFlota.HeaderText = "FLOTA"
-        Me.ColumnaFlota.Name = "ColumnaFlota"
-        Me.ColumnaFlota.ReadOnly = True
-        '
-        'ColumnaInfracciones3
-        '
-        Me.ColumnaInfracciones3.DataPropertyName = "Conteo"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.Format = "N0"
-        DataGridViewCellStyle6.NullValue = Nothing
-        Me.ColumnaInfracciones3.DefaultCellStyle = DataGridViewCellStyle6
-        Me.ColumnaInfracciones3.HeaderText = "INFRACCIONES"
-        Me.ColumnaInfracciones3.Name = "ColumnaInfracciones3"
-        Me.ColumnaInfracciones3.ReadOnly = True
         '
         'EstadisticaInfraccion
         '
@@ -372,7 +372,7 @@ Partial Class EstadisticaInfraccion
     Friend WithEvents ColumnaInfracciones2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaFlota As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaInfracciones3 As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaInfracciones As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaInfracciones As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
 End Class

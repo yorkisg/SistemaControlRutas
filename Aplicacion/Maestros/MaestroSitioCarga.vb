@@ -34,10 +34,10 @@ Public Class MaestroSitioCarga
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("INSERT INTO sitiocarga (idsitiocarga, nombresitiocarga) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "')", cnn)
+            Dim db As New MySqlCommand("INSERT INTO sitiocarga (idsitiocarga, nombresitiocarga) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "')", Conexion)
             db.ExecuteNonQuery()
 
-            Dim db2 As New MySqlCommand("INSERT INTO destino (iddestino, nombredestino) VALUES ('" & TextBox3.Text & "', '" & TextBox2.Text & "')", cnn)
+            Dim db2 As New MySqlCommand("INSERT INTO destino (iddestino, nombredestino) VALUES ('" & TextBox3.Text & "', '" & TextBox2.Text & "')", Conexion)
             db2.ExecuteNonQuery()
 
             MsgBox("Ubicación registrada con Exito.", MsgBoxStyle.Information, "Exito.")
@@ -64,10 +64,10 @@ Public Class MaestroSitioCarga
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("UPDATE sitiocarga SET nombresitiocarga = '" & TextBox2.Text & "' WHERE idsitiocarga = '" & TextBox1.Text & "' ", cnn)
+            Dim db As New MySqlCommand("UPDATE sitiocarga SET nombresitiocarga = '" & TextBox2.Text & "' WHERE idsitiocarga = '" & TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
 
-            Dim db2 As New MySqlCommand("UPDATE destino SET nombredestino = '" & TextBox2.Text & "' WHERE iddestino = '" & TextBox1.Text & "' ", cnn)
+            Dim db2 As New MySqlCommand("UPDATE destino SET nombredestino = '" & TextBox2.Text & "' WHERE iddestino = '" & TextBox1.Text & "' ", Conexion)
             db2.ExecuteNonQuery()
 
             MsgBox("Ubicación modificada con Exito.", MsgBoxStyle.Information, "Exito.")
@@ -114,7 +114,7 @@ Public Class MaestroSitioCarga
         'Usado para generar automaticamente el ID de un producto.
 
         'Se obtiene el ultimo ID del chofer.
-        Dim Command As New MySqlCommand("SELECT MAX(idsitiocarga) FROM sitiocarga", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idsitiocarga) FROM sitiocarga", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.

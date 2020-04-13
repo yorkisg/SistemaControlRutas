@@ -53,8 +53,6 @@ Public Class SeguimientoCarga
 
         Else
 
-            'Cierre formal de la ventana sin liberar recursos
-            'Close()
             'Cierre formal del formulario liberando recursos
             Dispose()
 
@@ -671,7 +669,7 @@ Public Class SeguimientoCarga
                 ObtenerDestinoRutaCarga()
 
                 TextBox8.Text = DataGridView2.Item("ColumnaChofer", DataGridView2.SelectedRows(0).Index).Value
-                ObtenerChoferRutaCarga()
+                ObtenerPersonalRutaCarga()
 
                 ActualizarEstadoRuta()
 
@@ -702,8 +700,8 @@ Public Class SeguimientoCarga
     Private Sub BotonBuscar3_Click(sender As Object, e As EventArgs) Handles BotonBuscar3.Click
         'Llama al formulario ListadoChofer.
 
-        ListadoChofer.ComboEstadoChofer.Enabled = False
-        ListadoChofer.ShowDialog()
+        ListadoPersonal.ComboEstadoPersona.Enabled = False
+        ListadoPersonal.ShowDialog()
 
 
     End Sub
@@ -725,7 +723,7 @@ Public Class SeguimientoCarga
             If ValidarComponentesRutaCarga() = True Then
 
                 'Registro formal de la ruta con todos sus atributos
-                Dim db As New MySqlCommand("INSERT INTO ruta (idruta, vehiculo, chofer, sitiocarga, destino, producto, fecha, estadoruta, hora, estado) VALUES ('" & TextBox2.Text & "', '" & TextBox1.Text & "', '" & TextBox11.Text & "', '" & TextBox10.Text & "', '" & TextBox13.Text & "', '" & TextBox9.Text & "', '" & fecha & "', '" & TextBox12.Text & "', '" & TextBox15.Text & "', '" & TextBox20.Text & "')", cnn)
+                Dim db As New MySqlCommand("INSERT INTO ruta (idruta, vehiculo, personal, sitiocarga, destino, producto, fecha, estadoruta, hora, estado) VALUES ('" & TextBox2.Text & "', '" & TextBox1.Text & "', '" & TextBox11.Text & "', '" & TextBox10.Text & "', '" & TextBox13.Text & "', '" & TextBox9.Text & "', '" & fecha & "', '" & TextBox12.Text & "', '" & TextBox15.Text & "', '" & TextBox20.Text & "')", Conexion)
                 db.ExecuteNonQuery()
 
                 ActualizarRutaCarga()
@@ -765,7 +763,7 @@ Public Class SeguimientoCarga
             If ValidarComponentesRutaCarga() = True Then
 
                 'Registro formal de la ruta con todos sus atributos
-                Dim db As New MySqlCommand("INSERT INTO ruta (idruta, vehiculo, chofer, sitiocarga, destino, producto, fecha, estadoruta, hora, estado) VALUES ('" & TextBox2.Text & "', '" & TextBox1.Text & "', '" & TextBox11.Text & "', '" & TextBox10.Text & "', '" & TextBox13.Text & "', '" & TextBox9.Text & "', '" & fecha & "', '" & TextBox12.Text & "', '" & TextBox15.Text & "', '" & TextBox20.Text & "')", cnn)
+                Dim db As New MySqlCommand("INSERT INTO ruta (idruta, vehiculo, personal, sitiocarga, destino, producto, fecha, estadoruta, hora, estado) VALUES ('" & TextBox2.Text & "', '" & TextBox1.Text & "', '" & TextBox11.Text & "', '" & TextBox10.Text & "', '" & TextBox13.Text & "', '" & TextBox9.Text & "', '" & fecha & "', '" & TextBox12.Text & "', '" & TextBox15.Text & "', '" & TextBox20.Text & "')", Conexion)
                 db.ExecuteNonQuery()
 
                 ActualizarRutaCarga()
@@ -844,10 +842,10 @@ Public Class SeguimientoCarga
     End Sub
 
     Private Sub BotonAgregar3_Click(sender As Object, e As EventArgs) Handles BotonAgregar3.Click
-        'Llamada al formulario "MaestroChofer" para poder registrar o modificar.
+        'Llamada al formulario "MaestroPersonal" para poder registrar o modificar.
 
-        MaestroChofer.BotonBuscar.Enabled = False
-        MaestroChofer.ShowDialog()
+        MaestroPersonal.BotonBuscar.Enabled = False
+        MaestroPersonal.ShowDialog()
 
     End Sub
 
@@ -895,7 +893,7 @@ Public Class SeguimientoCarga
             Dim Adaptador2 As New MySqlDataAdapter
             Dim Tabla2 As New DataTable
 
-            Adaptador2 = New MySqlDataAdapter("SELECT idestado FROM estadoruta WHERE nombreestado = '" & ComboBox1.Text & "' ", cnn)
+            Adaptador2 = New MySqlDataAdapter("SELECT idestado FROM estadoruta WHERE nombreestado = '" & ComboBox1.Text & "' ", Conexion)
             Adaptador2.Fill(Tabla2)
 
             For Each row As DataRow In Tabla2.Rows
@@ -1063,7 +1061,7 @@ Public Class SeguimientoCarga
                     MaestroInfraccion.BotonBuscar.Enabled = False
                     MaestroInfraccion.BotonBuscar2.Enabled = False
 
-                    ObtenerChoferInfraccionCarga()
+                    ObtenerPersonalInfraccionCarga()
                     MaestroInfraccion.ShowDialog()
 
                     'Posicionamos el currencell en el vehiculo que clickeamos anteriormente
@@ -1098,7 +1096,7 @@ Public Class SeguimientoCarga
                 MaestroIncidencia.BotonBuscar.Enabled = False
                 MaestroIncidencia.BotonBuscar2.Enabled = False
 
-                ObtenerChoferIncidenciaCarga()
+                ObtenerPersonaIncidenciaCarga()
                 MaestroIncidencia.ShowDialog()
 
                 'Posicionamos el currencell en el vehiculo que clickeamos anteriormente

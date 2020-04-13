@@ -5,17 +5,17 @@ Module ModuloListado
     '''''''''''''''''''''''CARGA DE LISTADOS ''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-    Public Sub CargarGridListadoChofer()
+    Public Sub CargarGridListadoPersonal()
         'Metodo para cargar el datagridview.
 
         'Conexion a la BD.
-        Dim sql As String = "SELECT idchofer, nombrechofer, tipochofer, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
-            & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadochofer FROM chofer " _
-            & " WHERE estadochofer = '" & ListadoChofer.TextBox1.Text & "' " _
-            & " AND tipochofer = '" & ListadoChofer.TextBox2.Text & "' " _
-            & " ORDER BY nombrechofer ASC"
+        Dim sql As String = "SELECT idpersonal, nombrepersonal, tipopersonal, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
+            & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadopersonal FROM personal " _
+            & " WHERE estadopersonal = '" & ListadoPersonal.TextBox1.Text & "' " _
+            & " AND tipopersonal = '" & ListadoPersonal.TextBox2.Text & "' " _
+            & " ORDER BY nombrepersonal ASC"
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -23,18 +23,18 @@ Module ModuloListado
         DataSet = New DataSet()
 
         'Llenado del datagridview.
-        Adaptador.Fill(DataSet, "choferes")
-        Tabla = DataSet.Tables("choferes")
-        ListadoChofer.DataGridView.DataSource = DataSet.Tables("choferes")
+        Adaptador.Fill(DataSet, "personal")
+        Tabla = DataSet.Tables("personal")
+        ListadoPersonal.DataGridView.DataSource = DataSet.Tables("personal")
 
         'Parametros para editar apariencia del datagridview.
-        With ListadoChofer.DataGridView
+        With ListadoPersonal.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
         'Mostramos la cantidad de registros encontrados
-        ListadoChofer.Contador.Text = ListadoChofer.DataGridView.RowCount
+        ListadoPersonal.Contador.Text = ListadoPersonal.DataGridView.RowCount
 
     End Sub
 
@@ -45,7 +45,7 @@ Module ModuloListado
         Dim sql As String = "SELECT iddestino, nombredestino FROM destino" _
                             & " ORDER BY nombredestino ASC"
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -73,7 +73,7 @@ Module ModuloListado
 
         'Conexion a la BD.
         Dim sql As String = "SELECT idestado, nombreestado FROM estadoruta ORDER BY nombreestado ASC"
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -104,7 +104,7 @@ Module ModuloListado
                             & " WHERE subflota.flota = flota.idflota " _
                             & " ORDER BY nombresubflota ASC"
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -127,37 +127,6 @@ Module ModuloListado
 
     End Sub
 
-    Public Sub CargarGridListadoPersona()
-        'Metodo para cargar el datagridview.
-
-        'Conexion a la BD.
-        Dim sql As String = "SELECT idpersona, nombrepersona, telefono1, telefono2, descripcion " _
-                            & " FROM personal " _
-                            & " ORDER BY nombrepersona ASC"
-
-        Dim connection As New MySqlConnection(connectionString)
-
-        'Instancia y uso de variables.
-        Command = New MySqlCommand(sql, connection)
-        Adaptador = New MySqlDataAdapter(Command)
-        DataSet = New DataSet()
-
-        'Llenado del datagridview.
-        Adaptador.Fill(DataSet, "personal")
-        Tabla = DataSet.Tables("personal")
-        ListadoPersona.DataGridView.DataSource = DataSet.Tables("personal")
-
-        'Parametros para editar apariencia del datagridview.
-        With ListadoPersona.DataGridView
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-        'Mostramos la cantidad de registros encontrados
-        ListadoPersona.Contador.Text = ListadoPersona.DataGridView.RowCount
-
-    End Sub
-
     Public Sub CargarGridListadoProducto()
         'Metodo para cargar el datagridview.
 
@@ -165,7 +134,7 @@ Module ModuloListado
         Dim sql As String = "SELECT idproducto, nombreproducto FROM producto" _
                             & " ORDER BY nombreproducto ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -188,14 +157,14 @@ Module ModuloListado
 
     End Sub
 
-    Public Sub CargarGridListadositiocarga()
+    Public Sub CargarGridListadoSitioCarga()
         'Metodo para cargar el datagridview.
 
         'Conexion a la BD.
         Dim sql As String = "SELECT idsitiocarga, nombresitiocarga FROM sitiocarga" _
                             & " ORDER BY nombresitiocarga ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -228,7 +197,7 @@ Module ModuloListado
                             & " AND vehiculo.subflota = subflota.idsubflota" _
                             & " ORDER BY idvehiculo ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)

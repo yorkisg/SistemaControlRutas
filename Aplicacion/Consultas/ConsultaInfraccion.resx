@@ -135,12 +135,12 @@
   <data name="BotonLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEYSURBVDhPlZMLjoJAEERZz7Em3kHjPTeEcCG4CoRf+P9x
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEYSURBVDhPlZMLjoJAEERZz7Em3kHjPTeEcCA4C4Rf+P9x
         e7tGepZVNo4mlZlI17O6pS3r/vlknVnXFzrx88Pq+XOcu64rPM+7LctCexqGgWzb/mLXLuQKc9M01Lat
         VlmWlOc5RVGkoGEYkuM4T5APxEZB3/c0jqM6obquqSgKiuNYATgl4Udc1xWIakMDYBYBAENVVZQkyVNb
         66zg/QXM86wLcUffaAmtpGmqkgRBoGp2AY/D20KQBPPIsswcAKBA0A5mApBxAkk0TZOaDSDQ2wCkkOFi
         LkYAmERIAMH8NkDM29MogQxwm0TuuwDf97//24PH77n2tr4HeqEu/Pe0ePAKghp+net1ezXgyLeLwTrL
-        umP14bF+AEr9h/HjJqj9AAAAAElFTkSuQmCC
+        umP14bF+AC8Qh99hwA5zAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="BotonExportar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

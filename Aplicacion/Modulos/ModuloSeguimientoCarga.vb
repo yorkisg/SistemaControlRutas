@@ -41,7 +41,7 @@ Module ModuloSeguimientoCarga
 
         Adaptador = New MySqlDataAdapter("SELECT nombresubflota FROM subflota " _
                                    & " WHERE tiposubflota = 'CARGA' " _
-                                   & " ORDER BY nombresubflota ASC", cnn)
+                                   & " ORDER BY nombresubflota ASC", Conexion)
 
         Adaptador.Fill(Datatable)
 
@@ -71,11 +71,11 @@ Module ModuloSeguimientoCarga
         'Metodo donde generamos el arbol de opciones de acuerdo a las flotas, subflotas y grupos registrados en BD
 
         'Adaptadores
-        Dim Padres As New MySqlDataAdapter("SELECT idflota, nombreflota FROM flota", cnn)
+        Dim Padres As New MySqlDataAdapter("SELECT idflota, nombreflota FROM flota", Conexion)
 
         Dim Hijos As New MySqlDataAdapter(" SELECT idsubflota, nombresubflota, flota " _
                                         & " FROM subflota WHERE tiposubflota = 'CARGA' " _
-                                        & " ORDER BY nombresubflota ASC", cnn)
+                                        & " ORDER BY nombresubflota ASC", Conexion)
         Dim Dataset As New DataSet
 
         'Llenar el DataSet
@@ -137,10 +137,10 @@ Module ModuloSeguimientoCarga
         'Adaptadores
         Dim Padres As New MySqlDataAdapter("SELECT idsubflota, nombresubflota, flota " _
                                         & " FROM subflota WHERE tiposubflota = 'CARGA' " _
-                                        & " ORDER BY nombresubflota ASC", cnn)
+                                        & " ORDER BY nombresubflota ASC", Conexion)
 
         Dim Hijos As New MySqlDataAdapter(" SELECT idgrupo, nombregrupo, subflota " _
-                                        & " FROM grupo ORDER BY idgrupo ASC", cnn)
+                                        & " FROM grupo ORDER BY idgrupo ASC", Conexion)
         Dim Dataset As New DataSet
 
         'Llenar el DataSet
@@ -211,7 +211,7 @@ Module ModuloSeguimientoCarga
                        & " AND condicionvehiculo <> 'ROBADO / EXTRAVIADO' " _
                        & " ORDER BY idvehiculo ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -222,7 +222,7 @@ Module ModuloSeguimientoCarga
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "flota_vehiculo")
         Tabla = DataSet.Tables("flota_vehiculo")
-        SeguimientoCarga.DataGridView1.DataSource = DataSet.Tables("flota_vehiculo")
+        SeguimientoCarga.DataGridView1.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With SeguimientoCarga.DataGridView1
@@ -239,7 +239,7 @@ Module ModuloSeguimientoCarga
     End Sub
 
     Public Sub CargarGridRutaCarga2()
-        'Metodo que genera la carga de datos en el DataGridview1 
+        'EN PRUEBA
 
         Dim sql As String = "SELECT idvehiculo, nombretipo, estadoactual, condicionvehiculo " _
                        & " FROM vehiculo, subflota, grupo, tipovehiculo " _
@@ -250,7 +250,7 @@ Module ModuloSeguimientoCarga
                        & " AND condicionvehiculo <> 'ROBADO / EXTRAVIADO' " _
                        & " ORDER BY idvehiculo ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -280,10 +280,10 @@ Module ModuloSeguimientoCarga
     Public Sub CargarGridHistorialCarga()
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausula LIKE y LIMIT
 
-        Dim sql As String = "SELECT idruta, idvehiculo, nombrechofer, nombreproducto, nombresitiocarga, nombredestino, nombreestado, fecha, hora, estado " _
-                       & " FROM ruta, vehiculo, chofer, sitiocarga, destino, producto, estadoruta " _
+        Dim sql As String = "SELECT idruta, idvehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado, fecha, hora, estado " _
+                       & " FROM ruta, vehiculo, personal, sitiocarga, destino, producto, estadoruta " _
                        & " WHERE ruta.vehiculo = vehiculo.idvehiculo " _
-                       & " AND ruta.chofer = chofer.idchofer " _
+                       & " AND ruta.personal = personal.idpersonal " _
                        & " AND ruta.sitiocarga = sitiocarga.idsitiocarga " _
                        & " AND ruta.destino = destino.iddestino " _
                        & " AND ruta.producto = producto.idproducto " _
@@ -292,7 +292,7 @@ Module ModuloSeguimientoCarga
                        & " ORDER BY idruta DESC" _
                        & " LIMIT 30 "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -302,7 +302,7 @@ Module ModuloSeguimientoCarga
         'Llenado del datagridview
         Adaptador.Fill(DataSet, "ruta_vehiculos")
         Tabla = DataSet.Tables("ruta_vehiculos")
-        SeguimientoCarga.DataGridView2.DataSource = DataSet.Tables("ruta_vehiculos")
+        SeguimientoCarga.DataGridView2.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With SeguimientoCarga.DataGridView2
@@ -324,13 +324,13 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerRutaCarga()
         'Obtenemos el ID mas alto de la ruta por el vehiculo seleccionado y este mismo es actualizado como "completado"
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT MAX(idruta) AS 'ID' FROM ruta WHERE vehiculo = '" & SeguimientoCarga.TextBox1.Text & "' ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT MAX(idruta) AS 'ID' FROM ruta WHERE vehiculo = '" & SeguimientoCarga.TextBox1.Text & "' ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
+        For Each row As DataRow In Tabla.Rows
             SeguimientoCarga.TextBox21.Text = row("ID").ToString
         Next
 
@@ -339,13 +339,13 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerProductoRutaCarga()
         'Este metodo permite obtener el ID del producto
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT idproducto FROM producto WHERE nombreproducto = '" & SeguimientoCarga.TextBox6.Text & "' ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT idproducto FROM producto WHERE nombreproducto = '" & SeguimientoCarga.TextBox6.Text & "' ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
+        For Each row As DataRow In Tabla.Rows
             SeguimientoCarga.TextBox9.Text = row("idproducto").ToString
         Next
 
@@ -354,13 +354,13 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerSitioCargaRutaCarga()
         'Este metodo permite obtener el ID de la sitiocarga
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT idsitiocarga FROM sitiocarga WHERE nombresitiocarga = '" & SeguimientoCarga.TextBox3.Text & "' ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT idsitiocarga FROM sitiocarga WHERE nombresitiocarga = '" & SeguimientoCarga.TextBox3.Text & "' ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
+        For Each row As DataRow In Tabla.Rows
             SeguimientoCarga.TextBox10.Text = row("idsitiocarga").ToString
         Next
 
@@ -369,59 +369,59 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerDestinoRutaCarga()
         'Este metodo permite obtener el ID de la sitiocarga
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT iddestino FROM destino WHERE nombredestino = '" & SeguimientoCarga.TextBox7.Text & "' ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT iddestino FROM destino WHERE nombredestino = '" & SeguimientoCarga.TextBox7.Text & "' ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
+        For Each row As DataRow In Tabla.Rows
             SeguimientoCarga.TextBox13.Text = row("iddestino").ToString
         Next
 
     End Sub
 
-    Public Sub ObtenerChoferRutaCarga()
+    Public Sub ObtenerPersonalRutaCarga()
         'Este metodo permite obtener el ID del chofer
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT idchofer FROM chofer WHERE nombrechofer = '" & SeguimientoCarga.TextBox8.Text & "' ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & SeguimientoCarga.TextBox8.Text & "' ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
-            SeguimientoCarga.TextBox11.Text = row("idchofer").ToString
+        For Each row As DataRow In Tabla.Rows
+            SeguimientoCarga.TextBox11.Text = row("idpersonal").ToString
         Next
 
     End Sub
 
-    Public Sub ObtenerChoferInfraccionCarga()
+    Public Sub ObtenerPersonalInfraccionCarga()
         'Este metodo permite obtener el ID del chofer
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT idchofer FROM chofer WHERE nombrechofer = '" & MaestroInfraccion.TextBox4.Text & "' ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & MaestroInfraccion.TextBox4.Text & "' ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
-            MaestroInfraccion.TextBox6.Text = row("idchofer").ToString
+        For Each row As DataRow In Tabla.Rows
+            MaestroInfraccion.TextBox6.Text = row("idpersonal").ToString
         Next
 
     End Sub
 
-    Public Sub ObtenerChoferIncidenciaCarga()
+    Public Sub ObtenerPersonaIncidenciaCarga()
         'Este metodo permite obtener el ID del chofer
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT idchofer FROM chofer WHERE nombrechofer = '" & MaestroIncidencia.TextBox4.Text & "' ", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & MaestroIncidencia.TextBox4.Text & "' ", Conexion)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
-            MaestroIncidencia.TextBox6.Text = row("idchofer").ToString
+        For Each row As DataRow In Tabla.Rows
+            MaestroIncidencia.TextBox6.Text = row("idpersonal").ToString
         Next
 
     End Sub
@@ -430,18 +430,18 @@ Module ModuloSeguimientoCarga
         'Este metodo permite obtener los estados de los vehiculos para luego ser modificados
         'Se despliega el formulario MaestroVehiculo
 
-        Dim Adaptador2 As New MySqlDataAdapter
-        Dim Tabla2 As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
 
-        Adaptador2 = New MySqlDataAdapter("SELECT nombresubflota, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
+        Adaptador = New MySqlDataAdapter("SELECT nombresubflota, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
                                           & " FROM vehiculo, subflota, tipovehiculo " _
                                           & " WHERE vehiculo.subflota = subflota.idsubflota " _
                                           & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
-                                          & " AND idvehiculo = '" & SeguimientoCarga.TextBox1.Text & "' ", cnn)
+                                          & " AND idvehiculo = '" & SeguimientoCarga.TextBox1.Text & "' ", Conexion)
 
-        Adaptador2.Fill(Tabla2)
+        Adaptador.Fill(Tabla)
 
-        For Each row As DataRow In Tabla2.Rows
+        For Each row As DataRow In Tabla.Rows
 
             MaestroVehiculo.ComboFlota.Text = row("nombresubflota").ToString
             MaestroVehiculo.ComboTipo.Text = row("nombretipo").ToString
@@ -468,7 +468,7 @@ Module ModuloSeguimientoCarga
         If Mensaje = DialogResult.Yes Then
 
             'Se elimina el registro
-            Dim db As New MySqlCommand("DELETE FROM ruta WHERE idruta = '" & SeguimientoCarga.TextBox24.Text & "' ", cnn)
+            Dim db As New MySqlCommand("DELETE FROM ruta WHERE idruta = '" & SeguimientoCarga.TextBox24.Text & "' ", Conexion)
             db.ExecuteNonQuery()
 
             'Se carga el historial actualizado
@@ -489,12 +489,12 @@ Module ModuloSeguimientoCarga
     Public Sub ActualizarRutaCarga()
         'Actualizamos el estado de la ruta anterior como ruta "COMPLETADA"
 
-        Dim db3 As New MySqlCommand("UPDATE ruta SET estado = 'COMPLETADA' WHERE idruta = '" & SeguimientoCarga.TextBox21.Text & "' ", cnn)
+        Dim db3 As New MySqlCommand("UPDATE ruta SET estado = 'COMPLETADA' WHERE idruta = '" & SeguimientoCarga.TextBox21.Text & "' ", Conexion)
         db3.ExecuteNonQuery()
 
         'Actualizamos el estado actual del vehiculo agregado a la ruta
         'de esta forma en el DataGridView1 mostramos el estado actual 
-        Dim db2 As New MySqlCommand("UPDATE vehiculo SET estadoactual = '" & SeguimientoCarga.ComboBox1.Text & "' WHERE idvehiculo = '" & SeguimientoCarga.TextBox1.Text & "' ", cnn)
+        Dim db2 As New MySqlCommand("UPDATE vehiculo SET estadoactual = '" & SeguimientoCarga.ComboBox1.Text & "' WHERE idvehiculo = '" & SeguimientoCarga.TextBox1.Text & "' ", Conexion)
         db2.ExecuteNonQuery()
 
     End Sub
@@ -519,7 +519,7 @@ Module ModuloSeguimientoCarga
         'Usado para generar automaticamente el ID
 
         'Se obtiene el ultimo ID
-        Dim Command As New MySqlCommand("SELECT MAX(idruta) FROM ruta", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idruta) FROM ruta", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.
@@ -534,22 +534,22 @@ Module ModuloSeguimientoCarga
     Public Sub CargarComboEstadoRutaCarga()
         'Metodo que permite cargar el Combobox desde la BD.
 
-        Dim Tabla2 As New DataTable
-        Dim Adaptador2 As New MySqlDataAdapter
+        Dim Tabla As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
 
-        Adaptador2 = New MySqlDataAdapter("SELECT * FROM estadoruta ORDER BY nombreestado ASC", cnn)
-        Adaptador2.Fill(Tabla2)
+        Adaptador = New MySqlDataAdapter("SELECT * FROM estadoruta ORDER BY nombreestado ASC", Conexion)
+        Adaptador.Fill(Tabla)
 
-        SeguimientoCarga.ComboBox1.DataSource = Tabla2
+        SeguimientoCarga.ComboBox1.DataSource = Tabla
         SeguimientoCarga.ComboBox1.DisplayMember = "nombreestado"
         SeguimientoCarga.ComboBox1.ValueMember = "idestado"
 
         SeguimientoCarga.ComboBox1.DrawMode = DrawMode.OwnerDrawVariable 'PARA PODER PONER NUESTRAS IMAGENES
         SeguimientoCarga.ComboBox1.DropDownHeight = 480 'PARA QUE MUESTRE TODOS LOS ELEMENTOS. DEPENDE DEL NUMERO DE ELEMENTOS Y SU ALTURA
 
-        'Generamos un ciclo para obtener cada nombre de la consulta guardada en el Tabla2
+        'Generamos un ciclo para obtener cada nombre de la consulta guardada en el Tabla
         'cada valor obtenido es agregado al ArrayList declarado al inicio de la clase
-        For Each dr As DataRow In Tabla2.Rows
+        For Each dr As DataRow In Tabla.Rows
 
             'guardamos cada registro en el arreglo
             Arreglo.Add(dr("nombreestado"))
@@ -597,19 +597,19 @@ Module ModuloSeguimientoCarga
 
     End Sub
 
-    Public Function VerificarChofer(ByVal chofer As String) As Boolean
+    Public Function VerificarPersonal(ByVal personal As String) As Boolean
         'Funcion booleana que permite validar si existe algun chofer registrado en otra ruta
         'para evitar registrar duplicados.
         'NO ESTA EN USO
 
-        Dim sql As String = "SELECT COUNT(nombrechofer) > 0, nombrechofer FROM ruta, chofer, estadoruta " _
-                            & " WHERE ruta.chofer = chofer.idchofer " _
+        Dim sql As String = "SELECT COUNT(nombrepersonal) > 0, nombrepersonal FROM ruta, personal, estadoruta " _
+                            & " WHERE ruta.personal = personal.idpersonal " _
                             & " AND ruta.estadoruta = estadoruta.idestado " _
                             & " AND idruta IN (SELECT MAX(idruta) FROM ruta GROUP BY vehiculo) " _
                             & " AND nombreestado NOT IN ('VEHICULO GUARDADO') " _
-                            & " AND nombrechofer = '" & chofer & "' "
+                            & " AND nombrepersonal = '" & personal & "' "
 
-        Dim Comando As New MySqlCommand(sql, cnn)
+        Dim Comando As New MySqlCommand(sql, Conexion)
         Return Convert.ToBoolean(Comando.ExecuteScalar())
 
     End Function

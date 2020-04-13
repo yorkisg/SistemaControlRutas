@@ -118,10 +118,10 @@ Public Class Principal
 
     End Sub
 
-    Private Sub MenuChoferes_Click(sender As Object, e As EventArgs) Handles MenuChoferes.Click
-        'Formulario MaestroChofer
+    Private Sub MenuPersonal_Click(sender As Object, e As EventArgs) Handles MenuPersonal.Click
+        'Formulario MaestroPersonal
 
-        MaestroChofer.ShowDialog()
+        MaestroPersonal.ShowDialog()
 
     End Sub
 
@@ -143,13 +143,6 @@ Public Class Principal
         'Formulario MaestroVehiculo
 
         MaestroVehiculo.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuPersonal_Click(sender As Object, e As EventArgs) Handles MenuPersonal.Click
-        'Formulario MaestroPersona
-
-        MaestroPersona.ShowDialog()
 
     End Sub
 
@@ -185,7 +178,7 @@ Public Class Principal
     Private Sub MenuConsultarChofer_Click(sender As Object, e As EventArgs) Handles MenuConsultarChofer.Click
         'Formulario ConsultaChofer
 
-        ConsultaChofer.ShowDialog()
+        ConsultaPersonal.ShowDialog()
 
     End Sub
 

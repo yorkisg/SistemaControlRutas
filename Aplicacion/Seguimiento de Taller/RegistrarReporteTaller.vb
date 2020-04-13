@@ -27,7 +27,7 @@ Public Class RegistrarReporteTaller
             If ValidarComponentes() = True Then
 
                 'Registro formal de la ruta con todos sus atributos
-                Dim db As New MySqlCommand("INSERT INTO registrotaller (idregistrotaller, vehiculo, fechaingreso, fechasalida, area, falla, estado) VALUES ('" & TextBox1.Text & "', '" & TextBox3.Text & "', '" & fecha & "', '" & fecha2 & "', '" & TextBox5.Text & "', '" & TextBox2.Text & "', 'ABIERTO')", cnn)
+                Dim db As New MySqlCommand("INSERT INTO registrotaller (idregistrotaller, vehiculo, fechaingreso, fechasalida, area, falla, estado) VALUES ('" & TextBox1.Text & "', '" & TextBox3.Text & "', '" & fecha & "', '" & fecha2 & "', '" & TextBox5.Text & "', '" & TextBox2.Text & "', 'ABIERTO')", Conexion)
                 db.ExecuteNonQuery()
 
                 'Actualizamos el estado del vehiculo
@@ -64,7 +64,7 @@ Public Class RegistrarReporteTaller
     Private Sub BotonModificar_Click(sender As Object, e As EventArgs) Handles BotonModificar.Click
         'Boton modificar
 
-        Dim db As New MySqlCommand("UPDATE registrotaller SET area = '" & TextBox5.Text & "', falla = '" & TextBox2.Text & "', estado = 'ABIERTO' WHERE idregistrotaller = '" & TextBox1.Text & "' ", cnn)
+        Dim db As New MySqlCommand("UPDATE registrotaller SET area = '" & TextBox5.Text & "', falla = '" & TextBox2.Text & "', estado = 'ABIERTO' WHERE idregistrotaller = '" & TextBox1.Text & "' ", Conexion)
         db.ExecuteNonQuery()
         MsgBox("Reporte modificado con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -155,7 +155,7 @@ Public Class RegistrarReporteTaller
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
         'Prueba
 
-        Dim cmd As New MySqlCommand("SELECT nombrefalla FROM falla", cnn)
+        Dim cmd As New MySqlCommand("SELECT nombrefalla FROM falla", Conexion)
         Dim DataTable As New DataTable
         Dim Adaptador As New MySqlDataAdapter(cmd)
 

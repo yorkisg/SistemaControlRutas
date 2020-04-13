@@ -21,7 +21,7 @@ Module ModuloSeguimientoTaller
 
         Adaptador = New MySqlDataAdapter("SELECT idsubflota, nombresubflota FROM subflota " _
                                 & " WHERE nombresubflota IN ('CONCHA DE ARROZ','GRANEL','HUEVOS','LECHE CRUDA','AMBULANCIAS','MERCABAR','TRANSPORTES','EMBUTIDOS') " _
-                                & " ORDER BY nombresubflota ASC", cnn)
+                                & " ORDER BY nombresubflota ASC", Conexion)
 
         Adaptador.Fill(Tabla)
 
@@ -47,7 +47,7 @@ Module ModuloSeguimientoTaller
                        & " AND estadoactual <> 'ROBADO / EXTRAVIADO' " _
                        & " ORDER BY idvehiculo ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -57,7 +57,7 @@ Module ModuloSeguimientoTaller
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "seguimientotaller")
         Tabla = DataSet.Tables("seguimientotaller")
-        SeguimientoTaller.DataGridView1.DataSource = DataSet.Tables("seguimientotaller")
+        SeguimientoTaller.DataGridView1.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With SeguimientoTaller.DataGridView1
@@ -82,7 +82,7 @@ Module ModuloSeguimientoTaller
                          & " AND vehiculo = '" & SeguimientoTaller.TextBox1.Text & "' " _
                          & " ORDER BY idregistrotaller DESC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -92,7 +92,7 @@ Module ModuloSeguimientoTaller
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "seguimientotaller2")
         Tabla = DataSet.Tables("seguimientotaller2")
-        SeguimientoTaller.DataGridView2.DataSource = DataSet.Tables("seguimientotaller2")
+        SeguimientoTaller.DataGridView2.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With SeguimientoTaller.DataGridView2
@@ -113,7 +113,7 @@ Module ModuloSeguimientoTaller
     Public Sub ActualizarVehiculo()
         'Metodo que permite actualizar el estado del vehiculo una ves generado un reporte de taller
 
-        Dim db As New MySqlCommand("UPDATE vehiculo SET estadorevision = 'PENDIENTE POR REVISIÓN' WHERE idvehiculo = '" & RegistrarReporteTaller.TextBox3.Text & "' ", cnn)
+        Dim db As New MySqlCommand("UPDATE vehiculo SET estadorevision = 'PENDIENTE POR REVISIÓN' WHERE idvehiculo = '" & RegistrarReporteTaller.TextBox3.Text & "' ", Conexion)
         db.ExecuteNonQuery()
 
     End Sub
@@ -124,7 +124,7 @@ Module ModuloSeguimientoTaller
         'Si el reporte esta abierto, entonces se updatea el estado del vehiculo
         If SeguimientoTaller.TextBox4.Text = "ABIERTO" Then
 
-            Dim db As New MySqlCommand("UPDATE vehiculo SET estadorevision = 'OPERATIVO' WHERE idvehiculo = '" & SeguimientoTaller.TextBox1.Text & "' ", cnn)
+            Dim db As New MySqlCommand("UPDATE vehiculo SET estadorevision = 'OPERATIVO' WHERE idvehiculo = '" & SeguimientoTaller.TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
 
         End If
@@ -162,7 +162,7 @@ Module ModuloSeguimientoTaller
         'Usado para generar automaticamente el ID.
 
         'Se obtiene el ultimo ID del chofer.
-        Dim Command As New MySqlCommand("SELECT MAX(idregistrotaller) FROM registrotaller", cnn)
+        Dim Command As New MySqlCommand("SELECT MAX(idregistrotaller) FROM registrotaller", Conexion)
         Dim numero As Integer
 
         'El ID obtenido de la BD se incrementa.
@@ -185,7 +185,7 @@ Module ModuloSeguimientoTaller
                             & " AND estado = 'ABIERTO' " _
                             & " ORDER BY idregistrotaller DESC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -195,7 +195,7 @@ Module ModuloSeguimientoTaller
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "seguimientotaller3")
         Tabla = DataSet.Tables("seguimientotaller3")
-        SeguimientoTaller.DataGridView3.DataSource = DataSet.Tables("seguimientotaller3")
+        SeguimientoTaller.DataGridView3.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With SeguimientoTaller.DataGridView3
@@ -215,7 +215,7 @@ Module ModuloSeguimientoTaller
         Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT idfalla FROM falla WHERE nombrefalla = '" & RegistrarReporteTaller.TextBox4.Text & "' ", cnn)
+        Adaptador = New MySqlDataAdapter("SELECT idfalla FROM falla WHERE nombrefalla = '" & RegistrarReporteTaller.TextBox4.Text & "' ", Conexion)
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows

@@ -133,7 +133,7 @@ Public Class ListadoFlota
         Dim cmd As New MySqlCommand("SELECT idsubflota, nombresubflota, nombreflota, tiposubflota " _
                                     & " FROM subflota, flota " _
                                     & " WHERE subflota.flota = flota.idflota" _
-                                    & " AND nombresubflota LIKE '%" & busqueda & "%' ", cnn)
+                                    & " AND nombresubflota LIKE '%" & busqueda & "%' ", Conexion)
 
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter(cmd)

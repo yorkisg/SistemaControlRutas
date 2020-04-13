@@ -198,7 +198,7 @@ Public Class ListadoVehiculo
                             & " FROM vehiculo, tipovehiculo, subflota " _
                             & " WHERE vehiculo.tipovehiculo = tipovehiculo.idtipo" _
                             & " AND vehiculo.subflota = subflota.idsubflota" _
-                            & " AND idvehiculo LIKE '%" & busqueda & "%' ", cnn)
+                            & " AND idvehiculo LIKE '%" & busqueda & "%' ", Conexion)
 
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter(cmd)

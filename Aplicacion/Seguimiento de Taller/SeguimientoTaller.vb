@@ -423,7 +423,7 @@ Public Class SeguimientoTaller
                     'Si la respuesta es "Si"
                     If Mensaje = DialogResult.Yes Then
 
-                        Dim db As New MySqlCommand("UPDATE registrotaller SET estado = 'CERRADO', fechasalida = '" & fecha2 & "' WHERE idregistrotaller = '" & TextBox3.Text & "' ", cnn)
+                        Dim db As New MySqlCommand("UPDATE registrotaller SET estado = 'CERRADO', fechasalida = '" & fecha2 & "' WHERE idregistrotaller = '" & TextBox3.Text & "' ", Conexion)
                         db.ExecuteNonQuery()
                         MsgBox("Reporte cerrado con Exito.", MsgBoxStyle.Information, "Exito.")
 

@@ -36,7 +36,7 @@ Public Class AccesoAplicacion
 
         Dim sql As String = "SELECT * FROM usuario WHERE usuario=@usuario"
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         Command = New MySqlCommand(sql, connection)
         Command.Parameters.Add("@usuario", MySqlDbType.String).Value = TextBox1.Text

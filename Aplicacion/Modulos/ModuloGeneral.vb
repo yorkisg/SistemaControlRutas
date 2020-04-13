@@ -8,9 +8,9 @@ Module ModuloGeneral
     Public Adaptador As MySqlDataAdapter
     Public DataSet As DataSet
     Public Tabla As DataTable
-    Public Builder As MySqlCommandBuilder
-    Public connectionString As String = "server=172.16.8.88;user=cecon01;password=1234;database=bdsaladecontrolgps;port=3306"
-    Public cnn As New MySqlConnection
+    'Public Builder As MySqlCommandBuilder
+    Public ConnectionString As String = "server=172.16.8.88;user=cecon01;password=1234;database=bdsaladecontrolgps;port=3306"
+    Public Conexion As New MySqlConnection
     Public Reader As MySqlDataReader
 
     'Usado para cargar las imagenes en un arreglo y desplegarlas en el combobox mediante los eventos drawitem y measureitem
@@ -26,14 +26,14 @@ Module ModuloGeneral
 
         Try
 
-            If cnn.State = ConnectionState.Closed Then
+            If Conexion.State = ConnectionState.Closed Then
 
-                cnn.ConnectionString = " server=172.16.8.88; " _
+                Conexion.ConnectionString = " server=172.16.8.88; " _
                                      & " user=cecon01; " _
                                      & " password=1234; " _
                                      & " database=bdsaladecontrolgps; " _
                                      & " port=3306"
-                cnn.Open()
+                Conexion.Open()
 
                 'Comprobamos si existen actualizaciones disponibles e iniciamos la aplicacion
                 ComprobarActualizacion()
@@ -55,7 +55,7 @@ Module ModuloGeneral
 
         Try
 
-            cnn.Close()
+            Conexion.Close()
 
         Catch myerror As System.Data.SqlClient.SqlException
 

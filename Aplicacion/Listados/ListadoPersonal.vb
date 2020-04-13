@@ -1,35 +1,35 @@
 ﻿
-Public Class ListadoChofer
+Public Class ListadoPersonal
 
-    Private Sub ListadoChofer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ListadoPersonal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
 
         'Se llama al metodo en el Load del formulario para que el datagridview cargue los datos inmediatamente
-        CargarGridListadoChofer()
+        CargarGridListadoPersonal()
 
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
 
         'Decimos que el primer elemento activo del combo es "Activo"
-        ComboEstadoChofer.SelectedItem = "ACTIVO"
+        ComboEstadoPersona.SelectedItem = "ACTIVO"
 
         'Decimos que el primer elemento activo del combo es "Activo"
-        ComboTipoChofer.SelectedItem = "CARGA"
+        ComboTipoPersona.SelectedItem = "CARGA"
 
         'si la llamada proviene del seguimiento liviano entonces cargamos los choferes livianos
         If SeguimientoLiviano.Visible = True Then
 
-            ComboTipoChofer.SelectedItem = "LIVIANO"
+            ComboTipoPersona.SelectedItem = "LIVIANO"
 
         End If
 
 
     End Sub
 
-    Private Sub ListadoChofer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ListadoPersonal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         If DataGridView.RowCount > 0 Then
@@ -67,7 +67,7 @@ Public Class ListadoChofer
 
             End If
 
-            If MaestroChofer.Visible = True Then
+            If MaestroPersonal.Visible = True Then
                 'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
                 'Llamamos al metodo para obtener los datos del chofer y luego editarlos en el MaestroChofer
 
@@ -75,11 +75,11 @@ Public Class ListadoChofer
                 TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
 
                 'Enviamos datos al formulario
-                ObtenerChoferListado()
-                MaestroChofer.Show()
+                ObtenerPersonalListado()
+                MaestroPersonal.Show()
 
-                MaestroChofer.BotonModificar.Enabled = True
-                MaestroChofer.BotonGuardar.Enabled = False
+                MaestroPersonal.BotonModificar.Enabled = True
+                MaestroPersonal.BotonGuardar.Enabled = False
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()
@@ -88,10 +88,10 @@ Public Class ListadoChofer
 
             End If
 
-            If ConsultaChofer.Visible = True Then
-                'si el formulario "ConsultaChofer" esta activo, se carga la informacion seleccionada del datagridview
+            If ConsultaPersonal.Visible = True Then
+                'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
 
-                ConsultaChofer.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                ConsultaPersonal.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()
@@ -221,12 +221,12 @@ Public Class ListadoChofer
     Function Filtrar(ByVal busqueda As String) As DataTable
         'Funcion que carga los datos de acuerdo a lo ingresado en el TextBox
 
-        Dim cmd As New MySqlCommand("SELECT idchofer, nombrechofer, tipochofer, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
-            & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadochofer FROM chofer " _
-            & " WHERE estadochofer = '" & TextBox1.Text & "' " _
-            & " AND tipochofer = '" & TextBox2.Text & "' " _
-            & " AND nombrechofer LIKE '%" & busqueda & "%' " _
-            & " ORDER BY nombrechofer ASC", cnn)
+        Dim cmd As New MySqlCommand("SELECT idpersonal, nombrepersonal, tipopersonal, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
+            & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadopersonal FROM personal " _
+            & " WHERE estadopersonal = '" & TextBox1.Text & "' " _
+            & " AND tipopersonal = '" & TextBox2.Text & "' " _
+            & " AND nombrepersonal LIKE '%" & busqueda & "%' " _
+            & " ORDER BY nombrepersonal ASC", Conexion)
 
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter(cmd)
@@ -256,7 +256,7 @@ Public Class ListadoChofer
 
             End If
 
-            If MaestroChofer.Visible = True Then
+            If MaestroPersonal.Visible = True Then
                 'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
                 'Llamamos al metodo para obtener los datos del chofer y luego editarlos en el MaestroChofer
 
@@ -264,11 +264,11 @@ Public Class ListadoChofer
                 TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
 
                 'Enviamos datos al formulario
-                ObtenerChoferListado()
-                MaestroChofer.Show()
+                ObtenerPersonalListado()
+                MaestroPersonal.Show()
 
-                MaestroChofer.BotonModificar.Enabled = True
-                MaestroChofer.BotonGuardar.Enabled = False
+                MaestroPersonal.BotonModificar.Enabled = True
+                MaestroPersonal.BotonGuardar.Enabled = False
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()
@@ -277,10 +277,10 @@ Public Class ListadoChofer
 
             End If
 
-            If ConsultaChofer.Visible = True Then
-                'si el formulario "ConsultaChofer" esta activo, se carga la informacion seleccionada del datagridview
+            If ConsultaPersonal.Visible = True Then
+                'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
 
-                ConsultaChofer.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                ConsultaPersonal.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()
@@ -343,21 +343,21 @@ Public Class ListadoChofer
 
     End Sub
 
-    Private Sub ComboEstadoChofer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboEstadoChofer.SelectedIndexChanged
+    Private Sub ComboEstadoPersona_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboEstadoPersona.SelectedIndexChanged
         'Evento donde seleccionamos el combobox y el elemento se va directamente al textbox
         'inmediatamente cargamos el datagridview para refrescar.
 
-        TextBox1.Text = ComboEstadoChofer.Text
-        CargarGridListadoChofer()
+        TextBox1.Text = ComboEstadoPersona.Text
+        CargarGridListadoPersonal()
 
     End Sub
 
-    Private Sub ComboTipoChofer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboTipoChofer.SelectedIndexChanged
+    Private Sub ComboTipoPersona_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboTipoPersona.SelectedIndexChanged
         'Evento donde seleccionamos el combobox y el elemento se va directamente al textbox
         'inmediatamente cargamos el datagridview para refrescar.
 
-        TextBox2.Text = ComboTipoChofer.Text
-        CargarGridListadoChofer()
+        TextBox2.Text = ComboTipoPersona.Text
+        CargarGridListadoPersonal()
 
     End Sub
 
@@ -396,6 +396,12 @@ Public Class ListadoChofer
                 If TipoChofer = "LIVIANO" Then
 
                     e.CellStyle.ForeColor = Color.Green
+
+                End If
+
+                If TipoChofer = "PERSONAL" Then
+
+                    e.CellStyle.ForeColor = Color.Orange
 
                 End If
 

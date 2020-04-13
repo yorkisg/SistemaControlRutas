@@ -31,7 +31,7 @@ Public Class ConsultaSeguimientoTaller
                              & " GROUP BY nombresubflota " _
                              & " ORDER BY nombresubflota ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -80,7 +80,7 @@ Public Class ConsultaSeguimientoTaller
               & " GROUP BY area " _
               & " ORDER BY area ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -129,7 +129,7 @@ Public Class ConsultaSeguimientoTaller
                             & " GROUP BY nombretipo " _
                             & " ORDER BY nombretipo ASC "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)
@@ -160,7 +160,7 @@ Public Class ConsultaSeguimientoTaller
 
         Adaptador = New MySqlDataAdapter("SELECT ROUND((COUNT(idregistrotaller)/29),2) AS 'Promedio' " _
                                         & " From registrotaller " _
-                                        & " WHERE MONTH(fechaingreso) = MONTH(CURDATE()) ", cnn)
+                                        & " WHERE MONTH(fechaingreso) = MONTH(CURDATE()) ", Conexion)
 
         Adaptador.Fill(Tabla)
 
@@ -197,7 +197,7 @@ Public Class ConsultaSeguimientoTaller
                             & " WHERE Month(fechaingreso) = Month(CURDATE())  " _
                             & " GROUP BY estado "
 
-        Dim connection As New MySqlConnection(connectionString)
+        Dim connection As New MySqlConnection(ConnectionString)
 
         'Instancia y uso de variables.
         Command = New MySqlCommand(sql, connection)

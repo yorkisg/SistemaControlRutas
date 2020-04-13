@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ListadoChofer
+Partial Class ListadoPersonal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class ListadoChofer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListadoChofer))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListadoPersonal))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -31,10 +31,10 @@ Partial Class ListadoChofer
         Me.BotonGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.ComboTipoChofer = New System.Windows.Forms.ToolStripComboBox()
+        Me.ComboTipoPersona = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ComboEstadoChofer = New System.Windows.Forms.ToolStripComboBox()
+        Me.ComboEstadoPersona = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.TextBox = New System.Windows.Forms.ToolStripTextBox()
@@ -70,7 +70,7 @@ Partial Class ListadoChofer
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator5, Me.ToolStripLabel3, Me.ComboTipoChofer, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ComboEstadoChofer, Me.ToolStripSeparator3, Me.ToolStripLabel1, Me.TextBox, Me.ToolStripSeparator2, Me.BotonExportar, Me.ToolStripSeparator1, Me.BotonSalir, Me.ToolStripSeparator6})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator5, Me.ToolStripLabel3, Me.ComboTipoPersona, Me.ToolStripSeparator7, Me.ToolStripButton1, Me.ComboEstadoPersona, Me.ToolStripSeparator3, Me.ToolStripLabel1, Me.TextBox, Me.ToolStripSeparator2, Me.BotonExportar, Me.ToolStripSeparator1, Me.BotonSalir, Me.ToolStripSeparator6})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(984, 25)
@@ -96,14 +96,14 @@ Partial Class ListadoChofer
         Me.ToolStripLabel3.Size = New System.Drawing.Size(77, 22)
         Me.ToolStripLabel3.Text = "Clasificación:"
         '
-        'ComboTipoChofer
+        'ComboTipoPersona
         '
-        Me.ComboTipoChofer.BackColor = System.Drawing.Color.AliceBlue
-        Me.ComboTipoChofer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboTipoChofer.FlatStyle = System.Windows.Forms.FlatStyle.Standard
-        Me.ComboTipoChofer.Items.AddRange(New Object() {"CARGA", "LIVIANO"})
-        Me.ComboTipoChofer.Name = "ComboTipoChofer"
-        Me.ComboTipoChofer.Size = New System.Drawing.Size(170, 25)
+        Me.ComboTipoPersona.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboTipoPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboTipoPersona.FlatStyle = System.Windows.Forms.FlatStyle.Standard
+        Me.ComboTipoPersona.Items.AddRange(New Object() {"CARGA", "LIVIANO", "PERSONAL"})
+        Me.ComboTipoPersona.Name = "ComboTipoPersona"
+        Me.ComboTipoPersona.Size = New System.Drawing.Size(170, 25)
         '
         'ToolStripSeparator7
         '
@@ -119,14 +119,14 @@ Partial Class ListadoChofer
         Me.ToolStripButton1.Size = New System.Drawing.Size(45, 22)
         Me.ToolStripButton1.Text = "Estado:"
         '
-        'ComboEstadoChofer
+        'ComboEstadoPersona
         '
-        Me.ComboEstadoChofer.BackColor = System.Drawing.Color.AliceBlue
-        Me.ComboEstadoChofer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboEstadoChofer.FlatStyle = System.Windows.Forms.FlatStyle.Standard
-        Me.ComboEstadoChofer.Items.AddRange(New Object() {"ACTIVO", "DE REPOSO", "DE PERMISO", "DE VACACIONES", "INACTIVO"})
-        Me.ComboEstadoChofer.Name = "ComboEstadoChofer"
-        Me.ComboEstadoChofer.Size = New System.Drawing.Size(170, 25)
+        Me.ComboEstadoPersona.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboEstadoPersona.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboEstadoPersona.FlatStyle = System.Windows.Forms.FlatStyle.Standard
+        Me.ComboEstadoPersona.Items.AddRange(New Object() {"ACTIVO", "DE REPOSO", "DE PERMISO", "DE VACACIONES", "INACTIVO"})
+        Me.ComboEstadoPersona.Name = "ComboEstadoPersona"
+        Me.ComboEstadoPersona.Size = New System.Drawing.Size(170, 25)
         '
         'ToolStripSeparator3
         '
@@ -292,7 +292,7 @@ Partial Class ListadoChofer
         '
         'ColumnaChofer
         '
-        Me.ColumnaChofer.DataPropertyName = "idchofer"
+        Me.ColumnaChofer.DataPropertyName = "idpersonal"
         Me.ColumnaChofer.HeaderText = "ID CHOFER"
         Me.ColumnaChofer.Name = "ColumnaChofer"
         Me.ColumnaChofer.ReadOnly = True
@@ -301,7 +301,7 @@ Partial Class ListadoChofer
         'ColumnaNombre
         '
         Me.ColumnaNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaNombre.DataPropertyName = "nombrechofer"
+        Me.ColumnaNombre.DataPropertyName = "nombrepersonal"
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ColumnaNombre.DefaultCellStyle = DataGridViewCellStyle2
         Me.ColumnaNombre.HeaderText = "NOMBRE"
@@ -311,7 +311,7 @@ Partial Class ListadoChofer
         '
         'ColumnaClasificacion
         '
-        Me.ColumnaClasificacion.DataPropertyName = "tipochofer"
+        Me.ColumnaClasificacion.DataPropertyName = "tipopersonal"
         Me.ColumnaClasificacion.HeaderText = "CLASIFICACIÓN"
         Me.ColumnaClasificacion.Name = "ColumnaClasificacion"
         Me.ColumnaClasificacion.ReadOnly = True
@@ -333,13 +333,13 @@ Partial Class ListadoChofer
         'ColumnaEstado
         '
         Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaEstado.DataPropertyName = "estadochofer"
+        Me.ColumnaEstado.DataPropertyName = "estadopersonal"
         Me.ColumnaEstado.HeaderText = "ESTADO"
         Me.ColumnaEstado.Name = "ColumnaEstado"
         Me.ColumnaEstado.ReadOnly = True
         Me.ColumnaEstado.Width = 150
         '
-        'ListadoChofer
+        'ListadoPersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -352,9 +352,9 @@ Partial Class ListadoChofer
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "ListadoChofer"
+        Me.Name = "ListadoPersonal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Listado de Choferes"
+        Me.Text = "Listado de Personal"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ContextMenuStrip1.ResumeLayout(False)
@@ -381,22 +381,22 @@ Partial Class ListadoChofer
     Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents ComboEstadoChofer As System.Windows.Forms.ToolStripComboBox
+    Friend WithEvents ComboEstadoPersona As System.Windows.Forms.ToolStripComboBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripLabel3 As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents ComboTipoChofer As System.Windows.Forms.ToolStripComboBox
+    Friend WithEvents ComboTipoPersona As System.Windows.Forms.ToolStripComboBox
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ColumnaClasificacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaTelefono2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaTelefono1 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaClasificacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaNombre As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
 End Class
