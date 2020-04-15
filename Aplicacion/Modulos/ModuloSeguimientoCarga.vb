@@ -178,6 +178,46 @@ Module ModuloSeguimientoCarga
 
     End Sub
 
+    Public Sub CargarGridRutaCargaSubFlota()
+        'Metodo que genera la carga de datos en el DataGridview1 
+
+        Dim sql As String = "SELECT idvehiculo, nombretipo, estadoactual, condicionvehiculo " _
+                       & " FROM vehiculo, grupo, subflota, tipovehiculo " _
+                       & " WHERE vehiculo.grupo = grupo.idgrupo " _
+                       & " AND grupo.subflota = subflota.idsubflota " _
+                       & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
+                       & " AND nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _
+                       & " AND condicionvehiculo <> 'ROBADO / EXTRAVIADO' " _
+                       & " ORDER BY idvehiculo ASC "
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+
+        'Llenado del datagridview.
+        Adaptador.Fill(DataSet, "flota_vehiculo")
+        Tabla = DataSet.Tables("flota_vehiculo")
+        SeguimientoCarga.DataGridView1.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With SeguimientoCarga.DataGridView1
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 8) 'Fuente para Headers
+        End With
+
+        'Llamada al metodo para cargar imagenes
+        CargarImagenesHistorialCarga()
+        CargarImagenesEstadoVehiculoCarga()
+
+        SeguimientoCarga.DataGridView1.ClearSelection()
+
+    End Sub
+
+
     Public Sub CargarGridHistorialCarga()
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausula LIKE y LIMIT
 

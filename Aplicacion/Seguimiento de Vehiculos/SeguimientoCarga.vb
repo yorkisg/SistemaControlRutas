@@ -83,7 +83,7 @@ Public Class SeguimientoCarga
         'los elementos provenientes de la base de batos y se carga el metodo
         'CargarGrid el cual genera el ID del vehiculo perteneciente a la flota seleccionada
         'a traves de la clausura LIKE en la sentencia SQL
-        'MENU DE OPCIONES DINAMICO (SIN NODO PADRE). SE PUEDEN AGREGAR NUEVAS FLOTAS.
+        'MENU DE OPCIONES DINAMICO. SE PUEDEN AGREGAR NUEVAS FLOTAS.
 
         Try
 
@@ -92,8 +92,18 @@ Public Class SeguimientoCarga
             'Enviamos el nombre de la flota al textbox4 mediante la propiedad node.text
             TextBox4.Text = e.Node.Text
 
-            'Una ves conocido el nombre de la flota, se procede a cargar los vehiculos asociados a el.
-            CargarGridRutaCarga()
+            'Si el nodo seleccionado tiene hijos
+            If e.Node.Nodes.Count > 0 Then
+
+                'Se carga el metodo q acumula todos los vehiculos de un grupo en la suflota
+                CargarGridRutaCargaSubFlota()
+
+            Else 'Sino tiene hijos 
+
+                'se carga solamente el grupo seleccionado
+                CargarGridRutaCarga()
+
+            End If
 
             'Enviamos el texto seleccionado a la variable, label, etc.
             Nombre = TextBox4.Text
@@ -110,8 +120,8 @@ Public Class SeguimientoCarga
 
     End Sub
 
-    Private Sub Arbol_BeforeCollapse(ByVal sender As Object, ByVal e As TreeViewCancelEventArgs) Handles Arbol.BeforeCollapse
-        'Evento que permite que los nodos del arbol se cierren
+    Private Sub Arbol_BeforeCollapse(sender As Object, e As TreeViewCancelEventArgs) Handles Arbol.BeforeCollapse
+        'Evento que permite que el arbol no se contraiga
 
         e.Cancel = True
 
