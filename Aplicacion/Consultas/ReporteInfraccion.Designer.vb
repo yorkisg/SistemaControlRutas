@@ -234,7 +234,7 @@ Partial Class ReporteInfraccion
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(294, 28)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(630, 396)
+        Me.GroupBox2.Size = New System.Drawing.Size(646, 396)
         Me.GroupBox2.TabIndex = 83
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "PRIMEROS 15 INFRACTORES DEL PERÍODO:"
@@ -267,7 +267,7 @@ Partial Class ReporteInfraccion
         Me.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(624, 374)
+        Me.DataGridView.Size = New System.Drawing.Size(640, 374)
         Me.DataGridView.TabIndex = 80
         '
         'GroupBox5
@@ -339,7 +339,7 @@ Partial Class ReporteInfraccion
         Me.Menu2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonConsultar2, Me.ToolStripSeparator4, Me.BotonLimpiar2, Me.ToolStripSeparator6, Me.BotonExportar2, Me.ToolStripSeparator7, Me.BotonSalir2, Me.ToolStripSeparator8})
         Me.Menu2.Location = New System.Drawing.Point(0, 0)
         Me.Menu2.Name = "Menu2"
-        Me.Menu2.Size = New System.Drawing.Size(936, 25)
+        Me.Menu2.Size = New System.Drawing.Size(952, 25)
         Me.Menu2.TabIndex = 89
         Me.Menu2.Text = "ToolStrip1"
         '
@@ -445,10 +445,10 @@ Partial Class ReporteInfraccion
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.ColumnaCantidad.DefaultCellStyle = DataGridViewCellStyle3
         Me.ColumnaCantidad.HeaderText = "INFRACCIONES"
-        Me.ColumnaCantidad.MinimumWidth = 105
+        Me.ColumnaCantidad.MinimumWidth = 99
         Me.ColumnaCantidad.Name = "ColumnaCantidad"
         Me.ColumnaCantidad.ReadOnly = True
-        Me.ColumnaCantidad.Width = 105
+        Me.ColumnaCantidad.Width = 99
         '
         'ColumnaVelocidad
         '
@@ -458,9 +458,10 @@ Partial Class ReporteInfraccion
         Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle4
         Me.ColumnaVelocidad.FillWeight = 31.74049!
         Me.ColumnaVelocidad.HeaderText = "MÁXIMA VELOCIDAD KM/H"
-        Me.ColumnaVelocidad.MinimumWidth = 100
+        Me.ColumnaVelocidad.MinimumWidth = 98
         Me.ColumnaVelocidad.Name = "ColumnaVelocidad"
         Me.ColumnaVelocidad.ReadOnly = True
+        Me.ColumnaVelocidad.Width = 98
         '
         'ColumnaImagen
         '
@@ -478,19 +479,19 @@ Partial Class ReporteInfraccion
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.ColumnaPromedio.DefaultCellStyle = DataGridViewCellStyle5
         Me.ColumnaPromedio.HeaderText = "PROMEDIO DEL VIAJE KM/H"
-        Me.ColumnaPromedio.MinimumWidth = 105
+        Me.ColumnaPromedio.MinimumWidth = 98
         Me.ColumnaPromedio.Name = "ColumnaPromedio"
         Me.ColumnaPromedio.ReadOnly = True
-        Me.ColumnaPromedio.Width = 105
+        Me.ColumnaPromedio.Width = 98
         '
         'ColumnaFlota
         '
-        Me.ColumnaFlota.DataPropertyName = "Flota"
+        Me.ColumnaFlota.DataPropertyName = "Grupo"
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle6
-        Me.ColumnaFlota.HeaderText = "FLOTA"
-        Me.ColumnaFlota.MinimumWidth = 115
+        Me.ColumnaFlota.HeaderText = "GRUPO"
+        Me.ColumnaFlota.MinimumWidth = 160
         Me.ColumnaFlota.Name = "ColumnaFlota"
         Me.ColumnaFlota.ReadOnly = True
         '
@@ -499,7 +500,7 @@ Partial Class ReporteInfraccion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
-        Me.ClientSize = New System.Drawing.Size(936, 436)
+        Me.ClientSize = New System.Drawing.Size(952, 436)
         Me.Controls.Add(Me.Menu2)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox2)

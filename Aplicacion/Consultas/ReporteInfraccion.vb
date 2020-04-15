@@ -12,6 +12,7 @@ Public Class ReporteInfraccion
         DateTimePicker1.Value = Today
         DateTimePicker2.Value = Today
 
+
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
         EnableDoubleBuffered(DataGridView1)
@@ -155,25 +156,25 @@ Public Class ReporteInfraccion
 
             TipoFlota = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 
-            If TipoFlota = "CARNES EL PAZO" Or TipoFlota = "MERCABAR" Or TipoFlota = "TOYOTA" Then
+            If TipoFlota = "PRODUCTOS CÁRNICOS" Or TipoFlota = "GANADO EN PIE" Or TipoFlota = "GRASA Y DESPERDICIOS" Then
 
                 e.CellStyle.ForeColor = Color.Red
 
             End If
 
-            If TipoFlota = "GRANEL" Or TipoFlota = "AMBULANCIAS" Then
+            If TipoFlota = "MATERIA PRIMA" Then
 
                 e.CellStyle.ForeColor = Color.Green
 
             End If
 
-            If TipoFlota = "HUEVOS" Or TipoFlota = "EMBUTIDOS" Or TipoFlota = "CHEVROLET" Then
+            If TipoFlota = "HUEVOS" Or TipoFlota = "REFRIGERADOS" Or TipoFlota = "NO REFRIGERADOS" Then
 
                 e.CellStyle.ForeColor = Color.Blue
 
             End If
 
-            If TipoFlota = "CONCHA DE ARROZ" Or TipoFlota = "LECHE CRUDA" Or TipoFlota = "DESECHO DE GALLETAS" Then
+            If TipoFlota = "CONCHA DE ARROZ" Or TipoFlota = "LECHE CRUDA" Or TipoFlota = "DESECHOS DE GALLETAS" Then
 
                 e.CellStyle.ForeColor = Color.BlueViolet
 

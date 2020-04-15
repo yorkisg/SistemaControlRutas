@@ -375,12 +375,11 @@ Module ModuloConsulta
         'ListadoReporteInfraccion
 
         Dim Command As New MySqlCommand("SELECT nombrepersonal AS 'Personal', COUNT(idregistroinfraccion) AS 'Cantidad de Infracciones', " _
-                    & " MAX(velocidad) AS 'Maxima Velocidad', ROUND(AVG(velocidad), 2) as 'Promedio del Periodo', nombresubflota AS 'Flota' " _
-                    & " FROM registroinfraccion, personal, vehiculo, grupo, subflota " _
+                    & " MAX(velocidad) AS 'Maxima Velocidad', ROUND(AVG(velocidad), 2) as 'Promedio del Periodo', nombregrupo AS 'Grupo' " _
+                    & " FROM registroinfraccion, personal, vehiculo, grupo " _
                     & " WHERE personal.idpersonal = registroinfraccion.personal " _
                     & " AND registroinfraccion.vehiculo = vehiculo.idvehiculo " _
                     & " AND vehiculo.grupo = grupo.idgrupo " _
-                    & " AND grupo.subflota = subflota.idsubflota  " _
                     & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                     & " AND clasificacionvehiculo = '" & ReporteInfraccion.TextBox3.Text & "' " _
                     & " GROUP BY nombrepersonal " _
