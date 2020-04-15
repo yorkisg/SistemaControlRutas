@@ -34,113 +34,17 @@ Module ModuloSeguimientoCarga
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub CargarArbolCarga()
-        'Metodo de prueba donde generamos un arbol de un solo nivel (sin padre)
-
-        Dim Adaptador As New MySqlDataAdapter
-        Dim Datatable = New DataTable
-
-        Adaptador = New MySqlDataAdapter("SELECT nombresubflota FROM subflota " _
-                                   & " WHERE tiposubflota = 'CARGA' " _
-                                   & " ORDER BY nombresubflota ASC", Conexion)
-
-        Adaptador.Fill(Datatable)
-
-        SeguimientoCarga.Arbol.Nodes.Add("Nodo raiz")
-
-        With SeguimientoCarga.Arbol
-
-            .BeginUpdate()
-
-            Dim i As Integer
-
-            For i = 0 To Datatable.Rows.Count - 1
-
-                SeguimientoCarga.Arbol.Nodes.Add(Datatable.Rows(i)("nombresubflota").ToString)
-
-            Next
-
-            'Editamos la apariencia del arbol
-            .Font = New Font("Calibri", 9)
-            .EndUpdate()
-
-        End With
-
-    End Sub
-
-    Public Sub CargarArbolCarga2()
         'Metodo donde generamos el arbol de opciones de acuerdo a las flotas, subflotas y grupos registrados en BD
 
         'Adaptadores
-        Dim Padres As New MySqlDataAdapter("SELECT idflota, nombreflota FROM flota", Conexion)
-
-        Dim Hijos As New MySqlDataAdapter(" SELECT idsubflota, nombresubflota, flota " _
-                                        & " FROM subflota WHERE tiposubflota = 'CARGA' " _
-                                        & " ORDER BY nombresubflota ASC", Conexion)
-        Dim Dataset As New DataSet
-
-        'Llenar el DataSet
-        Padres.Fill(Dataset, "Padres")
-        Hijos.Fill(Dataset, "Hijos")
-
-        'Creamos una relación a través del campo idflota (flota) común en ambos objetos DataTable.
-        Dim ColumnaPadre As DataColumn = Dataset.Tables("Padres").Columns("idflota")
-
-        Dim ColumnaHijo As DataColumn = Dataset.Tables("Hijos").Columns("flota") 'clave foranea en tabla hijos (subflota)
-
-        Dim Relacion As New DataRelation("Padres_Hijos", ColumnaPadre, ColumnaHijo, True)
-
-        'Añadimos la relación al objeto DataSet.
-        Dataset.Relations.Add(Relacion)
-
-        With SeguimientoCarga.Arbol
-
-            'Para que no se repinte el control TreeView hasta que se hayan creado los nodos.
-            .BeginUpdate()
-
-            'Limpiamos el control TreeView.
-            .Nodes.Clear()
-
-            'Añadimos un objeto TreeNode ra¡z para cada objeto Padre existente en el objeto DataTable llamado Padres.
-            For Each padre As DataRow In Dataset.Tables("Padres").Rows
-
-                'Creamos el nodo padre.
-                Dim NodoPadre As New TreeNode(padre.Item("nombreflota").ToString)
-
-                'Lo añadimos a la colección Nodes del control TreeView.
-                SeguimientoCarga.Arbol.Nodes.Add(NodoPadre)
-
-                'Añadimos un objeto TreeNode hijo por cada objeto Hijo existente en el objeto Padre actual.
-                For Each hijo In padre.GetChildRows("Padres_Hijos")
-
-                    'Creamos el nodo hijo
-                    Dim NodoHijo As New TreeNode(hijo.Item("nombresubflota").ToString)
-
-                    'Lo añadimos al nodo padre
-                    NodoPadre.Nodes.Add(NodoHijo)
-
-                Next
-
-            Next
-
-            'Editamos la apariencia del arbol
-            .Font = New Font("Calibri", 9)
-            .ExpandAll()
-            .EndUpdate()
-
-        End With
-
-    End Sub
-
-    Public Sub CargarArbolCarga3()
-        'Metodo donde generamos el arbol de opciones de acuerdo a las flotas, subflotas y grupos registrados en BD
-
-        'Adaptadores
-        Dim Padres As New MySqlDataAdapter("SELECT idsubflota, nombresubflota, flota " _
-                                        & " FROM subflota WHERE tiposubflota = 'CARGA' " _
+        Dim Padres As New MySqlDataAdapter("SELECT idsubflota, nombresubflota " _
+                                        & " FROM subflota " _
+                                        & " WHERE tiposubflota = 'CARGA' " _
                                         & " ORDER BY nombresubflota ASC", Conexion)
 
         Dim Hijos As New MySqlDataAdapter(" SELECT idgrupo, nombregrupo, subflota " _
-                                        & " FROM grupo ORDER BY idgrupo ASC", Conexion)
+                                        & " FROM grupo " _
+                                        & " ORDER BY idgrupo ASC", Conexion)
         Dim Dataset As New DataSet
 
         'Llenar el DataSet
@@ -152,7 +56,8 @@ Module ModuloSeguimientoCarga
 
         Dim ColumnaHijo As DataColumn = Dataset.Tables("Hijos").Columns("subflota") 'clave foranea en tabla hijos (subflota)
 
-        Dim Relacion As New DataRelation("Padres_Hijos", ColumnaPadre, ColumnaHijo, True)
+        'se cambio a false por un error con los constrain
+        Dim Relacion As New DataRelation("Padres_Hijos", ColumnaPadre, ColumnaHijo, False) '*********
 
         'Añadimos la relación al objeto DataSet.
         Dataset.Relations.Add(Relacion)
@@ -196,6 +101,40 @@ Module ModuloSeguimientoCarga
 
     End Sub
 
+    Public Sub CargarArbolCarga2()
+        'Metodo de prueba donde generamos un arbol de un solo nivel (sin padre)
+
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Datatable = New DataTable
+
+        Adaptador = New MySqlDataAdapter("SELECT nombresubflota FROM subflota " _
+                                   & " WHERE tiposubflota = 'CARGA' " _
+                                   & " ORDER BY nombresubflota ASC", Conexion)
+
+        Adaptador.Fill(Datatable)
+
+        SeguimientoCarga.Arbol.Nodes.Add("Nodo raiz")
+
+        With SeguimientoCarga.Arbol
+
+            .BeginUpdate()
+
+            Dim i As Integer
+
+            For i = 0 To Datatable.Rows.Count - 1
+
+                SeguimientoCarga.Arbol.Nodes.Add(Datatable.Rows(i)("nombresubflota").ToString)
+
+            Next
+
+            'Editamos la apariencia del arbol
+            .Font = New Font("Calibri", 9)
+            .EndUpdate()
+
+        End With
+
+    End Sub
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''METODOS PARA CARGAR DATAGRIDVIEW DE CARGA'''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -204,10 +143,11 @@ Module ModuloSeguimientoCarga
         'Metodo que genera la carga de datos en el DataGridview1 
 
         Dim sql As String = "SELECT idvehiculo, nombretipo, estadoactual, condicionvehiculo " _
-                       & " FROM vehiculo, subflota, tipovehiculo " _
-                       & " WHERE vehiculo.subflota = subflota.idsubflota " _
+                       & " FROM vehiculo, grupo, subflota, tipovehiculo " _
+                       & " WHERE vehiculo.grupo = grupo.idgrupo " _
+                       & " AND grupo.subflota = subflota.idsubflota " _
                        & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
-                       & " AND nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _
+                       & " AND nombregrupo = '" & SeguimientoCarga.TextBox4.Text & "' " _
                        & " AND condicionvehiculo <> 'ROBADO / EXTRAVIADO' " _
                        & " ORDER BY idvehiculo ASC "
 
@@ -223,45 +163,6 @@ Module ModuloSeguimientoCarga
         Adaptador.Fill(DataSet, "flota_vehiculo")
         Tabla = DataSet.Tables("flota_vehiculo")
         SeguimientoCarga.DataGridView1.DataSource = Tabla
-
-        'Parametros para editar apariencia del datagridview.
-        With SeguimientoCarga.DataGridView1
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 8) 'Fuente para Headers
-        End With
-
-        'Llamada al metodo para cargar imagenes
-        CargarImagenesHistorialCarga()
-        CargarImagenesEstadoVehiculoCarga()
-
-        SeguimientoCarga.DataGridView1.ClearSelection()
-
-    End Sub
-
-    Public Sub CargarGridRutaCarga2()
-        'EN PRUEBA
-
-        Dim sql As String = "SELECT idvehiculo, nombretipo, estadoactual, condicionvehiculo " _
-                       & " FROM vehiculo, subflota, grupo, tipovehiculo " _
-                       & " WHERE vehiculo.grupo = grupo.idgrupo " _
-                       & " AND grupo.subflota = subflota.idsubflota " _
-                       & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
-                       & " AND nombresubflota = '" & SeguimientoCarga.TextBox4.Text & "' " _
-                       & " AND condicionvehiculo <> 'ROBADO / EXTRAVIADO' " _
-                       & " ORDER BY idvehiculo ASC "
-
-        Dim connection As New MySqlConnection(ConnectionString)
-
-        'Instancia y uso de variables.
-        Command = New MySqlCommand(sql, connection)
-        Adaptador = New MySqlDataAdapter(Command)
-        DataSet = New DataSet()
-
-
-        'Llenado del datagridview.
-        Adaptador.Fill(DataSet, "flota_vehiculo")
-        Tabla = DataSet.Tables("flota_vehiculo")
-        SeguimientoCarga.DataGridView1.DataSource = DataSet.Tables("flota_vehiculo")
 
         'Parametros para editar apariencia del datagridview.
         With SeguimientoCarga.DataGridView1
@@ -433,9 +334,9 @@ Module ModuloSeguimientoCarga
         Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT nombresubflota, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
-                                          & " FROM vehiculo, subflota, tipovehiculo " _
-                                          & " WHERE vehiculo.subflota = subflota.idsubflota " _
+        Adaptador = New MySqlDataAdapter("SELECT nombregrupo, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
+                                          & " FROM vehiculo, grupo, tipovehiculo " _
+                                          & " WHERE vehiculo.grupo = grupo.idgrupo " _
                                           & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
                                           & " AND idvehiculo = '" & SeguimientoCarga.TextBox1.Text & "' ", Conexion)
 
@@ -443,7 +344,7 @@ Module ModuloSeguimientoCarga
 
         For Each row As DataRow In Tabla.Rows
 
-            MaestroVehiculo.ComboFlota.Text = row("nombresubflota").ToString
+            MaestroVehiculo.ComboGrupo.Text = row("nombregrupo").ToString
             MaestroVehiculo.ComboTipo.Text = row("nombretipo").ToString
             MaestroVehiculo.ComboEstado.Text = row("estadoactual").ToString
             MaestroVehiculo.ComboCondicion.Text = row("condicionvehiculo").ToString

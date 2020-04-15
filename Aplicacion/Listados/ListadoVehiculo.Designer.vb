@@ -196,8 +196,8 @@ Partial Class ListadoVehiculo
         'ColumnaSublota
         '
         Me.ColumnaSublota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaSublota.DataPropertyName = "nombresubflota"
-        Me.ColumnaSublota.HeaderText = "FLOTA"
+        Me.ColumnaSublota.DataPropertyName = "nombregrupo"
+        Me.ColumnaSublota.HeaderText = "GRUPO"
         Me.ColumnaSublota.Name = "ColumnaSublota"
         Me.ColumnaSublota.ReadOnly = True
         '
@@ -270,11 +270,11 @@ Partial Class ListadoVehiculo
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaCondicion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaImagen As DataGridViewImageColumn
     Friend WithEvents ColumnaEstadoActual As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaClasificacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaSublota As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaTipo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
 End Class

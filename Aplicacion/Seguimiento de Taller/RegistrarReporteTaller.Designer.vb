@@ -166,7 +166,7 @@ Partial Class RegistrarReporteTaller
         Me.Combo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Combo1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Combo1.FormattingEnabled = True
-        Me.Combo1.Items.AddRange(New Object() {"LAVADO", "CAUCHERA", "ELECTROAUTO", "COMBUSTIBLE"})
+        Me.Combo1.Items.AddRange(New Object() {"LAVADO", "CAUCHERA", "ELECTROAUTO", "COMBUSTIBLE", "EN VIA"})
         Me.Combo1.Location = New System.Drawing.Point(12, 175)
         Me.Combo1.Name = "Combo1"
         Me.Combo1.Size = New System.Drawing.Size(310, 23)

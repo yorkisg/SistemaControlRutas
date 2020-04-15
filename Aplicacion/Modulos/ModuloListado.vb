@@ -191,10 +191,11 @@ Module ModuloListado
         'Metodo para cargar el datagridview.
 
         'Conexion a la BD.
-        Dim sql As String = " SELECT idvehiculo, nombretipo, nombresubflota, clasificacionvehiculo, estadoactual, condicionvehiculo " _
-                            & " FROM vehiculo, tipovehiculo, subflota " _
-                            & " WHERE vehiculo.tipovehiculo = tipovehiculo.idtipo" _
-                            & " AND vehiculo.subflota = subflota.idsubflota" _
+        Dim sql As String = " SELECT idvehiculo, nombretipo, nombregrupo, clasificacionvehiculo, estadoactual, condicionvehiculo " _
+                            & " FROM vehiculo, tipovehiculo, subflota, grupo " _
+                            & " WHERE vehiculo.tipovehiculo = tipovehiculo.idtipo " _
+                            & " AND vehiculo.grupo = grupo.idgrupo " _
+                            & " AND grupo.subflota = subflota.idsubflota " _
                             & " ORDER BY idvehiculo ASC "
 
         Dim connection As New MySqlConnection(ConnectionString)

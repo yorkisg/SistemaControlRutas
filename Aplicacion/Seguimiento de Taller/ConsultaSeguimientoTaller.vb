@@ -227,8 +227,8 @@ Public Class ConsultaSeguimientoTaller
         TextBox7.Text = DataGridView4.Item(1, 1).Value.ToString()
 
         'Calculo de unidades reportadas y entregadas diario
-        TextBox8.Text = Math.Round((TextBox6.Text / 30), 2)
-        TextBox9.Text = Math.Round((TextBox7.Text / 30), 2)
+        TextBox8.Text = Math.Round((TextBox6.Text / 29), 2)
+        TextBox9.Text = Math.Round((TextBox7.Text / 29), 2)
 
     End Sub
 

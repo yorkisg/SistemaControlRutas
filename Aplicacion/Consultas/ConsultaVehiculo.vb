@@ -16,6 +16,7 @@ Public Class ConsultaVehiculo
 
     End Sub
 
+
     Private Sub ConsultaVehiculo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 

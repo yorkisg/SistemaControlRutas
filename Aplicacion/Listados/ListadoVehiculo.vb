@@ -45,7 +45,7 @@ Public Class ListadoVehiculo
 
                 MaestroVehiculo.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
                 MaestroVehiculo.ComboTipo.Text = DataGridView.Item("ColumnaTipo", DataGridView.SelectedRows(0).Index).Value
-                MaestroVehiculo.ComboFlota.Text = DataGridView.Item("ColumnaSublota", DataGridView.SelectedRows(0).Index).Value
+                MaestroVehiculo.ComboGrupo.Text = DataGridView.Item("ColumnaSublota", DataGridView.SelectedRows(0).Index).Value
                 MaestroVehiculo.ComboCondicion.Text = DataGridView.Item("ColumnaCondicion", DataGridView.SelectedRows(0).Index).Value
                 MaestroVehiculo.ComboEstado.Text = DataGridView.Item("ColumnaEstadoActual", DataGridView.SelectedRows(0).Index).Value
                 MaestroVehiculo.ComboClasificacion.Text = DataGridView.Item("ColumnaClasificacion", DataGridView.SelectedRows(0).Index).Value
@@ -194,10 +194,11 @@ Public Class ListadoVehiculo
     Function Filtrar(ByVal busqueda As String) As DataTable
         'Funcion que carga los datos de acuerdo a lo ingresado en el TextBox
 
-        Dim cmd As New MySqlCommand(" SELECT idvehiculo, nombretipo, nombresubflota, clasificacionvehiculo, estadoactual, condicionvehiculo " _
-                            & " FROM vehiculo, tipovehiculo, subflota " _
+        Dim cmd As New MySqlCommand(" SELECT idvehiculo, nombretipo, nombregrupo, clasificacionvehiculo, estadoactual, condicionvehiculo " _
+                            & " FROM vehiculo, tipovehiculo, subflota, grupo " _
                             & " WHERE vehiculo.tipovehiculo = tipovehiculo.idtipo" _
-                            & " AND vehiculo.subflota = subflota.idsubflota" _
+                            & " AND vehiculo.grupo = grupo.idgrupo" _
+                            & " AND grupo.subflota = subflota.idsubflota" _
                             & " AND idvehiculo LIKE '%" & busqueda & "%' ", Conexion)
 
         Dim Tabla As New DataTable
@@ -220,7 +221,7 @@ Public Class ListadoVehiculo
 
                 MaestroVehiculo.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
                 MaestroVehiculo.ComboTipo.Text = DataGridView.Item("ColumnaTipo", DataGridView.SelectedRows(0).Index).Value
-                MaestroVehiculo.ComboFlota.Text = DataGridView.Item("ColumnaSublota", DataGridView.SelectedRows(0).Index).Value
+                MaestroVehiculo.ComboGrupo.Text = DataGridView.Item("ColumnaSublota", DataGridView.SelectedRows(0).Index).Value
                 MaestroVehiculo.ComboCondicion.Text = DataGridView.Item("ColumnaCondicion", DataGridView.SelectedRows(0).Index).Value
                 MaestroVehiculo.ComboEstado.Text = DataGridView.Item("ColumnaEstadoActual", DataGridView.SelectedRows(0).Index).Value
                 MaestroVehiculo.ComboClasificacion.Text = DataGridView.Item("ColumnaClasificacion", DataGridView.SelectedRows(0).Index).Value

@@ -35,7 +35,7 @@ Partial Class MaestroVehiculo
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboFlota = New System.Windows.Forms.ComboBox()
+        Me.ComboGrupo = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboTipo = New System.Windows.Forms.ComboBox()
@@ -142,20 +142,20 @@ Partial Class MaestroVehiculo
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label1.Location = New System.Drawing.Point(12, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 15)
+        Me.Label1.Size = New System.Drawing.Size(46, 15)
         Me.Label1.TabIndex = 53
-        Me.Label1.Text = "FLOTA"
+        Me.Label1.Text = "GRUPO"
         '
-        'ComboFlota
+        'ComboGrupo
         '
-        Me.ComboFlota.BackColor = System.Drawing.Color.AliceBlue
-        Me.ComboFlota.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboFlota.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.ComboFlota.FormattingEnabled = True
-        Me.ComboFlota.Location = New System.Drawing.Point(12, 87)
-        Me.ComboFlota.Name = "ComboFlota"
-        Me.ComboFlota.Size = New System.Drawing.Size(315, 23)
-        Me.ComboFlota.TabIndex = 58
+        Me.ComboGrupo.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboGrupo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ComboGrupo.FormattingEnabled = True
+        Me.ComboGrupo.Location = New System.Drawing.Point(12, 87)
+        Me.ComboGrupo.Name = "ComboGrupo"
+        Me.ComboGrupo.Size = New System.Drawing.Size(315, 23)
+        Me.ComboGrupo.TabIndex = 58
         '
         'TextBox2
         '
@@ -355,7 +355,7 @@ Partial Class MaestroVehiculo
         Me.Controls.Add(Me.ComboTipo)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.ComboFlota)
+        Me.Controls.Add(Me.ComboGrupo)
         Me.Controls.Add(Me.BotonBuscar)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
@@ -384,7 +384,7 @@ Partial Class MaestroVehiculo
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ComboFlota As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboGrupo As System.Windows.Forms.ComboBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ComboTipo As System.Windows.Forms.ComboBox

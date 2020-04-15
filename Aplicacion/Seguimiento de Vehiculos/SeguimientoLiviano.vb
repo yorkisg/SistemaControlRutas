@@ -200,7 +200,7 @@ Public Class SeguimientoLiviano
         Catch ex As Exception
 
         End Try
-           
+
     End Sub
 
     Private Sub DataGridView1_MouseDown(sender As Object, e As MouseEventArgs) Handles DataGridView1.MouseDown
@@ -563,7 +563,7 @@ Public Class SeguimientoLiviano
 
                 MaestroVehiculo.TextBox1.Text = TextBox2.Text
                 MaestroVehiculo.TextBox1.Enabled = False
-                MaestroVehiculo.ComboFlota.Enabled = True
+                MaestroVehiculo.ComboGrupo.Enabled = True
                 MaestroVehiculo.ComboTipo.Enabled = True
                 MaestroVehiculo.ComboCondicion.Enabled = True
                 MaestroVehiculo.ComboEstado.Enabled = False

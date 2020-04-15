@@ -376,10 +376,11 @@ Module ModuloConsulta
 
         Dim Command As New MySqlCommand("SELECT nombrepersonal AS 'Personal', COUNT(idregistroinfraccion) AS 'Cantidad de Infracciones', " _
                     & " MAX(velocidad) AS 'Maxima Velocidad', ROUND(AVG(velocidad), 2) as 'Promedio del Periodo', nombresubflota AS 'Flota' " _
-                    & " FROM registroinfraccion, personal, vehiculo, subflota " _
+                    & " FROM registroinfraccion, personal, vehiculo, grupo, subflota " _
                     & " WHERE personal.idpersonal = registroinfraccion.personal " _
                     & " AND registroinfraccion.vehiculo = vehiculo.idvehiculo " _
-                    & " AND vehiculo.subflota = subflota.idsubflota " _
+                    & " AND vehiculo.grupo = grupo.idgrupo " _
+                    & " AND grupo.subflota = subflota.idsubflota  " _
                     & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                     & " AND clasificacionvehiculo = '" & ReporteInfraccion.TextBox3.Text & "' " _
                     & " GROUP BY nombrepersonal " _
@@ -467,11 +468,12 @@ Module ModuloConsulta
     Public Sub CargarGridGeneralVehiculo()
         'Metodo que genera la carga de datos en el DataGridview2.
 
-        Dim sql As String = "Select vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombresubflota, nombreestado " _
-                         & " FROM ruta, personal, subflota, vehiculo, destino, producto, sitiocarga, estadoruta  " _
+        Dim sql As String = "Select vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombregrupo, nombreestado " _
+                         & " FROM ruta, personal, subflota, grupo, vehiculo, destino, producto, sitiocarga, estadoruta  " _
                          & " WHERE ruta.personal = personal.idpersonal " _
                          & " And ruta.vehiculo = vehiculo.idvehiculo  " _
-                         & " And vehiculo.subflota = subflota.idsubflota  " _
+                         & " and vehiculo.grupo = grupo.idgrupo " _
+                         & " And grupo.subflota = subflota.idsubflota  " _
                          & " And ruta.destino = destino.iddestino  " _
                          & " And ruta.producto = producto.idproducto  " _
                          & " And ruta.sitiocarga = sitiocarga.idsitiocarga  " _
@@ -598,13 +600,14 @@ Module ModuloConsulta
 
         Dim sql As String = "SELECT COUNT(vehiculo) AS 'Unidades', nombreproducto AS 'Producto',  nombresitiocarga AS 'Sitio de Carga', " _
                 & " nombredestino AS 'Destino', nombreestado AS 'Estado',  " _
-                & " nombresubflota AS 'Flota'  " _
-                & " FROM ruta, producto, sitiocarga, destino, subflota, vehiculo, estadoruta " _
+                & " nombregrupo AS 'Grupo'  " _
+                & " FROM ruta, producto, sitiocarga, destino, grupo, subflota, vehiculo, estadoruta " _
                 & " WHERE ruta.producto = producto.idproducto " _
                 & " AND ruta.destino = destino.iddestino    " _
                 & " AND ruta.sitiocarga = sitiocarga.idsitiocarga    " _
                 & " AND ruta.vehiculo = vehiculo.idvehiculo    " _
-                & " AND vehiculo.subflota = subflota.idsubflota  " _
+                & " and vehiculo.grupo = grupo.idgrupo " _
+                & " And grupo.subflota = subflota.idsubflota  " _
                 & " AND ruta.estadoruta = estadoruta.idestado  " _
                 & " AND estado = 'ACTIVA'  " _
                 & " AND nombreestado NOT IN ('EN TALLER') " _
@@ -691,6 +694,7 @@ Module ModuloConsulta
         Next
 
     End Sub
+
 
     Public Sub ObtenerPersonalListado()
         'Este metodo permite obtener el ID del chofer y sus datos

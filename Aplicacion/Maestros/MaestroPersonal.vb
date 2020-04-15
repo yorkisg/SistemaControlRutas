@@ -65,7 +65,7 @@ Public Class MaestroPersonal
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("UPDATE personal SET nombrepersonal = '" & TextBox2.Text & "', telefono1 = '" & TextBox3.Text & "', telefono2 = '" & TextBox4.Text & "', estadochofer = '" & ComboEstadoPersona.Text & "', tipopersonal = '" & ComboTipoPersona.Text & "' WHERE idpersonal = '" & TextBox1.Text & "' ", Conexion)
+            Dim db As New MySqlCommand("UPDATE personal SET nombrepersonal = '" & TextBox2.Text & "', telefono1 = '" & TextBox3.Text & "', telefono2 = '" & TextBox4.Text & "', estadopersonal = '" & ComboEstadoPersona.Text & "', tipopersonal = '" & ComboTipoPersona.Text & "' WHERE idpersonal = '" & TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Personal modificado con Exito.", MsgBoxStyle.Information, "Exito.")
 

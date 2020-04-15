@@ -212,10 +212,10 @@ Partial Class ConsultaResumenVehiculo
         '
         'ColumnaFlota
         '
-        Me.ColumnaFlota.DataPropertyName = "Flota"
+        Me.ColumnaFlota.DataPropertyName = "Grupo"
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle7
-        Me.ColumnaFlota.HeaderText = "FLOTA"
+        Me.ColumnaFlota.HeaderText = "GRUPO"
         Me.ColumnaFlota.Name = "ColumnaFlota"
         Me.ColumnaFlota.ReadOnly = True
         '
@@ -250,10 +250,10 @@ Partial Class ConsultaResumenVehiculo
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaFlota As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaUnidades As DataGridViewTextBoxColumn
 End Class

@@ -10,13 +10,11 @@ Public Class SeguimientoCarga
         InicializarTimer()
 
         'Llamada al metodo que permite cargar el arbol de opciones proveniente del Modulo.
-        'CargarArbolCarga()
-        'CargarArbolCarga2() 
-        CargarArbolCarga3() 'EN PRUEBA Y REESTRUCTURACION
+        CargarArbolCarga()
 
         'Validamos que el primer item seleccionado en el arbol sea el primero
-        'Arbol.SelectedNode = Arbol.Nodes(0).Nodes(0) 'SELECCIONAMOS EL PRIMER HIJO
-        Arbol.SelectedNode = Arbol.Nodes(0) 'SELECCIONAMOS EL PRIMER PADRE
+        Arbol.SelectedNode = Arbol.Nodes(0).Nodes(0) 'SELECCIONAMOS EL PRIMER HIJO
+        'Arbol.SelectedNode = Arbol.Nodes(0) 'SELECCIONAMOS EL PRIMER PADRE
 
         'Se habilita la serie correlativa para el ID de las rutas.
         SerieRutaCarga()
@@ -1021,7 +1019,7 @@ Public Class SeguimientoCarga
 
                 MaestroVehiculo.TextBox1.Text = TextBox1.Text
                 MaestroVehiculo.TextBox1.Enabled = False
-                MaestroVehiculo.ComboFlota.Enabled = False
+                MaestroVehiculo.ComboGrupo.Enabled = False
                 MaestroVehiculo.ComboTipo.Enabled = False
                 MaestroVehiculo.ComboCondicion.Enabled = True
                 MaestroVehiculo.ComboEstado.Enabled = False

@@ -5,7 +5,7 @@ Public Class MaestroVehiculo
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Carga de los combobox por valores de BD.
-        CargarComboFlota()
+        CargarComboGrupo()
         CargarComboTipo()
         CargarComboCondicion()
         CargarComboEstadoVehiculo()
@@ -42,7 +42,7 @@ Public Class MaestroVehiculo
 
         ElseIf ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("INSERT INTO vehiculo (idvehiculo, subflota, tipovehiculo, clasificacionvehiculo ,condicionvehiculo, estadoactual, estadorevision) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox6.Text & "', '" & ComboCondicion.Text & "', '" & ComboEstado.Text & "', 'OPERATIVO')", Conexion)
+            Dim db As New MySqlCommand("INSERT INTO vehiculo (idvehiculo, grupo, tipovehiculo, clasificacionvehiculo ,condicionvehiculo, estadoactual, estadorevision) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox6.Text & "', '" & ComboCondicion.Text & "', '" & ComboEstado.Text & "', 'OPERATIVO')", Conexion)
             db.ExecuteNonQuery()
 
             'Se limpian todos los componentes del formulario para un nuevo uso.
@@ -62,7 +62,7 @@ Public Class MaestroVehiculo
         'Se valida que no haya algun campo vacio.
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("UPDATE vehiculo SET subflota = '" & TextBox2.Text & "', tipovehiculo = '" & TextBox3.Text & "', clasificacionvehiculo = '" & ComboClasificacion.Text & "', condicionvehiculo = '" & ComboCondicion.Text & "', estadoactual = '" & ComboEstado.Text & "' WHERE idvehiculo = '" & TextBox1.Text & "' ", Conexion)
+            Dim db As New MySqlCommand("UPDATE vehiculo SET grupo = '" & TextBox2.Text & "', tipovehiculo = '" & TextBox3.Text & "', clasificacionvehiculo = '" & ComboClasificacion.Text & "', condicionvehiculo = '" & ComboCondicion.Text & "', estadoactual = '" & ComboEstado.Text & "' WHERE idvehiculo = '" & TextBox1.Text & "' ", Conexion)
             db.ExecuteNonQuery()
 
             'Se desactiva el uso del boton modificar.
@@ -107,18 +107,18 @@ Public Class MaestroVehiculo
 
     End Sub
 
-    Private Sub CargarComboFlota()
+    Private Sub CargarComboGrupo()
         'Metodo que permite cargar el Combobox desde la BD.
 
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter
 
-        Adaptador = New MySqlDataAdapter("SELECT * FROM subflota ORDER BY nombresubflota ASC", Conexion)
+        Adaptador = New MySqlDataAdapter("SELECT * FROM grupo ORDER BY nombregrupo ASC", Conexion)
         Adaptador.Fill(Tabla)
 
-        ComboFlota.DataSource = Tabla
-        ComboFlota.DisplayMember = "nombresubflota"
-        ComboFlota.ValueMember = "idsubflota"
+        ComboGrupo.DataSource = Tabla
+        ComboGrupo.DisplayMember = "nombregrupo"
+        ComboGrupo.ValueMember = "idgrupo"
 
     End Sub
 
@@ -206,17 +206,17 @@ Public Class MaestroVehiculo
 
     End Sub
 
-    Private Sub ComboFlota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboFlota.SelectedIndexChanged
+    Private Sub ComboGrupo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboGrupo.SelectedIndexChanged
         'Este metodo permite obtener el ID de cada item seleccionado. 
 
         Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT idsubflota FROM subflota WHERE nombresubflota = ('" & ComboFlota.Text & "') ", Conexion)
+        Adaptador = New MySqlDataAdapter("SELECT idgrupo FROM grupo WHERE nombregrupo = ('" & ComboGrupo.Text & "') ", Conexion)
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows
-            TextBox2.Text = row("idsubflota").ToString
+            TextBox2.Text = row("idgrupo").ToString
         Next
 
     End Sub
@@ -375,8 +375,8 @@ Public Class MaestroVehiculo
             Validar = False
         End If
 
-        If String.IsNullOrEmpty(ComboFlota.Text) Then
-            ErrorProvider1.SetError(ComboFlota, "No puede dejar campos en blanco.")
+        If String.IsNullOrEmpty(ComboGrupo.Text) Then
+            ErrorProvider1.SetError(ComboGrupo, "No puede dejar campos en blanco.")
             Validar = False
         End If
 

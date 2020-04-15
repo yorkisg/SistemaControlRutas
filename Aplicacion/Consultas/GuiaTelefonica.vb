@@ -135,7 +135,7 @@ Public Class GuiaTelefonica
         'Funcion que carga los datos de acuerdo a lo ingresado en el TextBox
         'Para filtrar choferes
 
-        Dim cmd As New MySqlCommand("SELECT idpersonal, nombrepersonal, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
+        Dim cmd As New MySqlCommand("SELECT idpersonal, nombrepersonal, tipopersonal, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
             & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadopersonal FROM personal " _
             & " WHERE nombrepersonal LIKE '%" & busqueda & "%' " _
             & " AND tipopersonal = 'CARGA' " _
@@ -153,7 +153,7 @@ Public Class GuiaTelefonica
         'Funcion que carga los datos de acuerdo a lo ingresado en el TextBox
         'Para filtrar choferes
 
-        Dim cmd As New MySqlCommand("SELECT idpersonal, nombrepersonal, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
+        Dim cmd As New MySqlCommand("SELECT idpersonal, nombrepersonal, tipopersonal, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
             & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadopersonal FROM personal " _
             & " WHERE nombrepersonal LIKE '%" & busqueda1 & "%' " _
             & " AND tipopersonal = 'LIVIANO' " _
@@ -171,7 +171,7 @@ Public Class GuiaTelefonica
         'Funcion que carga los datos de acuerdo a lo ingresado en el TextBox
         'Para filtrar personal
 
-        Dim cmd As New MySqlCommand("SELECT idpersonal, nombrepersonal, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
+        Dim cmd As New MySqlCommand("SELECT idpersonal, nombrepersonal, tipopersonal, if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A') AS 'Telefono1', " _
             & " if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A') AS 'Telefono2', estadopersonal FROM personal " _
             & " WHERE nombrepersonal LIKE '%" & busqueda2 & "%' " _
             & " AND tipopersonal = 'PERSONAL' " _

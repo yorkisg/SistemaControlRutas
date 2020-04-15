@@ -13,9 +13,10 @@ Module ModuloSeguimientoLiviano
         Dim Adaptador As New MySqlDataAdapter
         Dim Datatable = New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT nombresubflota FROM subflota " _
-                                   & " WHERE tiposubflota = 'LIVIANO' " _
-                                   & " ORDER BY nombresubflota ASC", Conexion)
+        Adaptador = New MySqlDataAdapter("SELECT nombregrupo FROM grupo, subflota " _
+                                   & " WHERE grupo.subflota = subflota.idsubflota " _
+                                   & " AND tiposubflota = 'LIVIANO' " _
+                                   & " ORDER BY nombregrupo ASC", Conexion)
 
         Adaptador.Fill(Datatable)
 
@@ -27,7 +28,7 @@ Module ModuloSeguimientoLiviano
 
             For i = 0 To Datatable.Rows.Count - 1
 
-                SeguimientoLiviano.Arbol.Nodes.Add(Datatable.Rows(i)("nombresubflota").ToString)
+                SeguimientoLiviano.Arbol.Nodes.Add(Datatable.Rows(i)("nombregrupo").ToString)
 
             Next
 
@@ -46,10 +47,11 @@ Module ModuloSeguimientoLiviano
     Public Sub CargarGridRutaLiviano()
         'Metodo que genera la carga de datos en el DataGridview1 
 
-        Dim sql As String = "SELECT idvehiculo, nombretipo, condicionvehiculo FROM vehiculo, subflota, tipovehiculo " _
-                       & " WHERE vehiculo.subflota = subflota.idsubflota " _
-                       & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
-                       & " AND nombresubflota = '" & SeguimientoLiviano.TextBox1.Text & "' " _
+        Dim sql As String = "SELECT idvehiculo, nombretipo, condicionvehiculo FROM vehiculo, subflota, grupo, tipovehiculo " _
+                       & " WHERE vehiculo.grupo = grupo.idgrupo " _
+                       & " AND grupo.subflota = subflota.idsubflota " _
+                       & " And vehiculo.tipovehiculo = tipovehiculo.idtipo " _
+                       & " And nombregrupo = '" & SeguimientoLiviano.TextBox1.Text & "' " _
                        & " AND condicionvehiculo <> 'INACTIVO' " _
                        & " ORDER BY idvehiculo ASC "
 
@@ -159,9 +161,9 @@ Module ModuloSeguimientoLiviano
         Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT nombresubflota, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
-                                          & " FROM vehiculo, subflota, tipovehiculo " _
-                                          & " WHERE vehiculo.subflota = subflota.idsubflota " _
+        Adaptador = New MySqlDataAdapter("SELECT nombregrupo, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
+                                          & " FROM vehiculo, grupo, tipovehiculo " _
+                                          & " WHERE vehiculo.grupo = grupo.idgrupo " _
                                           & " AND vehiculo.tipovehiculo = tipovehiculo.idtipo " _
                                           & " AND idvehiculo = '" & SeguimientoLiviano.TextBox2.Text & "' ", Conexion)
 
@@ -169,7 +171,7 @@ Module ModuloSeguimientoLiviano
 
         For Each row As DataRow In Tabla.Rows
 
-            MaestroVehiculo.ComboFlota.Text = row("nombresubflota").ToString
+            MaestroVehiculo.ComboGrupo.Text = row("nombregrupo").ToString
             MaestroVehiculo.ComboTipo.Text = row("nombretipo").ToString
             MaestroVehiculo.ComboEstado.Text = row("estadoactual").ToString
             MaestroVehiculo.ComboCondicion.Text = row("condicionvehiculo").ToString
