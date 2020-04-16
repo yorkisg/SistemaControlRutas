@@ -387,7 +387,7 @@ Public Class SeguimientoLiviano
             'Se valida que no haya algun campo vacio
             If ValidarComponentesInfraccionLiviano() = True Then
 
-                Dim db As New MySqlCommand("INSERT INTO registroinfraccion (idregistroinfraccion, vehiculo, chofer, velocidad, estadovehiculo, fecha, hora) VALUES ('" & TextBox9.Text & "', '" & TextBox2.Text & "', '" & TextBox6.Text & "', '" & TextBox4.Text & "', '" & TextBox11.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", Conexion)
+                Dim db As New MySqlCommand("INSERT INTO registroinfraccion (idregistroinfraccion, vehiculo, personal, velocidad, estadovehiculo, fecha, hora) VALUES ('" & TextBox9.Text & "', '" & TextBox2.Text & "', '" & TextBox6.Text & "', '" & TextBox4.Text & "', '" & TextBox11.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", Conexion)
                 db.ExecuteNonQuery()
                 MsgBox("Infracción registrada con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -418,7 +418,7 @@ Public Class SeguimientoLiviano
             'Se valida que no haya algun campo vacio
             If ValidarComponentesIncidenciaLiviano() = True Then
 
-                Dim db As New MySqlCommand("INSERT INTO registroincidencia (idregistroincidencia, vehiculo, chofer, descripcion, clasificacion, fecha, hora) VALUES ('" & TextBox12.Text & "', '" & TextBox3.Text & "', '" & TextBox18.Text & "', '" & TextBox7.Text & "', '" & TextBox13.Text & "', '" & fecha & "', '" & TextBox8.Text & "')", Conexion)
+                Dim db As New MySqlCommand("INSERT INTO registroincidencia (idregistroincidencia, vehiculo, personal, descripcion, clasificacion, fecha, hora) VALUES ('" & TextBox12.Text & "', '" & TextBox3.Text & "', '" & TextBox18.Text & "', '" & TextBox7.Text & "', '" & TextBox13.Text & "', '" & fecha & "', '" & TextBox8.Text & "')", Conexion)
                 db.ExecuteNonQuery()
                 MsgBox("Incidencia registrada con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -644,7 +644,7 @@ Public Class SeguimientoLiviano
 
     End Sub
 
-    Private Sub BotonChofer_Click(sender As Object, e As EventArgs) Handles BotonChofer.Click
+    Private Sub BotonPersonal_Click(sender As Object, e As EventArgs) Handles BotonPersonal.Click
         'Llamada al formulario MaestroPersonal
 
         MaestroPersonal.BotonBuscar.Enabled = False

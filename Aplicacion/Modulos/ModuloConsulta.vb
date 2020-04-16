@@ -228,9 +228,10 @@ Module ModuloConsulta
 
         Dim connection As New MySqlConnection(ConnectionString)
 
-        Dim sql As String = "SELECT COUNT(*) AS 'Conteo', nombresubflota AS 'Flota' FROM ruta, estadoruta, vehiculo, subflota " _
+        Dim sql As String = "SELECT COUNT(*) AS 'Conteo', nombresubflota AS 'Flota' FROM ruta, estadoruta, vehiculo, grupo, subflota " _
                 & " WHERE ruta.estadoruta = estadoruta.idestado AND ruta.vehiculo = vehiculo.idvehiculo " _
-                & " AND vehiculo.subflota = subflota.idsubflota " _
+                & " AND vehiculo.grupo = grupo.idgrupo " _
+                & " AND grupo.subflota = subflota.idsubflota " _
                 & " AND nombreestado IN ('EN RUTA CARGADO','EN RUTA VACIO') " _
                 & " AND MONTH(fecha) = MONTH(CURDATE())" _
                 & " GROUP BY nombresubflota "

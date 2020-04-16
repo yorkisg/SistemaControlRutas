@@ -73,9 +73,11 @@ Module ModuloEstadistica
         'EstadisticaRuta
 
         'Conexion a la BD.
-        Dim sql As String = "SELECT COUNT(*) AS 'Conteo', nombresubflota AS 'Flota' FROM ruta, estadoruta, vehiculo, subflota " _
-                & " WHERE ruta.estadoruta = estadoruta.idestado AND ruta.vehiculo = vehiculo.idvehiculo " _
-                & " AND vehiculo.subflota = subflota.idsubflota " _
+        Dim sql As String = "SELECT COUNT(*) AS 'Conteo', nombresubflota AS 'Flota' FROM ruta, estadoruta, vehiculo, grupo, subflota " _
+                & " WHERE ruta.estadoruta = estadoruta.idestado " _
+                & " AND ruta.vehiculo = vehiculo.idvehiculo " _
+                & " AND vehiculo.grupo = grupo.idgrupo " _
+                & " AND grupo.subflota = subflota.idsubflota " _
                 & " AND nombreestado IN ('EN RUTA CARGADO','EN RUTA VACIO') " _
                 & " GROUP BY nombresubflota "
 
@@ -89,7 +91,7 @@ Module ModuloEstadistica
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "estadisticasrutaflota")
         Tabla = DataSet.Tables("estadisticasrutaflota")
-        EstadisticaRuta.DataGridView2.DataSource = DataSet.Tables("estadisticasrutaflota")
+        EstadisticaRuta.DataGridView2.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With EstadisticaRuta.DataGridView2
@@ -165,9 +167,10 @@ Module ModuloEstadistica
 
         'Conexion a la BD.
         Dim sql As String = "SELECT COUNT(velocidad) AS 'Conteo', nombresubflota AS 'Flota' " _
-                                & " FROM registroinfraccion, vehiculo, subflota " _
+                                & " FROM registroinfraccion, vehiculo, grupo, subflota " _
                                 & " WHERE registroinfraccion.vehiculo = vehiculo.idvehiculo " _
-                                & " AND vehiculo.subflota = subflota.idsubflota " _
+                                & " AND vehiculo.grupo = grupo.idgrupo " _
+                                & " AND grupo.subflota = subflota.idsubflota " _
                                 & " GROUP BY nombresubflota " _
                                 & " ORDER BY nombresubflota ASC "
 
@@ -181,7 +184,7 @@ Module ModuloEstadistica
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "estadisticasinfraccionflota")
         Tabla = DataSet.Tables("estadisticasinfraccionflota")
-        EstadisticaInfraccion.DataGridView2.DataSource = DataSet.Tables("estadisticasinfraccionflota")
+        EstadisticaInfraccion.DataGridView2.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With EstadisticaInfraccion.DataGridView2

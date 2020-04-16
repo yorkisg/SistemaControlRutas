@@ -31,6 +31,24 @@ Module ModuloSeguimientoTaller
 
     End Sub
 
+    Public Sub CargarComboArbol2()
+        'Metodo que permite cargar el Combobox desde la BD.
+
+        Dim Tabla As New DataTable
+        Dim Adaptador As New MySqlDataAdapter
+
+        Adaptador = New MySqlDataAdapter("SELECT idgrupo, nombregrupo " _
+                                         & " FROM grupo ORDER BY nombregrupo ASC", Conexion)
+
+        Adaptador.Fill(Tabla)
+
+        SeguimientoTaller.ComboArbol.ComboBox.DataSource = Tabla
+        SeguimientoTaller.ComboArbol.ComboBox.DisplayMember = "nombregrupo"
+        SeguimientoTaller.ComboArbol.ComboBox.ValueMember = "idgrupo"
+
+    End Sub
+
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CARGA DE DATOS''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

@@ -28,10 +28,10 @@ Partial Class Principal
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuMaestros = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuPersonal = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuProductos = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menusitiocargaes = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuVehiculos = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuPersonal = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuGestionRutas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuSeguimientoCarga = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuSeguimientoLiviano = New System.Windows.Forms.ToolStripMenuItem()
@@ -97,6 +97,13 @@ Partial Class Principal
         Me.MenuMaestros.Size = New System.Drawing.Size(129, 21)
         Me.MenuMaestros.Text = "Datos Maestros"
         '
+        'MenuPersonal
+        '
+        Me.MenuPersonal.Image = CType(resources.GetObject("MenuPersonal.Image"), System.Drawing.Image)
+        Me.MenuPersonal.Name = "MenuPersonal"
+        Me.MenuPersonal.Size = New System.Drawing.Size(165, 22)
+        Me.MenuPersonal.Text = "Personal"
+        '
         'MenuProductos
         '
         Me.MenuProductos.Image = CType(resources.GetObject("MenuProductos.Image"), System.Drawing.Image)
@@ -117,13 +124,6 @@ Partial Class Principal
         Me.MenuVehiculos.Name = "MenuVehiculos"
         Me.MenuVehiculos.Size = New System.Drawing.Size(165, 22)
         Me.MenuVehiculos.Text = "Vehiculos"
-        '
-        'MenuPersonal
-        '
-        Me.MenuPersonal.Image = CType(resources.GetObject("MenuPersonal.Image"), System.Drawing.Image)
-        Me.MenuPersonal.Name = "MenuPersonal"
-        Me.MenuPersonal.Size = New System.Drawing.Size(165, 22)
-        Me.MenuPersonal.Text = "Personal"
         '
         'MenuGestionRutas
         '
@@ -387,7 +387,7 @@ Partial Class Principal
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripButton1.Text = "12.04.2020"
+        Me.ToolStripButton1.Text = "16.04.2020"
         '
         'ToolStripLabel2
         '

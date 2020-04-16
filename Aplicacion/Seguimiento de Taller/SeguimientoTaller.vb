@@ -4,7 +4,8 @@ Public Class SeguimientoTaller
     Private Sub SeguimientoTaller_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Llamada al metodo que permite cargar el arbol de opciones proveniente del Modulo.
-        CargarComboArbol()
+        'CargarComboArbol()
+        CargarComboArbol2()
 
         'Validamos que el primer item seleccionado en el arbol sea el primero
         'ComboArbol.SelectedItem = "AMBULANCIAS"

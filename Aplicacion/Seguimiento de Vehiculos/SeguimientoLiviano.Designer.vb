@@ -38,7 +38,7 @@ Partial Class SeguimientoLiviano
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonGuiaTelefonica = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BotonChofer = New System.Windows.Forms.ToolStripButton()
+        Me.BotonPersonal = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonVehiculo = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
@@ -62,8 +62,23 @@ Partial Class SeguimientoLiviano
         Me.Panel6 = New System.Windows.Forms.TabControl()
         Me.Pagina4 = New System.Windows.Forms.TabPage()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaIDRegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVelocidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaClasificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pagina5 = New System.Windows.Forms.TabPage()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaIDRegistro2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaClasificacion2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFecha2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaHora2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4 = New System.Windows.Forms.TabControl()
         Me.Pagina1 = New System.Windows.Forms.TabPage()
         Me.Arbol = New System.Windows.Forms.TreeView()
@@ -125,21 +140,6 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ColumnaIDRegistro = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVelocidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaClasificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaIDRegistro2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaDescripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaClasificacion2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFecha2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaHora2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -165,7 +165,7 @@ Partial Class SeguimientoLiviano
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonChofer, Me.ToolStripSeparator1, Me.BotonVehiculo, Me.ToolStripSeparator6, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonConsulta3, Me.ToolStripSeparator5, Me.BotonConsulta1, Me.ToolStripSeparator4, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonPersonal, Me.ToolStripSeparator1, Me.BotonVehiculo, Me.ToolStripSeparator6, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonConsulta3, Me.ToolStripSeparator5, Me.BotonConsulta1, Me.ToolStripSeparator4, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1113, 25)
@@ -185,13 +185,13 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
         Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 25)
         '
-        'BotonChofer
+        'BotonPersonal
         '
-        Me.BotonChofer.Image = CType(resources.GetObject("BotonChofer.Image"), System.Drawing.Image)
-        Me.BotonChofer.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BotonChofer.Name = "BotonChofer"
-        Me.BotonChofer.Size = New System.Drawing.Size(74, 22)
-        Me.BotonChofer.Text = "Choferes"
+        Me.BotonPersonal.Image = CType(resources.GetObject("BotonPersonal.Image"), System.Drawing.Image)
+        Me.BotonPersonal.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BotonPersonal.Name = "BotonPersonal"
+        Me.BotonPersonal.Size = New System.Drawing.Size(74, 22)
+        Me.BotonPersonal.Text = "Choferes"
         '
         'ToolStripSeparator1
         '
@@ -446,6 +446,66 @@ Partial Class SeguimientoLiviano
         Me.DataGridView2.Size = New System.Drawing.Size(677, 241)
         Me.DataGridView2.TabIndex = 62
         '
+        'ColumnaIDRegistro
+        '
+        Me.ColumnaIDRegistro.DataPropertyName = "idregistroinfraccion"
+        Me.ColumnaIDRegistro.HeaderText = "ID REGISTRO"
+        Me.ColumnaIDRegistro.Name = "ColumnaIDRegistro"
+        Me.ColumnaIDRegistro.ReadOnly = True
+        Me.ColumnaIDRegistro.Visible = False
+        '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
+        Me.ColumnaVehiculo.HeaderText = "VEHICULO"
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        Me.ColumnaVehiculo.Visible = False
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        '
+        'ColumnaVelocidad
+        '
+        Me.ColumnaVelocidad.DataPropertyName = "velocidad"
+        Me.ColumnaVelocidad.HeaderText = "VELOCIDAD"
+        Me.ColumnaVelocidad.Name = "ColumnaVelocidad"
+        Me.ColumnaVelocidad.ReadOnly = True
+        '
+        'ColumnaClasificacion
+        '
+        Me.ColumnaClasificacion.DataPropertyName = "clasificacion"
+        Me.ColumnaClasificacion.HeaderText = "CLASIFICACION"
+        Me.ColumnaClasificacion.Name = "ColumnaClasificacion"
+        Me.ColumnaClasificacion.ReadOnly = True
+        Me.ColumnaClasificacion.Visible = False
+        '
+        'ColumnaEstado2
+        '
+        Me.ColumnaEstado2.DataPropertyName = "estadovehiculo"
+        Me.ColumnaEstado2.HeaderText = "ESTADO"
+        Me.ColumnaEstado2.Name = "ColumnaEstado2"
+        Me.ColumnaEstado2.ReadOnly = True
+        Me.ColumnaEstado2.Visible = False
+        '
+        'ColumnaFecha
+        '
+        Me.ColumnaFecha.DataPropertyName = "fecha"
+        Me.ColumnaFecha.HeaderText = "FECHA"
+        Me.ColumnaFecha.Name = "ColumnaFecha"
+        Me.ColumnaFecha.ReadOnly = True
+        '
+        'ColumnaHora
+        '
+        Me.ColumnaHora.DataPropertyName = "hora"
+        Me.ColumnaHora.HeaderText = "HORA"
+        Me.ColumnaHora.Name = "ColumnaHora"
+        Me.ColumnaHora.ReadOnly = True
+        '
         'Pagina5
         '
         Me.Pagina5.Controls.Add(Me.DataGridView3)
@@ -491,6 +551,59 @@ Partial Class SeguimientoLiviano
         Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView3.Size = New System.Drawing.Size(677, 241)
         Me.DataGridView3.TabIndex = 64
+        '
+        'ColumnaIDRegistro2
+        '
+        Me.ColumnaIDRegistro2.DataPropertyName = "idregistroincidencia"
+        Me.ColumnaIDRegistro2.HeaderText = "ID REGISTRO"
+        Me.ColumnaIDRegistro2.Name = "ColumnaIDRegistro2"
+        Me.ColumnaIDRegistro2.ReadOnly = True
+        Me.ColumnaIDRegistro2.Visible = False
+        '
+        'ColumnaVehiculo2
+        '
+        Me.ColumnaVehiculo2.DataPropertyName = "vehiculo"
+        Me.ColumnaVehiculo2.HeaderText = "VEHICULO"
+        Me.ColumnaVehiculo2.Name = "ColumnaVehiculo2"
+        Me.ColumnaVehiculo2.ReadOnly = True
+        '
+        'ColumnaChofer2
+        '
+        Me.ColumnaChofer2.DataPropertyName = "nombrepersonal"
+        Me.ColumnaChofer2.HeaderText = "CHOFER"
+        Me.ColumnaChofer2.Name = "ColumnaChofer2"
+        Me.ColumnaChofer2.ReadOnly = True
+        '
+        'ColumnaDescripcion
+        '
+        Me.ColumnaDescripcion.DataPropertyName = "descripcion"
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaDescripcion.DefaultCellStyle = DataGridViewCellStyle10
+        Me.ColumnaDescripcion.HeaderText = "DESCRIPCION"
+        Me.ColumnaDescripcion.Name = "ColumnaDescripcion"
+        Me.ColumnaDescripcion.ReadOnly = True
+        '
+        'ColumnaClasificacion2
+        '
+        Me.ColumnaClasificacion2.DataPropertyName = "clasificacion"
+        Me.ColumnaClasificacion2.HeaderText = "CLASIFICACION"
+        Me.ColumnaClasificacion2.Name = "ColumnaClasificacion2"
+        Me.ColumnaClasificacion2.ReadOnly = True
+        Me.ColumnaClasificacion2.Visible = False
+        '
+        'ColumnaFecha2
+        '
+        Me.ColumnaFecha2.DataPropertyName = "fecha"
+        Me.ColumnaFecha2.HeaderText = "FECHA"
+        Me.ColumnaFecha2.Name = "ColumnaFecha2"
+        Me.ColumnaFecha2.ReadOnly = True
+        '
+        'ColumnaHora2
+        '
+        Me.ColumnaHora2.DataPropertyName = "hora"
+        Me.ColumnaHora2.HeaderText = "HORA"
+        Me.ColumnaHora2.Name = "ColumnaHora2"
+        Me.ColumnaHora2.ReadOnly = True
         '
         'Panel4
         '
@@ -1067,119 +1180,6 @@ Partial Class SeguimientoLiviano
         'Timer1
         '
         '
-        'ColumnaIDRegistro
-        '
-        Me.ColumnaIDRegistro.DataPropertyName = "idregistroinfraccion"
-        Me.ColumnaIDRegistro.HeaderText = "ID REGISTRO"
-        Me.ColumnaIDRegistro.Name = "ColumnaIDRegistro"
-        Me.ColumnaIDRegistro.ReadOnly = True
-        Me.ColumnaIDRegistro.Visible = False
-        '
-        'ColumnaVehiculo
-        '
-        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
-        Me.ColumnaVehiculo.HeaderText = "VEHICULO"
-        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
-        Me.ColumnaVehiculo.ReadOnly = True
-        Me.ColumnaVehiculo.Visible = False
-        '
-        'ColumnaChofer
-        '
-        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
-        '
-        'ColumnaVelocidad
-        '
-        Me.ColumnaVelocidad.DataPropertyName = "velocidad"
-        Me.ColumnaVelocidad.HeaderText = "VELOCIDAD"
-        Me.ColumnaVelocidad.Name = "ColumnaVelocidad"
-        Me.ColumnaVelocidad.ReadOnly = True
-        '
-        'ColumnaClasificacion
-        '
-        Me.ColumnaClasificacion.DataPropertyName = "clasificacion"
-        Me.ColumnaClasificacion.HeaderText = "CLASIFICACION"
-        Me.ColumnaClasificacion.Name = "ColumnaClasificacion"
-        Me.ColumnaClasificacion.ReadOnly = True
-        Me.ColumnaClasificacion.Visible = False
-        '
-        'ColumnaEstado2
-        '
-        Me.ColumnaEstado2.DataPropertyName = "estadovehiculo"
-        Me.ColumnaEstado2.HeaderText = "ESTADO"
-        Me.ColumnaEstado2.Name = "ColumnaEstado2"
-        Me.ColumnaEstado2.ReadOnly = True
-        Me.ColumnaEstado2.Visible = False
-        '
-        'ColumnaFecha
-        '
-        Me.ColumnaFecha.DataPropertyName = "fecha"
-        Me.ColumnaFecha.HeaderText = "FECHA"
-        Me.ColumnaFecha.Name = "ColumnaFecha"
-        Me.ColumnaFecha.ReadOnly = True
-        '
-        'ColumnaHora
-        '
-        Me.ColumnaHora.DataPropertyName = "hora"
-        Me.ColumnaHora.HeaderText = "HORA"
-        Me.ColumnaHora.Name = "ColumnaHora"
-        Me.ColumnaHora.ReadOnly = True
-        '
-        'ColumnaIDRegistro2
-        '
-        Me.ColumnaIDRegistro2.DataPropertyName = "idregistroincidencia"
-        Me.ColumnaIDRegistro2.HeaderText = "ID REGISTRO"
-        Me.ColumnaIDRegistro2.Name = "ColumnaIDRegistro2"
-        Me.ColumnaIDRegistro2.ReadOnly = True
-        Me.ColumnaIDRegistro2.Visible = False
-        '
-        'ColumnaVehiculo2
-        '
-        Me.ColumnaVehiculo2.DataPropertyName = "vehiculo"
-        Me.ColumnaVehiculo2.HeaderText = "VEHICULO"
-        Me.ColumnaVehiculo2.Name = "ColumnaVehiculo2"
-        Me.ColumnaVehiculo2.ReadOnly = True
-        '
-        'ColumnaChofer2
-        '
-        Me.ColumnaChofer2.DataPropertyName = "nombrepersonal"
-        Me.ColumnaChofer2.HeaderText = "CHOFER"
-        Me.ColumnaChofer2.Name = "ColumnaChofer2"
-        Me.ColumnaChofer2.ReadOnly = True
-        '
-        'ColumnaDescripcion
-        '
-        Me.ColumnaDescripcion.DataPropertyName = "descripcion"
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaDescripcion.DefaultCellStyle = DataGridViewCellStyle10
-        Me.ColumnaDescripcion.HeaderText = "DESCRIPCION"
-        Me.ColumnaDescripcion.Name = "ColumnaDescripcion"
-        Me.ColumnaDescripcion.ReadOnly = True
-        '
-        'ColumnaClasificacion2
-        '
-        Me.ColumnaClasificacion2.DataPropertyName = "clasificacion"
-        Me.ColumnaClasificacion2.HeaderText = "CLASIFICACION"
-        Me.ColumnaClasificacion2.Name = "ColumnaClasificacion2"
-        Me.ColumnaClasificacion2.ReadOnly = True
-        Me.ColumnaClasificacion2.Visible = False
-        '
-        'ColumnaFecha2
-        '
-        Me.ColumnaFecha2.DataPropertyName = "fecha"
-        Me.ColumnaFecha2.HeaderText = "FECHA"
-        Me.ColumnaFecha2.Name = "ColumnaFecha2"
-        Me.ColumnaFecha2.ReadOnly = True
-        '
-        'ColumnaHora2
-        '
-        Me.ColumnaHora2.DataPropertyName = "hora"
-        Me.ColumnaHora2.HeaderText = "HORA"
-        Me.ColumnaHora2.Name = "ColumnaHora2"
-        Me.ColumnaHora2.ReadOnly = True
-        '
         'SeguimientoLiviano
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1310,7 +1310,7 @@ Partial Class SeguimientoLiviano
     Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuHistorial As ContextMenuStrip
     Friend WithEvents EliminarItemToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents BotonChofer As ToolStripButton
+    Friend WithEvents BotonPersonal As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents MenuRuta2 As ContextMenuStrip
     Friend WithEvents MenuEliminar As ToolStripMenuItem
