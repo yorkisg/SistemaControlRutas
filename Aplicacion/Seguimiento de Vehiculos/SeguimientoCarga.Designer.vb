@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SeguimientoCarga
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class SeguimientoCarga
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SeguimientoCarga))
@@ -556,9 +556,9 @@ Partial Class SeguimientoCarga
         Me.TextBox4.BackColor = System.Drawing.Color.SkyBlue
         Me.TextBox4.Enabled = False
         Me.TextBox4.ForeColor = System.Drawing.Color.Black
-        Me.TextBox4.Location = New System.Drawing.Point(930, 110)
+        Me.TextBox4.Location = New System.Drawing.Point(917, 108)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(134, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(126, 22)
         Me.TextBox4.TabIndex = 84
         Me.TextBox4.Visible = False
         '
@@ -674,7 +674,7 @@ Partial Class SeguimientoCarga
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
         Me.TextBox1.Location = New System.Drawing.Point(211, 21)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(381, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(382, 22)
         Me.TextBox1.TabIndex = 79
         '
         'BotonAgregar2
@@ -1290,6 +1290,7 @@ Partial Class SeguimientoCarga
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label10)
@@ -1300,7 +1301,6 @@ Partial Class SeguimientoCarga
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox16)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox5)

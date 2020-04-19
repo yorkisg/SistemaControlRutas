@@ -47,7 +47,6 @@ Public Class Principal
         MaestroIncidencia.TextBox5.Text = DateTime.Now.ToShortTimeString()
         MaestroIncidencia.DateTimePicker1.Value = Today
 
-
     End Sub
 
     Private Sub ValidarRol()
@@ -116,6 +115,8 @@ Public Class Principal
 
         AccesoAplicacion.Close()
 
+        ' Application.Exit()
+
     End Sub
 
     Private Sub MenuPersonal_Click(sender As Object, e As EventArgs) Handles MenuPersonal.Click
@@ -149,7 +150,7 @@ Public Class Principal
     Private Sub MenuSeguimientoCarga_Click(sender As Object, e As EventArgs) Handles MenuSeguimientoCarga.Click
         'Formulario SeguimientoCarga
 
-        SeguimientoCarga.ShowDialog()
+        SeguimientoCarga.Show()
 
 
     End Sub
@@ -157,7 +158,7 @@ Public Class Principal
     Private Sub MenuSeguimientoLiviano_Click(sender As Object, e As EventArgs) Handles MenuSeguimientoLiviano.Click
         'Formulario SeguimientoLiviano
 
-        SeguimientoLiviano.ShowDialog()
+        SeguimientoLiviano.Show()
 
     End Sub
 

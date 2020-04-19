@@ -72,7 +72,7 @@ Public Class MaestroVehiculo
             'Se activa el uso del textbox1.
             TextBox1.Enabled = True
 
-            CargarGridRutaCarga()
+            CargarGridRutaCargaGrupo()
             CargarGridRutaLiviano()
 
             'Se limpian todos los componentes del formulario para un nuevo uso.

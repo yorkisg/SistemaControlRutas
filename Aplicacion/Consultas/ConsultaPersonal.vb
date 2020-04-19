@@ -6,7 +6,6 @@ Public Class ConsultaPersonal
 
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
-        AlternarFilasGeneral(DataGridView1)
 
         'Se coloca la fecha actual
         DateTimePicker1.Value = Today
@@ -14,7 +13,6 @@ Public Class ConsultaPersonal
 
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
-        EnableDoubleBuffered(DataGridView1)
 
     End Sub
 
@@ -38,10 +36,6 @@ Public Class ConsultaPersonal
                 If TextBox1.Text = "" Then
 
                     MsgBox("Debe seleccionar un chofer.", MsgBoxStyle.Exclamation, "Error.")
-
-                ElseIf TextBox1.Text <> "" Then
-
-                    CargarGridPersonalTop5()
 
                 End If
 
@@ -131,12 +125,6 @@ Public Class ConsultaPersonal
         For i As Integer = 0 To DataGridView.RowCount - 1
             'Eliminamos elemento por elemento
             DataGridView.Rows.Remove(DataGridView.CurrentRow)
-        Next
-
-        'Abrimos el ciclo que recorre todas las filas del datagridview
-        For j As Integer = 0 To DataGridView1.RowCount - 1
-            'Eliminamos elemento por elemento
-            DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
         Next
 
         'Limpiamos los demas componentes

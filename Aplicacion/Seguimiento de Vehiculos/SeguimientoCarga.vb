@@ -92,18 +92,16 @@ Public Class SeguimientoCarga
             'Enviamos el nombre de la flota al textbox4 mediante la propiedad node.text
             TextBox4.Text = e.Node.Text
 
-            'Si el nodo seleccionado tiene hijos
-            If e.Node.Nodes.Count > 0 Then
+            'se carga solamente el grupo seleccionado
+            CargarGridRutaCargaGrupo()
 
-                'Se carga el metodo q acumula todos los vehiculos de un grupo en la suflota
-                CargarGridRutaCargaSubFlota()
-
-            Else 'Sino tiene hijos 
-
-                'se carga solamente el grupo seleccionado
-                CargarGridRutaCarga()
-
-            End If
+            'If e.Node.Nodes.Count > 1 Then
+            'Se carga el metodo q acumula todos los vehiculos de un grupo en la suflota
+            'CargarGridRutaCargaSubFlota()
+            'ElseIf e.Node.Nodes.Count = 0 Then 'Sino tiene hijos 
+            'se carga solamente el grupo seleccionado
+            'CargarGridRutaCargaGrupo()
+            'End If
 
             'Enviamos el texto seleccionado a la variable, label, etc.
             Nombre = TextBox4.Text
@@ -114,7 +112,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.1", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -301,7 +299,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.11", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.2", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -326,7 +324,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.3", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -367,7 +365,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.4", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -395,7 +393,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.5", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -441,7 +439,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.6", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -464,7 +462,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.7", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -497,7 +495,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.8", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -644,7 +642,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.9", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -685,7 +683,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.10", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -739,11 +737,11 @@ Public Class SeguimientoCarga
                 'Llamada a metodos secundarios.
                 CargarGridHistorialCarga()
 
-                'Se carga el datagridview para actualizar iconos y valores de los estados actuales
-                CargarGridRutaCarga()
-
                 'Se habilita el metodo para incrementar el siguiente ID de las rutas.
                 SerieRutaCarga()
+
+                CargarGridRutaCargaGrupo()
+                'CargarGridRutaCargaSubFlota() 'SE IMPLEMENTARA LUEGO
 
                 'Luego de guardar nos posicionamos en la fila ya seleccionada anteriormente
                 'para verificar la inclusion de la ruta en el datagridview2.
@@ -755,7 +753,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("Debe verificar los datos de la ruta.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("Debe verificar los datos de la ruta.11", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -779,11 +777,11 @@ Public Class SeguimientoCarga
                 'Llamada a metodos secundarios.
                 CargarGridHistorialCarga()
 
-                'Se carga el datagridview para actualizar iconos y valores de los estados actuales
-                CargarGridRutaCarga()
-
                 'Se habilita el metodo para incrementar el siguiente ID de las rutas.
                 SerieRutaCarga()
+
+                CargarGridRutaCargaGrupo()
+                'CargarGridRutaCargaSubFlota() 'SE IMPLEMENTARA LUEGO
 
                 'Luego de guardar nos posicionamos en la fila ya seleccionada anteriormente
                 'para verificar la inclusion de la ruta en el datagridview2.
@@ -795,7 +793,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("Debe verificar los datos de la ruta.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("Debe verificar los datos de la ruta.11", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -913,7 +911,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.13", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -960,7 +958,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.14", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -975,7 +973,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.15", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -1046,7 +1044,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.16", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -1085,7 +1083,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.17", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -1114,7 +1112,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.17", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -1136,7 +1134,7 @@ Public Class SeguimientoCarga
 
         Catch ex As Exception
 
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("No se pudo completar la operación.18", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -1157,6 +1155,7 @@ Public Class SeguimientoCarga
         End If
 
     End Sub
+
 
 
 End Class

@@ -72,7 +72,7 @@ Public Class ListadoPersonal
                 'Llamamos al metodo para obtener los datos del chofer y luego editarlos en el MaestroChofer
 
                 'Guardamos el id en el textbox
-                TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
+                TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
 
                 'Enviamos datos al formulario
                 ObtenerPersonalListado()
@@ -261,7 +261,7 @@ Public Class ListadoPersonal
                 'Llamamos al metodo para obtener los datos del chofer y luego editarlos en el MaestroChofer
 
                 'Guardamos el id en el textbox
-                TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
+                TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
 
                 'Enviamos datos al formulario
                 ObtenerPersonalListado()

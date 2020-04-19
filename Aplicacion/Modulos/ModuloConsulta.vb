@@ -44,38 +44,6 @@ Module ModuloConsulta
 
     End Sub
 
-    Public Sub CargarGridPersonalTop5()
-        'Metodo para cargar el datagridview de la Guia Telefonica
-
-        'Conexion a la BD.
-        Dim sql As String = "SELECT DISTINCT vehiculo, MAX(fecha) AS 'Fecha2', nombreproducto " _
-                            & " FROM ruta, personal, producto  " _
-                            & " WHERE ruta.personal = personal.idpersonal " _
-                            & " AND ruta.producto = producto.idproducto " _
-                            & " AND nombrepersonal = '" & ConsultaPersonal.TextBox1.Text & "' " _
-                            & " GROUP BY vehiculo, nombreproducto " _
-                            & " ORDER BY Fecha2 DESC "
-
-        Dim connection As New MySqlConnection(ConnectionString)
-
-        'Instancia y uso de variables.
-        Command = New MySqlCommand(sql, connection)
-        Adaptador = New MySqlDataAdapter(Command)
-        DataSet = New DataSet()
-
-        'Llenado del datagridview.
-        Adaptador.Fill(DataSet, "top5chofer")
-        Tabla = DataSet.Tables("top5chofer")
-        ConsultaPersonal.DataGridView1.DataSource = DataSet.Tables("top5chofer")
-
-        'Parametros para editar apariencia del datagridview.
-        With ConsultaPersonal.DataGridView1
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-    End Sub
-
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CONSULTAR PRODUCTO''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -695,7 +663,6 @@ Module ModuloConsulta
 
     End Sub
 
-
     Public Sub ObtenerPersonalListado()
         'Este metodo permite obtener el ID del chofer y sus datos
 
@@ -703,13 +670,13 @@ Module ModuloConsulta
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idpersonal, nombrepersonal, tipopersonal, telefono1, telefono2, estadopersonal " _
-                                          & " FROM personal WHERE idpersonal = '" & ListadoPersonal.TextBox3.Text & "' ", Conexion)
+                                          & " FROM personal WHERE idpersonal = '" & ListadoPersonal.TextBox1.Text & "' ", Conexion)
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows
 
             MaestroPersonal.TextBox1.Text = row("idpersonal").ToString
-            MaestroPersonal.TextBox2.Text = row("nombrepersonalr").ToString
+            MaestroPersonal.TextBox2.Text = row("nombrepersonal").ToString
             MaestroPersonal.ComboTipoPersona.Text = row("tipopersonal").ToString
             MaestroPersonal.TextBox3.Text = row("telefono1").ToString
             MaestroPersonal.TextBox4.Text = row("telefono2").ToString

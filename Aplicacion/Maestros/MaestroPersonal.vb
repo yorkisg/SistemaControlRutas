@@ -94,6 +94,10 @@ Public Class MaestroPersonal
 
                     CargarGridGuiaPersonalLiviano()
 
+                ElseIf GuiaTelefonica.Panel8.SelectedIndex = 2 Then
+
+                    CargarGridGuiaPersonal()
+
                 End If
 
                 Dispose()
