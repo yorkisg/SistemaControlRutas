@@ -169,31 +169,10 @@ Public Class Principal
 
     End Sub
 
-    Private Sub MenuConsultarRutas_Click(sender As Object, e As EventArgs) Handles MenuConsultarRutas.Click
-        'Formulario ConsultaRuta
-
-        ConsultaRuta.ShowDialog()
-
-    End Sub
-
     Private Sub MenuConsultarChofer_Click(sender As Object, e As EventArgs) Handles MenuConsultarChofer.Click
         'Formulario ConsultaChofer
 
-        ConsultaPersonal.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuConsultarProducto_Click(sender As Object, e As EventArgs) Handles MenuConsultarProducto.Click
-        'Formulario ConsultaProducto
-
-        ConsultaProducto.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuConsultarVehiculo_Click(sender As Object, e As EventArgs) Handles MenuConsultarVehiculo.Click
-        'Formulario ConsultaVehiculo
-
-        ConsultaVehiculo.ShowDialog()
+        ConsultaGeneralRuta.ShowDialog()
 
     End Sub
 
@@ -221,14 +200,14 @@ Public Class Principal
     Private Sub MenuListadoCompelto_Click(sender As Object, e As EventArgs) Handles MenuListadoCompelto.Click
         'Formulario ListadoGeneralVehiculo
 
-        ConsultaGeneralVehiculo.ShowDialog()
+        ListadoGeneralRutas.ShowDialog()
 
     End Sub
 
-    Private Sub MenuResumenRuta_Click(sender As Object, e As EventArgs) Handles MenuResumenRuta.Click
+    Private Sub MenuResumenRuta_Click(sender As Object, e As EventArgs)
         'Formulario ListadoResumenVehiculo
 
-        ConsultaResumenVehiculo.ShowDialog()
+
 
     End Sub
 

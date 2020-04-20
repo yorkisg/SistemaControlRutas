@@ -241,8 +241,8 @@ Public Class MaestroVehiculo
                 e.Graphics.DrawImage(ImageList2.Images(e.Index), e.Bounds.Left, e.Bounds.Top)
 
                 'e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
-                e.Graphics.CompositingQuality = Drawing2D.CompositingQuality.HighQuality
-                e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                e.Graphics.CompositingQuality = CompositingQuality.HighQuality
+                e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic
 
             Else
                 'Si no se selecciona nada, se dibuja el texto y la imagen
@@ -253,8 +253,8 @@ Public Class MaestroVehiculo
                 e.Graphics.DrawString(Arreglo(e.Index), e.Font, Brushes.Black, e.Bounds.Left + ImageList2.ImageSize.Width + 16, e.Bounds.Top)
 
                 'e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
-                e.Graphics.CompositingQuality = Drawing2D.CompositingQuality.HighQuality
-                e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                e.Graphics.CompositingQuality = CompositingQuality.HighQuality
+                e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic
 
             End If
 
@@ -304,7 +304,7 @@ Public Class MaestroVehiculo
 
                 'e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                 e.Graphics.CompositingQuality = Drawing2D.CompositingQuality.HighQuality
-                e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic
 
             Else
                 'Si no se selecciona nada, se dibuja el texto y la imagen
@@ -316,7 +316,7 @@ Public Class MaestroVehiculo
 
                 'e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                 e.Graphics.CompositingQuality = Drawing2D.CompositingQuality.HighQuality
-                e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic
 
             End If
 

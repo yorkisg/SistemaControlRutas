@@ -82,10 +82,10 @@ Public Class ListadoProducto
 
             End If
 
-            If ConsultaProducto.Visible = True Then
+            If ConsultaGeneralRuta.Visible = True Then
                 'si el formulario "ConsultaProducto" esta activo, se carga la informacion seleccionada del datagridview
 
-                ConsultaProducto.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                ConsultaGeneralRuta.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 'Se cierra el formulario ListadoProducto
                 Tabla.Clear()
@@ -225,10 +225,10 @@ Public Class ListadoProducto
 
         End If
 
-        If ConsultaProducto.Visible = True Then
+        If ConsultaGeneralRuta.Visible = True Then
             'si el formulario "ConsultaProducto" esta activo, se carga la informacion seleccionada del datagridview
 
-            ConsultaProducto.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+            ConsultaGeneralRuta.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
             'Se cierra el formulario ListadoProducto
             Tabla.Clear()

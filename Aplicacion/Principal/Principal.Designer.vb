@@ -40,17 +40,13 @@ Partial Class Principal
         Me.MenuSeguimientoTransporte = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuConsultas = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuConsultarRutas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultarChofer = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuConsultarProducto = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuConsultarVehiculo = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuConsultarInfracciones = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuListadoDeInfractores = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuGuiaTelefonica = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuListadoCompelto = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuResumenRuta = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultaGrupoProducto = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuEstadisticas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuHistorialDeRutas = New System.Windows.Forms.ToolStripMenuItem()
@@ -176,39 +172,18 @@ Partial Class Principal
         'MenuConsultas
         '
         Me.MenuConsultas.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarRutas, Me.MenuConsultarChofer, Me.MenuConsultarProducto, Me.MenuConsultarVehiculo, Me.ToolStripSeparator5, Me.MenuConsultarInfracciones, Me.MenuListadoDeInfractores, Me.MenuGuiaTelefonica, Me.ToolStripSeparator8, Me.MenuListadoCompelto, Me.MenuResumenRuta, Me.MenuConsultaGrupoProducto})
+        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.ToolStripSeparator5, Me.MenuConsultarInfracciones, Me.MenuListadoDeInfractores, Me.MenuGuiaTelefonica, Me.ToolStripSeparator8, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto})
         Me.MenuConsultas.Image = CType(resources.GetObject("MenuConsultas.Image"), System.Drawing.Image)
         Me.MenuConsultas.Name = "MenuConsultas"
         Me.MenuConsultas.Size = New System.Drawing.Size(92, 21)
         Me.MenuConsultas.Text = "Consultas"
-        '
-        'MenuConsultarRutas
-        '
-        Me.MenuConsultarRutas.Image = CType(resources.GetObject("MenuConsultarRutas.Image"), System.Drawing.Image)
-        Me.MenuConsultarRutas.Name = "MenuConsultarRutas"
-        Me.MenuConsultarRutas.Size = New System.Drawing.Size(285, 22)
-        Me.MenuConsultarRutas.Text = "Rutas en General"
         '
         'MenuConsultarChofer
         '
         Me.MenuConsultarChofer.Image = CType(resources.GetObject("MenuConsultarChofer.Image"), System.Drawing.Image)
         Me.MenuConsultarChofer.Name = "MenuConsultarChofer"
         Me.MenuConsultarChofer.Size = New System.Drawing.Size(285, 22)
-        Me.MenuConsultarChofer.Text = "Rutas por Chofer"
-        '
-        'MenuConsultarProducto
-        '
-        Me.MenuConsultarProducto.Image = CType(resources.GetObject("MenuConsultarProducto.Image"), System.Drawing.Image)
-        Me.MenuConsultarProducto.Name = "MenuConsultarProducto"
-        Me.MenuConsultarProducto.Size = New System.Drawing.Size(285, 22)
-        Me.MenuConsultarProducto.Text = "Rutas por Producto"
-        '
-        'MenuConsultarVehiculo
-        '
-        Me.MenuConsultarVehiculo.Image = CType(resources.GetObject("MenuConsultarVehiculo.Image"), System.Drawing.Image)
-        Me.MenuConsultarVehiculo.Name = "MenuConsultarVehiculo"
-        Me.MenuConsultarVehiculo.Size = New System.Drawing.Size(285, 22)
-        Me.MenuConsultarVehiculo.Text = "Rutas por Vehiculo"
+        Me.MenuConsultarChofer.Text = "Consulta General"
         '
         'ToolStripSeparator5
         '
@@ -246,14 +221,7 @@ Partial Class Principal
         Me.MenuListadoCompelto.Image = CType(resources.GetObject("MenuListadoCompelto.Image"), System.Drawing.Image)
         Me.MenuListadoCompelto.Name = "MenuListadoCompelto"
         Me.MenuListadoCompelto.Size = New System.Drawing.Size(285, 22)
-        Me.MenuListadoCompelto.Text = "Listado Completo de Rutas"
-        '
-        'MenuResumenRuta
-        '
-        Me.MenuResumenRuta.Image = CType(resources.GetObject("MenuResumenRuta.Image"), System.Drawing.Image)
-        Me.MenuResumenRuta.Name = "MenuResumenRuta"
-        Me.MenuResumenRuta.Size = New System.Drawing.Size(285, 22)
-        Me.MenuResumenRuta.Text = "Listado Resumen de Rutas"
+        Me.MenuListadoCompelto.Text = "Listado Actual de Rutas"
         '
         'MenuConsultaGrupoProducto
         '
@@ -444,8 +412,6 @@ Partial Class Principal
     Friend WithEvents MenuConsultarChofer As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents MenuConsultarProducto As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuConsultarVehiculo As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuConfiguracion As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuFlotas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuEstados As System.Windows.Forms.ToolStripMenuItem
@@ -456,7 +422,6 @@ Partial Class Principal
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents MenuConsultarRutas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents MenuConsultarInfracciones As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuEstadisticas As System.Windows.Forms.ToolStripMenuItem
@@ -469,7 +434,6 @@ Partial Class Principal
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuListadoCompelto As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuResumenRuta As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuConsultaGrupoProducto As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuSeguimientoLiviano As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuListadoDeInfractores As System.Windows.Forms.ToolStripMenuItem

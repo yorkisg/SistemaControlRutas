@@ -121,7 +121,7 @@ Public Class SeguimientoCarga
     Private Sub Arbol_BeforeCollapse(sender As Object, e As TreeViewCancelEventArgs) Handles Arbol.BeforeCollapse
         'Evento que permite que el arbol no se contraiga
 
-        e.Cancel = True
+        'e.Cancel = True
 
     End Sub
 
@@ -866,14 +866,7 @@ Public Class SeguimientoCarga
     Private Sub BotonListado_Click(sender As Object, e As EventArgs) Handles BotonListado.Click
         'Llamada al formulario "ListadoVehiculoCarretera" para chequear cual es el total de vehiculos en carretera actualizado.
 
-        ConsultaGeneralVehiculo.ShowDialog()
-
-    End Sub
-
-    Private Sub BotonResumen_Click(sender As Object, e As EventArgs) Handles BotonResumen.Click
-        'Llamada al formulario "ListadoResumenVehiculo" para chequear un resumen por grupo de vehiculos y productos
-
-        ConsultaResumenVehiculo.ShowDialog()
+        ListadoGeneralRutas.ShowDialog()
 
     End Sub
 
@@ -938,7 +931,7 @@ Public Class SeguimientoCarga
 
                 'e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                 e.Graphics.CompositingQuality = Drawing2D.CompositingQuality.HighQuality
-                e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic
 
             Else
                 'Si no se selecciona nada, se dibuja el texto y la imagen
@@ -950,7 +943,7 @@ Public Class SeguimientoCarga
 
                 'e.Graphics.SmoothingMode = Drawing2D.SmoothingMode.HighQuality
                 e.Graphics.CompositingQuality = Drawing2D.CompositingQuality.HighQuality
-                e.Graphics.InterpolationMode = Drawing2D.InterpolationMode.HighQualityBicubic
+                e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic
 
             End If
 

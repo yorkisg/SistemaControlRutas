@@ -88,10 +88,10 @@ Public Class ListadoPersonal
 
             End If
 
-            If ConsultaPersonal.Visible = True Then
+            If ConsultaGeneralRuta.Visible = True Then
                 'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
 
-                ConsultaPersonal.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                ConsultaGeneralRuta.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()
@@ -277,10 +277,10 @@ Public Class ListadoPersonal
 
             End If
 
-            If ConsultaPersonal.Visible = True Then
+            If ConsultaGeneralRuta.Visible = True Then
                 'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
 
-                ConsultaPersonal.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                ConsultaGeneralRuta.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()

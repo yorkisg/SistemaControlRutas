@@ -48,10 +48,6 @@ Partial Class ConsultaInfraccion
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.Contador = New System.Windows.Forms.ToolStripLabel()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,6 +55,10 @@ Partial Class ConsultaInfraccion
         Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -301,43 +301,6 @@ Partial Class ConsultaInfraccion
         Me.DataGridView.Size = New System.Drawing.Size(645, 534)
         Me.DataGridView.TabIndex = 80
         '
-        'ToolStrip2
-        '
-        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
-        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.Contador})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 587)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(984, 25)
-        Me.ToolStrip2.TabIndex = 81
-        Me.ToolStrip2.Text = "ToolStrip2"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(158, 22)
-        Me.ToolStripLabel1.Text = "REGISTROS ENCONTRADOS:"
-        '
-        'Contador
-        '
-        Me.Contador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Contador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Contador.Image = CType(resources.GetObject("Contador.Image"), System.Drawing.Image)
-        Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Contador.Name = "Contador"
-        Me.Contador.Size = New System.Drawing.Size(0, 22)
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.DataGridView)
-        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox2.Location = New System.Drawing.Point(321, 28)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(651, 556)
-        Me.GroupBox2.TabIndex = 82
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "HISTORIAL DE INFRACCIONES"
-        '
         'ColumnaID
         '
         Me.ColumnaID.DataPropertyName = "idregistroinfraccion"
@@ -407,6 +370,43 @@ Partial Class ConsultaInfraccion
         Me.ColumnaHora.ReadOnly = True
         Me.ColumnaHora.Width = 92
         '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
+        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.Contador})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 587)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(984, 25)
+        Me.ToolStrip2.TabIndex = 81
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(158, 22)
+        Me.ToolStripLabel1.Text = "REGISTROS ENCONTRADOS:"
+        '
+        'Contador
+        '
+        Me.Contador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.Contador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Contador.Image = CType(resources.GetObject("Contador.Image"), System.Drawing.Image)
+        Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Contador.Name = "Contador"
+        Me.Contador.Size = New System.Drawing.Size(0, 22)
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.DataGridView)
+        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GroupBox2.Location = New System.Drawing.Point(321, 28)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(651, 556)
+        Me.GroupBox2.TabIndex = 82
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "HISTORIAL DE INFRACCIONES"
+        '
         'ConsultaInfraccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -422,7 +422,7 @@ Partial Class ConsultaInfraccion
         Me.MaximizeBox = False
         Me.Name = "ConsultaInfraccion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Consultar Infracciones de Velocidad por Vehiculos"
+        Me.Text = "Consulta de Infracciones de Velocidad"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)

@@ -1,7 +1,7 @@
 ﻿
-Public Class ConsultaProducto
+Public Class ConsultaGeneralRuta
 
-    Private Sub ConsultaProducto_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ConsultaGeneralRuta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Se llama el metodo para alternar colores entre filas
@@ -16,12 +16,15 @@ Public Class ConsultaProducto
         EnableDoubleBuffered(DataGridView)
         EnableDoubleBuffered(DataGridView1)
 
+        'EN CONSTRUCCION
+        CargarConsultaRutaVehiculo()
+
     End Sub
 
-    Private Sub ConsultaProducto_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        'Boton salir
+    Private Sub ConsultaPersonal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        'Cierre del formulario
 
-            Dispose()
+        Dispose()
 
     End Sub
 
@@ -33,16 +36,22 @@ Public Class ConsultaProducto
             'La fecha inicial no puede ser mayor que la fecha final
             If DateTimePicker1.Value <= DateTimePicker2.Value Then
 
-                CargarGridProducto()
+                If TextBox1.Text <> "" Then
 
-                If TextBox1.Text = "" Then
+                    CargarGridPersonal()
 
-                    MsgBox("Debe seleccionar un producto.", MsgBoxStyle.Exclamation, "Error.")
+                ElseIf TextBox2.Text <> "" Then
 
-                ElseIf TextBox1.Text <> "" Then
+                    CargarGridProducto()
 
-                    'Llamada al metodo
-                    CargarGridProductoAgrupado()
+                ElseIf TextBox3.Text <> "" Then
+
+                    CargarGridVehiculo()
+
+                ElseIf TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" Then
+
+                    CargarGridConsultaRuta()
+                    'MsgBox("Debe seleccionar un criterio para la consulta.", MsgBoxStyle.Exclamation, "Error.")
 
                 End If
 
@@ -58,13 +67,39 @@ Public Class ConsultaProducto
         Catch ex As Exception
 
         End Try
-       
+
     End Sub
 
     Private Sub BotonBuscar_Click(sender As Object, e As EventArgs) Handles BotonBuscar.Click
+        'Llamada al formulario ListadoChofer
+
+        ListadoPersonal.ShowDialog()
+
+        'Eliminamos el texto en otros textbox para validar que no busque sobre otro criterio
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+
+    End Sub
+
+    Private Sub BotonBuscar2_Click(sender As Object, e As EventArgs) Handles BotonBuscar2.Click
         'Llamada al formulario ListadoProducto
 
         ListadoProducto.ShowDialog()
+
+        'Eliminamos el texto en otros textbox para validar que no busque sobre otro criterio
+        TextBox1.Text = ""
+        TextBox3.Text = ""
+
+    End Sub
+
+    Private Sub BotonBuscar3_Click(sender As Object, e As EventArgs) Handles BotonBuscar3.Click
+        'Llamada al formulario ListadoVehiculo
+
+        ListadoVehiculo.ShowDialog()
+
+        'Eliminamos el texto en otros textbox para validar que no busque sobre otro criterio
+        TextBox1.Text = ""
+        TextBox2.Text = ""
 
     End Sub
 
@@ -132,12 +167,6 @@ Public Class ConsultaProducto
         For i As Integer = 0 To DataGridView.RowCount - 1
             'Eliminamos elemento por elemento
             DataGridView.Rows.Remove(DataGridView.CurrentRow)
-        Next
-
-        'Abrimos el ciclo que recorre todas las filas del datagridview
-        For i As Integer = 0 To DataGridView1.RowCount - 1
-            'Eliminamos elemento por elemento
-            DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
         Next
 
         'Limpiamos los demas componentes

@@ -44,8 +44,6 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonListado = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BotonConsulta3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonConsulta1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonConsulta2 = New System.Windows.Forms.ToolStripButton()
@@ -165,7 +163,7 @@ Partial Class SeguimientoLiviano
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonPersonal, Me.ToolStripSeparator1, Me.BotonVehiculo, Me.ToolStripSeparator6, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonConsulta3, Me.ToolStripSeparator5, Me.BotonConsulta1, Me.ToolStripSeparator4, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonPersonal, Me.ToolStripSeparator1, Me.BotonVehiculo, Me.ToolStripSeparator6, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonConsulta1, Me.ToolStripSeparator4, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1113, 25)
@@ -224,19 +222,6 @@ Partial Class SeguimientoLiviano
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 25)
-        '
-        'BotonConsulta3
-        '
-        Me.BotonConsulta3.Image = CType(resources.GetObject("BotonConsulta3.Image"), System.Drawing.Image)
-        Me.BotonConsulta3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BotonConsulta3.Name = "BotonConsulta3"
-        Me.BotonConsulta3.Size = New System.Drawing.Size(110, 22)
-        Me.BotonConsulta3.Text = "Consultar Rutas"
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
         '
         'BotonConsulta1
         '
@@ -1304,8 +1289,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents flota As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripLabel3 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents vehiculo As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents BotonConsulta3 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BotonVehiculo As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuHistorial As ContextMenuStrip

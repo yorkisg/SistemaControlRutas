@@ -1,5 +1,4 @@
 ﻿
-
 Module ModuloConsulta
 
     'Variables globales.
@@ -7,7 +6,7 @@ Module ModuloConsulta
     Public Critico As Image
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''CONSULTAR CHOFER''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''CONSULTAS GENERALES'''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub CargarGridPersonal()
@@ -21,32 +20,28 @@ Module ModuloConsulta
                            & " AND ruta.destino = destino.iddestino " _
                            & " AND ruta.producto = producto.idproducto " _
                            & " AND ruta.estadoruta = estadoruta.idestado " _
-                           & " AND nombrepersonal = '" & ConsultaPersonal.TextBox1.Text & "' " _
+                           & " AND nombrepersonal = '" & ConsultaGeneralRuta.TextBox1.Text & "' " _
                            & " AND nombreestado IN ('EN RUTA VACIO', 'EN RUTA CARGADO') " _
                            & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                            & " ORDER BY idruta DESC, fecha DESC, hora DESC ", Conexion)
 
         'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaPersonal.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaPersonal.DateTimePicker2.Value
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker2.Value
 
         'Llenado del datagridview
         Dim adaptador As New MySqlDataAdapter(Command)
         Dim Tabla As New DataTable
         adaptador.Fill(Tabla)
-        ConsultaPersonal.DataGridView.DataSource = Tabla
+        ConsultaGeneralRuta.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ConsultaPersonal.DataGridView
+        With ConsultaGeneralRuta.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
     End Sub
-
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''CONSULTAR PRODUCTO''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub CargarGridProducto()
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
@@ -59,65 +54,28 @@ Module ModuloConsulta
                            & " AND ruta.destino = destino.iddestino " _
                            & " AND ruta.producto = producto.idproducto " _
                            & " AND ruta.estadoruta = estadoruta.idestado " _
-                           & " AND nombreproducto = '" & ConsultaProducto.TextBox1.Text & "' " _
+                           & " AND nombreproducto = '" & ConsultaGeneralRuta.TextBox2.Text & "' " _
                            & " AND nombreestado IN ('EN RUTA VACIO', 'EN RUTA CARGADO') " _
                            & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                            & " ORDER BY idruta DESC, fecha DESC, hora DESC ", Conexion)
 
         'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaProducto.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaProducto.DateTimePicker2.Value
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker2.Value
 
         'Llenado del datagridview
         Dim adaptador As New MySqlDataAdapter(Command)
         Dim Tabla As New DataTable
         adaptador.Fill(Tabla)
-        ConsultaProducto.DataGridView.DataSource = Tabla
+        ConsultaGeneralRuta.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ConsultaProducto.DataGridView
+        With ConsultaGeneralRuta.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
     End Sub
-
-    Public Sub CargarGridProductoAgrupado()
-        'Metodo para cargar el datagridview de la Guia Telefonica
-
-        'Conexion a la BD.
-        Dim sql As String = "SELECT COUNT(vehiculo) AS 'Conteo', MAX(fecha) AS 'Fecha2' " _
-                            & " FROM ruta, producto, estadoruta  " _
-                            & " WHERE ruta.estadoruta = estadoruta.idestado " _
-                            & " AND ruta.producto = producto.idproducto " _
-                            & " AND nombreproducto = '" & ConsultaProducto.TextBox1.Text & "' " _
-                            & " AND nombreestado IN ('EN RUTA VACIO', 'EN RUTA CARGADO') " _
-                            & " GROUP BY fecha " _
-                            & " ORDER BY fecha DESC "
-
-        Dim connection As New MySqlConnection(ConnectionString)
-
-        'Instancia y uso de variables.
-        Command = New MySqlCommand(sql, connection)
-        Adaptador = New MySqlDataAdapter(Command)
-        DataSet = New DataSet()
-
-        'Llenado del datagridview.
-        Adaptador.Fill(DataSet, "productoagrupado")
-        Tabla = DataSet.Tables("productoagrupado")
-        ConsultaProducto.DataGridView1.DataSource = DataSet.Tables("productoagrupado")
-
-        'Parametros para editar apariencia del datagridview.
-        With ConsultaProducto.DataGridView1
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-    End Sub
-
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''CONSULTAR VEHICULO''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub CargarGridVehiculo()
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
@@ -131,31 +89,27 @@ Module ModuloConsulta
                            & " AND ruta.producto = producto.idproducto " _
                            & " AND ruta.estadoruta = estadoruta.idestado " _
                            & " AND nombreestado IN ('EN RUTA VACIO', 'EN RUTA CARGADO') " _
-                           & " AND idvehiculo = '" & ConsultaVehiculo.TextBox1.Text & "' " _
+                           & " AND idvehiculo = '" & ConsultaGeneralRuta.TextBox3.Text & "' " _
                            & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                            & " ORDER BY idruta DESC, fecha DESC, hora DESC ", Conexion)
 
         'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaVehiculo.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaVehiculo.DateTimePicker2.Value
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker2.Value
 
         'Llenado del datagridview
         Dim adaptador As New MySqlDataAdapter(Command)
         Dim Tabla As New DataTable
         adaptador.Fill(Tabla)
-        ConsultaVehiculo.DataGridView.DataSource = Tabla
+        ConsultaGeneralRuta.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ConsultaVehiculo.DataGridView
+        With ConsultaGeneralRuta.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
     End Sub
-
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''CONSULTAR RUTA''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub CargarGridConsultaRuta()
         'Metodo que genera la carga de datos en el DataGridview usando la clausura BETWEEN
@@ -173,70 +127,20 @@ Module ModuloConsulta
                            & " ORDER BY idruta DESC, fecha DESC, hora DESC ", Conexion)
 
         'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaRuta.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaRuta.DateTimePicker2.Value
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker2.Value
 
         'Llenado del datagridview
         Dim adaptador As New MySqlDataAdapter(Command)
         Dim Tabla As New DataTable
         adaptador.Fill(Tabla)
-        ConsultaRuta.DataGridView.DataSource = Tabla
+        ConsultaGeneralRuta.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ConsultaRuta.DataGridView
+        With ConsultaGeneralRuta.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
-
-    End Sub
-
-    Public Sub GenerarChartConsultaRuta()
-        'Metodo que permite generar un grafico de acuerdo a los valores obtenidos desde la BD
-        'ConsultaRuta
-
-        Dim connection As New MySqlConnection(ConnectionString)
-
-        Dim sql As String = "SELECT COUNT(*) AS 'Conteo', nombresubflota AS 'Flota' FROM ruta, estadoruta, vehiculo, grupo, subflota " _
-                & " WHERE ruta.estadoruta = estadoruta.idestado AND ruta.vehiculo = vehiculo.idvehiculo " _
-                & " AND vehiculo.grupo = grupo.idgrupo " _
-                & " AND grupo.subflota = subflota.idsubflota " _
-                & " AND nombreestado IN ('EN RUTA CARGADO','EN RUTA VACIO') " _
-                & " AND MONTH(fecha) = MONTH(CURDATE())" _
-                & " GROUP BY nombresubflota "
-
-        Dim Adaptador As New MySqlDataAdapter(sql, Conexion)
-        Dim Dataset As New DataSet()
-        Adaptador.Fill(Dataset, "historialrutas2")
-
-        'Enlace de datos con las barras (series)
-        ConsultaRuta.Chart1.Series("Rutas").XValueMember = "Flota"
-        ConsultaRuta.Chart1.Series("Rutas").YValueMembers = "Conteo"
-
-        'Para ocultar las grillas
-        ConsultaRuta.Chart1.ChartAreas(0).AxisX.MajorGrid.Enabled = False
-        ConsultaRuta.Chart1.ChartAreas(0).AxisX.MinorGrid.Enabled = False
-        ConsultaRuta.Chart1.ChartAreas(0).AxisY.MajorGrid.Enabled = False
-        ConsultaRuta.Chart1.ChartAreas(0).AxisY.MinorGrid.Enabled = False
-
-        'Establecemos el grafico en 3D
-        ConsultaRuta.Chart1.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
-
-        'Para cambiar la fuente de los ejes Y, X
-        ConsultaRuta.Chart1.ChartAreas(0).AxisX.LabelStyle.Font = New Font("Segoe UI", 8)
-        ConsultaRuta.Chart1.ChartAreas(0).AxisY.LabelStyle.Font = New Font("Segoe UI", 9)
-
-        'Color de las barras (series)
-        ConsultaRuta.Chart1.Series(0).Color = Color.IndianRed
-
-        ConsultaRuta.Chart1.ChartAreas("ChartArea1").AxisX.IsLabelAutoFit = False
-        ConsultaRuta.Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Angle = -55
-
-        'Limpiamos y actualizamos el grafico como tal
-        ConsultaRuta.Chart1.Series(0).Points.Clear()
-        ConsultaRuta.Chart1.DataSource = ""
-
-        'Enlace de datos
-        ConsultaRuta.Chart1.DataSource = Dataset.Tables("historialrutas2")
 
     End Sub
 
@@ -262,10 +166,10 @@ Module ModuloConsulta
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "ConsultaRuta1")
         Tabla = DataSet.Tables("ConsultaRuta1")
-        ConsultaRuta.DataGridView1.DataSource = DataSet.Tables("ConsultaRuta1")
+        ConsultaGeneralRuta.DataGridView1.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ConsultaRuta.DataGridView1
+        With ConsultaGeneralRuta.DataGridView1
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
@@ -410,33 +314,13 @@ Module ModuloConsulta
     End Sub
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''CONSULTAR ''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''LISTADO GENERAL DE RUTAS''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-    Public Function Sumar(ByVal nombre_Columna As String, ByVal DataGridView As DataGridView) As Double
-        'Metodo que permite sumar columnas en los DataGridView
-
-        Dim total As Double = 0
-
-        ' recorrer las filas y obtener los items de la columna indicada en "nombre_Columna"  
-        Try
-            For i As Integer = 0 To DataGridView.RowCount - 1
-                total = total + CDbl(DataGridView.Item(nombre_Columna.ToLower, i).Value)
-            Next
-
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString)
-        End Try
-
-        ' retornar el valor  
-        Return total
-
-    End Function
 
     Public Sub CargarGridGeneralVehiculo()
         'Metodo que genera la carga de datos en el DataGridview2.
 
-        Dim sql As String = "Select vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombregrupo, nombreestado " _
+        Dim sql As String = "Select vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado " _
                          & " FROM ruta, personal, subflota, grupo, vehiculo, destino, producto, sitiocarga, estadoruta  " _
                          & " WHERE ruta.personal = personal.idpersonal " _
                          & " And ruta.vehiculo = vehiculo.idvehiculo  " _
@@ -448,7 +332,7 @@ Module ModuloConsulta
                          & " And ruta.estadoruta = estadoruta.idestado " _
                          & " And estado = 'ACTIVA' " _
                          & " AND nombreestado NOT IN ('EN TALLER') " _
-                         & " ORDER BY nombresubflota ASC, nombreproducto ASC, nombresitiocarga ASC, nombreestado ASC "
+                         & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombreestado ASC "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -460,18 +344,158 @@ Module ModuloConsulta
         'Llenado del datagridview
         Adaptador.Fill(DataSet, "listadoactual")
         Tabla = DataSet.Tables("listadoactual")
-        ConsultaGeneralVehiculo.DataGridView.DataSource = DataSet.Tables("listadoactual")
+        ListadoGeneralRutas.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ConsultaGeneralVehiculo.DataGridView
+        With ListadoGeneralRutas.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
         'Mostramos la cantidad de registros encontrados
-        ConsultaGeneralVehiculo.Contador.Text = ConsultaGeneralVehiculo.DataGridView.RowCount
+        ListadoGeneralRutas.Contador.Text = ListadoGeneralRutas.DataGridView.RowCount
+
+        'Quitamos la seleccion de cualquier fila del datagridview
+        ListadoGeneralRutas.DataGridView.ClearSelection()
 
     End Sub
+
+    Public Sub CargarGridGeneralVehiculoGrupo()
+        'Metodo que genera la carga de datos en el DataGridview2.
+
+        Dim sql As String = "Select vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado " _
+                         & " FROM ruta, personal, subflota, grupo, vehiculo, destino, producto, sitiocarga, estadoruta  " _
+                         & " WHERE ruta.personal = personal.idpersonal " _
+                         & " And ruta.vehiculo = vehiculo.idvehiculo  " _
+                         & " and vehiculo.grupo = grupo.idgrupo " _
+                         & " And grupo.subflota = subflota.idsubflota  " _
+                         & " And ruta.destino = destino.iddestino  " _
+                         & " And ruta.producto = producto.idproducto  " _
+                         & " And ruta.sitiocarga = sitiocarga.idsitiocarga  " _
+                         & " And ruta.estadoruta = estadoruta.idestado " _
+                         & " And estado = 'ACTIVA' " _
+                         & " AND nombreestado NOT IN ('EN TALLER') " _
+                         & " AND nombregrupo = '" & ListadoGeneralRutas.TextBox1.Text & "' " _
+                         & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombreestado ASC "
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview
+        Adaptador.Fill(DataSet, "listadoactual2")
+        Tabla = DataSet.Tables("listadoactual2")
+        ListadoGeneralRutas.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ListadoGeneralRutas.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        'Mostramos la cantidad de registros encontrados
+        ListadoGeneralRutas.Contador2.Text = ListadoGeneralRutas.DataGridView.RowCount
+
+        'Quitamos la seleccion de cualquier fila del datagridview
+        ListadoGeneralRutas.DataGridView.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridResumenVehiculo()
+        'Metodo que genera la carga de datos en el DataGridview
+
+        Dim sql As String = "SELECT COUNT(vehiculo) AS 'Unidades', nombreproducto AS 'Producto', nombresitiocarga AS 'Sitio de Carga', " _
+                & " nombredestino AS 'Destino', nombreestado AS 'Estado' " _
+                & " FROM ruta, producto, sitiocarga, destino, grupo, subflota, vehiculo, estadoruta " _
+                & " WHERE ruta.producto = producto.idproducto " _
+                & " AND ruta.destino = destino.iddestino    " _
+                & " AND ruta.sitiocarga = sitiocarga.idsitiocarga    " _
+                & " AND ruta.vehiculo = vehiculo.idvehiculo    " _
+                & " and vehiculo.grupo = grupo.idgrupo " _
+                & " And grupo.subflota = subflota.idsubflota  " _
+                & " AND ruta.estadoruta = estadoruta.idestado  " _
+                & " AND estado = 'ACTIVA'  " _
+                & " AND nombreestado NOT IN ('EN TALLER') " _
+                & " GROUP BY nombreestado, nombreproducto, nombresitiocarga, nombredestino   " _
+                & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombredestino ASC, nombreestado ASC "
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview
+        Adaptador.Fill(DataSet, "listadoresumen")
+        Tabla = DataSet.Tables("listadoresumen")
+        ListadoGeneralRutas.DataGridView1.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ListadoGeneralRutas.DataGridView1
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        'Traemos los numeros desde el Datagridview hacia los textbox.  
+        ListadoGeneralRutas.Contador.Text = (Int(Sumar("ColumnaUnidades", ListadoGeneralRutas.DataGridView1)))
+
+        'Quitamos la seleccion de cualquier fila del datagridview
+        ListadoGeneralRutas.DataGridView1.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridResumenVehiculoGrupo()
+        'Metodo que genera la carga de datos en el DataGridview
+
+        Dim sql As String = "SELECT COUNT(vehiculo) AS 'Unidades', nombreproducto AS 'Producto',  nombresitiocarga AS 'Sitio de Carga', " _
+                & " nombredestino AS 'Destino', nombreestado AS 'Estado' " _
+                & " FROM ruta, producto, sitiocarga, destino, grupo, subflota, vehiculo, estadoruta " _
+                & " WHERE ruta.producto = producto.idproducto " _
+                & " AND ruta.destino = destino.iddestino    " _
+                & " AND ruta.sitiocarga = sitiocarga.idsitiocarga    " _
+                & " AND ruta.vehiculo = vehiculo.idvehiculo    " _
+                & " and vehiculo.grupo = grupo.idgrupo " _
+                & " And grupo.subflota = subflota.idsubflota  " _
+                & " AND ruta.estadoruta = estadoruta.idestado  " _
+                & " AND estado = 'ACTIVA'  " _
+                & " AND nombreestado NOT IN ('EN TALLER') " _
+                & " AND nombregrupo = '" & ListadoGeneralRutas.TextBox1.Text & "' " _
+                & " GROUP BY nombreestado, nombreproducto, nombresitiocarga, nombredestino   " _
+                & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombredestino ASC, nombreestado ASC "
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview
+        Adaptador.Fill(DataSet, "listadoresumen2")
+        Tabla = DataSet.Tables("listadoresumen2")
+        ListadoGeneralRutas.DataGridView1.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ListadoGeneralRutas.DataGridView1
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        'Traemos los numeros desde el Datagridview hacia los textbox.  
+        ListadoGeneralRutas.Contador2.Text = (Int(Sumar("ColumnaUnidades", ListadoGeneralRutas.DataGridView1)))
+
+        'Quitamos la seleccion de cualquier fila del datagridview
+        ListadoGeneralRutas.DataGridView1.ClearSelection()
+
+    End Sub
+
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''GUIA TELEFONICA'''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub CargarGridGuiaPersonalCarga()
         'Metodo para cargar el datagridview de la Guia Telefonica
@@ -563,57 +587,42 @@ Module ModuloConsulta
 
     End Sub
 
-    Public Sub CargarGridResumenVehiculo()
-        'Metodo que genera la carga de datos en el DataGridview
 
-        Dim sql As String = "SELECT COUNT(vehiculo) AS 'Unidades', nombreproducto AS 'Producto',  nombresitiocarga AS 'Sitio de Carga', " _
-                & " nombredestino AS 'Destino', nombreestado AS 'Estado',  " _
-                & " nombregrupo AS 'Grupo'  " _
-                & " FROM ruta, producto, sitiocarga, destino, grupo, subflota, vehiculo, estadoruta " _
-                & " WHERE ruta.producto = producto.idproducto " _
-                & " AND ruta.destino = destino.iddestino    " _
-                & " AND ruta.sitiocarga = sitiocarga.idsitiocarga    " _
-                & " AND ruta.vehiculo = vehiculo.idvehiculo    " _
-                & " and vehiculo.grupo = grupo.idgrupo " _
-                & " And grupo.subflota = subflota.idsubflota  " _
-                & " AND ruta.estadoruta = estadoruta.idestado  " _
-                & " AND estado = 'ACTIVA'  " _
-                & " AND nombreestado NOT IN ('EN TALLER') " _
-                & " GROUP BY nombreestado, nombreproducto, nombresitiocarga, nombredestino, nombresubflota   " _
-                & " ORDER BY nombresubflota, nombreproducto ASC, nombresitiocarga ASC, nombredestino ASC, nombreestado ASC "
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''CONSULTAR ''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-        Dim connection As New MySqlConnection(ConnectionString)
+    Public Function Sumar(ByVal nombre_Columna As String, ByVal DataGridView As DataGridView) As Double
+        'Metodo que permite sumar columnas en los DataGridView
 
-        'Instancia y uso de variables.
-        Command = New MySqlCommand(sql, connection)
-        Adaptador = New MySqlDataAdapter(Command)
-        DataSet = New DataSet()
+        Dim total As Double = 0
 
-        'Llenado del datagridview
-        Adaptador.Fill(DataSet, "listadoresumen")
-        Tabla = DataSet.Tables("listadoresumen")
-        ConsultaResumenVehiculo.DataGridView.DataSource = Tabla
+        ' recorrer las filas y obtener los items de la columna indicada en "nombre_Columna"  
+        Try
+            For i As Integer = 0 To DataGridView.RowCount - 1
+                total = total + CDbl(DataGridView.Item(nombre_Columna.ToLower, i).Value)
+            Next
 
-        'Parametros para editar apariencia del datagridview.
-        With ConsultaResumenVehiculo.DataGridView
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
 
-        'Traemos los numeros desde el Datagridview hacia los textbox.  
-        ConsultaResumenVehiculo.Contador.Text = (Int(Sumar("ColumnaUnidades", ConsultaResumenVehiculo.DataGridView)))
+        ' retornar el valor  
+        Return total
 
-    End Sub
+    End Function
 
     Public Sub CargarResumenMateriaPrima()
         'Metodo que genera la carga de datos en el DataGridview
 
         Dim sql As String = " SELECT COUNT(vehiculo) AS 'Unidades', nombreestado AS 'Estado' " _
-                        & " FROM ruta, estadoruta, producto " _
+                        & " FROM ruta, estadoruta, producto, sitiocarga " _
                         & " WHERE ruta.producto = producto.idproducto " _
-                        & " AND ruta.estadoruta = estadoruta.idestado   " _
+                        & " AND ruta.estadoruta = estadoruta.idestado " _
+                        & " AND ruta.sitiocarga = sitiocarga.idsitiocarga " _
                         & " AND estado = 'ACTIVA'   " _
                         & " AND idproducto = '" & CuadroResumenMateriaPrima.TextBox4.Text & "'  " _
+                        & " AND idsitiocarga = '" & CuadroResumenMateriaPrima.TextBox1.Text & "'  " _
                         & " GROUP BY nombreestado   " _
                         & " ORDER BY nombreestado ASC "
 

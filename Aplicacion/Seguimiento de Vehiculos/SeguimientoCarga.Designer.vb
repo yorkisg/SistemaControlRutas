@@ -52,8 +52,6 @@ Partial Class SeguimientoCarga
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonListado = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BotonResumen = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonCuadroResumen = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator15 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonConsulta2 = New System.Windows.Forms.ToolStripButton()
@@ -229,7 +227,7 @@ Partial Class SeguimientoCarga
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator1, Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonResumen, Me.ToolStripSeparator5, Me.BotonCuadroResumen, Me.ToolStripSeparator15, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator1, Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonCuadroResumen, Me.ToolStripSeparator15, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1320, 25)
@@ -277,20 +275,6 @@ Partial Class SeguimientoCarga
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
         Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 25)
-        '
-        'BotonResumen
-        '
-        Me.BotonResumen.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BotonResumen.Image = CType(resources.GetObject("BotonResumen.Image"), System.Drawing.Image)
-        Me.BotonResumen.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BotonResumen.Name = "BotonResumen"
-        Me.BotonResumen.Size = New System.Drawing.Size(119, 22)
-        Me.BotonResumen.Text = "Resumen General"
-        '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
         '
         'BotonCuadroResumen
         '
@@ -1349,12 +1333,10 @@ Partial Class SeguimientoCarga
     Friend WithEvents TextBox13 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
     Friend WithEvents BotonGuiaTelefonica As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BotonListado As System.Windows.Forms.ToolStripButton
     Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents BotonResumen As System.Windows.Forms.ToolStripButton
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents TextBox17 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox18 As System.Windows.Forms.TextBox

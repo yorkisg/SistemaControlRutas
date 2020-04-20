@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -151,10 +151,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas\ConsultaPersonal.Designer.vb">
-      <DependentUpon>ConsultaPersonal.vb</DependentUpon>
+    <Compile Include="Consultas\ConsultaGeneralRuta.Designer.vb">
+      <DependentUpon>ConsultaGeneralRuta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ConsultaPersonal.vb">
+    <Compile Include="Consultas\ConsultaGeneralRuta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\ConsultaInfraccion.Designer.vb">
@@ -163,46 +163,22 @@
     <Compile Include="Consultas\ConsultaInfraccion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\ConsultaProducto.Designer.vb">
-      <DependentUpon>ConsultaProducto.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\ConsultaProducto.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consultas\ConsultaRuta.Designer.vb">
-      <DependentUpon>ConsultaRuta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\ConsultaRuta.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consultas\ConsultaVehiculo.Designer.vb">
-      <DependentUpon>ConsultaVehiculo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\ConsultaVehiculo.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Consultas\GuiaTelefonica.Designer.vb">
       <DependentUpon>GuiaTelefonica.vb</DependentUpon>
     </Compile>
     <Compile Include="Consultas\GuiaTelefonica.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\ConsultaGeneralVehiculo.Designer.vb">
-      <DependentUpon>ConsultaGeneralVehiculo.vb</DependentUpon>
+    <Compile Include="Consultas\ListadoGeneralRutas.Designer.vb">
+      <DependentUpon>ListadoGeneralRutas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ConsultaGeneralVehiculo.vb">
+    <Compile Include="Consultas\ListadoGeneralRutas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\ReporteInfraccion.Designer.vb">
       <DependentUpon>ReporteInfraccion.vb</DependentUpon>
     </Compile>
     <Compile Include="Consultas\ReporteInfraccion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consultas\ConsultaResumenVehiculo.Designer.vb">
-      <DependentUpon>ConsultaResumenVehiculo.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\ConsultaResumenVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estadisticas\EstadisticaInfraccion.Designer.vb">
@@ -391,34 +367,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Consultas\ConsultaPersonal.resx">
-      <DependentUpon>ConsultaPersonal.vb</DependentUpon>
+    <EmbeddedResource Include="Consultas\ConsultaGeneralRuta.resx">
+      <DependentUpon>ConsultaGeneralRuta.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaInfraccion.resx">
       <DependentUpon>ConsultaInfraccion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ConsultaProducto.resx">
-      <DependentUpon>ConsultaProducto.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ConsultaRuta.resx">
-      <DependentUpon>ConsultaRuta.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ConsultaVehiculo.resx">
-      <DependentUpon>ConsultaVehiculo.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\GuiaTelefonica.resx">
       <DependentUpon>GuiaTelefonica.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ConsultaGeneralVehiculo.resx">
-      <DependentUpon>ConsultaGeneralVehiculo.vb</DependentUpon>
+    <EmbeddedResource Include="Consultas\ListadoGeneralRutas.resx">
+      <DependentUpon>ListadoGeneralRutas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ReporteInfraccion.resx">
       <DependentUpon>ReporteInfraccion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ConsultaResumenVehiculo.resx">
-      <DependentUpon>ConsultaResumenVehiculo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas\EstadisticaInfraccion.resx">
       <DependentUpon>EstadisticaInfraccion.vb</DependentUpon>
@@ -538,6 +501,7 @@
     <Content Include="Recursos\Agregar.png" />
     <Content Include="Recursos\AgregarNuevo.png" />
     <Content Include="Recursos\AgregarReporte.png" />
+    <None Include="Recursos\Agrupado.png" />
     <Content Include="Recursos\Alerta.png" />
     <Content Include="Recursos\Analista.png" />
     <Content Include="Recursos\Archivo 1.ico" />
@@ -592,6 +556,7 @@
     <Content Include="Recursos\Estados.png" />
     <Content Include="Recursos\ExportarExcell.png" />
     <None Include="Recursos\Extensiones.png" />
+    <None Include="Recursos\Extendido.png" />
     <Content Include="Recursos\Filtro.png" />
     <Content Include="Recursos\Flota.png" />
     <Content Include="Recursos\FondoPantalla.png" />

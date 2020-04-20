@@ -467,7 +467,7 @@ Public Class SeguimientoLiviano
     Private Sub BotonListado_Click(sender As Object, e As EventArgs) Handles BotonListado.Click
         'Llamada al formulario "ListadoVehiculoCarretera" para chequear cual es el total de vehiculos en carretera actualizado.
 
-        ConsultaGeneralVehiculo.ShowDialog()
+        ListadoGeneralRutas.ShowDialog()
 
     End Sub
 
@@ -482,13 +482,6 @@ Public Class SeguimientoLiviano
         'Llama al formulario ReporteInfraccion.
 
         ReporteInfraccion.ShowDialog()
-
-    End Sub
-
-    Private Sub BotonConsulta3_Click(sender As Object, e As EventArgs) Handles BotonConsulta3.Click
-        'Llama al formulario ConsultaRuta.
-
-        ConsultaRuta.ShowDialog()
 
     End Sub
 
