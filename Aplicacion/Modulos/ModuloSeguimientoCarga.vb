@@ -483,7 +483,6 @@ Module ModuloSeguimientoCarga
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''METODOS DE APOYO PARA LAS RUTAS E INFRACCIONES''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
     Public Sub EliminarRutaCarga()
         'Metodo que permite eliminar la ruta seleccionada
 

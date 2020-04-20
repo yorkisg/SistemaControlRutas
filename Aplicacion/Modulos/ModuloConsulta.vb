@@ -41,6 +41,8 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        ConsultaGeneralRuta.DataGridView.ClearSelection()
+
     End Sub
 
     Public Sub CargarGridProducto()
@@ -74,6 +76,8 @@ Module ModuloConsulta
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
+
+        ConsultaGeneralRuta.DataGridView.ClearSelection()
 
     End Sub
 
@@ -109,6 +113,8 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        ConsultaGeneralRuta.DataGridView.ClearSelection()
+
     End Sub
 
     Public Sub CargarGridConsultaRuta()
@@ -142,6 +148,8 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        ConsultaGeneralRuta.DataGridView.ClearSelection()
+
     End Sub
 
     Public Sub CargarConsultaRutaVehiculo()
@@ -173,6 +181,8 @@ Module ModuloConsulta
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
+
+        ConsultaGeneralRuta.DataGridView1.ClearSelection()
 
     End Sub
 
@@ -656,7 +666,7 @@ Module ModuloConsulta
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idpersonal, nombrepersonal, tipopersonal, telefono1, telefono2, estadopersonal " _
-                                          & " FROM personal WHERE idpersonal = '" & GuiaTelefonica.TextBox2.Text & "' ", Conexion)
+                                       & " FROM personal WHERE idpersonal = '" & GuiaTelefonica.TextBox2.Text & "' ", Conexion)
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows
@@ -679,7 +689,7 @@ Module ModuloConsulta
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idpersonal, nombrepersonal, tipopersonal, telefono1, telefono2, estadopersonal " _
-                                          & " FROM personal WHERE idpersonal = '" & ListadoPersonal.TextBox1.Text & "' ", Conexion)
+                                       & " FROM personal WHERE idpersonal = '" & ListadoPersonal.TextBox1.Text & "' ", Conexion)
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows
