@@ -32,7 +32,19 @@ Public Class EstadisticaInfraccion
     Private Sub EstadisticaInfraccion_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
-        Dispose()
+        'Si el datagridview contiene datos, obtenemos recursos 
+        'liberando los datatable y dataset implementados.
+        If DataGridView.RowCount > 0 Or DataGridView1.RowCount > 0 Or DataGridView2.RowCount > 0 Then
+
+            'LimpiarComponentes()
+
+            Dispose()
+
+        Else
+
+            Dispose()
+
+        End If
 
     End Sub
 
@@ -83,7 +95,7 @@ Public Class EstadisticaInfraccion
 
         Else
 
-            Close()
+            Dispose()
 
         End If
 

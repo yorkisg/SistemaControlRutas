@@ -16,10 +16,6 @@ Public Class ListadoGeneralRutas
         DataGridView.ClearSelection()
         DataGridView1.ClearSelection()
 
-        'Se cargan los elementos generales
-        'CargarGridGeneralVehiculo()
-        'CargarGridResumenVehiculo()
-
         'Carga del combobox de los grupos
         CargarComboGrupo()
 
@@ -68,20 +64,7 @@ Public Class ListadoGeneralRutas
     Private Sub BotonSalir_Click(sender As Object, e As EventArgs) Handles BotonSalir.Click
         'Boton salir
 
-        If DataGridView.RowCount > 0 Or DataGridView1.RowCount > 0 Then
-            'Si el datagridview contiene datos, obtenemos recursos 
-            'liberando los datatable y dataset implementados.
-
-            LimpiarComponentes()
-            Tabla.Clear()
-            DataSet.Clear()
-            Dispose()
-
-        Else
-
-            Close()
-
-        End If
+        Dispose()
 
     End Sub
 

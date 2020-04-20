@@ -169,6 +169,11 @@ Public Class ConsultaGeneralRuta
             DataGridView.Rows.Remove(DataGridView.CurrentRow)
         Next
 
+        For i As Integer = 0 To DataGridView1.RowCount - 1
+            'Eliminamos elemento por elemento
+            DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
+        Next
+
         'Limpiamos los demas componentes
         TextBox1.Text = ""
         BotonBuscar.Enabled = True
