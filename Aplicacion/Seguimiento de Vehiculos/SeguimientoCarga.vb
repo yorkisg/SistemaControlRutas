@@ -295,6 +295,13 @@ Public Class SeguimientoCarga
 
                 End If
 
+                If EstadoVehiculo = "GPS PRESENTANDO FALLAS" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = Falla
+
+                End If
+
             End If
 
         Catch ex As Exception

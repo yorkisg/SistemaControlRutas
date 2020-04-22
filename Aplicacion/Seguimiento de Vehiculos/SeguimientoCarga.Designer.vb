@@ -938,7 +938,7 @@ Partial Class SeguimientoCarga
         DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ColumnaEstadoVehiculo2.DefaultCellStyle = DataGridViewCellStyle13
         Me.ColumnaEstadoVehiculo2.FillWeight = 380.7106!
-        Me.ColumnaEstadoVehiculo2.HeaderText = "CONDICIONES DEL VEHICULO"
+        Me.ColumnaEstadoVehiculo2.HeaderText = "CONDICIONES"
         Me.ColumnaEstadoVehiculo2.Name = "ColumnaEstadoVehiculo2"
         Me.ColumnaEstadoVehiculo2.ReadOnly = True
         Me.ColumnaEstadoVehiculo2.Width = 163
@@ -1410,12 +1410,6 @@ Partial Class SeguimientoCarga
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
     Friend WithEvents ToolStrip3 As System.Windows.Forms.ToolStrip
     Friend WithEvents BotonGuardar2 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaEstadoVehiculo2 As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaImagen2 As DataGridViewImageColumn
-    Friend WithEvents ColumnaEstadoVehiculo As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaImagen1 As DataGridViewImageColumn
-    Friend WithEvents ColumnaTipoVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaEstado2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaHora As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaFecha As DataGridViewTextBoxColumn
@@ -1427,4 +1421,10 @@ Partial Class SeguimientoCarga
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents ColunmaVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaID2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEstadoVehiculo2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaImagen2 As DataGridViewImageColumn
+    Friend WithEvents ColumnaEstadoVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaImagen1 As DataGridViewImageColumn
+    Friend WithEvents ColumnaTipoVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
 End Class

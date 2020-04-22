@@ -12,7 +12,6 @@ Public Class ReporteInfraccion
         DateTimePicker1.Value = Today
         DateTimePicker2.Value = Today
 
-
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
         EnableDoubleBuffered(DataGridView1)
@@ -156,25 +155,25 @@ Public Class ReporteInfraccion
 
             TipoFlota = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 
-            If TipoFlota = "PRODUCTOS CÁRNICOS" Or TipoFlota = "GANADO EN PIE" Or TipoFlota = "GRASA Y DESPERDICIOS" Then
+            If TipoFlota = "PRODUCTOS CÁRNICOS" Or TipoFlota = "GANADO EN PIE" Or TipoFlota = "GRASA Y DESPERDICIOS" Or TipoFlota = "AMBULANCIAS" Then
 
                 e.CellStyle.ForeColor = Color.Red
 
             End If
 
-            If TipoFlota = "MATERIA PRIMA" Then
+            If TipoFlota = "MATERIA PRIMA" Or TipoFlota = "CHEVROLET" Then
 
                 e.CellStyle.ForeColor = Color.Green
 
             End If
 
-            If TipoFlota = "HUEVOS" Or TipoFlota = "REFRIGERADOS" Or TipoFlota = "NO REFRIGERADOS" Then
+            If TipoFlota = "HUEVOS" Or TipoFlota = "REFRIGERADOS" Or TipoFlota = "NO REFRIGERADOS" Or TipoFlota = "TOYOTA" Then
 
                 e.CellStyle.ForeColor = Color.Blue
 
             End If
 
-            If TipoFlota = "CONCHA DE ARROZ" Or TipoFlota = "LECHE CRUDA" Or TipoFlota = "DESECHOS DE GALLETAS" Then
+            If TipoFlota = "CONCHA DE ARROZ" Or TipoFlota = "LECHE CRUDA" Or TipoFlota = "DESECHOS DE GALLETAS" Or TipoFlota = "FORD" Or TipoFlota = "ALIMEX" Or TipoFlota = "ZULIANA DE CAMIONES" Then
 
                 e.CellStyle.ForeColor = Color.BlueViolet
 
@@ -217,36 +216,6 @@ Public Class ReporteInfraccion
 
         TextBox3.Text = "LIVIANO"
         TextBox4.Text = RadioButton2.Text
-
-    End Sub
-
-    Private Sub DataGridView_CellErrorTextNeeded(ByVal sender As Object, ByVal e As DataGridViewCellErrorTextNeededEventArgs) Handles DataGridView.CellErrorTextNeeded
-        'Evento CellErrorTextNeeded: se coloca un icono de advertencia o 
-        'error en la celda seleccionada si cumple o no la condicion previa.
-
-        Try
-
-            'Dim Velocidad As Double
-
-            If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaVelocidad") Then
-
-                'Velocidad = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
-
-                ' If Velocidad >= "130" Then
-
-                'e.ErrorText = "Exceso de Velocidad Crítico"
-
-                ' DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.BackColor = Color.MistyRose
-
-                ' End If
-
-            End If
-
-        Catch ex As Exception
-
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
-
-        End Try
 
     End Sub
 

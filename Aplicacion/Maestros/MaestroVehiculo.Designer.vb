@@ -304,6 +304,7 @@ Partial Class MaestroVehiculo
         Me.ImageList1.Images.SetKeyName(4, "EnReparacion.png")
         Me.ImageList1.Images.SetKeyName(5, "Robado.png")
         Me.ImageList1.Images.SetKeyName(6, "Eliminar.png")
+        Me.ImageList1.Images.SetKeyName(7, "Falla.png")
         '
         'Label6
         '

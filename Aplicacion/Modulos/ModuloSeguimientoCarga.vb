@@ -28,6 +28,7 @@ Module ModuloSeguimientoCarga
     Public EnReparacion As Image
     Public SinReporte As Image
     Public Robado As Image
+    Public Falla As Image
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CARGA DE ARBOLES''''''''''''''''''''''''''''''''''''''''''''''
@@ -621,6 +622,7 @@ Module ModuloSeguimientoCarga
         EnReparacion = My.Resources.EnReparacion
         SinReporte = My.Resources.SinReporte
         Robado = My.Resources.Robado
+        Falla = My.Resources.Falla
 
     End Sub
 

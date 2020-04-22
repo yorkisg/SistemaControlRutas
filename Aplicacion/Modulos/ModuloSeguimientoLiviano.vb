@@ -6,7 +6,6 @@ Module ModuloSeguimientoLiviano
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CARGA DEL ARBOL''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
     Public Sub CargarArbolLiviano()
         'Metodo de prueba donde generamos un arbol de un solo nivel (sin padre)
 

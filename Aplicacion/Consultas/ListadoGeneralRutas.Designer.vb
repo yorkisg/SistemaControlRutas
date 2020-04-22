@@ -25,18 +25,20 @@ Partial Class ListadoGeneralRutas
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListadoGeneralRutas))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.BotonActualizar = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ComboGrupo = New System.Windows.Forms.ToolStripComboBox()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -45,32 +47,32 @@ Partial Class ListadoGeneralRutas
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.Contador2 = New System.Windows.Forms.ToolStripLabel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel = New System.Windows.Forms.TabControl()
+        Me.Pagina1 = New System.Windows.Forms.TabPage()
+        Me.Pagina2 = New System.Windows.Forms.TabPage()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaDestino = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.Contador = New System.Windows.Forms.ToolStripLabel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.Pagina1 = New System.Windows.Forms.TabPage()
-        Me.Pagina2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
-        Me.Contador2 = New System.Windows.Forms.ToolStripLabel()
-        Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.Panel.SuspendLayout()
         Me.Pagina1.SuspendLayout()
         Me.Pagina2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,12 +81,25 @@ Partial Class ListadoGeneralRutas
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel2, Me.ComboGrupo, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator2, Me.BotonSalir, Me.ToolStripSeparator3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonActualizar, Me.ToolStripSeparator4, Me.ToolStripLabel2, Me.ComboGrupo, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator2, Me.BotonSalir, Me.ToolStripSeparator3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(984, 25)
         Me.ToolStrip1.TabIndex = 47
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'BotonActualizar
+        '
+        Me.BotonActualizar.Image = CType(resources.GetObject("BotonActualizar.Image"), System.Drawing.Image)
+        Me.BotonActualizar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BotonActualizar.Name = "BotonActualizar"
+        Me.BotonActualizar.Size = New System.Drawing.Size(79, 22)
+        Me.BotonActualizar.Text = "Actualizar"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripLabel2
         '
@@ -165,61 +180,6 @@ Partial Class ListadoGeneralRutas
         Me.DataGridView.Size = New System.Drawing.Size(946, 522)
         Me.DataGridView.TabIndex = 48
         '
-        'ColumnaVehiculo
-        '
-        Me.ColumnaVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
-        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
-        Me.ColumnaVehiculo.MinimumWidth = 40
-        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
-        Me.ColumnaVehiculo.ReadOnly = True
-        Me.ColumnaVehiculo.Width = 70
-        '
-        'ColumnaChofer
-        '
-        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
-        '
-        'ColumnaProducto
-        '
-        Me.ColumnaProducto.DataPropertyName = "nombreproducto"
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaProducto.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnaProducto.HeaderText = "PRODUCTO"
-        Me.ColumnaProducto.Name = "ColumnaProducto"
-        Me.ColumnaProducto.ReadOnly = True
-        '
-        'ColumnaUbicacion
-        '
-        Me.ColumnaUbicacion.DataPropertyName = "nombresitiocarga"
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaUbicacion.DefaultCellStyle = DataGridViewCellStyle4
-        Me.ColumnaUbicacion.HeaderText = "SITIO DE CARGA"
-        Me.ColumnaUbicacion.Name = "ColumnaUbicacion"
-        Me.ColumnaUbicacion.ReadOnly = True
-        '
-        'ColumnaDestino
-        '
-        Me.ColumnaDestino.DataPropertyName = "nombredestino"
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaDestino.DefaultCellStyle = DataGridViewCellStyle5
-        Me.ColumnaDestino.HeaderText = "DESTINO"
-        Me.ColumnaDestino.Name = "ColumnaDestino"
-        Me.ColumnaDestino.ReadOnly = True
-        '
-        'ColumnaEstado
-        '
-        Me.ColumnaEstado.DataPropertyName = "nombreestado"
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle6
-        Me.ColumnaEstado.HeaderText = "ESTADO"
-        Me.ColumnaEstado.Name = "ColumnaEstado"
-        Me.ColumnaEstado.ReadOnly = True
-        '
         'ToolStrip2
         '
         Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -230,11 +190,11 @@ Partial Class ListadoGeneralRutas
         Me.ToolStrip2.TabIndex = 72
         Me.ToolStrip2.Text = "ToolStrip2"
         '
-        'ToolStripLabel1
+        'ToolStripLabel3
         '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(180, 22)
-        Me.ToolStripLabel1.Text = "TOTAL VEHICULOS POR GRUPO:"
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(183, 22)
+        Me.ToolStripLabel3.Text = "TOTAL VEHICULOS EN GENERAL:"
         '
         'Contador
         '
@@ -245,6 +205,21 @@ Partial Class ListadoGeneralRutas
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
         '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripLabel1.Text = "TOTAL VEHICULOS POR GRUPO:"
+        '
+        'Contador2
+        '
+        Me.Contador2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.Contador2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Contador2.Image = CType(resources.GetObject("Contador2.Image"), System.Drawing.Image)
+        Me.Contador2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Contador2.Name = "Contador2"
+        Me.Contador2.Size = New System.Drawing.Size(0, 22)
+        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(216, 105)
@@ -253,20 +228,20 @@ Partial Class ListadoGeneralRutas
         Me.TextBox1.TabIndex = 73
         Me.TextBox1.Visible = False
         '
-        'TabControl1
+        'Panel
         '
-        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.Panel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl1.Controls.Add(Me.Pagina1)
-        Me.TabControl1.Controls.Add(Me.Pagina2)
-        Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TabControl1.ImageList = Me.ImageList1
-        Me.TabControl1.Location = New System.Drawing.Point(12, 28)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(960, 556)
-        Me.TabControl1.TabIndex = 74
+        Me.Panel.Controls.Add(Me.Pagina1)
+        Me.Panel.Controls.Add(Me.Pagina2)
+        Me.Panel.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Panel.ImageList = Me.ImageList1
+        Me.Panel.Location = New System.Drawing.Point(12, 28)
+        Me.Panel.Name = "Panel"
+        Me.Panel.SelectedIndex = 0
+        Me.Panel.Size = New System.Drawing.Size(960, 556)
+        Me.Panel.TabIndex = 74
         '
         'Pagina1
         '
@@ -324,28 +299,6 @@ Partial Class ListadoGeneralRutas
         Me.DataGridView1.Size = New System.Drawing.Size(946, 522)
         Me.DataGridView1.TabIndex = 50
         '
-        'ImageList1
-        '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "Extendido.png")
-        Me.ImageList1.Images.SetKeyName(1, "Agrupado.png")
-        '
-        'ToolStripLabel3
-        '
-        Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(183, 22)
-        Me.ToolStripLabel3.Text = "TOTAL VEHICULOS EN GENERAL:"
-        '
-        'Contador2
-        '
-        Me.Contador2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Contador2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Contador2.Image = CType(resources.GetObject("Contador2.Image"), System.Drawing.Image)
-        Me.Contador2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Contador2.Name = "Contador2"
-        Me.Contador2.Size = New System.Drawing.Size(0, 22)
-        '
         'ColumnaUnidades
         '
         Me.ColumnaUnidades.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -393,17 +346,88 @@ Partial Class ListadoGeneralRutas
         Me.ColumnaEstado2.Name = "ColumnaEstado2"
         Me.ColumnaEstado2.ReadOnly = True
         '
-        'ConsultaGeneralVehiculo
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "Extendido.png")
+        Me.ImageList1.Images.SetKeyName(1, "Agrupado.png")
+        '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
+        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
+        Me.ColumnaVehiculo.MinimumWidth = 50
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        Me.ColumnaVehiculo.Width = 80
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.MinimumWidth = 150
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        Me.ColumnaChofer.Width = 150
+        '
+        'ColumnaProducto
+        '
+        Me.ColumnaProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaProducto.DataPropertyName = "nombreproducto"
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaProducto.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ColumnaProducto.HeaderText = "PRODUCTO"
+        Me.ColumnaProducto.MinimumWidth = 210
+        Me.ColumnaProducto.Name = "ColumnaProducto"
+        Me.ColumnaProducto.ReadOnly = True
+        Me.ColumnaProducto.Width = 210
+        '
+        'ColumnaUbicacion
+        '
+        Me.ColumnaUbicacion.DataPropertyName = "nombresitiocarga"
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaUbicacion.DefaultCellStyle = DataGridViewCellStyle4
+        Me.ColumnaUbicacion.HeaderText = "SITIO DE CARGA"
+        Me.ColumnaUbicacion.Name = "ColumnaUbicacion"
+        Me.ColumnaUbicacion.ReadOnly = True
+        '
+        'ColumnaDestino
+        '
+        Me.ColumnaDestino.DataPropertyName = "nombredestino"
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaDestino.DefaultCellStyle = DataGridViewCellStyle5
+        Me.ColumnaDestino.HeaderText = "DESTINO"
+        Me.ColumnaDestino.Name = "ColumnaDestino"
+        Me.ColumnaDestino.ReadOnly = True
+        '
+        'ColumnaEstado
+        '
+        Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaEstado.DataPropertyName = "nombreestado"
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle6
+        Me.ColumnaEstado.HeaderText = "ESTADO"
+        Me.ColumnaEstado.MinimumWidth = 230
+        Me.ColumnaEstado.Name = "ColumnaEstado"
+        Me.ColumnaEstado.ReadOnly = True
+        Me.ColumnaEstado.Width = 230
+        '
+        'ListadoGeneralRutas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(984, 612)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.Panel)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "ConsultaGeneralVehiculo"
+        Me.Name = "ListadoGeneralRutas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Listado Completo de Rutas"
         Me.ToolStrip1.ResumeLayout(False)
@@ -411,7 +435,7 @@ Partial Class ListadoGeneralRutas
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip2.ResumeLayout(False)
         Me.ToolStrip2.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
+        Me.Panel.ResumeLayout(False)
         Me.Pagina1.ResumeLayout(False)
         Me.Pagina1.PerformLayout()
         Me.Pagina2.ResumeLayout(False)
@@ -432,14 +456,8 @@ Partial Class ListadoGeneralRutas
     Friend WithEvents ComboGrupo As ToolStripComboBox
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ToolStripLabel2 As ToolStripLabel
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents Panel As TabControl
     Friend WithEvents Pagina1 As TabPage
     Friend WithEvents Pagina2 As TabPage
     Friend WithEvents DataGridView1 As DataGridView
@@ -451,4 +469,12 @@ Partial Class ListadoGeneralRutas
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaUnidades As DataGridViewTextBoxColumn
+    Friend WithEvents BotonActualizar As ToolStripButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
 End Class

@@ -154,6 +154,13 @@ Public Class SeguimientoLiviano
 
                 End If
 
+                If EstadoVehiculo = "GPS PRESENTANDO FALLAS" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Falla
+
+                End If
+
             End If
 
         Catch ex As Exception

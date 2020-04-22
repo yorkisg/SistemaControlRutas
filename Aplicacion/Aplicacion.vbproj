@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -557,6 +557,8 @@
     <Content Include="Recursos\ExportarExcell.png" />
     <None Include="Recursos\Extensiones.png" />
     <None Include="Recursos\Extendido.png" />
+    <None Include="Recursos\Fallas.png" />
+    <None Include="Recursos\Falla.png" />
     <Content Include="Recursos\Filtro.png" />
     <Content Include="Recursos\Flota.png" />
     <Content Include="Recursos\FondoPantalla.png" />

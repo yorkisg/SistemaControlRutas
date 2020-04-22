@@ -67,6 +67,7 @@ Partial Class Principal
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -308,6 +309,7 @@ Partial Class Principal
         '
         'Timer1
         '
+        Me.Timer1.Interval = 1000
         '
         'Panel1
         '
@@ -371,6 +373,16 @@ Partial Class Principal
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(654, 5)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(48, 17)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Label1"
+        Me.Label1.Visible = False
+        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
@@ -378,6 +390,7 @@ Partial Class Principal
         Me.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(984, 562)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Font = New System.Drawing.Font("Microsoft JhengHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -440,4 +453,5 @@ Partial Class Principal
     Friend WithEvents MenuSeguimientoTaller As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuSeguimientoTransporte As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents Label1 As Label
 End Class

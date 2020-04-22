@@ -1,6 +1,8 @@
 ﻿
 Public Class Principal
 
+    Public Contador As Integer = 0
+
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Instancia principal de la conexion de la BD.
@@ -23,13 +25,15 @@ Public Class Principal
     Private Sub RegistroFechaHora()
         'Se carga la fecha y hora del sistema al iniciar la aplicacion
 
-        Timer1.Start()
         Timer1.Interval = 1000
+        Timer1.Start()
 
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
+
+        'ContadorTiempo()
 
         'Vehiculos
         MaestroVehiculo.TextBox5.Text = DateTime.Now.ToShortTimeString()
@@ -46,6 +50,38 @@ Public Class Principal
         'Incidencias
         MaestroIncidencia.TextBox5.Text = DateTime.Now.ToShortTimeString()
         MaestroIncidencia.DateTimePicker1.Value = Today
+
+    End Sub
+
+    Private Sub ContadorTiempo()
+
+        Timer1.Start()
+
+        Contador = Contador + 1
+
+        Label1.Text = Contador
+
+        If Contador = 10 Then
+
+            Close()
+
+        End If
+
+    End Sub
+    Public Sub ReiniciarTiempo()
+
+        Timer1.Stop()
+
+        Contador = 0
+
+        Timer1.Start()
+
+    End Sub
+
+    Private Sub Principal_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+        'funciona
+
+        'ReiniciarTiempo()
 
     End Sub
 
@@ -265,7 +301,6 @@ Public Class Principal
         'AccesoAdministrador.ShowDialog()
 
     End Sub
-
 
 End Class
 

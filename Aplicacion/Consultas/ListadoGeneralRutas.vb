@@ -8,13 +8,10 @@ Public Class ListadoGeneralRutas
         AlternarFilasGeneral(DataGridView)
         AlternarFilasGeneral(DataGridView1)
 
+
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
         EnableDoubleBuffered(DataGridView1)
-
-        'Quitamos la seleccion de cualquier fila del datagridview
-        DataGridView.ClearSelection()
-        DataGridView1.ClearSelection()
 
         'Carga del combobox de los grupos
         CargarComboGrupo()
@@ -25,6 +22,25 @@ Public Class ListadoGeneralRutas
         'Cierre del formulario
 
         Dispose()
+
+    End Sub
+
+    Private Sub BotonActualizar_Click(sender As Object, e As EventArgs) Handles BotonActualizar.Click
+        'Boton Actualizar
+
+        If Panel.SelectedIndex = 0 Then
+
+            'Se cargan los elementos generales
+            '    CargarGridGeneralVehiculo()
+            '   CargarGridGeneralVehiculoGrupo()
+
+        ElseIf Panel.SelectedIndex = 1 Then
+
+            'Se cargan los elementos por grupo
+            'CargarGridResumenVehiculo()
+            'CargarGridResumenVehiculoGrupo()
+
+        End If
 
     End Sub
 
