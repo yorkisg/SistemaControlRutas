@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -155,6 +155,12 @@
       <DependentUpon>ConsultaGeneralRuta.vb</DependentUpon>
     </Compile>
     <Compile Include="Consultas\ConsultaGeneralRuta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaIncidencia.Designer.vb">
+      <DependentUpon>ConsultaIncidencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaIncidencia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\ConsultaInfraccion.Designer.vb">
@@ -370,6 +376,9 @@
     <EmbeddedResource Include="Consultas\ConsultaGeneralRuta.resx">
       <DependentUpon>ConsultaGeneralRuta.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaIncidencia.resx">
+      <DependentUpon>ConsultaIncidencia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaInfraccion.resx">
       <DependentUpon>ConsultaInfraccion.vb</DependentUpon>

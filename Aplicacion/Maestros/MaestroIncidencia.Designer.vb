@@ -46,6 +46,9 @@ Partial Class MaestroIncidencia
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ComboTipo = New System.Windows.Forms.ComboBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -109,7 +112,7 @@ Partial Class MaestroIncidencia
         Me.DateTimePicker1.Checked = False
         Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(12, 325)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(12, 369)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(280, 23)
         Me.DateTimePicker1.TabIndex = 86
@@ -119,7 +122,7 @@ Partial Class MaestroIncidencia
         '
         Me.TextBox5.Enabled = False
         Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(12, 369)
+        Me.TextBox5.Location = New System.Drawing.Point(12, 413)
         Me.TextBox5.MaxLength = 50
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(280, 23)
@@ -129,7 +132,7 @@ Partial Class MaestroIncidencia
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(12, 351)
+        Me.Label4.Location = New System.Drawing.Point(12, 395)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(40, 15)
         Me.Label4.TabIndex = 84
@@ -139,7 +142,7 @@ Partial Class MaestroIncidencia
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(12, 307)
+        Me.Label5.Location = New System.Drawing.Point(12, 351)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 15)
         Me.Label5.TabIndex = 83
@@ -239,18 +242,50 @@ Partial Class MaestroIncidencia
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(298, 307)
+        Me.TextBox7.Location = New System.Drawing.Point(298, 284)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(17, 20)
         Me.TextBox7.TabIndex = 94
         Me.TextBox7.Visible = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label7.Location = New System.Drawing.Point(12, 307)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(118, 15)
+        Me.Label7.TabIndex = 95
+        Me.Label7.Text = "TIPO DE INCIDENCIA"
+        '
+        'ComboTipo
+        '
+        Me.ComboTipo.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboTipo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ComboTipo.FormattingEnabled = True
+        Me.ComboTipo.Items.AddRange(New Object() {"PARADA IRREGULAR", "CONDUCTA INAPROPIADA", "DESVIO NO AUTORIZADO"})
+        Me.ComboTipo.Location = New System.Drawing.Point(12, 325)
+        Me.ComboTipo.Name = "ComboTipo"
+        Me.ComboTipo.Size = New System.Drawing.Size(280, 23)
+        Me.ComboTipo.TabIndex = 96
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(298, 326)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(41, 20)
+        Me.TextBox8.TabIndex = 97
         '
         'MaestroIncidencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
-        Me.ClientSize = New System.Drawing.Size(351, 407)
+        Me.ClientSize = New System.Drawing.Size(351, 448)
+        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.ComboTipo)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.BotonBuscar2)
         Me.Controls.Add(Me.TextBox4)
@@ -301,4 +336,7 @@ Partial Class MaestroIncidencia
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ComboTipo As ComboBox
+    Friend WithEvents TextBox8 As TextBox
 End Class

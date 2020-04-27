@@ -305,13 +305,13 @@
         QmCC
 </value>
   </data>
-  <data name="MenuGuiaTelefonica.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MenuConsultarIncidencias.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAACoSURBVDhPY2BAA6YufiYeHh7s6OJE883d/H6au/sGEa0B
-        XaG5u/9/Uzf/KLINcItLP+abWrglJLdyFTIOzq1aHpRfGUDQ4JC8qv8BS0/9D1x+DhUvOfk/JLfqE1EG
-        +B/+/h8bBhlOHwNweoFYF4CcigsT5YXerSf+Y8NEh0Fa6+T/2DDRBlTPW/8fG6aPAcF5lZ9xeoGYhARK
-        rqBkiy0pA8X9CcYCqQoARgf1bEv8u1QAAAAASUVORK5CYII=
+        YQUAAAAGYktHRAD/AP8A/6C9p5MAAAC4SURBVDhPY2AYNODRneslr548PP/62eMtb14+7Xj/5mXAixcv
+        uEEYxAaJgeRAakBqURx+ycBg9f0Tx768f/3yPzK+c/r4DxBGFwepBemBG3JZX////WuXUTSDNN08fxqM
+        MQwAqgXpGTVg0IXB0a0b/u9bu/z/wQ2r/h/dtvH/uYN7gHgvFO8Bi4HkQGqOblmPGY2geEXHOYKC/0EY
+        mxxKOsCWn26bm/Nd0tfvBOEb6uq8gybPYTgEAFsk9gLqHZtvAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="MenuListadoCompelto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -343,6 +343,15 @@
         Y/Q6bTyM4eRDGEr0wYwlE6pgEkA2i7L3agmyYEfckbQjGE7xxVCSDwYTDmIw/gAJyEAOnwSUR3lRi10a
         LHcXYKkz39nuglUNW4sK8805mGtUOnFn6jKdpv+VzWeCUSr27C+J9MTNcA8UizygI8tBL4iWzJgeE910
         HimLfi+NnEOL3EyblUHMN7v+G/8Cfr+Qr+vFBAMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="MenuGuiaTelefonica.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAACoSURBVDhPY2BAA6YufiYeHh7s6OJE883d/H6au/sGEa0B
+        XaG5u/9/Uzf/KLINcItLP+abWrglJLdyFTIOzq1aHpRfGUDQ4JC8qv8BS0/9D1x+DhUvOfk/JLfqE1EG
+        +B/+/h8bBhlOHwNweoFYF4CcigsT5YXerSf+Y8NEh0Fa6+T/2DDRBlTPW/8fG6aPAcF5lZ9xeoGYhARK
+        rqBkiy0pA8X9CcYCqQoARgf1bEv8u1QAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="MenuConsultas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -71,6 +71,18 @@ Public Class ListadoDestino
 
             End If
 
+            If ConsultaGeneralRuta.Visible = True Then
+                'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
+
+                ConsultaGeneralRuta.TextBox5.Text = DataGridView.Item("ColumnaUbicacion", DataGridView.SelectedRows(0).Index).Value
+
+                'Se cierra el formulario ListadoVehiculo
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            End If
+
         End If
 
     End Sub
@@ -184,6 +196,18 @@ Public Class ListadoDestino
                 MaestroSitioCarga.BotonGuardar.Enabled = False
 
                 'Se cierra el formulario Listadositiocarga.
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            End If
+
+            If ConsultaGeneralRuta.Visible = True Then
+                'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
+
+                ConsultaGeneralRuta.TextBox5.Text = DataGridView.Item("ColumnaUbicacion", DataGridView.SelectedRows(0).Index).Value
+
+                'Se cierra el formulario ListadoVehiculo
                 Tabla.Clear()
                 DataSet.Clear()
                 Dispose()

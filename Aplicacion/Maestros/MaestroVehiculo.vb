@@ -212,7 +212,7 @@ Public Class MaestroVehiculo
         Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT idgrupo FROM grupo WHERE nombregrupo = ('" & ComboGrupo.Text & "') ", Conexion)
+        Adaptador = New MySqlDataAdapter("SELECT idgrupo FROM grupo WHERE nombregrupo = '" & ComboGrupo.Text & "' ", Conexion)
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows

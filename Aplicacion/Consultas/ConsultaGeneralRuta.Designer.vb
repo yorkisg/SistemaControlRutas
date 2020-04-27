@@ -24,15 +24,15 @@ Partial Class ConsultaGeneralRuta
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaGeneralRuta))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonFiltrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -43,15 +43,6 @@ Partial Class ConsultaGeneralRuta
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ColumnaRuta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaDestino = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -75,6 +66,21 @@ Partial Class ConsultaGeneralRuta
         Me.ColumnaVehiculo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaRutas2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.BotonBuscar5 = New System.Windows.Forms.Button()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.BotonBuscar4 = New System.Windows.Forms.Button()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ColumnaRuta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaDestino = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -177,98 +183,6 @@ Partial Class ConsultaGeneralRuta
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(785, 584)
         Me.DataGridView.TabIndex = 45
-        '
-        'ColumnaRuta
-        '
-        Me.ColumnaRuta.DataPropertyName = "idruta"
-        Me.ColumnaRuta.HeaderText = "ID RUTA"
-        Me.ColumnaRuta.Name = "ColumnaRuta"
-        Me.ColumnaRuta.ReadOnly = True
-        Me.ColumnaRuta.Visible = False
-        '
-        'ColumnaVehiculo
-        '
-        Me.ColumnaVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaVehiculo.DataPropertyName = "idvehiculo"
-        Me.ColumnaVehiculo.FillWeight = 139.6582!
-        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
-        Me.ColumnaVehiculo.MinimumWidth = 60
-        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
-        Me.ColumnaVehiculo.ReadOnly = True
-        Me.ColumnaVehiculo.Width = 70
-        '
-        'ColumnaChofer
-        '
-        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnaChofer.FillWeight = 31.74049!
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.MinimumWidth = 40
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
-        '
-        'ColumnaProducto
-        '
-        Me.ColumnaProducto.DataPropertyName = "nombreproducto"
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaProducto.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnaProducto.FillWeight = 31.74049!
-        Me.ColumnaProducto.HeaderText = "PRODUCTO"
-        Me.ColumnaProducto.Name = "ColumnaProducto"
-        Me.ColumnaProducto.ReadOnly = True
-        '
-        'ColumnaUbicacion
-        '
-        Me.ColumnaUbicacion.DataPropertyName = "nombresitiocarga"
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaUbicacion.DefaultCellStyle = DataGridViewCellStyle4
-        Me.ColumnaUbicacion.FillWeight = 31.74049!
-        Me.ColumnaUbicacion.HeaderText = "SITIO DE CARGA"
-        Me.ColumnaUbicacion.Name = "ColumnaUbicacion"
-        Me.ColumnaUbicacion.ReadOnly = True
-        '
-        'ColumnaDestino
-        '
-        Me.ColumnaDestino.DataPropertyName = "nombredestino"
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaDestino.DefaultCellStyle = DataGridViewCellStyle5
-        Me.ColumnaDestino.FillWeight = 31.74049!
-        Me.ColumnaDestino.HeaderText = "DESTINO"
-        Me.ColumnaDestino.Name = "ColumnaDestino"
-        Me.ColumnaDestino.ReadOnly = True
-        '
-        'ColumnaEstado
-        '
-        Me.ColumnaEstado.DataPropertyName = "nombreestado"
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle6
-        Me.ColumnaEstado.FillWeight = 31.74049!
-        Me.ColumnaEstado.HeaderText = "ESTADO"
-        Me.ColumnaEstado.Name = "ColumnaEstado"
-        Me.ColumnaEstado.ReadOnly = True
-        Me.ColumnaEstado.Visible = False
-        '
-        'ColumnaFecha
-        '
-        Me.ColumnaFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaFecha.DataPropertyName = "fecha"
-        Me.ColumnaFecha.HeaderText = "FECHA"
-        Me.ColumnaFecha.MinimumWidth = 50
-        Me.ColumnaFecha.Name = "ColumnaFecha"
-        Me.ColumnaFecha.ReadOnly = True
-        Me.ColumnaFecha.Width = 70
-        '
-        'ColumnaHora
-        '
-        Me.ColumnaHora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaHora.DataPropertyName = "hora"
-        Me.ColumnaHora.FillWeight = 401.6393!
-        Me.ColumnaHora.HeaderText = "HORA REGISTRADA"
-        Me.ColumnaHora.MinimumWidth = 50
-        Me.ColumnaHora.Name = "ColumnaHora"
-        Me.ColumnaHora.ReadOnly = True
-        Me.ColumnaHora.Width = 75
         '
         'DateTimePicker2
         '
@@ -450,9 +364,9 @@ Partial Class ConsultaGeneralRuta
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView1)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 315)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 394)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(263, 319)
+        Me.GroupBox2.Size = New System.Drawing.Size(263, 240)
         Me.GroupBox2.TabIndex = 91
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "VEHÍCULOS CON MAS SALIDAS (AL MES)"
@@ -486,7 +400,7 @@ Partial Class ConsultaGeneralRuta
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(257, 297)
+        Me.DataGridView1.Size = New System.Drawing.Size(257, 218)
         Me.DataGridView1.TabIndex = 49
         '
         'ColumnaVehiculo2
@@ -513,6 +427,12 @@ Partial Class ConsultaGeneralRuta
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.BotonBuscar5)
+        Me.GroupBox4.Controls.Add(Me.TextBox5)
+        Me.GroupBox4.Controls.Add(Me.Label7)
+        Me.GroupBox4.Controls.Add(Me.BotonBuscar4)
+        Me.GroupBox4.Controls.Add(Me.TextBox4)
+        Me.GroupBox4.Controls.Add(Me.Label6)
         Me.GroupBox4.Controls.Add(Me.BotonBuscar3)
         Me.GroupBox4.Controls.Add(Me.Label3)
         Me.GroupBox4.Controls.Add(Me.Label5)
@@ -525,10 +445,158 @@ Partial Class ConsultaGeneralRuta
         Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupBox4.Location = New System.Drawing.Point(12, 149)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(263, 160)
+        Me.GroupBox4.Size = New System.Drawing.Size(263, 239)
         Me.GroupBox4.TabIndex = 92
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "SELECCIONAR CRITERIO DE BUSQUEDA"
+        '
+        'BotonBuscar5
+        '
+        Me.BotonBuscar5.Image = CType(resources.GetObject("BotonBuscar5.Image"), System.Drawing.Image)
+        Me.BotonBuscar5.Location = New System.Drawing.Point(229, 205)
+        Me.BotonBuscar5.Name = "BotonBuscar5"
+        Me.BotonBuscar5.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar5.TabIndex = 83
+        Me.BotonBuscar5.UseVisualStyleBackColor = True
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Enabled = False
+        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox5.Location = New System.Drawing.Point(6, 209)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(217, 22)
+        Me.TextBox5.TabIndex = 82
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label7.Location = New System.Drawing.Point(6, 191)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(124, 15)
+        Me.Label7.TabIndex = 81
+        Me.Label7.Text = "CLIENTE / DESPACHO"
+        '
+        'BotonBuscar4
+        '
+        Me.BotonBuscar4.Image = CType(resources.GetObject("BotonBuscar4.Image"), System.Drawing.Image)
+        Me.BotonBuscar4.Location = New System.Drawing.Point(229, 162)
+        Me.BotonBuscar4.Name = "BotonBuscar4"
+        Me.BotonBuscar4.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar4.TabIndex = 80
+        Me.BotonBuscar4.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox4.Location = New System.Drawing.Point(6, 166)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(217, 22)
+        Me.TextBox4.TabIndex = 79
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label6.Location = New System.Drawing.Point(6, 148)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(94, 15)
+        Me.Label6.TabIndex = 78
+        Me.Label6.Text = "SITIO DE CARGA"
+        '
+        'ColumnaRuta
+        '
+        Me.ColumnaRuta.DataPropertyName = "idruta"
+        Me.ColumnaRuta.HeaderText = "ID RUTA"
+        Me.ColumnaRuta.Name = "ColumnaRuta"
+        Me.ColumnaRuta.ReadOnly = True
+        Me.ColumnaRuta.Visible = False
+        '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaVehiculo.DataPropertyName = "idvehiculo"
+        Me.ColumnaVehiculo.FillWeight = 139.6582!
+        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
+        Me.ColumnaVehiculo.MinimumWidth = 60
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        Me.ColumnaVehiculo.Width = 70
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ColumnaChofer.FillWeight = 31.74049!
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.MinimumWidth = 40
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        '
+        'ColumnaProducto
+        '
+        Me.ColumnaProducto.DataPropertyName = "nombreproducto"
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaProducto.DefaultCellStyle = DataGridViewCellStyle3
+        Me.ColumnaProducto.FillWeight = 31.74049!
+        Me.ColumnaProducto.HeaderText = "PRODUCTO"
+        Me.ColumnaProducto.Name = "ColumnaProducto"
+        Me.ColumnaProducto.ReadOnly = True
+        '
+        'ColumnaUbicacion
+        '
+        Me.ColumnaUbicacion.DataPropertyName = "nombresitiocarga"
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaUbicacion.DefaultCellStyle = DataGridViewCellStyle4
+        Me.ColumnaUbicacion.FillWeight = 31.74049!
+        Me.ColumnaUbicacion.HeaderText = "SITIO DE CARGA"
+        Me.ColumnaUbicacion.Name = "ColumnaUbicacion"
+        Me.ColumnaUbicacion.ReadOnly = True
+        '
+        'ColumnaDestino
+        '
+        Me.ColumnaDestino.DataPropertyName = "nombredestino"
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaDestino.DefaultCellStyle = DataGridViewCellStyle5
+        Me.ColumnaDestino.FillWeight = 31.74049!
+        Me.ColumnaDestino.HeaderText = "DESTINO"
+        Me.ColumnaDestino.Name = "ColumnaDestino"
+        Me.ColumnaDestino.ReadOnly = True
+        '
+        'ColumnaEstado
+        '
+        Me.ColumnaEstado.DataPropertyName = "nombreestado"
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle6
+        Me.ColumnaEstado.FillWeight = 31.74049!
+        Me.ColumnaEstado.HeaderText = "ESTADO"
+        Me.ColumnaEstado.Name = "ColumnaEstado"
+        Me.ColumnaEstado.ReadOnly = True
+        Me.ColumnaEstado.Visible = False
+        '
+        'ColumnaFecha
+        '
+        Me.ColumnaFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaFecha.DataPropertyName = "fecha"
+        Me.ColumnaFecha.HeaderText = "FECHA"
+        Me.ColumnaFecha.MinimumWidth = 50
+        Me.ColumnaFecha.Name = "ColumnaFecha"
+        Me.ColumnaFecha.ReadOnly = True
+        Me.ColumnaFecha.Width = 70
+        '
+        'ColumnaHora
+        '
+        Me.ColumnaHora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaHora.DataPropertyName = "hora"
+        Me.ColumnaHora.FillWeight = 401.6393!
+        Me.ColumnaHora.HeaderText = "HORA"
+        Me.ColumnaHora.MinimumWidth = 50
+        Me.ColumnaHora.Name = "ColumnaHora"
+        Me.ColumnaHora.ReadOnly = True
+        Me.ColumnaHora.Width = 75
         '
         'ConsultaGeneralRuta
         '
@@ -586,15 +654,6 @@ Partial Class ConsultaGeneralRuta
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents ColumnaHora As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaFecha As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaRuta As DataGridViewTextBoxColumn
     Friend WithEvents BotonBuscar2 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox2 As TextBox
@@ -606,4 +665,19 @@ Partial Class ConsultaGeneralRuta
     Friend WithEvents ColumnaVehiculo2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaRutas2 As DataGridViewTextBoxColumn
     Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents BotonBuscar4 As Button
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents BotonBuscar5 As Button
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ColumnaHora As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaFecha As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaRuta As DataGridViewTextBoxColumn
 End Class

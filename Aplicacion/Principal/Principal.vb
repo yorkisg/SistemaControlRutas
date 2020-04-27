@@ -218,7 +218,12 @@ Public Class Principal
         ConsultaInfraccion.ShowDialog()
 
     End Sub
+    Private Sub MenuConsultarIncidencias_Click(sender As Object, e As EventArgs) Handles MenuConsultarIncidencias.Click
+        'Formulario ListadoReporteInfraccion
 
+        ConsultaIncidencia.ShowDialog()
+
+    End Sub
     Private Sub MenuGuiaTelefonica_Click(sender As Object, e As EventArgs) Handles MenuGuiaTelefonica.Click
         'Formulario GuiaTelefonica
 
@@ -301,6 +306,7 @@ Public Class Principal
         'AccesoAdministrador.ShowDialog()
 
     End Sub
+
 
 End Class
 

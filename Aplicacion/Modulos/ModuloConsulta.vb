@@ -152,6 +152,78 @@ Module ModuloConsulta
 
     End Sub
 
+    Public Sub CargarGridUbicacion()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+
+        Dim Command As New MySqlCommand("SELECT idruta, idvehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado, fecha, hora " _
+                           & " FROM ruta, vehiculo, personal, sitiocarga, destino, producto, estadoruta " _
+                           & " WHERE ruta.vehiculo = vehiculo.idvehiculo " _
+                           & " AND ruta.personal = personal.idpersonal " _
+                           & " AND ruta.sitiocarga = sitiocarga.idsitiocarga " _
+                           & " AND ruta.destino = destino.iddestino " _
+                           & " AND ruta.producto = producto.idproducto " _
+                           & " AND ruta.estadoruta = estadoruta.idestado " _
+                           & " AND nombresitiocarga = '" & ConsultaGeneralRuta.TextBox4.Text & "' " _
+                           & " AND nombreestado IN ('EN RUTA VACIO', 'EN RUTA CARGADO') " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY idruta DESC, fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaGeneralRuta.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaGeneralRuta.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaGeneralRuta.DataGridView.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridDestino()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+
+        Dim Command As New MySqlCommand("SELECT idruta, idvehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado, fecha, hora " _
+                           & " FROM ruta, vehiculo, personal, sitiocarga, destino, producto, estadoruta " _
+                           & " WHERE ruta.vehiculo = vehiculo.idvehiculo " _
+                           & " AND ruta.personal = personal.idpersonal " _
+                           & " AND ruta.sitiocarga = sitiocarga.idsitiocarga " _
+                           & " AND ruta.destino = destino.iddestino " _
+                           & " AND ruta.producto = producto.idproducto " _
+                           & " AND ruta.estadoruta = estadoruta.idestado " _
+                           & " AND nombredestino = '" & ConsultaGeneralRuta.TextBox5.Text & "' " _
+                           & " AND nombreestado IN ('EN RUTA VACIO', 'EN RUTA CARGADO') " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY idruta DESC, fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaGeneralRuta.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaGeneralRuta.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaGeneralRuta.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaGeneralRuta.DataGridView.ClearSelection()
+
+    End Sub
+
     Public Sub CargarConsultaRutaVehiculo()
         'Metodo para cargar el datagridview.
         'ConsultaRuta
@@ -217,6 +289,8 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        ConsultaInfraccion.DataGridView.ClearSelection()
+
     End Sub
 
     Public Sub CargarGridConsultaInfraccion()
@@ -246,6 +320,8 @@ Module ModuloConsulta
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
+
+        ConsultaInfraccion.DataGridView.ClearSelection()
 
     End Sub
 
@@ -320,6 +396,73 @@ Module ModuloConsulta
         End With
 
         ReporteInfraccion.DataGridView1.ClearSelection()
+
+    End Sub
+
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''CONSULTA INCIDENCIAS''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    Public Sub CargarGridConsultaVehiculoIncidencia()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+        'ConsultaInfraccion
+
+        Dim Command As New MySqlCommand("SELECT idregistroincidencia, vehiculo, nombrepersonal, descripcion, tipo, fecha, hora " _
+                           & " FROM registroincidencia, personal " _
+                           & " WHERE registroincidencia.personal = personal.idpersonal " _
+                           & " AND vehiculo = '" & ConsultaIncidencia.TextBox1.Text & "' " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY idregistroincidencia DESC, fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaIncidencia.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaIncidencia.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaIncidencia.DataGridView.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridConsultaIncidencia()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+        'ConsultaInfraccion
+
+        Dim Command As New MySqlCommand("SELECT idregistroincidencia, vehiculo, nombrepersonal, descripcion, tipo, fecha, hora " _
+                           & " FROM registroincidencia, personal, vehiculo " _
+                           & " WHERE registroincidencia.personal = personal.idpersonal " _
+                           & " AND registroincidencia.vehiculo = vehiculo.idvehiculo " _
+                           & " AND clasificacion = '" & ConsultaIncidencia.TextBox2.Text & "' " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY idregistroincidencia DESC, fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaIncidencia.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaIncidencia.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaIncidencia.DataGridView.ClearSelection()
 
     End Sub
 
@@ -535,6 +678,8 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        GuiaTelefonica.DataGridView1.ClearSelection()
+
     End Sub
 
     Public Sub CargarGridGuiaPersonalLiviano()
@@ -565,6 +710,8 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        GuiaTelefonica.DataGridView2.ClearSelection()
+
     End Sub
 
     Public Sub CargarGridGuiaPersonal()
@@ -594,6 +741,8 @@ Module ModuloConsulta
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
+
+        GuiaTelefonica.DataGridView5.ClearSelection()
 
     End Sub
 

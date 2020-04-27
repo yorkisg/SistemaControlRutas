@@ -44,10 +44,12 @@ Partial Class Principal
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuConsultarInfracciones = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuListadoDeInfractores = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuGuiaTelefonica = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.MenuConsultarIncidencias = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuListadoCompelto = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultaGrupoProducto = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.MenuGuiaTelefonica = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuEstadisticas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuHistorialDeRutas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuHistorialDeInfracciones = New System.Windows.Forms.ToolStripMenuItem()
@@ -173,7 +175,7 @@ Partial Class Principal
         'MenuConsultas
         '
         Me.MenuConsultas.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.ToolStripSeparator5, Me.MenuConsultarInfracciones, Me.MenuListadoDeInfractores, Me.MenuGuiaTelefonica, Me.ToolStripSeparator8, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto})
+        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.ToolStripSeparator5, Me.MenuConsultarInfracciones, Me.MenuListadoDeInfractores, Me.MenuConsultarIncidencias, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
         Me.MenuConsultas.Image = CType(resources.GetObject("MenuConsultas.Image"), System.Drawing.Image)
         Me.MenuConsultas.Name = "MenuConsultas"
         Me.MenuConsultas.Size = New System.Drawing.Size(92, 21)
@@ -205,17 +207,17 @@ Partial Class Principal
         Me.MenuListadoDeInfractores.Size = New System.Drawing.Size(285, 22)
         Me.MenuListadoDeInfractores.Text = "Reporte de Infracciones (Top 15)"
         '
-        'MenuGuiaTelefonica
+        'MenuConsultarIncidencias
         '
-        Me.MenuGuiaTelefonica.Image = CType(resources.GetObject("MenuGuiaTelefonica.Image"), System.Drawing.Image)
-        Me.MenuGuiaTelefonica.Name = "MenuGuiaTelefonica"
-        Me.MenuGuiaTelefonica.Size = New System.Drawing.Size(285, 22)
-        Me.MenuGuiaTelefonica.Text = "Guía Teléfonica"
+        Me.MenuConsultarIncidencias.Image = CType(resources.GetObject("MenuConsultarIncidencias.Image"), System.Drawing.Image)
+        Me.MenuConsultarIncidencias.Name = "MenuConsultarIncidencias"
+        Me.MenuConsultarIncidencias.Size = New System.Drawing.Size(285, 22)
+        Me.MenuConsultarIncidencias.Text = "Consultar Incidencias"
         '
-        'ToolStripSeparator8
+        'ToolStripSeparator4
         '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(282, 6)
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(282, 6)
         '
         'MenuListadoCompelto
         '
@@ -230,6 +232,18 @@ Partial Class Principal
         Me.MenuConsultaGrupoProducto.Name = "MenuConsultaGrupoProducto"
         Me.MenuConsultaGrupoProducto.Size = New System.Drawing.Size(285, 22)
         Me.MenuConsultaGrupoProducto.Text = "Cuadro Resumen de Materia Prima"
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(282, 6)
+        '
+        'MenuGuiaTelefonica
+        '
+        Me.MenuGuiaTelefonica.Image = CType(resources.GetObject("MenuGuiaTelefonica.Image"), System.Drawing.Image)
+        Me.MenuGuiaTelefonica.Name = "MenuGuiaTelefonica"
+        Me.MenuGuiaTelefonica.Size = New System.Drawing.Size(285, 22)
+        Me.MenuGuiaTelefonica.Text = "Guía Teléfonica"
         '
         'MenuEstadisticas
         '
@@ -454,4 +468,6 @@ Partial Class Principal
     Friend WithEvents MenuSeguimientoTransporte As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents Label1 As Label
+    Friend WithEvents MenuConsultarIncidencias As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
 End Class

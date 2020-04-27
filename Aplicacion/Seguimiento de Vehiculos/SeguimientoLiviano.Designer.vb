@@ -1055,7 +1055,7 @@ Partial Class SeguimientoLiviano
         '
         Me.MenuOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuEditarVehiculo, Me.ToolStripSeparator11, Me.MenuAgregarInfracción, Me.MenuAgregarIncidencia, Me.ToolStripSeparator2})
         Me.MenuOpciones.Name = "MenuNovedadesVehiculo"
-        Me.MenuOpciones.Size = New System.Drawing.Size(178, 82)
+        Me.MenuOpciones.Size = New System.Drawing.Size(178, 104)
         '
         'MenuEditarVehiculo
         '

@@ -48,7 +48,15 @@ Public Class ConsultaGeneralRuta
 
                     CargarGridVehiculo()
 
-                ElseIf TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" Then
+                ElseIf TextBox4.Text <> "" Then
+
+                    CargarGridUbicacion()
+
+                ElseIf TextBox5.Text <> "" Then
+
+                    CargarGridDestino()
+
+                ElseIf TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" And TextBox4.Text = "" And TextBox5.Text = "" Then
 
                     CargarGridConsultaRuta()
                     'MsgBox("Debe seleccionar un criterio para la consulta.", MsgBoxStyle.Exclamation, "Error.")
@@ -78,6 +86,8 @@ Public Class ConsultaGeneralRuta
         'Eliminamos el texto en otros textbox para validar que no busque sobre otro criterio
         TextBox2.Text = ""
         TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
 
     End Sub
 
@@ -89,6 +99,8 @@ Public Class ConsultaGeneralRuta
         'Eliminamos el texto en otros textbox para validar que no busque sobre otro criterio
         TextBox1.Text = ""
         TextBox3.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
 
     End Sub
 
@@ -100,6 +112,34 @@ Public Class ConsultaGeneralRuta
         'Eliminamos el texto en otros textbox para validar que no busque sobre otro criterio
         TextBox1.Text = ""
         TextBox2.Text = ""
+        TextBox4.Text = ""
+        TextBox5.Text = ""
+
+    End Sub
+
+    Private Sub BotonBuscar4_Click(sender As Object, e As EventArgs) Handles BotonBuscar4.Click
+        'Llamada al formulario ListadoVehiculo
+
+        Listadositiocarga.ShowDialog()
+
+        'Eliminamos el texto en otros textbox para validar que no busque sobre otro criterio
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox5.Text = ""
+
+    End Sub
+
+    Private Sub BotonBuscar5_Click(sender As Object, e As EventArgs) Handles BotonBuscar5.Click
+        'Llamada al formulario ListadoVehiculo
+
+        ListadoDestino.ShowDialog()
+
+        'Eliminamos el texto en otros textbox para validar que no busque sobre otro criterio
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox4.Text = ""
 
     End Sub
 

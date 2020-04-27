@@ -28,7 +28,7 @@ Public Class MaestroIncidencia
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("INSERT INTO registroincidencia (idregistroincidencia, vehiculo, personal, descripcion, clasificacion, fecha, hora) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox6.Text & "', '" & TextBox3.Text & "', '" & TextBox7.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", Conexion)
+            Dim db As New MySqlCommand("INSERT INTO registroincidencia (idregistroincidencia, vehiculo, personal, descripcion, tipo, clasificacion, fecha, hora) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox6.Text & "', '" & TextBox3.Text & "', '" & TextBox8.Text & "', '" & TextBox7.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", Conexion)
             db.ExecuteNonQuery()
             MsgBox("Incidencia registrada con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -96,6 +96,7 @@ Public Class MaestroIncidencia
         TextBox4.Text = ""
         TextBox6.Text = ""
         TextBox7.Text = ""
+        TextBox8.Text = ""
 
     End Sub
 
@@ -124,9 +125,20 @@ Public Class MaestroIncidencia
             Validar = False
         End If
 
+        If String.IsNullOrEmpty(ComboTipo.Text) Then
+            ErrorProvider1.SetError(ComboTipo, "No puede dejar campos en blanco.")
+            Validar = False
+        End If
+
         Return Validar
 
     End Function
+
+    Private Sub ComboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboTipo.SelectedIndexChanged
+
+        TextBox8.Text = ComboTipo.SelectedItem
+
+    End Sub
 
 
 End Class
