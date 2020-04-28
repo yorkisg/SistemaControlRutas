@@ -23,10 +23,10 @@ Partial Class ConsultaIncidencia
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaIncidencia))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonFiltrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -51,9 +51,6 @@ Partial Class ConsultaIncidencia
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.Contador = New System.Windows.Forms.ToolStripLabel()
         Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -61,6 +58,9 @@ Partial Class ConsultaIncidencia
         Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.Contador = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -294,14 +294,14 @@ Partial Class ConsultaIncidencia
         Me.DataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaVehiculo, Me.ColumnaChofer, Me.ColumnaVelocidad, Me.ColumnaEstado, Me.ColumnaFecha, Me.ColumnaHora})
         Me.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill
@@ -314,6 +314,77 @@ Partial Class ConsultaIncidencia
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(645, 534)
         Me.DataGridView.TabIndex = 80
+        '
+        'ColumnaID
+        '
+        Me.ColumnaID.DataPropertyName = "idregistroincidencia"
+        Me.ColumnaID.HeaderText = "ID HISTORIAL"
+        Me.ColumnaID.Name = "ColumnaID"
+        Me.ColumnaID.ReadOnly = True
+        Me.ColumnaID.Visible = False
+        '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
+        Me.ColumnaVehiculo.FillWeight = 139.6582!
+        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
+        Me.ColumnaVehiculo.MinimumWidth = 65
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        Me.ColumnaVehiculo.Width = 65
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle6
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.MinimumWidth = 85
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        '
+        'ColumnaVelocidad
+        '
+        Me.ColumnaVelocidad.DataPropertyName = "descripcion"
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle7
+        Me.ColumnaVelocidad.FillWeight = 31.74049!
+        Me.ColumnaVelocidad.HeaderText = "INCIDENCIA"
+        Me.ColumnaVelocidad.MinimumWidth = 220
+        Me.ColumnaVelocidad.Name = "ColumnaVelocidad"
+        Me.ColumnaVelocidad.ReadOnly = True
+        '
+        'ColumnaEstado
+        '
+        Me.ColumnaEstado.DataPropertyName = "tipo"
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle8
+        Me.ColumnaEstado.HeaderText = "TIPO"
+        Me.ColumnaEstado.MinimumWidth = 110
+        Me.ColumnaEstado.Name = "ColumnaEstado"
+        Me.ColumnaEstado.ReadOnly = True
+        '
+        'ColumnaFecha
+        '
+        Me.ColumnaFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaFecha.DataPropertyName = "fecha"
+        Me.ColumnaFecha.HeaderText = "FECHA"
+        Me.ColumnaFecha.MinimumWidth = 67
+        Me.ColumnaFecha.Name = "ColumnaFecha"
+        Me.ColumnaFecha.ReadOnly = True
+        Me.ColumnaFecha.Width = 67
+        '
+        'ColumnaHora
+        '
+        Me.ColumnaHora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaHora.DataPropertyName = "hora"
+        Me.ColumnaHora.FillWeight = 31.74049!
+        Me.ColumnaHora.HeaderText = "HORA"
+        Me.ColumnaHora.MinimumWidth = 67
+        Me.ColumnaHora.Name = "ColumnaHora"
+        Me.ColumnaHora.ReadOnly = True
+        Me.ColumnaHora.Width = 67
         '
         'ToolStrip2
         '
@@ -341,77 +412,6 @@ Partial Class ConsultaIncidencia
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
         '
-        'ColumnaID
-        '
-        Me.ColumnaID.DataPropertyName = "idregistroincidencia"
-        Me.ColumnaID.HeaderText = "ID HISTORIAL"
-        Me.ColumnaID.Name = "ColumnaID"
-        Me.ColumnaID.ReadOnly = True
-        Me.ColumnaID.Visible = False
-        '
-        'ColumnaVehiculo
-        '
-        Me.ColumnaVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaVehiculo.DataPropertyName = "vehiculo"
-        Me.ColumnaVehiculo.FillWeight = 139.6582!
-        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
-        Me.ColumnaVehiculo.MinimumWidth = 65
-        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
-        Me.ColumnaVehiculo.ReadOnly = True
-        Me.ColumnaVehiculo.Width = 65
-        '
-        'ColumnaChofer
-        '
-        Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.MinimumWidth = 85
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
-        '
-        'ColumnaVelocidad
-        '
-        Me.ColumnaVelocidad.DataPropertyName = "descripcion"
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnaVelocidad.FillWeight = 31.74049!
-        Me.ColumnaVelocidad.HeaderText = "INCIDENCIA"
-        Me.ColumnaVelocidad.MinimumWidth = 220
-        Me.ColumnaVelocidad.Name = "ColumnaVelocidad"
-        Me.ColumnaVelocidad.ReadOnly = True
-        '
-        'ColumnaEstado
-        '
-        Me.ColumnaEstado.DataPropertyName = "tipo"
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle4
-        Me.ColumnaEstado.HeaderText = "TIPO"
-        Me.ColumnaEstado.MinimumWidth = 110
-        Me.ColumnaEstado.Name = "ColumnaEstado"
-        Me.ColumnaEstado.ReadOnly = True
-        '
-        'ColumnaFecha
-        '
-        Me.ColumnaFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaFecha.DataPropertyName = "fecha"
-        Me.ColumnaFecha.HeaderText = "FECHA"
-        Me.ColumnaFecha.MinimumWidth = 67
-        Me.ColumnaFecha.Name = "ColumnaFecha"
-        Me.ColumnaFecha.ReadOnly = True
-        Me.ColumnaFecha.Width = 67
-        '
-        'ColumnaHora
-        '
-        Me.ColumnaHora.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaHora.DataPropertyName = "hora"
-        Me.ColumnaHora.FillWeight = 31.74049!
-        Me.ColumnaHora.HeaderText = "HORA"
-        Me.ColumnaHora.MinimumWidth = 67
-        Me.ColumnaHora.Name = "ColumnaHora"
-        Me.ColumnaHora.ReadOnly = True
-        Me.ColumnaHora.Width = 67
-        '
         'ConsultaIncidencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -422,7 +422,9 @@ Partial Class ConsultaIncidencia
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "ConsultaIncidencia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta de Incidencias"

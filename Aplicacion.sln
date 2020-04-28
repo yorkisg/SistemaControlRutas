@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Aplicacion", "Aplicacion\Aplicacion.vbproj", "{43E45C02-E397-467B-B5A6-7CE48DC33D8D}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Aplicacion Vigilancia", "..\Aplicacion Vigilancia\Aplicacion Vigilancia\Aplicacion Vigilancia.vbproj", "{F0A1130D-7FF5-45C6-B170-A910908E6E30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{43E45C02-E397-467B-B5A6-7CE48DC33D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43E45C02-E397-467B-B5A6-7CE48DC33D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43E45C02-E397-467B-B5A6-7CE48DC33D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0A1130D-7FF5-45C6-B170-A910908E6E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0A1130D-7FF5-45C6-B170-A910908E6E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0A1130D-7FF5-45C6-B170-A910908E6E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0A1130D-7FF5-45C6-B170-A910908E6E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
