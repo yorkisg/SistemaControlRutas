@@ -48,10 +48,6 @@ Partial Class ConsultaInfraccion
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.Contador = New System.Windows.Forms.ToolStripLabel()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,6 +55,10 @@ Partial Class ConsultaInfraccion
         Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,17 +148,17 @@ Partial Class ConsultaInfraccion
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(303, 556)
+        Me.GroupBox1.Size = New System.Drawing.Size(286, 556)
         Me.GroupBox1.TabIndex = 79
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SELECCIONAR PERÍODO DE FECHAS"
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.DateTimePicker1.Location = New System.Drawing.Point(6, 37)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(240, 23)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(240, 25)
         Me.DateTimePicker1.TabIndex = 76
         Me.DateTimePicker1.Value = New Date(2019, 3, 12, 18, 55, 59, 0)
         '
@@ -166,7 +166,7 @@ Partial Class ConsultaInfraccion
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(6, 107)
+        Me.Label1.Location = New System.Drawing.Point(6, 111)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 15)
         Me.Label1.TabIndex = 79
@@ -184,10 +184,10 @@ Partial Class ConsultaInfraccion
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 81)
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 83)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(240, 23)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(240, 25)
         Me.DateTimePicker2.TabIndex = 78
         Me.DateTimePicker2.Value = New Date(2019, 3, 12, 18, 56, 3, 0)
         '
@@ -195,7 +195,7 @@ Partial Class ConsultaInfraccion
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(6, 63)
+        Me.Label5.Location = New System.Drawing.Point(6, 65)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 15)
         Me.Label5.TabIndex = 77
@@ -205,7 +205,7 @@ Partial Class ConsultaInfraccion
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 196)
+        Me.RadioButton2.Location = New System.Drawing.Point(6, 197)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(70, 19)
         Me.RadioButton2.TabIndex = 74
@@ -217,7 +217,7 @@ Partial Class ConsultaInfraccion
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 171)
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 172)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(64, 19)
         Me.RadioButton1.TabIndex = 73
@@ -229,7 +229,7 @@ Partial Class ConsultaInfraccion
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(6, 153)
+        Me.Label3.Location = New System.Drawing.Point(6, 154)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 15)
         Me.Label3.TabIndex = 72
@@ -238,7 +238,7 @@ Partial Class ConsultaInfraccion
         'BotonBuscar
         '
         Me.BotonBuscar.Image = CType(resources.GetObject("BotonBuscar.Image"), System.Drawing.Image)
-        Me.BotonBuscar.Location = New System.Drawing.Point(269, 121)
+        Me.BotonBuscar.Location = New System.Drawing.Point(252, 126)
         Me.BotonBuscar.Name = "BotonBuscar"
         Me.BotonBuscar.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar.TabIndex = 71
@@ -258,7 +258,7 @@ Partial Class ConsultaInfraccion
         '
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox1.Location = New System.Drawing.Point(6, 125)
+        Me.TextBox1.Location = New System.Drawing.Point(6, 129)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(240, 22)
         Me.TextBox1.TabIndex = 55
@@ -299,45 +299,8 @@ Partial Class ConsultaInfraccion
         Me.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(645, 534)
+        Me.DataGridView.Size = New System.Drawing.Size(662, 534)
         Me.DataGridView.TabIndex = 80
-        '
-        'ToolStrip2
-        '
-        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
-        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.Contador})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 587)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(984, 25)
-        Me.ToolStrip2.TabIndex = 81
-        Me.ToolStrip2.Text = "ToolStrip2"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(158, 22)
-        Me.ToolStripLabel1.Text = "REGISTROS ENCONTRADOS:"
-        '
-        'Contador
-        '
-        Me.Contador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Contador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Contador.Image = CType(resources.GetObject("Contador.Image"), System.Drawing.Image)
-        Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Contador.Name = "Contador"
-        Me.Contador.Size = New System.Drawing.Size(0, 22)
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.DataGridView)
-        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox2.Location = New System.Drawing.Point(321, 28)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(651, 556)
-        Me.GroupBox2.TabIndex = 82
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "HISTORIAL DE INFRACCIONES"
         '
         'ColumnaID
         '
@@ -407,6 +370,43 @@ Partial Class ConsultaInfraccion
         Me.ColumnaHora.Name = "ColumnaHora"
         Me.ColumnaHora.ReadOnly = True
         Me.ColumnaHora.Width = 92
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
+        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.Contador})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 587)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(984, 25)
+        Me.ToolStrip2.TabIndex = 81
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(158, 22)
+        Me.ToolStripLabel1.Text = "REGISTROS ENCONTRADOS:"
+        '
+        'Contador
+        '
+        Me.Contador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.Contador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Contador.Image = CType(resources.GetObject("Contador.Image"), System.Drawing.Image)
+        Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Contador.Name = "Contador"
+        Me.Contador.Size = New System.Drawing.Size(0, 22)
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.DataGridView)
+        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GroupBox2.Location = New System.Drawing.Point(304, 28)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(668, 556)
+        Me.GroupBox2.TabIndex = 82
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "HISTORIAL DE INFRACCIONES"
         '
         'ConsultaInfraccion
         '

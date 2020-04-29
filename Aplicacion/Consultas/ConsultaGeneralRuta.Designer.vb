@@ -24,15 +24,15 @@ Partial Class ConsultaGeneralRuta
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaGeneralRuta))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonFiltrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -43,6 +43,15 @@ Partial Class ConsultaGeneralRuta
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.ColumnaRuta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaDestino = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -72,15 +81,6 @@ Partial Class ConsultaGeneralRuta
         Me.BotonBuscar4 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ColumnaRuta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaDestino = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -97,7 +97,7 @@ Partial Class ConsultaGeneralRuta
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1084, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1184, 25)
         Me.ToolStrip1.TabIndex = 23
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -181,330 +181,8 @@ Partial Class ConsultaGeneralRuta
         Me.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(785, 584)
+        Me.DataGridView.Size = New System.Drawing.Size(840, 584)
         Me.DataGridView.TabIndex = 45
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 81)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(251, 23)
-        Me.DateTimePicker2.TabIndex = 66
-        Me.DateTimePicker2.Value = New Date(2019, 4, 13, 0, 0, 0, 0)
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(6, 63)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 15)
-        Me.Label2.TabIndex = 65
-        Me.Label2.Text = "HASTA"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Checked = False
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(6, 37)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(251, 23)
-        Me.DateTimePicker1.TabIndex = 64
-        Me.DateTimePicker1.Value = New Date(2019, 4, 13, 0, 0, 0, 0)
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(6, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 15)
-        Me.Label1.TabIndex = 63
-        Me.Label1.Text = "DESDE"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(6, 19)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 15)
-        Me.Label3.TabIndex = 68
-        Me.Label3.Text = "CHOFER"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox1.Location = New System.Drawing.Point(6, 37)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(217, 22)
-        Me.TextBox1.TabIndex = 55
-        '
-        'BotonBuscar
-        '
-        Me.BotonBuscar.Image = CType(resources.GetObject("BotonBuscar.Image"), System.Drawing.Image)
-        Me.BotonBuscar.Location = New System.Drawing.Point(229, 34)
-        Me.BotonBuscar.Name = "BotonBuscar"
-        Me.BotonBuscar.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar.TabIndex = 71
-        Me.BotonBuscar.UseVisualStyleBackColor = True
-        '
-        'ToolStrip2
-        '
-        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
-        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.Contador})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 637)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(1084, 25)
-        Me.ToolStrip2.TabIndex = 71
-        Me.ToolStrip2.Text = "ToolStrip2"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(158, 22)
-        Me.ToolStripLabel1.Text = "REGISTROS ENCONTRADOS:"
-        '
-        'Contador
-        '
-        Me.Contador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Contador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Contador.Image = CType(resources.GetObject("Contador.Image"), System.Drawing.Image)
-        Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Contador.Name = "Contador"
-        Me.Contador.Size = New System.Drawing.Size(0, 22)
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(263, 115)
-        Me.GroupBox1.TabIndex = 72
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "SELECCIONAR PERÍODO DE FECHAS"
-        '
-        'BotonBuscar3
-        '
-        Me.BotonBuscar3.Image = CType(resources.GetObject("BotonBuscar3.Image"), System.Drawing.Image)
-        Me.BotonBuscar3.Location = New System.Drawing.Point(229, 120)
-        Me.BotonBuscar3.Name = "BotonBuscar3"
-        Me.BotonBuscar3.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar3.TabIndex = 77
-        Me.BotonBuscar3.UseVisualStyleBackColor = True
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(6, 105)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 15)
-        Me.Label5.TabIndex = 76
-        Me.Label5.Text = "VEHÍCULO"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox3.Location = New System.Drawing.Point(6, 123)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(217, 22)
-        Me.TextBox3.TabIndex = 75
-        '
-        'BotonBuscar2
-        '
-        Me.BotonBuscar2.Image = CType(resources.GetObject("BotonBuscar2.Image"), System.Drawing.Image)
-        Me.BotonBuscar2.Location = New System.Drawing.Point(229, 77)
-        Me.BotonBuscar2.Name = "BotonBuscar2"
-        Me.BotonBuscar2.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar2.TabIndex = 74
-        Me.BotonBuscar2.UseVisualStyleBackColor = True
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(6, 62)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(70, 15)
-        Me.Label4.TabIndex = 73
-        Me.Label4.Text = "PRODUCTO"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox2.Location = New System.Drawing.Point(6, 80)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(217, 22)
-        Me.TextBox2.TabIndex = 72
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.DataGridView)
-        Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(281, 28)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(791, 606)
-        Me.GroupBox3.TabIndex = 85
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "DETALLE DE CONSULTA"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.DataGridView1)
-        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 394)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(263, 240)
-        Me.GroupBox2.TabIndex = 91
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "VEHÍCULOS CON MAS SALIDAS (AL MES)"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaVehiculo2, Me.ColumnaRutas2})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Menu
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 19)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.RowHeadersWidth = 45
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle10
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(257, 218)
-        Me.DataGridView1.TabIndex = 49
-        '
-        'ColumnaVehiculo2
-        '
-        Me.ColumnaVehiculo2.DataPropertyName = "Vehiculo"
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.Format = "N2"
-        DataGridViewCellStyle8.NullValue = Nothing
-        Me.ColumnaVehiculo2.DefaultCellStyle = DataGridViewCellStyle8
-        Me.ColumnaVehiculo2.HeaderText = "VEHICULO"
-        Me.ColumnaVehiculo2.Name = "ColumnaVehiculo2"
-        Me.ColumnaVehiculo2.ReadOnly = True
-        '
-        'ColumnaRutas2
-        '
-        Me.ColumnaRutas2.DataPropertyName = "Conteo"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.Format = "N0"
-        DataGridViewCellStyle9.NullValue = Nothing
-        Me.ColumnaRutas2.DefaultCellStyle = DataGridViewCellStyle9
-        Me.ColumnaRutas2.HeaderText = "RUTAS GENERADAS"
-        Me.ColumnaRutas2.Name = "ColumnaRutas2"
-        Me.ColumnaRutas2.ReadOnly = True
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.BotonBuscar5)
-        Me.GroupBox4.Controls.Add(Me.TextBox5)
-        Me.GroupBox4.Controls.Add(Me.Label7)
-        Me.GroupBox4.Controls.Add(Me.BotonBuscar4)
-        Me.GroupBox4.Controls.Add(Me.TextBox4)
-        Me.GroupBox4.Controls.Add(Me.Label6)
-        Me.GroupBox4.Controls.Add(Me.BotonBuscar3)
-        Me.GroupBox4.Controls.Add(Me.Label3)
-        Me.GroupBox4.Controls.Add(Me.Label5)
-        Me.GroupBox4.Controls.Add(Me.TextBox1)
-        Me.GroupBox4.Controls.Add(Me.TextBox3)
-        Me.GroupBox4.Controls.Add(Me.BotonBuscar)
-        Me.GroupBox4.Controls.Add(Me.BotonBuscar2)
-        Me.GroupBox4.Controls.Add(Me.TextBox2)
-        Me.GroupBox4.Controls.Add(Me.Label4)
-        Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 149)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(263, 239)
-        Me.GroupBox4.TabIndex = 92
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "SELECCIONAR CRITERIO DE BUSQUEDA"
-        '
-        'BotonBuscar5
-        '
-        Me.BotonBuscar5.Image = CType(resources.GetObject("BotonBuscar5.Image"), System.Drawing.Image)
-        Me.BotonBuscar5.Location = New System.Drawing.Point(229, 205)
-        Me.BotonBuscar5.Name = "BotonBuscar5"
-        Me.BotonBuscar5.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar5.TabIndex = 83
-        Me.BotonBuscar5.UseVisualStyleBackColor = True
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox5.Location = New System.Drawing.Point(6, 209)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(217, 22)
-        Me.TextBox5.TabIndex = 82
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label7.Location = New System.Drawing.Point(6, 191)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(124, 15)
-        Me.Label7.TabIndex = 81
-        Me.Label7.Text = "CLIENTE / DESPACHO"
-        '
-        'BotonBuscar4
-        '
-        Me.BotonBuscar4.Image = CType(resources.GetObject("BotonBuscar4.Image"), System.Drawing.Image)
-        Me.BotonBuscar4.Location = New System.Drawing.Point(229, 162)
-        Me.BotonBuscar4.Name = "BotonBuscar4"
-        Me.BotonBuscar4.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar4.TabIndex = 80
-        Me.BotonBuscar4.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox4.Location = New System.Drawing.Point(6, 166)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(217, 22)
-        Me.TextBox4.TabIndex = 79
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label6.Location = New System.Drawing.Point(6, 148)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(94, 15)
-        Me.Label6.TabIndex = 78
-        Me.Label6.Text = "SITIO DE CARGA"
         '
         'ColumnaRuta
         '
@@ -598,12 +276,332 @@ Partial Class ConsultaGeneralRuta
         Me.ColumnaHora.ReadOnly = True
         Me.ColumnaHora.Width = 75
         '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 83)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(296, 25)
+        Me.DateTimePicker2.TabIndex = 66
+        Me.DateTimePicker2.Value = New Date(2019, 4, 13, 0, 0, 0, 0)
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label2.Location = New System.Drawing.Point(6, 65)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 15)
+        Me.Label2.TabIndex = 65
+        Me.Label2.Text = "HASTA"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Checked = False
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(6, 37)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(296, 25)
+        Me.DateTimePicker1.TabIndex = 64
+        Me.DateTimePicker1.Value = New Date(2019, 4, 13, 0, 0, 0, 0)
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label1.Location = New System.Drawing.Point(6, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(41, 15)
+        Me.Label1.TabIndex = 63
+        Me.Label1.Text = "DESDE"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label3.Location = New System.Drawing.Point(6, 19)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(52, 15)
+        Me.Label3.TabIndex = 68
+        Me.Label3.Text = "CHOFER"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox1.Location = New System.Drawing.Point(6, 37)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(263, 22)
+        Me.TextBox1.TabIndex = 55
+        '
+        'BotonBuscar
+        '
+        Me.BotonBuscar.Image = CType(resources.GetObject("BotonBuscar.Image"), System.Drawing.Image)
+        Me.BotonBuscar.Location = New System.Drawing.Point(275, 34)
+        Me.BotonBuscar.Name = "BotonBuscar"
+        Me.BotonBuscar.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar.TabIndex = 71
+        Me.BotonBuscar.UseVisualStyleBackColor = True
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
+        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.Contador})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 637)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(1184, 25)
+        Me.ToolStrip2.TabIndex = 71
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(158, 22)
+        Me.ToolStripLabel1.Text = "REGISTROS ENCONTRADOS:"
+        '
+        'Contador
+        '
+        Me.Contador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.Contador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Contador.Image = CType(resources.GetObject("Contador.Image"), System.Drawing.Image)
+        Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Contador.Name = "Contador"
+        Me.Contador.Size = New System.Drawing.Size(0, 22)
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(308, 114)
+        Me.GroupBox1.TabIndex = 72
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "SELECCIONAR PERÍODO DE FECHAS"
+        '
+        'BotonBuscar3
+        '
+        Me.BotonBuscar3.Image = CType(resources.GetObject("BotonBuscar3.Image"), System.Drawing.Image)
+        Me.BotonBuscar3.Location = New System.Drawing.Point(275, 120)
+        Me.BotonBuscar3.Name = "BotonBuscar3"
+        Me.BotonBuscar3.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar3.TabIndex = 77
+        Me.BotonBuscar3.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label5.Location = New System.Drawing.Point(6, 105)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 15)
+        Me.Label5.TabIndex = 76
+        Me.Label5.Text = "VEHÍCULO"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox3.Location = New System.Drawing.Point(6, 123)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(263, 22)
+        Me.TextBox3.TabIndex = 75
+        '
+        'BotonBuscar2
+        '
+        Me.BotonBuscar2.Image = CType(resources.GetObject("BotonBuscar2.Image"), System.Drawing.Image)
+        Me.BotonBuscar2.Location = New System.Drawing.Point(275, 77)
+        Me.BotonBuscar2.Name = "BotonBuscar2"
+        Me.BotonBuscar2.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar2.TabIndex = 74
+        Me.BotonBuscar2.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label4.Location = New System.Drawing.Point(6, 62)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(70, 15)
+        Me.Label4.TabIndex = 73
+        Me.Label4.Text = "PRODUCTO"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox2.Location = New System.Drawing.Point(6, 80)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(263, 22)
+        Me.TextBox2.TabIndex = 72
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.DataGridView)
+        Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(326, 28)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(846, 606)
+        Me.GroupBox3.TabIndex = 85
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "DETALLE DE CONSULTA"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.DataGridView1)
+        Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 393)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(308, 241)
+        Me.GroupBox2.TabIndex = 91
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "VEHÍCULOS CON MAS SALIDAS (AL MES)"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToResizeRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaVehiculo2, Me.ColumnaRutas2})
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.GridColor = System.Drawing.SystemColors.Menu
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 19)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.RowHeadersWidth = 45
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle10
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(302, 219)
+        Me.DataGridView1.TabIndex = 49
+        '
+        'ColumnaVehiculo2
+        '
+        Me.ColumnaVehiculo2.DataPropertyName = "Vehiculo"
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle8.Format = "N2"
+        DataGridViewCellStyle8.NullValue = Nothing
+        Me.ColumnaVehiculo2.DefaultCellStyle = DataGridViewCellStyle8
+        Me.ColumnaVehiculo2.HeaderText = "VEHICULO"
+        Me.ColumnaVehiculo2.Name = "ColumnaVehiculo2"
+        Me.ColumnaVehiculo2.ReadOnly = True
+        '
+        'ColumnaRutas2
+        '
+        Me.ColumnaRutas2.DataPropertyName = "Conteo"
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.Format = "N0"
+        DataGridViewCellStyle9.NullValue = Nothing
+        Me.ColumnaRutas2.DefaultCellStyle = DataGridViewCellStyle9
+        Me.ColumnaRutas2.HeaderText = "RUTAS GENERADAS"
+        Me.ColumnaRutas2.Name = "ColumnaRutas2"
+        Me.ColumnaRutas2.ReadOnly = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.BotonBuscar5)
+        Me.GroupBox4.Controls.Add(Me.TextBox5)
+        Me.GroupBox4.Controls.Add(Me.Label7)
+        Me.GroupBox4.Controls.Add(Me.BotonBuscar4)
+        Me.GroupBox4.Controls.Add(Me.TextBox4)
+        Me.GroupBox4.Controls.Add(Me.Label6)
+        Me.GroupBox4.Controls.Add(Me.BotonBuscar3)
+        Me.GroupBox4.Controls.Add(Me.Label3)
+        Me.GroupBox4.Controls.Add(Me.Label5)
+        Me.GroupBox4.Controls.Add(Me.TextBox1)
+        Me.GroupBox4.Controls.Add(Me.TextBox3)
+        Me.GroupBox4.Controls.Add(Me.BotonBuscar)
+        Me.GroupBox4.Controls.Add(Me.BotonBuscar2)
+        Me.GroupBox4.Controls.Add(Me.TextBox2)
+        Me.GroupBox4.Controls.Add(Me.Label4)
+        Me.GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 148)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(308, 239)
+        Me.GroupBox4.TabIndex = 92
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "SELECCIONAR CRITERIO DE BUSQUEDA"
+        '
+        'BotonBuscar5
+        '
+        Me.BotonBuscar5.Image = CType(resources.GetObject("BotonBuscar5.Image"), System.Drawing.Image)
+        Me.BotonBuscar5.Location = New System.Drawing.Point(275, 205)
+        Me.BotonBuscar5.Name = "BotonBuscar5"
+        Me.BotonBuscar5.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar5.TabIndex = 83
+        Me.BotonBuscar5.UseVisualStyleBackColor = True
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Enabled = False
+        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox5.Location = New System.Drawing.Point(6, 209)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(263, 22)
+        Me.TextBox5.TabIndex = 82
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label7.Location = New System.Drawing.Point(6, 191)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(124, 15)
+        Me.Label7.TabIndex = 81
+        Me.Label7.Text = "CLIENTE / DESPACHO"
+        '
+        'BotonBuscar4
+        '
+        Me.BotonBuscar4.Image = CType(resources.GetObject("BotonBuscar4.Image"), System.Drawing.Image)
+        Me.BotonBuscar4.Location = New System.Drawing.Point(275, 162)
+        Me.BotonBuscar4.Name = "BotonBuscar4"
+        Me.BotonBuscar4.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar4.TabIndex = 80
+        Me.BotonBuscar4.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox4.Location = New System.Drawing.Point(6, 166)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(263, 22)
+        Me.TextBox4.TabIndex = 79
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label6.Location = New System.Drawing.Point(6, 148)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(94, 15)
+        Me.Label6.TabIndex = 78
+        Me.Label6.Text = "SITIO DE CARGA"
+        '
         'ConsultaGeneralRuta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
-        Me.ClientSize = New System.Drawing.Size(1084, 662)
+        Me.ClientSize = New System.Drawing.Size(1184, 662)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)

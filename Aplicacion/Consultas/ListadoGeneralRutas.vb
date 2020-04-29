@@ -58,8 +58,15 @@ Public Class ListadoGeneralRutas
                 'Si la respuesta es "Si"
                 If Mensaje = DialogResult.Yes Then
 
-                    Exportar(DataGridView)
-                    Exportar(DataGridView1)
+                    If Panel.SelectedIndex = 0 Then
+
+                        Exportar(DataGridView)
+
+                    ElseIf Panel.SelectedIndex = 1 Then
+
+                        Exportar(DataGridView1)
+
+                    End If
 
                 End If
 

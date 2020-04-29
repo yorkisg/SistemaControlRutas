@@ -54,13 +54,13 @@ Partial Class ListadoPersonal
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaNombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaClasificacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaTelefono1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaTelefono2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
@@ -283,13 +283,6 @@ Partial Class ListadoPersonal
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
         Me.DataGridView.TabIndex = 74
         '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(149, 128)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 75
-        '
         'ColumnaChofer
         '
         Me.ColumnaChofer.DataPropertyName = "idpersonal"
@@ -338,6 +331,13 @@ Partial Class ListadoPersonal
         Me.ColumnaEstado.Name = "ColumnaEstado"
         Me.ColumnaEstado.ReadOnly = True
         Me.ColumnaEstado.Width = 150
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(149, 128)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 75
         '
         'ListadoPersonal
         '

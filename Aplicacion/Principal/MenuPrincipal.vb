@@ -1,5 +1,5 @@
 ﻿
-Public Class Principal
+Public Class MenuPrincipal
 
     Public Contador As Integer = 0
 

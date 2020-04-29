@@ -23,10 +23,10 @@ Partial Class ConsultaIncidencia
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaIncidencia))
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonFiltrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -150,17 +150,17 @@ Partial Class ConsultaIncidencia
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(303, 556)
+        Me.GroupBox1.Size = New System.Drawing.Size(286, 556)
         Me.GroupBox1.TabIndex = 80
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SELECCIONAR PERÍODO DE FECHAS"
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.DateTimePicker1.Location = New System.Drawing.Point(6, 37)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(240, 23)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(240, 25)
         Me.DateTimePicker1.TabIndex = 76
         Me.DateTimePicker1.Value = New Date(2019, 3, 12, 18, 55, 59, 0)
         '
@@ -168,7 +168,7 @@ Partial Class ConsultaIncidencia
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(6, 107)
+        Me.Label1.Location = New System.Drawing.Point(6, 111)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 15)
         Me.Label1.TabIndex = 79
@@ -186,10 +186,10 @@ Partial Class ConsultaIncidencia
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 81)
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.75!)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 83)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(240, 23)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(240, 25)
         Me.DateTimePicker2.TabIndex = 78
         Me.DateTimePicker2.Value = New Date(2019, 3, 12, 18, 56, 3, 0)
         '
@@ -197,7 +197,7 @@ Partial Class ConsultaIncidencia
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(6, 63)
+        Me.Label5.Location = New System.Drawing.Point(6, 65)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 15)
         Me.Label5.TabIndex = 77
@@ -207,7 +207,7 @@ Partial Class ConsultaIncidencia
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 196)
+        Me.RadioButton2.Location = New System.Drawing.Point(6, 197)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(70, 19)
         Me.RadioButton2.TabIndex = 74
@@ -219,7 +219,7 @@ Partial Class ConsultaIncidencia
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 171)
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 172)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(64, 19)
         Me.RadioButton1.TabIndex = 73
@@ -231,7 +231,7 @@ Partial Class ConsultaIncidencia
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(6, 153)
+        Me.Label3.Location = New System.Drawing.Point(6, 154)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 15)
         Me.Label3.TabIndex = 72
@@ -240,7 +240,7 @@ Partial Class ConsultaIncidencia
         'BotonBuscar
         '
         Me.BotonBuscar.Image = CType(resources.GetObject("BotonBuscar.Image"), System.Drawing.Image)
-        Me.BotonBuscar.Location = New System.Drawing.Point(269, 121)
+        Me.BotonBuscar.Location = New System.Drawing.Point(252, 126)
         Me.BotonBuscar.Name = "BotonBuscar"
         Me.BotonBuscar.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar.TabIndex = 71
@@ -260,7 +260,7 @@ Partial Class ConsultaIncidencia
         '
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox1.Location = New System.Drawing.Point(6, 125)
+        Me.TextBox1.Location = New System.Drawing.Point(6, 129)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(240, 22)
         Me.TextBox1.TabIndex = 55
@@ -277,9 +277,9 @@ Partial Class ConsultaIncidencia
         '
         Me.GroupBox2.Controls.Add(Me.DataGridView)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox2.Location = New System.Drawing.Point(321, 28)
+        Me.GroupBox2.Location = New System.Drawing.Point(304, 28)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(651, 556)
+        Me.GroupBox2.Size = New System.Drawing.Size(668, 556)
         Me.GroupBox2.TabIndex = 84
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "HISTORIAL DE INCIDENCIAS"
@@ -294,14 +294,14 @@ Partial Class ConsultaIncidencia
         Me.DataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaVehiculo, Me.ColumnaChofer, Me.ColumnaVelocidad, Me.ColumnaEstado, Me.ColumnaFecha, Me.ColumnaHora})
         Me.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill
@@ -312,7 +312,7 @@ Partial Class ConsultaIncidencia
         Me.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(645, 534)
+        Me.DataGridView.Size = New System.Drawing.Size(662, 534)
         Me.DataGridView.TabIndex = 80
         '
         'ColumnaID
@@ -337,8 +337,8 @@ Partial Class ConsultaIncidencia
         'ColumnaChofer
         '
         Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
         Me.ColumnaChofer.HeaderText = "CHOFER"
         Me.ColumnaChofer.MinimumWidth = 85
         Me.ColumnaChofer.Name = "ColumnaChofer"
@@ -347,8 +347,8 @@ Partial Class ConsultaIncidencia
         'ColumnaVelocidad
         '
         Me.ColumnaVelocidad.DataPropertyName = "descripcion"
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle3
         Me.ColumnaVelocidad.FillWeight = 31.74049!
         Me.ColumnaVelocidad.HeaderText = "INCIDENCIA"
         Me.ColumnaVelocidad.MinimumWidth = 220
@@ -358,8 +358,8 @@ Partial Class ConsultaIncidencia
         'ColumnaEstado
         '
         Me.ColumnaEstado.DataPropertyName = "tipo"
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle4
         Me.ColumnaEstado.HeaderText = "TIPO"
         Me.ColumnaEstado.MinimumWidth = 110
         Me.ColumnaEstado.Name = "ColumnaEstado"

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Principal
+Partial Class MenuPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,7 +24,7 @@ Partial Class Principal
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Principal))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuPrincipal))
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuMaestros = New System.Windows.Forms.ToolStripMenuItem()
@@ -371,7 +371,7 @@ Partial Class Principal
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripButton1.Text = "19.04.2020"
+        Me.ToolStripButton1.Text = "28.04.2020"
         '
         'ToolStripLabel2
         '
@@ -397,7 +397,7 @@ Partial Class Principal
         Me.Label1.Text = "Label1"
         Me.Label1.Visible = False
         '
-        'Principal
+        'MenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -412,7 +412,7 @@ Partial Class Principal
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5)
         Me.MaximizeBox = False
-        Me.Name = "Principal"
+        Me.Name = "MenuPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Gestión de Rutas - Cecon Hacienda El Tunal"
         Me.MenuStrip1.ResumeLayout(False)

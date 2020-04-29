@@ -76,7 +76,7 @@ Public Class AccesoAplicacion
                 MsgBox("Bienvenido al Sistema de Gestión de Rutas.", MsgBoxStyle.Information, "Bienvenido.")
 
                 'Una vez aceptado el mensaje de bienvenida, se despliega el menu principal y se cierra la conexion del login
-                Dim formulario As Principal = New Principal
+                Dim formulario As MenuPrincipal = New MenuPrincipal
                 formulario.Show()
 
                 Hide()

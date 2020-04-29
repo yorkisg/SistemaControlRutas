@@ -30,6 +30,9 @@ Partial Class CuadroResumenMateriaPrima
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaImagen = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.BotonBuscar1 = New System.Windows.Forms.Button()
@@ -50,9 +53,6 @@ Partial Class CuadroResumenMateriaPrima
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaImagen = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -114,7 +114,7 @@ Partial Class CuadroResumenMateriaPrima
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaUnidades, Me.ColumnaImagen, Me.ColumnaEstado})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
-        Me.DataGridView.Location = New System.Drawing.Point(12, 161)
+        Me.DataGridView.Location = New System.Drawing.Point(12, 160)
         Me.DataGridView.MultiSelect = False
         Me.DataGridView.Name = "DataGridView"
         Me.DataGridView.ReadOnly = True
@@ -123,8 +123,33 @@ Partial Class CuadroResumenMateriaPrima
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(382, 173)
+        Me.DataGridView.Size = New System.Drawing.Size(382, 174)
         Me.DataGridView.TabIndex = 25
+        '
+        'ColumnaUnidades
+        '
+        Me.ColumnaUnidades.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaUnidades.DataPropertyName = "Unidades"
+        Me.ColumnaUnidades.HeaderText = "UNIDADES"
+        Me.ColumnaUnidades.Name = "ColumnaUnidades"
+        Me.ColumnaUnidades.ReadOnly = True
+        '
+        'ColumnaImagen
+        '
+        Me.ColumnaImagen.HeaderText = ""
+        Me.ColumnaImagen.MinimumWidth = 20
+        Me.ColumnaImagen.Name = "ColumnaImagen"
+        Me.ColumnaImagen.ReadOnly = True
+        Me.ColumnaImagen.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ColumnaImagen.Width = 25
+        '
+        'ColumnaEstado
+        '
+        Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaEstado.DataPropertyName = "Estado"
+        Me.ColumnaEstado.HeaderText = "ESTADO ACTUAL"
+        Me.ColumnaEstado.Name = "ColumnaEstado"
+        Me.ColumnaEstado.ReadOnly = True
         '
         'TextBox1
         '
@@ -285,7 +310,7 @@ Partial Class CuadroResumenMateriaPrima
         '
         Me.TextBox5.Enabled = False
         Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox5.Location = New System.Drawing.Point(267, 132)
+        Me.TextBox5.Location = New System.Drawing.Point(267, 131)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(81, 23)
         Me.TextBox5.TabIndex = 86
@@ -293,37 +318,12 @@ Partial Class CuadroResumenMateriaPrima
         'DateTimePicker1
         '
         Me.DateTimePicker1.Enabled = False
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(12, 132)
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Location = New System.Drawing.Point(12, 131)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(249, 23)
         Me.DateTimePicker1.TabIndex = 87
         Me.DateTimePicker1.Value = New Date(2019, 3, 12, 18, 55, 59, 0)
-        '
-        'ColumnaUnidades
-        '
-        Me.ColumnaUnidades.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaUnidades.DataPropertyName = "Unidades"
-        Me.ColumnaUnidades.HeaderText = "UNIDADES"
-        Me.ColumnaUnidades.Name = "ColumnaUnidades"
-        Me.ColumnaUnidades.ReadOnly = True
-        '
-        'ColumnaImagen
-        '
-        Me.ColumnaImagen.HeaderText = ""
-        Me.ColumnaImagen.MinimumWidth = 20
-        Me.ColumnaImagen.Name = "ColumnaImagen"
-        Me.ColumnaImagen.ReadOnly = True
-        Me.ColumnaImagen.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ColumnaImagen.Width = 25
-        '
-        'ColumnaEstado
-        '
-        Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaEstado.DataPropertyName = "Estado"
-        Me.ColumnaEstado.HeaderText = "ESTADO ACTUAL"
-        Me.ColumnaEstado.Name = "ColumnaEstado"
-        Me.ColumnaEstado.ReadOnly = True
         '
         'CuadroResumenMateriaPrima
         '

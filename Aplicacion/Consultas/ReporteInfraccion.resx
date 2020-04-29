@@ -159,12 +159,12 @@
   <data name="BotonLimpiar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEVSURBVDhPlZMLroIwEEXRdWjiHiTu84UQlsNuIPzC/49v
-        Xm/t9KGiVpObNtB7uDN2LOv2OwidhS4fdBLv98pzt5y7rit8378uy0JbGoaBHMf5Ea5NyAXmpmmobVut
-        siwpz3OKokhCwzAk13WfIDvExoG+72kcR7lCdV1TURQUx7EEiJSEj3iexxBZhgbAzAIAhqqqKEmSp7JU
-        r+D9B8zzrA9ij7pREkpJ01QmCYJAntkEPDZvDUES9CPLMnMAgAxBOegJQMYJONE0TbI3gEBfA5CCm4u+
-        GAFgYiEBBPPXADavV6ME3MB1Et5vAsQV/X01B4/Pce3VPdADZYu/p303TAxRM1Or6dWAo9jZBuPM447R
-        h8f6A14hhw1IZqhNAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEWSURBVDhPlZMLboMwEERpz5FKvUNQ7hkB4jjcBsRP/P8k
+        G4/rdUlCWgdpZAs8j9mFtayf6yB0FDr9o2/x/FN57pZj3/dlEASXdV1pT+M4kuM4Z+HahZxgbtuWuq7T
+        qqqKiqKgOI4lNIoi8jzvCfKB2DgwDANN0yRXqGkaKsuSkiSRAJGS8BLf9xkiy9AAmFkAwFDXNaVp+lSW
+        6hW8v4BlWfRB7FE3SkIpWZbJJGEYyjO7gMfmbSFIgn7keW4OAJAhKAc9Acg4ASea51n2BhDobQBScHPR
+        FyMATCwkgGB+G8Dm7WqUgBu4TcL7XYDrutdXc/B4H7+9+g/0QNni83R/DRND1Mw0ano14EvsbINx5nHH
+        6MNj3QBb9ocKx+kvSQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="BotonExportar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -247,12 +247,12 @@
   <data name="BotonLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEVSURBVDhPlZMLroIwEEXRdWjiHiTu84UQlsNuIPzC/49v
-        Xm/t9KGiVpObNtB7uDN2LOv2OwidhS4fdBLv98pzt5y7rit8378uy0JbGoaBHMf5Ea5NyAXmpmmobVut
-        siwpz3OKokhCwzAk13WfIDvExoG+72kcR7lCdV1TURQUx7EEiJSEj3iexxBZhgbAzAIAhqqqKEmSp7JU
-        r+D9B8zzrA9ij7pREkpJ01QmCYJAntkEPDZvDUES9CPLMnMAgAxBOegJQMYJONE0TbI3gEBfA5CCm4u+
-        GAFgYiEBBPPXADavV6ME3MB1Et5vAsTt+n01B4/Pce3VPdADZYu/p303TAxRM1Or6dWAo9jZBuPM447R
-        h8f6A2J3hxMS6AxnAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEWSURBVDhPlZMLboMwEERpz5FKvUNQ7hkh4DjcBsRP/P8k
+        G4/rdUlCWgdpZAs8j9mFtayf6yB0FDr9o2/x/FN57pZj3/dlEASXdV1pT+M4kuM4Z+HahZxgbtuWuq7T
+        qqqKiqKgOI4lNIoicl33CfKB2DgwDANN0yRXqGkaKsuSkiSRAJGS8BLf9xkiy9AAmFkAwFDXNaVp+lSW
+        6hW8v4BlWfRB7FE3SkIpWZbJJGEYyjO7gMfmbSFIgn7keW4OAJAhKAc9Acg4ASea51n2BhDobQBScHPR
+        FyMATCwkgGB+G8Dm7WqUgBu4TcL7XYDneddXc/B4H7+9+g/0QNni83R/DRND1Mw0ano14EvsbINx5nHH
+        6MNj3QBgTIcQoOdZFwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="BotonExportar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -329,10 +329,10 @@
     <Compile Include="Principal\AccesoAplicacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\Principal.Designer.vb">
-      <DependentUpon>Principal.vb</DependentUpon>
+    <Compile Include="Principal\MenuPrincipal.Designer.vb">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Principal\Principal.vb">
+    <Compile Include="Principal\MenuPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Seguimiento de Taller\ConsultaSeguimientoTaller.Designer.vb">
@@ -357,6 +357,12 @@
       <DependentUpon>SeguimientoTaller.vb</DependentUpon>
     </Compile>
     <Compile Include="Seguimiento de Taller\SeguimientoTaller.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguimiento de Vehiculos\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Seguimiento de Vehiculos\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Seguimiento de Vehiculos\SeguimientoCarga.Designer.vb">
@@ -459,8 +465,8 @@
     <EmbeddedResource Include="Principal\AccesoAplicacion.resx">
       <DependentUpon>AccesoAplicacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal\Principal.resx">
-      <DependentUpon>Principal.vb</DependentUpon>
+    <EmbeddedResource Include="Principal\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguimiento de Taller\ConsultaSeguimientoTaller.resx">
@@ -476,6 +482,9 @@
     <EmbeddedResource Include="Seguimiento de Taller\SeguimientoTaller.resx">
       <DependentUpon>SeguimientoTaller.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguimiento de Vehiculos\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoCarga.resx">
       <DependentUpon>SeguimientoCarga.vb</DependentUpon>
