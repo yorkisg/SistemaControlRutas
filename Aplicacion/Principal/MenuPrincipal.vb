@@ -68,6 +68,7 @@ Public Class MenuPrincipal
         End If
 
     End Sub
+
     Public Sub ReiniciarTiempo()
 
         Timer1.Stop()
@@ -218,12 +219,14 @@ Public Class MenuPrincipal
         ConsultaInfraccion.ShowDialog()
 
     End Sub
+
     Private Sub MenuConsultarIncidencias_Click(sender As Object, e As EventArgs) Handles MenuConsultarIncidencias.Click
         'Formulario ListadoReporteInfraccion
 
         ConsultaIncidencia.ShowDialog()
 
     End Sub
+
     Private Sub MenuGuiaTelefonica_Click(sender As Object, e As EventArgs) Handles MenuGuiaTelefonica.Click
         'Formulario GuiaTelefonica
 
@@ -245,13 +248,6 @@ Public Class MenuPrincipal
 
     End Sub
 
-    Private Sub MenuResumenRuta_Click(sender As Object, e As EventArgs)
-        'Formulario ListadoResumenVehiculo
-
-
-
-    End Sub
-
     Private Sub MenuFlotas_Click(sender As Object, e As EventArgs) Handles MenuFlotas.Click
         'Formulario Flotas
 
@@ -269,28 +265,7 @@ Public Class MenuPrincipal
     Private Sub MenuHistorialDeRutas_Click(sender As Object, e As EventArgs) Handles MenuHistorialDeRutas.Click
         'Formulario EstadisticaRuta
 
-        EstadisticaRuta.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuHistorialDeInfracciones_Click(sender As Object, e As EventArgs) Handles MenuHistorialDeInfracciones.Click
-        'Formulario EstadisticaInfraccion
-
-        EstadisticaInfraccion.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuHistorialEstadisticoDeSitiosDeCargaYDestinos_Click(sender As Object, e As EventArgs) Handles MenuHistorialEstadisticoDeSitiosDeCargaYDestinos.Click
-        'Formulario EstadisticasitiocargaDestino
-
-        EstadisticasitiocargaDestino.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuHistorialEstadísticoDeProductos_Click(sender As Object, e As EventArgs) Handles MenuHistorialEstadísticoDeProductos.Click
-        'Formulario EstadisticaProducto
-
-        EstadisticaProducto.ShowDialog()
+        EstadisticaGeneral.ShowDialog()
 
     End Sub
 

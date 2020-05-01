@@ -276,6 +276,7 @@ Partial Class MaestroIncidencia
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(41, 20)
         Me.TextBox8.TabIndex = 97
+        Me.TextBox8.Visible = False
         '
         'MaestroIncidencia
         '
@@ -303,7 +304,9 @@ Partial Class MaestroIncidencia
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "MaestroIncidencia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Archivo de Incidencias"

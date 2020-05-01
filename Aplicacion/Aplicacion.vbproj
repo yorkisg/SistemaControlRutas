@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -187,28 +187,10 @@
     <Compile Include="Consultas\ReporteInfraccion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Estadisticas\EstadisticaInfraccion.Designer.vb">
-      <DependentUpon>EstadisticaInfraccion.vb</DependentUpon>
+    <Compile Include="Estadisticas\EstadisticaGeneral.Designer.vb">
+      <DependentUpon>EstadisticaGeneral.vb</DependentUpon>
     </Compile>
-    <Compile Include="Estadisticas\EstadisticaInfraccion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estadisticas\EstadisticaProducto.Designer.vb">
-      <DependentUpon>EstadisticaProducto.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Estadisticas\EstadisticaProducto.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estadisticas\EstadisticaRuta.Designer.vb">
-      <DependentUpon>EstadisticaRuta.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Estadisticas\EstadisticaRuta.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estadisticas\EstadisticaUbicacionDestino.Designer.vb">
-      <DependentUpon>EstadisticaUbicacionDestino.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Estadisticas\EstadisticaUbicacionDestino.vb">
+    <Compile Include="Estadisticas\EstadisticaGeneral.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Listados\ListadoPersonal.Designer.vb">
@@ -359,12 +341,6 @@
     <Compile Include="Seguimiento de Taller\SeguimientoTaller.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Seguimiento de Vehiculos\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Seguimiento de Vehiculos\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Seguimiento de Vehiculos\SeguimientoCarga.Designer.vb">
       <DependentUpon>SeguimientoCarga.vb</DependentUpon>
     </Compile>
@@ -398,17 +374,8 @@
     <EmbeddedResource Include="Consultas\ReporteInfraccion.resx">
       <DependentUpon>ReporteInfraccion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas\EstadisticaInfraccion.resx">
-      <DependentUpon>EstadisticaInfraccion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas\EstadisticaProducto.resx">
-      <DependentUpon>EstadisticaProducto.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas\EstadisticaRuta.resx">
-      <DependentUpon>EstadisticaRuta.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas\EstadisticaUbicacionDestino.resx">
-      <DependentUpon>EstadisticaUbicacionDestino.vb</DependentUpon>
+    <EmbeddedResource Include="Estadisticas\EstadisticaGeneral.resx">
+      <DependentUpon>EstadisticaGeneral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listados\ListadoPersonal.resx">
       <DependentUpon>ListadoPersonal.vb</DependentUpon>
@@ -482,9 +449,6 @@
     <EmbeddedResource Include="Seguimiento de Taller\SeguimientoTaller.resx">
       <DependentUpon>SeguimientoTaller.vb</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguimiento de Vehiculos\Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoCarga.resx">
       <DependentUpon>SeguimientoCarga.vb</DependentUpon>

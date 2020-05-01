@@ -52,9 +52,6 @@ Partial Class MenuPrincipal
         Me.MenuGuiaTelefonica = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuEstadisticas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuHistorialDeRutas = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuHistorialDeInfracciones = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuHistorialEstadisticoDeSitiosDeCargaYDestinos = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuHistorialEstadísticoDeProductos = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConfiguracion = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuFlotas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuEstados = New System.Windows.Forms.ToolStripMenuItem()
@@ -247,7 +244,7 @@ Partial Class MenuPrincipal
         '
         'MenuEstadisticas
         '
-        Me.MenuEstadisticas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuHistorialDeRutas, Me.MenuHistorialDeInfracciones, Me.MenuHistorialEstadisticoDeSitiosDeCargaYDestinos, Me.MenuHistorialEstadísticoDeProductos})
+        Me.MenuEstadisticas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuHistorialDeRutas})
         Me.MenuEstadisticas.Image = CType(resources.GetObject("MenuEstadisticas.Image"), System.Drawing.Image)
         Me.MenuEstadisticas.Name = "MenuEstadisticas"
         Me.MenuEstadisticas.Size = New System.Drawing.Size(103, 21)
@@ -257,29 +254,8 @@ Partial Class MenuPrincipal
         '
         Me.MenuHistorialDeRutas.Image = CType(resources.GetObject("MenuHistorialDeRutas.Image"), System.Drawing.Image)
         Me.MenuHistorialDeRutas.Name = "MenuHistorialDeRutas"
-        Me.MenuHistorialDeRutas.Size = New System.Drawing.Size(217, 22)
-        Me.MenuHistorialDeRutas.Text = "Historial de Rutas"
-        '
-        'MenuHistorialDeInfracciones
-        '
-        Me.MenuHistorialDeInfracciones.Image = CType(resources.GetObject("MenuHistorialDeInfracciones.Image"), System.Drawing.Image)
-        Me.MenuHistorialDeInfracciones.Name = "MenuHistorialDeInfracciones"
-        Me.MenuHistorialDeInfracciones.Size = New System.Drawing.Size(217, 22)
-        Me.MenuHistorialDeInfracciones.Text = "Historial de Infracciones"
-        '
-        'MenuHistorialEstadisticoDeSitiosDeCargaYDestinos
-        '
-        Me.MenuHistorialEstadisticoDeSitiosDeCargaYDestinos.Image = CType(resources.GetObject("MenuHistorialEstadisticoDeSitiosDeCargaYDestinos.Image"), System.Drawing.Image)
-        Me.MenuHistorialEstadisticoDeSitiosDeCargaYDestinos.Name = "MenuHistorialEstadisticoDeSitiosDeCargaYDestinos"
-        Me.MenuHistorialEstadisticoDeSitiosDeCargaYDestinos.Size = New System.Drawing.Size(217, 22)
-        Me.MenuHistorialEstadisticoDeSitiosDeCargaYDestinos.Text = "Historial de Ubicaciones"
-        '
-        'MenuHistorialEstadísticoDeProductos
-        '
-        Me.MenuHistorialEstadísticoDeProductos.Image = CType(resources.GetObject("MenuHistorialEstadísticoDeProductos.Image"), System.Drawing.Image)
-        Me.MenuHistorialEstadísticoDeProductos.Name = "MenuHistorialEstadísticoDeProductos"
-        Me.MenuHistorialEstadísticoDeProductos.Size = New System.Drawing.Size(217, 22)
-        Me.MenuHistorialEstadísticoDeProductos.Text = "Historial de Productos"
+        Me.MenuHistorialDeRutas.Size = New System.Drawing.Size(173, 22)
+        Me.MenuHistorialDeRutas.Text = "Historial General"
         '
         'MenuConfiguracion
         '
@@ -453,9 +429,6 @@ Partial Class MenuPrincipal
     Friend WithEvents MenuConsultarInfracciones As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuEstadisticas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuHistorialDeRutas As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuHistorialDeInfracciones As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuHistorialEstadisticoDeSitiosDeCargaYDestinos As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuHistorialEstadísticoDeProductos As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuGuiaTelefonica As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
