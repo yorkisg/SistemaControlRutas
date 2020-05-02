@@ -69,15 +69,20 @@ Public Class EstadisticaGeneral
 
                     If Panel.SelectedIndex = 0 Then
 
+                        Exportar(DataGridView)
                         Exportar(DataGridView1)
+                        Exportar(DataGridView2)
 
                     ElseIf Panel.SelectedIndex = 1 Then
 
-                        Exportar(DataGridView2)
+                        Exportar(DataGridView4)
+                        Exportar(DataGridView5)
 
                     ElseIf Panel.SelectedIndex = 2 Then
 
-                        Exportar(DataGridView5)
+                        Exportar(DataGridView6)
+                        Exportar(DataGridView7)
+                        Exportar(DataGridView8)
 
                     End If
 
