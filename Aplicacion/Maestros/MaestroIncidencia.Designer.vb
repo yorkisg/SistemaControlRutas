@@ -49,6 +49,8 @@ Partial Class MaestroIncidencia
         Me.Label7 = New System.Windows.Forms.Label()
         Me.ComboTipo = New System.Windows.Forms.ComboBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -152,7 +154,7 @@ Partial Class MaestroIncidencia
         '
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TextBox3.Location = New System.Drawing.Point(12, 175)
-        Me.TextBox3.MaxLength = 300
+        Me.TextBox3.MaxLength = 249
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(280, 129)
@@ -242,7 +244,7 @@ Partial Class MaestroIncidencia
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(298, 284)
+        Me.TextBox7.Location = New System.Drawing.Point(298, 242)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(17, 20)
         Me.TextBox7.TabIndex = 94
@@ -264,7 +266,7 @@ Partial Class MaestroIncidencia
         Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboTipo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ComboTipo.FormattingEnabled = True
-        Me.ComboTipo.Items.AddRange(New Object() {"PARADA IRREGULAR", "CONDUCTA INAPROPIADA", "DESVIO NO AUTORIZADO"})
+        Me.ComboTipo.Items.AddRange(New Object() {"PARADA IRREGULAR", "CONDUCTA INAPROPIADA", "DESVIO NO AUTORIZADO", "PROBLEMAS EN DOCUMENTACIÓN"})
         Me.ComboTipo.Location = New System.Drawing.Point(12, 325)
         Me.ComboTipo.Name = "ComboTipo"
         Me.ComboTipo.Size = New System.Drawing.Size(280, 23)
@@ -278,12 +280,32 @@ Partial Class MaestroIncidencia
         Me.TextBox8.TabIndex = 97
         Me.TextBox8.Visible = False
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(314, 291)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(33, 13)
+        Me.Label8.TabIndex = 98
+        Me.Label8.Text = "/ 250"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(298, 291)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(13, 13)
+        Me.Label9.TabIndex = 99
+        Me.Label9.Text = "0"
+        '
         'MaestroIncidencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(351, 448)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.ComboTipo)
         Me.Controls.Add(Me.Label7)
@@ -342,4 +364,6 @@ Partial Class MaestroIncidencia
     Friend WithEvents Label7 As Label
     Friend WithEvents ComboTipo As ComboBox
     Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
 End Class

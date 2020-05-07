@@ -97,7 +97,7 @@ Partial Class ConsultaGeneralRuta
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1184, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1229, 25)
         Me.ToolStrip1.TabIndex = 23
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -181,7 +181,7 @@ Partial Class ConsultaGeneralRuta
         Me.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(840, 584)
+        Me.DataGridView.Size = New System.Drawing.Size(885, 617)
         Me.DataGridView.TabIndex = 45
         '
         'ColumnaRuta
@@ -348,9 +348,9 @@ Partial Class ConsultaGeneralRuta
         Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.Contador})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 637)
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 670)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(1184, 25)
+        Me.ToolStrip2.Size = New System.Drawing.Size(1229, 25)
         Me.ToolStrip2.TabIndex = 71
         Me.ToolStrip2.Text = "ToolStrip2"
         '
@@ -445,7 +445,7 @@ Partial Class ConsultaGeneralRuta
         Me.GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(326, 28)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(846, 606)
+        Me.GroupBox3.Size = New System.Drawing.Size(891, 639)
         Me.GroupBox3.TabIndex = 85
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "DETALLE DE CONSULTA"
@@ -456,7 +456,7 @@ Partial Class ConsultaGeneralRuta
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 393)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(308, 241)
+        Me.GroupBox2.Size = New System.Drawing.Size(308, 274)
         Me.GroupBox2.TabIndex = 91
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "VEHÍCULOS CON MAS SALIDAS (AL MES)"
@@ -490,7 +490,7 @@ Partial Class ConsultaGeneralRuta
         DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(302, 219)
+        Me.DataGridView1.Size = New System.Drawing.Size(302, 252)
         Me.DataGridView1.TabIndex = 49
         '
         'ColumnaVehiculo2
@@ -601,7 +601,7 @@ Partial Class ConsultaGeneralRuta
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
-        Me.ClientSize = New System.Drawing.Size(1184, 662)
+        Me.ClientSize = New System.Drawing.Size(1229, 695)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)

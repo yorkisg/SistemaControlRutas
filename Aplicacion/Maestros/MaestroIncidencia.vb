@@ -140,5 +140,10 @@ Public Class MaestroIncidencia
 
     End Sub
 
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+
+        Label9.Text = Len(TextBox3.Text)
+
+    End Sub
 
 End Class
