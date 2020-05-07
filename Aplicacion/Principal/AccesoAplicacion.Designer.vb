@@ -76,6 +76,7 @@ Partial Class AccesoAplicacion
         'BotonEntrar
         '
         Me.BotonEntrar.BackColor = System.Drawing.SystemColors.Control
+        Me.BotonEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BotonEntrar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BotonEntrar.Image = CType(resources.GetObject("BotonEntrar.Image"), System.Drawing.Image)
         Me.BotonEntrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -89,6 +90,7 @@ Partial Class AccesoAplicacion
         'BotonSalir
         '
         Me.BotonSalir.BackColor = System.Drawing.SystemColors.Control
+        Me.BotonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BotonSalir.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BotonSalir.Image = CType(resources.GetObject("BotonSalir.Image"), System.Drawing.Image)
         Me.BotonSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -117,7 +119,7 @@ Partial Class AccesoAplicacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(224, 136)
         Me.Controls.Add(Me.rolusuario)
         Me.Controls.Add(Me.BotonSalir)
@@ -126,7 +128,7 @@ Partial Class AccesoAplicacion
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "AccesoAplicacion"

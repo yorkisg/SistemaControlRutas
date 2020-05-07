@@ -29,17 +29,17 @@ Partial Class GuiaTelefonica
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
         Me.ComboEstadoPersona = New System.Windows.Forms.ToolStripComboBox()
@@ -63,8 +63,20 @@ Partial Class GuiaTelefonica
         Me.Pagina1 = New System.Windows.Forms.TabPage()
         Me.Pagina2 = New System.Windows.Forms.TabPage()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaID2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaNombreChofer2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTipo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTelefono12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTelefono22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pagina3 = New System.Windows.Forms.TabPage()
         Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pagina4 = New System.Windows.Forms.TabPage()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -74,18 +86,6 @@ Partial Class GuiaTelefonica
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ColumnaID2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaNombreChofer2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTipo2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTelefono12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTelefono22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
@@ -100,7 +100,7 @@ Partial Class GuiaTelefonica
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
+        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ComboEstadoPersona, Me.ToolStripSeparator2, Me.ToolStripLabel1, Me.TextBox, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator4, Me.BotonSalir, Me.ToolStripSeparator3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -349,6 +349,72 @@ Partial Class GuiaTelefonica
         Me.DataGridView2.Size = New System.Drawing.Size(946, 538)
         Me.DataGridView2.TabIndex = 53
         '
+        'ColumnaID2
+        '
+        Me.ColumnaID2.DataPropertyName = "idpersonal"
+        Me.ColumnaID2.FillWeight = 119.5084!
+        Me.ColumnaID2.HeaderText = "ID CHOFER"
+        Me.ColumnaID2.MinimumWidth = 150
+        Me.ColumnaID2.Name = "ColumnaID2"
+        Me.ColumnaID2.ReadOnly = True
+        Me.ColumnaID2.Visible = False
+        Me.ColumnaID2.Width = 150
+        '
+        'ColumnaNombreChofer2
+        '
+        Me.ColumnaNombreChofer2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaNombreChofer2.DataPropertyName = "nombrepersonal"
+        Me.ColumnaNombreChofer2.FillWeight = 89.89217!
+        Me.ColumnaNombreChofer2.HeaderText = "CHOFER"
+        Me.ColumnaNombreChofer2.MinimumWidth = 150
+        Me.ColumnaNombreChofer2.Name = "ColumnaNombreChofer2"
+        Me.ColumnaNombreChofer2.ReadOnly = True
+        '
+        'ColumnaTipo2
+        '
+        Me.ColumnaTipo2.DataPropertyName = "tipopersonal"
+        Me.ColumnaTipo2.HeaderText = "TIPO CHOFER"
+        Me.ColumnaTipo2.Name = "ColumnaTipo2"
+        Me.ColumnaTipo2.ReadOnly = True
+        Me.ColumnaTipo2.Visible = False
+        '
+        'ColumnaTelefono12
+        '
+        Me.ColumnaTelefono12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaTelefono12.DataPropertyName = "Telefono1"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaTelefono12.DefaultCellStyle = DataGridViewCellStyle6
+        Me.ColumnaTelefono12.FillWeight = 1.062598!
+        Me.ColumnaTelefono12.HeaderText = "TELÉFONO 1"
+        Me.ColumnaTelefono12.MinimumWidth = 150
+        Me.ColumnaTelefono12.Name = "ColumnaTelefono12"
+        Me.ColumnaTelefono12.ReadOnly = True
+        '
+        'ColumnaTelefono22
+        '
+        Me.ColumnaTelefono22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaTelefono22.DataPropertyName = "Telefono2"
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaTelefono22.DefaultCellStyle = DataGridViewCellStyle7
+        Me.ColumnaTelefono22.FillWeight = 4.54983!
+        Me.ColumnaTelefono22.HeaderText = "TELÉFONO 2"
+        Me.ColumnaTelefono22.MinimumWidth = 150
+        Me.ColumnaTelefono22.Name = "ColumnaTelefono22"
+        Me.ColumnaTelefono22.ReadOnly = True
+        '
+        'ColumnaEstado2
+        '
+        Me.ColumnaEstado2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaEstado2.DataPropertyName = "estadopersonal"
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstado2.DefaultCellStyle = DataGridViewCellStyle8
+        Me.ColumnaEstado2.FillWeight = 20.31801!
+        Me.ColumnaEstado2.HeaderText = "ESTADO"
+        Me.ColumnaEstado2.MinimumWidth = 150
+        Me.ColumnaEstado2.Name = "ColumnaEstado2"
+        Me.ColumnaEstado2.ReadOnly = True
+        Me.ColumnaEstado2.Visible = False
+        '
         'Pagina3
         '
         Me.Pagina3.BackColor = System.Drawing.Color.AliceBlue
@@ -390,6 +456,72 @@ Partial Class GuiaTelefonica
         Me.DataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
         Me.DataGridView5.Size = New System.Drawing.Size(946, 538)
         Me.DataGridView5.TabIndex = 55
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idpersonal"
+        Me.DataGridViewTextBoxColumn1.FillWeight = 119.5084!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID CHOFER"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 150
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        Me.DataGridViewTextBoxColumn1.Width = 150
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombrepersonal"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 89.89217!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "CHOFER"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 150
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "tipopersonal"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "TIPO CHOFER"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Visible = False
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Telefono1"
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle10
+        Me.DataGridViewTextBoxColumn4.FillWeight = 1.062598!
+        Me.DataGridViewTextBoxColumn4.HeaderText = "TELÉFONO 1"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 150
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Telefono2"
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle11
+        Me.DataGridViewTextBoxColumn5.FillWeight = 4.54983!
+        Me.DataGridViewTextBoxColumn5.HeaderText = "TELÉFONO 2"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 150
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "estadopersonal"
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle12
+        Me.DataGridViewTextBoxColumn8.FillWeight = 20.31801!
+        Me.DataGridViewTextBoxColumn8.HeaderText = "ESTADO"
+        Me.DataGridViewTextBoxColumn8.MinimumWidth = 150
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Visible = False
         '
         'Pagina4
         '
@@ -506,143 +638,11 @@ Partial Class GuiaTelefonica
         Me.TextBox2.TabIndex = 55
         Me.TextBox2.Visible = False
         '
-        'ColumnaID2
-        '
-        Me.ColumnaID2.DataPropertyName = "idpersonal"
-        Me.ColumnaID2.FillWeight = 119.5084!
-        Me.ColumnaID2.HeaderText = "ID CHOFER"
-        Me.ColumnaID2.MinimumWidth = 150
-        Me.ColumnaID2.Name = "ColumnaID2"
-        Me.ColumnaID2.ReadOnly = True
-        Me.ColumnaID2.Visible = False
-        Me.ColumnaID2.Width = 150
-        '
-        'ColumnaNombreChofer2
-        '
-        Me.ColumnaNombreChofer2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaNombreChofer2.DataPropertyName = "nombrepersonal"
-        Me.ColumnaNombreChofer2.FillWeight = 89.89217!
-        Me.ColumnaNombreChofer2.HeaderText = "CHOFER"
-        Me.ColumnaNombreChofer2.MinimumWidth = 150
-        Me.ColumnaNombreChofer2.Name = "ColumnaNombreChofer2"
-        Me.ColumnaNombreChofer2.ReadOnly = True
-        '
-        'ColumnaTipo2
-        '
-        Me.ColumnaTipo2.DataPropertyName = "tipopersonal"
-        Me.ColumnaTipo2.HeaderText = "TIPO CHOFER"
-        Me.ColumnaTipo2.Name = "ColumnaTipo2"
-        Me.ColumnaTipo2.ReadOnly = True
-        Me.ColumnaTipo2.Visible = False
-        '
-        'ColumnaTelefono12
-        '
-        Me.ColumnaTelefono12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaTelefono12.DataPropertyName = "Telefono1"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaTelefono12.DefaultCellStyle = DataGridViewCellStyle6
-        Me.ColumnaTelefono12.FillWeight = 1.062598!
-        Me.ColumnaTelefono12.HeaderText = "TELÉFONO 1"
-        Me.ColumnaTelefono12.MinimumWidth = 150
-        Me.ColumnaTelefono12.Name = "ColumnaTelefono12"
-        Me.ColumnaTelefono12.ReadOnly = True
-        '
-        'ColumnaTelefono22
-        '
-        Me.ColumnaTelefono22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaTelefono22.DataPropertyName = "Telefono2"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaTelefono22.DefaultCellStyle = DataGridViewCellStyle7
-        Me.ColumnaTelefono22.FillWeight = 4.54983!
-        Me.ColumnaTelefono22.HeaderText = "TELÉFONO 2"
-        Me.ColumnaTelefono22.MinimumWidth = 150
-        Me.ColumnaTelefono22.Name = "ColumnaTelefono22"
-        Me.ColumnaTelefono22.ReadOnly = True
-        '
-        'ColumnaEstado2
-        '
-        Me.ColumnaEstado2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaEstado2.DataPropertyName = "estadopersonal"
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstado2.DefaultCellStyle = DataGridViewCellStyle8
-        Me.ColumnaEstado2.FillWeight = 20.31801!
-        Me.ColumnaEstado2.HeaderText = "ESTADO"
-        Me.ColumnaEstado2.MinimumWidth = 150
-        Me.ColumnaEstado2.Name = "ColumnaEstado2"
-        Me.ColumnaEstado2.ReadOnly = True
-        Me.ColumnaEstado2.Visible = False
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idpersonal"
-        Me.DataGridViewTextBoxColumn1.FillWeight = 119.5084!
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID CHOFER"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 150
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        Me.DataGridViewTextBoxColumn1.Width = 150
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombrepersonal"
-        Me.DataGridViewTextBoxColumn2.FillWeight = 89.89217!
-        Me.DataGridViewTextBoxColumn2.HeaderText = "CHOFER"
-        Me.DataGridViewTextBoxColumn2.MinimumWidth = 150
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "tipopersonal"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "TIPO CHOFER"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.Visible = False
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Telefono1"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle10
-        Me.DataGridViewTextBoxColumn4.FillWeight = 1.062598!
-        Me.DataGridViewTextBoxColumn4.HeaderText = "TELÉFONO 1"
-        Me.DataGridViewTextBoxColumn4.MinimumWidth = 150
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Telefono2"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn5.DefaultCellStyle = DataGridViewCellStyle11
-        Me.DataGridViewTextBoxColumn5.FillWeight = 4.54983!
-        Me.DataGridViewTextBoxColumn5.HeaderText = "TELÉFONO 2"
-        Me.DataGridViewTextBoxColumn5.MinimumWidth = 150
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "estadopersonal"
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle12
-        Me.DataGridViewTextBoxColumn8.FillWeight = 20.31801!
-        Me.DataGridViewTextBoxColumn8.HeaderText = "ESTADO"
-        Me.DataGridViewTextBoxColumn8.MinimumWidth = 150
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        Me.DataGridViewTextBoxColumn8.ReadOnly = True
-        Me.DataGridViewTextBoxColumn8.Visible = False
-        '
         'GuiaTelefonica
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(984, 612)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.ToolStrip1)

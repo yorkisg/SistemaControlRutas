@@ -403,7 +403,7 @@ Partial Class ReporteInfraccion
         '
         'Menu2
         '
-        Me.Menu2.BackColor = System.Drawing.SystemColors.Control
+        Me.Menu2.BackColor = System.Drawing.Color.AliceBlue
         Me.Menu2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonConsultar2, Me.ToolStripSeparator4, Me.BotonLimpiar2, Me.ToolStripSeparator6, Me.BotonExportar2, Me.ToolStripSeparator7, Me.BotonSalir2, Me.ToolStripSeparator8})
         Me.Menu2.Location = New System.Drawing.Point(0, 0)
         Me.Menu2.Name = "Menu2"
@@ -499,7 +499,7 @@ Partial Class ReporteInfraccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(952, 436)
         Me.Controls.Add(Me.Menu2)
         Me.Controls.Add(Me.GroupBox5)

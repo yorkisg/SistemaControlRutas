@@ -74,7 +74,7 @@ Partial Class MenuPrincipal
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.MenuStrip1.BackColor = System.Drawing.Color.AliceBlue
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuMaestros, Me.MenuGestionRutas, Me.MenuConsultas, Me.MenuEstadisticas, Me.MenuConfiguracion, Me.MenuSalir})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)

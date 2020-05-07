@@ -163,7 +163,7 @@ Partial Class CuadroResumenMateriaPrima
         '
         Me.TextBox2.Enabled = False
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox2.Location = New System.Drawing.Point(12, 44)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 43)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(336, 23)
         Me.TextBox2.TabIndex = 55
@@ -278,7 +278,7 @@ Partial Class CuadroResumenMateriaPrima
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
+        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.BotonSalir, Me.ToolStripSeparator3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -329,7 +329,7 @@ Partial Class CuadroResumenMateriaPrima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(406, 362)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TextBox5)

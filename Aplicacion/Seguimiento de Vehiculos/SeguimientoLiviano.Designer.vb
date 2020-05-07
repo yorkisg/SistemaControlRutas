@@ -162,7 +162,7 @@ Partial Class SeguimientoLiviano
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonPersonal, Me.ToolStripSeparator1, Me.BotonVehiculo, Me.ToolStripSeparator6, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonConsulta1, Me.ToolStripSeparator4, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -746,7 +746,7 @@ Partial Class SeguimientoLiviano
         '
         'ToolStrip3
         '
-        Me.ToolStrip3.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ToolStrip3.BackColor = System.Drawing.Color.AliceBlue
         Me.ToolStrip3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar1})
         Me.ToolStrip3.Location = New System.Drawing.Point(3, 241)
@@ -945,7 +945,7 @@ Partial Class SeguimientoLiviano
         '
         'ToolStrip2
         '
-        Me.ToolStrip2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ToolStrip2.BackColor = System.Drawing.Color.AliceBlue
         Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar2})
         Me.ToolStrip2.Location = New System.Drawing.Point(3, 241)
@@ -1169,7 +1169,7 @@ Partial Class SeguimientoLiviano
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(1113, 630)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.ToolStrip4)
