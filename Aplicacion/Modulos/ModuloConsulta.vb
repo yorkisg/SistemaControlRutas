@@ -333,7 +333,7 @@ Module ModuloConsulta
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
         'ListadoReporteInfraccion
 
-        Dim Command As New MySqlCommand("SELECT nombrepersonal AS 'Personal', COUNT(idregistroinfraccion) AS 'Cantidad de Infracciones', " _
+        Dim Command As New MySqlCommand("SELECT nombrepersonal AS 'Personal', vehiculo AS 'Vehiculo', COUNT(idregistroinfraccion) AS 'Cantidad de Infracciones', " _
                     & " MAX(velocidad) AS 'Maxima Velocidad', ROUND(AVG(velocidad), 2) as 'Promedio del Periodo', nombregrupo AS 'Grupo' " _
                     & " FROM registroinfraccion, personal, vehiculo, grupo " _
                     & " WHERE personal.idpersonal = registroinfraccion.personal " _

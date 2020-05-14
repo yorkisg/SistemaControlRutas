@@ -26,7 +26,7 @@ Partial Class MenuPrincipal
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuPrincipal))
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MenuPrincipal2 = New System.Windows.Forms.MenuStrip()
         Me.MenuMaestros = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuPersonal = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuProductos = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,22 +67,22 @@ Partial Class MenuPrincipal
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
+        Me.MenuPrincipal2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'MenuPrincipal2
         '
-        Me.MenuStrip1.BackColor = System.Drawing.Color.AliceBlue
-        Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuMaestros, Me.MenuGestionRutas, Me.MenuConsultas, Me.MenuEstadisticas, Me.MenuConfiguracion, Me.MenuSalir})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(984, 25)
-        Me.MenuStrip1.TabIndex = 9
-        Me.MenuStrip1.Text = "MenuPrincipal"
+        Me.MenuPrincipal2.BackColor = System.Drawing.Color.AliceBlue
+        Me.MenuPrincipal2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuPrincipal2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuMaestros, Me.MenuGestionRutas, Me.MenuConsultas, Me.MenuEstadisticas, Me.MenuConfiguracion, Me.MenuSalir})
+        Me.MenuPrincipal2.Location = New System.Drawing.Point(0, 0)
+        Me.MenuPrincipal2.Name = "MenuPrincipal2"
+        Me.MenuPrincipal2.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.MenuPrincipal2.Size = New System.Drawing.Size(984, 25)
+        Me.MenuPrincipal2.TabIndex = 9
+        Me.MenuPrincipal2.Text = "MenuPrincipal"
         '
         'MenuMaestros
         '
@@ -299,6 +299,7 @@ Partial Class MenuPrincipal
         '
         'Timer1
         '
+        Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
         'Panel1
@@ -347,7 +348,7 @@ Partial Class MenuPrincipal
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripButton1.Text = "28.04.2020"
+        Me.ToolStripButton1.Text = "07.05.2020"
         '
         'ToolStripLabel2
         '
@@ -366,7 +367,7 @@ Partial Class MenuPrincipal
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(654, 5)
+        Me.Label1.Location = New System.Drawing.Point(779, 4)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(48, 17)
         Me.Label1.TabIndex = 1
@@ -382,7 +383,7 @@ Partial Class MenuPrincipal
         Me.ClientSize = New System.Drawing.Size(984, 562)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.MenuPrincipal2)
         Me.Font = New System.Drawing.Font("Microsoft JhengHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -391,8 +392,8 @@ Partial Class MenuPrincipal
         Me.Name = "MenuPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sistema de Gestión de Rutas - Cecon Hacienda El Tunal"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.MenuPrincipal2.ResumeLayout(False)
+        Me.MenuPrincipal2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
@@ -402,7 +403,7 @@ Partial Class MenuPrincipal
 
     End Sub
     Friend WithEvents ToolTip As System.Windows.Forms.ToolTip
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents MenuPrincipal2 As System.Windows.Forms.MenuStrip
     Friend WithEvents MenuMaestros As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuConsultas As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuSalir As System.Windows.Forms.ToolStripMenuItem

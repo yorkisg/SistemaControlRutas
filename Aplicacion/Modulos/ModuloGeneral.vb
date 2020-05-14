@@ -8,7 +8,7 @@ Module ModuloGeneral
     Public Adaptador As MySqlDataAdapter
     Public DataSet As DataSet
     Public Tabla As DataTable
-    'Public Builder As MySqlCommandBuilder
+    Public DataView As DataView
     Public ConnectionString As String = "server=172.16.8.88;user=cecon01;password=1234;database=bdsaladecontrolgps;port=3306"
     Public Conexion As New MySqlConnection
     Public Reader As MySqlDataReader

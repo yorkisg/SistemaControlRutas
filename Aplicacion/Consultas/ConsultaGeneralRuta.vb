@@ -16,7 +16,6 @@ Public Class ConsultaGeneralRuta
         EnableDoubleBuffered(DataGridView)
         EnableDoubleBuffered(DataGridView1)
 
-        'EN CONSTRUCCION
         CargarConsultaRutaVehiculo()
 
     End Sub
@@ -35,6 +34,9 @@ Public Class ConsultaGeneralRuta
 
             'La fecha inicial no puede ser mayor que la fecha final
             If DateTimePicker1.Value <= DateTimePicker2.Value Then
+
+                'Llamamos al metodo para cargar los vehiculos con mas rutas
+                CargarConsultaRutaVehiculo()
 
                 If TextBox1.Text <> "" Then
 

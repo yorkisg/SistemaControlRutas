@@ -45,7 +45,7 @@ Partial Class SeguimientoCarga
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.MenuPrincipal = New System.Windows.Forms.ToolStrip()
         Me.BotonGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonGuiaTelefonica = New System.Windows.Forms.ToolStripButton()
@@ -91,18 +91,18 @@ Partial Class SeguimientoCarga
         Me.Pagina1 = New System.Windows.Forms.TabPage()
         Me.BotonBuscar1 = New System.Windows.Forms.Button()
         Me.BotonAgregar4 = New System.Windows.Forms.Button()
-        Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
-        Me.BotonGuardar2 = New System.Windows.Forms.ToolStripButton()
         Me.BotonBuscar4 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.BotonAgregar2 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.BotonAgregar3 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.BotonAgregar1 = New System.Windows.Forms.Button()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.BotonBuscar2 = New System.Windows.Forms.Button()
         Me.BotonBuscar3 = New System.Windows.Forms.Button()
+        Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
+        Me.BotonGuardar2 = New System.Windows.Forms.ToolStripButton()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -112,6 +112,7 @@ Partial Class SeguimientoCarga
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaTipoVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -148,7 +149,8 @@ Partial Class SeguimientoCarga
         Me.flota = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.vehiculo = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStrip1.SuspendLayout()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.MenuPrincipal.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -157,6 +159,7 @@ Partial Class SeguimientoCarga
         Me.Panel1.SuspendLayout()
         Me.Pagina1.SuspendLayout()
         Me.ToolStrip3.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
@@ -224,14 +227,14 @@ Partial Class SeguimientoCarga
         Me.TextBox11.Size = New System.Drawing.Size(133, 22)
         Me.TextBox11.TabIndex = 41
         '
-        'ToolStrip1
+        'MenuPrincipal
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator1, Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonCuadroResumen, Me.ToolStripSeparator15, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1320, 25)
-        Me.ToolStrip1.TabIndex = 42
+        Me.MenuPrincipal.BackColor = System.Drawing.Color.AliceBlue
+        Me.MenuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator1, Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonCuadroResumen, Me.ToolStripSeparator15, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
+        Me.MenuPrincipal.Location = New System.Drawing.Point(0, 0)
+        Me.MenuPrincipal.Name = "MenuPrincipal"
+        Me.MenuPrincipal.Size = New System.Drawing.Size(1320, 25)
+        Me.MenuPrincipal.TabIndex = 42
         '
         'BotonGuardar
         '
@@ -574,17 +577,17 @@ Partial Class SeguimientoCarga
         Me.Pagina1.BackColor = System.Drawing.Color.White
         Me.Pagina1.Controls.Add(Me.BotonBuscar1)
         Me.Pagina1.Controls.Add(Me.BotonAgregar4)
-        Me.Pagina1.Controls.Add(Me.ToolStrip3)
         Me.Pagina1.Controls.Add(Me.BotonBuscar4)
-        Me.Pagina1.Controls.Add(Me.TextBox1)
         Me.Pagina1.Controls.Add(Me.BotonAgregar2)
-        Me.Pagina1.Controls.Add(Me.TextBox3)
         Me.Pagina1.Controls.Add(Me.BotonAgregar3)
-        Me.Pagina1.Controls.Add(Me.Label1)
         Me.Pagina1.Controls.Add(Me.BotonAgregar1)
-        Me.Pagina1.Controls.Add(Me.TextBox7)
         Me.Pagina1.Controls.Add(Me.BotonBuscar2)
         Me.Pagina1.Controls.Add(Me.BotonBuscar3)
+        Me.Pagina1.Controls.Add(Me.ToolStrip3)
+        Me.Pagina1.Controls.Add(Me.TextBox1)
+        Me.Pagina1.Controls.Add(Me.TextBox3)
+        Me.Pagina1.Controls.Add(Me.Label1)
+        Me.Pagina1.Controls.Add(Me.TextBox7)
         Me.Pagina1.Controls.Add(Me.ComboBox1)
         Me.Pagina1.Controls.Add(Me.TextBox6)
         Me.Pagina1.Controls.Add(Me.Label9)
@@ -621,6 +624,60 @@ Partial Class SeguimientoCarga
         Me.BotonAgregar4.TabIndex = 99
         Me.BotonAgregar4.UseVisualStyleBackColor = True
         '
+        'BotonBuscar4
+        '
+        Me.BotonBuscar4.Image = CType(resources.GetObject("BotonBuscar4.Image"), System.Drawing.Image)
+        Me.BotonBuscar4.Location = New System.Drawing.Point(611, 147)
+        Me.BotonBuscar4.Name = "BotonBuscar4"
+        Me.BotonBuscar4.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar4.TabIndex = 98
+        Me.BotonBuscar4.UseVisualStyleBackColor = True
+        '
+        'BotonAgregar2
+        '
+        Me.BotonAgregar2.Image = CType(resources.GetObject("BotonAgregar2.Image"), System.Drawing.Image)
+        Me.BotonAgregar2.Location = New System.Drawing.Point(638, 104)
+        Me.BotonAgregar2.Name = "BotonAgregar2"
+        Me.BotonAgregar2.Size = New System.Drawing.Size(28, 28)
+        Me.BotonAgregar2.TabIndex = 95
+        Me.BotonAgregar2.UseVisualStyleBackColor = True
+        '
+        'BotonAgregar3
+        '
+        Me.BotonAgregar3.Image = CType(resources.GetObject("BotonAgregar3.Image"), System.Drawing.Image)
+        Me.BotonAgregar3.Location = New System.Drawing.Point(638, 190)
+        Me.BotonAgregar3.Name = "BotonAgregar3"
+        Me.BotonAgregar3.Size = New System.Drawing.Size(28, 28)
+        Me.BotonAgregar3.TabIndex = 94
+        Me.BotonAgregar3.UseVisualStyleBackColor = True
+        '
+        'BotonAgregar1
+        '
+        Me.BotonAgregar1.Image = CType(resources.GetObject("BotonAgregar1.Image"), System.Drawing.Image)
+        Me.BotonAgregar1.Location = New System.Drawing.Point(638, 61)
+        Me.BotonAgregar1.Name = "BotonAgregar1"
+        Me.BotonAgregar1.Size = New System.Drawing.Size(28, 28)
+        Me.BotonAgregar1.TabIndex = 93
+        Me.BotonAgregar1.UseVisualStyleBackColor = True
+        '
+        'BotonBuscar2
+        '
+        Me.BotonBuscar2.Image = CType(resources.GetObject("BotonBuscar2.Image"), System.Drawing.Image)
+        Me.BotonBuscar2.Location = New System.Drawing.Point(611, 104)
+        Me.BotonBuscar2.Name = "BotonBuscar2"
+        Me.BotonBuscar2.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar2.TabIndex = 91
+        Me.BotonBuscar2.UseVisualStyleBackColor = True
+        '
+        'BotonBuscar3
+        '
+        Me.BotonBuscar3.Image = CType(resources.GetObject("BotonBuscar3.Image"), System.Drawing.Image)
+        Me.BotonBuscar3.Location = New System.Drawing.Point(611, 190)
+        Me.BotonBuscar3.Name = "BotonBuscar3"
+        Me.BotonBuscar3.Size = New System.Drawing.Size(28, 28)
+        Me.BotonBuscar3.TabIndex = 92
+        Me.BotonBuscar3.UseVisualStyleBackColor = True
+        '
         'ToolStrip3
         '
         Me.ToolStrip3.BackColor = System.Drawing.Color.AliceBlue
@@ -642,15 +699,6 @@ Partial Class SeguimientoCarga
         Me.BotonGuardar2.Size = New System.Drawing.Size(100, 22)
         Me.BotonGuardar2.Text = "Registrar Ruta"
         '
-        'BotonBuscar4
-        '
-        Me.BotonBuscar4.Image = CType(resources.GetObject("BotonBuscar4.Image"), System.Drawing.Image)
-        Me.BotonBuscar4.Location = New System.Drawing.Point(611, 147)
-        Me.BotonBuscar4.Name = "BotonBuscar4"
-        Me.BotonBuscar4.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar4.TabIndex = 98
-        Me.BotonBuscar4.UseVisualStyleBackColor = True
-        '
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.SkyBlue
@@ -660,15 +708,6 @@ Partial Class SeguimientoCarga
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(382, 22)
         Me.TextBox1.TabIndex = 79
-        '
-        'BotonAgregar2
-        '
-        Me.BotonAgregar2.Image = CType(resources.GetObject("BotonAgregar2.Image"), System.Drawing.Image)
-        Me.BotonAgregar2.Location = New System.Drawing.Point(638, 104)
-        Me.BotonAgregar2.Name = "BotonAgregar2"
-        Me.BotonAgregar2.Size = New System.Drawing.Size(28, 28)
-        Me.BotonAgregar2.TabIndex = 95
-        Me.BotonAgregar2.UseVisualStyleBackColor = True
         '
         'TextBox3
         '
@@ -683,15 +722,6 @@ Partial Class SeguimientoCarga
         Me.TextBox3.Size = New System.Drawing.Size(382, 22)
         Me.TextBox3.TabIndex = 82
         '
-        'BotonAgregar3
-        '
-        Me.BotonAgregar3.Image = CType(resources.GetObject("BotonAgregar3.Image"), System.Drawing.Image)
-        Me.BotonAgregar3.Location = New System.Drawing.Point(638, 190)
-        Me.BotonAgregar3.Name = "BotonAgregar3"
-        Me.BotonAgregar3.Size = New System.Drawing.Size(28, 28)
-        Me.BotonAgregar3.TabIndex = 94
-        Me.BotonAgregar3.UseVisualStyleBackColor = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -701,15 +731,6 @@ Partial Class SeguimientoCarga
         Me.Label1.Size = New System.Drawing.Size(63, 15)
         Me.Label1.TabIndex = 80
         Me.Label1.Text = "VEHÍCULO"
-        '
-        'BotonAgregar1
-        '
-        Me.BotonAgregar1.Image = CType(resources.GetObject("BotonAgregar1.Image"), System.Drawing.Image)
-        Me.BotonAgregar1.Location = New System.Drawing.Point(638, 61)
-        Me.BotonAgregar1.Name = "BotonAgregar1"
-        Me.BotonAgregar1.Size = New System.Drawing.Size(28, 28)
-        Me.BotonAgregar1.TabIndex = 93
-        Me.BotonAgregar1.UseVisualStyleBackColor = True
         '
         'TextBox7
         '
@@ -721,24 +742,6 @@ Partial Class SeguimientoCarga
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(382, 22)
         Me.TextBox7.TabIndex = 96
-        '
-        'BotonBuscar2
-        '
-        Me.BotonBuscar2.Image = CType(resources.GetObject("BotonBuscar2.Image"), System.Drawing.Image)
-        Me.BotonBuscar2.Location = New System.Drawing.Point(611, 104)
-        Me.BotonBuscar2.Name = "BotonBuscar2"
-        Me.BotonBuscar2.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar2.TabIndex = 91
-        Me.BotonBuscar2.UseVisualStyleBackColor = True
-        '
-        'BotonBuscar3
-        '
-        Me.BotonBuscar3.Image = CType(resources.GetObject("BotonBuscar3.Image"), System.Drawing.Image)
-        Me.BotonBuscar3.Location = New System.Drawing.Point(611, 190)
-        Me.BotonBuscar3.Name = "BotonBuscar3"
-        Me.BotonBuscar3.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar3.TabIndex = 92
-        Me.BotonBuscar3.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
@@ -828,6 +831,22 @@ Partial Class SeguimientoCarga
         Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList1.Images.SetKeyName(0, "Vehiculo2.png")
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AllowUserToAddRows = False
+        Me.DataGridView3.AllowUserToDeleteRows = False
+        Me.DataGridView3.AllowUserToResizeColumns = False
+        Me.DataGridView3.AllowUserToResizeRows = False
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.ColumnHeadersVisible = False
+        Me.DataGridView3.Location = New System.Drawing.Point(810, 328)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowHeadersVisible = False
+        Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.DataGridView3.Size = New System.Drawing.Size(397, 230)
+        Me.DataGridView3.TabIndex = 114
+        Me.DataGridView3.Visible = False
         '
         'DataGridView1
         '
@@ -1248,18 +1267,29 @@ Partial Class SeguimientoCarga
         Me.vehiculo.Name = "vehiculo"
         Me.vehiculo.Size = New System.Drawing.Size(0, 22)
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(757, 7)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(46, 13)
+        Me.Label12.TabIndex = 116
+        Me.Label12.Text = "Label12"
+        Me.Label12.Visible = False
+        '
         'SeguimientoCarga
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(1320, 782)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.MenuPrincipal)
         Me.Controls.Add(Me.TextBox18)
         Me.Controls.Add(Me.TextBox14)
         Me.Controls.Add(Me.TextBox12)
@@ -1288,6 +1318,7 @@ Partial Class SeguimientoCarga
         Me.Controls.Add(Me.TextBox16)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.DataGridView3)
         Me.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -1295,8 +1326,8 @@ Partial Class SeguimientoCarga
         Me.Name = "SeguimientoCarga"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Seguimiento a Vehiculos de Carga"
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.MenuPrincipal.ResumeLayout(False)
+        Me.MenuPrincipal.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1307,6 +1338,7 @@ Partial Class SeguimientoCarga
         Me.Pagina1.PerformLayout()
         Me.ToolStrip3.ResumeLayout(False)
         Me.ToolStrip3.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
@@ -1324,7 +1356,7 @@ Partial Class SeguimientoCarga
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents MenuPrincipal As System.Windows.Forms.ToolStrip
     Friend WithEvents BotonGuardar As System.Windows.Forms.ToolStripButton
     Friend WithEvents BotonSalir As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
@@ -1427,4 +1459,6 @@ Partial Class SeguimientoCarga
     Friend WithEvents ColumnaImagen1 As DataGridViewImageColumn
     Friend WithEvents ColumnaTipoVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents Label12 As Label
 End Class

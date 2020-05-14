@@ -3,10 +3,12 @@ Public Class SeguimientoCarga
 
     Dim Fila As Integer
     Dim Columna As Integer
+    Dim Contador As Integer = 0
 
     Private Sub SeguimientoCarga_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
+        'Se carga la fecha y hora del sistema al iniciar la aplicacion
         InicializarTimer()
 
         'Llamada al metodo que permite cargar el arbol de opciones proveniente del Modulo.
@@ -69,12 +71,65 @@ Public Class SeguimientoCarga
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
 
+        'Contamos y enviamos el tiempo al label
+        Contador = Contador + 1
+        Label12.Text = Contador
+
+        'Si el tiempo llega a 300 seg (5min) se cierra la aplicacion
+        If Contador = 10 Then
+
+            Close()
+
+        End If
+
         'Control de rutas: carga
         SerieRutaCarga()
 
         TextBox15.Text = DateTime.Now.ToShortTimeString()
         DateTimePicker1.Value = Today
 
+    End Sub
+
+    Private Sub ReiniciarTiempo()
+        'Se detiene el tiempo, reiniciamos el contador y volvemos a iniciar el conteo del tiempo
+
+        ' Timer1.Stop()
+
+        'Contador = 0
+
+        ' Timer1.Start()
+
+    End Sub
+
+    Private Sub SeguimientoCarga_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+        'funciona
+        'AL OBTENER EL FOCUS DEL FORMULARIO SE REINICIA EL TIEMPO
+
+        ReiniciarTiempo()
+
+    End Sub
+
+    Private Sub MenuPrincipal_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuPrincipal.ItemClicked
+        'funciona 
+        'AL DAR CLICK EN EL MENU SE REINICIA EL TIEMPO
+
+        ReiniciarTiempo()
+
+    End Sub
+
+    Private Sub MenuPrincipal_MouseClick(sender As Object, e As MouseEventArgs) Handles MenuPrincipal.MouseClick
+        'funciona 
+        'AL MOVER EL MOUSE EN EL MENU SE REINICIA EL TIEMPO
+
+        ReiniciarTiempo()
+
+    End Sub
+
+    Private Sub MenuPrincipal_MouseMove(sender As Object, e As MouseEventArgs) Handles MenuPrincipal.MouseMove
+        'funciona 
+        'AL MOVER EL MOUSE EN EL MENU SE REINICIA EL TIEMPO
+
+        ReiniciarTiempo()
 
     End Sub
 
@@ -1155,7 +1210,6 @@ Public Class SeguimientoCarga
         End If
 
     End Sub
-
 
 
 End Class
