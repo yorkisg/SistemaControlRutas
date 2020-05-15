@@ -384,7 +384,7 @@ Public Class SeguimientoLiviano
 
     End Sub
 
-    Private Sub BotonGuardar1_Click(sender As Object, e As EventArgs) Handles BotonGuardar1.Click
+    Private Sub BotonGuardar3_Click(sender As Object, e As EventArgs) Handles BotonGuardar3.Click
         'Boton registrar Infraccion
 
         Try
@@ -415,7 +415,7 @@ Public Class SeguimientoLiviano
 
     End Sub
 
-    Private Sub BotonGuardar2_Click(sender As Object, e As EventArgs) Handles BotonGuardar2.Click
+    Private Sub BotonGuardar4_Click(sender As Object, e As EventArgs) Handles BotonGuardar4.Click
         'Boton registrar Incidencia
 
         Try

@@ -149,7 +149,6 @@ Partial Class SeguimientoCarga
         Me.flota = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.vehiculo = New System.Windows.Forms.ToolStripLabel()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.MenuPrincipal.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1267,23 +1266,12 @@ Partial Class SeguimientoCarga
         Me.vehiculo.Name = "vehiculo"
         Me.vehiculo.Size = New System.Drawing.Size(0, 22)
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(757, 7)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(46, 13)
-        Me.Label12.TabIndex = 116
-        Me.Label12.Text = "Label12"
-        Me.Label12.Visible = False
-        '
         'SeguimientoCarga
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(1320, 782)
-        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.Panel3)
@@ -1460,5 +1448,4 @@ Partial Class SeguimientoCarga
     Friend WithEvents ColumnaTipoVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
     Friend WithEvents DataGridView3 As DataGridView
-    Friend WithEvents Label12 As Label
 End Class

@@ -40,7 +40,7 @@ Public Class MenuPrincipal
         'Si el tiempo llega a 300 seg (5min) se cierra la aplicacion
         If Contador = 300 Then
 
-            Close()
+            'Close()
 
         End If
 

@@ -195,7 +195,7 @@ Public Class ReporteInfraccion
 
             If Velocidad >= "130" Then
 
-                DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Critico
+                DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Muerte
 
             End If
 

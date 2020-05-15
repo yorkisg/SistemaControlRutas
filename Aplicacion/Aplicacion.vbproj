@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -574,6 +574,7 @@
     <Content Include="Recursos\MateriaPrimaMensual.png" />
     <Content Include="Recursos\Modificar.gif" />
     <Content Include="Recursos\ModificarReporte.png" />
+    <None Include="Recursos\Muerte.png" />
     <Content Include="Recursos\Operativo.png" />
     <Content Include="Recursos\OrganizacionElTunal.png" />
     <Content Include="Recursos\ParadaIrregular.png" />

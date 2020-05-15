@@ -82,6 +82,7 @@ Partial Class SeguimientoLiviano
         Me.Arbol = New System.Windows.Forms.TreeView()
         Me.Panel5 = New System.Windows.Forms.TabControl()
         Me.Pagina2 = New System.Windows.Forms.TabPage()
+        Me.BotonGuardar3 = New System.Windows.Forms.Button()
         Me.TextBox16 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.BotonBuscar1 = New System.Windows.Forms.Button()
@@ -90,8 +91,6 @@ Partial Class SeguimientoLiviano
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
-        Me.BotonGuardar1 = New System.Windows.Forms.ToolStripButton()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -101,6 +100,7 @@ Partial Class SeguimientoLiviano
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Pagina3 = New System.Windows.Forms.TabPage()
+        Me.BotonGuardar4 = New System.Windows.Forms.Button()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -108,8 +108,6 @@ Partial Class SeguimientoLiviano
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.BotonGuardar2 = New System.Windows.Forms.ToolStripButton()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -117,6 +115,20 @@ Partial Class SeguimientoLiviano
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.BotonBuscar2 = New System.Windows.Forms.Button()
+        Me.Pagina6 = New System.Windows.Forms.TabPage()
+        Me.BotonGuardar1 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ComboTipo = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.TextBox14 = New System.Windows.Forms.TextBox()
@@ -138,13 +150,6 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Pagina6 = New System.Windows.Forms.TabPage()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -156,16 +161,14 @@ Partial Class SeguimientoLiviano
         Me.Pagina1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Pagina2.SuspendLayout()
-        Me.ToolStrip3.SuspendLayout()
         Me.Pagina3.SuspendLayout()
-        Me.ToolStrip2.SuspendLayout()
+        Me.Pagina6.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuOpciones.SuspendLayout()
         Me.ToolStrip4.SuspendLayout()
         Me.MenuHistorial.SuspendLayout()
         Me.MenuRuta2.SuspendLayout()
-        Me.Pagina6.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -387,10 +390,10 @@ Partial Class SeguimientoLiviano
         Me.Panel6.Controls.Add(Me.Pagina5)
         Me.Panel6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Panel6.ImageList = Me.ImagensList
-        Me.Panel6.Location = New System.Drawing.Point(12, 327)
+        Me.Panel6.Location = New System.Drawing.Point(12, 329)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.SelectedIndex = 0
-        Me.Panel6.Size = New System.Drawing.Size(691, 275)
+        Me.Panel6.Size = New System.Drawing.Size(691, 273)
         Me.Panel6.TabIndex = 48
         '
         'Pagina4
@@ -401,7 +404,7 @@ Partial Class SeguimientoLiviano
         Me.Pagina4.Location = New System.Drawing.Point(4, 24)
         Me.Pagina4.Name = "Pagina4"
         Me.Pagina4.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina4.Size = New System.Drawing.Size(683, 247)
+        Me.Pagina4.Size = New System.Drawing.Size(683, 245)
         Me.Pagina4.TabIndex = 0
         Me.Pagina4.Text = "HISTORIAL DE INFRACCIONES DE VELOCIDAD"
         '
@@ -436,7 +439,7 @@ Partial Class SeguimientoLiviano
         DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle19
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(677, 241)
+        Me.DataGridView2.Size = New System.Drawing.Size(677, 239)
         Me.DataGridView2.TabIndex = 62
         '
         'ColumnaIDRegistro
@@ -506,7 +509,7 @@ Partial Class SeguimientoLiviano
         Me.Pagina5.Location = New System.Drawing.Point(4, 24)
         Me.Pagina5.Name = "Pagina5"
         Me.Pagina5.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina5.Size = New System.Drawing.Size(683, 247)
+        Me.Pagina5.Size = New System.Drawing.Size(683, 245)
         Me.Pagina5.TabIndex = 2
         Me.Pagina5.Text = "HISTORIAL DE INCIDENCIAS"
         Me.Pagina5.UseVisualStyleBackColor = True
@@ -542,7 +545,7 @@ Partial Class SeguimientoLiviano
         DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle22
         Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView3.Size = New System.Drawing.Size(677, 241)
+        Me.DataGridView3.Size = New System.Drawing.Size(677, 239)
         Me.DataGridView3.TabIndex = 64
         '
         'ColumnaIDRegistro2
@@ -606,7 +609,7 @@ Partial Class SeguimientoLiviano
         Me.Panel4.Location = New System.Drawing.Point(12, 28)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.SelectedIndex = 0
-        Me.Panel4.Size = New System.Drawing.Size(213, 297)
+        Me.Panel4.Size = New System.Drawing.Size(213, 299)
         Me.Panel4.TabIndex = 44
         '
         'Pagina1
@@ -617,7 +620,7 @@ Partial Class SeguimientoLiviano
         Me.Pagina1.Location = New System.Drawing.Point(4, 24)
         Me.Pagina1.Name = "Pagina1"
         Me.Pagina1.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina1.Size = New System.Drawing.Size(205, 269)
+        Me.Pagina1.Size = New System.Drawing.Size(205, 271)
         Me.Pagina1.TabIndex = 0
         Me.Pagina1.Text = "FLOTA DE VEHICULOS LIVIANOS"
         '
@@ -633,7 +636,7 @@ Partial Class SeguimientoLiviano
         Me.Arbol.Location = New System.Drawing.Point(3, 3)
         Me.Arbol.Name = "Arbol"
         Me.Arbol.ShowNodeToolTips = True
-        Me.Arbol.Size = New System.Drawing.Size(199, 263)
+        Me.Arbol.Size = New System.Drawing.Size(199, 265)
         Me.Arbol.TabIndex = 21
         '
         'Panel5
@@ -646,12 +649,13 @@ Partial Class SeguimientoLiviano
         Me.Panel5.Location = New System.Drawing.Point(227, 28)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.SelectedIndex = 0
-        Me.Panel5.Size = New System.Drawing.Size(476, 297)
+        Me.Panel5.Size = New System.Drawing.Size(476, 299)
         Me.Panel5.TabIndex = 84
         '
         'Pagina2
         '
         Me.Pagina2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Pagina2.Controls.Add(Me.BotonGuardar3)
         Me.Pagina2.Controls.Add(Me.TextBox16)
         Me.Pagina2.Controls.Add(Me.TextBox6)
         Me.Pagina2.Controls.Add(Me.BotonBuscar1)
@@ -660,7 +664,6 @@ Partial Class SeguimientoLiviano
         Me.Pagina2.Controls.Add(Me.TextBox11)
         Me.Pagina2.Controls.Add(Me.TextBox10)
         Me.Pagina2.Controls.Add(Me.TextBox9)
-        Me.Pagina2.Controls.Add(Me.ToolStrip3)
         Me.Pagina2.Controls.Add(Me.DateTimePicker1)
         Me.Pagina2.Controls.Add(Me.TextBox5)
         Me.Pagina2.Controls.Add(Me.Label16)
@@ -674,9 +677,21 @@ Partial Class SeguimientoLiviano
         Me.Pagina2.Location = New System.Drawing.Point(4, 24)
         Me.Pagina2.Name = "Pagina2"
         Me.Pagina2.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina2.Size = New System.Drawing.Size(468, 269)
+        Me.Pagina2.Size = New System.Drawing.Size(468, 271)
         Me.Pagina2.TabIndex = 2
         Me.Pagina2.Text = "EXCESOS DE VELOCIDAD"
+        '
+        'BotonGuardar3
+        '
+        Me.BotonGuardar3.Image = CType(resources.GetObject("BotonGuardar3.Image"), System.Drawing.Image)
+        Me.BotonGuardar3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BotonGuardar3.Location = New System.Drawing.Point(315, 195)
+        Me.BotonGuardar3.Name = "BotonGuardar3"
+        Me.BotonGuardar3.Size = New System.Drawing.Size(137, 23)
+        Me.BotonGuardar3.TabIndex = 128
+        Me.BotonGuardar3.Text = "Registrar Infracción"
+        Me.BotonGuardar3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BotonGuardar3.UseVisualStyleBackColor = True
         '
         'TextBox16
         '
@@ -720,7 +735,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox15
         '
-        Me.TextBox15.Location = New System.Drawing.Point(367, 196)
+        Me.TextBox15.Location = New System.Drawing.Point(354, 152)
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(46, 23)
         Me.TextBox15.TabIndex = 100
@@ -729,7 +744,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(367, 152)
+        Me.TextBox11.Location = New System.Drawing.Point(406, 152)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(46, 23)
         Me.TextBox11.TabIndex = 99
@@ -752,27 +767,6 @@ Partial Class SeguimientoLiviano
         Me.TextBox9.Size = New System.Drawing.Size(46, 23)
         Me.TextBox9.TabIndex = 97
         Me.TextBox9.Visible = False
-        '
-        'ToolStrip3
-        '
-        Me.ToolStrip3.BackColor = System.Drawing.Color.AliceBlue
-        Me.ToolStrip3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar1})
-        Me.ToolStrip3.Location = New System.Drawing.Point(3, 241)
-        Me.ToolStrip3.Name = "ToolStrip3"
-        Me.ToolStrip3.Size = New System.Drawing.Size(462, 25)
-        Me.ToolStrip3.TabIndex = 91
-        Me.ToolStrip3.Text = "ToolStrip3"
-        '
-        'BotonGuardar1
-        '
-        Me.BotonGuardar1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BotonGuardar1.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.BotonGuardar1.Image = CType(resources.GetObject("BotonGuardar1.Image"), System.Drawing.Image)
-        Me.BotonGuardar1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BotonGuardar1.Name = "BotonGuardar1"
-        Me.BotonGuardar1.Size = New System.Drawing.Size(129, 22)
-        Me.BotonGuardar1.Text = "Registrar Infracción"
         '
         'DateTimePicker1
         '
@@ -860,6 +854,7 @@ Partial Class SeguimientoLiviano
         'Pagina3
         '
         Me.Pagina3.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Pagina3.Controls.Add(Me.BotonGuardar4)
         Me.Pagina3.Controls.Add(Me.TextBox17)
         Me.Pagina3.Controls.Add(Me.TextBox18)
         Me.Pagina3.Controls.Add(Me.Label3)
@@ -867,7 +862,6 @@ Partial Class SeguimientoLiviano
         Me.Pagina3.Controls.Add(Me.TextBox12)
         Me.Pagina3.Controls.Add(Me.TextBox8)
         Me.Pagina3.Controls.Add(Me.Label1)
-        Me.Pagina3.Controls.Add(Me.ToolStrip2)
         Me.Pagina3.Controls.Add(Me.DateTimePicker2)
         Me.Pagina3.Controls.Add(Me.Label24)
         Me.Pagina3.Controls.Add(Me.TextBox7)
@@ -879,9 +873,21 @@ Partial Class SeguimientoLiviano
         Me.Pagina3.Location = New System.Drawing.Point(4, 24)
         Me.Pagina3.Name = "Pagina3"
         Me.Pagina3.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina3.Size = New System.Drawing.Size(468, 269)
+        Me.Pagina3.Size = New System.Drawing.Size(468, 271)
         Me.Pagina3.TabIndex = 3
         Me.Pagina3.Text = "INCIDENCIAS"
+        '
+        'BotonGuardar4
+        '
+        Me.BotonGuardar4.Image = CType(resources.GetObject("BotonGuardar4.Image"), System.Drawing.Image)
+        Me.BotonGuardar4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BotonGuardar4.Location = New System.Drawing.Point(317, 214)
+        Me.BotonGuardar4.Name = "BotonGuardar4"
+        Me.BotonGuardar4.Size = New System.Drawing.Size(137, 23)
+        Me.BotonGuardar4.TabIndex = 129
+        Me.BotonGuardar4.Text = "Registrar Incidencia"
+        Me.BotonGuardar4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BotonGuardar4.UseVisualStyleBackColor = True
         '
         'TextBox17
         '
@@ -951,27 +957,6 @@ Partial Class SeguimientoLiviano
         Me.Label1.Size = New System.Drawing.Size(40, 15)
         Me.Label1.TabIndex = 112
         Me.Label1.Text = "HORA"
-        '
-        'ToolStrip2
-        '
-        Me.ToolStrip2.BackColor = System.Drawing.Color.AliceBlue
-        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar2})
-        Me.ToolStrip2.Location = New System.Drawing.Point(3, 241)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(462, 25)
-        Me.ToolStrip2.TabIndex = 111
-        Me.ToolStrip2.Text = "ToolStrip2"
-        '
-        'BotonGuardar2
-        '
-        Me.BotonGuardar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BotonGuardar2.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.BotonGuardar2.Image = CType(resources.GetObject("BotonGuardar2.Image"), System.Drawing.Image)
-        Me.BotonGuardar2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BotonGuardar2.Name = "BotonGuardar2"
-        Me.BotonGuardar2.Size = New System.Drawing.Size(130, 22)
-        Me.BotonGuardar2.Text = "Registrar Incidencia"
         '
         'DateTimePicker2
         '
@@ -1044,6 +1029,165 @@ Partial Class SeguimientoLiviano
         Me.BotonBuscar2.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar2.TabIndex = 119
         Me.BotonBuscar2.UseVisualStyleBackColor = True
+        '
+        'Pagina6
+        '
+        Me.Pagina6.Controls.Add(Me.BotonGuardar1)
+        Me.Pagina6.Controls.Add(Me.ComboBox1)
+        Me.Pagina6.Controls.Add(Me.Label9)
+        Me.Pagina6.Controls.Add(Me.TextBox22)
+        Me.Pagina6.Controls.Add(Me.Label8)
+        Me.Pagina6.Controls.Add(Me.ComboTipo)
+        Me.Pagina6.Controls.Add(Me.Label7)
+        Me.Pagina6.Controls.Add(Me.TextBox20)
+        Me.Pagina6.Controls.Add(Me.Label4)
+        Me.Pagina6.Controls.Add(Me.DateTimePicker3)
+        Me.Pagina6.Controls.Add(Me.Label5)
+        Me.Pagina6.Controls.Add(Me.TextBox21)
+        Me.Pagina6.Controls.Add(Me.Label6)
+        Me.Pagina6.Location = New System.Drawing.Point(4, 24)
+        Me.Pagina6.Name = "Pagina6"
+        Me.Pagina6.Size = New System.Drawing.Size(468, 271)
+        Me.Pagina6.TabIndex = 4
+        Me.Pagina6.Text = "CONSUMIBLES"
+        Me.Pagina6.UseVisualStyleBackColor = True
+        '
+        'BotonGuardar1
+        '
+        Me.BotonGuardar1.Image = CType(resources.GetObject("BotonGuardar1.Image"), System.Drawing.Image)
+        Me.BotonGuardar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BotonGuardar1.Location = New System.Drawing.Point(317, 240)
+        Me.BotonGuardar1.Name = "BotonGuardar1"
+        Me.BotonGuardar1.Size = New System.Drawing.Size(137, 23)
+        Me.BotonGuardar1.TabIndex = 127
+        Me.BotonGuardar1.Text = "Registrar Consumo"
+        Me.BotonGuardar1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BotonGuardar1.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(6, 108)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(305, 23)
+        Me.ComboBox1.TabIndex = 126
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label9.Location = New System.Drawing.Point(6, 90)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(80, 15)
+        Me.Label9.TabIndex = 125
+        Me.Label9.Text = "CONSUMIBLE"
+        '
+        'TextBox22
+        '
+        Me.TextBox22.BackColor = System.Drawing.Color.AliceBlue
+        Me.TextBox22.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TextBox22.Location = New System.Drawing.Point(6, 152)
+        Me.TextBox22.MaxLength = 50
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.Size = New System.Drawing.Size(305, 23)
+        Me.TextBox22.TabIndex = 123
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label8.Location = New System.Drawing.Point(6, 134)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(139, 15)
+        Me.Label8.TabIndex = 122
+        Me.Label8.Text = "CANTIDAD CONSUMIDA"
+        '
+        'ComboTipo
+        '
+        Me.ComboTipo.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboTipo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ComboTipo.FormattingEnabled = True
+        Me.ComboTipo.Location = New System.Drawing.Point(6, 64)
+        Me.ComboTipo.Name = "ComboTipo"
+        Me.ComboTipo.Size = New System.Drawing.Size(305, 23)
+        Me.ComboTipo.TabIndex = 121
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label7.Location = New System.Drawing.Point(6, 46)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(109, 15)
+        Me.Label7.TabIndex = 120
+        Me.Label7.Text = "TIPO DE VEHÍCULO"
+        '
+        'TextBox20
+        '
+        Me.TextBox20.BackColor = System.Drawing.Color.AliceBlue
+        Me.TextBox20.Enabled = False
+        Me.TextBox20.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TextBox20.Location = New System.Drawing.Point(6, 240)
+        Me.TextBox20.MaxLength = 50
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(305, 23)
+        Me.TextBox20.TabIndex = 119
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label4.Location = New System.Drawing.Point(6, 222)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(40, 15)
+        Me.Label4.TabIndex = 118
+        Me.Label4.Text = "HORA"
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.CalendarMonthBackground = System.Drawing.SystemColors.GrayText
+        Me.DateTimePicker3.Checked = False
+        Me.DateTimePicker3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(6, 196)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(305, 23)
+        Me.DateTimePicker3.TabIndex = 117
+        Me.DateTimePicker3.Value = New Date(2019, 4, 13, 0, 0, 0, 0)
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label5.Location = New System.Drawing.Point(6, 178)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(44, 15)
+        Me.Label5.TabIndex = 116
+        Me.Label5.Text = "FECHA"
+        '
+        'TextBox21
+        '
+        Me.TextBox21.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextBox21.Enabled = False
+        Me.TextBox21.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.TextBox21.Location = New System.Drawing.Point(6, 21)
+        Me.TextBox21.MaxLength = 50
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.Size = New System.Drawing.Size(305, 22)
+        Me.TextBox21.TabIndex = 115
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label6.Location = New System.Drawing.Point(6, 3)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(63, 15)
+        Me.Label6.TabIndex = 114
+        Me.Label6.Text = "VEHÍCULO"
         '
         'ErrorProvider1
         '
@@ -1165,7 +1309,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox19
         '
-        Me.TextBox19.Location = New System.Drawing.Point(521, 353)
+        Me.TextBox19.Location = New System.Drawing.Point(522, 353)
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.Size = New System.Drawing.Size(100, 20)
         Me.TextBox19.TabIndex = 87
@@ -1173,84 +1317,6 @@ Partial Class SeguimientoLiviano
         '
         'Timer1
         '
-        '
-        'Pagina6
-        '
-        Me.Pagina6.Controls.Add(Me.TextBox20)
-        Me.Pagina6.Controls.Add(Me.Label4)
-        Me.Pagina6.Controls.Add(Me.DateTimePicker3)
-        Me.Pagina6.Controls.Add(Me.Label5)
-        Me.Pagina6.Controls.Add(Me.TextBox21)
-        Me.Pagina6.Controls.Add(Me.Label6)
-        Me.Pagina6.Location = New System.Drawing.Point(4, 24)
-        Me.Pagina6.Name = "Pagina6"
-        Me.Pagina6.Size = New System.Drawing.Size(468, 269)
-        Me.Pagina6.TabIndex = 4
-        Me.Pagina6.Text = "CONSUMO"
-        Me.Pagina6.UseVisualStyleBackColor = True
-        '
-        'TextBox20
-        '
-        Me.TextBox20.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox20.Enabled = False
-        Me.TextBox20.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox20.Location = New System.Drawing.Point(6, 218)
-        Me.TextBox20.MaxLength = 50
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(305, 23)
-        Me.TextBox20.TabIndex = 119
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(6, 200)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 15)
-        Me.Label4.TabIndex = 118
-        Me.Label4.Text = "HORA"
-        '
-        'DateTimePicker3
-        '
-        Me.DateTimePicker3.CalendarMonthBackground = System.Drawing.SystemColors.GrayText
-        Me.DateTimePicker3.Checked = False
-        Me.DateTimePicker3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker3.Location = New System.Drawing.Point(6, 174)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(305, 23)
-        Me.DateTimePicker3.TabIndex = 117
-        Me.DateTimePicker3.Value = New Date(2019, 4, 13, 0, 0, 0, 0)
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(6, 156)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(44, 15)
-        Me.Label5.TabIndex = 116
-        Me.Label5.Text = "FECHA"
-        '
-        'TextBox21
-        '
-        Me.TextBox21.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.TextBox21.Enabled = False
-        Me.TextBox21.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.TextBox21.Location = New System.Drawing.Point(6, 21)
-        Me.TextBox21.MaxLength = 50
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(305, 22)
-        Me.TextBox21.TabIndex = 115
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label6.Location = New System.Drawing.Point(6, 3)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 15)
-        Me.Label6.TabIndex = 114
-        Me.Label6.Text = "VEHÍCULO"
         '
         'SeguimientoLiviano
         '
@@ -1286,12 +1352,10 @@ Partial Class SeguimientoLiviano
         Me.Panel5.ResumeLayout(False)
         Me.Pagina2.ResumeLayout(False)
         Me.Pagina2.PerformLayout()
-        Me.ToolStrip3.ResumeLayout(False)
-        Me.ToolStrip3.PerformLayout()
         Me.Pagina3.ResumeLayout(False)
         Me.Pagina3.PerformLayout()
-        Me.ToolStrip2.ResumeLayout(False)
-        Me.ToolStrip2.PerformLayout()
+        Me.Pagina6.ResumeLayout(False)
+        Me.Pagina6.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuOpciones.ResumeLayout(False)
@@ -1299,8 +1363,6 @@ Partial Class SeguimientoLiviano
         Me.ToolStrip4.PerformLayout()
         Me.MenuHistorial.ResumeLayout(False)
         Me.MenuRuta2.ResumeLayout(False)
-        Me.Pagina6.ResumeLayout(False)
-        Me.Pagina6.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1320,8 +1382,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents Panel5 As System.Windows.Forms.TabControl
     Friend WithEvents Pagina2 As System.Windows.Forms.TabPage
-    Friend WithEvents ToolStrip3 As System.Windows.Forms.ToolStrip
-    Friend WithEvents BotonGuardar1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
@@ -1331,8 +1391,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Pagina3 As System.Windows.Forms.TabPage
-    Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
-    Friend WithEvents BotonGuardar2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
@@ -1415,4 +1473,13 @@ Partial Class SeguimientoLiviano
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox21 As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ComboTipo As ComboBox
+    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents BotonGuardar1 As Button
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents BotonGuardar3 As Button
+    Friend WithEvents BotonGuardar4 As Button
 End Class

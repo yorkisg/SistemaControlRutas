@@ -4,6 +4,7 @@ Module ModuloConsulta
     'Variables globales.
     Public Bandera As Image
     Public Critico As Image
+    Public Muerte As Image
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CONSULTAS GENERALES'''''''''''''''''''''''''''''''''''''''''''
@@ -862,6 +863,7 @@ Module ModuloConsulta
 
         Bandera = My.Resources.Bandera
         Critico = My.Resources.Critico
+        Muerte = My.Resources.Muerte
 
     End Sub
 
