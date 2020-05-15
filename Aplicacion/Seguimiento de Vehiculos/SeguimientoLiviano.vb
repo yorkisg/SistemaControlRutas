@@ -18,16 +18,19 @@ Public Class SeguimientoLiviano
         'Se habilita la serie correlativa para el ID de las rutas.
         SerieInfraccionRutaLiviano()
         SerieIncidenciaRutaLiviano()
+        SerieConsumoRutaLiviano()
 
         'Llamada al metodo para alternar los colores de las filas
         AlternarFilasGeneral(DataGridView1)
         AlternarFilasGeneral(DataGridView2)
         AlternarFilasGeneral(DataGridView3)
+        AlternarFilasGeneral(DataGridView4)
 
         'Se llama al metodo para que cargue rapido los componentes
         EnableDoubleBuffered(DataGridView1)
         EnableDoubleBuffered(DataGridView2)
         EnableDoubleBuffered(DataGridView3)
+        EnableDoubleBuffered(DataGridView4)
 
         'Letras en mayusculas
         TextBox7.CharacterCasing = CharacterCasing.Upper
@@ -76,9 +79,11 @@ Public Class SeguimientoLiviano
         'Control de rutas: Livianos
         SerieInfraccionRutaLiviano()
         SerieIncidenciaRutaLiviano()
+        SerieConsumoRutaLiviano()
 
         TextBox5.Text = DateTime.Now.ToShortTimeString()
         TextBox8.Text = DateTime.Now.ToShortTimeString()
+        TextBox20.Text = DateTime.Now.ToShortTimeString()
 
     End Sub
 
@@ -187,10 +192,11 @@ Public Class SeguimientoLiviano
                 'Usado para el detalle de ruta
                 TextBox2.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
                 TextBox3.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
-                TextBox14.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
+                TextBox21.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
 
                 LimpiarComponentesInfraccionLiviano()
                 LimpiarComponentesIncidenciaLiviano()
+                LimpiarComponentesConsumoLiviano()
 
             End If
 
@@ -202,6 +208,7 @@ Public Class SeguimientoLiviano
             'CargarGridHistorial para cargar lo correspondiente.
             CargarGridHistorialInfraccionLiviano()
             CargarGridHistorialIncidenciaLiviano()
+            CargarGridHistorialConsumoLiviano()
 
 
         Catch ex As Exception
@@ -268,10 +275,7 @@ Public Class SeguimientoLiviano
 
                 'Seleccionamos y pasamos el valor al TextBox.
                 TextBox16.Text = DataGridView2.Item("ColumnaChofer", DataGridView2.SelectedRows(0).Index).Value
-
-                ObtenerpersonalSeguimientoLivianoInfraccion()
-
-                TextBox19.Text = DataGridView2.Item("ColumnaIDRegistro", DataGridView2.SelectedRows(0).Index).Value
+                ObtenerPersonalSeguimientoLivianoInfraccion()
 
             End If
 
@@ -349,7 +353,28 @@ Public Class SeguimientoLiviano
 
                 'Seleccionamos y pasamos el valor al TextBox.
                 TextBox17.Text = DataGridView3.Item("ColumnaChofer2", DataGridView3.SelectedRows(0).Index).Value
-                ObtenerpersonalSeguimientoLivianoIncidencia()
+                ObtenerPersonalSeguimientoLivianoIncidencia()
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub DataGridView4_SelectionChanged(sender As Object, e As EventArgs) Handles DataGridView4.SelectionChanged
+        'SelectionChanged o CellMouseClick: Propiedad del control DataGridview el cual permite hacer click
+        'y seleccionar elementos por filas o columnas.
+        'en este caso se selecciona el ID del vehiculo el cual es pasado a un control
+        'TextBox pasa su posterior uso.
+
+        Try
+
+            If DataGridView4.RowCount > 0 And DataGridView4.SelectedRows.Count = 1 Then
+
+                TextBox24.Text = DataGridView4.Item("ColumnaChofer3", DataGridView4.SelectedRows(0).Index).Value
+                ObtenerPersonalSeguimientoLivianoConsumo()
 
             End If
 
@@ -384,7 +409,7 @@ Public Class SeguimientoLiviano
 
     End Sub
 
-    Private Sub BotonGuardar3_Click(sender As Object, e As EventArgs) Handles BotonGuardar3.Click
+    Private Sub BotonGuardar1_Click(sender As Object, e As EventArgs) Handles BotonGuardar1.Click
         'Boton registrar Infraccion
 
         Try
@@ -415,7 +440,7 @@ Public Class SeguimientoLiviano
 
     End Sub
 
-    Private Sub BotonGuardar4_Click(sender As Object, e As EventArgs) Handles BotonGuardar4.Click
+    Private Sub BotonGuardar2_Click(sender As Object, e As EventArgs) Handles BotonGuardar2.Click
         'Boton registrar Incidencia
 
         Try
@@ -440,7 +465,38 @@ Public Class SeguimientoLiviano
 
         Catch ex As Exception
 
-            MsgBox("Debe verificar los datos de la infracción.", MsgBoxStyle.Exclamation, "Error.")
+            MsgBox("Debe verificar los datos de la incidencia.", MsgBoxStyle.Exclamation, "Error.")
+
+        End Try
+
+    End Sub
+
+    Private Sub BotonGuardar3_Click(sender As Object, e As EventArgs) Handles BotonGuardar3.Click
+        'Boton registrar Incidencia
+
+        Try
+
+            Dim fecha = DateTimePicker1.Value.ToString("yyyy-MM-dd")
+
+            'Se valida que no haya algun campo vacio
+            If ValidarComponentesConsumoLiviano() = True Then
+
+                Dim db As New MySqlCommand("INSERT INTO registroconsumo (idregistroconsumo, vehiculo, personal, cantidad, fecha, hora) VALUES ('" & TextBox23.Text & "', '" & TextBox21.Text & "', '" & TextBox26.Text & "', '" & TextBox22.Text & "', '" & fecha & "', '" & TextBox20.Text & "')", Conexion)
+                db.ExecuteNonQuery()
+                MsgBox("Consumo registrado con Exito.", MsgBoxStyle.Information, "Exito.")
+
+                'Se limpian todos los componentes del formulario para un nuevo uso.
+                LimpiarComponentesConsumoLiviano()
+                'Se habilita el metodo para incrementar el siguiente ID.
+                SerieConsumoRutaLiviano()
+
+                CargarGridHistorialConsumoLiviano()
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox("Debe verificar los datos del consumo.", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
 
@@ -471,17 +527,19 @@ Public Class SeguimientoLiviano
 
     End Sub
 
+    Private Sub BotonBuscar3_Click(sender As Object, e As EventArgs) Handles BotonBuscar3.Click
+        'Llama al formulario ListadoPersona.
+
+        ListadoPersonal.ComboEstadoPersona.Enabled = False
+        ListadoPersonal.ComboTipoPersona.SelectedItem = "LIVIANO"
+        ListadoPersonal.ShowDialog()
+
+    End Sub
+
     Private Sub BotonListado_Click(sender As Object, e As EventArgs) Handles BotonListado.Click
         'Llamada al formulario "ListadoVehiculoCarretera" para chequear cual es el total de vehiculos en carretera actualizado.
 
         ListadoGeneralRutas.ShowDialog()
-
-    End Sub
-
-    Private Sub BotonConsulta1_Click(sender As Object, e As EventArgs) Handles BotonConsulta1.Click
-        'Llama al formulario ConsultaInfraccion.
-
-        ConsultaInfraccion.ShowDialog()
 
     End Sub
 
@@ -618,6 +676,12 @@ Public Class SeguimientoLiviano
 
         End If
 
+        If Panel5.SelectedIndex = 2 Then
+
+            Panel6.SelectedIndex = 2
+
+        End If
+
     End Sub
 
     Private Sub Panel6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Panel6.SelectedIndexChanged
@@ -632,6 +696,12 @@ Public Class SeguimientoLiviano
         If Panel6.SelectedIndex = 1 Then
 
             Panel5.SelectedIndex = 1
+
+        End If
+
+        If Panel6.SelectedIndex = 2 Then
+
+            Panel5.SelectedIndex = 2
 
         End If
 

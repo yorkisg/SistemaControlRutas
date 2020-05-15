@@ -26,7 +26,6 @@ Public Class ListadoPersonal
 
         End If
 
-
     End Sub
 
     Private Sub ListadoPersonal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -140,6 +139,11 @@ Public Class ListadoPersonal
 
                     SeguimientoLiviano.TextBox18.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
                     SeguimientoLiviano.TextBox17.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 2 Then
+
+                    SeguimientoLiviano.TextBox26.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    SeguimientoLiviano.TextBox24.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 End If
 
@@ -330,14 +334,19 @@ Public Class ListadoPersonal
                     SeguimientoLiviano.TextBox18.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
                     SeguimientoLiviano.TextBox17.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
+                ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 2 Then
+
+                    SeguimientoLiviano.TextBox26.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    SeguimientoLiviano.TextBox24.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
                 End If
 
-                'Se cierra el formulario ListadoPersona
-                Tabla.Clear()
-                DataSet.Clear()
-                Dispose()
-
             End If
+
+            'Se cierra el formulario ListadoPersona
+            Tabla.Clear()
+            DataSet.Clear()
+            Dispose()
 
         End If
 

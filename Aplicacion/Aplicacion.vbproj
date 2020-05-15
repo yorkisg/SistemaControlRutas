@@ -506,6 +506,8 @@
     <Content Include="Recursos\ConsultarChofer.png" />
     <Content Include="Recursos\ConsultarInfracciones.gif" />
     <Content Include="Recursos\ConsultarVehiculo.png" />
+    <None Include="Recursos\Consumo1.png" />
+    <None Include="Recursos\Consumo2.png" />
     <Content Include="Recursos\ControldePeso1.png" />
     <Content Include="Recursos\ControldePeso2.png" />
     <Content Include="Recursos\ControldePeso3.png" />
