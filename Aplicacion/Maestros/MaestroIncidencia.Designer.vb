@@ -266,7 +266,7 @@ Partial Class MaestroIncidencia
         Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboTipo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ComboTipo.FormattingEnabled = True
-        Me.ComboTipo.Items.AddRange(New Object() {"PARADA IRREGULAR", "CONDUCTA INAPROPIADA", "DESVIO NO AUTORIZADO", "PROBLEMAS EN DOCUMENTACIÓN"})
+        Me.ComboTipo.Items.AddRange(New Object() {"PARADA IRREGULAR", "CONDUCTA INAPROPIADA", "DESVIO NO AUTORIZADO", "PROBLEMAS EN DOCUMENTACIÓN", "FALLAS DEL VEHICULO"})
         Me.ComboTipo.Location = New System.Drawing.Point(12, 325)
         Me.ComboTipo.Name = "ComboTipo"
         Me.ComboTipo.Size = New System.Drawing.Size(280, 23)

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ReporteInfraccion
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,24 +20,23 @@ Partial Class ReporteInfraccion
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReporteInfraccion))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
@@ -51,6 +50,13 @@ Partial Class ReporteInfraccion
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
+        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaVelocidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaImagen = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ColumnaPromedio = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -68,19 +74,15 @@ Partial Class ReporteInfraccion
         Me.BotonLimpiar = New System.Windows.Forms.ToolStripButton()
         Me.BotonExportar = New System.Windows.Forms.ToolStripButton()
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
-        Me.ColumnaChofer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaCantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaVelocidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaImagen = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ColumnaPromedio = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox1.SuspendLayout()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Menu2.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStripSeparator2
@@ -103,28 +105,9 @@ Partial Class ReporteInfraccion
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(276, 180)
-        Me.GroupBox1.TabIndex = 80
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "SELECCIONAR PERÍODO DE FECHAS"
-        '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(158, 146)
+        Me.TextBox4.Location = New System.Drawing.Point(158, 130)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(103, 23)
         Me.TextBox4.TabIndex = 85
@@ -134,7 +117,7 @@ Partial Class ReporteInfraccion
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 154)
+        Me.RadioButton2.Location = New System.Drawing.Point(6, 138)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(141, 19)
         Me.RadioButton2.TabIndex = 83
@@ -146,7 +129,7 @@ Partial Class ReporteInfraccion
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 129)
+        Me.RadioButton1.Location = New System.Drawing.Point(6, 113)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(146, 19)
         Me.RadioButton1.TabIndex = 82
@@ -158,7 +141,7 @@ Partial Class ReporteInfraccion
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(6, 111)
+        Me.Label3.Location = New System.Drawing.Point(6, 95)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 15)
         Me.Label3.TabIndex = 81
@@ -167,7 +150,7 @@ Partial Class ReporteInfraccion
         'DateTimePicker1
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.DateTimePicker1.Location = New System.Drawing.Point(6, 37)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(6, 21)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(264, 25)
         Me.DateTimePicker1.TabIndex = 64
@@ -177,7 +160,7 @@ Partial Class ReporteInfraccion
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(6, 19)
+        Me.Label1.Location = New System.Drawing.Point(6, 3)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(41, 15)
         Me.Label1.TabIndex = 63
@@ -186,7 +169,7 @@ Partial Class ReporteInfraccion
         'DateTimePicker2
         '
         Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.75!)
-        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 83)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 67)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(264, 25)
         Me.DateTimePicker2.TabIndex = 66
@@ -196,7 +179,7 @@ Partial Class ReporteInfraccion
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label2.Location = New System.Drawing.Point(6, 65)
+        Me.Label2.Location = New System.Drawing.Point(6, 49)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(45, 15)
         Me.Label2.TabIndex = 65
@@ -204,7 +187,7 @@ Partial Class ReporteInfraccion
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(158, 117)
+        Me.TextBox3.Location = New System.Drawing.Point(158, 101)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(103, 23)
         Me.TextBox3.TabIndex = 84
@@ -234,9 +217,9 @@ Partial Class ReporteInfraccion
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.DataGridView)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(291, 28)
+        Me.GroupBox2.Location = New System.Drawing.Point(313, 28)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(651, 396)
+        Me.GroupBox2.Size = New System.Drawing.Size(651, 414)
         Me.GroupBox2.TabIndex = 83
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "PRIMEROS 15 INFRACTORES DEL PERÍODO:"
@@ -251,14 +234,14 @@ Partial Class ReporteInfraccion
         Me.DataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle21.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle21
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaChofer, Me.ColumnaVehiculo, Me.ColumnaCantidad, Me.ColumnaVelocidad, Me.ColumnaImagen, Me.ColumnaPromedio, Me.ColumnaFlota})
         Me.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill
@@ -269,16 +252,94 @@ Partial Class ReporteInfraccion
         Me.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(645, 374)
+        Me.DataGridView.Size = New System.Drawing.Size(645, 392)
         Me.DataGridView.TabIndex = 80
+        '
+        'ColumnaChofer
+        '
+        Me.ColumnaChofer.DataPropertyName = "Personal"
+        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle22
+        Me.ColumnaChofer.HeaderText = "CHOFER"
+        Me.ColumnaChofer.MinimumWidth = 135
+        Me.ColumnaChofer.Name = "ColumnaChofer"
+        Me.ColumnaChofer.ReadOnly = True
+        '
+        'ColumnaVehiculo
+        '
+        Me.ColumnaVehiculo.DataPropertyName = "Vehiculo"
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaVehiculo.DefaultCellStyle = DataGridViewCellStyle23
+        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
+        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
+        Me.ColumnaVehiculo.ReadOnly = True
+        '
+        'ColumnaCantidad
+        '
+        Me.ColumnaCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaCantidad.DataPropertyName = "Cantidad de Infracciones"
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaCantidad.DefaultCellStyle = DataGridViewCellStyle24
+        Me.ColumnaCantidad.HeaderText = "INFRACCIONES"
+        Me.ColumnaCantidad.MinimumWidth = 90
+        Me.ColumnaCantidad.Name = "ColumnaCantidad"
+        Me.ColumnaCantidad.ReadOnly = True
+        Me.ColumnaCantidad.Width = 90
+        '
+        'ColumnaVelocidad
+        '
+        Me.ColumnaVelocidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaVelocidad.DataPropertyName = "Maxima Velocidad"
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle25
+        Me.ColumnaVelocidad.FillWeight = 31.74049!
+        Me.ColumnaVelocidad.HeaderText = "MÁXIMA VELOCIDAD KM/H"
+        Me.ColumnaVelocidad.MinimumWidth = 87
+        Me.ColumnaVelocidad.Name = "ColumnaVelocidad"
+        Me.ColumnaVelocidad.ReadOnly = True
+        Me.ColumnaVelocidad.Width = 87
+        '
+        'ColumnaImagen
+        '
+        Me.ColumnaImagen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaImagen.HeaderText = ""
+        Me.ColumnaImagen.MinimumWidth = 25
+        Me.ColumnaImagen.Name = "ColumnaImagen"
+        Me.ColumnaImagen.ReadOnly = True
+        Me.ColumnaImagen.Width = 25
+        '
+        'ColumnaPromedio
+        '
+        Me.ColumnaPromedio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaPromedio.DataPropertyName = "Promedio del Periodo"
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaPromedio.DefaultCellStyle = DataGridViewCellStyle26
+        Me.ColumnaPromedio.HeaderText = "PROMEDIO DEL VIAJE KM/H"
+        Me.ColumnaPromedio.MinimumWidth = 87
+        Me.ColumnaPromedio.Name = "ColumnaPromedio"
+        Me.ColumnaPromedio.ReadOnly = True
+        Me.ColumnaPromedio.Width = 87
+        '
+        'ColumnaFlota
+        '
+        Me.ColumnaFlota.DataPropertyName = "Grupo"
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle27
+        Me.ColumnaFlota.HeaderText = "GRUPO"
+        Me.ColumnaFlota.MinimumWidth = 145
+        Me.ColumnaFlota.Name = "ColumnaFlota"
+        Me.ColumnaFlota.ReadOnly = True
         '
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.DataGridView1)
         Me.GroupBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GroupBox5.Location = New System.Drawing.Point(12, 214)
+        Me.GroupBox5.Location = New System.Drawing.Point(6, 163)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(276, 210)
+        Me.GroupBox5.Size = New System.Drawing.Size(276, 217)
         Me.GroupBox5.TabIndex = 86
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "VEHÍCULOS CON MÁS INFRACCIONES (MES)"
@@ -293,14 +354,14 @@ Partial Class ReporteInfraccion
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -311,15 +372,15 @@ Partial Class ReporteInfraccion
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(270, 188)
+        Me.DataGridView1.Size = New System.Drawing.Size(270, 195)
         Me.DataGridView1.TabIndex = 81
         '
         'DataGridViewTextBoxColumn1
         '
         Me.DataGridViewTextBoxColumn1.DataPropertyName = "Vehiculo"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle29
         Me.DataGridViewTextBoxColumn1.HeaderText = "VEHÍCULO"
         Me.DataGridViewTextBoxColumn1.MinimumWidth = 135
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
@@ -328,8 +389,8 @@ Partial Class ReporteInfraccion
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "Conteo"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle30
         Me.DataGridViewTextBoxColumn2.HeaderText = "INFRACCIONES"
         Me.DataGridViewTextBoxColumn2.MinimumWidth = 105
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
@@ -341,7 +402,7 @@ Partial Class ReporteInfraccion
         Me.Menu2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonConsultar2, Me.ToolStripSeparator4, Me.BotonLimpiar2, Me.ToolStripSeparator6, Me.BotonExportar2, Me.ToolStripSeparator7, Me.BotonSalir2, Me.ToolStripSeparator8})
         Me.Menu2.Location = New System.Drawing.Point(0, 0)
         Me.Menu2.Name = "Menu2"
-        Me.Menu2.Size = New System.Drawing.Size(954, 25)
+        Me.Menu2.Size = New System.Drawing.Size(976, 25)
         Me.Menu2.TabIndex = 89
         Me.Menu2.Text = "ToolStrip1"
         '
@@ -429,94 +490,45 @@ Partial Class ReporteInfraccion
         Me.BotonSalir.Size = New System.Drawing.Size(49, 22)
         Me.BotonSalir.Text = "Salir"
         '
-        'ColumnaChofer
+        'TabControl1
         '
-        Me.ColumnaChofer.DataPropertyName = "Personal"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
-        Me.ColumnaChofer.HeaderText = "CHOFER"
-        Me.ColumnaChofer.MinimumWidth = 135
-        Me.ColumnaChofer.Name = "ColumnaChofer"
-        Me.ColumnaChofer.ReadOnly = True
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TabControl1.Location = New System.Drawing.Point(12, 28)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(295, 414)
+        Me.TabControl1.TabIndex = 81
         '
-        'ColumnaVehiculo
+        'TabPage1
         '
-        Me.ColumnaVehiculo.DataPropertyName = "Vehiculo"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaVehiculo.DefaultCellStyle = DataGridViewCellStyle3
-        Me.ColumnaVehiculo.HeaderText = "VEHÍCULO"
-        Me.ColumnaVehiculo.Name = "ColumnaVehiculo"
-        Me.ColumnaVehiculo.ReadOnly = True
-        '
-        'ColumnaCantidad
-        '
-        Me.ColumnaCantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaCantidad.DataPropertyName = "Cantidad de Infracciones"
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaCantidad.DefaultCellStyle = DataGridViewCellStyle4
-        Me.ColumnaCantidad.HeaderText = "INFRACCIONES"
-        Me.ColumnaCantidad.MinimumWidth = 90
-        Me.ColumnaCantidad.Name = "ColumnaCantidad"
-        Me.ColumnaCantidad.ReadOnly = True
-        Me.ColumnaCantidad.Width = 90
-        '
-        'ColumnaVelocidad
-        '
-        Me.ColumnaVelocidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaVelocidad.DataPropertyName = "Maxima Velocidad"
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaVelocidad.DefaultCellStyle = DataGridViewCellStyle5
-        Me.ColumnaVelocidad.FillWeight = 31.74049!
-        Me.ColumnaVelocidad.HeaderText = "MÁXIMA VELOCIDAD KM/H"
-        Me.ColumnaVelocidad.MinimumWidth = 87
-        Me.ColumnaVelocidad.Name = "ColumnaVelocidad"
-        Me.ColumnaVelocidad.ReadOnly = True
-        Me.ColumnaVelocidad.Width = 87
-        '
-        'ColumnaImagen
-        '
-        Me.ColumnaImagen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaImagen.HeaderText = ""
-        Me.ColumnaImagen.MinimumWidth = 25
-        Me.ColumnaImagen.Name = "ColumnaImagen"
-        Me.ColumnaImagen.ReadOnly = True
-        Me.ColumnaImagen.Width = 25
-        '
-        'ColumnaPromedio
-        '
-        Me.ColumnaPromedio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaPromedio.DataPropertyName = "Promedio del Periodo"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaPromedio.DefaultCellStyle = DataGridViewCellStyle6
-        Me.ColumnaPromedio.HeaderText = "PROMEDIO DEL VIAJE KM/H"
-        Me.ColumnaPromedio.MinimumWidth = 87
-        Me.ColumnaPromedio.Name = "ColumnaPromedio"
-        Me.ColumnaPromedio.ReadOnly = True
-        Me.ColumnaPromedio.Width = 87
-        '
-        'ColumnaFlota
-        '
-        Me.ColumnaFlota.DataPropertyName = "Grupo"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaFlota.DefaultCellStyle = DataGridViewCellStyle7
-        Me.ColumnaFlota.HeaderText = "GRUPO"
-        Me.ColumnaFlota.MinimumWidth = 145
-        Me.ColumnaFlota.Name = "ColumnaFlota"
-        Me.ColumnaFlota.ReadOnly = True
+        Me.TabPage1.Controls.Add(Me.TextBox4)
+        Me.TabPage1.Controls.Add(Me.RadioButton2)
+        Me.TabPage1.Controls.Add(Me.GroupBox5)
+        Me.TabPage1.Controls.Add(Me.RadioButton1)
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.TextBox3)
+        Me.TabPage1.Controls.Add(Me.DateTimePicker1)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.DateTimePicker2)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(287, 386)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "CONSULTA"
+        Me.TabPage1.UseVisualStyleBackColor = True
         '
         'ReporteInfraccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(954, 436)
+        Me.ClientSize = New System.Drawing.Size(976, 454)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Menu2)
-        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -524,14 +536,15 @@ Partial Class ReporteInfraccion
         Me.Name = "ReporteInfraccion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reporte de Infracciones de Velocidad"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Menu2.ResumeLayout(False)
         Me.Menu2.PerformLayout()
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -544,7 +557,6 @@ Partial Class ReporteInfraccion
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BotonSalir As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
@@ -578,4 +590,6 @@ Partial Class ReporteInfraccion
     Friend WithEvents ColumnaCantidad As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabPage1 As TabPage
 End Class

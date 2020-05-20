@@ -96,14 +96,6 @@ Public Class SeguimientoCarga
             'se carga solamente el grupo seleccionado
             CargarGridRutaCargaGrupo()
 
-            'If e.Node.Nodes.Count > 1 Then
-            'Se carga el metodo q acumula todos los vehiculos de un grupo en la suflota
-            'CargarGridRutaCargaSubFlota()
-            'ElseIf e.Node.Nodes.Count = 0 Then 'Sino tiene hijos 
-            'se carga solamente el grupo seleccionado
-            'CargarGridRutaCargaGrupo()
-            'End If
-
             'Enviamos el texto seleccionado a la variable, label, etc.
             Nombre = TextBox4.Text
             flota.Text = Nombre

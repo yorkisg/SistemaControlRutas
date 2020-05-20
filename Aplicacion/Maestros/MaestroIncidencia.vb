@@ -135,15 +135,18 @@ Public Class MaestroIncidencia
     End Function
 
     Private Sub ComboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboTipo.SelectedIndexChanged
+        'Para enviar el texto seleccionado al textbox
 
         TextBox8.Text = ComboTipo.SelectedItem
 
     End Sub
 
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+        'Para contar los caracteres en el textbox
 
         Label9.Text = Len(TextBox3.Text)
 
     End Sub
+
 
 End Class

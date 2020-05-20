@@ -286,6 +286,7 @@ Partial Class SeguimientoLiviano
         Me.ImagensList.Images.SetKeyName(4, "Abierto1.png")
         Me.ImagensList.Images.SetKeyName(5, "Consumo1.png")
         Me.ImagensList.Images.SetKeyName(6, "Consumo2.png")
+        Me.ImagensList.Images.SetKeyName(7, "Consumible3.png")
         '
         'DataGridView1
         '
@@ -610,7 +611,7 @@ Partial Class SeguimientoLiviano
         'Pagina7
         '
         Me.Pagina7.Controls.Add(Me.DataGridView4)
-        Me.Pagina7.ImageIndex = 5
+        Me.Pagina7.ImageIndex = 7
         Me.Pagina7.Location = New System.Drawing.Point(4, 24)
         Me.Pagina7.Name = "Pagina7"
         Me.Pagina7.Size = New System.Drawing.Size(683, 283)
@@ -678,7 +679,7 @@ Partial Class SeguimientoLiviano
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidad"
         DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle13
-        Me.DataGridViewTextBoxColumn4.HeaderText = "CONSUMO"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "CONSUMO (LTS)"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
@@ -788,7 +789,7 @@ Partial Class SeguimientoLiviano
         Me.TextBox16.BackColor = System.Drawing.Color.AliceBlue
         Me.TextBox16.Enabled = False
         Me.TextBox16.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox16.Location = New System.Drawing.Point(9, 65)
+        Me.TextBox16.Location = New System.Drawing.Point(6, 65)
         Me.TextBox16.Name = "TextBox16"
         Me.TextBox16.Size = New System.Drawing.Size(229, 23)
         Me.TextBox16.TabIndex = 102
@@ -796,7 +797,7 @@ Partial Class SeguimientoLiviano
         'BotonBuscar1
         '
         Me.BotonBuscar1.Image = CType(resources.GetObject("BotonBuscar1.Image"), System.Drawing.Image)
-        Me.BotonBuscar1.Location = New System.Drawing.Point(245, 63)
+        Me.BotonBuscar1.Location = New System.Drawing.Point(244, 62)
         Me.BotonBuscar1.Name = "BotonBuscar1"
         Me.BotonBuscar1.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar1.TabIndex = 103
@@ -1070,7 +1071,7 @@ Partial Class SeguimientoLiviano
         'BotonBuscar3
         '
         Me.BotonBuscar3.Image = CType(resources.GetObject("BotonBuscar3.Image"), System.Drawing.Image)
-        Me.BotonBuscar3.Location = New System.Drawing.Point(242, 61)
+        Me.BotonBuscar3.Location = New System.Drawing.Point(244, 62)
         Me.BotonBuscar3.Name = "BotonBuscar3"
         Me.BotonBuscar3.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar3.TabIndex = 132
@@ -1081,7 +1082,7 @@ Partial Class SeguimientoLiviano
         Me.TextBox24.BackColor = System.Drawing.Color.AliceBlue
         Me.TextBox24.Enabled = False
         Me.TextBox24.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox24.Location = New System.Drawing.Point(6, 64)
+        Me.TextBox24.Location = New System.Drawing.Point(6, 65)
         Me.TextBox24.MaxLength = 50
         Me.TextBox24.Name = "TextBox24"
         Me.TextBox24.Size = New System.Drawing.Size(229, 23)
@@ -1107,7 +1108,7 @@ Partial Class SeguimientoLiviano
         Me.ComboConsumible.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ComboConsumible.FormattingEnabled = True
         Me.ComboConsumible.Items.AddRange(New Object() {"COMBUSTIBLE", "ACEITE", "AGUA", "REFRIGERANTE"})
-        Me.ComboConsumible.Location = New System.Drawing.Point(6, 108)
+        Me.ComboConsumible.Location = New System.Drawing.Point(6, 109)
         Me.ComboConsumible.Name = "ComboConsumible"
         Me.ComboConsumible.Size = New System.Drawing.Size(229, 23)
         Me.ComboConsumible.TabIndex = 126
@@ -1116,7 +1117,7 @@ Partial Class SeguimientoLiviano
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label9.Location = New System.Drawing.Point(6, 90)
+        Me.Label9.Location = New System.Drawing.Point(6, 91)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(80, 15)
         Me.Label9.TabIndex = 125
@@ -1126,7 +1127,7 @@ Partial Class SeguimientoLiviano
         '
         Me.TextBox22.BackColor = System.Drawing.Color.AliceBlue
         Me.TextBox22.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox22.Location = New System.Drawing.Point(275, 64)
+        Me.TextBox22.Location = New System.Drawing.Point(278, 65)
         Me.TextBox22.MaxLength = 50
         Me.TextBox22.Name = "TextBox22"
         Me.TextBox22.Size = New System.Drawing.Size(184, 23)
@@ -1136,7 +1137,7 @@ Partial Class SeguimientoLiviano
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label8.Location = New System.Drawing.Point(275, 46)
+        Me.Label8.Location = New System.Drawing.Point(275, 47)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(188, 15)
         Me.Label8.TabIndex = 122
@@ -1157,7 +1158,7 @@ Partial Class SeguimientoLiviano
         Me.TextBox20.BackColor = System.Drawing.Color.AliceBlue
         Me.TextBox20.Enabled = False
         Me.TextBox20.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox20.Location = New System.Drawing.Point(275, 152)
+        Me.TextBox20.Location = New System.Drawing.Point(275, 153)
         Me.TextBox20.MaxLength = 50
         Me.TextBox20.Name = "TextBox20"
         Me.TextBox20.Size = New System.Drawing.Size(184, 23)
@@ -1167,7 +1168,7 @@ Partial Class SeguimientoLiviano
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(275, 134)
+        Me.Label4.Location = New System.Drawing.Point(275, 135)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(40, 15)
         Me.Label4.TabIndex = 118
@@ -1178,7 +1179,7 @@ Partial Class SeguimientoLiviano
         Me.DateTimePicker3.CalendarMonthBackground = System.Drawing.SystemColors.GrayText
         Me.DateTimePicker3.Checked = False
         Me.DateTimePicker3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker3.Location = New System.Drawing.Point(6, 152)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(6, 153)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(232, 23)
         Me.DateTimePicker3.TabIndex = 117
@@ -1188,7 +1189,7 @@ Partial Class SeguimientoLiviano
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(6, 134)
+        Me.Label5.Location = New System.Drawing.Point(6, 135)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(44, 15)
         Me.Label5.TabIndex = 116
@@ -1629,10 +1630,10 @@ Partial Class SeguimientoLiviano
     Friend WithEvents BotonBuscar3 As Button
     Friend WithEvents Pagina7 As TabPage
     Friend WithEvents DataGridView4 As DataGridView
-    Friend WithEvents ColumnaChofer3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaChofer3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
 End Class
