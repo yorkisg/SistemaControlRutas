@@ -181,6 +181,12 @@
     <Compile Include="Consultas\ListadoGeneralRutas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultas\ReporteConsumible.Designer.vb">
+      <DependentUpon>ReporteConsumible.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ReporteConsumible.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Consultas\ReporteInfraccion.Designer.vb">
       <DependentUpon>ReporteInfraccion.vb</DependentUpon>
     </Compile>
@@ -370,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ListadoGeneralRutas.resx">
       <DependentUpon>ListadoGeneralRutas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ReporteConsumible.resx">
+      <DependentUpon>ReporteConsumible.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ReporteInfraccion.resx">
       <DependentUpon>ReporteInfraccion.vb</DependentUpon>

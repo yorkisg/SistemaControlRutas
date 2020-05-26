@@ -301,6 +301,12 @@ Public Class MenuPrincipal
 
     End Sub
 
+    Private Sub MenuListadoConsumible_Click(sender As Object, e As EventArgs) Handles MenuListadoConsumible.Click
+        'Formulario ListadoReporteInfraccion
+
+        ReporteConsumible.ShowDialog()
+
+    End Sub
 
 End Class
 

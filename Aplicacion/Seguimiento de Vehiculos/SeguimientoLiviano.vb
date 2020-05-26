@@ -510,20 +510,20 @@ Public Class SeguimientoLiviano
 
     End Sub
 
-    Public Sub CalcularConsumo()
+    Private Sub CalcularConsumo()
         'Este metodo permite calcular el consumo por vehiculo.
 
         Dim Kilometraje As Double
-        Dim Consumo As Double
+        Dim ConsumoTotal As Double
         Dim Tasa As Double
 
         Tasa = TextBox25.Text
 
         Kilometraje = (TextBox28.Text - TextBox29.Text)
 
-        Consumo = ((Kilometraje * Tasa) / 100)
+        ConsumoTotal = ((Kilometraje * Tasa) / 100)
 
-        TextBox30.Text = Consumo
+        TextBox30.Text = ConsumoTotal
 
     End Sub
 

@@ -369,12 +369,12 @@ Module ModuloConsulta
     Public Sub CargarListadoInfraccion()
         'Metodo para cargar el datagridview.
 
-        Dim sql As String = "SELECT COUNT(idregistroinfraccion) AS 'Conteo', vehiculo AS 'Vehiculo' " _
+        Dim sql As String = "SELECT COUNT(idregistroinfraccion) AS 'Conteo', idvehiculo AS 'Vehiculo' " _
                             & " FROM registroinfraccion, vehiculo " _
                             & " WHERE registroinfraccion.vehiculo = vehiculo.idvehiculo " _
                             & " AND MONTH(fecha) = MONTH(CURDATE()) " _
                             & " AND clasificacionvehiculo = '" & ReporteInfraccion.TextBox3.Text & "' " _
-                            & " GROUP BY vehiculo " _
+                            & " GROUP BY idvehiculo " _
                             & " ORDER BY COUNT(idregistroinfraccion) DESC " _
                             & " LIMIT 8 "
 
@@ -401,6 +401,78 @@ Module ModuloConsulta
     End Sub
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''REPORTE CONSUMIBLES ''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    Public Sub CargarGridListadoReporteConsumible()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+        'ListadoReporteInfraccion
+
+        Dim Command As New MySqlCommand("SELECT vehiculo, nombrepersonal, cantidadconsumida, (kilometrajeactual-kilometrajeanterior) AS 'distancia', consumototal, nombregrupo " _
+                       & " FROM registroconsumo, personal, grupo, vehiculo " _
+                       & " WHERE registroconsumo.personal = personal.idpersonal " _
+                       & " AND registroconsumo.vehiculo = vehiculo.idvehiculo " _
+                       & " AND vehiculo.grupo = grupo.idgrupo " _
+                       & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                       & " ORDER BY cantidadconsumida DESC " _
+                       & " LIMIT 10 ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "Date" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ReporteConsumible.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ReporteConsumible.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ReporteConsumible.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ReporteConsumible.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ReporteConsumible.DataGridView.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarListadoConsumible()
+        'Metodo para cargar el datagridview.
+
+        Dim sql As String = "SELECT nombrepersonal, idvehiculo AS 'Vehiculo', SUM(cantidadconsumida) AS 'Conteo' " _
+                            & " FROM registroconsumo, vehiculo, personal " _
+                            & " WHERE registroconsumo.vehiculo = vehiculo.idvehiculo " _
+                            & " AND registroconsumo.personal = personal.idpersonal " _
+                            & " AND MONTH(fecha) = MONTH(CURDATE()) " _
+                            & " GROUP BY idvehiculo " _
+                            & " ORDER BY SUM(cantidadconsumida) DESC " _
+                            & " LIMIT 8 "
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview
+        Adaptador.Fill(DataSet, "reportes2")
+        Tabla = DataSet.Tables("reportes2")
+        ReporteConsumible.DataGridView1.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ReporteConsumible.DataGridView1
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ReporteConsumible.DataGridView1.ClearSelection()
+
+    End Sub
+
+
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CONSULTA INCIDENCIAS''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
@@ -408,10 +480,10 @@ Module ModuloConsulta
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
         'ConsultaInfraccion
 
-        Dim Command As New MySqlCommand("SELECT idregistroincidencia, vehiculo, nombrepersonal, descripcion, tipo, fecha, hora " _
+        Dim Command As New MySqlCommand("Select idregistroincidencia, vehiculo, nombrepersonal, descripcion, tipo, fecha, hora " _
                            & " FROM registroincidencia, personal " _
                            & " WHERE registroincidencia.personal = personal.idpersonal " _
-                           & " AND vehiculo = '" & ConsultaIncidencia.TextBox1.Text & "' " _
+                           & " And vehiculo = '" & ConsultaIncidencia.TextBox1.Text & "' " _
                            & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                            & " ORDER BY idregistroincidencia DESC, fecha DESC, hora DESC ", Conexion)
 

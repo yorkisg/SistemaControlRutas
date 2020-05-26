@@ -81,6 +81,14 @@ Partial Class SeguimientoLiviano
         Me.ColumnaHora2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pagina7 = New System.Windows.Forms.TabPage()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaChofer3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaDistancia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4 = New System.Windows.Forms.TabControl()
         Me.Pagina1 = New System.Windows.Forms.TabPage()
         Me.Arbol = New System.Windows.Forms.TreeView()
@@ -163,14 +171,6 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaDistancia = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -296,6 +296,9 @@ Partial Class SeguimientoLiviano
         Me.ImagensList.Images.SetKeyName(5, "Consumo1.png")
         Me.ImagensList.Images.SetKeyName(6, "Consumo2.png")
         Me.ImagensList.Images.SetKeyName(7, "Consumible3.png")
+        Me.ImagensList.Images.SetKeyName(8, "Consumo1.png")
+        Me.ImagensList.Images.SetKeyName(9, "Consumo3.png")
+        Me.ImagensList.Images.SetKeyName(10, "Consumo4.png")
         '
         'DataGridView1
         '
@@ -669,6 +672,72 @@ Partial Class SeguimientoLiviano
         Me.DataGridView4.Size = New System.Drawing.Size(677, 277)
         Me.DataGridView4.TabIndex = 65
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idregistroconsumo"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "ID REGISTRO"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "vehiculo"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "VEHICULO"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Visible = False
+        '
+        'ColumnaChofer3
+        '
+        Me.ColumnaChofer3.DataPropertyName = "nombrepersonal"
+        Me.ColumnaChofer3.HeaderText = "CHOFER"
+        Me.ColumnaChofer3.Name = "ColumnaChofer3"
+        Me.ColumnaChofer3.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidadconsumida"
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle13
+        Me.DataGridViewTextBoxColumn4.HeaderText = "CANTIDAD EQUIPADA (LITROS)"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'ColumnaDistancia
+        '
+        Me.ColumnaDistancia.DataPropertyName = "distancia"
+        Me.ColumnaDistancia.HeaderText = "RECORRIDO (KM)"
+        Me.ColumnaDistancia.Name = "ColumnaDistancia"
+        Me.ColumnaDistancia.ReadOnly = True
+        '
+        'ColumnaTotal
+        '
+        Me.ColumnaTotal.DataPropertyName = "consumototal"
+        Me.ColumnaTotal.HeaderText = "CONSUMO (LITROS)"
+        Me.ColumnaTotal.Name = "ColumnaTotal"
+        Me.ColumnaTotal.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "fecha"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "FECHA"
+        Me.DataGridViewTextBoxColumn6.MinimumWidth = 75
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 75
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "hora"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "HORA"
+        Me.DataGridViewTextBoxColumn7.MinimumWidth = 75
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.ReadOnly = True
+        Me.DataGridViewTextBoxColumn7.Width = 75
+        '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.Pagina1)
@@ -1038,7 +1107,7 @@ Partial Class SeguimientoLiviano
         Me.Pagina6.Controls.Add(Me.Label5)
         Me.Pagina6.Controls.Add(Me.TextBox21)
         Me.Pagina6.Controls.Add(Me.Label6)
-        Me.Pagina6.ImageIndex = 6
+        Me.Pagina6.ImageIndex = 10
         Me.Pagina6.Location = New System.Drawing.Point(4, 24)
         Me.Pagina6.Name = "Pagina6"
         Me.Pagina6.Size = New System.Drawing.Size(468, 229)
@@ -1486,72 +1555,6 @@ Partial Class SeguimientoLiviano
         '
         'Timer1
         '
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idregistroconsumo"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID REGISTRO"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "vehiculo"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "VEHICULO"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Visible = False
-        '
-        'ColumnaChofer3
-        '
-        Me.ColumnaChofer3.DataPropertyName = "nombrepersonal"
-        Me.ColumnaChofer3.HeaderText = "CHOFER"
-        Me.ColumnaChofer3.Name = "ColumnaChofer3"
-        Me.ColumnaChofer3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidadconsumida"
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle13
-        Me.DataGridViewTextBoxColumn4.HeaderText = "CANTIDAD EQUIPADA (LITROS)"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'ColumnaDistancia
-        '
-        Me.ColumnaDistancia.DataPropertyName = "distancia"
-        Me.ColumnaDistancia.HeaderText = "RECORRIDO (KM)"
-        Me.ColumnaDistancia.Name = "ColumnaDistancia"
-        Me.ColumnaDistancia.ReadOnly = True
-        '
-        'ColumnaTotal
-        '
-        Me.ColumnaTotal.DataPropertyName = "consumototal"
-        Me.ColumnaTotal.HeaderText = "CONSUMO (LITROS)"
-        Me.ColumnaTotal.Name = "ColumnaTotal"
-        Me.ColumnaTotal.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "fecha"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "FECHA"
-        Me.DataGridViewTextBoxColumn6.MinimumWidth = 75
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 75
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "hora"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "HORA"
-        Me.DataGridViewTextBoxColumn7.MinimumWidth = 75
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 75
         '
         'SeguimientoLiviano
         '
