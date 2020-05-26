@@ -196,6 +196,7 @@ Public Class ReporteInfraccion
             If Velocidad >= "130" Then
 
                 DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Muerte
+                e.CellStyle.BackColor = Color.LightPink
 
             End If
 

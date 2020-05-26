@@ -255,4 +255,5 @@ Public Class Listadositiocarga
     End Sub
 
 
+
 End Class

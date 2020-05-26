@@ -46,7 +46,7 @@ Module ModuloSeguimientoLiviano
     Public Sub CargarGridRutaLiviano()
         'Metodo que genera la carga de datos en el DataGridview1 
 
-        Dim sql As String = "SELECT idvehiculo, nombretipo, condicionvehiculo FROM vehiculo, subflota, grupo, tipovehiculo " _
+        Dim sql As String = "SELECT idvehiculo, nombretipo, condicionvehiculo, tasaconsumo FROM vehiculo, subflota, grupo, tipovehiculo " _
                        & " WHERE vehiculo.grupo = grupo.idgrupo " _
                        & " AND grupo.subflota = subflota.idsubflota " _
                        & " And vehiculo.tipovehiculo = tipovehiculo.idtipo " _
@@ -152,7 +152,7 @@ Module ModuloSeguimientoLiviano
     Public Sub CargarGridHistorialConsumoLiviano()
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausula LIKE y LIMIT
 
-        Dim sql As String = "SELECT idregistroconsumo, vehiculo, nombrepersonal, cantidad, fecha, hora " _
+        Dim sql As String = "SELECT idregistroconsumo, vehiculo, nombrepersonal, cantidadconsumida, (kilometrajeactual-kilometrajeanterior) AS 'distancia', consumototal, fecha, hora " _
                        & " FROM registroconsumo, personal " _
                        & " WHERE registroconsumo.personal = personal.idpersonal " _
                        & " AND vehiculo = '" & SeguimientoLiviano.TextBox21.Text & "' " _

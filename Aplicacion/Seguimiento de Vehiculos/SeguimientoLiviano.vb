@@ -194,6 +194,8 @@ Public Class SeguimientoLiviano
                 TextBox3.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
                 TextBox21.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
 
+                TextBox25.Text = DataGridView1.Item("ColumnaTasa", DataGridView1.SelectedRows(0).Index).Value
+
                 LimpiarComponentesInfraccionLiviano()
                 LimpiarComponentesIncidenciaLiviano()
                 LimpiarComponentesConsumoLiviano()
@@ -481,7 +483,12 @@ Public Class SeguimientoLiviano
             'Se valida que no haya algun campo vacio
             If ValidarComponentesConsumoLiviano() = True Then
 
-                Dim db As New MySqlCommand("INSERT INTO registroconsumo (idregistroconsumo, vehiculo, personal, cantidad, fecha, hora) VALUES ('" & TextBox23.Text & "', '" & TextBox21.Text & "', '" & TextBox26.Text & "', '" & TextBox22.Text & "', '" & fecha & "', '" & TextBox20.Text & "')", Conexion)
+                'Calculamos el consumo
+                CalcularConsumo()
+
+                Dim db As New MySqlCommand("INSERT INTO registroconsumo (idregistroconsumo, vehiculo, personal, cantidadconsumida, kilometrajeactual, kilometrajeanterior, consumototal, fecha, hora) " _
+                & "VALUES ('" & TextBox23.Text & "', '" & TextBox21.Text & "', '" & TextBox26.Text & "', '" & TextBox22.Text & "', '" & TextBox28.Text & "', '" & TextBox29.Text & "', '" & TextBox30.Text & "', '" & fecha & "', '" & TextBox20.Text & "')", Conexion)
+
                 db.ExecuteNonQuery()
                 MsgBox("Consumo registrado con Exito.", MsgBoxStyle.Information, "Exito.")
 
@@ -499,6 +506,24 @@ Public Class SeguimientoLiviano
             MsgBox("Debe verificar los datos del consumo.", MsgBoxStyle.Exclamation, "Error.")
 
         End Try
+
+
+    End Sub
+
+    Public Sub CalcularConsumo()
+        'Este metodo permite calcular el consumo por vehiculo.
+
+        Dim Kilometraje As Double
+        Dim Consumo As Double
+        Dim Tasa As Double
+
+        Tasa = TextBox25.Text
+
+        Kilometraje = (TextBox28.Text - TextBox29.Text)
+
+        Consumo = ((Kilometraje * Tasa) / 100)
+
+        TextBox30.Text = Consumo
 
     End Sub
 
