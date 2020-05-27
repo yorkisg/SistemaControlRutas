@@ -13,10 +13,6 @@
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
 
-        'Seleccionamos "Carga" al inicio del formulario
-        RadioButton1.Checked = True
-
-
     End Sub
 
     Private Sub ConsultaIncidencia_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -138,21 +134,6 @@
         Contador.Text = ""
 
     End Sub
-
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-        'Enviamos el texto seleccionado al textbox
-
-        TextBox2.Text = RadioButton1.Text
-
-    End Sub
-
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
-        'Enviamos el texto seleccionado al textbox
-
-        TextBox2.Text = RadioButton2.Text
-
-    End Sub
-
 
 
 End Class

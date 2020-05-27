@@ -99,6 +99,18 @@ Public Class ListadoPersonal
 
             End If
 
+            If ConsultaConsumible.Visible = True Then
+                'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
+
+                ConsultaConsumible.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                'Se cierra el formulario ListadoChofer
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            End If
+
             If MaestroInfraccion.Visible = True Then
                 'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
 
@@ -284,7 +296,19 @@ Public Class ListadoPersonal
             If ConsultaGeneralRuta.Visible = True Then
                 'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
 
-                ConsultaGeneralRuta.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                ConsultaConsumible.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                'Se cierra el formulario ListadoChofer
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            End If
+
+            If ConsultaConsumible.Visible = True Then
+                'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
+
+                ConsultaConsumible.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()

@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -151,6 +151,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaConsumible.Designer.vb">
+      <DependentUpon>ConsultaConsumible.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaConsumible.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Consultas\ConsultaGeneralRuta.Designer.vb">
       <DependentUpon>ConsultaGeneralRuta.vb</DependentUpon>
     </Compile>
@@ -361,6 +367,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Consultas\ConsultaConsumible.resx">
+      <DependentUpon>ConsultaConsumible.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaGeneralRuta.resx">
       <DependentUpon>ConsultaGeneralRuta.vb</DependentUpon>
       <SubType>Designer</SubType>

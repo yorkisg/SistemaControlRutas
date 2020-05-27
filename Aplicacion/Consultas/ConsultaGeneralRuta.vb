@@ -61,7 +61,6 @@ Public Class ConsultaGeneralRuta
                 ElseIf TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" And TextBox4.Text = "" And TextBox5.Text = "" Then
 
                     CargarGridConsultaRuta()
-                    'MsgBox("Debe seleccionar un criterio para la consulta.", MsgBoxStyle.Exclamation, "Error.")
 
                 End If
 

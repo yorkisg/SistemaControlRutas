@@ -246,6 +246,14 @@ Public Class MenuPrincipal
 
     End Sub
 
+    Private Sub MenuConsultaConsumos_Click(sender As Object, e As EventArgs) Handles MenuConsultaConsumos.Click
+        'Formulario ListadoReporteInfraccion
+
+        ConsultaConsumible.ShowDialog()
+
+
+    End Sub
+
     Private Sub MenuGuiaTelefonica_Click(sender As Object, e As EventArgs) Handles MenuGuiaTelefonica.Click
         'Formulario GuiaTelefonica
 
@@ -307,6 +315,7 @@ Public Class MenuPrincipal
         ReporteConsumible.ShowDialog()
 
     End Sub
+
 
 End Class
 

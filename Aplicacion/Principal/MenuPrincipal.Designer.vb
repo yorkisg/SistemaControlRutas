@@ -41,11 +41,12 @@ Partial Class MenuPrincipal
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuConsultas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultarChofer = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuConsultarInfracciones = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuConsultarIncidencias = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuConsultaConsumos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuListadoDeInfractores = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuListadoConsumible = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuConsultarIncidencias = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuListadoCompelto = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultaGrupoProducto = New System.Windows.Forms.ToolStripMenuItem()
@@ -173,7 +174,7 @@ Partial Class MenuPrincipal
         'MenuConsultas
         '
         Me.MenuConsultas.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.MenuConsultarInfracciones, Me.MenuConsultarIncidencias, Me.ToolStripSeparator5, Me.MenuListadoDeInfractores, Me.MenuListadoConsumible, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
+        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.MenuConsultarInfracciones, Me.MenuConsultarIncidencias, Me.MenuConsultaConsumos, Me.ToolStripSeparator5, Me.MenuListadoDeInfractores, Me.MenuListadoConsumible, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
         Me.MenuConsultas.Image = CType(resources.GetObject("MenuConsultas.Image"), System.Drawing.Image)
         Me.MenuConsultas.Name = "MenuConsultas"
         Me.MenuConsultas.Size = New System.Drawing.Size(92, 21)
@@ -186,17 +187,31 @@ Partial Class MenuPrincipal
         Me.MenuConsultarChofer.Size = New System.Drawing.Size(285, 22)
         Me.MenuConsultarChofer.Text = "Consulta General"
         '
-        'ToolStripSeparator5
-        '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(282, 6)
-        '
         'MenuConsultarInfracciones
         '
         Me.MenuConsultarInfracciones.Image = CType(resources.GetObject("MenuConsultarInfracciones.Image"), System.Drawing.Image)
         Me.MenuConsultarInfracciones.Name = "MenuConsultarInfracciones"
         Me.MenuConsultarInfracciones.Size = New System.Drawing.Size(285, 22)
         Me.MenuConsultarInfracciones.Text = "Consultar Infracciones de Velocidad"
+        '
+        'MenuConsultarIncidencias
+        '
+        Me.MenuConsultarIncidencias.Image = CType(resources.GetObject("MenuConsultarIncidencias.Image"), System.Drawing.Image)
+        Me.MenuConsultarIncidencias.Name = "MenuConsultarIncidencias"
+        Me.MenuConsultarIncidencias.Size = New System.Drawing.Size(285, 22)
+        Me.MenuConsultarIncidencias.Text = "Consultar Incidencias"
+        '
+        'MenuConsultaConsumos
+        '
+        Me.MenuConsultaConsumos.Image = CType(resources.GetObject("MenuConsultaConsumos.Image"), System.Drawing.Image)
+        Me.MenuConsultaConsumos.Name = "MenuConsultaConsumos"
+        Me.MenuConsultaConsumos.Size = New System.Drawing.Size(285, 22)
+        Me.MenuConsultaConsumos.Text = "Consultar Consumibles"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(282, 6)
         '
         'MenuListadoDeInfractores
         '
@@ -211,13 +226,6 @@ Partial Class MenuPrincipal
         Me.MenuListadoConsumible.Name = "MenuListadoConsumible"
         Me.MenuListadoConsumible.Size = New System.Drawing.Size(285, 22)
         Me.MenuListadoConsumible.Text = "Reporte Consumibles"
-        '
-        'MenuConsultarIncidencias
-        '
-        Me.MenuConsultarIncidencias.Image = CType(resources.GetObject("MenuConsultarIncidencias.Image"), System.Drawing.Image)
-        Me.MenuConsultarIncidencias.Name = "MenuConsultarIncidencias"
-        Me.MenuConsultarIncidencias.Size = New System.Drawing.Size(285, 22)
-        Me.MenuConsultarIncidencias.Text = "Consultar Incidencias"
         '
         'ToolStripSeparator4
         '
@@ -453,4 +461,5 @@ Partial Class MenuPrincipal
     Friend WithEvents MenuConsultarIncidencias As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents MenuListadoConsumible As ToolStripMenuItem
+    Friend WithEvents MenuConsultaConsumos As ToolStripMenuItem
 End Class

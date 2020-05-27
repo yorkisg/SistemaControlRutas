@@ -40,13 +40,9 @@ Partial Class ConsultaInfraccion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.BotonBuscar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
         Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaVehiculo = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -72,7 +68,7 @@ Partial Class ConsultaInfraccion
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator5})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(984, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1045, 25)
         Me.ToolStrip1.TabIndex = 75
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -130,21 +126,15 @@ Partial Class ConsultaInfraccion
         '
         'GroupBox1
         '
-        Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.BotonBuscar)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 28)
         Me.GroupBox1.Name = "GroupBox1"
@@ -201,40 +191,6 @@ Partial Class ConsultaInfraccion
         Me.Label5.TabIndex = 77
         Me.Label5.Text = "HASTA"
         '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadioButton2.Location = New System.Drawing.Point(6, 197)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(70, 19)
-        Me.RadioButton2.TabIndex = 74
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "LIVIANO"
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RadioButton1.Location = New System.Drawing.Point(6, 172)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(64, 19)
-        Me.RadioButton1.TabIndex = 73
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "CARGA"
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(6, 154)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(109, 15)
-        Me.Label3.TabIndex = 72
-        Me.Label3.Text = "TIPO DE VEHÍCULO"
-        '
         'BotonBuscar
         '
         Me.BotonBuscar.Image = CType(resources.GetObject("BotonBuscar.Image"), System.Drawing.Image)
@@ -262,14 +218,6 @@ Partial Class ConsultaInfraccion
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(240, 22)
         Me.TextBox1.TabIndex = 55
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(132, 192)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(114, 23)
-        Me.TextBox2.TabIndex = 80
-        Me.TextBox2.Visible = False
         '
         'DataGridView
         '
@@ -299,7 +247,7 @@ Partial Class ConsultaInfraccion
         Me.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(662, 534)
+        Me.DataGridView.Size = New System.Drawing.Size(723, 534)
         Me.DataGridView.TabIndex = 80
         '
         'ColumnaID
@@ -378,7 +326,7 @@ Partial Class ConsultaInfraccion
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.Contador})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 587)
         Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(984, 25)
+        Me.ToolStrip2.Size = New System.Drawing.Size(1045, 25)
         Me.ToolStrip2.TabIndex = 81
         Me.ToolStrip2.Text = "ToolStrip2"
         '
@@ -403,7 +351,7 @@ Partial Class ConsultaInfraccion
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupBox2.Location = New System.Drawing.Point(304, 28)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(668, 556)
+        Me.GroupBox2.Size = New System.Drawing.Size(729, 556)
         Me.GroupBox2.TabIndex = 82
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "HISTORIAL DE INFRACCIONES"
@@ -413,7 +361,7 @@ Partial Class ConsultaInfraccion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(984, 612)
+        Me.ClientSize = New System.Drawing.Size(1045, 612)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.GroupBox1)
@@ -454,15 +402,11 @@ Partial Class ConsultaInfraccion
     Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents ColumnaHora As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaFecha As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn

@@ -1,7 +1,7 @@
 ﻿
-Public Class ConsultaInfraccion
+Public Class ConsultaConsumible
 
-    Private Sub ConsultaInfraccion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ConsultaConsumible_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Se llama el metodo para alternar colores entre filas
@@ -16,7 +16,7 @@ Public Class ConsultaInfraccion
 
     End Sub
 
-    Private Sub ConsultaInfraccion_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ConsultaConsumible_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         Dispose()
@@ -33,11 +33,15 @@ Public Class ConsultaInfraccion
 
                 If TextBox1.Text <> "" Then
 
-                    CargarGridConsultaVehiculoInfraccion()
+                    CargarGridConsultaChoferConsumible()
 
-                ElseIf TextBox1.Text = "" Then
+                ElseIf TextBox3.Text <> "" Then
 
-                    CargarGridConsultaInfraccion()
+                    CargarGridConsultaVehiculoConsumible()
+
+                ElseIf TextBox1.Text = "" And TextBox3.Text = "" Then
+
+                    CargarGridConsultaConsumible()
 
                 End If
 
@@ -53,13 +57,6 @@ Public Class ConsultaInfraccion
         Catch ex As Exception
 
         End Try
-        
-    End Sub
-
-    Private Sub BotonBuscar_Click(sender As Object, e As EventArgs) Handles BotonBuscar.Click
-        'Llamada al formulario ListadoVehiculo
-
-        ListadoVehiculo.ShowDialog()
 
     End Sub
 
@@ -102,6 +99,20 @@ Public Class ConsultaInfraccion
 
     End Sub
 
+    Private Sub BotonBuscar1_Click(sender As Object, e As EventArgs) Handles BotonBuscar1.Click
+        'Llamada al formulario ListadoChofer
+
+        ListadoPersonal.ShowDialog()
+
+    End Sub
+
+    Private Sub BotonBuscar2_Click(sender As Object, e As EventArgs) Handles BotonBuscar2.Click
+        'Llamada al formulario ListadoVehiculo
+
+        ListadoVehiculo.ShowDialog()
+
+    End Sub
+
     Private Sub BotonSalir_Click(sender As Object, e As EventArgs) Handles BotonSalir.Click
         'Boton salir
 
@@ -131,38 +142,9 @@ Public Class ConsultaInfraccion
 
         'Limpiamos los demas componentes
         TextBox1.Text = ""
-        BotonBuscar.Enabled = True
+        TextBox3.Text = ""
+        BotonBuscar1.Enabled = True
         Contador.Text = ""
-
-    End Sub
-
-    Private Sub DataGridView_CellErrorTextNeeded(ByVal sender As Object, ByVal e As DataGridViewCellErrorTextNeededEventArgs) Handles DataGridView.CellErrorTextNeeded
-        'Evento CellErrorTextNeeded: se coloca un icono de advertencia o 
-        'error en la celda seleccionada si cumple o no la condicion previa.
-
-        Try
-
-            Dim Velocidad As Double
-
-            If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaVelocidad") Then
-
-                Velocidad = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
-
-                If Velocidad >= "130" Then
-
-                    e.ErrorText = "Exceso de Velocidad Crítico"
-
-                    DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Style.BackColor = Color.MistyRose
-
-                End If
-
-            End If
-
-        Catch ex As Exception
-
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
-
-        End Try
 
     End Sub
 

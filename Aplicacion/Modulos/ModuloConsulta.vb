@@ -305,7 +305,6 @@ Module ModuloConsulta
                            & " FROM registroinfraccion, personal, vehiculo " _
                            & " WHERE registroinfraccion.personal = personal.idpersonal " _
                            & " AND registroinfraccion.vehiculo = vehiculo.idvehiculo " _
-                           & " AND clasificacionvehiculo = '" & ConsultaInfraccion.TextBox2.Text & "' " _
                            & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                            & " ORDER BY idregistroinfraccion DESC, fecha DESC, hora DESC ", Conexion)
 
@@ -328,6 +327,168 @@ Module ModuloConsulta
         ConsultaInfraccion.DataGridView.ClearSelection()
 
     End Sub
+
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''CONSULTA INCIDENCIAS''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    Public Sub CargarGridConsultaVehiculoIncidencia()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+        'ConsultaInfraccion
+
+        Dim Command As New MySqlCommand("Select idregistroincidencia, vehiculo, nombrepersonal, descripcion, tipo, fecha, hora " _
+                           & " FROM registroincidencia, personal " _
+                           & " WHERE registroincidencia.personal = personal.idpersonal " _
+                           & " And vehiculo = '" & ConsultaIncidencia.TextBox1.Text & "' " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY idregistroincidencia DESC, fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaIncidencia.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaIncidencia.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaIncidencia.DataGridView.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridConsultaIncidencia()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+        'ConsultaInfraccion
+
+        Dim Command As New MySqlCommand("SELECT idregistroincidencia, vehiculo, nombrepersonal, descripcion, tipo, fecha, hora " _
+                           & " FROM registroincidencia, personal, vehiculo " _
+                           & " WHERE registroincidencia.personal = personal.idpersonal " _
+                           & " AND registroincidencia.vehiculo = vehiculo.idvehiculo " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY idregistroincidencia DESC, fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaIncidencia.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaIncidencia.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaIncidencia.DataGridView.ClearSelection()
+
+    End Sub
+
+
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''CONSULTA CONSUMIBLES''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    Public Sub CargarGridConsultaChoferConsumible()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+
+        Dim Command As New MySqlCommand("SELECT vehiculo, nombrepersonal, cantidadconsumida, consumototal, (cantidadconsumida-consumototal) AS 'diferencia', (kilometrajeactual-kilometrajeanterior) AS 'distancia', fecha, hora " _
+                           & " FROM registroconsumo, personal " _
+                           & " WHERE registroconsumo.personal = personal.idpersonal " _
+                           & " AND nombrepersonal = '" & ConsultaConsumible.TextBox1.Text & "' " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaConsumible.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaConsumible.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaConsumible.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaConsumible.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaConsumible.DataGridView.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridConsultaVehiculoConsumible()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+
+        Dim Command As New MySqlCommand("SELECT vehiculo, nombrepersonal, cantidadconsumida, consumototal, (cantidadconsumida-consumototal) AS 'diferencia', (kilometrajeactual-kilometrajeanterior) AS 'distancia', fecha, hora " _
+                           & " FROM registroconsumo, personal " _
+                           & " WHERE registroconsumo.personal = personal.idpersonal " _
+                           & " AND vehiculo = '" & ConsultaConsumible.TextBox3.Text & "' " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaConsumible.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaConsumible.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaConsumible.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaConsumible.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaConsumible.DataGridView.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridConsultaConsumible()
+        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
+        'ConsultaInfraccion
+
+        Dim Command As New MySqlCommand("SELECT vehiculo, nombrepersonal, cantidadconsumida, consumototal, (cantidadconsumida-consumototal) AS 'diferencia', (kilometrajeactual-kilometrajeanterior) AS 'distancia', fecha, hora " _
+                           & " FROM registroconsumo, personal " _
+                           & " WHERE registroconsumo.personal = personal.idpersonal " _
+                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                           & " ORDER BY fecha DESC, hora DESC ", Conexion)
+
+        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker2.Value
+
+        'Llenado del datagridview
+        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Tabla As New DataTable
+        adaptador.Fill(Tabla)
+        ConsultaIncidencia.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ConsultaIncidencia.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        ConsultaIncidencia.DataGridView.ClearSelection()
+
+    End Sub
+
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''REPORTE INFRACCIONES DE VELOCIDAD ''''''''''''''''''''''''''''
@@ -474,73 +635,6 @@ Module ModuloConsulta
 
     End Sub
 
-
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''CONSULTA INCIDENCIAS''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-
-    Public Sub CargarGridConsultaVehiculoIncidencia()
-        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
-        'ConsultaInfraccion
-
-        Dim Command As New MySqlCommand("Select idregistroincidencia, vehiculo, nombrepersonal, descripcion, tipo, fecha, hora " _
-                           & " FROM registroincidencia, personal " _
-                           & " WHERE registroincidencia.personal = personal.idpersonal " _
-                           & " And vehiculo = '" & ConsultaIncidencia.TextBox1.Text & "' " _
-                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
-                           & " ORDER BY idregistroincidencia DESC, fecha DESC, hora DESC ", Conexion)
-
-        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker2.Value
-
-        'Llenado del datagridview
-        Dim adaptador As New MySqlDataAdapter(Command)
-        Dim Tabla As New DataTable
-        adaptador.Fill(Tabla)
-        ConsultaIncidencia.DataGridView.DataSource = Tabla
-
-        'Parametros para editar apariencia del datagridview.
-        With ConsultaIncidencia.DataGridView
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-        ConsultaIncidencia.DataGridView.ClearSelection()
-
-    End Sub
-
-    Public Sub CargarGridConsultaIncidencia()
-        'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
-        'ConsultaInfraccion
-
-        Dim Command As New MySqlCommand("SELECT idregistroincidencia, vehiculo, nombrepersonal, descripcion, tipo, fecha, hora " _
-                           & " FROM registroincidencia, personal, vehiculo " _
-                           & " WHERE registroincidencia.personal = personal.idpersonal " _
-                           & " AND registroincidencia.vehiculo = vehiculo.idvehiculo " _
-                           & " AND clasificacion = '" & ConsultaIncidencia.TextBox2.Text & "' " _
-                           & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
-                           & " ORDER BY idregistroincidencia DESC, fecha DESC, hora DESC ", Conexion)
-
-        'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker2.Value
-
-        'Llenado del datagridview
-        Dim adaptador As New MySqlDataAdapter(Command)
-        Dim Tabla As New DataTable
-        adaptador.Fill(Tabla)
-        ConsultaIncidencia.DataGridView.DataSource = Tabla
-
-        'Parametros para editar apariencia del datagridview.
-        With ConsultaIncidencia.DataGridView
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-        ConsultaIncidencia.DataGridView.ClearSelection()
-
-    End Sub
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''LISTADO GENERAL DE RUTAS''''''''''''''''''''''''''''''''''''''
