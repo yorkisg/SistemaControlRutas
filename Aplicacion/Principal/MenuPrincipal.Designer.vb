@@ -173,7 +173,7 @@ Partial Class MenuPrincipal
         'MenuConsultas
         '
         Me.MenuConsultas.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.ToolStripSeparator5, Me.MenuConsultarInfracciones, Me.MenuListadoDeInfractores, Me.MenuListadoConsumible, Me.MenuConsultarIncidencias, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
+        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.MenuConsultarInfracciones, Me.MenuConsultarIncidencias, Me.ToolStripSeparator5, Me.MenuListadoDeInfractores, Me.MenuListadoConsumible, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
         Me.MenuConsultas.Image = CType(resources.GetObject("MenuConsultas.Image"), System.Drawing.Image)
         Me.MenuConsultas.Name = "MenuConsultas"
         Me.MenuConsultas.Size = New System.Drawing.Size(92, 21)

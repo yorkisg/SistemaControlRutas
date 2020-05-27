@@ -135,12 +135,12 @@
   <data name="BotonLimpiar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZMLboMwEERpz5FKvUNQTsgFKoQ4DrcB8RP/
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZMLboMwEERpz5FKvUNQrscZKoQ4DrcB8RP/
         P8nG43hdkpDWQRrZAs9jdmEt63YdhI5Cp3/0LZ5/Ks/dcuz7vgyC4LyuK+1pHEdyXfdHuHYhJ5jbtqWu
         67SqqqKiKCiOYwmNoog8z3uCfCA2DgzDQNM0yRVqmobKsqQkSSRApCS8xPd9hsgyNABmFgAw1HVNaZo+
         laV6Be8vYFkWfRB71I2SUEqWZTJJGIbyzC7gsXlbCJKgH3memwMAZAjKQU8AMk7AieZ5lr0BBHobgBTc
         XPTFCAATCwkgmN8GsHm7GiXgBm6T8H4X4DjO5dUcPN7Hb6/+Az1Qtvg83V/DxBA1M42aXg34EjvbYJx5
-        3DH68FhXOUaG2kWEAtEAAAAASUVORK5CYII=
+        3DH68FhXLm+GyxFpEkoAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BotonExportar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -224,13 +224,19 @@
   <metadata name="ColumnaVehiculo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="ColumnaImagen.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ColumnaCantidadSurtida.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ColumnaVelocidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ColumnaPromedio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="ColumnaPromedio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ColumnaDiferencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ColumnaVelocidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="ColumnaFlota.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

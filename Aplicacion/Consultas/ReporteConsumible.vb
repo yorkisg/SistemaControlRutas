@@ -16,12 +16,10 @@ Public Class ReporteConsumible
         EnableDoubleBuffered(DataGridView)
         EnableDoubleBuffered(DataGridView1)
 
-
         'Seleccionamos "Carga" al inicio del formulario
         RadioButton2.Checked = True
 
     End Sub
-
 
     Private Sub ListadoReporteInfraccion_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
@@ -35,6 +33,7 @@ Public Class ReporteConsumible
 
         Try
 
+
             Dim FechaDesde As String
             Dim FechaHasta As String
 
@@ -44,7 +43,7 @@ Public Class ReporteConsumible
                 CargarGridListadoReporteConsumible()
                 CargarListadoConsumible()
 
-                'CargarImagenesReporteVelocidad()
+                CargarImagenesReporteConsumo()
 
                 'Pasamos la placa seleccionada a la variable
                 FechaDesde = TextBox1.Text & " - "
@@ -178,6 +177,27 @@ Public Class ReporteConsumible
             If TipoFlota = "CONCHA DE ARROZ" Or TipoFlota = "LECHE CRUDA" Or TipoFlota = "DESECHOS DE GALLETAS" Or TipoFlota = "FORD" Or TipoFlota = "ALIMEX" Or TipoFlota = "ZULIANA DE CAMIONES" Then
 
                 e.CellStyle.ForeColor = Color.BlueViolet
+
+            End If
+
+        End If
+
+        Dim Consumible As Double
+
+        If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaCantidadSurtida") Then
+
+            Consumible = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
+
+            If Consumible >= "5" And Consumible < "50" Then
+
+                DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Consumo
+
+            End If
+
+            If Consumible >= "50" Then
+
+                DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Exceso
+                e.CellStyle.BackColor = Color.LightPink
 
             End If
 

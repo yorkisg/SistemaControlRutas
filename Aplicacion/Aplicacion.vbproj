@@ -518,6 +518,10 @@
     <None Include="Recursos\Consumo1.png" />
     <None Include="Recursos\Consumo2.png" />
     <None Include="Recursos\Consumible3.png" />
+    <None Include="Recursos\Consumo5.png" />
+    <None Include="Recursos\Consumo4.png" />
+    <None Include="Recursos\Consumo3.png" />
+    <None Include="Recursos\Consumo7.png" />
     <Content Include="Recursos\ControldePeso1.png" />
     <Content Include="Recursos\ControldePeso2.png" />
     <Content Include="Recursos\ControldePeso3.png" />
@@ -527,6 +531,7 @@
     <Content Include="Recursos\ControlDeRutas5.png" />
     <None Include="Recursos\Critico.png" />
     <None Include="Recursos\Copair.png" />
+    <None Include="Recursos\ddd.png" />
     <Content Include="Recursos\DeRegresoCargado.png" />
     <Content Include="Recursos\DeRegresoConRetorno.png" />
     <Content Include="Recursos\DeRegresoVacio.png" />
@@ -564,6 +569,7 @@
     <Content Include="Recursos\ImprimirReporte.png" />
     <Content Include="Recursos\Incidencias.png" />
     <None Include="Recursos\Intermedio.png" />
+    <None Include="Recursos\Ir.png" />
     <Content Include="Recursos\LibroNovedades.png" />
     <Content Include="Recursos\Limpiar.png" />
     <Content Include="Recursos\Lista.ico" />
@@ -615,8 +621,10 @@
     <Content Include="Recursos\Taller3.png" />
     <Content Include="Recursos\Turno.png" />
     <Content Include="Recursos\Vehiculo2.png" />
+    <None Include="Recursos\Vehiculo6.png" />
     <Content Include="Recursos\Vehiculos.ico" />
     <Content Include="Recursos\VehiculosCarretera.ico" />
+    <None Include="Recursos\Velocidad.png" />
     <Content Include="Recursos\Version.png" />
   </ItemGroup>
   <ItemGroup>

@@ -181,19 +181,19 @@ Public Class ReporteInfraccion
 
         End If
 
-        Dim Velocidad As Double
+        Dim Exceso As Double
 
         If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaVelocidad") Then
 
-            Velocidad = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
+            Exceso = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 
-            If Velocidad >= "90" And Velocidad < "130" Then
+            If Exceso >= "90" And Exceso < "130" Then
 
-                DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Bandera
+                DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Velocidad
 
             End If
 
-            If Velocidad >= "130" Then
+            If Exceso >= "130" Then
 
                 DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Muerte
                 e.CellStyle.BackColor = Color.LightPink

@@ -5,6 +5,9 @@ Module ModuloConsulta
     Public Bandera As Image
     Public Critico As Image
     Public Muerte As Image
+    Public Velocidad As Image
+    Public Exceso As Image
+    Public Consumo As Image
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CONSULTAS GENERALES'''''''''''''''''''''''''''''''''''''''''''
@@ -408,7 +411,7 @@ Module ModuloConsulta
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
         'ListadoReporteInfraccion
 
-        Dim Command As New MySqlCommand("SELECT vehiculo, nombrepersonal, cantidadconsumida, (kilometrajeactual-kilometrajeanterior) AS 'distancia', consumototal, nombregrupo " _
+        Dim Command As New MySqlCommand("SELECT nombrepersonal, idvehiculo, cantidadconsumida, consumototal, (cantidadconsumida-consumototal) AS 'diferencia', (kilometrajeactual-kilometrajeanterior) AS 'distancia', nombregrupo " _
                        & " FROM registroconsumo, personal, grupo, vehiculo " _
                        & " WHERE registroconsumo.personal = personal.idpersonal " _
                        & " AND registroconsumo.vehiculo = vehiculo.idvehiculo " _
@@ -934,8 +937,20 @@ Module ModuloConsulta
         'Cargamos las imágenes
 
         Bandera = My.Resources.Bandera
+        Velocidad = My.Resources.Velocidad
         Critico = My.Resources.Critico
         Muerte = My.Resources.Muerte
+
+    End Sub
+
+    Public Sub CargarImagenesReporteConsumo()
+        'En este metodo especificamos cuales son las imagenes que se cargaran en el 
+        'CellFormatting del DataGridView1
+        'SIN USARSE AUN
+        'Cargamos las imágenes
+
+        Exceso = My.Resources.Consumo7
+        Consumo = My.Resources.Consumo5
 
     End Sub
 

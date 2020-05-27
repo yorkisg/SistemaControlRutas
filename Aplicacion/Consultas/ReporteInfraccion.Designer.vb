@@ -152,7 +152,7 @@ Partial Class ReporteInfraccion
         Me.DateTimePicker1.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.DateTimePicker1.Location = New System.Drawing.Point(6, 21)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(264, 25)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(278, 25)
         Me.DateTimePicker1.TabIndex = 64
         Me.DateTimePicker1.Value = New Date(2019, 3, 12, 18, 55, 59, 0)
         '
@@ -171,7 +171,7 @@ Partial Class ReporteInfraccion
         Me.DateTimePicker2.Font = New System.Drawing.Font("Segoe UI", 9.75!)
         Me.DateTimePicker2.Location = New System.Drawing.Point(6, 67)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(264, 25)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(278, 25)
         Me.DateTimePicker2.TabIndex = 66
         Me.DateTimePicker2.Value = New Date(2019, 3, 12, 18, 56, 3, 0)
         '
@@ -217,9 +217,9 @@ Partial Class ReporteInfraccion
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.Controls.Add(Me.DataGridView)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(313, 28)
+        Me.GroupBox2.Location = New System.Drawing.Point(316, 28)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(651, 414)
+        Me.GroupBox2.Size = New System.Drawing.Size(676, 417)
         Me.GroupBox2.TabIndex = 83
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "PRIMEROS 15 INFRACTORES DEL PERÍODO:"
@@ -252,7 +252,7 @@ Partial Class ReporteInfraccion
         Me.DataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(645, 392)
+        Me.DataGridView.Size = New System.Drawing.Size(670, 395)
         Me.DataGridView.TabIndex = 80
         '
         'ColumnaChofer
@@ -339,7 +339,7 @@ Partial Class ReporteInfraccion
         Me.GroupBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.GroupBox5.Location = New System.Drawing.Point(6, 163)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(276, 217)
+        Me.GroupBox5.Size = New System.Drawing.Size(278, 217)
         Me.GroupBox5.TabIndex = 86
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "VEHÍCULOS CON MÁS INFRACCIONES (MES)"
@@ -372,7 +372,7 @@ Partial Class ReporteInfraccion
         Me.DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(270, 195)
+        Me.DataGridView1.Size = New System.Drawing.Size(272, 195)
         Me.DataGridView1.TabIndex = 81
         '
         'DataGridViewTextBoxColumn1
@@ -402,7 +402,7 @@ Partial Class ReporteInfraccion
         Me.Menu2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonConsultar2, Me.ToolStripSeparator4, Me.BotonLimpiar2, Me.ToolStripSeparator6, Me.BotonExportar2, Me.ToolStripSeparator7, Me.BotonSalir2, Me.ToolStripSeparator8})
         Me.Menu2.Location = New System.Drawing.Point(0, 0)
         Me.Menu2.Name = "Menu2"
-        Me.Menu2.Size = New System.Drawing.Size(976, 25)
+        Me.Menu2.Size = New System.Drawing.Size(1004, 25)
         Me.Menu2.TabIndex = 89
         Me.Menu2.Text = "ToolStrip1"
         '
@@ -497,7 +497,7 @@ Partial Class ReporteInfraccion
         Me.TabControl1.Location = New System.Drawing.Point(12, 28)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(295, 414)
+        Me.TabControl1.Size = New System.Drawing.Size(298, 417)
         Me.TabControl1.TabIndex = 81
         '
         'TabPage1
@@ -515,7 +515,7 @@ Partial Class ReporteInfraccion
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(287, 386)
+        Me.TabPage1.Size = New System.Drawing.Size(290, 389)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "CONSULTA"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -525,7 +525,7 @@ Partial Class ReporteInfraccion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(976, 454)
+        Me.ClientSize = New System.Drawing.Size(1004, 457)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.Menu2)
         Me.Controls.Add(Me.GroupBox2)
