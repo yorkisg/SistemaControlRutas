@@ -470,22 +470,22 @@ Module ModuloConsulta
                            & " ORDER BY fecha DESC, hora DESC ", Conexion)
 
         'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaIncidencia.DateTimePicker2.Value
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ConsultaConsumible.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ConsultaConsumible.DateTimePicker2.Value
 
         'Llenado del datagridview
         Dim adaptador As New MySqlDataAdapter(Command)
         Dim Tabla As New DataTable
         adaptador.Fill(Tabla)
-        ConsultaIncidencia.DataGridView.DataSource = Tabla
+        ConsultaConsumible.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ConsultaIncidencia.DataGridView
+        With ConsultaConsumible.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        ConsultaIncidencia.DataGridView.ClearSelection()
+        ConsultaConsumible.DataGridView.ClearSelection()
 
     End Sub
 
@@ -579,7 +579,7 @@ Module ModuloConsulta
                        & " AND vehiculo.grupo = grupo.idgrupo " _
                        & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                        & " ORDER BY cantidadconsumida DESC " _
-                       & " LIMIT 10 ", Conexion)
+                       & " LIMIT 20 ", Conexion)
 
         'Para trabajar con fechas y campos tipo "Date" se usan los parametos
         Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ReporteConsumible.DateTimePicker1.Value
@@ -611,7 +611,7 @@ Module ModuloConsulta
                             & " AND MONTH(fecha) = MONTH(CURDATE()) " _
                             & " GROUP BY idvehiculo " _
                             & " ORDER BY SUM(cantidadconsumida) DESC " _
-                            & " LIMIT 8 "
+                            & " LIMIT 10 "
 
         Dim connection As New MySqlConnection(ConnectionString)
 

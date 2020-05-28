@@ -30,6 +30,8 @@ Module ModuloSeguimientoCarga
     Public Robado As Image
     Public Falla As Image
 
+    Public Iteracion As Integer
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CARGA DE ARBOLES''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -231,8 +233,8 @@ Module ModuloSeguimientoCarga
                        & " AND ruta.producto = producto.idproducto " _
                        & " AND ruta.estadoruta = estadoruta.idestado " _
                        & " AND idvehiculo = '" & SeguimientoCarga.TextBox1.Text & "' " _
-                       & " ORDER BY idruta DESC" _
-                       & " LIMIT 30 "
+                       & " ORDER BY idruta DESC"
+        '& " LIMIT 45 "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -242,8 +244,8 @@ Module ModuloSeguimientoCarga
         DataSet = New DataSet()
 
         'Llenado del datagridview
-        Adaptador.Fill(DataSet, "ruta_vehiculos")
-        Tabla = DataSet.Tables("ruta_vehiculos")
+        Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
+        Tabla = DataSet.Tables("historialvehiculos")
         SeguimientoCarga.DataGridView2.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
@@ -256,6 +258,52 @@ Module ModuloSeguimientoCarga
         CargarImagenesHistorialCarga()
 
         SeguimientoCarga.DataGridView2.ClearSelection()
+
+    End Sub
+
+    Public Sub Siguiente()
+        'Metodo que permite paginar hacia adelante
+
+        Iteracion = Iteracion - 20
+
+        If Iteracion <= 0 Then
+
+            Iteracion = 0
+
+        End If
+
+        DataSet.Clear()
+        Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
+
+    End Sub
+
+    Public Sub Anterior()
+        'Metodo que permite paginar hacia atras
+
+        Iteracion = Iteracion + 20
+
+        DataSet.Clear()
+        Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
+
+    End Sub
+
+    Public Sub Inicio()
+        'Metodo que permite paginar hacia el inicio
+
+        Iteracion = 0
+
+        DataSet.Clear()
+        Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
+
+    End Sub
+
+    Public Sub Final()
+        'Metodo que permite paginar hacia el final
+
+        ' = Iteracion - 1
+
+        'DataSet.Clear()
+        'Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
 
     End Sub
 

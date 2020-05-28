@@ -884,6 +884,34 @@ Public Class SeguimientoCarga
 
     End Sub
 
+    Private Sub BotonSiguiente_Click(sender As Object, e As EventArgs) Handles BotonSiguiente.Click
+        'Boton siguiente, permite navegar en el historial del vehiculo hacia las primeras rutas
+
+        Siguiente()
+
+    End Sub
+
+    Private Sub BotonAnterior_Click(sender As Object, e As EventArgs) Handles BotonAnterior.Click
+        'Boton anterior, permite navegar en el historial del vehiculo hacia las ultimas rutas
+
+        Anterior()
+
+    End Sub
+
+    Private Sub BotonInicio_Click(sender As Object, e As EventArgs) Handles BotonInicio.Click
+        '
+
+        Inicio()
+
+    End Sub
+
+    Private Sub BotonFinal_Click(sender As Object, e As EventArgs) Handles BotonFinal.Click
+        '
+
+        Final()
+
+    End Sub
+
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         'Este metodo permite obtener el ID de cada item seleccionado. 
 
@@ -1135,7 +1163,7 @@ Public Class SeguimientoCarga
 
     Private Sub VerificarEstadoVehiculo()
         'Metodo que permite validar si el vehiculo esta en reparacion, salta el mensaje de alarma para avisar que debe ser
-        ' cambiado a "operativo"
+        'cambiado a "operativo"
 
         If TextBox16.Text = "EN REPARACIÓN" Then
 

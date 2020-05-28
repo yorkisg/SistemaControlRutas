@@ -33,7 +33,6 @@ Public Class ReporteConsumible
 
         Try
 
-
             Dim FechaDesde As String
             Dim FechaHasta As String
 
@@ -151,6 +150,7 @@ Public Class ReporteConsumible
         'y dar formato a las celdas, bien sea por color de texto, fondo, etc.
 
         Dim TipoFlota As String
+        Dim Consumible As Double
 
         If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaFlota") Then
 
@@ -182,24 +182,29 @@ Public Class ReporteConsumible
 
         End If
 
-        Dim Consumible As Double
-
         If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaCantidadSurtida") Then
 
             Consumible = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 
-            If Consumible >= "5" And Consumible < "50" Then
+            If Consumible >= "5" And Consumible < "70" Then
 
                 DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Consumo
 
             End If
 
-            If Consumible >= "50" Then
+            If Consumible >= "70" Then
 
                 DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Exceso
+
                 e.CellStyle.BackColor = Color.LightPink
 
             End If
+
+        End If
+
+        If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaDiferencia") Then
+
+            e.CellStyle.BackColor = Color.LightPink
 
         End If
 

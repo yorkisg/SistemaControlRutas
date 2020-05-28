@@ -149,6 +149,13 @@ Partial Class SeguimientoCarga
         Me.flota = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
         Me.vehiculo = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.BotonFinal = New System.Windows.Forms.ToolStripButton()
+        Me.BotonAnterior = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BotonSiguiente = New System.Windows.Forms.ToolStripButton()
+        Me.BotonInicio = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.MenuPrincipal.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -165,6 +172,9 @@ Partial Class SeguimientoCarga
         CType(Me.ErrorProvider4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        Me.ToolStripContainer1.ContentPanel.SuspendLayout()
+        Me.ToolStripContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Arbol
@@ -982,7 +992,7 @@ Partial Class SeguimientoCarga
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID2, Me.ColunmaVehiculo, Me.ColumnaChofer, Me.ColumnaProducto, Me.ColumnaUbicacion, Me.ColumnaDestino, Me.ColumnaImagen, Me.ColumnaEstado, Me.ColumnaFecha, Me.ColumnaHora, Me.ColumnaEstado2})
         Me.DataGridView2.GridColor = System.Drawing.SystemColors.InactiveBorder
-        Me.DataGridView2.Location = New System.Drawing.Point(12, 355)
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView2.MultiSelect = False
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
@@ -991,7 +1001,7 @@ Partial Class SeguimientoCarga
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(682, 399)
+        Me.DataGridView2.Size = New System.Drawing.Size(682, 367)
         Me.DataGridView2.TabIndex = 61
         '
         'ColumnaID2
@@ -1266,13 +1276,81 @@ Partial Class SeguimientoCarga
         Me.vehiculo.Name = "vehiculo"
         Me.vehiculo.Size = New System.Drawing.Size(0, 22)
         '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFinal, Me.BotonAnterior, Me.ToolStripSeparator2, Me.BotonSiguiente, Me.BotonInicio})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 370)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(682, 25)
+        Me.ToolStrip1.TabIndex = 118
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'BotonFinal
+        '
+        Me.BotonFinal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BotonFinal.Enabled = False
+        Me.BotonFinal.Image = CType(resources.GetObject("BotonFinal.Image"), System.Drawing.Image)
+        Me.BotonFinal.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BotonFinal.Name = "BotonFinal"
+        Me.BotonFinal.Size = New System.Drawing.Size(52, 22)
+        Me.BotonFinal.Text = "Final"
+        '
+        'BotonAnterior
+        '
+        Me.BotonAnterior.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BotonAnterior.Image = CType(resources.GetObject("BotonAnterior.Image"), System.Drawing.Image)
+        Me.BotonAnterior.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BotonAnterior.Name = "BotonAnterior"
+        Me.BotonAnterior.Size = New System.Drawing.Size(70, 22)
+        Me.BotonAnterior.Text = "Anterior"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'BotonSiguiente
+        '
+        Me.BotonSiguiente.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BotonSiguiente.Image = CType(resources.GetObject("BotonSiguiente.Image"), System.Drawing.Image)
+        Me.BotonSiguiente.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BotonSiguiente.Name = "BotonSiguiente"
+        Me.BotonSiguiente.Size = New System.Drawing.Size(76, 22)
+        Me.BotonSiguiente.Text = "Siguiente"
+        '
+        'BotonInicio
+        '
+        Me.BotonInicio.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BotonInicio.Image = CType(resources.GetObject("BotonInicio.Image"), System.Drawing.Image)
+        Me.BotonInicio.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BotonInicio.Name = "BotonInicio"
+        Me.BotonInicio.Size = New System.Drawing.Size(56, 22)
+        Me.BotonInicio.Text = "Inicio"
+        '
+        'ToolStripContainer1
+        '
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        Me.ToolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.ToolStrip1)
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DataGridView2)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(682, 395)
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(12, 359)
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(682, 395)
+        Me.ToolStripContainer1.TabIndex = 119
+        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        '
         'SeguimientoCarga
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(1320, 782)
-        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
@@ -1334,6 +1412,12 @@ Partial Class SeguimientoCarga
         CType(Me.ErrorProvider5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip2.ResumeLayout(False)
         Me.ToolStrip2.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
+        Me.ToolStripContainer1.ContentPanel.PerformLayout()
+        Me.ToolStripContainer1.ResumeLayout(False)
+        Me.ToolStripContainer1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1448,4 +1532,11 @@ Partial Class SeguimientoCarga
     Friend WithEvents ColumnaTipoVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
     Friend WithEvents DataGridView3 As DataGridView
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents BotonAnterior As ToolStripButton
+    Friend WithEvents BotonSiguiente As ToolStripButton
+    Friend WithEvents ToolStripContainer1 As ToolStripContainer
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents BotonFinal As ToolStripButton
+    Friend WithEvents BotonInicio As ToolStripButton
 End Class
