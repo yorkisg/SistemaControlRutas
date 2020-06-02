@@ -222,5 +222,88 @@ Public Class ListadoFlota
 
     End Sub
 
+    Private Sub TextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox.KeyDown
+        'Evento que permite enfocar el datagridview al presionar la flecha abajo
+
+        If e.KeyCode = Keys.Down Then
+
+            'Enfoque del datagridview
+            DataGridView.Focus()
+
+        End If
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+
+            If DataGridView.RowCount > 0 Then
+
+                If MaestroFlota.Visible = True Then
+                    'si el formulario "MaestroFlota" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroFlota.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroFlota.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                    MaestroFlota.ComboFlota.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
+                    MaestroFlota.ComboTipo.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value
+
+                    'Se activa el uso del boton modificar del formulario "MaestroFlota"
+                    MaestroFlota.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "MaestroFlota"
+                    MaestroFlota.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario ListadoEstado.
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub DataGridView_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView.KeyDown
+        'Evento que permite seleccionar la fila tecleando enter
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+
+            If DataGridView.RowCount > 0 Then
+
+                If MaestroFlota.Visible = True Then
+                    'si el formulario "MaestroFlota" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroFlota.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroFlota.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                    MaestroFlota.ComboFlota.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
+                    MaestroFlota.ComboTipo.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value
+
+                    'Se activa el uso del boton modificar del formulario "MaestroFlota"
+                    MaestroFlota.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "MaestroFlota"
+                    MaestroFlota.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario ListadoEstado.
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
 
 End Class

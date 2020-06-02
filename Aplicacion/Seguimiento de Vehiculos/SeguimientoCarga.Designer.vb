@@ -440,7 +440,7 @@ Partial Class SeguimientoCarga
         '
         Me.MenuNovedadesVehiculo.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuCambiarEstado, Me.ToolStripSeparator13, Me.MenuAgregarInfracción, Me.MenuAgregarIncidencia, Me.ToolStripSeparator11})
         Me.MenuNovedadesVehiculo.Name = "MenuNovedadesVehiculo"
-        Me.MenuNovedadesVehiculo.Size = New System.Drawing.Size(178, 82)
+        Me.MenuNovedadesVehiculo.Size = New System.Drawing.Size(178, 104)
         '
         'MenuCambiarEstado
         '
@@ -1280,7 +1280,7 @@ Partial Class SeguimientoCarga
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFinal, Me.BotonAnterior, Me.ToolStripSeparator2, Me.BotonSiguiente, Me.BotonInicio})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 370)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 345)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(682, 25)
         Me.ToolStrip1.TabIndex = 118
@@ -1314,6 +1314,7 @@ Partial Class SeguimientoCarga
         'BotonSiguiente
         '
         Me.BotonSiguiente.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BotonSiguiente.Enabled = False
         Me.BotonSiguiente.Image = CType(resources.GetObject("BotonSiguiente.Image"), System.Drawing.Image)
         Me.BotonSiguiente.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BotonSiguiente.Name = "BotonSiguiente"
@@ -1323,6 +1324,7 @@ Partial Class SeguimientoCarga
         'BotonInicio
         '
         Me.BotonInicio.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BotonInicio.Enabled = False
         Me.BotonInicio.Image = CType(resources.GetObject("BotonInicio.Image"), System.Drawing.Image)
         Me.BotonInicio.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BotonInicio.Name = "BotonInicio"
@@ -1337,7 +1339,7 @@ Partial Class SeguimientoCarga
         Me.ToolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.ToolStrip1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DataGridView2)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(682, 395)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(682, 370)
         Me.ToolStripContainer1.Location = New System.Drawing.Point(12, 359)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         Me.ToolStripContainer1.Size = New System.Drawing.Size(682, 395)

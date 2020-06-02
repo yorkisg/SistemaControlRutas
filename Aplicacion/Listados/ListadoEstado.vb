@@ -180,5 +180,82 @@ Public Class ListadoEstado
 
     End Sub
 
+    Private Sub TextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox.KeyDown
+        'Evento que permite enfocar el datagridview al presionar la flecha abajo
+
+        If e.KeyCode = Keys.Down Then
+
+            'Enfoque del datagridview
+            DataGridView.Focus()
+
+        End If
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If MaestroEstado.Visible = True Then
+                    'si el formulario "MaestroEstado" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroEstado.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroEstado.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se activa el uso del boton modificar del formulario "MaestroEstado"
+                    MaestroEstado.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "MaestroEstado"
+                    MaestroEstado.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario ListadoEstado.
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub DataGridView_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView.KeyDown
+        'Evento que permite seleccionar la fila tecleando enter
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If MaestroEstado.Visible = True Then
+                    'si el formulario "MaestroEstado" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroEstado.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroEstado.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se activa el uso del boton modificar del formulario "MaestroEstado"
+                    MaestroEstado.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "MaestroEstado"
+                    MaestroEstado.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario ListadoEstado.
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
 
 End Class

@@ -25,7 +25,7 @@ Module ModuloListado
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "personal")
         Tabla = DataSet.Tables("personal")
-        ListadoPersonal.DataGridView.DataSource = DataSet.Tables("personal")
+        ListadoPersonal.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With ListadoPersonal.DataGridView
@@ -55,7 +55,7 @@ Module ModuloListado
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "sitiocarga2")
         Tabla = DataSet.Tables("sitiocarga2")
-        ListadoDestino.DataGridView.DataSource = DataSet.Tables("sitiocarga2")
+        ListadoDestino.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With ListadoDestino.DataGridView
@@ -83,7 +83,7 @@ Module ModuloListado
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "estados")
         Tabla = DataSet.Tables("estados")
-        ListadoEstado.DataGridView.DataSource = DataSet.Tables("estados")
+        ListadoEstado.DataGridView.DataSource = Tabla
 
         With ListadoEstado.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
@@ -114,7 +114,7 @@ Module ModuloListado
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "flotas")
         Tabla = DataSet.Tables("flotas")
-        ListadoFlota.DataGridView.DataSource = DataSet.Tables("flotas")
+        ListadoFlota.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With ListadoFlota.DataGridView
@@ -144,7 +144,7 @@ Module ModuloListado
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "listasproductos")
         Tabla = DataSet.Tables("listasproductos")
-        ListadoProducto.DataGridView.DataSource = DataSet.Tables("listasproductos")
+        ListadoProducto.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With ListadoProducto.DataGridView
@@ -174,7 +174,7 @@ Module ModuloListado
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "sitiocarga")
         Tabla = DataSet.Tables("sitiocarga")
-        Listadositiocarga.DataGridView.DataSource = DataSet.Tables("sitiocarga")
+        Listadositiocarga.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With Listadositiocarga.DataGridView
@@ -184,6 +184,8 @@ Module ModuloListado
 
         'Mostramos la cantidad de registros encontrados
         Listadositiocarga.Contador.Text = Listadositiocarga.DataGridView.RowCount
+
+
 
     End Sub
 
@@ -208,7 +210,7 @@ Module ModuloListado
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "vehiculo")
         Tabla = DataSet.Tables("vehiculo")
-        ListadoVehiculo.DataGridView.DataSource = DataSet.Tables("vehiculo")
+        ListadoVehiculo.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
         With ListadoVehiculo.DataGridView

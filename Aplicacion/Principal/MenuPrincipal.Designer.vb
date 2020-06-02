@@ -364,7 +364,7 @@ Partial Class MenuPrincipal
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripButton1.Text = "20.05.2020"
+        Me.ToolStripButton1.Text = "01.06.2020"
         '
         'ToolStripLabel2
         '

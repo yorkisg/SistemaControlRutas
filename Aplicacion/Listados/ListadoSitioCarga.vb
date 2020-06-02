@@ -1,21 +1,21 @@
 ﻿
-Public Class Listadositiocarga
+Public Class ListadoSitioCarga
 
-    Private Sub Listadositiocarga_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ListadoSitioCarga_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
 
         'Se llama al metodo en el Load del formulario para que el datagridview cargue los datos inmediatamente
-        CargarGridListadositiocarga()
+        CargarGridListadoSitioCarga()
 
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
 
     End Sub
 
-    Private Sub Listadositiocarga_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ListadoSitioCarga_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         If DataGridView.RowCount > 0 Then
@@ -254,6 +254,156 @@ Public Class Listadositiocarga
 
     End Sub
 
+    Private Sub TextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox.KeyDown
+        'Evento que permite enfocar el datagridview al presionar la flecha abajo
+
+        If e.KeyCode = Keys.Down Then
+
+            'Enfoque del datagridview
+            DataGridView.Focus()
+
+        End If
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If CuadroResumenMateriaPrima.Visible = True Then
+                    'si el formulario "ResumenMateriaPrima" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    CuadroResumenMateriaPrima.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    CuadroResumenMateriaPrima.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario Listadositiocarga
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                ElseIf SeguimientoCarga.Visible = True Then
+                    'si el formulario "RegistroRuta" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    SeguimientoCarga.TextBox10.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    SeguimientoCarga.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario Listadositiocarga
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+
+                If MaestroSitioCarga.Visible = True Then
+                    'si el formulario "Maestrositiocarga" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroSitioCarga.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroSitioCarga.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se activa el uso del boton modificar del formulario "Maestrositiocarga"
+                    MaestroSitioCarga.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "Maestrositiocarga"
+                    MaestroSitioCarga.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario Listadositiocarga
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaGeneralRuta.Visible = True Then
+                    'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaGeneralRuta.TextBox4.Text = DataGridView.Item("ColumnaUbicacion", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub DataGridView_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView.KeyDown
+        'Evento que permite seleccionar la fila tecleando enter
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If CuadroResumenMateriaPrima.Visible = True Then
+                    'si el formulario "ResumenMateriaPrima" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    CuadroResumenMateriaPrima.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    CuadroResumenMateriaPrima.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario Listadositiocarga
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                ElseIf SeguimientoCarga.Visible = True Then
+                    'si el formulario "RegistroRuta" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    SeguimientoCarga.TextBox10.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    SeguimientoCarga.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario Listadositiocarga
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+
+                If MaestroSitioCarga.Visible = True Then
+                    'si el formulario "Maestrositiocarga" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroSitioCarga.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroSitioCarga.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se activa el uso del boton modificar del formulario "Maestrositiocarga"
+                    MaestroSitioCarga.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "Maestrositiocarga"
+                    MaestroSitioCarga.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario Listadositiocarga
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaGeneralRuta.Visible = True Then
+                    'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaGeneralRuta.TextBox4.Text = DataGridView.Item("ColumnaUbicacion", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
 
 
 End Class

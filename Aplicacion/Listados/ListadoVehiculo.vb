@@ -541,5 +541,262 @@ Public Class ListadoVehiculo
 
     End Sub
 
+    Private Sub TextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox.KeyDown
+        'Evento que permite enfocar el datagridview al presionar la flecha abajo
+
+        If e.KeyCode = Keys.Down Then
+
+            'Enfoque del datagridview
+            DataGridView.Focus()
+
+        End If
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If MaestroVehiculo.Visible = True Then
+                    'si el formulario "MaestroVehiculo" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroVehiculo.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboTipo.Text = DataGridView.Item("ColumnaTipo", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboGrupo.Text = DataGridView.Item("ColumnaSublota", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboCondicion.Text = DataGridView.Item("ColumnaCondicion", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboEstado.Text = DataGridView.Item("ColumnaEstadoActual", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboClasificacion.Text = DataGridView.Item("ColumnaClasificacion", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se activa el uso del boton modificar del formulario "MaestroVehiculo"
+                    MaestroVehiculo.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "MaestroVehiculo"
+                    MaestroVehiculo.BotonGuardar.Enabled = False
+                    'Se desactiva el uso del textbox1.
+                    MaestroVehiculo.TextBox1.Enabled = False
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaGeneralRuta.Visible = True Then
+                    'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaGeneralRuta.TextBox3.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaConsumible.Visible = True Then
+                    'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaConsumible.TextBox3.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroInfraccion.Visible = True Then
+                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    MaestroInfraccion.TextBox2.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroIncidencia.Visible = True Then
+                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    MaestroIncidencia.TextBox2.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaInfraccion.Visible = True Then
+                    'si el formulario "ConsultaInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaInfraccion.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaIncidencia.Visible = True Then
+                    'si el formulario "ConsultaInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaIncidencia.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If RegistrarReporteTaller.Visible = True Then
+                    'si el formulario "ConsultaInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    RegistrarReporteTaller.TextBox3.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub DataGridView_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView.KeyDown
+        'Evento que permite seleccionar la fila tecleando enter
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If MaestroVehiculo.Visible = True Then
+                    'si el formulario "MaestroVehiculo" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroVehiculo.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboTipo.Text = DataGridView.Item("ColumnaTipo", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboGrupo.Text = DataGridView.Item("ColumnaSublota", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboCondicion.Text = DataGridView.Item("ColumnaCondicion", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboEstado.Text = DataGridView.Item("ColumnaEstadoActual", DataGridView.SelectedRows(0).Index).Value
+                    MaestroVehiculo.ComboClasificacion.Text = DataGridView.Item("ColumnaClasificacion", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se activa el uso del boton modificar del formulario "MaestroVehiculo"
+                    MaestroVehiculo.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "MaestroVehiculo"
+                    MaestroVehiculo.BotonGuardar.Enabled = False
+                    'Se desactiva el uso del textbox1.
+                    MaestroVehiculo.TextBox1.Enabled = False
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaGeneralRuta.Visible = True Then
+                    'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaGeneralRuta.TextBox3.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaConsumible.Visible = True Then
+                    'si el formulario "ConsultaVehiculo" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaConsumible.TextBox3.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroInfraccion.Visible = True Then
+                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    MaestroInfraccion.TextBox2.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroIncidencia.Visible = True Then
+                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    MaestroIncidencia.TextBox2.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaInfraccion.Visible = True Then
+                    'si el formulario "ConsultaInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaInfraccion.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaIncidencia.Visible = True Then
+                    'si el formulario "ConsultaInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaIncidencia.TextBox1.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If RegistrarReporteTaller.Visible = True Then
+                    'si el formulario "ConsultaInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    RegistrarReporteTaller.TextBox3.Text = DataGridView.Item("ColumnaID", DataGridView.SelectedRows(0).Index).Value
+
+                    'Se cierra el formulario ListadoVehiculo
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+        End If
+
+    End Sub
+
 
 End Class

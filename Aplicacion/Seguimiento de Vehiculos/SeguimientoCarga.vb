@@ -889,6 +889,12 @@ Public Class SeguimientoCarga
 
         Siguiente()
 
+        If DataGridView2.RowCount <> 0 Then
+
+            BotonAnterior.Enabled = True
+
+        End If
+
     End Sub
 
     Private Sub BotonAnterior_Click(sender As Object, e As EventArgs) Handles BotonAnterior.Click
@@ -896,17 +902,32 @@ Public Class SeguimientoCarga
 
         Anterior()
 
+        If DataGridView2.RowCount = 0 Then
+
+            BotonAnterior.Enabled = False
+
+        End If
+
+        BotonSiguiente.Enabled = True
+        BotonInicio.Enabled = True
+
     End Sub
 
     Private Sub BotonInicio_Click(sender As Object, e As EventArgs) Handles BotonInicio.Click
-        '
+        'Boton inicio, lleva a la primera pagina
 
         Inicio()
+
+        If DataGridView2.RowCount <> 0 Then
+
+            BotonAnterior.Enabled = True
+
+        End If
 
     End Sub
 
     Private Sub BotonFinal_Click(sender As Object, e As EventArgs) Handles BotonFinal.Click
-        '
+        'Boton final
 
         Final()
 

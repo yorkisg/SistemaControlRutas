@@ -448,5 +448,273 @@ Public Class ListadoPersonal
 
     End Sub
 
+    Private Sub TextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox.KeyDown
+        'Evento que permite enfocar el datagridview al presionar la flecha abajo
+
+        If e.KeyCode = Keys.Down Then
+
+            'Enfoque del datagridview
+            DataGridView.Focus()
+
+        End If
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If SeguimientoCarga.Visible = True Then
+                    'si el formulario "RegistroRuta" esta activo, se carga la informacion seleccionada del datagridview
+
+                    SeguimientoCarga.TextBox11.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    SeguimientoCarga.TextBox8.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroPersonal.Visible = True Then
+                    'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
+                    'Llamamos al metodo para obtener los datos del chofer y luego editarlos en el MaestroChofer
+
+                    'Guardamos el id en el textbox
+                    TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
+
+                    'Enviamos datos al formulario
+                    ObtenerPersonalListado()
+                    MaestroPersonal.Show()
+
+                    MaestroPersonal.BotonModificar.Enabled = True
+                    MaestroPersonal.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaGeneralRuta.Visible = True Then
+                    'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaConsumible.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaConsumible.Visible = True Then
+                    'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaConsumible.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroInfraccion.Visible = True Then
+                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    MaestroInfraccion.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroInfraccion.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroIncidencia.Visible = True Then
+                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    MaestroIncidencia.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroIncidencia.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If SeguimientoLiviano.Visible = True Then
+                    'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
+
+                    'Si la pestaña de infracciones esta seleccionada enviamos los datos al chofer de infracciones
+                    If SeguimientoLiviano.Panel5.SelectedIndex = 0 Then
+
+                        SeguimientoLiviano.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                        SeguimientoLiviano.TextBox16.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                        'Si la pestaña de incidencias esta seleccionada enviamos los datos al chofer de incidencias
+                    ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 1 Then
+
+                        SeguimientoLiviano.TextBox18.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                        SeguimientoLiviano.TextBox17.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 2 Then
+
+                        SeguimientoLiviano.TextBox26.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                        SeguimientoLiviano.TextBox24.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    End If
+
+                End If
+
+                'Se cierra el formulario ListadoPersona
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            End If
+
+        End If
+
+
+    End Sub
+
+    Private Sub DataGridView_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView.KeyDown
+        'Evento que permite seleccionar la fila tecleando enter
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If SeguimientoCarga.Visible = True Then
+                    'si el formulario "RegistroRuta" esta activo, se carga la informacion seleccionada del datagridview
+
+                    SeguimientoCarga.TextBox11.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    SeguimientoCarga.TextBox8.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroPersonal.Visible = True Then
+                    'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
+                    'Llamamos al metodo para obtener los datos del chofer y luego editarlos en el MaestroChofer
+
+                    'Guardamos el id en el textbox
+                    TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value()
+
+                    'Enviamos datos al formulario
+                    ObtenerPersonalListado()
+                    MaestroPersonal.Show()
+
+                    MaestroPersonal.BotonModificar.Enabled = True
+                    MaestroPersonal.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaGeneralRuta.Visible = True Then
+                    'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaConsumible.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If ConsultaConsumible.Visible = True Then
+                    'si el formulario "ConsultaPersonal" esta activo, se carga la informacion seleccionada del datagridview
+
+                    ConsultaConsumible.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroInfraccion.Visible = True Then
+                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    MaestroInfraccion.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroInfraccion.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroIncidencia.Visible = True Then
+                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
+
+                    MaestroIncidencia.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroIncidencia.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoChofer
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If SeguimientoLiviano.Visible = True Then
+                    'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
+
+                    'Si la pestaña de infracciones esta seleccionada enviamos los datos al chofer de infracciones
+                    If SeguimientoLiviano.Panel5.SelectedIndex = 0 Then
+
+                        SeguimientoLiviano.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                        SeguimientoLiviano.TextBox16.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                        'Si la pestaña de incidencias esta seleccionada enviamos los datos al chofer de incidencias
+                    ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 1 Then
+
+                        SeguimientoLiviano.TextBox18.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                        SeguimientoLiviano.TextBox17.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 2 Then
+
+                        SeguimientoLiviano.TextBox26.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                        SeguimientoLiviano.TextBox24.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    End If
+
+                End If
+
+                'Se cierra el formulario ListadoPersona
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            End If
+
+        End If
+
+    End Sub
+
 
 End Class

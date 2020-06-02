@@ -28,7 +28,9 @@ Public Class MaestroIncidencia
         'Se valida que no haya algun campo vacio
         If ValidarComponentes() = True Then
 
-            Dim db As New MySqlCommand("INSERT INTO registroincidencia (idregistroincidencia, vehiculo, personal, descripcion, tipo, clasificacion, fecha, hora) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox6.Text & "', '" & TextBox3.Text & "', '" & TextBox8.Text & "', '" & TextBox7.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", Conexion)
+            Dim db As New MySqlCommand("INSERT INTO registroincidencia (idregistroincidencia, vehiculo, personal, descripcion, tipo, clasificacion, fecha, hora) " _
+            & " VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox6.Text & "', '" & TextBox3.Text & "', '" & TextBox8.Text & "', '" & TextBox7.Text & "', '" & fecha & "', '" & TextBox5.Text & "')", Conexion)
+
             db.ExecuteNonQuery()
             MsgBox("Incidencia registrada con Exito.", MsgBoxStyle.Information, "Exito.")
 

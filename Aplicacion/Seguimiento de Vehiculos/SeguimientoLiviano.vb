@@ -575,6 +575,14 @@ Public Class SeguimientoLiviano
 
     End Sub
 
+    Private Sub BotonConsulta3_Click(sender As Object, e As EventArgs) Handles BotonConsulta3.Click
+        'Llama al formulario ReporteConsumible.
+
+        ReporteConsumible.ShowDialog()
+
+
+    End Sub
+
     Private Sub MenuAgregarInfracción_Click(sender As Object, e As EventArgs) Handles MenuAgregarInfracción.Click
         'Llamada al formulario MaestroInfraccion
 

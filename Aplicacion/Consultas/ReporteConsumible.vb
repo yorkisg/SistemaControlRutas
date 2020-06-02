@@ -195,16 +195,11 @@ Public Class ReporteConsumible
             If Consumible >= "70" Then
 
                 DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Exceso
+                'DataGridView.Rows(e.RowIndex).Cells("ColumnaDiferencia").Style.BackColor = Color.LightPink
 
                 e.CellStyle.BackColor = Color.LightPink
 
             End If
-
-        End If
-
-        If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaDiferencia") Then
-
-            e.CellStyle.BackColor = Color.LightPink
 
         End If
 

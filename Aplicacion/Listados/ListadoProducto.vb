@@ -252,5 +252,154 @@ Public Class ListadoProducto
 
     End Sub
 
+    Private Sub TextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox.KeyDown
+        'Evento que permite enfocar el datagridview al presionar la flecha abajo
+
+        If e.KeyCode = Keys.Down Then
+
+            'Enfoque del datagridview
+            DataGridView.Focus()
+
+        End If
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If CuadroResumenMateriaPrima.Visible = True Then
+                    'si el formulario "ResumenMateriaPrima" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    CuadroResumenMateriaPrima.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    CuadroResumenMateriaPrima.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoProducto
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                ElseIf SeguimientoCarga.Visible = True Then
+                    'si el formulario "RegistroRuta" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    SeguimientoCarga.TextBox9.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    SeguimientoCarga.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoProducto
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroProducto.Visible = True Then
+                    'si el formulario "MaestroProducto" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroProducto.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroProducto.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se activa el uso del boton modificar del formulario "MaestroProducto"
+                    MaestroProducto.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "MaestroProducto"
+                    MaestroProducto.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario ListadoProducto
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+            If ConsultaGeneralRuta.Visible = True Then
+                'si el formulario "ConsultaProducto" esta activo, se carga la informacion seleccionada del datagridview
+
+                ConsultaGeneralRuta.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                'Se cierra el formulario ListadoProducto
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub DataGridView_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView.KeyDown
+        'Evento que permite seleccionar la fila tecleando enter
+
+        'Si la tecla presionada es enter
+        If e.KeyCode = Keys.Enter Then
+
+            'Evitamos q se salte una linea al teclear enter
+            e.SuppressKeyPress = True
+
+            If DataGridView.RowCount > 0 Then
+
+                If CuadroResumenMateriaPrima.Visible = True Then
+                    'si el formulario "ResumenMateriaPrima" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    CuadroResumenMateriaPrima.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    CuadroResumenMateriaPrima.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoProducto
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                ElseIf SeguimientoCarga.Visible = True Then
+                    'si el formulario "RegistroRuta" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    SeguimientoCarga.TextBox9.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    SeguimientoCarga.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se cierra el formulario ListadoProducto
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+                If MaestroProducto.Visible = True Then
+                    'si el formulario "MaestroProducto" esta activo, se carga la informacion seleccionada del datagridview.
+
+                    MaestroProducto.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroProducto.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                    'Se activa el uso del boton modificar del formulario "MaestroProducto"
+                    MaestroProducto.BotonModificar.Enabled = True
+                    'Se desactiva el uso del boton guardar del formulario "MaestroProducto"
+                    MaestroProducto.BotonGuardar.Enabled = False
+
+                    'Se cierra el formulario ListadoProducto
+                    Tabla.Clear()
+                    DataSet.Clear()
+                    Dispose()
+
+                End If
+
+            End If
+
+            If ConsultaGeneralRuta.Visible = True Then
+                'si el formulario "ConsultaProducto" esta activo, se carga la informacion seleccionada del datagridview
+
+                ConsultaGeneralRuta.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+
+                'Se cierra el formulario ListadoProducto
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            End If
+
+        End If
+
+    End Sub
+
 
 End Class

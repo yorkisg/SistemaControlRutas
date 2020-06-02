@@ -95,7 +95,7 @@ Partial Class MaestroIncidencia
         '
         Me.TextBox6.Location = New System.Drawing.Point(298, 216)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(17, 20)
+        Me.TextBox6.Size = New System.Drawing.Size(41, 20)
         Me.TextBox6.TabIndex = 90
         Me.TextBox6.Visible = False
         '
@@ -246,7 +246,7 @@ Partial Class MaestroIncidencia
         '
         Me.TextBox7.Location = New System.Drawing.Point(298, 242)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(17, 20)
+        Me.TextBox7.Size = New System.Drawing.Size(41, 20)
         Me.TextBox7.TabIndex = 94
         Me.TextBox7.Visible = False
         '
