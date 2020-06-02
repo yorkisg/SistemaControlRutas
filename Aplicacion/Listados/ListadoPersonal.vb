@@ -26,6 +26,8 @@ Public Class ListadoPersonal
 
         End If
 
+        ActiveControl = TextBox.Control
+
     End Sub
 
     Private Sub ListadoPersonal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

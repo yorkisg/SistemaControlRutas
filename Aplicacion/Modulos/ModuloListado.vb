@@ -185,8 +185,6 @@ Module ModuloListado
         'Mostramos la cantidad de registros encontrados
         Listadositiocarga.Contador.Text = Listadositiocarga.DataGridView.RowCount
 
-
-
     End Sub
 
     Public Sub CargarGridListadoVehiculo()

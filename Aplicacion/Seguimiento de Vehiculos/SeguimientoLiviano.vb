@@ -3,11 +3,14 @@ Public Class SeguimientoLiviano
 
     Dim Fila As Integer
     Dim Columna As Integer
+    Dim Contador As Integer = 0
 
     Private Sub SeguimientoLiviano_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
-        InicializarTimer()
+        'Metodo que inicializa el timer
+        Timer1.Start()
+        Timer1.Interval = 1000
 
         'Llamada al metodo que permite cargar el listview de opciones proveniente del Modulo.
         CargarArbolLiviano()
@@ -65,16 +68,37 @@ Public Class SeguimientoLiviano
 
     End Sub
 
-    Private Sub InicializarTimer()
-        'Metodo que inicializa el timer
-
-        Timer1.Start()
-        Timer1.Interval = 1000
-
-    End Sub
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
+
+        'Contamos y enviamos el tiempo al label
+        Contador = Contador + 1
+        Tiempo.Text = Contador
+
+        'Si el tiempo llega a 300 seg (5min) se cierra la aplicacion
+        If Contador = 300 Then
+
+            If DataGridView1.RowCount > 0 Or DataGridView2.RowCount > 0 Then
+
+                'Llamada al metodo para poder limpiar el arbol y los componentes
+                LimpiarArbolSeguimientoLiviano()
+                LimpiarComponentesInfraccionLiviano()
+                LimpiarComponentesIncidenciaLiviano()
+
+                Tabla.Clear()
+                DataSet.Clear()
+
+                'Cierre formal del formulario liberando recursos
+                Dispose()
+
+            Else
+
+                'Cierre formal de la ventana sin liberar recursos
+                Close()
+
+            End If
+
+        End If
 
         'Control de rutas: Livianos
         SerieInfraccionRutaLiviano()
@@ -84,6 +108,59 @@ Public Class SeguimientoLiviano
         TextBox5.Text = DateTime.Now.ToShortTimeString()
         TextBox8.Text = DateTime.Now.ToShortTimeString()
         TextBox20.Text = DateTime.Now.ToShortTimeString()
+
+    End Sub
+
+    Private Sub ReiniciarTiempo()
+        'Se detiene el tiempo, reiniciamos el contador y volvemos a iniciar el conteo del tiempo
+
+        Timer1.Stop()
+
+        Contador = 0
+
+        Timer1.Start()
+
+    End Sub
+
+    Private Sub SeguimientoLiviano_MouseMove(sender As Object, e As MouseEventArgs) Handles Me.MouseMove
+        'Al mover el mouse sobre el formulario se reinicia el tiempo y evitamos el cierre de la aplicacion
+
+        ReiniciarTiempo()
+
+    End Sub
+
+    Private Sub SeguimientoLiviano_MouseClick(sender As Object, e As MouseEventArgs) Handles Me.MouseClick
+        'Al dar click sobre el formulario se reinicia el tiempo y evitamos el cierre de la aplicacion
+
+        ReiniciarTiempo()
+
+    End Sub
+
+    Private Sub Panel5_MouseMove(sender As Object, e As MouseEventArgs) Handles Panel5.MouseMove
+        'Al mover el mouse sobre el panel se reinicia el tiempo y evitamos el cierre de la aplicacion
+
+        ReiniciarTiempo()
+
+    End Sub
+
+    Private Sub MenuPrincipal_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuPrincipal.ItemClicked
+        'Al dar click en el menu se reinicia el tiempo y evitamos el cierre de la aplicacion
+
+        ReiniciarTiempo()
+
+    End Sub
+
+    Private Sub MenuPrincipal_MouseClick(sender As Object, e As MouseEventArgs) Handles MenuPrincipal.MouseClick
+        'Al dar click en el menu se reinicia el tiempo y evitamos el cierre de la aplicacion
+
+        ReiniciarTiempo()
+
+    End Sub
+
+    Private Sub MenuPrincipal_MouseMove(sender As Object, e As MouseEventArgs) Handles MenuPrincipal.MouseMove
+        'Al mover el mouse sobre el menu se reinicia el tiempo y evitamos el cierre de la aplicacion
+
+        ReiniciarTiempo()
 
     End Sub
 
@@ -110,6 +187,9 @@ Public Class SeguimientoLiviano
 
             'Enviamos el texto seleccionado al titulo del tabcontrol.
             Panel4.Text = "FLOTA: " & Nombre
+
+            'Reiniciamos el tiempo al dar click en la flota
+            ReiniciarTiempo()
 
         Catch ex As Exception
 

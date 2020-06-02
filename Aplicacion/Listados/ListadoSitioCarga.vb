@@ -13,6 +13,8 @@ Public Class ListadoSitioCarga
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
 
+        ActiveControl = TextBox.Control
+
     End Sub
 
     Private Sub ListadoSitioCarga_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

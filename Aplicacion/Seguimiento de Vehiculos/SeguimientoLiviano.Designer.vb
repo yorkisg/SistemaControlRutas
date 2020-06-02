@@ -38,7 +38,7 @@ Partial Class SeguimientoLiviano
         Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.MenuPrincipal = New System.Windows.Forms.ToolStrip()
         Me.BotonGuiaTelefonica = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonPersonal = New System.Windows.Forms.ToolStripButton()
@@ -49,8 +49,10 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonConsulta2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
+        Me.BotonConsulta3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ImagensList = New System.Windows.Forms.ImageList(Me.components)
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -171,9 +173,9 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator14 = New System.Windows.Forms.ToolStripSeparator()
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.BotonConsulta3 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStrip1.SuspendLayout()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.Tiempo = New System.Windows.Forms.ToolStripLabel()
+        Me.MenuPrincipal.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
         Me.Pagina4.SuspendLayout()
@@ -196,14 +198,14 @@ Partial Class SeguimientoLiviano
         Me.MenuRuta2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'ToolStrip1
+        'MenuPrincipal
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonPersonal, Me.ToolStripSeparator1, Me.BotonVehiculo, Me.ToolStripSeparator6, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonConsulta3, Me.ToolStripSeparator12, Me.BotonSalir, Me.ToolStripSeparator4})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1113, 25)
-        Me.ToolStrip1.TabIndex = 43
+        Me.MenuPrincipal.BackColor = System.Drawing.Color.AliceBlue
+        Me.MenuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonPersonal, Me.ToolStripSeparator1, Me.BotonVehiculo, Me.ToolStripSeparator6, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonConsulta3, Me.ToolStripSeparator12, Me.BotonSalir, Me.ToolStripSeparator4})
+        Me.MenuPrincipal.Location = New System.Drawing.Point(0, 0)
+        Me.MenuPrincipal.Name = "MenuPrincipal"
+        Me.MenuPrincipal.Size = New System.Drawing.Size(1113, 25)
+        Me.MenuPrincipal.TabIndex = 43
         '
         'BotonGuiaTelefonica
         '
@@ -272,6 +274,20 @@ Partial Class SeguimientoLiviano
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
+        'BotonConsulta3
+        '
+        Me.BotonConsulta3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BotonConsulta3.Image = CType(resources.GetObject("BotonConsulta3.Image"), System.Drawing.Image)
+        Me.BotonConsulta3.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BotonConsulta3.Name = "BotonConsulta3"
+        Me.BotonConsulta3.Size = New System.Drawing.Size(156, 22)
+        Me.BotonConsulta3.Text = "Reporte de Consumibles"
+        '
+        'ToolStripSeparator12
+        '
+        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
+        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
+        '
         'BotonSalir
         '
         Me.BotonSalir.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -281,10 +297,10 @@ Partial Class SeguimientoLiviano
         Me.BotonSalir.Size = New System.Drawing.Size(49, 22)
         Me.BotonSalir.Text = "Salir"
         '
-        'ToolStripSeparator12
+        'ToolStripSeparator4
         '
-        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
-        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
         '
         'ImagensList
         '
@@ -1126,6 +1142,7 @@ Partial Class SeguimientoLiviano
         Me.Label15.Size = New System.Drawing.Size(44, 15)
         Me.Label15.TabIndex = 141
         Me.Label15.Text = "TOTAL"
+        Me.Label15.Visible = False
         '
         'TextBox30
         '
@@ -1136,6 +1153,7 @@ Partial Class SeguimientoLiviano
         Me.TextBox30.Name = "TextBox30"
         Me.TextBox30.Size = New System.Drawing.Size(137, 23)
         Me.TextBox30.TabIndex = 140
+        Me.TextBox30.Visible = False
         '
         'TextBox29
         '
@@ -1485,7 +1503,7 @@ Partial Class SeguimientoLiviano
         '
         Me.ToolStrip4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ToolStrip4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.flota, Me.ToolStripLabel3, Me.vehiculo})
+        Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.flota, Me.ToolStripLabel3, Me.vehiculo, Me.Tiempo, Me.ToolStripLabel2})
         Me.ToolStrip4.Location = New System.Drawing.Point(0, 605)
         Me.ToolStrip4.Name = "ToolStrip4"
         Me.ToolStrip4.Size = New System.Drawing.Size(1113, 25)
@@ -1558,19 +1576,20 @@ Partial Class SeguimientoLiviano
         'Timer1
         '
         '
-        'BotonConsulta3
+        'ToolStripLabel2
         '
-        Me.BotonConsulta3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BotonConsulta3.Image = CType(resources.GetObject("BotonConsulta3.Image"), System.Drawing.Image)
-        Me.BotonConsulta3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BotonConsulta3.Name = "BotonConsulta3"
-        Me.BotonConsulta3.Size = New System.Drawing.Size(156, 22)
-        Me.BotonConsulta3.Text = "Reporte de Consumibles"
+        Me.ToolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripLabel2.Image = CType(resources.GetObject("ToolStripLabel2.Image"), System.Drawing.Image)
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(60, 22)
+        Me.ToolStripLabel2.Text = "Sesión:"
         '
-        'ToolStripSeparator4
+        'Tiempo
         '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        Me.Tiempo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.Tiempo.Name = "Tiempo"
+        Me.Tiempo.Size = New System.Drawing.Size(48, 22)
+        Me.Tiempo.Text = "Tiempo"
         '
         'SeguimientoLiviano
         '
@@ -1583,7 +1602,7 @@ Partial Class SeguimientoLiviano
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.MenuPrincipal)
         Me.Controls.Add(Me.TextBox19)
         Me.Controls.Add(Me.TextBox26)
         Me.Controls.Add(Me.TextBox23)
@@ -1603,8 +1622,8 @@ Partial Class SeguimientoLiviano
         Me.Name = "SeguimientoLiviano"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Seguimiento a Vehiculos Livianos"
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
+        Me.MenuPrincipal.ResumeLayout(False)
+        Me.MenuPrincipal.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Pagina4.ResumeLayout(False)
@@ -1633,7 +1652,7 @@ Partial Class SeguimientoLiviano
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
+    Friend WithEvents MenuPrincipal As System.Windows.Forms.ToolStrip
     Friend WithEvents BotonGuiaTelefonica As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents BotonSalir As System.Windows.Forms.ToolStripButton
@@ -1768,4 +1787,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents BotonConsulta3 As ToolStripButton
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents Tiempo As ToolStripLabel
+    Friend WithEvents ToolStripLabel2 As ToolStripLabel
 End Class

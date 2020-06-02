@@ -24,7 +24,7 @@ Partial Class ListadoSitioCarga
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Listadositiocarga))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListadoSitioCarga))
         Me.DataGridView = New System.Windows.Forms.DataGridView()
         Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -199,7 +199,7 @@ Partial Class ListadoSitioCarga
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
         '
-        'Listadositiocarga
+        'ListadoSitioCarga
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -210,7 +210,7 @@ Partial Class ListadoSitioCarga
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Listadositiocarga"
+        Me.Name = "ListadoSitioCarga"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Listado de Ubicaciones"
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()

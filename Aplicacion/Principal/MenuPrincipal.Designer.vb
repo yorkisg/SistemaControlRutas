@@ -68,7 +68,6 @@ Partial Class MenuPrincipal
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuPrincipal2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -380,16 +379,6 @@ Partial Class MenuPrincipal
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(779, 4)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(48, 17)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Label1"
-        Me.Label1.Visible = False
-        '
         'MenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
@@ -397,7 +386,6 @@ Partial Class MenuPrincipal
         Me.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(984, 562)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuPrincipal2)
         Me.Font = New System.Drawing.Font("Microsoft JhengHei UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -457,7 +445,6 @@ Partial Class MenuPrincipal
     Friend WithEvents MenuSeguimientoTaller As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuSeguimientoTransporte As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents Label1 As Label
     Friend WithEvents MenuConsultarIncidencias As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents MenuListadoConsumible As ToolStripMenuItem

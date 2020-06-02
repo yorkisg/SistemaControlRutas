@@ -13,6 +13,8 @@ Public Class ListadoFlota
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
 
+        ActiveControl = TextBox.Control
+
     End Sub
 
     Private Sub ListadoFlota_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing

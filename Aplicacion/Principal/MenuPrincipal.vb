@@ -1,8 +1,6 @@
 ﻿
 Public Class MenuPrincipal
 
-    Public Contador As Integer = 0
-
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Instancia principal de la conexion de la BD.
@@ -18,13 +16,6 @@ Public Class MenuPrincipal
         Instancia()
 
         'Se carga la fecha y hora del sistema al iniciar la aplicacion
-        InicializarTimer()
-
-    End Sub
-
-    Private Sub InicializarTimer()
-        'Se carga la fecha y hora del sistema al iniciar la aplicacion
-
         Timer1.Interval = 1000
         Timer1.Start()
 
@@ -32,17 +23,6 @@ Public Class MenuPrincipal
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
-
-        'Contamos y enviamos el tiempo al label
-        Contador = Contador + 1
-        Label1.Text = Contador
-
-        'Si el tiempo llega a 300 seg (5min) se cierra la aplicacion
-        If Contador = 300 Then
-
-            'Close()
-
-        End If
 
         'Vehiculos
         MaestroVehiculo.TextBox5.Text = DateTime.Now.ToShortTimeString()
@@ -59,49 +39,6 @@ Public Class MenuPrincipal
         'Incidencias
         MaestroIncidencia.TextBox5.Text = DateTime.Now.ToShortTimeString()
         MaestroIncidencia.DateTimePicker1.Value = Today
-
-    End Sub
-
-    Private Sub ReiniciarTiempo()
-        'Se detiene el tiempo, reiniciamos el contador y volvemos a iniciar el conteo del tiempo
-
-        'Timer1.Stop()
-
-        'Contador = 0
-
-        'Timer1.Start()
-
-    End Sub
-
-    Private Sub Principal_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
-        'funciona
-        'AL OBTENER EL FOCUS DEL FORMULARIO SE REINICIA EL TIEMPO
-
-        ReiniciarTiempo()
-
-    End Sub
-
-    Private Sub MenuPrincipal2_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuPrincipal2.ItemClicked
-        'funciona 
-        'AL DAR CLICK EN EL MENU SE REINICIA EL TIEMPO
-
-        ReiniciarTiempo()
-
-    End Sub
-
-    Private Sub MenuPrincipal2_MouseClick(sender As Object, e As MouseEventArgs) Handles MenuPrincipal2.MouseClick
-        'funciona 
-        'AL DAR CLICK EN EL MENU SE REINICIA EL TIEMPO
-
-        ReiniciarTiempo()
-
-    End Sub
-
-    Private Sub MenuPrincipal2_MouseMove(sender As Object, e As MouseEventArgs) Handles MenuPrincipal2.MouseMove
-        'funciona 
-        'AL MOVER EL MOUSE EN EL MENU SE REINICIA EL TIEMPO
-
-        ReiniciarTiempo()
 
     End Sub
 

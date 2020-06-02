@@ -162,12 +162,12 @@
   <data name="BotonLimpiar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrboMwEIRpz5FKvUNQ7sjPCiGOw21AvMT7
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrboMwEIRpz5FKvUNQzsjfCiGOw21AvMT7
         TbLxOF6XJKR1kEa2wPMxu7CWdbsOQkeh0z/6Fs8/leduOfZ9XwZBcF7XlfY0jiO5rvsjXLuQE8xt21LX
         dVpVVVFRFBTHsYRGUUSe5z1BPhAbB4ZhoGma5Ao1TUNlWVKSJBIgUhJe4vs+Q2QZGgAzCwAY6rqmNE2f
         ylK9gvcXsCyLPog96kZJKCXLMpkkDEN5Zhfw2LwtBEnQjzzPzQEAMgTloCcAGSfgRPM8y94AAr0NQApu
         LvpiBICJhQQQzG8D2LxdjRJwA7dJeL8LcBzn8moOHu/jt1f/gR4oW3ye7q9hYoiamUZNrwZ8iZ1tMM48
-        7hh9eKwrRB2G6XysRssAAAAASUVORK5CYII=
+        7hh9eKwrQfKG5qknLfYAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BotonExportar2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -250,12 +250,12 @@
   <data name="BotonLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrboMwEIRpz5FKvUNQLsmvCiGOw21AvMT7
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVDhPlZNrboMwEIRpz5FKvUNQDsm/CiGOw21AvMT7
         TbLxOF6XJKR1kEa2wPMxu7CWdbsOQkeh0z/6Fs8/leduOfZ9XwZBcF7XlfY0jiO5rvsjXLuQE8xt21LX
         dVpVVVFRFBTHsYRGUUSe5z1BPhAbB4ZhoGma5Ao1TUNlWVKSJBIgUhJe4vs+Q2QZGgAzCwAY6rqmNE2f
         ylK9gvcXsCyLPog96kZJKCXLMpkkDEN5Zhfw2LwtBEnQjzzPzQEAMgTloCcAGSfgRPM8y94AAr0NQApu
         LvpiBICJhQQQzG8D2LxdjRJwA7dJeL8LcBzn8moOHu/jt1f/gR4oW3ye7q9hYoiamUZNrwZ8iZ1tMM48
-        7hh9eKwrSHOG7y8paZ8AAAAASUVORK5CYII=
+        7hh9eKwrRkiG7K6VVGQAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="BotonExportar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
