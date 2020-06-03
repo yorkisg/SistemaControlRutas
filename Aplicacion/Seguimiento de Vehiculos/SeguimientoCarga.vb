@@ -5,7 +5,7 @@ Public Class SeguimientoCarga
     Dim Columna As Integer
     Dim Contador As Integer = 0
 
-    Private Sub SeguimientoCarga_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub SeguimientoCarga_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Metodo que inicializa el timer
@@ -437,6 +437,13 @@ Public Class SeguimientoCarga
             'Historial de movimientos por vehiculo.
             CargarGridHistorialCarga()
 
+            'Colocamos el historial en la primera pagina
+            Inicio()
+
+            BotonInicio.Enabled = False
+            BotonSiguiente.Enabled = False
+            BotonAnterior.Enabled = True
+
         Catch ex As Exception
 
             MsgBox("No se pudo completar la operación.4", MsgBoxStyle.Exclamation, "Error.")
@@ -811,6 +818,9 @@ Public Class SeguimientoCarga
                 'Llamada a metodos secundarios.
                 CargarGridHistorialCarga()
 
+                'Colocamos el historial en la primera pagina
+                Inicio()
+
                 'Se habilita el metodo para incrementar el siguiente ID de las rutas.
                 SerieRutaCarga()
 
@@ -850,6 +860,9 @@ Public Class SeguimientoCarga
 
                 'Llamada a metodos secundarios.
                 CargarGridHistorialCarga()
+
+                'Colocamos el historial en la primera pagina
+                Inicio()
 
                 'Se habilita el metodo para incrementar el siguiente ID de las rutas.
                 SerieRutaCarga()
@@ -969,6 +982,14 @@ Public Class SeguimientoCarga
 
         End If
 
+        'Si vamos al inicio del historial se bloquean los botones
+        If Iteracion = 0 Then
+
+            BotonSiguiente.Enabled = False
+            BotonInicio.Enabled = False
+
+        End If
+
     End Sub
 
     Private Sub BotonAnterior_Click(sender As Object, e As EventArgs) Handles BotonAnterior.Click
@@ -994,7 +1015,9 @@ Public Class SeguimientoCarga
 
         If DataGridView2.RowCount <> 0 Then
 
+            BotonInicio.Enabled = False
             BotonAnterior.Enabled = True
+            BotonSiguiente.Enabled = False
 
         End If
 

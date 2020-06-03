@@ -300,7 +300,7 @@ Module ModuloSeguimientoCarga
     Public Sub Final()
         'Metodo que permite paginar hacia el final
 
-        ' = Iteracion - 1
+        'Iteracion = Iteracion - 1
 
         'DataSet.Clear()
         'Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
