@@ -11,7 +11,7 @@ Public Class CuadroResumenMateriaPrima
 
     End Sub
 
-    Private Sub ResumenMateriaPrima_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub CuadroResumenMateriaPrima_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         If DataGridView.RowCount > 0 Then
@@ -25,6 +25,31 @@ Public Class CuadroResumenMateriaPrima
         Else
 
             Dispose()
+
+        End If
+
+    End Sub
+
+    Private Sub CuadroResumenMateriaPrima_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+        'Evento que permite cerrar el formulario presionando la tecla esc
+
+        If (e.KeyCode = Keys.Escape) Then
+
+            'Cierre del formulario
+
+            If DataGridView.RowCount > 0 Then
+                'Si el datagridview contiene datos, obtenemos recursos 
+                'liberando los datatable y dataset implementados.
+
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            Else
+
+                Dispose()
+
+            End If
 
         End If
 

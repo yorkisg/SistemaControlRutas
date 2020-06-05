@@ -20,8 +20,20 @@ Public Class MaestroProducto
         'Cierre del formulario
 
         LimpiarComponentes()
-        'BotonBuscar.Enabled = True
         Dispose()
+
+    End Sub
+
+    Private Sub MaestroProducto_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+        'Evento que permite cerrar el formulario presionando la tecla esc
+
+        If (e.KeyCode = Keys.Escape) Then
+            'Cierre del formulario
+
+            LimpiarComponentes()
+            Dispose()
+
+        End If
 
     End Sub
 

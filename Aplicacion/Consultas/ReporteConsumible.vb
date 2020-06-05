@@ -21,10 +21,22 @@ Public Class ReporteConsumible
 
     End Sub
 
-    Private Sub ListadoReporteInfraccion_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ReporteConsumible_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         Dispose()
+
+    End Sub
+
+    Private Sub ReporteConsumible_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+        'Evento que permite cerrar el formulario presionando la tecla esc
+
+        If (e.KeyCode = Keys.Escape) Then
+            'Cierre del formulario
+
+            Dispose()
+
+        End If
 
     End Sub
 

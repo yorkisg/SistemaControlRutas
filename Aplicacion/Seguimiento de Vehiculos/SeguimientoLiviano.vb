@@ -68,6 +68,35 @@ Public Class SeguimientoLiviano
 
     End Sub
 
+    Private Sub SeguimientoLiviano_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+        'Evento que permite cerrar el formulario presionando la tecla esc
+
+        If (e.KeyCode = Keys.Escape) Then
+
+            If DataGridView1.RowCount > 0 Or DataGridView2.RowCount > 0 Then
+
+                'Llamada al metodo para poder limpiar el arbol y los componentes
+                LimpiarArbolSeguimientoLiviano()
+                LimpiarComponentesInfraccionLiviano()
+                LimpiarComponentesIncidenciaLiviano()
+
+                Tabla.Clear()
+                DataSet.Clear()
+
+                'Cierre formal del formulario liberando recursos
+                Dispose()
+
+            Else
+
+                'Cierre formal de la ventana sin liberar recursos
+                Close()
+
+            End If
+
+        End If
+
+    End Sub
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
 

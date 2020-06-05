@@ -22,6 +22,18 @@ Public Class MaestroInfraccion
 
     End Sub
 
+    Private Sub MaestroInfraccion_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+        'Evento que permite cerrar el formulario presionando la tecla esc
+
+        If (e.KeyCode = Keys.Escape) Then
+
+            LimpiarComponentes()
+            Dispose()
+
+        End If
+
+    End Sub
+
     Private Sub BotonGuardar_Click(sender As Object, e As EventArgs) Handles BotonGuardar.Click
         'Boton registrar
 

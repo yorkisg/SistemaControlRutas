@@ -37,6 +37,32 @@ Public Class ListadoEstado
 
     End Sub
 
+    Private Sub ListadoEstado_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+        'Evento que permite cerrar el formulario presionando la tecla esc
+
+        If (e.KeyCode = Keys.Escape) Then
+
+            'Cierre del formulario
+
+            If DataGridView.RowCount > 0 Then
+                'Si el datagridview contiene datos, obtenemos recursos 
+                'liberando los datatable y dataset implementados.
+
+                LimpiarComponentes()
+                Tabla.Clear()
+                DataSet.Clear()
+                Dispose()
+
+            Else
+
+                Dispose()
+
+            End If
+
+        End If
+
+    End Sub
+
     Private Sub BotonGuardar_Click(sender As Object, e As EventArgs) Handles BotonGuardar.Click
         'Boton aceptar
 

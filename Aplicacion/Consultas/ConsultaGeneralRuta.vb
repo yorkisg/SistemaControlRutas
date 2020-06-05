@@ -27,6 +27,19 @@ Public Class ConsultaGeneralRuta
 
     End Sub
 
+    Private Sub ConsultaPersonal_KeyDown(ByVal sender As Object, ByVal e As KeyEventArgs) Handles MyBase.KeyDown
+        'Evento que permite cerrar el formulario presionando la tecla esc
+
+        If (e.KeyCode = Keys.Escape) Then
+
+            'Cierre del formulario
+
+            Dispose()
+
+        End If
+
+    End Sub
+
     Private Sub BotonFiltrar_Click(sender As Object, e As EventArgs) Handles BotonFiltrar.Click
         'Boton Filtrar
 
