@@ -52,6 +52,7 @@ Partial Class ListadoGeneralRutas
         Me.ColumnaProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaUbicacion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaDestino = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaImagen = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ColumnaEstado = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
@@ -63,12 +64,13 @@ Partial Class ListadoGeneralRutas
         Me.Pagina1 = New System.Windows.Forms.TabPage()
         Me.Pagina2 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaProducto2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaSitioCarga2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaDestino2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaImagen2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -168,7 +170,7 @@ Partial Class ListadoGeneralRutas
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaVehiculo, Me.ColumnaChofer, Me.ColumnaProducto, Me.ColumnaUbicacion, Me.ColumnaDestino, Me.ColumnaEstado})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaVehiculo, Me.ColumnaChofer, Me.ColumnaProducto, Me.ColumnaUbicacion, Me.ColumnaDestino, Me.ColumnaImagen, Me.ColumnaEstado})
         Me.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(3, 3)
@@ -231,6 +233,16 @@ Partial Class ListadoGeneralRutas
         Me.ColumnaDestino.HeaderText = "DESTINO"
         Me.ColumnaDestino.Name = "ColumnaDestino"
         Me.ColumnaDestino.ReadOnly = True
+        '
+        'ColumnaImagen
+        '
+        Me.ColumnaImagen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaImagen.HeaderText = ""
+        Me.ColumnaImagen.MinimumWidth = 24
+        Me.ColumnaImagen.Name = "ColumnaImagen"
+        Me.ColumnaImagen.ReadOnly = True
+        Me.ColumnaImagen.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ColumnaImagen.Width = 24
         '
         'ColumnaEstado
         '
@@ -351,7 +363,7 @@ Partial Class ListadoGeneralRutas
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaUnidades, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.ColumnaEstado2})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaUnidades, Me.ColumnaProducto2, Me.ColumnaSitioCarga2, Me.ColumnaDestino2, Me.ColumnaImagen2, Me.ColumnaEstado2})
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView1.Location = New System.Drawing.Point(3, 3)
@@ -362,6 +374,13 @@ Partial Class ListadoGeneralRutas
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(946, 522)
         Me.DataGridView1.TabIndex = 50
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "Extendido.png")
+        Me.ImageList1.Images.SetKeyName(1, "Agrupado.png")
         '
         'ColumnaUnidades
         '
@@ -374,48 +393,56 @@ Partial Class ListadoGeneralRutas
         Me.ColumnaUnidades.Name = "ColumnaUnidades"
         Me.ColumnaUnidades.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn1
+        'ColumnaProducto2
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Producto"
+        Me.ColumnaProducto2.DataPropertyName = "Producto"
         DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn1.DefaultCellStyle = DataGridViewCellStyle9
-        Me.DataGridViewTextBoxColumn1.HeaderText = "PRODUCTO"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.ColumnaProducto2.DefaultCellStyle = DataGridViewCellStyle9
+        Me.ColumnaProducto2.FillWeight = 94.07217!
+        Me.ColumnaProducto2.HeaderText = "PRODUCTO"
+        Me.ColumnaProducto2.Name = "ColumnaProducto2"
+        Me.ColumnaProducto2.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn2
+        'ColumnaSitioCarga2
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Sitio de Carga"
+        Me.ColumnaSitioCarga2.DataPropertyName = "Sitio de Carga"
         DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn2.DefaultCellStyle = DataGridViewCellStyle10
-        Me.DataGridViewTextBoxColumn2.HeaderText = "SITIO DE CARGA"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.ColumnaSitioCarga2.DefaultCellStyle = DataGridViewCellStyle10
+        Me.ColumnaSitioCarga2.FillWeight = 94.07217!
+        Me.ColumnaSitioCarga2.HeaderText = "SITIO DE CARGA"
+        Me.ColumnaSitioCarga2.Name = "ColumnaSitioCarga2"
+        Me.ColumnaSitioCarga2.ReadOnly = True
         '
-        'DataGridViewTextBoxColumn3
+        'ColumnaDestino2
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Destino"
+        Me.ColumnaDestino2.DataPropertyName = "Destino"
         DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn3.DefaultCellStyle = DataGridViewCellStyle11
-        Me.DataGridViewTextBoxColumn3.HeaderText = "DESTINO"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.ColumnaDestino2.DefaultCellStyle = DataGridViewCellStyle11
+        Me.ColumnaDestino2.FillWeight = 94.07217!
+        Me.ColumnaDestino2.HeaderText = "DESTINO"
+        Me.ColumnaDestino2.Name = "ColumnaDestino2"
+        Me.ColumnaDestino2.ReadOnly = True
+        '
+        'ColumnaImagen2
+        '
+        Me.ColumnaImagen2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaImagen2.FillWeight = 123.7113!
+        Me.ColumnaImagen2.HeaderText = ""
+        Me.ColumnaImagen2.MinimumWidth = 24
+        Me.ColumnaImagen2.Name = "ColumnaImagen2"
+        Me.ColumnaImagen2.ReadOnly = True
+        Me.ColumnaImagen2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ColumnaImagen2.Width = 24
         '
         'ColumnaEstado2
         '
         Me.ColumnaEstado2.DataPropertyName = "Estado"
         DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.ColumnaEstado2.DefaultCellStyle = DataGridViewCellStyle12
+        Me.ColumnaEstado2.FillWeight = 94.07217!
         Me.ColumnaEstado2.HeaderText = "ESTADO"
         Me.ColumnaEstado2.Name = "ColumnaEstado2"
         Me.ColumnaEstado2.ReadOnly = True
-        '
-        'ImageList1
-        '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "Extendido.png")
-        Me.ImageList1.Images.SetKeyName(1, "Agrupado.png")
         '
         'ListadoGeneralRutas
         '
@@ -464,17 +491,19 @@ Partial Class ListadoGeneralRutas
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents ToolStripLabel3 As ToolStripLabel
     Friend WithEvents Contador2 As ToolStripLabel
-    Friend WithEvents ColumnaEstado2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaUnidades As DataGridViewTextBoxColumn
     Friend WithEvents BotonActualizar As ToolStripButton
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents ColumnaEstado As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaImagen As DataGridViewImageColumn
     Friend WithEvents ColumnaDestino As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaUbicacion As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaProducto As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaImagen2 As DataGridViewImageColumn
+    Friend WithEvents ColumnaEstado2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaDestino2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaSitioCarga2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaProducto2 As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaUnidades As DataGridViewTextBoxColumn
 End Class

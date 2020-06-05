@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -497,6 +497,7 @@
     <Content Include="Recursos\Abierto2.png" />
     <Content Include="Recursos\Accidentado.png" />
     <Content Include="Recursos\Aceptar.png" />
+    <None Include="Recursos\Activa.png" />
     <Content Include="Recursos\Advertencia.png" />
     <Content Include="Recursos\Agregar.png" />
     <Content Include="Recursos\AgregarNuevo.png" />
@@ -520,6 +521,7 @@
     <Content Include="Recursos\Cerrado.png" />
     <Content Include="Recursos\Cerrar.gif" />
     <Content Include="Recursos\Choferes.png" />
+    <None Include="Recursos\Completada.png" />
     <Content Include="Recursos\Consultar3.png" />
     <Content Include="Recursos\ConsultarChofer.png" />
     <Content Include="Recursos\ConsultarInfracciones.gif" />

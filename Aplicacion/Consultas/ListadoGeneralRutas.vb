@@ -8,7 +8,6 @@ Public Class ListadoGeneralRutas
         AlternarFilasGeneral(DataGridView)
         AlternarFilasGeneral(DataGridView1)
 
-
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
         EnableDoubleBuffered(DataGridView1)
@@ -95,121 +94,144 @@ Public Class ListadoGeneralRutas
         'CellFormatting: Propiedad del control DataGridview el cual permite cambiar 
         'y dar formato a las celdas, bien sea por color de texto, fondo, etc.
 
-        Dim TipoEstado As String
+        Try
 
-        'Indicamos sobre cual columna trabajaremos.
-        If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaEstado") Then
+            Dim TipoEstado As String
 
-            'Captura el valor de la celda 
-            TipoEstado = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
+            'Indicamos sobre cual columna trabajaremos.
+            If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaEstado") Then
 
-            'Verificamos los valores del estado y asignamos los colores e iconos.
-            If TipoEstado = "EN RUTA VACIO" Or TipoEstado = "EN RUTA CARGADO" Then
+                TipoEstado = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 
-                'Colocamos color a la celda de acuerdo al valor obtenido
-                e.CellStyle.ForeColor = Color.Green
+                'Verificamos los valores del estado y asignamos los colores e iconos.
+                If TipoEstado = "EN RUTA VACIO" Or TipoEstado = "EN RUTA CARGADO" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    'Colocamos imagen a la celda de acuerdo al valor obtenido
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = EnRutaVacio
+
+                End If
+
+                If TipoEstado = "DE REGRESO CARGADO" Or TipoEstado = "DE REGRESO VACIO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    'Colocamos imagen a la celda de acuerdo al valor obtenido
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = DeRegresoVacio
+
+                End If
+
+                If TipoEstado = "VEHICULO GUARDADO" Then
+
+                    e.CellStyle.ForeColor = Color.Purple
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = OrganizacionElTunal
+
+                End If
+
+                If TipoEstado = "PERNOCTA AUTORIZADA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = PernoctaAutorizada
+
+                End If
+
+                If TipoEstado = "EN PROCESO DE CARGA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = EnProcesoDeCarga
+
+                End If
+
+                If TipoEstado = "EN PROCESO DE DESCARGA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = EnProcesoDeDescarga
+
+                End If
+
+                If TipoEstado = "CARGADO ESPERANDO POR SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = CargadoEsperandoPorSalir
+
+                End If
+
+                If TipoEstado = "CARGADO ESPERANDO DOCUMENTOS" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = CargadoEsperandoDocumentos
+
+                End If
+
+                If TipoEstado = "ESPERANDO AUTORIZACIÓN PARA SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = EsperandoAutorizacionParaSalir
+
+                End If
+
+                If TipoEstado = "DETENIDO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Detenido
+
+                End If
+
+                If TipoEstado = "ACCIDENTADO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = Accidentado
+
+                End If
+
+                If TipoEstado = "PARADA IRREGULAR" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = ParadaIrregular
+
+                End If
+
+                If TipoEstado = "EN TALLER" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = EnTaller
+
+                End If
+
+                If TipoEstado = "ESPERANDO POR SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = EsperandoPorSalir
+
+                End If
+
+                If TipoEstado = "EN EL CLIENTE" Or TipoEstado = "EN EL PROVEEDOR" Then
+
+                    e.CellStyle.ForeColor = Color.Blue
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = EnElClienteEnElProveedor
+
+                End If
+
+                If TipoEstado = "REALIZANDO MOVIMIENTOS Ó ACARREOS" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = RealizandoMovimientos
+
+                End If
+
+                If TipoEstado = "RUTA CANCELADA" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView.Rows(e.RowIndex).Cells("ColumnaImagen").Value = RutaCancelada
+
+                End If
 
             End If
 
-            If TipoEstado = "DE REGRESO CARGADO" Or TipoEstado = "DE REGRESO VACIO" Then
+        Catch ex As Exception
 
-                'Colocamos color a la celda de acuerdo al valor obtenido
-                e.CellStyle.ForeColor = Color.Red
+            MsgBox("No se pudo completar la operación.2", MsgBoxStyle.Exclamation, "Error.")
 
-            End If
-
-            If TipoEstado = "VEHICULO GUARDADO" Then
-
-                e.CellStyle.ForeColor = Color.Purple
-
-            End If
-
-            If TipoEstado = "PERNOCTA AUTORIZADA" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "EN PROCESO DE CARGA" Then
-
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "EN PROCESO DE DESCARGA" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "CARGADO ESPERANDO POR SALIR" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "CARGADO ESPERANDO DOCUMENTOS" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "ESPERANDO AUTORIZACIÓN PARA SALIR" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "DETENIDO" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-            If TipoEstado = "ACCIDENTADO" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-            If TipoEstado = "PARADA IRREGULAR" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-            If TipoEstado = "EN TALLER" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-            If TipoEstado = "ESPERANDO POR SALIR" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "EN EL CLIENTE" Or TipoEstado = "EN EL PROVEEDOR" Then
-
-                e.CellStyle.ForeColor = Color.Blue
-
-            End If
-
-            If TipoEstado = "REALIZANDO MOVIMIENTOS Ó ACARREOS" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "RUTA CANCELADA" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-        End If
+        End Try
 
     End Sub
 
@@ -217,121 +239,144 @@ Public Class ListadoGeneralRutas
         'CellFormatting: Propiedad del control DataGridview el cual permite cambiar 
         'y dar formato a las celdas, bien sea por color de texto, fondo, etc.
 
-        Dim TipoEstado As String
+        Try
 
-        'Indicamos sobre cual columna trabajaremos.
-        If DataGridView1.Columns(e.ColumnIndex).Name.Equals("ColumnaEstado2") Then
+            Dim TipoEstado As String
 
-            'Captura el valor de la celda 
-            TipoEstado = (DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
+            'Indicamos sobre cual columna trabajaremos.
+            If DataGridView1.Columns(e.ColumnIndex).Name.Equals("ColumnaEstado2") Then
 
-            'Verificamos los valores del estado y asignamos los colores e iconos.
-            If TipoEstado = "EN RUTA VACIO" Or TipoEstado = "EN RUTA CARGADO" Then
+                TipoEstado = (DataGridView1.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
 
-                'Colocamos color a la celda de acuerdo al valor obtenido
-                e.CellStyle.ForeColor = Color.Green
+                'Verificamos los valores del estado y asignamos los colores e iconos.
+                If TipoEstado = "EN RUTA VACIO" Or TipoEstado = "EN RUTA CARGADO" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    'Colocamos imagen a la celda de acuerdo al valor obtenido
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = EnRutaVacio
+
+                End If
+
+                If TipoEstado = "DE REGRESO CARGADO" Or TipoEstado = "DE REGRESO VACIO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    'Colocamos imagen a la celda de acuerdo al valor obtenido
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = DeRegresoVacio
+
+                End If
+
+                If TipoEstado = "VEHICULO GUARDADO" Then
+
+                    e.CellStyle.ForeColor = Color.Purple
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = OrganizacionElTunal
+
+                End If
+
+                If TipoEstado = "PERNOCTA AUTORIZADA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = PernoctaAutorizada
+
+                End If
+
+                If TipoEstado = "EN PROCESO DE CARGA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = EnProcesoDeCarga
+
+                End If
+
+                If TipoEstado = "EN PROCESO DE DESCARGA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = EnProcesoDeDescarga
+
+                End If
+
+                If TipoEstado = "CARGADO ESPERANDO POR SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = CargadoEsperandoPorSalir
+
+                End If
+
+                If TipoEstado = "CARGADO ESPERANDO DOCUMENTOS" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = CargadoEsperandoDocumentos
+
+                End If
+
+                If TipoEstado = "ESPERANDO AUTORIZACIÓN PARA SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = EsperandoAutorizacionParaSalir
+
+                End If
+
+                If TipoEstado = "DETENIDO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = Detenido
+
+                End If
+
+                If TipoEstado = "ACCIDENTADO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = Accidentado
+
+                End If
+
+                If TipoEstado = "PARADA IRREGULAR" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = ParadaIrregular
+
+                End If
+
+                If TipoEstado = "EN TALLER" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = EnTaller
+
+                End If
+
+                If TipoEstado = "ESPERANDO POR SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = EsperandoPorSalir
+
+                End If
+
+                If TipoEstado = "EN EL CLIENTE" Or TipoEstado = "EN EL PROVEEDOR" Then
+
+                    e.CellStyle.ForeColor = Color.Blue
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = EnElClienteEnElProveedor
+
+                End If
+
+                If TipoEstado = "REALIZANDO MOVIMIENTOS Ó ACARREOS" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = RealizandoMovimientos
+
+                End If
+
+                If TipoEstado = "RUTA CANCELADA" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView1.Rows(e.RowIndex).Cells("ColumnaImagen2").Value = RutaCancelada
+
+                End If
 
             End If
 
-            If TipoEstado = "DE REGRESO CARGADO" Or TipoEstado = "DE REGRESO VACIO" Then
+        Catch ex As Exception
 
-                'Colocamos color a la celda de acuerdo al valor obtenido
-                e.CellStyle.ForeColor = Color.Red
+            MsgBox("No se pudo completar la operación.2", MsgBoxStyle.Exclamation, "Error.")
 
-            End If
-
-            If TipoEstado = "VEHICULO GUARDADO" Then
-
-                e.CellStyle.ForeColor = Color.Purple
-
-            End If
-
-            If TipoEstado = "PERNOCTA AUTORIZADA" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "EN PROCESO DE CARGA" Then
-
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "EN PROCESO DE DESCARGA" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "CARGADO ESPERANDO POR SALIR" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "CARGADO ESPERANDO DOCUMENTOS" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "ESPERANDO AUTORIZACIÓN PARA SALIR" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "DETENIDO" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-            If TipoEstado = "ACCIDENTADO" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-            If TipoEstado = "PARADA IRREGULAR" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-            If TipoEstado = "EN TALLER" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-            If TipoEstado = "ESPERANDO POR SALIR" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "EN EL CLIENTE" Or TipoEstado = "EN EL PROVEEDOR" Then
-
-                e.CellStyle.ForeColor = Color.Blue
-
-            End If
-
-            If TipoEstado = "REALIZANDO MOVIMIENTOS Ó ACARREOS" Then
-
-                e.CellStyle.ForeColor = Color.Green
-
-            End If
-
-            If TipoEstado = "RUTA CANCELADA" Then
-
-                e.CellStyle.ForeColor = Color.Red
-
-            End If
-
-        End If
+        End Try
 
     End Sub
 

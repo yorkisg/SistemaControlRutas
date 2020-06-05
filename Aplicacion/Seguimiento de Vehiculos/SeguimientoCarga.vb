@@ -589,6 +589,7 @@ Public Class SeguimientoCarga
         Try
 
             Dim TipoEstado As String
+            Dim TipoEstadoRuta As String
 
             'Indicamos sobre cual columna trabajaremos.
             If DataGridView2.Columns(e.ColumnIndex).Name.Equals("ColumnaEstado") Then
@@ -721,6 +722,27 @@ Public Class SeguimientoCarga
 
             End If
 
+            If DataGridView2.Columns(e.ColumnIndex).Name.Equals("ColumnaEstado2") Then
+
+                'Captura el valor de la celda 
+                TipoEstadoRuta = (DataGridView2.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
+
+                If TipoEstadoRuta = "ACTIVA" Then
+
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = Activa
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").ToolTipText = "RUTA ACTIVA"
+
+                End If
+
+                If TipoEstadoRuta = "COMPLETADA" Then
+
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = Completada
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").ToolTipText = "RUTA COMPLETADA"
+
+                End If
+
+            End If
+
         Catch ex As Exception
 
             MsgBox("No se pudo completar la operación.9", MsgBoxStyle.Exclamation, "Error.")
@@ -738,7 +760,8 @@ Public Class SeguimientoCarga
             If DataGridView2.SelectedRows.Count > 0 Then
                 'Seleccionamos y pasamos los valores a los TextBox correspondientes.
 
-                ComboBox1.Text = DataGridView2.Rows(DataGridView2.CurrentRow.Index).Cells(7).Value()
+                'ComboBox1.Text = DataGridView2.Rows(DataGridView2.CurrentRow.Index).Cells(7).Value()
+                ComboBox1.Text = DataGridView2.Item("ColumnaEstado", DataGridView2.SelectedRows(0).Index).Value
 
                 TextBox24.Text = DataGridView2.Item("ColumnaID2", DataGridView2.SelectedRows(0).Index).Value
                 ObtenerRutaCarga()
@@ -1297,6 +1320,7 @@ Public Class SeguimientoCarga
         End If
 
     End Sub
+
 
 
 End Class

@@ -30,6 +30,9 @@ Module ModuloSeguimientoCarga
     Public Robado As Image
     Public Falla As Image
 
+    Public Activa As Image
+    Public Completada As Image
+
     Public Iteracion As Integer
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -573,6 +576,9 @@ Module ModuloSeguimientoCarga
         EnElClienteEnElProveedor = My.Resources.EnElClienteEnElProveedor
         RealizandoMovimientos = My.Resources.RealizandoMovimientos
         RutaCancelada = My.Resources.RutaCancelada
+
+        Activa = My.Resources.Activa
+        Completada = My.Resources.Completada
 
     End Sub
 

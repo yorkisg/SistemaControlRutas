@@ -643,17 +643,17 @@ Module ModuloConsulta
     Public Sub CargarGridGeneralVehiculo()
         'Metodo que genera la carga de datos en el DataGridview2.
 
-        Dim sql As String = "Select vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado " _
+        Dim sql As String = "SELECT vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado " _
                          & " FROM ruta, personal, subflota, grupo, vehiculo, destino, producto, sitiocarga, estadoruta  " _
                          & " WHERE ruta.personal = personal.idpersonal " _
-                         & " And ruta.vehiculo = vehiculo.idvehiculo  " _
-                         & " and vehiculo.grupo = grupo.idgrupo " _
-                         & " And grupo.subflota = subflota.idsubflota  " _
-                         & " And ruta.destino = destino.iddestino  " _
-                         & " And ruta.producto = producto.idproducto  " _
-                         & " And ruta.sitiocarga = sitiocarga.idsitiocarga  " _
-                         & " And ruta.estadoruta = estadoruta.idestado " _
-                         & " And estado = 'ACTIVA' " _
+                         & " AND ruta.vehiculo = vehiculo.idvehiculo  " _
+                         & " AND vehiculo.grupo = grupo.idgrupo " _
+                         & " AND grupo.subflota = subflota.idsubflota  " _
+                         & " AND ruta.destino = destino.iddestino  " _
+                         & " AND ruta.producto = producto.idproducto  " _
+                         & " AND ruta.sitiocarga = sitiocarga.idsitiocarga  " _
+                         & " AND ruta.estadoruta = estadoruta.idestado " _
+                         & " AND estado = 'ACTIVA' " _
                          & " AND nombreestado NOT IN ('EN TALLER') " _
                          & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombreestado ASC "
 
@@ -680,6 +680,8 @@ Module ModuloConsulta
 
         'Quitamos la seleccion de cualquier fila del datagridview
         ListadoGeneralRutas.DataGridView.ClearSelection()
+
+        CargarImagenesHistorialCarga()
 
     End Sub
 
@@ -725,6 +727,8 @@ Module ModuloConsulta
         'Quitamos la seleccion de cualquier fila del datagridview
         ListadoGeneralRutas.DataGridView.ClearSelection()
 
+        CargarImagenesHistorialCarga()
+
     End Sub
 
     Public Sub CargarGridResumenVehiculo()
@@ -768,6 +772,8 @@ Module ModuloConsulta
 
         'Quitamos la seleccion de cualquier fila del datagridview
         ListadoGeneralRutas.DataGridView1.ClearSelection()
+
+        CargarImagenesHistorialCarga()
 
     End Sub
 
@@ -813,6 +819,8 @@ Module ModuloConsulta
 
         'Quitamos la seleccion de cualquier fila del datagridview
         ListadoGeneralRutas.DataGridView1.ClearSelection()
+
+        CargarImagenesHistorialCarga()
 
     End Sub
 
