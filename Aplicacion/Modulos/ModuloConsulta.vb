@@ -491,7 +491,7 @@ Module ModuloConsulta
 
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''REPORTE INFRACCIONES DE VELOCIDAD ''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''REPORTE GENERAL ''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub CargarGridListadoReporteInfraccion()
@@ -505,28 +505,29 @@ Module ModuloConsulta
                     & " AND registroinfraccion.vehiculo = vehiculo.idvehiculo " _
                     & " AND vehiculo.grupo = grupo.idgrupo " _
                     & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
-                    & " AND clasificacionvehiculo = '" & ReporteInfraccion.TextBox3.Text & "' " _
+                    & " AND clasificacionvehiculo = '" & ReporteGeneral.ComboTipo.Text & "' " _
                     & " GROUP BY nombrepersonal " _
                     & " ORDER BY COUNT(idregistroinfraccion) DESC, MAX(velocidad) DESC " _
                     & " LIMIT 15 ", Conexion)
 
         'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ReporteInfraccion.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ReporteInfraccion.DateTimePicker2.Value
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ReporteGeneral.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ReporteGeneral.DateTimePicker2.Value
 
         'Llenado del datagridview
-        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Adaptador As New MySqlDataAdapter(Command)
         Dim Tabla As New DataTable
-        adaptador.Fill(Tabla)
-        ReporteInfraccion.DataGridView.DataSource = Tabla
+        Adaptador.Fill(Tabla)
+        ReporteGeneral.DataGridView2.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ReporteInfraccion.DataGridView
+        With ReporteGeneral.DataGridView2
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        ReporteInfraccion.DataGridView.ClearSelection()
+        ReporteGeneral.DataGridView2.ClearSelection()
+        CargarImagenesReporteVelocidad()
 
     End Sub
 
@@ -537,10 +538,10 @@ Module ModuloConsulta
                             & " FROM registroinfraccion, vehiculo " _
                             & " WHERE registroinfraccion.vehiculo = vehiculo.idvehiculo " _
                             & " AND MONTH(fecha) = MONTH(CURDATE()) " _
-                            & " AND clasificacionvehiculo = '" & ReporteInfraccion.TextBox3.Text & "' " _
+                            & " AND clasificacionvehiculo = '" & ReporteGeneral.ComboTipo.Text & "' " _
                             & " GROUP BY idvehiculo " _
                             & " ORDER BY COUNT(idregistroinfraccion) DESC " _
-                            & " LIMIT 8 "
+                            & " LIMIT 15 "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -552,21 +553,17 @@ Module ModuloConsulta
         'Llenado del datagridview
         Adaptador.Fill(DataSet, "reporte")
         Tabla = DataSet.Tables("reporte")
-        ReporteInfraccion.DataGridView1.DataSource = Tabla
+        ReporteGeneral.DataGridView3.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ReporteInfraccion.DataGridView1
+        With ReporteGeneral.DataGridView3
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        ReporteInfraccion.DataGridView1.ClearSelection()
+        ReporteGeneral.DataGridView3.ClearSelection()
 
     End Sub
-
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''REPORTE CONSUMIBLES ''''''''''''''''''''''''''''''''''''''''''
-    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
     Public Sub CargarGridListadoReporteConsumible()
         'Metodo que genera la carga de datos en el DataGridview2 usando la clausura BETWEEN
@@ -579,25 +576,26 @@ Module ModuloConsulta
                        & " AND vehiculo.grupo = grupo.idgrupo " _
                        & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                        & " ORDER BY cantidadconsumida DESC " _
-                       & " LIMIT 20 ", Conexion)
+                       & " LIMIT 15 ", Conexion)
 
         'Para trabajar con fechas y campos tipo "Date" se usan los parametos
-        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ReporteConsumible.DateTimePicker1.Value
-        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ReporteConsumible.DateTimePicker2.Value
+        Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ReporteGeneral.DateTimePicker1.Value
+        Command.Parameters.Add("@fecha2", MySqlDbType.Date).Value = ReporteGeneral.DateTimePicker2.Value
 
         'Llenado del datagridview
-        Dim adaptador As New MySqlDataAdapter(Command)
+        Dim Adaptador As New MySqlDataAdapter(Command)
         Dim Tabla As New DataTable
-        adaptador.Fill(Tabla)
-        ReporteConsumible.DataGridView.DataSource = Tabla
+        Adaptador.Fill(Tabla)
+        ReporteGeneral.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ReporteConsumible.DataGridView
+        With ReporteGeneral.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        ReporteConsumible.DataGridView.ClearSelection()
+        ReporteGeneral.DataGridView.ClearSelection()
+        CargarImagenesReporteConsumo()
 
     End Sub
 
@@ -611,7 +609,7 @@ Module ModuloConsulta
                             & " AND MONTH(fecha) = MONTH(CURDATE()) " _
                             & " GROUP BY idvehiculo " _
                             & " ORDER BY SUM(cantidadconsumida) DESC " _
-                            & " LIMIT 10 "
+                            & " LIMIT 15 "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -623,15 +621,15 @@ Module ModuloConsulta
         'Llenado del datagridview
         Adaptador.Fill(DataSet, "reportes2")
         Tabla = DataSet.Tables("reportes2")
-        ReporteConsumible.DataGridView1.DataSource = Tabla
+        ReporteGeneral.DataGridView1.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With ReporteConsumible.DataGridView1
+        With ReporteGeneral.DataGridView1
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        ReporteConsumible.DataGridView1.ClearSelection()
+        ReporteGeneral.DataGridView1.ClearSelection()
 
     End Sub
 
@@ -1035,7 +1033,6 @@ Module ModuloConsulta
     Public Sub CargarImagenesReporteVelocidad()
         'En este metodo especificamos cuales son las imagenes que se cargaran en el 
         'CellFormatting del DataGridView1
-        'SIN USARSE AUN
         'Cargamos las imágenes
 
         Bandera = My.Resources.Bandera
@@ -1048,7 +1045,6 @@ Module ModuloConsulta
     Public Sub CargarImagenesReporteConsumo()
         'En este metodo especificamos cuales son las imagenes que se cargaran en el 
         'CellFormatting del DataGridView1
-        'SIN USARSE AUN
         'Cargamos las imágenes
 
         Exceso = My.Resources.Consumo7

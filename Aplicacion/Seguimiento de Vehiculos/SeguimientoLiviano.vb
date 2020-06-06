@@ -680,14 +680,14 @@ Public Class SeguimientoLiviano
     Private Sub BotonConsulta2_Click(sender As Object, e As EventArgs) Handles BotonConsulta2.Click
         'Llama al formulario ReporteInfraccion.
 
-        ReporteInfraccion.ShowDialog()
+        ReporteGeneral.ShowDialog()
 
     End Sub
 
     Private Sub BotonConsulta3_Click(sender As Object, e As EventArgs) Handles BotonConsulta3.Click
         'Llama al formulario ReporteConsumible.
 
-        ReporteConsumible.ShowDialog()
+        ReporteGeneral.ShowDialog()
 
 
     End Sub

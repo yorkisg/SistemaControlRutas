@@ -328,6 +328,7 @@ Partial Class MaestroIncidencia
         Me.Controls.Add(Me.ToolStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.MaximizeBox = False
         Me.Name = "MaestroIncidencia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

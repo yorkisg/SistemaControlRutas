@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -187,16 +187,10 @@
     <Compile Include="Consultas\ListadoGeneralRutas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\ReporteConsumible.Designer.vb">
-      <DependentUpon>ReporteConsumible.vb</DependentUpon>
+    <Compile Include="Consultas\ReporteGeneral.Designer.vb">
+      <DependentUpon>ReporteGeneral.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\ReporteConsumible.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consultas\ReporteInfraccion.Designer.vb">
-      <DependentUpon>ReporteInfraccion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\ReporteInfraccion.vb">
+    <Compile Include="Consultas\ReporteGeneral.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Estadisticas\EstadisticaGeneral.Designer.vb">
@@ -386,11 +380,8 @@
     <EmbeddedResource Include="Consultas\ListadoGeneralRutas.resx">
       <DependentUpon>ListadoGeneralRutas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ReporteConsumible.resx">
-      <DependentUpon>ReporteConsumible.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\ReporteInfraccion.resx">
-      <DependentUpon>ReporteInfraccion.vb</DependentUpon>
+    <EmbeddedResource Include="Consultas\ReporteGeneral.resx">
+      <DependentUpon>ReporteGeneral.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estadisticas\EstadisticaGeneral.resx">
       <DependentUpon>EstadisticaGeneral.vb</DependentUpon>

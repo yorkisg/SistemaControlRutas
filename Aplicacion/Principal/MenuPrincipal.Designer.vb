@@ -46,7 +46,6 @@ Partial Class MenuPrincipal
         Me.MenuConsultaConsumos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuListadoDeInfractores = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuListadoConsumible = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuListadoCompelto = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultaGrupoProducto = New System.Windows.Forms.ToolStripMenuItem()
@@ -173,7 +172,7 @@ Partial Class MenuPrincipal
         'MenuConsultas
         '
         Me.MenuConsultas.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.MenuConsultarInfracciones, Me.MenuConsultarIncidencias, Me.MenuConsultaConsumos, Me.ToolStripSeparator5, Me.MenuListadoDeInfractores, Me.MenuListadoConsumible, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
+        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.MenuConsultarInfracciones, Me.MenuConsultarIncidencias, Me.MenuConsultaConsumos, Me.ToolStripSeparator5, Me.MenuListadoDeInfractores, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
         Me.MenuConsultas.Image = CType(resources.GetObject("MenuConsultas.Image"), System.Drawing.Image)
         Me.MenuConsultas.Name = "MenuConsultas"
         Me.MenuConsultas.Size = New System.Drawing.Size(92, 21)
@@ -217,14 +216,7 @@ Partial Class MenuPrincipal
         Me.MenuListadoDeInfractores.Image = CType(resources.GetObject("MenuListadoDeInfractores.Image"), System.Drawing.Image)
         Me.MenuListadoDeInfractores.Name = "MenuListadoDeInfractores"
         Me.MenuListadoDeInfractores.Size = New System.Drawing.Size(285, 22)
-        Me.MenuListadoDeInfractores.Text = "Reporte de Infracciones (Top 15)"
-        '
-        'MenuListadoConsumible
-        '
-        Me.MenuListadoConsumible.Image = CType(resources.GetObject("MenuListadoConsumible.Image"), System.Drawing.Image)
-        Me.MenuListadoConsumible.Name = "MenuListadoConsumible"
-        Me.MenuListadoConsumible.Size = New System.Drawing.Size(285, 22)
-        Me.MenuListadoConsumible.Text = "Reporte Consumibles"
+        Me.MenuListadoDeInfractores.Text = "Reporte General"
         '
         'ToolStripSeparator4
         '
@@ -447,6 +439,5 @@ Partial Class MenuPrincipal
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuConsultarIncidencias As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents MenuListadoConsumible As ToolStripMenuItem
     Friend WithEvents MenuConsultaConsumos As ToolStripMenuItem
 End Class

@@ -1018,7 +1018,7 @@ Public Class SeguimientoCarga
     Private Sub BotonConsulta2_Click(sender As Object, e As EventArgs) Handles BotonConsulta2.Click
         'Llamada al formulario ReporteInfraccion
 
-        ReporteInfraccion.ShowDialog()
+        ReporteGeneral.ShowDialog()
 
     End Sub
 

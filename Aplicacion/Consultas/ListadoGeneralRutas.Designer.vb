@@ -64,13 +64,13 @@ Partial Class ListadoGeneralRutas
         Me.Pagina1 = New System.Windows.Forms.TabPage()
         Me.Pagina2 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ColumnaUnidades = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaProducto2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaSitioCarga2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaDestino2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaImagen2 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -375,13 +375,6 @@ Partial Class ListadoGeneralRutas
         Me.DataGridView1.Size = New System.Drawing.Size(946, 522)
         Me.DataGridView1.TabIndex = 50
         '
-        'ImageList1
-        '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList1.Images.SetKeyName(0, "Extendido.png")
-        Me.ImageList1.Images.SetKeyName(1, "Agrupado.png")
-        '
         'ColumnaUnidades
         '
         Me.ColumnaUnidades.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
@@ -444,6 +437,13 @@ Partial Class ListadoGeneralRutas
         Me.ColumnaEstado2.Name = "ColumnaEstado2"
         Me.ColumnaEstado2.ReadOnly = True
         '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "Extendido.png")
+        Me.ImageList1.Images.SetKeyName(1, "Agrupado.png")
+        '
         'ListadoGeneralRutas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -454,6 +454,7 @@ Partial Class ListadoGeneralRutas
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.KeyPreview = True
         Me.Name = "ListadoGeneralRutas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Listado Completo de Rutas"

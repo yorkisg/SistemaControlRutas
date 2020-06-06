@@ -236,20 +236,13 @@ Public Class MenuPrincipal
     Private Sub MenuListadoDeInfractores_Click(sender As Object, e As EventArgs) Handles MenuListadoDeInfractores.Click
         'Formulario ListadoReporteInfraccion
 
-        ReporteInfraccion.ShowDialog()
+        ReporteGeneral.ShowDialog()
 
     End Sub
 
     Private Sub MenuConfiguracion_Click(sender As Object, e As EventArgs) Handles MenuConfiguracion.Click
 
         'AccesoAdministrador.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuListadoConsumible_Click(sender As Object, e As EventArgs) Handles MenuListadoConsumible.Click
-        'Formulario ListadoReporteInfraccion
-
-        ReporteConsumible.ShowDialog()
 
     End Sub
 
