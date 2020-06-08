@@ -470,7 +470,7 @@ Module ModuloSeguimientoLiviano
         If Mensaje = DialogResult.Yes Then
 
             'Se elimina el registro
-            Dim db As New MySqlCommand("DELETE FROM registroinfraccion WHERE idregistroinfraccion = '" & SeguimientoLiviano.TextBox19.Text & "' ", Conexion)
+            Dim db As New MySqlCommand("DELETE FROM registroinfraccion WHERE idregistroinfraccion = '" & SeguimientoLiviano.TextBox27.Text & "' ", Conexion)
             db.ExecuteNonQuery()
 
             'Se carga el historial actualizado

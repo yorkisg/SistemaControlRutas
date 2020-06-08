@@ -60,7 +60,7 @@ Public Class ReporteGeneral
 
             Else
 
-                Close()
+                Dispose()
 
             End If
 
@@ -159,7 +159,7 @@ Public Class ReporteGeneral
 
         Else
 
-            Close()
+            Dispose()
 
         End If
 

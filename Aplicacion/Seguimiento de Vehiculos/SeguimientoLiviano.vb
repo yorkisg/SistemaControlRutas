@@ -6,7 +6,7 @@ Public Class SeguimientoLiviano
     Dim Contador As Integer = 0
 
     Private Sub SeguimientoLiviano_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Metodos que cargaran al momento de desplegar el formulario.
+        ' Metodos que cargaran al momento de desplegar el formulario.
 
         'Metodo que inicializa el timer
         Timer1.Start()
@@ -388,6 +388,8 @@ Public Class SeguimientoLiviano
                 TextBox16.Text = DataGridView2.Item("ColumnaChofer", DataGridView2.SelectedRows(0).Index).Value
                 ObtenerPersonalSeguimientoLivianoInfraccion()
 
+                TextBox27.Text = DataGridView2.Item("ColumnaIDRegistro", DataGridView2.SelectedRows(0).Index).Value
+
             End If
 
         Catch ex As Exception
@@ -681,14 +683,6 @@ Public Class SeguimientoLiviano
         'Llama al formulario ReporteInfraccion.
 
         ReporteGeneral.ShowDialog()
-
-    End Sub
-
-    Private Sub BotonConsulta3_Click(sender As Object, e As EventArgs) Handles BotonConsulta3.Click
-        'Llama al formulario ReporteConsumible.
-
-        ReporteGeneral.ShowDialog()
-
 
     End Sub
 
