@@ -23,11 +23,14 @@ Partial Class ConsultaInfraccion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ConsultaInfraccion))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonFiltrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ComboTipo = New System.Windows.Forms.ToolStripComboBox()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonLimpiar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonExportar = New System.Windows.Forms.ToolStripButton()
@@ -35,6 +38,7 @@ Partial Class ConsultaInfraccion
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -65,7 +69,7 @@ Partial Class ConsultaInfraccion
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator5})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.ToolStripButton1, Me.ComboTipo, Me.ToolStripSeparator4, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator5})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1045, 25)
@@ -84,6 +88,29 @@ Partial Class ConsultaInfraccion
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(99, 22)
+        Me.ToolStripButton1.Text = "Tipo de Vehículo:"
+        '
+        'ComboTipo
+        '
+        Me.ComboTipo.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboTipo.FlatStyle = System.Windows.Forms.FlatStyle.Standard
+        Me.ComboTipo.Items.AddRange(New Object() {"CARGA", "LIVIANO"})
+        Me.ComboTipo.Name = "ComboTipo"
+        Me.ComboTipo.Size = New System.Drawing.Size(130, 25)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
         '
         'BotonLimpiar
         '
@@ -127,6 +154,7 @@ Partial Class ConsultaInfraccion
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -142,6 +170,16 @@ Partial Class ConsultaInfraccion
         Me.GroupBox1.TabIndex = 79
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SELECCIONAR PERÍODO DE FECHAS"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox2.Location = New System.Drawing.Point(58, 202)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(129, 22)
+        Me.TextBox2.TabIndex = 80
+        Me.TextBox2.Visible = False
         '
         'DateTimePicker1
         '
@@ -229,14 +267,14 @@ Partial Class ConsultaInfraccion
         Me.DataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaVehiculo, Me.ColumnaChofer, Me.ColumnaVelocidad, Me.ColumnaEstado, Me.ColumnaFecha, Me.ColumnaHora})
         Me.DataGridView.Dock = System.Windows.Forms.DockStyle.Fill
@@ -271,8 +309,8 @@ Partial Class ConsultaInfraccion
         'ColumnaChofer
         '
         Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle4
         Me.ColumnaChofer.HeaderText = "CHOFER"
         Me.ColumnaChofer.MinimumWidth = 100
         Me.ColumnaChofer.Name = "ColumnaChofer"
@@ -415,4 +453,8 @@ Partial Class ConsultaInfraccion
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
+    Friend WithEvents ToolStripButton1 As ToolStripLabel
+    Friend WithEvents ComboTipo As ToolStripComboBox
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents TextBox2 As TextBox
 End Class

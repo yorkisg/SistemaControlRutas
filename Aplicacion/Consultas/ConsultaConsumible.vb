@@ -14,6 +14,9 @@ Public Class ConsultaConsumible
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
 
+        'Decimos que el primer elemento activo del combo es "Activo"
+        ComboTipo.SelectedItem = "CARGA"
+
     End Sub
 
     Private Sub ConsultaConsumible_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
@@ -158,6 +161,13 @@ Public Class ConsultaConsumible
         TextBox3.Text = ""
         BotonBuscar1.Enabled = True
         Contador.Text = ""
+
+    End Sub
+
+    Private Sub ComboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboTipo.SelectedIndexChanged
+        'Evento donde seleccionamos el combobox y el elemento se va directamente al textbox
+
+        TextBox2.Text = ComboTipo.Text
 
     End Sub
 

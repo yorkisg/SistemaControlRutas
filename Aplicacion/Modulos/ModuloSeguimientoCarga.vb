@@ -237,7 +237,6 @@ Module ModuloSeguimientoCarga
                        & " AND ruta.estadoruta = estadoruta.idestado " _
                        & " AND idvehiculo = '" & SeguimientoCarga.TextBox1.Text & "' " _
                        & " ORDER BY idruta DESC"
-        '& " LIMIT 45 "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -247,7 +246,7 @@ Module ModuloSeguimientoCarga
         DataSet = New DataSet()
 
         'Llenado del datagridview
-        Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
+        Adaptador.Fill(DataSet, Iteracion, 15, "historialvehiculos")
         Tabla = DataSet.Tables("historialvehiculos")
         SeguimientoCarga.DataGridView2.DataSource = Tabla
 
@@ -267,7 +266,7 @@ Module ModuloSeguimientoCarga
     Public Sub Siguiente()
         'Metodo que permite paginar hacia adelante
 
-        Iteracion = Iteracion - 20
+        Iteracion = Iteracion - 15
 
         If Iteracion <= 0 Then
 
@@ -276,17 +275,17 @@ Module ModuloSeguimientoCarga
         End If
 
         DataSet.Clear()
-        Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
+        Adaptador.Fill(DataSet, Iteracion, 15, "historialvehiculos")
 
     End Sub
 
     Public Sub Anterior()
         'Metodo que permite paginar hacia atras
 
-        Iteracion = Iteracion + 20
+        Iteracion = Iteracion + 15
 
         DataSet.Clear()
-        Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
+        Adaptador.Fill(DataSet, Iteracion, 15, "historialvehiculos")
 
     End Sub
 
@@ -296,7 +295,7 @@ Module ModuloSeguimientoCarga
         Iteracion = 0
 
         DataSet.Clear()
-        Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
+        Adaptador.Fill(DataSet, Iteracion, 15, "historialvehiculos")
 
     End Sub
 
@@ -309,6 +308,7 @@ Module ModuloSeguimientoCarga
         'Adaptador.Fill(DataSet, Iteracion, 20, "historialvehiculos")
 
     End Sub
+
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''METODOS PARA OBTENER DATOS''''''''''''''''''''''''''''''''''''

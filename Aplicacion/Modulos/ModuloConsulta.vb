@@ -305,6 +305,7 @@ Module ModuloConsulta
                            & " FROM registroinfraccion, personal, vehiculo " _
                            & " WHERE registroinfraccion.personal = personal.idpersonal " _
                            & " AND registroinfraccion.vehiculo = vehiculo.idvehiculo " _
+                           & " AND clasificacionvehiculo = '" & ConsultaInfraccion.TextBox2.Text & "' " _
                            & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                            & " ORDER BY idregistroinfraccion DESC, fecha DESC, hora DESC ", Conexion)
 
@@ -371,6 +372,7 @@ Module ModuloConsulta
                            & " FROM registroincidencia, personal, vehiculo " _
                            & " WHERE registroincidencia.personal = personal.idpersonal " _
                            & " AND registroincidencia.vehiculo = vehiculo.idvehiculo " _
+                           & " AND clasificacionvehiculo = '" & ConsultaIncidencia.TextBox2.Text & "' " _
                            & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                            & " ORDER BY idregistroincidencia DESC, fecha DESC, hora DESC ", Conexion)
 
@@ -464,8 +466,10 @@ Module ModuloConsulta
         'ConsultaInfraccion
 
         Dim Command As New MySqlCommand("SELECT vehiculo, nombrepersonal, cantidadconsumida, consumototal, (cantidadconsumida-consumototal) AS 'diferencia', (kilometrajeactual-kilometrajeanterior) AS 'distancia', fecha, hora " _
-                           & " FROM registroconsumo, personal " _
+                           & " FROM registroconsumo, personal, vehiculo " _
                            & " WHERE registroconsumo.personal = personal.idpersonal " _
+                           & " AND registroconsumo.vehiculo = vehiculo.idvehiculo " _
+                           & " AND clasificacionvehiculo = '" & ConsultaConsumible.TextBox2.Text & "' " _
                            & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
                            & " ORDER BY fecha DESC, hora DESC ", Conexion)
 

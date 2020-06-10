@@ -63,6 +63,10 @@ Partial Class ConsultaConsumible
         Me.ColumnaDiferencia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ComboTipo = New System.Windows.Forms.ToolStripComboBox()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1.SuspendLayout()
         Me.ToolStrip2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -73,7 +77,7 @@ Partial Class ConsultaConsumible
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator5})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.ToolStripButton1, Me.ComboTipo, Me.ToolStripSeparator4, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator5})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1045, 25)
@@ -161,6 +165,7 @@ Partial Class ConsultaConsumible
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.BotonBuscar2)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
@@ -411,6 +416,39 @@ Partial Class ConsultaConsumible
         Me.ColumnaHora.ReadOnly = True
         Me.ColumnaHora.Width = 67
         '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox2.Location = New System.Drawing.Point(61, 216)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(129, 22)
+        Me.TextBox2.TabIndex = 84
+        Me.TextBox2.Visible = False
+        '
+        'ComboTipo
+        '
+        Me.ComboTipo.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboTipo.FlatStyle = System.Windows.Forms.FlatStyle.Standard
+        Me.ComboTipo.Items.AddRange(New Object() {"CARGA", "LIVIANO"})
+        Me.ComboTipo.Name = "ComboTipo"
+        Me.ComboTipo.Size = New System.Drawing.Size(130, 25)
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(99, 22)
+        Me.ToolStripButton1.Text = "Tipo de Vehículo:"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        '
         'ConsultaConsumible
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -476,4 +514,8 @@ Partial Class ConsultaConsumible
     Friend WithEvents ColumnaCantidad As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents ToolStripButton1 As ToolStripLabel
+    Friend WithEvents ComboTipo As ToolStripComboBox
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
 End Class
