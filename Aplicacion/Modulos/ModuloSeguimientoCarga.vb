@@ -236,7 +236,8 @@ Module ModuloSeguimientoCarga
                        & " AND ruta.producto = producto.idproducto " _
                        & " AND ruta.estadoruta = estadoruta.idestado " _
                        & " AND idvehiculo = '" & SeguimientoCarga.TextBox1.Text & "' " _
-                       & " ORDER BY idruta DESC"
+                       & " ORDER BY idruta DESC" _
+                       & " LIMIT 15 "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -246,7 +247,8 @@ Module ModuloSeguimientoCarga
         DataSet = New DataSet()
 
         'Llenado del datagridview
-        Adaptador.Fill(DataSet, Iteracion, 15, "historialvehiculos")
+        'Adaptador.Fill(DataSet, Iteracion, 15, "historialvehiculos")
+        Adaptador.Fill(DataSet, "historialvehiculos")
         Tabla = DataSet.Tables("historialvehiculos")
         SeguimientoCarga.DataGridView2.DataSource = Tabla
 

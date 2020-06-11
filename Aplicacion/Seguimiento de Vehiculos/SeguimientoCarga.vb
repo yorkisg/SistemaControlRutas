@@ -466,7 +466,7 @@ Public Class SeguimientoCarga
             CargarGridHistorialCarga()
 
             'Colocamos el historial en la primera pagina
-            Inicio()
+            'Inicio()
 
             BotonInicio.Enabled = False
             BotonSiguiente.Enabled = False
@@ -870,7 +870,7 @@ Public Class SeguimientoCarga
                 CargarGridHistorialCarga()
 
                 'Colocamos el historial en la primera pagina
-                Inicio()
+                'Inicio()
 
                 'Se habilita el metodo para incrementar el siguiente ID de las rutas.
                 SerieRutaCarga()
@@ -913,7 +913,7 @@ Public Class SeguimientoCarga
                 CargarGridHistorialCarga()
 
                 'Colocamos el historial en la primera pagina
-                Inicio()
+                'Inicio()
 
                 'Se habilita el metodo para incrementar el siguiente ID de las rutas.
                 SerieRutaCarga()
@@ -1025,7 +1025,7 @@ Public Class SeguimientoCarga
     Private Sub BotonSiguiente_Click(sender As Object, e As EventArgs) Handles BotonSiguiente.Click
         'Boton siguiente, permite navegar en el historial del vehiculo hacia las primeras rutas
 
-        Siguiente()
+        ' Siguiente()
 
         If DataGridView2.RowCount <> 0 Then
 
@@ -1046,7 +1046,7 @@ Public Class SeguimientoCarga
     Private Sub BotonAnterior_Click(sender As Object, e As EventArgs) Handles BotonAnterior.Click
         'Boton anterior, permite navegar en el historial del vehiculo hacia las ultimas rutas
 
-        Anterior()
+        'Anterior()
 
         If DataGridView2.RowCount = 0 Then
 
@@ -1348,7 +1348,6 @@ Public Class SeguimientoCarga
         End If
 
     End Sub
-
 
 
 End Class

@@ -24,22 +24,22 @@ Partial Class SeguimientoCarga
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SeguimientoCarga))
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Arbol = New System.Windows.Forms.TreeView()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -90,6 +90,13 @@ Partial Class SeguimientoCarga
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.TabControl()
         Me.Pagina1 = New System.Windows.Forms.TabPage()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.BotonBuscar1 = New System.Windows.Forms.Button()
         Me.BotonAgregar4 = New System.Windows.Forms.Button()
         Me.BotonBuscar4 = New System.Windows.Forms.Button()
@@ -100,7 +107,6 @@ Partial Class SeguimientoCarga
         Me.BotonBuscar3 = New System.Windows.Forms.Button()
         Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
         Me.BotonGuardar2 = New System.Windows.Forms.ToolStripButton()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -133,8 +139,6 @@ Partial Class SeguimientoCarga
         Me.ColumnaHora = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaImagen3 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.ColumnaEstado2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Panel3 = New System.Windows.Forms.TabControl()
-        Me.Pagina3 = New System.Windows.Forms.TabPage()
         Me.TextBox25 = New System.Windows.Forms.TextBox()
         Me.ErrorProvider4 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Label5 = New System.Windows.Forms.Label()
@@ -159,6 +163,7 @@ Partial Class SeguimientoCarga
         Me.BotonSiguiente = New System.Windows.Forms.ToolStripButton()
         Me.BotonInicio = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.ImageList3 = New System.Windows.Forms.ImageList(Me.components)
         Me.MenuPrincipal.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -170,7 +175,6 @@ Partial Class SeguimientoCarga
         Me.ToolStrip3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
         CType(Me.ErrorProvider4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -189,7 +193,7 @@ Partial Class SeguimientoCarga
         Me.Arbol.Location = New System.Drawing.Point(6, 6)
         Me.Arbol.Name = "Arbol"
         Me.Arbol.ShowNodeToolTips = True
-        Me.Arbol.Size = New System.Drawing.Size(196, 260)
+        Me.Arbol.Size = New System.Drawing.Size(214, 264)
         Me.Arbol.TabIndex = 20
         '
         'DateTimePicker1
@@ -376,9 +380,9 @@ Partial Class SeguimientoCarga
         '
         Me.TextBox20.Enabled = False
         Me.TextBox20.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox20.Location = New System.Drawing.Point(595, 21)
+        Me.TextBox20.Location = New System.Drawing.Point(617, 21)
         Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(76, 23)
+        Me.TextBox20.Size = New System.Drawing.Size(58, 23)
         Me.TextBox20.TabIndex = 75
         Me.TextBox20.Visible = False
         '
@@ -581,12 +585,19 @@ Partial Class SeguimientoCarga
         Me.Panel1.Location = New System.Drawing.Point(12, 28)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.SelectedIndex = 0
-        Me.Panel1.Size = New System.Drawing.Size(699, 325)
+        Me.Panel1.Size = New System.Drawing.Size(699, 328)
         Me.Panel1.TabIndex = 62
         '
         'Pagina1
         '
         Me.Pagina1.BackColor = System.Drawing.Color.White
+        Me.Pagina1.Controls.Add(Me.Label17)
+        Me.Pagina1.Controls.Add(Me.Label16)
+        Me.Pagina1.Controls.Add(Me.Label15)
+        Me.Pagina1.Controls.Add(Me.Label14)
+        Me.Pagina1.Controls.Add(Me.Label13)
+        Me.Pagina1.Controls.Add(Me.Label12)
+        Me.Pagina1.Controls.Add(Me.TextBox1)
         Me.Pagina1.Controls.Add(Me.TextBox20)
         Me.Pagina1.Controls.Add(Me.BotonBuscar1)
         Me.Pagina1.Controls.Add(Me.BotonAgregar4)
@@ -597,7 +608,6 @@ Partial Class SeguimientoCarga
         Me.Pagina1.Controls.Add(Me.BotonBuscar2)
         Me.Pagina1.Controls.Add(Me.BotonBuscar3)
         Me.Pagina1.Controls.Add(Me.ToolStrip3)
-        Me.Pagina1.Controls.Add(Me.TextBox1)
         Me.Pagina1.Controls.Add(Me.TextBox3)
         Me.Pagina1.Controls.Add(Me.Label1)
         Me.Pagina1.Controls.Add(Me.TextBox7)
@@ -615,14 +625,91 @@ Partial Class SeguimientoCarga
         Me.Pagina1.Location = New System.Drawing.Point(4, 24)
         Me.Pagina1.Name = "Pagina1"
         Me.Pagina1.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina1.Size = New System.Drawing.Size(691, 297)
+        Me.Pagina1.Size = New System.Drawing.Size(691, 300)
         Me.Pagina1.TabIndex = 0
         Me.Pagina1.Text = "FLOTA DE VEHICULOS DE CARGA"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Image = CType(resources.GetObject("Label17.Image"), System.Drawing.Image)
+        Me.Label17.Location = New System.Drawing.Point(226, 46)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(19, 15)
+        Me.Label17.TabIndex = 120
+        Me.Label17.Text = "    "
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Image = CType(resources.GetObject("Label16.Image"), System.Drawing.Image)
+        Me.Label16.Location = New System.Drawing.Point(226, 89)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(19, 15)
+        Me.Label16.TabIndex = 119
+        Me.Label16.Text = "    "
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Image = CType(resources.GetObject("Label15.Image"), System.Drawing.Image)
+        Me.Label15.Location = New System.Drawing.Point(226, 132)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(19, 15)
+        Me.Label15.TabIndex = 118
+        Me.Label15.Text = "    "
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Image = CType(resources.GetObject("Label14.Image"), System.Drawing.Image)
+        Me.Label14.Location = New System.Drawing.Point(226, 175)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(19, 15)
+        Me.Label14.TabIndex = 117
+        Me.Label14.Text = "    "
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Image = CType(resources.GetObject("Label13.Image"), System.Drawing.Image)
+        Me.Label13.Location = New System.Drawing.Point(226, 218)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(19, 15)
+        Me.Label13.TabIndex = 116
+        Me.Label13.Text = "    "
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Image = CType(resources.GetObject("Label12.Image"), System.Drawing.Image)
+        Me.Label12.Location = New System.Drawing.Point(226, 3)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(19, 15)
+        Me.Label12.TabIndex = 115
+        Me.Label12.Text = "    "
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.AliceBlue
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.ForeColor = System.Drawing.Color.Black
+        Me.TextBox1.Location = New System.Drawing.Point(229, 21)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(382, 22)
+        Me.TextBox1.TabIndex = 79
         '
         'BotonBuscar1
         '
         Me.BotonBuscar1.Image = CType(resources.GetObject("BotonBuscar1.Image"), System.Drawing.Image)
-        Me.BotonBuscar1.Location = New System.Drawing.Point(611, 61)
+        Me.BotonBuscar1.Location = New System.Drawing.Point(629, 61)
         Me.BotonBuscar1.Name = "BotonBuscar1"
         Me.BotonBuscar1.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar1.TabIndex = 100
@@ -631,7 +718,7 @@ Partial Class SeguimientoCarga
         'BotonAgregar4
         '
         Me.BotonAgregar4.Image = CType(resources.GetObject("BotonAgregar4.Image"), System.Drawing.Image)
-        Me.BotonAgregar4.Location = New System.Drawing.Point(638, 147)
+        Me.BotonAgregar4.Location = New System.Drawing.Point(656, 147)
         Me.BotonAgregar4.Name = "BotonAgregar4"
         Me.BotonAgregar4.Size = New System.Drawing.Size(28, 28)
         Me.BotonAgregar4.TabIndex = 99
@@ -640,7 +727,7 @@ Partial Class SeguimientoCarga
         'BotonBuscar4
         '
         Me.BotonBuscar4.Image = CType(resources.GetObject("BotonBuscar4.Image"), System.Drawing.Image)
-        Me.BotonBuscar4.Location = New System.Drawing.Point(611, 147)
+        Me.BotonBuscar4.Location = New System.Drawing.Point(629, 147)
         Me.BotonBuscar4.Name = "BotonBuscar4"
         Me.BotonBuscar4.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar4.TabIndex = 98
@@ -649,7 +736,7 @@ Partial Class SeguimientoCarga
         'BotonAgregar2
         '
         Me.BotonAgregar2.Image = CType(resources.GetObject("BotonAgregar2.Image"), System.Drawing.Image)
-        Me.BotonAgregar2.Location = New System.Drawing.Point(638, 104)
+        Me.BotonAgregar2.Location = New System.Drawing.Point(656, 104)
         Me.BotonAgregar2.Name = "BotonAgregar2"
         Me.BotonAgregar2.Size = New System.Drawing.Size(28, 28)
         Me.BotonAgregar2.TabIndex = 95
@@ -658,7 +745,7 @@ Partial Class SeguimientoCarga
         'BotonAgregar3
         '
         Me.BotonAgregar3.Image = CType(resources.GetObject("BotonAgregar3.Image"), System.Drawing.Image)
-        Me.BotonAgregar3.Location = New System.Drawing.Point(638, 190)
+        Me.BotonAgregar3.Location = New System.Drawing.Point(656, 190)
         Me.BotonAgregar3.Name = "BotonAgregar3"
         Me.BotonAgregar3.Size = New System.Drawing.Size(28, 28)
         Me.BotonAgregar3.TabIndex = 94
@@ -667,7 +754,7 @@ Partial Class SeguimientoCarga
         'BotonAgregar1
         '
         Me.BotonAgregar1.Image = CType(resources.GetObject("BotonAgregar1.Image"), System.Drawing.Image)
-        Me.BotonAgregar1.Location = New System.Drawing.Point(638, 61)
+        Me.BotonAgregar1.Location = New System.Drawing.Point(656, 61)
         Me.BotonAgregar1.Name = "BotonAgregar1"
         Me.BotonAgregar1.Size = New System.Drawing.Size(28, 28)
         Me.BotonAgregar1.TabIndex = 93
@@ -676,7 +763,7 @@ Partial Class SeguimientoCarga
         'BotonBuscar2
         '
         Me.BotonBuscar2.Image = CType(resources.GetObject("BotonBuscar2.Image"), System.Drawing.Image)
-        Me.BotonBuscar2.Location = New System.Drawing.Point(611, 104)
+        Me.BotonBuscar2.Location = New System.Drawing.Point(629, 104)
         Me.BotonBuscar2.Name = "BotonBuscar2"
         Me.BotonBuscar2.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar2.TabIndex = 91
@@ -685,7 +772,7 @@ Partial Class SeguimientoCarga
         'BotonBuscar3
         '
         Me.BotonBuscar3.Image = CType(resources.GetObject("BotonBuscar3.Image"), System.Drawing.Image)
-        Me.BotonBuscar3.Location = New System.Drawing.Point(611, 190)
+        Me.BotonBuscar3.Location = New System.Drawing.Point(629, 190)
         Me.BotonBuscar3.Name = "BotonBuscar3"
         Me.BotonBuscar3.Size = New System.Drawing.Size(28, 28)
         Me.BotonBuscar3.TabIndex = 92
@@ -696,7 +783,7 @@ Partial Class SeguimientoCarga
         Me.ToolStrip3.BackColor = System.Drawing.Color.AliceBlue
         Me.ToolStrip3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar2})
-        Me.ToolStrip3.Location = New System.Drawing.Point(3, 269)
+        Me.ToolStrip3.Location = New System.Drawing.Point(3, 272)
         Me.ToolStrip3.Name = "ToolStrip3"
         Me.ToolStrip3.Size = New System.Drawing.Size(685, 25)
         Me.ToolStrip3.TabIndex = 113
@@ -712,16 +799,6 @@ Partial Class SeguimientoCarga
         Me.BotonGuardar2.Size = New System.Drawing.Size(100, 22)
         Me.BotonGuardar2.Text = "Registrar Ruta"
         '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.SkyBlue
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(211, 21)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(382, 22)
-        Me.TextBox1.TabIndex = 79
-        '
         'TextBox3
         '
         Me.TextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
@@ -730,7 +807,7 @@ Partial Class SeguimientoCarga
         Me.TextBox3.Enabled = False
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(211, 107)
+        Me.TextBox3.Location = New System.Drawing.Point(229, 107)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(382, 22)
         Me.TextBox3.TabIndex = 82
@@ -739,7 +816,7 @@ Partial Class SeguimientoCarga
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label1.Location = New System.Drawing.Point(208, 3)
+        Me.Label1.Location = New System.Drawing.Point(251, 3)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 15)
         Me.Label1.TabIndex = 80
@@ -751,7 +828,7 @@ Partial Class SeguimientoCarga
         Me.TextBox7.Enabled = False
         Me.TextBox7.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox7.ForeColor = System.Drawing.Color.Black
-        Me.TextBox7.Location = New System.Drawing.Point(211, 150)
+        Me.TextBox7.Location = New System.Drawing.Point(229, 150)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(382, 22)
         Me.TextBox7.TabIndex = 96
@@ -762,7 +839,7 @@ Partial Class SeguimientoCarga
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(211, 236)
+        Me.ComboBox1.Location = New System.Drawing.Point(229, 236)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(382, 21)
         Me.ComboBox1.TabIndex = 88
@@ -773,7 +850,7 @@ Partial Class SeguimientoCarga
         Me.TextBox6.Enabled = False
         Me.TextBox6.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.ForeColor = System.Drawing.Color.Black
-        Me.TextBox6.Location = New System.Drawing.Point(211, 64)
+        Me.TextBox6.Location = New System.Drawing.Point(229, 64)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(382, 22)
         Me.TextBox6.TabIndex = 89
@@ -782,7 +859,7 @@ Partial Class SeguimientoCarga
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label9.Location = New System.Drawing.Point(208, 89)
+        Me.Label9.Location = New System.Drawing.Point(251, 89)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(94, 15)
         Me.Label9.TabIndex = 87
@@ -794,7 +871,7 @@ Partial Class SeguimientoCarga
         Me.TextBox8.Enabled = False
         Me.TextBox8.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox8.ForeColor = System.Drawing.Color.Black
-        Me.TextBox8.Location = New System.Drawing.Point(211, 193)
+        Me.TextBox8.Location = New System.Drawing.Point(229, 193)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(382, 22)
         Me.TextBox8.TabIndex = 90
@@ -803,7 +880,7 @@ Partial Class SeguimientoCarga
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label8.Location = New System.Drawing.Point(208, 132)
+        Me.Label8.Location = New System.Drawing.Point(251, 132)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(111, 15)
         Me.Label8.TabIndex = 97
@@ -813,7 +890,7 @@ Partial Class SeguimientoCarga
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label7.Location = New System.Drawing.Point(208, 46)
+        Me.Label7.Location = New System.Drawing.Point(251, 46)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(119, 15)
         Me.Label7.TabIndex = 86
@@ -823,7 +900,7 @@ Partial Class SeguimientoCarga
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label6.Location = New System.Drawing.Point(208, 175)
+        Me.Label6.Location = New System.Drawing.Point(251, 175)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(52, 15)
         Me.Label6.TabIndex = 85
@@ -833,7 +910,7 @@ Partial Class SeguimientoCarga
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label3.Location = New System.Drawing.Point(208, 218)
+        Me.Label3.Location = New System.Drawing.Point(251, 218)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(118, 15)
         Me.Label3.TabIndex = 83
@@ -856,24 +933,24 @@ Partial Class SeguimientoCarga
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaTipoVehiculo, Me.ColumnaImagen1, Me.ColumnaEstadoVehiculo, Me.ColumnaImagen2, Me.ColumnaEstadoVehiculo2})
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle31
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.InactiveBorder
         Me.DataGridView1.Location = New System.Drawing.Point(717, 28)
         Me.DataGridView1.MultiSelect = False
@@ -881,10 +958,10 @@ Partial Class SeguimientoCarga
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.RowHeadersWidth = 45
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle32
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.ShowEditingIcon = False
         Me.DataGridView1.Size = New System.Drawing.Size(608, 726)
@@ -894,8 +971,8 @@ Partial Class SeguimientoCarga
         '
         Me.ColumnaID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaID.DataPropertyName = "idvehiculo"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.ColumnaID.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.ColumnaID.DefaultCellStyle = DataGridViewCellStyle27
         Me.ColumnaID.FillWeight = 19.49362!
         Me.ColumnaID.HeaderText = "VEHICULO"
         Me.ColumnaID.Name = "ColumnaID"
@@ -907,9 +984,9 @@ Partial Class SeguimientoCarga
         '
         Me.ColumnaTipoVehiculo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaTipoVehiculo.DataPropertyName = "nombretipo"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaTipoVehiculo.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaTipoVehiculo.DefaultCellStyle = DataGridViewCellStyle28
         Me.ColumnaTipoVehiculo.FillWeight = 26.29328!
         Me.ColumnaTipoVehiculo.HeaderText = "TIPO"
         Me.ColumnaTipoVehiculo.Name = "ColumnaTipoVehiculo"
@@ -929,9 +1006,9 @@ Partial Class SeguimientoCarga
         'ColumnaEstadoVehiculo
         '
         Me.ColumnaEstadoVehiculo.DataPropertyName = "estadoactual"
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstadoVehiculo.DefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstadoVehiculo.DefaultCellStyle = DataGridViewCellStyle29
         Me.ColumnaEstadoVehiculo.FillWeight = 65.84335!
         Me.ColumnaEstadoVehiculo.HeaderText = "ESTADO ACTUAL DE LA RUTA"
         Me.ColumnaEstadoVehiculo.Name = "ColumnaEstadoVehiculo"
@@ -950,9 +1027,9 @@ Partial Class SeguimientoCarga
         'ColumnaEstadoVehiculo2
         '
         Me.ColumnaEstadoVehiculo2.DataPropertyName = "condicionvehiculo"
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstadoVehiculo2.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstadoVehiculo2.DefaultCellStyle = DataGridViewCellStyle30
         Me.ColumnaEstadoVehiculo2.FillWeight = 380.7106!
         Me.ColumnaEstadoVehiculo2.HeaderText = "CONDICIONES"
         Me.ColumnaEstadoVehiculo2.Name = "ColumnaEstadoVehiculo2"
@@ -969,14 +1046,14 @@ Partial Class SeguimientoCarga
         Me.DataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ButtonFace
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.ButtonFace
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID2, Me.ColunmaVehiculo, Me.ColumnaChofer, Me.ColumnaProducto, Me.ColumnaUbicacion, Me.ColumnaDestino, Me.ColumnaImagen, Me.ColumnaEstado, Me.ColumnaFecha, Me.ColumnaHora, Me.ColumnaImagen3, Me.ColumnaEstado2})
         Me.DataGridView2.GridColor = System.Drawing.SystemColors.InactiveBorder
@@ -986,8 +1063,8 @@ Partial Class SeguimientoCarga
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.RowHeadersVisible = False
         Me.DataGridView2.RowHeadersWidth = 45
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle25
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(699, 367)
         Me.DataGridView2.TabIndex = 61
@@ -1003,8 +1080,8 @@ Partial Class SeguimientoCarga
         'ColunmaVehiculo
         '
         Me.ColunmaVehiculo.DataPropertyName = "idvehiculo"
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColunmaVehiculo.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColunmaVehiculo.DefaultCellStyle = DataGridViewCellStyle18
         Me.ColunmaVehiculo.HeaderText = "VEHICULO"
         Me.ColunmaVehiculo.Name = "ColunmaVehiculo"
         Me.ColunmaVehiculo.ReadOnly = True
@@ -1014,8 +1091,8 @@ Partial Class SeguimientoCarga
         '
         Me.ColumnaChofer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaChofer.DataPropertyName = "nombrepersonal"
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaChofer.DefaultCellStyle = DataGridViewCellStyle19
         Me.ColumnaChofer.FillWeight = 21.44374!
         Me.ColumnaChofer.HeaderText = "CHOFER"
         Me.ColumnaChofer.Name = "ColumnaChofer"
@@ -1026,8 +1103,8 @@ Partial Class SeguimientoCarga
         '
         Me.ColumnaProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaProducto.DataPropertyName = "nombreproducto"
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaProducto.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaProducto.DefaultCellStyle = DataGridViewCellStyle20
         Me.ColumnaProducto.FillWeight = 21.44374!
         Me.ColumnaProducto.HeaderText = "PRODUCTO"
         Me.ColumnaProducto.Name = "ColumnaProducto"
@@ -1036,8 +1113,8 @@ Partial Class SeguimientoCarga
         'ColumnaUbicacion
         '
         Me.ColumnaUbicacion.DataPropertyName = "nombresitiocarga"
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaUbicacion.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaUbicacion.DefaultCellStyle = DataGridViewCellStyle21
         Me.ColumnaUbicacion.FillWeight = 21.44374!
         Me.ColumnaUbicacion.HeaderText = "SITIO DE CARGA"
         Me.ColumnaUbicacion.Name = "ColumnaUbicacion"
@@ -1046,8 +1123,8 @@ Partial Class SeguimientoCarga
         'ColumnaDestino
         '
         Me.ColumnaDestino.DataPropertyName = "nombredestino"
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaDestino.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaDestino.DefaultCellStyle = DataGridViewCellStyle22
         Me.ColumnaDestino.FillWeight = 21.44374!
         Me.ColumnaDestino.HeaderText = "DESTINO"
         Me.ColumnaDestino.Name = "ColumnaDestino"
@@ -1068,8 +1145,8 @@ Partial Class SeguimientoCarga
         '
         Me.ColumnaEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaEstado.DataPropertyName = "nombreestado"
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstado.DefaultCellStyle = DataGridViewCellStyle23
         Me.ColumnaEstado.FillWeight = 145.8175!
         Me.ColumnaEstado.HeaderText = "ESTADO"
         Me.ColumnaEstado.MinimumWidth = 85
@@ -1112,9 +1189,9 @@ Partial Class SeguimientoCarga
         '
         Me.ColumnaEstado2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
         Me.ColumnaEstado2.DataPropertyName = "estado"
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        Me.ColumnaEstado2.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle24.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ColumnaEstado2.DefaultCellStyle = DataGridViewCellStyle24
         Me.ColumnaEstado2.FillWeight = 2.0!
         Me.ColumnaEstado2.HeaderText = "ESTADO 2"
         Me.ColumnaEstado2.MinimumWidth = 2
@@ -1122,29 +1199,6 @@ Partial Class SeguimientoCarga
         Me.ColumnaEstado2.ReadOnly = True
         Me.ColumnaEstado2.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.ColumnaEstado2.Width = 2
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.Pagina3)
-        Me.Panel3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel3.ImageList = Me.ImageList1
-        Me.Panel3.Location = New System.Drawing.Point(501, 422)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.SelectedIndex = 0
-        Me.Panel3.Size = New System.Drawing.Size(90, 100)
-        Me.Panel3.TabIndex = 84
-        '
-        'Pagina3
-        '
-        Me.Pagina3.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.Pagina3.ImageIndex = 2
-        Me.Pagina3.Location = New System.Drawing.Point(4, 24)
-        Me.Pagina3.Name = "Pagina3"
-        Me.Pagina3.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina3.Size = New System.Drawing.Size(82, 72)
-        Me.Pagina3.TabIndex = 0
-        Me.Pagina3.Text = "HISTORIAL DE MOVIMIENTOS (Ultimos 30 Movimientos)"
-        Me.Pagina3.UseVisualStyleBackColor = True
         '
         'TextBox25
         '
@@ -1287,20 +1341,21 @@ Partial Class SeguimientoCarga
         Me.Tiempo.Name = "Tiempo"
         Me.Tiempo.Size = New System.Drawing.Size(48, 22)
         Me.Tiempo.Text = "Tiempo"
+        Me.Tiempo.Visible = False
         '
         'ToolStripLabel4
         '
         Me.ToolStripLabel4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripLabel4.Image = CType(resources.GetObject("ToolStripLabel4.Image"), System.Drawing.Image)
         Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(60, 22)
-        Me.ToolStripLabel4.Text = "Sesión:"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(63, 22)
+        Me.ToolStripLabel4.Text = "Usuario"
         '
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFinal, Me.BotonAnterior, Me.ToolStripSeparator2, Me.BotonSiguiente, Me.BotonInicio})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 345)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 370)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(699, 25)
         Me.ToolStrip1.TabIndex = 118
@@ -1320,6 +1375,7 @@ Partial Class SeguimientoCarga
         'BotonAnterior
         '
         Me.BotonAnterior.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.BotonAnterior.Enabled = False
         Me.BotonAnterior.Image = CType(resources.GetObject("BotonAnterior.Image"), System.Drawing.Image)
         Me.BotonAnterior.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BotonAnterior.Name = "BotonAnterior"
@@ -1360,12 +1416,22 @@ Partial Class SeguimientoCarga
         Me.ToolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.ToolStrip1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DataGridView2)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(699, 370)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(699, 395)
         Me.ToolStripContainer1.Location = New System.Drawing.Point(12, 359)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         Me.ToolStripContainer1.Size = New System.Drawing.Size(699, 395)
         Me.ToolStripContainer1.TabIndex = 119
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        '
+        'ImageList3
+        '
+        Me.ImageList3.ImageStream = CType(resources.GetObject("ImageList3.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList3.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList3.Images.SetKeyName(0, "Vehiculo6.png")
+        Me.ImageList3.Images.SetKeyName(1, "Consumo4.png")
+        Me.ImageList3.Images.SetKeyName(2, "Consumo3.png")
+        Me.ImageList3.Images.SetKeyName(3, "Ir.png")
+        Me.ImageList3.Images.SetKeyName(4, "Consumible3.png")
         '
         'SeguimientoCarga
         '
@@ -1375,7 +1441,6 @@ Partial Class SeguimientoCarga
         Me.ClientSize = New System.Drawing.Size(1337, 782)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.ToolStrip2)
-        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.MenuPrincipal)
@@ -1428,7 +1493,6 @@ Partial Class SeguimientoCarga
         Me.ToolStrip3.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
         CType(Me.ErrorProvider4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip2.ResumeLayout(False)
@@ -1491,8 +1555,6 @@ Partial Class SeguimientoCarga
     Friend WithEvents Panel1 As System.Windows.Forms.TabControl
     Friend WithEvents Pagina1 As System.Windows.Forms.TabPage
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Panel3 As System.Windows.Forms.TabControl
-    Friend WithEvents Pagina3 As System.Windows.Forms.TabPage
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents TextBox25 As System.Windows.Forms.TextBox
     Friend WithEvents ErrorProvider4 As System.Windows.Forms.ErrorProvider
@@ -1504,7 +1566,6 @@ Partial Class SeguimientoCarga
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents MenuAgregarIncidencia As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ErrorProvider5 As System.Windows.Forms.ErrorProvider
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
@@ -1550,6 +1611,14 @@ Partial Class SeguimientoCarga
     Friend WithEvents BotonInicio As ToolStripButton
     Friend WithEvents Tiempo As ToolStripLabel
     Friend WithEvents ToolStripLabel4 As ToolStripLabel
+    Friend WithEvents Label12 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents ImageList3 As ImageList
     Friend WithEvents ColumnaEstado2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaImagen3 As DataGridViewImageColumn
     Friend WithEvents ColumnaHora As DataGridViewTextBoxColumn

@@ -17,6 +17,8 @@ Public Class GuiaTelefonica
         'Decimos que el primer elemento activo del combo es "Activo"
         ComboEstadoPersona.SelectedItem = "ACTIVO"
 
+        ActiveControl = TextBox.Control
+
     End Sub
 
     Private Sub GuiaTelefonica_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
