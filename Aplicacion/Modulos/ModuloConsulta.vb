@@ -826,6 +826,87 @@ Module ModuloConsulta
 
     End Sub
 
+    Public Sub CargarGridEstatusProducto()
+        'Metodo que genera la carga de datos en el DataGridview2.
+
+        Dim sql As String = "SELECT nombresubflota AS 'Grupo', COUNT(vehiculo) AS 'Unidades', nombreproducto AS 'Producto' " _
+                            & " FROM ruta, producto, grupo, subflota, estadoruta, vehiculo  " _
+                            & " WHERE ruta.producto = producto.idproducto   " _
+                            & " AND ruta.vehiculo = vehiculo.idvehiculo    " _
+                            & " AND vehiculo.grupo = grupo.idgrupo  " _
+                            & " AND grupo.subflota = subflota.idsubflota   " _
+                            & " AND ruta.estadoruta = estadoruta.idestado   " _
+                            & " AND estado = 'ACTIVA'   " _
+                            & " AND nombreestado Not IN ('EN TALLER')  " _
+                            & " GROUP BY nombreproducto   " _
+                            & " ORDER BY nombreproducto ASC "
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview
+        Adaptador.Fill(DataSet, "estatusactual")
+        Tabla = DataSet.Tables("estatusactual")
+        ListadoGeneralRutas.DataGridView2.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ListadoGeneralRutas.DataGridView2
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        'Mostramos la cantidad de registros encontrados
+        'ListadoGeneralRutas.Contador.Text = ListadoGeneralRutas.DataGridView2.RowCount
+
+        'Quitamos la seleccion de cualquier fila del datagridview
+        ListadoGeneralRutas.DataGridView2.ClearSelection()
+
+    End Sub
+
+    Public Sub CargarGridEstatusGrupo()
+        'Metodo que genera la carga de datos en el DataGridview2.
+
+        Dim sql As String = "SELECT nombresubflota AS 'Grupo', COUNT(vehiculo) AS 'Unidades' " _
+                            & " FROM ruta, grupo, subflota, estadoruta, vehiculo  " _
+                            & " WHERE ruta.vehiculo = vehiculo.idvehiculo    " _
+                            & " AND vehiculo.grupo = grupo.idgrupo  " _
+                            & " AND grupo.subflota = subflota.idsubflota   " _
+                            & " AND ruta.estadoruta = estadoruta.idestado   " _
+                            & " AND estado = 'ACTIVA'   " _
+                            & " AND nombreestado Not IN ('EN TALLER')  " _
+                            & " GROUP BY nombresubflota   " _
+                            & " ORDER BY nombresubflota ASC "
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview
+        Adaptador.Fill(DataSet, "estatusactualgrupo")
+        Tabla = DataSet.Tables("estatusactualgrupo")
+        ListadoGeneralRutas.DataGridView3.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ListadoGeneralRutas.DataGridView3
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        'Mostramos la cantidad de registros encontrados
+        'ListadoGeneralRutas.Contador.Text = ListadoGeneralRutas.DataGridView2.RowCount
+
+        'Quitamos la seleccion de cualquier fila del datagridview
+        ListadoGeneralRutas.DataGridView3.ClearSelection()
+
+    End Sub
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''GUIA TELEFONICA'''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

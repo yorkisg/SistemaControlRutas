@@ -7,13 +7,20 @@ Public Class ListadoGeneralRutas
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
         AlternarFilasGeneral(DataGridView1)
+        AlternarFilasGeneral(DataGridView2)
+        AlternarFilasGeneral(DataGridView3)
 
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
         EnableDoubleBuffered(DataGridView1)
+        EnableDoubleBuffered(DataGridView2)
+        EnableDoubleBuffered(DataGridView3)
 
         'Carga del combobox de los grupos
         CargarComboGrupo()
+
+        CargarGridEstatusProducto()
+        CargarGridEstatusGrupo()
 
     End Sub
 
@@ -406,6 +413,16 @@ Public Class ListadoGeneralRutas
             DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
         Next
 
+        For i As Integer = 0 To DataGridView2.RowCount - 1
+            'Eliminamos elemento por elemento
+            DataGridView2.Rows.Remove(DataGridView2.CurrentRow)
+        Next
+
+        For i As Integer = 0 To DataGridView3.RowCount - 1
+            'Eliminamos elemento por elemento
+            DataGridView3.Rows.Remove(DataGridView3.CurrentRow)
+        Next
+
     End Sub
 
     Private Sub CargarComboGrupo()
@@ -461,6 +478,27 @@ Public Class ListadoGeneralRutas
         End If
 
     End Sub
+
+    Private Sub Panel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Panel.SelectedIndexChanged
+        'Evento donde se seleccionan los tabs del tabcontrol (paginas) y luego se cargan metodos dependiendo del index del tab
+
+        If Panel.SelectedIndex = 0 Then
+
+            DataGridView.ClearSelection()
+
+        ElseIf Panel.SelectedIndex = 1 Then
+
+            DataGridView1.ClearSelection()
+
+        ElseIf Panel.SelectedIndex = 2 Then
+
+            DataGridView2.ClearSelection()
+            DataGridView3.ClearSelection()
+
+        End If
+
+    End Sub
+
 
 
 End Class

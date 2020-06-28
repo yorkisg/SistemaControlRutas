@@ -37,6 +37,9 @@ Public Class MaestroVehiculo
         If (e.KeyCode = Keys.Escape) Then
             'Cierre del formulario
 
+            ComboCondicion.Dispose()
+            ComboEstado.Dispose()
+
             LimpiarComponentes()
             Dispose()
 

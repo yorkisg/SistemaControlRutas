@@ -66,6 +66,8 @@ Public Class SeguimientoCarga
 
         If (e.KeyCode = Keys.Escape) Then
 
+            ComboBox1.Dispose()
+
             If DataGridView1.RowCount > 0 Or DataGridView2.RowCount > 0 Then
 
                 'Llamada al metodo para poder limpiar el arbol
