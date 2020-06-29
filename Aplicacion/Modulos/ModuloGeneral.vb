@@ -17,6 +17,11 @@ Module ModuloGeneral
     Public Arreglo As New ArrayList
     Public Arreglo2 As New ArrayList
 
+    'Lista para agrupar datos
+    Public ListaAgrupadaEstatusActual As New Subro.Controls.DataGridViewGrouper
+    Public ListaAgrupadaListadoExtendido As New Subro.Controls.DataGridViewGrouper
+    Public ListaAgrupadaListadoAgrupado As New Subro.Controls.DataGridViewGrouper
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''CONEXION A LA BD''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

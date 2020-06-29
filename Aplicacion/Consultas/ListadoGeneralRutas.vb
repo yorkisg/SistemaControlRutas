@@ -7,7 +7,7 @@ Public Class ListadoGeneralRutas
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
         AlternarFilasGeneral(DataGridView1)
-        'AlternarFilasGeneral(DataGridView2)
+        AlternarFilasGeneral(DataGridView2)
         AlternarFilasGeneral(DataGridView3)
 
         'Se llama al metodo para que cargue rapido el datagridview
@@ -16,11 +16,17 @@ Public Class ListadoGeneralRutas
         EnableDoubleBuffered(DataGridView2)
         EnableDoubleBuffered(DataGridView3)
 
-        'Carga del combobox de los grupos
-        CargarComboGrupo()
+        'Llamada a los metodos de carga de datos
+        CargarGridGeneralVehiculo()
+        CargarGridResumenVehiculo()
 
         CargarGridEstatusProducto()
         CargarGridEstatusGrupo()
+
+        'Mandamos a agrupar los datos
+        AgruparListaEstatusActual()
+        AgruparListaExtendida()
+        AgruparListaAgrupada()
 
     End Sub
 
@@ -425,60 +431,6 @@ Public Class ListadoGeneralRutas
 
     End Sub
 
-    Private Sub CargarComboGrupo()
-        'Metodo que permite cargar el Combobox desde la BD.
-
-        Dim Tabla As New DataTable
-        Dim Adaptador As New MySqlDataAdapter
-
-        Adaptador = New MySqlDataAdapter("SELECT idgrupo, nombregrupo " _
-                                    & " FROM subflota, grupo " _
-                                    & " WHERE grupo.subflota = subflota.idsubflota " _
-                                    & " AND tiposubflota = 'CARGA' ", Conexion)
-
-        Adaptador.Fill(Tabla)
-
-        'Este codigo inserta un valor no perteneciente al DATATABLE q trae la informacion de la BD
-        Dim row As DataRow = Tabla.NewRow()
-        row(0) = 0
-
-        'Este es el valor que insertamos
-        row(1) = "--- TODOS LOS GRUPOS ---"
-        Tabla.Rows.InsertAt(row, 0)
-
-        With ComboGrupo.ComboBox
-
-            .DataSource = Tabla
-            .DisplayMember = "nombregrupo"
-            .ValueMember = "idgrupo"
-            .SelectedIndex = 0
-
-        End With
-
-    End Sub
-
-    Private Sub ComboGrupo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboGrupo.SelectedIndexChanged
-
-        'Enviamos el texto seleccionado del combobox al textbox
-        TextBox1.Text = ComboGrupo.ComboBox.Text
-
-        'si el item seleccionado es el primero
-        If TextBox1.Text = "--- TODOS LOS GRUPOS ---" Then
-
-            'Se cargan los elementos generales
-            CargarGridGeneralVehiculo()
-            CargarGridResumenVehiculo()
-
-        ElseIf TextBox1.Text <> "--- TODOS LOS GRUPOS ---" Then
-
-            'Se cargan los elementos por grupo
-            CargarGridGeneralVehiculoGrupo()
-            CargarGridResumenVehiculoGrupo()
-
-        End If
-
-    End Sub
-
     Private Sub Panel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Panel.SelectedIndexChanged
         'Evento donde se seleccionan los tabs del tabcontrol (paginas) y luego se cargan metodos dependiendo del index del tab
 
@@ -492,7 +444,7 @@ Public Class ListadoGeneralRutas
 
         ElseIf Panel.SelectedIndex = 2 Then
 
-            CalcularTotal()
+            ' CalcularTotal()
 
             DataGridView2.ClearSelection()
             DataGridView3.ClearSelection()
@@ -551,58 +503,6 @@ Public Class ListadoGeneralRutas
 
         End If
 
-
-    End Sub
-
-    Private Sub DataGridView2_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView2.CellFormatting
-        'CellFormatting: Propiedad del control DataGridview el cual permite cambiar 
-        'y dar formato a las celdas, bien sea por color de texto, fondo, etc.
-
-        Try
-
-            For Each Fila As DataGridViewRow In DataGridView2.Rows
-
-                If Fila.Cells("ColumnaGrupo").Value = "CARNES EL PAZO" Then
-
-                    Fila.DefaultCellStyle.BackColor = Color.FloralWhite
-
-                ElseIf Fila.Cells("ColumnaGrupo").Value = "INSUMOS" Then
-
-                    Fila.DefaultCellStyle.BackColor = Color.SeaShell
-
-                ElseIf Fila.Cells("ColumnaGrupo").Value = "GRANEL" Then
-
-                    Fila.DefaultCellStyle.BackColor = Color.AliceBlue
-
-                ElseIf Fila.Cells("ColumnaGrupo").Value = "PRODUCTOS TRADICIONALES" Then
-
-                    Fila.DefaultCellStyle.BackColor = Color.GhostWhite
-
-                End If
-
-            Next
-
-        Catch ex As Exception
-
-            MsgBox("No se pudo completar la operación.2", MsgBoxStyle.Exclamation, "Error.")
-
-        End Try
-
-    End Sub
-
-    Private Sub CalcularTotal()
-        'Metodo para sumar el total de la columna
-
-        Dim Total As Single
-        Dim Columna As Integer = 1
-
-        For Each row As DataGridViewRow In DataGridView2.Rows
-
-            Total += Val(row.Cells(Columna).Value)
-
-        Next
-
-        Contador3.Text = Total.ToString
 
     End Sub
 

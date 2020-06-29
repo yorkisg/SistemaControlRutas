@@ -9,6 +9,8 @@ Module ModuloConsulta
     Public Exceso As Image
     Public Consumo As Image
 
+
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CONSULTAS GENERALES'''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -645,7 +647,7 @@ Module ModuloConsulta
     Public Sub CargarGridGeneralVehiculo()
         'Metodo que genera la carga de datos en el DataGridview2.
 
-        Dim sql As String = "SELECT vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado " _
+        Dim sql As String = "SELECT vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado, nombresubflota " _
                          & " FROM ruta, personal, subflota, grupo, vehiculo, destino, producto, sitiocarga, estadoruta  " _
                          & " WHERE ruta.personal = personal.idpersonal " _
                          & " AND ruta.vehiculo = vehiculo.idvehiculo  " _
@@ -657,7 +659,7 @@ Module ModuloConsulta
                          & " AND ruta.estadoruta = estadoruta.idestado " _
                          & " AND estado = 'ACTIVA' " _
                          & " AND nombreestado NOT IN ('EN TALLER') " _
-                         & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombreestado ASC "
+                         & " ORDER BY nombresubflota ASC, nombreproducto ASC, nombresitiocarga ASC, nombreestado ASC "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -677,54 +679,11 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        'Agrupamos la lista 
+        ListaAgrupadaListadoExtendido = New Subro.Controls.DataGridViewGrouper(ListadoGeneralRutas.DataGridView)
+
         'Mostramos la cantidad de registros encontrados
         ListadoGeneralRutas.Contador.Text = ListadoGeneralRutas.DataGridView.RowCount
-
-        'Quitamos la seleccion de cualquier fila del datagridview
-        ListadoGeneralRutas.DataGridView.ClearSelection()
-
-        CargarImagenesHistorialCarga()
-
-    End Sub
-
-    Public Sub CargarGridGeneralVehiculoGrupo()
-        'Metodo que genera la carga de datos en el DataGridview2.
-
-        Dim sql As String = "Select vehiculo, nombrepersonal, nombreproducto, nombresitiocarga, nombredestino, nombreestado " _
-                         & " FROM ruta, personal, subflota, grupo, vehiculo, destino, producto, sitiocarga, estadoruta  " _
-                         & " WHERE ruta.personal = personal.idpersonal " _
-                         & " And ruta.vehiculo = vehiculo.idvehiculo  " _
-                         & " and vehiculo.grupo = grupo.idgrupo " _
-                         & " And grupo.subflota = subflota.idsubflota  " _
-                         & " And ruta.destino = destino.iddestino  " _
-                         & " And ruta.producto = producto.idproducto  " _
-                         & " And ruta.sitiocarga = sitiocarga.idsitiocarga  " _
-                         & " And ruta.estadoruta = estadoruta.idestado " _
-                         & " And estado = 'ACTIVA' " _
-                         & " AND nombreestado NOT IN ('EN TALLER') " _
-                         & " AND nombregrupo = '" & ListadoGeneralRutas.TextBox1.Text & "' " _
-                         & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombreestado ASC "
-
-        Dim connection As New MySqlConnection(ConnectionString)
-
-        'Instancia y uso de variables.
-        Command = New MySqlCommand(sql, connection)
-        Adaptador = New MySqlDataAdapter(Command)
-        DataSet = New DataSet()
-
-        'Llenado del datagridview
-        Adaptador.Fill(DataSet, "listadoactual2")
-        Tabla = DataSet.Tables("listadoactual2")
-        ListadoGeneralRutas.DataGridView.DataSource = Tabla
-
-        'Parametros para editar apariencia del datagridview.
-        With ListadoGeneralRutas.DataGridView
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-        'Mostramos la cantidad de registros encontrados
-        ListadoGeneralRutas.Contador2.Text = ListadoGeneralRutas.DataGridView.RowCount
 
         'Quitamos la seleccion de cualquier fila del datagridview
         ListadoGeneralRutas.DataGridView.ClearSelection()
@@ -737,7 +696,7 @@ Module ModuloConsulta
         'Metodo que genera la carga de datos en el DataGridview
 
         Dim sql As String = "SELECT COUNT(vehiculo) AS 'Unidades', nombreproducto AS 'Producto', nombresitiocarga AS 'Sitio de Carga', " _
-                & " nombredestino AS 'Destino', nombreestado AS 'Estado' " _
+                & " nombredestino AS 'Destino', nombreestado AS 'Estado', nombresubflota " _
                 & " FROM ruta, producto, sitiocarga, destino, grupo, subflota, vehiculo, estadoruta " _
                 & " WHERE ruta.producto = producto.idproducto " _
                 & " AND ruta.destino = destino.iddestino    " _
@@ -749,7 +708,7 @@ Module ModuloConsulta
                 & " AND estado = 'ACTIVA'  " _
                 & " AND nombreestado NOT IN ('EN TALLER') " _
                 & " GROUP BY nombreestado, nombreproducto, nombresitiocarga, nombredestino   " _
-                & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombredestino ASC, nombreestado ASC "
+                & " ORDER BY nombresubflota ASC, nombreproducto ASC, nombresitiocarga ASC, nombredestino ASC, nombreestado ASC "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -769,58 +728,11 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
+        'Agrupamos la lista 
+        ListaAgrupadaListadoAgrupado = New Subro.Controls.DataGridViewGrouper(ListadoGeneralRutas.DataGridView1)
+
         'Traemos los numeros desde el Datagridview hacia los textbox.  
         ListadoGeneralRutas.Contador.Text = (Int(Sumar("ColumnaUnidades", ListadoGeneralRutas.DataGridView1)))
-
-        'Quitamos la seleccion de cualquier fila del datagridview
-        ListadoGeneralRutas.DataGridView1.ClearSelection()
-
-        CargarImagenesHistorialCarga()
-
-    End Sub
-
-    Public Sub CargarGridResumenVehiculoGrupo()
-        'Metodo que genera la carga de datos en el DataGridview
-
-        Dim sql As String = "SELECT COUNT(vehiculo) AS 'Unidades', nombreproducto AS 'Producto',  nombresitiocarga AS 'Sitio de Carga', " _
-                & " nombredestino AS 'Destino', nombreestado AS 'Estado' " _
-                & " FROM ruta, producto, sitiocarga, destino, grupo, subflota, vehiculo, estadoruta " _
-                & " WHERE ruta.producto = producto.idproducto " _
-                & " AND ruta.destino = destino.iddestino    " _
-                & " AND ruta.sitiocarga = sitiocarga.idsitiocarga    " _
-                & " AND ruta.vehiculo = vehiculo.idvehiculo    " _
-                & " and vehiculo.grupo = grupo.idgrupo " _
-                & " And grupo.subflota = subflota.idsubflota  " _
-                & " AND ruta.estadoruta = estadoruta.idestado  " _
-                & " AND estado = 'ACTIVA'  " _
-                & " AND nombreestado NOT IN ('EN TALLER') " _
-                & " AND nombregrupo = '" & ListadoGeneralRutas.TextBox1.Text & "' " _
-                & " GROUP BY nombreestado, nombreproducto, nombresitiocarga, nombredestino   " _
-                & " ORDER BY nombreproducto ASC, nombresitiocarga ASC, nombredestino ASC, nombreestado ASC "
-
-        Dim connection As New MySqlConnection(ConnectionString)
-
-        'Instancia y uso de variables.
-        Command = New MySqlCommand(sql, connection)
-        Adaptador = New MySqlDataAdapter(Command)
-        DataSet = New DataSet()
-
-        'Llenado del datagridview
-        Adaptador.Fill(DataSet, "listadoresumen2")
-        Tabla = DataSet.Tables("listadoresumen2")
-        ListadoGeneralRutas.DataGridView1.DataSource = Tabla
-
-        'Parametros para editar apariencia del datagridview.
-        With ListadoGeneralRutas.DataGridView1
-            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
-        End With
-
-        'Traemos los numeros desde el Datagridview hacia los textbox.  
-        ListadoGeneralRutas.Contador2.Text = (Int(Sumar("ColumnaUnidades", ListadoGeneralRutas.DataGridView1)))
-
-        'Quitamos la seleccion de cualquier fila del datagridview
-        ListadoGeneralRutas.DataGridView1.ClearSelection()
 
         CargarImagenesHistorialCarga()
 
@@ -859,11 +771,8 @@ Module ModuloConsulta
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
-        'Mostramos la cantidad de registros encontrados
-        'ListadoGeneralRutas.Contador3.Text = ListadoGeneralRutas.DataGridView2.RowCount
-
-        'Quitamos la seleccion de cualquier fila del datagridview
-        ListadoGeneralRutas.DataGridView2.ClearSelection()
+        'Agrupamos la lista 
+        ListaAgrupadaEstatusActual = New Subro.Controls.DataGridViewGrouper(ListadoGeneralRutas.DataGridView2)
 
     End Sub
 
@@ -906,6 +815,55 @@ Module ModuloConsulta
         ListadoGeneralRutas.DataGridView3.ClearSelection()
 
     End Sub
+
+    Public Sub AgruparListaExtendida()
+        'Metodo que permite agrupar de acuerdo a la columna referenciada
+
+        ListaAgrupadaListadoExtendido.RemoveGrouping()
+        ListaAgrupadaListadoExtendido.SetGroupOn(ListadoGeneralRutas.DataGridView.Columns("ColumnaSubFlota"))
+        ListaAgrupadaListadoExtendido.Options.ShowGroupName = False
+        ListaAgrupadaListadoExtendido.Options.ShowCount = False
+
+        ListaAgrupadaListadoExtendido.Options.GroupSortOrder = SortOrder.None
+        ListadoGeneralRutas.DataGridView.Columns("ColumnaSubFlota").Visible = False
+
+        ListaAgrupadaListadoExtendido.DataGridView.RowHeadersVisible = False
+        ListaAgrupadaListadoExtendido.DataGridView.ClearSelection()
+
+    End Sub
+
+
+
+    Public Sub AgruparListaAgrupada()
+        'Metodo que permite agrupar de acuerdo a la columna referenciada
+
+        ListaAgrupadaListadoAgrupado.RemoveGrouping()
+        ListaAgrupadaListadoAgrupado.SetGroupOn(ListadoGeneralRutas.DataGridView1.Columns("ColumnaSubFlota2"))
+        ListaAgrupadaListadoAgrupado.Options.ShowGroupName = False
+        ListaAgrupadaListadoAgrupado.Options.ShowCount = False
+        ListaAgrupadaListadoAgrupado.Options.GroupSortOrder = SortOrder.None
+        ListadoGeneralRutas.DataGridView1.Columns("ColumnaSubFlota2").Visible = False
+
+        ListadoGeneralRutas.DataGridView1.RowHeadersVisible = False
+        ListadoGeneralRutas.DataGridView1.ClearSelection()
+
+    End Sub
+
+    Public Sub AgruparListaEstatusActual()
+        'Metodo que permite agrupar de acuerdo a la columna referenciada
+
+        ListaAgrupadaEstatusActual.RemoveGrouping()
+        ListaAgrupadaEstatusActual.SetGroupOn(ListadoGeneralRutas.DataGridView2.Columns("ColumnaGrupo"))
+        ListaAgrupadaEstatusActual.Options.ShowGroupName = False
+        ListaAgrupadaEstatusActual.Options.ShowCount = False
+        ListaAgrupadaEstatusActual.Options.GroupSortOrder = SortOrder.None
+        ListadoGeneralRutas.DataGridView2.Columns("ColumnaGrupo").Visible = False
+
+        ListadoGeneralRutas.DataGridView2.RowHeadersVisible = False
+        ListadoGeneralRutas.DataGridView2.ClearSelection()
+
+    End Sub
+
 
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''GUIA TELEFONICA'''''''''''''''''''''''''''''''''''''''''''''''
