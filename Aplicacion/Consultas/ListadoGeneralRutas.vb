@@ -7,7 +7,7 @@ Public Class ListadoGeneralRutas
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
         AlternarFilasGeneral(DataGridView1)
-        AlternarFilasGeneral(DataGridView2)
+        'AlternarFilasGeneral(DataGridView2)
         AlternarFilasGeneral(DataGridView3)
 
         'Se llama al metodo para que cargue rapido el datagridview
@@ -492,6 +492,8 @@ Public Class ListadoGeneralRutas
 
         ElseIf Panel.SelectedIndex = 2 Then
 
+            CalcularTotal()
+
             DataGridView2.ClearSelection()
             DataGridView3.ClearSelection()
 
@@ -499,6 +501,110 @@ Public Class ListadoGeneralRutas
 
     End Sub
 
+    Private Sub DataGridView2_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles DataGridView2.CellPainting
+
+        If e.ColumnIndex = 0 AndAlso e.RowIndex <> -1 Then
+
+            Using gridBrush As Brush = New SolidBrush(Me.DataGridView2.GridColor), backColorBrush As Brush = New SolidBrush(e.CellStyle.BackColor)
+
+                Using gridLinePen As Pen = New Pen(gridBrush)
+                    ' Clear cell   
+                    e.Graphics.FillRectangle(backColorBrush, e.CellBounds)
+
+                    ' Draw line (bottom border and right border of current cell)   
+                    'If next row cell has different content, only draw bottom border line of current cell   
+                    If e.RowIndex < DataGridView2.Rows.Count - 1 AndAlso DataGridView2.Rows(e.RowIndex + 1).Cells(e.ColumnIndex).Value.ToString() <> e.Value.ToString() Then
+                        e.Graphics.DrawLine(gridLinePen, e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1)
+                    End If
+
+                    ' Draw right border line of current cell   
+                    e.Graphics.DrawLine(gridLinePen, e.CellBounds.Right - 1, e.CellBounds.Top, e.CellBounds.Right - 1, e.CellBounds.Bottom)
+
+                    ' draw/fill content in current cell, and fill only one cell of multiple same cells   
+                    If Not e.Value Is Nothing Then
+                        Dim previos As Integer = 0
+                        Dim siguientes As Integer = 0
+                        For i As Integer = e.RowIndex - 1 To 0 Step -1
+                            If DataGridView2.Item(e.ColumnIndex, i).Value <> e.Value Or i = 0 Then
+                                previos = e.RowIndex - i - 1
+                                Exit For
+                            End If
+                        Next
+                        For i As Integer = e.RowIndex + 1 To DataGridView2.Rows.Count - 1
+                            If DataGridView2.Item(e.ColumnIndex, i).Value <> e.Value Or DataGridView2.Rows.Count - 1 = i Then
+                                siguientes = i - e.RowIndex - 1
+                                Exit For
+                            End If
+                        Next
+
+                        If siguientes = previos Or siguientes - 1 = previos Then
+                            e.Graphics.DrawString(CType(e.Value, String), e.CellStyle.Font, Brushes.Black, e.CellBounds.X + 2, e.CellBounds.Y + 3, StringFormat.GenericDefault)
+                        End If
+                        'End If
+                    End If
+
+                    e.Handled = True
+
+                End Using
+
+            End Using
+
+        End If
+
+
+    End Sub
+
+    Private Sub DataGridView2_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView2.CellFormatting
+        'CellFormatting: Propiedad del control DataGridview el cual permite cambiar 
+        'y dar formato a las celdas, bien sea por color de texto, fondo, etc.
+
+        Try
+
+            For Each Fila As DataGridViewRow In DataGridView2.Rows
+
+                If Fila.Cells("ColumnaGrupo").Value = "CARNES EL PAZO" Then
+
+                    Fila.DefaultCellStyle.BackColor = Color.FloralWhite
+
+                ElseIf Fila.Cells("ColumnaGrupo").Value = "INSUMOS" Then
+
+                    Fila.DefaultCellStyle.BackColor = Color.SeaShell
+
+                ElseIf Fila.Cells("ColumnaGrupo").Value = "GRANEL" Then
+
+                    Fila.DefaultCellStyle.BackColor = Color.AliceBlue
+
+                ElseIf Fila.Cells("ColumnaGrupo").Value = "PRODUCTOS TRADICIONALES" Then
+
+                    Fila.DefaultCellStyle.BackColor = Color.GhostWhite
+
+                End If
+
+            Next
+
+        Catch ex As Exception
+
+            MsgBox("No se pudo completar la operación.2", MsgBoxStyle.Exclamation, "Error.")
+
+        End Try
+
+    End Sub
+
+    Private Sub CalcularTotal()
+        'Metodo para sumar el total de la columna
+
+        Dim Total As Single
+        Dim Columna As Integer = 1
+
+        For Each row As DataGridViewRow In DataGridView2.Rows
+
+            Total += Val(row.Cells(Columna).Value)
+
+        Next
+
+        Contador3.Text = Total.ToString
+
+    End Sub
 
 
 End Class

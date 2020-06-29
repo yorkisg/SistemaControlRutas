@@ -838,8 +838,8 @@ Module ModuloConsulta
                             & " AND ruta.estadoruta = estadoruta.idestado   " _
                             & " AND estado = 'ACTIVA'   " _
                             & " AND nombreestado Not IN ('EN TALLER')  " _
-                            & " GROUP BY nombreproducto   " _
-                            & " ORDER BY nombreproducto ASC "
+                            & " GROUP BY nombresubflota, nombreproducto   " _
+                            & " ORDER BY nombresubflota ASC, nombreproducto ASC "
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -860,7 +860,7 @@ Module ModuloConsulta
         End With
 
         'Mostramos la cantidad de registros encontrados
-        'ListadoGeneralRutas.Contador.Text = ListadoGeneralRutas.DataGridView2.RowCount
+        'ListadoGeneralRutas.Contador3.Text = ListadoGeneralRutas.DataGridView2.RowCount
 
         'Quitamos la seleccion de cualquier fila del datagridview
         ListadoGeneralRutas.DataGridView2.ClearSelection()
