@@ -382,11 +382,13 @@ Module ModuloSeguimientoCarga
         Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
-        Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & SeguimientoCarga.TextBox8.Text & "' ", Conexion)
+        Adaptador = New MySqlDataAdapter("SELECT idpersonal, CONCAT(if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A'), ' | ' , if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A')) AS 'telefono' FROM personal WHERE nombrepersonal = '" & SeguimientoCarga.TextBox8.Text & "' ", Conexion)
+
         Adaptador.Fill(Tabla)
 
         For Each row As DataRow In Tabla.Rows
             SeguimientoCarga.TextBox11.Text = row("idpersonal").ToString
+            SeguimientoCarga.TextBox22.Text = row("telefono").ToString
         Next
 
     End Sub

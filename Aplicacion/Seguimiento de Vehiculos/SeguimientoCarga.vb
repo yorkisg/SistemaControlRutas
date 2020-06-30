@@ -794,6 +794,7 @@ Public Class SeguimientoCarga
                 ComboBox1.Text = DataGridView2.Item("ColumnaEstado", DataGridView2.SelectedRows(0).Index).Value
 
                 TextBox24.Text = DataGridView2.Item("ColumnaID2", DataGridView2.SelectedRows(0).Index).Value
+                'Llamamos al metodo ObtenerRutaCarga para obtener el ID de la ruta.
                 ObtenerRutaCarga()
 
                 TextBox6.Text = DataGridView2.Item("ColumnaProducto", DataGridView2.SelectedRows(0).Index).Value
@@ -809,6 +810,7 @@ Public Class SeguimientoCarga
                 ObtenerDestinoRutaCarga()
 
                 TextBox8.Text = DataGridView2.Item("ColumnaChofer", DataGridView2.SelectedRows(0).Index).Value
+                'Llamamos al metodo ObtenerPersonalRutaCarga para obtener el ID del chofer.
                 ObtenerPersonalRutaCarga()
 
                 ActualizarEstadoRuta()

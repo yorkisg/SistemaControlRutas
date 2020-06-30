@@ -822,7 +822,7 @@ Module ModuloConsulta
         ListaAgrupadaListadoExtendido.RemoveGrouping()
         ListaAgrupadaListadoExtendido.SetGroupOn(ListadoGeneralRutas.DataGridView.Columns("ColumnaSubFlota"))
         ListaAgrupadaListadoExtendido.Options.ShowGroupName = False
-        ListaAgrupadaListadoExtendido.Options.ShowCount = False
+        ListaAgrupadaListadoExtendido.Options.ShowCount = True
 
         ListaAgrupadaListadoExtendido.Options.GroupSortOrder = SortOrder.None
         ListadoGeneralRutas.DataGridView.Columns("ColumnaSubFlota").Visible = False
@@ -831,8 +831,6 @@ Module ModuloConsulta
         ListaAgrupadaListadoExtendido.DataGridView.ClearSelection()
 
     End Sub
-
-
 
     Public Sub AgruparListaAgrupada()
         'Metodo que permite agrupar de acuerdo a la columna referenciada

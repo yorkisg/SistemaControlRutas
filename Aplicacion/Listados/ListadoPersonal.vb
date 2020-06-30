@@ -86,6 +86,7 @@ Public Class ListadoPersonal
 
                 SeguimientoCarga.TextBox11.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
                 SeguimientoCarga.TextBox8.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                SeguimientoCarga.TextBox22.Text = (DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value & " | " & DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(4).Value)
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()
@@ -292,6 +293,7 @@ Public Class ListadoPersonal
 
                 SeguimientoCarga.TextBox11.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
                 SeguimientoCarga.TextBox8.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                SeguimientoCarga.TextBox22.Text = (DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value & " | " & DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(4).Value)
 
                 'Se cierra el formulario ListadoChofer
                 Tabla.Clear()

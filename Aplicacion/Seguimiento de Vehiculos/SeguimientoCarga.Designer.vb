@@ -90,6 +90,7 @@ Partial Class SeguimientoCarga
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.TabControl()
         Me.Pagina1 = New System.Windows.Forms.TabPage()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -164,6 +165,8 @@ Partial Class SeguimientoCarga
         Me.BotonInicio = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.ImageList3 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.MenuPrincipal.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -591,6 +594,9 @@ Partial Class SeguimientoCarga
         'Pagina1
         '
         Me.Pagina1.BackColor = System.Drawing.Color.White
+        Me.Pagina1.Controls.Add(Me.Label22)
+        Me.Pagina1.Controls.Add(Me.Label21)
+        Me.Pagina1.Controls.Add(Me.TextBox22)
         Me.Pagina1.Controls.Add(Me.Label17)
         Me.Pagina1.Controls.Add(Me.Label16)
         Me.Pagina1.Controls.Add(Me.Label15)
@@ -628,6 +634,17 @@ Partial Class SeguimientoCarga
         Me.Pagina1.Size = New System.Drawing.Size(691, 300)
         Me.Pagina1.TabIndex = 0
         Me.Pagina1.Text = "FLOTA DE VEHICULOS DE CARGA"
+        '
+        'TextBox22
+        '
+        Me.TextBox22.BackColor = System.Drawing.Color.AliceBlue
+        Me.TextBox22.Enabled = False
+        Me.TextBox22.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox22.ForeColor = System.Drawing.Color.Black
+        Me.TextBox22.Location = New System.Drawing.Point(429, 193)
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.Size = New System.Drawing.Size(179, 22)
+        Me.TextBox22.TabIndex = 121
         '
         'Label17
         '
@@ -701,7 +718,7 @@ Partial Class SeguimientoCarga
         Me.TextBox1.Enabled = False
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(229, 21)
+        Me.TextBox1.Location = New System.Drawing.Point(226, 21)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(382, 22)
         Me.TextBox1.TabIndex = 79
@@ -807,7 +824,7 @@ Partial Class SeguimientoCarga
         Me.TextBox3.Enabled = False
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.ForeColor = System.Drawing.Color.Black
-        Me.TextBox3.Location = New System.Drawing.Point(229, 107)
+        Me.TextBox3.Location = New System.Drawing.Point(226, 107)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(382, 22)
         Me.TextBox3.TabIndex = 82
@@ -828,7 +845,7 @@ Partial Class SeguimientoCarga
         Me.TextBox7.Enabled = False
         Me.TextBox7.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox7.ForeColor = System.Drawing.Color.Black
-        Me.TextBox7.Location = New System.Drawing.Point(229, 150)
+        Me.TextBox7.Location = New System.Drawing.Point(226, 150)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(382, 22)
         Me.TextBox7.TabIndex = 96
@@ -839,7 +856,7 @@ Partial Class SeguimientoCarga
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(229, 236)
+        Me.ComboBox1.Location = New System.Drawing.Point(226, 236)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(382, 21)
         Me.ComboBox1.TabIndex = 88
@@ -850,7 +867,7 @@ Partial Class SeguimientoCarga
         Me.TextBox6.Enabled = False
         Me.TextBox6.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox6.ForeColor = System.Drawing.Color.Black
-        Me.TextBox6.Location = New System.Drawing.Point(229, 64)
+        Me.TextBox6.Location = New System.Drawing.Point(226, 64)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(382, 22)
         Me.TextBox6.TabIndex = 89
@@ -871,9 +888,9 @@ Partial Class SeguimientoCarga
         Me.TextBox8.Enabled = False
         Me.TextBox8.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox8.ForeColor = System.Drawing.Color.Black
-        Me.TextBox8.Location = New System.Drawing.Point(229, 193)
+        Me.TextBox8.Location = New System.Drawing.Point(226, 193)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(382, 22)
+        Me.TextBox8.Size = New System.Drawing.Size(197, 22)
         Me.TextBox8.TabIndex = 90
         '
         'Label8
@@ -1355,7 +1372,7 @@ Partial Class SeguimientoCarga
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFinal, Me.BotonAnterior, Me.ToolStripSeparator2, Me.BotonSiguiente, Me.BotonInicio})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 370)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 345)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(699, 25)
         Me.ToolStrip1.TabIndex = 118
@@ -1416,7 +1433,7 @@ Partial Class SeguimientoCarga
         Me.ToolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.ToolStrip1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DataGridView2)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(699, 395)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(699, 370)
         Me.ToolStripContainer1.Location = New System.Drawing.Point(12, 359)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
         Me.ToolStripContainer1.Size = New System.Drawing.Size(699, 395)
@@ -1432,6 +1449,27 @@ Partial Class SeguimientoCarga
         Me.ImageList3.Images.SetKeyName(2, "Consumo3.png")
         Me.ImageList3.Images.SetKeyName(3, "Ir.png")
         Me.ImageList3.Images.SetKeyName(4, "Consumible3.png")
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Label21.Location = New System.Drawing.Point(451, 175)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(65, 15)
+        Me.Label21.TabIndex = 122
+        Me.Label21.Text = "TELÉFONO"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Image = CType(resources.GetObject("Label22.Image"), System.Drawing.Image)
+        Me.Label22.Location = New System.Drawing.Point(426, 175)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(19, 15)
+        Me.Label22.TabIndex = 123
+        Me.Label22.Text = "    "
         '
         'SeguimientoCarga
         '
@@ -1631,4 +1669,7 @@ Partial Class SeguimientoCarga
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents ColunmaVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaID2 As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label21 As Label
 End Class
