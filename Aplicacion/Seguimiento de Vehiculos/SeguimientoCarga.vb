@@ -35,6 +35,9 @@ Public Class SeguimientoCarga
         AlternarFilasGeneral(DataGridView1)
         AlternarFilasGeneral(DataGridView2)
 
+        'Cargamos la cantidad de vehiculos en ruta actualizado
+        ObtenerCantidadVehiculos()
+
     End Sub
 
     Private Sub SeguimientoCarga_FormClosing(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.FormClosing
@@ -99,7 +102,7 @@ Public Class SeguimientoCarga
         Tiempo.Text = Contador
 
         'Si el tiempo llega a 300 seg (5min) se cierra la aplicacion
-        If Contador = 300 Then
+        If Contador = 600 Then
 
             If DataGridView1.RowCount > 0 Or DataGridView2.RowCount > 0 Then
 
@@ -882,6 +885,8 @@ Public Class SeguimientoCarga
                 CargarGridRutaCargaGrupo()
                 'CargarGridRutaCargaSubFlota() 'SE IMPLEMENTARA LUEGO
 
+                ObtenerCantidadVehiculos()
+
                 'Luego de guardar nos posicionamos en la fila ya seleccionada anteriormente
                 'para verificar la inclusion de la ruta en el datagridview2.
                 DataGridView1.CurrentCell = DataGridView1(Columna, Fila)
@@ -924,6 +929,8 @@ Public Class SeguimientoCarga
 
                 CargarGridRutaCargaGrupo()
                 'CargarGridRutaCargaSubFlota() 'SE IMPLEMENTARA LUEGO
+
+                ObtenerCantidadVehiculos()
 
                 'Luego de guardar nos posicionamos en la fila ya seleccionada anteriormente
                 'para verificar la inclusion de la ruta en el datagridview2.

@@ -224,30 +224,6 @@
         wOr4C38A6gerkJEO/AoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="MenuSeguimientoTaller.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAGYktHRAD/AP8A/6C9p5MAAAE6SURBVDhPY2AYMsAucNteu4Ate0h2sH3g1oVAzVftA7b9g+Ct
-        l+2Dts4n2iC7oO3NII12/lusHAK324DYDoHbOog2wD5oWydEE1Cz/xZbu8Ct/+wCtjbjNEBq5n8uxWmf
-        Q5WmfFIDKQI5F+xsqBeABlwFeQvTgFX/mUGCslM++QMN+K8w9fMysKKG/0wgChSA9gFbduO0WWna5+mK
-        Uz4/VJz+5SfIAMWpIPzprsK0z3dAriLoZ6Wpn2cANf1Vmvplq9LMd/yK0z6lgA2Z9umezPRv0gQNUJz9
-        RVxx2pffII0gxQr97wXAXpn2uY6gZpACoHNPK07//A/ohRdAdirQsJ0gFwEN+aky84MyQUOAgRauNP1L
-        O9CQ60DNf5WmffoMNKgHhAlqRlagMPWLATgQp33GHdckmUhrxQA+u6OlSnztyAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="MenuSeguimientoTransporte.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGgSURBVDhPzZM9i1pREIb9MdnGj+LeDVqISFQEBdHK
-        wkItFA0qGBE/g4ioMWLWDxbFTmOwSGETsEwKC7XTNBYXQ4rNL0i1TZ54D8TmdtkiKV7OHJh5zrxzGB2g
-        e4qeVKw+/B8BqtVq9yIqlYpQuVymVCpRLBbJ5XKXbtGl02lisZiI/+gaqIm73Y7FYsFkMsHj8fD4/QM/
-        P78QcSKRENBsNovf71c0gEajwXQ6Zb/fczqdOB6PrNdrarUaq9VKgNvtNvV6HZfL9agB9Pt9ttstrz8q
-        PO+ehV69/yoKk8kk8/mcSCSCatNut19tXC2Mx2MOhwO3b87cdB646T5we3dmuVwSCoVEd8FgkHw+j9Vq
-        1QJ6vR6bzQa5rfDs7QXw7gfy4BuDwYBAIMBwOMTn85HJZLBYLFqAOqDZbMbLyR6pqyDdKYTvv5BKpcQQ
-        O50Obrdb2DGbzVqA+j3qpJvNJqPRiFarRTwex+v1Eo1GKRQK4h4Oh5EkSQu4JN47HI5fTqeTy4nNZhOt
-        yrKMyWTCaDRiMBjQ6/WqPml+4W8X6t/vwm8AQLy1pLTozwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="MenuGestionRutas.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -311,7 +287,7 @@
   <data name="MenuListadoDeInfractores.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AAAIbSURBVDhPrZNtb9JQFMfxE6iv/HT60sSY6BuJWbKwiQsQ
+        YQUAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAIbSURBVDhPrZNtb9JQFMfxE6iv/HT60sSY6BuJWbKwiQsQ
         NI4HKWWUQYHSjbakbBRKKU/lIQOEhegcYwTQqZhM3+ibPbCc9Za4pFGMS7zJP+fe3HN+559zcw2G/7Ws
         D6jb+HLCGLILqZgn36Dx4h7tLQxRpNxyM2hPb6P71cfBW7/19C7F70VduX69dQSS+B64cB1SXAeU6gjE
         1Fvo9L5rQvdRl3yAmTbv6iBRp9T7lfQvEeXrAL5l9qLW+HjV6W8QlIctshc6AO0rnfJ0AzbXq5BJdqFS

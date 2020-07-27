@@ -36,8 +36,6 @@ Partial Class MenuPrincipal
         Me.MenuSeguimientoCarga = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuSeguimientoLiviano = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.MenuSeguimientoTaller = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuSeguimientoTransporte = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuConsultas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultarChofer = New System.Windows.Forms.ToolStripMenuItem()
@@ -123,7 +121,7 @@ Partial Class MenuPrincipal
         '
         'MenuGestionRutas
         '
-        Me.MenuGestionRutas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuSeguimientoCarga, Me.MenuSeguimientoLiviano, Me.ToolStripSeparator3, Me.MenuSeguimientoTaller, Me.MenuSeguimientoTransporte, Me.ToolStripSeparator7})
+        Me.MenuGestionRutas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuSeguimientoCarga, Me.MenuSeguimientoLiviano, Me.ToolStripSeparator3, Me.ToolStripSeparator7})
         Me.MenuGestionRutas.Image = CType(resources.GetObject("MenuGestionRutas.Image"), System.Drawing.Image)
         Me.MenuGestionRutas.Name = "MenuGestionRutas"
         Me.MenuGestionRutas.Size = New System.Drawing.Size(134, 21)
@@ -133,41 +131,27 @@ Partial Class MenuPrincipal
         '
         Me.MenuSeguimientoCarga.Image = CType(resources.GetObject("MenuSeguimientoCarga.Image"), System.Drawing.Image)
         Me.MenuSeguimientoCarga.Name = "MenuSeguimientoCarga"
-        Me.MenuSeguimientoCarga.Size = New System.Drawing.Size(289, 22)
+        Me.MenuSeguimientoCarga.Size = New System.Drawing.Size(276, 22)
         Me.MenuSeguimientoCarga.Text = "Seguimiento a Vehiculos de Carga"
         '
         'MenuSeguimientoLiviano
         '
         Me.MenuSeguimientoLiviano.Image = CType(resources.GetObject("MenuSeguimientoLiviano.Image"), System.Drawing.Image)
         Me.MenuSeguimientoLiviano.Name = "MenuSeguimientoLiviano"
-        Me.MenuSeguimientoLiviano.Size = New System.Drawing.Size(289, 22)
+        Me.MenuSeguimientoLiviano.Size = New System.Drawing.Size(276, 22)
         Me.MenuSeguimientoLiviano.Text = "Seguimiento a Vehiculos Livianos"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(286, 6)
-        '
-        'MenuSeguimientoTaller
-        '
-        Me.MenuSeguimientoTaller.Image = CType(resources.GetObject("MenuSeguimientoTaller.Image"), System.Drawing.Image)
-        Me.MenuSeguimientoTaller.Name = "MenuSeguimientoTaller"
-        Me.MenuSeguimientoTaller.Size = New System.Drawing.Size(289, 22)
-        Me.MenuSeguimientoTaller.Text = "Gestión de Taller (80%)"
-        '
-        'MenuSeguimientoTransporte
-        '
-        Me.MenuSeguimientoTransporte.Image = CType(resources.GetObject("MenuSeguimientoTransporte.Image"), System.Drawing.Image)
-        Me.MenuSeguimientoTransporte.Name = "MenuSeguimientoTransporte"
-        Me.MenuSeguimientoTransporte.Size = New System.Drawing.Size(289, 22)
-        Me.MenuSeguimientoTransporte.Text = "Gestión de Cámaras (Proximamente)"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(273, 6)
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(286, 6)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(273, 6)
         '
         'MenuConsultas
         '
@@ -355,7 +339,7 @@ Partial Class MenuPrincipal
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
         Me.ToolStripButton1.Size = New System.Drawing.Size(61, 22)
-        Me.ToolStripButton1.Text = "10.06.2020"
+        Me.ToolStripButton1.Text = "22.07.2020"
         '
         'ToolStripLabel2
         '
@@ -434,8 +418,6 @@ Partial Class MenuPrincipal
     Friend WithEvents MenuConsultaGrupoProducto As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuSeguimientoLiviano As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuListadoDeInfractores As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuSeguimientoTaller As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuSeguimientoTransporte As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents MenuConsultarIncidencias As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator

@@ -57,8 +57,6 @@ Public Class MenuPrincipal
             'submenus
             MenuSeguimientoCarga.Enabled = True
             MenuSeguimientoLiviano.Enabled = True
-            MenuSeguimientoTransporte.Enabled = True
-            MenuSeguimientoTaller.Enabled = True
 
         End If
 
@@ -74,8 +72,6 @@ Public Class MenuPrincipal
             'submenus
             MenuSeguimientoCarga.Enabled = True
             MenuSeguimientoLiviano.Enabled = True
-            MenuSeguimientoTransporte.Enabled = True
-            MenuSeguimientoTaller.Enabled = True
 
         End If
 
@@ -91,8 +87,6 @@ Public Class MenuPrincipal
             'submenus
             MenuSeguimientoCarga.Enabled = False
             MenuSeguimientoLiviano.Enabled = False
-            MenuSeguimientoTransporte.Enabled = False
-            MenuSeguimientoTaller.Enabled = True
 
         End If
 
@@ -152,13 +146,6 @@ Public Class MenuPrincipal
         'Formulario SeguimientoLiviano
 
         SeguimientoLiviano.Show()
-
-    End Sub
-
-    Private Sub MenuSeguimientoTaller_Click(sender As Object, e As EventArgs) Handles MenuSeguimientoTaller.Click
-        'Formulario SeguimientoTaller
-
-        SeguimientoTaller.Show()
 
     End Sub
 

@@ -10,7 +10,6 @@ Module ModuloConsulta
     Public Consumo As Image
 
 
-
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''CONSULTAS GENERALES'''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -741,7 +740,8 @@ Module ModuloConsulta
     Public Sub CargarGridEstatusProducto()
         'Metodo que genera la carga de datos en el DataGridview2.
 
-        Dim sql As String = "SELECT nombresubflota AS 'Grupo', COUNT(vehiculo) AS 'Unidades', nombreproducto AS 'Producto' " _
+        Dim sql As String = "SELECT nombresubflota AS 'Grupo', nombreproducto AS 'Producto', COUNT(vehiculo) AS 'Unidades', " _
+                            & " nombreestado As 'Estado' " _
                             & " FROM ruta, producto, grupo, subflota, estadoruta, vehiculo  " _
                             & " WHERE ruta.producto = producto.idproducto   " _
                             & " AND ruta.vehiculo = vehiculo.idvehiculo    " _
@@ -750,8 +750,10 @@ Module ModuloConsulta
                             & " AND ruta.estadoruta = estadoruta.idestado   " _
                             & " AND estado = 'ACTIVA'   " _
                             & " AND nombreestado Not IN ('EN TALLER')  " _
-                            & " GROUP BY nombresubflota, nombreproducto   " _
+                            & " GROUP BY nombresubflota, nombreproducto, nombreestado   " _
                             & " ORDER BY nombresubflota ASC, nombreproducto ASC "
+
+        '& " CONCAT(COUNT(nombreestado), ' - ', nombreestado) As 'Estado' " _
 
         Dim connection As New MySqlConnection(ConnectionString)
 
@@ -761,8 +763,8 @@ Module ModuloConsulta
         DataSet = New DataSet()
 
         'Llenado del datagridview
-        Adaptador.Fill(DataSet, "estatusactual")
-        Tabla = DataSet.Tables("estatusactual")
+        Adaptador.Fill(DataSet, "estatusactual222")
+        Tabla = DataSet.Tables("estatusactual222")
         ListadoGeneralRutas.DataGridView2.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
@@ -773,6 +775,8 @@ Module ModuloConsulta
 
         'Agrupamos la lista 
         ListaAgrupadaEstatusActual = New Subro.Controls.DataGridViewGrouper(ListadoGeneralRutas.DataGridView2)
+
+        CargarImagenesHistorialCarga()
 
     End Sub
 
@@ -809,7 +813,7 @@ Module ModuloConsulta
         End With
 
         'Mostramos la cantidad de registros encontrados
-        'ListadoGeneralRutas.Contador.Text = ListadoGeneralRutas.DataGridView2.RowCount
+        ListadoGeneralRutas.Contador3.Text = ListadoGeneralRutas.DataGridView.RowCount
 
         'Quitamos la seleccion de cualquier fila del datagridview
         ListadoGeneralRutas.DataGridView3.ClearSelection()
@@ -859,6 +863,42 @@ Module ModuloConsulta
 
         ListadoGeneralRutas.DataGridView2.RowHeadersVisible = False
         ListadoGeneralRutas.DataGridView2.ClearSelection()
+
+    End Sub
+
+    Public Sub GenerarGraficoReporte()
+        'Grafico que muestra 
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        Dim sql As String = "SELECT nombresubflota AS 'Grupo', COUNT(vehiculo) AS 'Unidades' " _
+                          & " FROM ruta, grupo, subflota, estadoruta, vehiculo  " _
+                          & " WHERE ruta.vehiculo = vehiculo.idvehiculo    " _
+                          & " AND vehiculo.grupo = grupo.idgrupo  " _
+                          & " AND grupo.subflota = subflota.idsubflota   " _
+                          & " AND ruta.estadoruta = estadoruta.idestado   " _
+                          & " AND estado = 'ACTIVA'   " _
+                          & " AND nombreestado Not In ('EN TALLER')  " _
+                          & " GROUP BY nombresubflota   " _
+                          & " ORDER BY nombresubflota ASC "
+
+        Dim Adaptador As New MySqlDataAdapter(sql, Conexion)
+        Dim Dataset As New DataSet()
+        Adaptador.Fill(Dataset, "Estatus")
+
+        'Enlace de datos con las barras (series)
+        ListadoGeneralRutas.Grafico1.Series(0).XValueMember = "Grupo"
+        ListadoGeneralRutas.Grafico1.Series(0).YValueMembers = "Unidades"
+
+        'Establecemos el grafico en 3D
+        ListadoGeneralRutas.Grafico1.Series(0).ChartType = DataVisualization.Charting.SeriesChartType.Doughnut
+        ListadoGeneralRutas.Grafico1.ChartAreas(0).Area3DStyle.Enable3D = True
+
+        'Colocamos los valores sobre cada columna
+        ListadoGeneralRutas.Grafico1.Series(0).IsValueShownAsLabel = True
+
+        'Enlace de datos
+        ListadoGeneralRutas.Grafico1.DataSource = Dataset.Tables("Estatus")
 
     End Sub
 

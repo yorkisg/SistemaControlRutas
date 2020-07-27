@@ -450,6 +450,27 @@ Module ModuloSeguimientoCarga
 
     End Sub
 
+    Public Sub ObtenerCantidadVehiculos()
+        'Este metodo permite obtener el ID del chofer y sus datos
+
+        Dim Adaptador As New MySqlDataAdapter
+        Dim Tabla As New DataTable
+
+        Adaptador = New MySqlDataAdapter("SELECT COUNT(idruta) AS 'Conteo' FROM ruta, estadoruta " _
+                            & " WHERE ruta.estadoruta = estadoruta.idestado " _
+                            & " AND estado = 'ACTIVA' " _
+                            & " AND nombreestado Not IN ('EN TALLER') ", Conexion)
+
+        Adaptador.Fill(Tabla)
+
+        For Each row As DataRow In Tabla.Rows
+
+            SeguimientoCarga.Contador4.Text = row("Conteo").ToString
+
+        Next
+
+    End Sub
+
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''METODOS DE APOYO PARA LAS RUTAS E INFRACCIONES''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''

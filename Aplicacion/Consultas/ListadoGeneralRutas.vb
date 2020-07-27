@@ -24,9 +24,14 @@ Public Class ListadoGeneralRutas
         CargarGridEstatusGrupo()
 
         'Mandamos a agrupar los datos
-        AgruparListaEstatusActual()
         AgruparListaExtendida()
         AgruparListaAgrupada()
+        AgruparListaEstatusActual()
+
+        'Mandamos a generar el grafico
+        GenerarGraficoReporte()
+
+        DataGridView2.AutoGenerateColumns = False
 
     End Sub
 
@@ -444,8 +449,6 @@ Public Class ListadoGeneralRutas
 
         ElseIf Panel.SelectedIndex = 2 Then
 
-            ' CalcularTotal()
-
             DataGridView2.ClearSelection()
             DataGridView3.ClearSelection()
 
@@ -455,56 +458,244 @@ Public Class ListadoGeneralRutas
 
     Private Sub DataGridView2_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles DataGridView2.CellPainting
 
-        If e.ColumnIndex = 0 AndAlso e.RowIndex <> -1 Then
+        If DataGridView2.Columns(e.ColumnIndex).Name.Equals("ColumnaProducto3") Then
 
-            Using gridBrush As Brush = New SolidBrush(Me.DataGridView2.GridColor), backColorBrush As Brush = New SolidBrush(e.CellStyle.BackColor)
+            e.AdvancedBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.None
 
-                Using gridLinePen As Pen = New Pen(gridBrush)
-                    ' Clear cell   
-                    e.Graphics.FillRectangle(backColorBrush, e.CellBounds)
+            If e.RowIndex < 1 OrElse e.ColumnIndex < 0 Then Return
 
-                    ' Draw line (bottom border and right border of current cell)   
-                    'If next row cell has different content, only draw bottom border line of current cell   
-                    If e.RowIndex < DataGridView2.Rows.Count - 1 AndAlso DataGridView2.Rows(e.RowIndex + 1).Cells(e.ColumnIndex).Value.ToString() <> e.Value.ToString() Then
-                        e.Graphics.DrawLine(gridLinePen, e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1)
-                    End If
+            If IsTheSameCellValue(e.ColumnIndex, e.RowIndex) Then
+                e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.None
+            Else
+                e.AdvancedBorderStyle.Top = DataGridView2.AdvancedCellBorderStyle.Top
+            End If
 
-                    ' Draw right border line of current cell   
-                    e.Graphics.DrawLine(gridLinePen, e.CellBounds.Right - 1, e.CellBounds.Top, e.CellBounds.Right - 1, e.CellBounds.Bottom)
+            'Generamos la division de grupos
+            If e.ColumnIndex = 0 AndAlso e.RowIndex <> -1 Then
 
-                    ' draw/fill content in current cell, and fill only one cell of multiple same cells   
-                    If Not e.Value Is Nothing Then
-                        Dim previos As Integer = 0
-                        Dim siguientes As Integer = 0
-                        For i As Integer = e.RowIndex - 1 To 0 Step -1
-                            If DataGridView2.Item(e.ColumnIndex, i).Value <> e.Value Or i = 0 Then
-                                previos = e.RowIndex - i - 1
-                                Exit For
-                            End If
-                        Next
-                        For i As Integer = e.RowIndex + 1 To DataGridView2.Rows.Count - 1
-                            If DataGridView2.Item(e.ColumnIndex, i).Value <> e.Value Or DataGridView2.Rows.Count - 1 = i Then
-                                siguientes = i - e.RowIndex - 1
-                                Exit For
-                            End If
-                        Next
+                Using gridBrush As Brush = New SolidBrush(DataGridView2.GridColor), backColorBrush As Brush = New SolidBrush(e.CellStyle.BackColor)
 
-                        If siguientes = previos Or siguientes - 1 = previos Then
-                            e.Graphics.DrawString(CType(e.Value, String), e.CellStyle.Font, Brushes.Black, e.CellBounds.X + 2, e.CellBounds.Y + 3, StringFormat.GenericDefault)
+                    Using gridLinePen As Pen = New Pen(gridBrush)
+
+                        e.Graphics.FillRectangle(backColorBrush, e.CellBounds)
+
+                        If e.RowIndex < DataGridView2.Rows.Count - 1 AndAlso DataGridView2.Rows(e.RowIndex + 1).Cells(e.ColumnIndex).Value.ToString() <> e.Value.ToString() Then
+                            e.Graphics.DrawLine(gridLinePen, e.CellBounds.Left, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1)
                         End If
-                        'End If
-                    End If
 
-                    e.Handled = True
+                        e.Graphics.DrawLine(gridLinePen, e.CellBounds.Right - 1, e.CellBounds.Top, e.CellBounds.Right - 1, e.CellBounds.Bottom)
+
+                        If Not e.Value Is Nothing Then
+
+                            Dim previos As Integer = 0
+                            Dim siguientes As Integer = 0
+                            For i As Integer = e.RowIndex - 1 To 0 Step -1
+                                If DataGridView2.Item(e.ColumnIndex, i).Value <> e.Value Or i = 0 Then
+                                    previos = e.RowIndex - i - 1
+                                    Exit For
+                                End If
+                            Next
+
+                            For i As Integer = e.RowIndex + 1 To DataGridView2.Rows.Count - 1
+                                If DataGridView2.Item(e.ColumnIndex, i).Value <> e.Value Or DataGridView2.Rows.Count - 1 = i Then
+                                    siguientes = i - e.RowIndex - 1
+                                    Exit For
+                                End If
+                            Next
+
+                            If siguientes = previos Or siguientes - 1 = previos Then
+                                e.Graphics.DrawString(CType(e.Value, String), e.CellStyle.Font, Brushes.Black, e.CellBounds.X + 2, e.CellBounds.Y + 3, StringFormat.GenericDefault)
+                            End If
+
+                        End If
+
+                        e.Handled = True
+
+                    End Using
 
                 End Using
 
-            End Using
-
+            End If
         End If
+    End Sub
 
+    Private Sub DataGridView2_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView2.CellFormatting
+
+        Try
+
+            'Para agrupar celdas
+            If (e.RowIndex = 0) Then
+                Return
+            End If
+
+            If DataGridView2.Columns(e.ColumnIndex).Name.Equals("ColumnaProducto3") Then
+
+                If (IsTheSameCellValue(e.ColumnIndex, e.RowIndex)) Then
+
+                    e.Value = ""
+                    e.FormattingApplied = True
+
+                End If
+
+            End If
+
+            'damos formato a las celdas, bien sea por color de texto, fondo, etc.
+            Dim TipoEstado As String
+
+            'Indicamos sobre cual columna trabajaremos.
+            If DataGridView2.Columns(e.ColumnIndex).Name.Equals("ColumnaEstado3") Then
+
+                TipoEstado = (DataGridView2.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
+
+                'Verificamos los valores del estado y asignamos los colores e iconos.
+                If TipoEstado = "EN RUTA VACIO" Or TipoEstado = "EN RUTA CARGADO" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    'Colocamos imagen a la celda de acuerdo al valor obtenido
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = EnRutaVacio
+
+                End If
+
+                If TipoEstado = "DE REGRESO CARGADO" Or TipoEstado = "DE REGRESO VACIO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    'Colocamos imagen a la celda de acuerdo al valor obtenido
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = DeRegresoVacio
+
+                End If
+
+                If TipoEstado = "VEHICULO GUARDADO" Then
+
+                    e.CellStyle.ForeColor = Color.Purple
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = OrganizacionElTunal
+
+                End If
+
+                If TipoEstado = "PERNOCTA AUTORIZADA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = PernoctaAutorizada
+
+                End If
+
+                If TipoEstado = "EN PROCESO DE CARGA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = EnProcesoDeCarga
+
+                End If
+
+                If TipoEstado = "EN PROCESO DE DESCARGA" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = EnProcesoDeDescarga
+
+                End If
+
+                If TipoEstado = "CARGADO ESPERANDO POR SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = CargadoEsperandoPorSalir
+
+                End If
+
+                If TipoEstado = "CARGADO ESPERANDO DOCUMENTOS" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = CargadoEsperandoDocumentos
+
+                End If
+
+                If TipoEstado = "ESPERANDO AUTORIZACIÓN PARA SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = EsperandoAutorizacionParaSalir
+
+                End If
+
+                If TipoEstado = "DETENIDO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = Detenido
+
+                End If
+
+                If TipoEstado = "ACCIDENTADO" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = Accidentado
+
+                End If
+
+                If TipoEstado = "PARADA IRREGULAR" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = ParadaIrregular
+
+                End If
+
+                If TipoEstado = "EN TALLER" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = EnTaller
+
+                End If
+
+                If TipoEstado = "ESPERANDO POR SALIR" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = EsperandoPorSalir
+
+                End If
+
+                If TipoEstado = "EN EL CLIENTE" Or TipoEstado = "EN EL PROVEEDOR" Then
+
+                    e.CellStyle.ForeColor = Color.Blue
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = EnElClienteEnElProveedor
+
+                End If
+
+                If TipoEstado = "REALIZANDO MOVIMIENTOS Ó ACARREOS" Then
+
+                    e.CellStyle.ForeColor = Color.Green
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = RealizandoMovimientos
+
+                End If
+
+                If TipoEstado = "RUTA CANCELADA" Then
+
+                    e.CellStyle.ForeColor = Color.Red
+                    DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = RutaCancelada
+
+                End If
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox("Error 2", MsgBoxStyle.Exclamation, "Error.")
+
+        End Try
 
     End Sub
+
+    Private Function IsTheSameCellValue(ByVal column As Integer, ByVal row As Integer) As Boolean
+
+        Dim cell1 As DataGridViewCell = DataGridView2(column, row)
+        Dim cell2 As DataGridViewCell = DataGridView2(column, row - 1)
+
+        If (IsDBNull(cell1.Value) Or IsDBNull(cell2.Value)) Then
+            Return False
+        End If
+
+        If (cell1.Value = cell2.Value) Then
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
 
 
 End Class
