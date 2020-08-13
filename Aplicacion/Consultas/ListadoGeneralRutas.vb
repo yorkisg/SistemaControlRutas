@@ -464,10 +464,14 @@ Public Class ListadoGeneralRutas
 
             If e.RowIndex < 1 OrElse e.ColumnIndex < 0 Then Return
 
-            If IsTheSameCellValue(e.ColumnIndex, e.RowIndex) Then
+            If (IsTheSameCellValue(e.ColumnIndex, e.RowIndex)) = True Then
+
                 e.AdvancedBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.None
+
             Else
+
                 e.AdvancedBorderStyle.Top = DataGridView2.AdvancedCellBorderStyle.Top
+
             End If
 
             'Generamos la division de grupos
@@ -516,28 +520,14 @@ Public Class ListadoGeneralRutas
                 End Using
 
             End If
+
         End If
+
     End Sub
 
     Private Sub DataGridView2_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView2.CellFormatting
 
         Try
-
-            'Para agrupar celdas
-            If (e.RowIndex = 0) Then
-                Return
-            End If
-
-            If DataGridView2.Columns(e.ColumnIndex).Name.Equals("ColumnaProducto3") Then
-
-                If (IsTheSameCellValue(e.ColumnIndex, e.RowIndex)) Then
-
-                    e.Value = ""
-                    e.FormattingApplied = True
-
-                End If
-
-            End If
 
             'damos formato a las celdas, bien sea por color de texto, fondo, etc.
             Dim TipoEstado As String
@@ -559,7 +549,6 @@ Public Class ListadoGeneralRutas
                 If TipoEstado = "DE REGRESO CARGADO" Or TipoEstado = "DE REGRESO VACIO" Then
 
                     e.CellStyle.ForeColor = Color.Red
-                    'Colocamos imagen a la celda de acuerdo al valor obtenido
                     DataGridView2.Rows(e.RowIndex).Cells("ColumnaImagen3").Value = DeRegresoVacio
 
                 End If
@@ -671,6 +660,22 @@ Public Class ListadoGeneralRutas
 
             End If
 
+            If (e.RowIndex = 0) Then
+                Return
+            End If
+
+            If DataGridView2.Columns(e.ColumnIndex).Name.Equals("ColumnaProducto3") Then
+
+                If (IsTheSameCellValue(e.ColumnIndex, e.RowIndex)) = True Then
+
+                    e.Value = ""
+                    e.FormattingApplied = True
+                    e.CellStyle.BackColor = Color.LightBlue
+
+                End If
+
+            End If
+
         Catch ex As Exception
 
             MsgBox("Error 2", MsgBoxStyle.Exclamation, "Error.")
@@ -695,7 +700,6 @@ Public Class ListadoGeneralRutas
         End If
 
     End Function
-
 
 
 End Class
