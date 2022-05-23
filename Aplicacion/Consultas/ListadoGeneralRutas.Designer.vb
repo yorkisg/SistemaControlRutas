@@ -37,16 +37,16 @@ Partial Class ListadoGeneralRutas
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonActualizar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
@@ -82,6 +82,11 @@ Partial Class ListadoGeneralRutas
         Me.ColumnaSubFlota2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Pagina3 = New System.Windows.Forms.TabPage()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ColumnaGrupo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaProducto3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaImagen3 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.ColumnaEstado3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
@@ -91,11 +96,6 @@ Partial Class ListadoGeneralRutas
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ColumnaGrupo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaProducto3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaUnidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaImagen3 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.ColumnaEstado3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip2.SuspendLayout()
@@ -113,7 +113,7 @@ Partial Class ListadoGeneralRutas
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonActualizar, Me.ToolStripSeparator4, Me.BotonExportar, Me.ToolStripSeparator2, Me.BotonSalir, Me.ToolStripSeparator3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -275,6 +275,7 @@ Partial Class ListadoGeneralRutas
         '
         'ToolStrip2
         '
+        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel3, Me.Contador, Me.ToolStripLabel1, Me.Contador2})
         Me.ToolStrip2.Location = New System.Drawing.Point(0, 644)
@@ -286,7 +287,7 @@ Partial Class ListadoGeneralRutas
         'ToolStripLabel3
         '
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(183, 22)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(180, 22)
         Me.ToolStripLabel3.Text = "TOTAL VEHICULOS EN GENERAL:"
         '
         'Contador
@@ -301,7 +302,7 @@ Partial Class ListadoGeneralRutas
         'ToolStripLabel1
         '
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(180, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(177, 22)
         Me.ToolStripLabel1.Text = "TOTAL VEHICULOS POR GRUPO:"
         '
         'Contador2
@@ -491,7 +492,7 @@ Partial Class ListadoGeneralRutas
         DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle13.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
@@ -506,6 +507,66 @@ Partial Class ListadoGeneralRutas
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView2.Size = New System.Drawing.Size(560, 579)
         Me.DataGridView2.TabIndex = 105
+        '
+        'ColumnaGrupo
+        '
+        Me.ColumnaGrupo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaGrupo.DataPropertyName = "Grupo"
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaGrupo.DefaultCellStyle = DataGridViewCellStyle14
+        Me.ColumnaGrupo.FillWeight = 9.698151!
+        Me.ColumnaGrupo.HeaderText = "GRUPO"
+        Me.ColumnaGrupo.Name = "ColumnaGrupo"
+        Me.ColumnaGrupo.ReadOnly = True
+        Me.ColumnaGrupo.Width = 5
+        '
+        'ColumnaProducto3
+        '
+        Me.ColumnaProducto3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaProducto3.DataPropertyName = "Producto"
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaProducto3.DefaultCellStyle = DataGridViewCellStyle15
+        Me.ColumnaProducto3.FillWeight = 178.4462!
+        Me.ColumnaProducto3.HeaderText = "PRODUCTO"
+        Me.ColumnaProducto3.MinimumWidth = 207
+        Me.ColumnaProducto3.Name = "ColumnaProducto3"
+        Me.ColumnaProducto3.ReadOnly = True
+        '
+        'ColumnaUnidad
+        '
+        Me.ColumnaUnidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaUnidad.DataPropertyName = "Unidades"
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaUnidad.DefaultCellStyle = DataGridViewCellStyle16
+        Me.ColumnaUnidad.HeaderText = "UNIDADES"
+        Me.ColumnaUnidad.MinimumWidth = 70
+        Me.ColumnaUnidad.Name = "ColumnaUnidad"
+        Me.ColumnaUnidad.ReadOnly = True
+        Me.ColumnaUnidad.Width = 70
+        '
+        'ColumnaImagen3
+        '
+        Me.ColumnaImagen3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.ColumnaImagen3.HeaderText = ""
+        Me.ColumnaImagen3.MinimumWidth = 27
+        Me.ColumnaImagen3.Name = "ColumnaImagen3"
+        Me.ColumnaImagen3.ReadOnly = True
+        Me.ColumnaImagen3.Width = 27
+        '
+        'ColumnaEstado3
+        '
+        Me.ColumnaEstado3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaEstado3.DataPropertyName = "Estado"
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ColumnaEstado3.DefaultCellStyle = DataGridViewCellStyle17
+        Me.ColumnaEstado3.HeaderText = "ESTADO ACTUAL"
+        Me.ColumnaEstado3.MinimumWidth = 225
+        Me.ColumnaEstado3.Name = "ColumnaEstado3"
+        Me.ColumnaEstado3.ReadOnly = True
         '
         'GroupBox2
         '
@@ -534,7 +595,7 @@ Partial Class ListadoGeneralRutas
         'ToolStripLabel2
         '
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(183, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(180, 22)
         Me.ToolStripLabel2.Text = "TOTAL VEHICULOS EN GENERAL:"
         '
         'Contador3
@@ -625,71 +686,11 @@ Partial Class ListadoGeneralRutas
         Me.ImageList1.Images.SetKeyName(1, "Agrupado.png")
         Me.ImageList1.Images.SetKeyName(2, "MateriaPrimaCompeltada.png")
         '
-        'ColumnaGrupo
-        '
-        Me.ColumnaGrupo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaGrupo.DataPropertyName = "Grupo"
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaGrupo.DefaultCellStyle = DataGridViewCellStyle14
-        Me.ColumnaGrupo.FillWeight = 9.698151!
-        Me.ColumnaGrupo.HeaderText = "GRUPO"
-        Me.ColumnaGrupo.Name = "ColumnaGrupo"
-        Me.ColumnaGrupo.ReadOnly = True
-        Me.ColumnaGrupo.Width = 5
-        '
-        'ColumnaProducto3
-        '
-        Me.ColumnaProducto3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaProducto3.DataPropertyName = "Producto"
-        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaProducto3.DefaultCellStyle = DataGridViewCellStyle15
-        Me.ColumnaProducto3.FillWeight = 178.4462!
-        Me.ColumnaProducto3.HeaderText = "PRODUCTO"
-        Me.ColumnaProducto3.MinimumWidth = 207
-        Me.ColumnaProducto3.Name = "ColumnaProducto3"
-        Me.ColumnaProducto3.ReadOnly = True
-        '
-        'ColumnaUnidad
-        '
-        Me.ColumnaUnidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaUnidad.DataPropertyName = "Unidades"
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaUnidad.DefaultCellStyle = DataGridViewCellStyle16
-        Me.ColumnaUnidad.HeaderText = "UNIDADES"
-        Me.ColumnaUnidad.MinimumWidth = 70
-        Me.ColumnaUnidad.Name = "ColumnaUnidad"
-        Me.ColumnaUnidad.ReadOnly = True
-        Me.ColumnaUnidad.Width = 70
-        '
-        'ColumnaImagen3
-        '
-        Me.ColumnaImagen3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.ColumnaImagen3.HeaderText = ""
-        Me.ColumnaImagen3.MinimumWidth = 27
-        Me.ColumnaImagen3.Name = "ColumnaImagen3"
-        Me.ColumnaImagen3.ReadOnly = True
-        Me.ColumnaImagen3.Width = 27
-        '
-        'ColumnaEstado3
-        '
-        Me.ColumnaEstado3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaEstado3.DataPropertyName = "Estado"
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.ColumnaEstado3.DefaultCellStyle = DataGridViewCellStyle17
-        Me.ColumnaEstado3.HeaderText = "ESTADO ACTUAL"
-        Me.ColumnaEstado3.MinimumWidth = 225
-        Me.ColumnaEstado3.Name = "ColumnaEstado3"
-        Me.ColumnaEstado3.ReadOnly = True
-        '
         'ListadoGeneralRutas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1069, 669)
         Me.Controls.Add(Me.Panel)
         Me.Controls.Add(Me.ToolStrip2)

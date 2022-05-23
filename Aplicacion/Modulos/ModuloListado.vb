@@ -127,6 +127,37 @@ Module ModuloListado
 
     End Sub
 
+    Public Sub CargarGridListadoGrupo()
+        'Metodo para cargar el datagridview.
+
+        'Conexion a la BD.
+        Dim sql As String = "SELECT idgrupo, nombregrupo, subflota " _
+                            & " FROM grupo " _
+                            & " ORDER BY nombregrupo ASC"
+
+        Dim connection As New MySqlConnection(ConnectionString)
+
+        'Instancia y uso de variables.
+        Command = New MySqlCommand(sql, connection)
+        Adaptador = New MySqlDataAdapter(Command)
+        DataSet = New DataSet()
+
+        'Llenado del datagridview.
+        Adaptador.Fill(DataSet, "grupos")
+        Tabla = DataSet.Tables("grupos")
+        ListadoGrupo.DataGridView.DataSource = Tabla
+
+        'Parametros para editar apariencia del datagridview.
+        With ListadoGrupo.DataGridView
+            .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
+            .Font = New Font("Segoe UI", 9) 'Fuente para Headers
+        End With
+
+        'Mostramos la cantidad de registros encontrados
+        ListadoGrupo.Contador.Text = ListadoGrupo.DataGridView.RowCount
+
+    End Sub
+
     Public Sub CargarGridListadoProducto()
         'Metodo para cargar el datagridview.
 

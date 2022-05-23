@@ -9,7 +9,7 @@ Module ModuloGeneral
     Public DataSet As DataSet
     Public Tabla As DataTable
     Public DataView As DataView
-    Public ConnectionString As String = "server=172.16.8.88;user=cecon01;password=1234;database=bdsaladecontrolgps;port=3306"
+    Public ConnectionString As String = "server=172.16.1.248;user=cecon01;password=Cecon.1234;database=cecon;port=3306;SSLMode=None"
     Public Conexion As New MySqlConnection
     Public Reader As MySqlDataReader
 
@@ -33,15 +33,17 @@ Module ModuloGeneral
 
             If Conexion.State = ConnectionState.Closed Then
 
-                Conexion.ConnectionString = " server=172.16.8.88; " _
-                                     & " user=cecon01; " _
-                                     & " password=1234; " _
-                                     & " database=bdsaladecontrolgps; " _
-                                     & " port=3306"
+                Conexion.ConnectionString = " server=172.16.1.248; " _
+                                          & " user=cecon01; " _
+                                          & " password=Cecon.1234; " _
+                                          & " database=cecon; " _
+                                          & " port=3306; " _
+                                          & " SSLMode=None"
                 Conexion.Open()
 
                 'Comprobamos si existen actualizaciones disponibles e iniciamos la aplicacion
-                ComprobarActualizacion()
+                'ComprobarActualizacion()
+                ComprobarActualizacion2()
 
                 MsgBox("Conexión Exitosa.", MsgBoxStyle.Information, "Exito.")
 
@@ -231,6 +233,30 @@ Module ModuloGeneral
                 End If
 
             End If
+
+        End If
+
+    End Sub
+
+    Public Sub ComprobarActualizacion2()
+        'Metodo empleado para actualizar la aplicacion, evalua si existe una version nueva y la actualiza
+
+        If My.Application.IsNetworkDeployed() Then
+
+            If My.Application.Deployment.CheckForUpdate() Then
+
+                MsgBox("Una nueva actualización esta disponible. Le gustaria descargarla en este momento?", MsgBoxStyle.Information, "Exito.")
+                My.Application.Deployment.Update()
+
+            Else
+
+                MsgBox("No hay actualizaciones por el momento.", MsgBoxStyle.Information, "Exito.")
+
+            End If
+
+            'Else
+
+            'MsgBox("Aplicacion no publicada.", MsgBoxStyle.Exclamation, "Error.")
 
         End If
 

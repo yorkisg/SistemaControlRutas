@@ -51,7 +51,6 @@ Public Class MenuPrincipal
             MenuMaestros.Enabled = True
             MenuGestionRutas.Enabled = True
             MenuConsultas.Enabled = False
-            MenuEstadisticas.Enabled = False
             MenuConfiguracion.Enabled = False
 
             'submenus
@@ -66,7 +65,6 @@ Public Class MenuPrincipal
             MenuMaestros.Enabled = True
             MenuGestionRutas.Enabled = True
             MenuConsultas.Enabled = True
-            MenuEstadisticas.Enabled = True
             MenuConfiguracion.Enabled = True
 
             'submenus
@@ -81,7 +79,6 @@ Public Class MenuPrincipal
             MenuMaestros.Enabled = False
             MenuGestionRutas.Enabled = True
             MenuConsultas.Enabled = False
-            MenuEstadisticas.Enabled = False
             MenuConfiguracion.Enabled = False
 
             'submenus
@@ -202,7 +199,7 @@ Public Class MenuPrincipal
     Private Sub MenuFlotas_Click(sender As Object, e As EventArgs) Handles MenuFlotas.Click
         'Formulario Flotas
 
-        MaestroFlota.ShowDialog()
+        MaestroSubFlota.ShowDialog()
 
     End Sub
 
@@ -213,13 +210,6 @@ Public Class MenuPrincipal
 
     End Sub
 
-    Private Sub MenuHistorialDeRutas_Click(sender As Object, e As EventArgs) Handles MenuHistorialDeRutas.Click
-        'Formulario EstadisticaRuta
-
-        EstadisticaGeneral.ShowDialog()
-
-    End Sub
-
     Private Sub MenuListadoDeInfractores_Click(sender As Object, e As EventArgs) Handles MenuListadoDeInfractores.Click
         'Formulario ListadoReporteInfraccion
 
@@ -227,9 +217,10 @@ Public Class MenuPrincipal
 
     End Sub
 
-    Private Sub MenuConfiguracion_Click(sender As Object, e As EventArgs) Handles MenuConfiguracion.Click
+    Private Sub MenuGrupos_Click(sender As Object, e As EventArgs) Handles MenuGrupos.Click
+        'Formulario 
 
-        'AccesoAdministrador.ShowDialog()
+        MaestroGrupo.ShowDialog()
 
     End Sub
 

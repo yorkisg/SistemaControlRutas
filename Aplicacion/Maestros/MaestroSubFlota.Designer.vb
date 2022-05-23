@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class MaestroFlota
+Partial Class MaestroSubFlota
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class MaestroFlota
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MaestroFlota))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MaestroSubFlota))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -48,7 +48,7 @@ Partial Class MaestroFlota
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator1, Me.BotonModificar, Me.ToolStripSeparator2, Me.BotonSalir, Me.ToolStripSeparator3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -152,7 +152,7 @@ Partial Class MaestroFlota
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label2.Location = New System.Drawing.Point(12, 113)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 15)
+        Me.Label2.Size = New System.Drawing.Size(41, 15)
         Me.Label2.TabIndex = 66
         Me.Label2.Text = "FLOTA"
         '
@@ -163,7 +163,7 @@ Partial Class MaestroFlota
         Me.ComboFlota.Enabled = False
         Me.ComboFlota.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ComboFlota.FormattingEnabled = True
-        Me.ComboFlota.Items.AddRange(New Object() {"FLOTA ORGANIZACIÓN EL TUNAL"})
+        Me.ComboFlota.Items.AddRange(New Object() {"ORGANIZACIÓN EL TUNAL"})
         Me.ComboFlota.Location = New System.Drawing.Point(12, 131)
         Me.ComboFlota.Name = "ComboFlota"
         Me.ComboFlota.Size = New System.Drawing.Size(280, 23)
@@ -175,7 +175,7 @@ Partial Class MaestroFlota
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label4.Location = New System.Drawing.Point(12, 157)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 15)
+        Me.Label4.Size = New System.Drawing.Size(91, 15)
         Me.Label4.TabIndex = 68
         Me.Label4.Text = "TIPO SUBFLOTA"
         '
@@ -203,11 +203,11 @@ Partial Class MaestroFlota
         Me.TextBox3.Text = "000000001"
         Me.TextBox3.Visible = False
         '
-        'MaestroFlota
+        'MaestroSubFlota
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(351, 210)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.ComboTipo)
@@ -224,7 +224,7 @@ Partial Class MaestroFlota
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "MaestroFlota"
+        Me.Name = "MaestroSubFlota"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Archivo de Flotas"
         Me.ToolStrip1.ResumeLayout(False)

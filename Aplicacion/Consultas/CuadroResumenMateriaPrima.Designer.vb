@@ -219,12 +219,13 @@ Partial Class CuadroResumenMateriaPrima
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label1.Location = New System.Drawing.Point(12, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 15)
+        Me.Label1.Size = New System.Drawing.Size(69, 15)
         Me.Label1.TabIndex = 67
         Me.Label1.Text = "PRODUCTO"
         '
         'ToolStrip2
         '
+        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel2, Me.total})
@@ -238,7 +239,7 @@ Partial Class CuadroResumenMateriaPrima
         '
         Me.ToolStripLabel2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(106, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(103, 22)
         Me.ToolStripLabel2.Text = "TOTAL UNIDADES:"
         '
         'total
@@ -278,7 +279,7 @@ Partial Class CuadroResumenMateriaPrima
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.BotonSalir, Me.ToolStripSeparator3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -329,7 +330,7 @@ Partial Class CuadroResumenMateriaPrima
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(406, 362)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.TextBox5)

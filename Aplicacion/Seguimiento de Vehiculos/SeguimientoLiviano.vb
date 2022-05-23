@@ -303,7 +303,7 @@ Public Class SeguimientoLiviano
                 TextBox3.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
                 TextBox21.Text = DataGridView1.Item("ColumnaID", DataGridView1.SelectedRows(0).Index).Value
 
-                TextBox25.Text = DataGridView1.Item("ColumnaTasa", DataGridView1.SelectedRows(0).Index).Value
+                'TextBox25.Text = DataGridView1.Item("ColumnaTasa", DataGridView1.SelectedRows(0).Index).Value
 
                 LimpiarComponentesInfraccionLiviano()
                 LimpiarComponentesIncidenciaLiviano()

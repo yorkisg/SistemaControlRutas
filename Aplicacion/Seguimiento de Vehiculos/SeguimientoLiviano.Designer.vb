@@ -196,7 +196,7 @@ Partial Class SeguimientoLiviano
         '
         'MenuPrincipal
         '
-        Me.MenuPrincipal.BackColor = System.Drawing.Color.AliceBlue
+        Me.MenuPrincipal.BackColor = System.Drawing.SystemColors.Control
         Me.MenuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonPersonal, Me.ToolStripSeparator1, Me.BotonVehiculo, Me.ToolStripSeparator6, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator4})
         Me.MenuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.MenuPrincipal.Name = "MenuPrincipal"
@@ -209,7 +209,7 @@ Partial Class SeguimientoLiviano
         Me.BotonGuiaTelefonica.Image = CType(resources.GetObject("BotonGuiaTelefonica.Image"), System.Drawing.Image)
         Me.BotonGuiaTelefonica.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BotonGuiaTelefonica.Name = "BotonGuiaTelefonica"
-        Me.BotonGuiaTelefonica.Size = New System.Drawing.Size(109, 22)
+        Me.BotonGuiaTelefonica.Size = New System.Drawing.Size(108, 22)
         Me.BotonGuiaTelefonica.Text = "Guía Telefónica"
         '
         'ToolStripSeparator8
@@ -235,7 +235,7 @@ Partial Class SeguimientoLiviano
         Me.BotonVehiculo.Image = CType(resources.GetObject("BotonVehiculo.Image"), System.Drawing.Image)
         Me.BotonVehiculo.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BotonVehiculo.Name = "BotonVehiculo"
-        Me.BotonVehiculo.Size = New System.Drawing.Size(78, 22)
+        Me.BotonVehiculo.Size = New System.Drawing.Size(77, 22)
         Me.BotonVehiculo.Text = "Vehículos"
         '
         'ToolStripSeparator6
@@ -342,7 +342,7 @@ Partial Class SeguimientoLiviano
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.ShowEditingIcon = False
-        Me.DataGridView1.Size = New System.Drawing.Size(392, 574)
+        Me.DataGridView1.Size = New System.Drawing.Size(392, 609)
         Me.DataGridView1.TabIndex = 45
         '
         'ColumnaID
@@ -395,7 +395,6 @@ Partial Class SeguimientoLiviano
         '
         'ColumnaTasa
         '
-        Me.ColumnaTasa.DataPropertyName = "tasaconsumo"
         Me.ColumnaTasa.HeaderText = "TASA"
         Me.ColumnaTasa.Name = "ColumnaTasa"
         Me.ColumnaTasa.ReadOnly = True
@@ -417,7 +416,7 @@ Partial Class SeguimientoLiviano
         Me.Panel6.Controls.Add(Me.Pagina7)
         Me.Panel6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Panel6.ImageList = Me.ImagensList
-        Me.Panel6.Location = New System.Drawing.Point(12, 291)
+        Me.Panel6.Location = New System.Drawing.Point(12, 326)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.SelectedIndex = 0
         Me.Panel6.Size = New System.Drawing.Size(691, 311)
@@ -442,7 +441,7 @@ Partial Class SeguimientoLiviano
         Me.DataGridView2.AllowUserToResizeRows = False
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.HighlightText
         Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -746,7 +745,7 @@ Partial Class SeguimientoLiviano
         Me.Panel4.Location = New System.Drawing.Point(12, 28)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.SelectedIndex = 0
-        Me.Panel4.Size = New System.Drawing.Size(213, 257)
+        Me.Panel4.Size = New System.Drawing.Size(213, 292)
         Me.Panel4.TabIndex = 44
         '
         'Pagina1
@@ -757,7 +756,7 @@ Partial Class SeguimientoLiviano
         Me.Pagina1.Location = New System.Drawing.Point(4, 24)
         Me.Pagina1.Name = "Pagina1"
         Me.Pagina1.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina1.Size = New System.Drawing.Size(205, 229)
+        Me.Pagina1.Size = New System.Drawing.Size(205, 264)
         Me.Pagina1.TabIndex = 0
         Me.Pagina1.Text = "FLOTA DE VEHICULOS LIVIANOS"
         '
@@ -773,7 +772,7 @@ Partial Class SeguimientoLiviano
         Me.Arbol.Location = New System.Drawing.Point(3, 3)
         Me.Arbol.Name = "Arbol"
         Me.Arbol.ShowNodeToolTips = True
-        Me.Arbol.Size = New System.Drawing.Size(199, 223)
+        Me.Arbol.Size = New System.Drawing.Size(199, 258)
         Me.Arbol.TabIndex = 21
         '
         'Panel5
@@ -786,7 +785,7 @@ Partial Class SeguimientoLiviano
         Me.Panel5.Location = New System.Drawing.Point(227, 28)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.SelectedIndex = 0
-        Me.Panel5.Size = New System.Drawing.Size(476, 257)
+        Me.Panel5.Size = New System.Drawing.Size(476, 292)
         Me.Panel5.TabIndex = 84
         '
         'Pagina2
@@ -809,7 +808,7 @@ Partial Class SeguimientoLiviano
         Me.Pagina2.Location = New System.Drawing.Point(4, 24)
         Me.Pagina2.Name = "Pagina2"
         Me.Pagina2.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina2.Size = New System.Drawing.Size(468, 229)
+        Me.Pagina2.Size = New System.Drawing.Size(468, 264)
         Me.Pagina2.TabIndex = 2
         Me.Pagina2.Text = "EXCESOS DE VELOCIDAD"
         '
@@ -817,7 +816,7 @@ Partial Class SeguimientoLiviano
         '
         Me.BotonGuardar1.Image = CType(resources.GetObject("BotonGuardar1.Image"), System.Drawing.Image)
         Me.BotonGuardar1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BotonGuardar1.Location = New System.Drawing.Point(322, 186)
+        Me.BotonGuardar1.Location = New System.Drawing.Point(325, 187)
         Me.BotonGuardar1.Name = "BotonGuardar1"
         Me.BotonGuardar1.Size = New System.Drawing.Size(137, 23)
         Me.BotonGuardar1.TabIndex = 128
@@ -908,7 +907,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox2
         '
-        Me.TextBox2.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextBox2.BackColor = System.Drawing.Color.AliceBlue
         Me.TextBox2.Enabled = False
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(6, 21)
@@ -1047,7 +1046,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox3
         '
-        Me.TextBox3.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextBox3.BackColor = System.Drawing.Color.AliceBlue
         Me.TextBox3.Enabled = False
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(6, 21)
@@ -1121,7 +1120,7 @@ Partial Class SeguimientoLiviano
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label15.Location = New System.Drawing.Point(275, 15)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(44, 15)
+        Me.Label15.Size = New System.Drawing.Size(41, 15)
         Me.Label15.TabIndex = 141
         Me.Label15.Text = "TOTAL"
         Me.Label15.Visible = False
@@ -1163,7 +1162,7 @@ Partial Class SeguimientoLiviano
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label14.Location = New System.Drawing.Point(275, 91)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(129, 15)
+        Me.Label14.Size = New System.Drawing.Size(130, 15)
         Me.Label14.TabIndex = 137
         Me.Label14.Text = "KILOMETRAJE ACTUAL"
         '
@@ -1184,7 +1183,7 @@ Partial Class SeguimientoLiviano
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label10.Location = New System.Drawing.Point(6, 91)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(174, 15)
+        Me.Label10.Size = New System.Drawing.Size(173, 15)
         Me.Label10.TabIndex = 133
         Me.Label10.Text = "TASA DE CONSUMO (L/100KM)"
         '
@@ -1210,6 +1209,7 @@ Partial Class SeguimientoLiviano
         '
         'BotonGuardar3
         '
+        Me.BotonGuardar3.Enabled = False
         Me.BotonGuardar3.Image = CType(resources.GetObject("BotonGuardar3.Image"), System.Drawing.Image)
         Me.BotonGuardar3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BotonGuardar3.Location = New System.Drawing.Point(323, 197)
@@ -1246,7 +1246,7 @@ Partial Class SeguimientoLiviano
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label9.Location = New System.Drawing.Point(275, 135)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(140, 15)
+        Me.Label9.Size = New System.Drawing.Size(141, 15)
         Me.Label9.TabIndex = 125
         Me.Label9.Text = "KILOMETRAJE ANTERIOR"
         '
@@ -1304,7 +1304,7 @@ Partial Class SeguimientoLiviano
         '
         'TextBox21
         '
-        Me.TextBox21.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.TextBox21.BackColor = System.Drawing.Color.AliceBlue
         Me.TextBox21.Enabled = False
         Me.TextBox21.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox21.Location = New System.Drawing.Point(6, 21)
@@ -1486,7 +1486,7 @@ Partial Class SeguimientoLiviano
         Me.ToolStrip4.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ToolStrip4.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.flota, Me.ToolStripLabel3, Me.vehiculo, Me.Tiempo, Me.ToolStripLabel2})
-        Me.ToolStrip4.Location = New System.Drawing.Point(0, 605)
+        Me.ToolStrip4.Location = New System.Drawing.Point(0, 640)
         Me.ToolStrip4.Name = "ToolStrip4"
         Me.ToolStrip4.Size = New System.Drawing.Size(1113, 25)
         Me.ToolStrip4.TabIndex = 86
@@ -1496,7 +1496,7 @@ Partial Class SeguimientoLiviano
         '
         Me.ToolStripLabel1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(46, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(45, 22)
         Me.ToolStripLabel1.Text = "FLOTA:"
         '
         'flota
@@ -1573,8 +1573,8 @@ Partial Class SeguimientoLiviano
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1113, 630)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(1113, 665)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.ToolStrip4)
         Me.Controls.Add(Me.Panel6)
@@ -1748,11 +1748,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents TextBox30 As TextBox
-    Friend WithEvents ColumnaTasa As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaEstadoVehiculo As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaImagen As DataGridViewImageColumn
-    Friend WithEvents ColumnaTipoVehiculo As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaTotal As DataGridViewTextBoxColumn
@@ -1765,4 +1760,9 @@ Partial Class SeguimientoLiviano
     Friend WithEvents Tiempo As ToolStripLabel
     Friend WithEvents ToolStripLabel2 As ToolStripLabel
     Friend WithEvents TextBox27 As TextBox
+    Friend WithEvents ColumnaTasa As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaEstadoVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaImagen As DataGridViewImageColumn
+    Friend WithEvents ColumnaTipoVehiculo As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
 End Class

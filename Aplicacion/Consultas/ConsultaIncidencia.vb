@@ -158,5 +158,7 @@
 
     End Sub
 
+    Private Sub ComboTipo_Click(sender As Object, e As EventArgs) Handles ComboTipo.Click
 
+    End Sub
 End Class

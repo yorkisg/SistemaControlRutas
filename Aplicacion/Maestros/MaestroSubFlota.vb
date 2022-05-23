@@ -1,7 +1,7 @@
 ﻿
-Public Class MaestroFlota
+Public Class MaestroSubFlota
 
-    Private Sub MaestroFlota_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub MaestroSubFlota_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Se habilita la serie correlativa para el siguiente ID.

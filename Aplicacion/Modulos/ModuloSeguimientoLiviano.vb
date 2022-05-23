@@ -32,7 +32,7 @@ Module ModuloSeguimientoLiviano
             Next
 
             'Editamos la apariencia del arbol
-            .Font = New Font("Calibri", 9)
+            .Font = New Font("Calibri", 8)
             .EndUpdate()
 
         End With
@@ -47,7 +47,7 @@ Module ModuloSeguimientoLiviano
     Public Sub CargarGridRutaLiviano()
         'Metodo que genera la carga de datos en el DataGridview1 
 
-        Dim sql As String = "SELECT idvehiculo, nombretipo, condicionvehiculo, tasaconsumo FROM vehiculo, subflota, grupo, tipovehiculo " _
+        Dim sql As String = "SELECT idvehiculo, nombretipo, condicionvehiculo FROM vehiculo, subflota, grupo, tipovehiculo " _
                        & " WHERE vehiculo.grupo = grupo.idgrupo " _
                        & " AND grupo.subflota = subflota.idsubflota " _
                        & " And vehiculo.tipovehiculo = tipovehiculo.idtipo " _

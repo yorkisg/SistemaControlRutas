@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class ListadoProducto
+Partial Class ListadoGrupo
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,12 +22,16 @@ Partial Class ListadoProducto
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListadoProducto))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ListadoGrupo))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.Contador = New System.Windows.Forms.ToolStripLabel()
         Me.DataGridView = New System.Windows.Forms.DataGridView()
         Me.ColumnaID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaNombreProducto = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaGrupo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ColumnaSubFlota = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
@@ -35,17 +39,39 @@ Partial Class ListadoProducto
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.TextBox = New System.Windows.Forms.ToolStripTextBox()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.Contador = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStrip2.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
-        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
+        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel2, Me.Contador})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 567)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(984, 25)
+        Me.ToolStrip2.TabIndex = 75
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(158, 22)
+        Me.ToolStripLabel2.Text = "REGISTROS ENCONTRADOS:"
+        '
+        'Contador
+        '
+        Me.Contador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.Contador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Contador.Image = CType(resources.GetObject("Contador.Image"), System.Drawing.Image)
+        Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.Contador.Name = "Contador"
+        Me.Contador.Size = New System.Drawing.Size(0, 22)
         '
         'DataGridView
         '
@@ -58,16 +84,16 @@ Partial Class ListadoProducto
         Me.DataGridView.BackgroundColor = System.Drawing.Color.WhiteSmoke
         Me.DataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaNombreProducto})
+        Me.DataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID, Me.ColumnaGrupo, Me.ColumnaSubFlota})
         Me.DataGridView.GridColor = System.Drawing.SystemColors.Menu
         Me.DataGridView.Location = New System.Drawing.Point(12, 28)
         Me.DataGridView.MultiSelect = False
@@ -75,37 +101,45 @@ Partial Class ListadoProducto
         Me.DataGridView.ReadOnly = True
         Me.DataGridView.RowHeadersVisible = False
         Me.DataGridView.RowHeadersWidth = 45
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridView.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.DataGridView.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView.Size = New System.Drawing.Size(960, 536)
-        Me.DataGridView.TabIndex = 19
+        Me.DataGridView.TabIndex = 74
         '
         'ColumnaID
         '
-        Me.ColumnaID.DataPropertyName = "idproducto"
-        Me.ColumnaID.HeaderText = "ID PRODUCTO"
+        Me.ColumnaID.DataPropertyName = "idgrupo"
+        Me.ColumnaID.HeaderText = "ID FLOTA"
         Me.ColumnaID.Name = "ColumnaID"
         Me.ColumnaID.ReadOnly = True
         Me.ColumnaID.Visible = False
         Me.ColumnaID.Width = 150
         '
-        'ColumnaNombreProducto
+        'ColumnaGrupo
         '
-        Me.ColumnaNombreProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ColumnaNombreProducto.DataPropertyName = "nombreproducto"
-        Me.ColumnaNombreProducto.HeaderText = "PRODUCTO"
-        Me.ColumnaNombreProducto.Name = "ColumnaNombreProducto"
-        Me.ColumnaNombreProducto.ReadOnly = True
+        Me.ColumnaGrupo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.ColumnaGrupo.DataPropertyName = "nombregrupo"
+        Me.ColumnaGrupo.HeaderText = "GRUPO"
+        Me.ColumnaGrupo.Name = "ColumnaGrupo"
+        Me.ColumnaGrupo.ReadOnly = True
+        '
+        'ColumnaSubFlota
+        '
+        Me.ColumnaSubFlota.DataPropertyName = "subflota"
+        Me.ColumnaSubFlota.HeaderText = "SUBFLOTA"
+        Me.ColumnaSubFlota.Name = "ColumnaSubFlota"
+        Me.ColumnaSubFlota.ReadOnly = True
+        Me.ColumnaSubFlota.Visible = False
         '
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator2, Me.BotonExportar, Me.ToolStripSeparator3, Me.ToolStripLabel1, Me.TextBox, Me.ToolStripSeparator4, Me.BotonSalir, Me.ToolStripSeparator5})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator2, Me.BotonExportar, Me.ToolStripSeparator3, Me.ToolStripLabel1, Me.TextBox, Me.ToolStripSeparator1, Me.BotonSalir, Me.ToolStripSeparator4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(984, 25)
-        Me.ToolStrip1.TabIndex = 22
+        Me.ToolStrip1.TabIndex = 73
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'BotonGuardar
@@ -146,10 +180,10 @@ Partial Class ListadoProducto
         Me.TextBox.Name = "TextBox"
         Me.TextBox.Size = New System.Drawing.Size(180, 25)
         '
-        'ToolStripSeparator4
+        'ToolStripSeparator1
         '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BotonSalir
         '
@@ -159,84 +193,49 @@ Partial Class ListadoProducto
         Me.BotonSalir.Size = New System.Drawing.Size(49, 22)
         Me.BotonSalir.Text = "Salir"
         '
-        'ToolStripSeparator5
+        'ToolStripSeparator4
         '
-        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
         '
-        'TextBox1
-        '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(292, 65)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 23
-        '
-        'ToolStrip2
-        '
-        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
-        Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel2, Me.Contador})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 567)
-        Me.ToolStrip2.Name = "ToolStrip2"
-        Me.ToolStrip2.Size = New System.Drawing.Size(984, 25)
-        Me.ToolStrip2.TabIndex = 72
-        Me.ToolStrip2.Text = "ToolStrip2"
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(158, 22)
-        Me.ToolStripLabel2.Text = "REGISTROS ENCONTRADOS:"
-        '
-        'Contador
-        '
-        Me.Contador.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.Contador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Contador.Image = CType(resources.GetObject("Contador.Image"), System.Drawing.Image)
-        Me.Contador.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.Contador.Name = "Contador"
-        Me.Contador.Size = New System.Drawing.Size(0, 22)
-        '
-        'ListadoProducto
+        'ListadoGrupo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(984, 592)
         Me.Controls.Add(Me.ToolStrip2)
-        Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.DataGridView)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.KeyPreview = True
-        Me.Name = "ListadoProducto"
+        Me.Name = "ListadoGrupo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Listado de Productos"
+        Me.Text = "Listado de Grupos"
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        Me.ToolStrip2.ResumeLayout(False)
-        Me.ToolStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents DataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
-    Friend WithEvents BotonGuardar As System.Windows.Forms.ToolStripButton
-    Friend WithEvents BotonSalir As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents TextBox As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents BotonExportar As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents ToolStrip2 As System.Windows.Forms.ToolStrip
-    Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents Contador As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+
+    Friend WithEvents ToolStrip2 As ToolStrip
+    Friend WithEvents ToolStripLabel2 As ToolStripLabel
+    Friend WithEvents Contador As ToolStripLabel
+    Friend WithEvents DataGridView As DataGridView
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents BotonGuardar As ToolStripButton
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents BotonExportar As ToolStripButton
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents TextBox As ToolStripTextBox
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents BotonSalir As ToolStripButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents ColumnaSubFlota As DataGridViewTextBoxColumn
+    Friend WithEvents ColumnaGrupo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaID As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaNombreProducto As DataGridViewTextBoxColumn
 End Class

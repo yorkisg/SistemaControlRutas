@@ -44,7 +44,7 @@ Partial Class MaestroEstado
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator1, Me.BotonModificar, Me.ToolStripSeparator2, Me.BotonSalir, Me.ToolStripSeparator3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -134,7 +134,7 @@ Partial Class MaestroEstado
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label1.Location = New System.Drawing.Point(12, 69)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 15)
+        Me.Label1.Size = New System.Drawing.Size(50, 15)
         Me.Label1.TabIndex = 56
         Me.Label1.Text = "ESTADO"
         '
@@ -146,7 +146,7 @@ Partial Class MaestroEstado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(351, 131)
         Me.Controls.Add(Me.BotonBuscar)
         Me.Controls.Add(Me.TextBox2)

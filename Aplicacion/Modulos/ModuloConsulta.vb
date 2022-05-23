@@ -509,11 +509,12 @@ Module ModuloConsulta
                     & " WHERE personal.idpersonal = registroinfraccion.personal " _
                     & " AND registroinfraccion.vehiculo = vehiculo.idvehiculo " _
                     & " AND vehiculo.grupo = grupo.idgrupo " _
-                    & " AND fecha BETWEEN @fecha1 AND @fecha2 " _
+                    & " AND fecha IN (@fecha1,@fecha2) " _
                     & " AND clasificacionvehiculo = '" & ReporteGeneral.ComboTipo.Text & "' " _
                     & " GROUP BY nombrepersonal " _
                     & " ORDER BY COUNT(idregistroinfraccion) DESC, MAX(velocidad) DESC " _
                     & " LIMIT 15 ", Conexion)
+        '& " AND fecha BETWEEN @fecha1 AND @fecha2 " _
 
         'Para trabajar con fechas y campos tipo "DATE" se usan los parametos
         Command.Parameters.Add("@fecha1", MySqlDbType.Date).Value = ReporteGeneral.DateTimePicker1.Value
@@ -1129,9 +1130,15 @@ Module ModuloConsulta
         'Cargamos las imágenes
 
         Exceso = My.Resources.Consumo7
-        Consumo = My.Resources.Consumo5
+        Consumo = My.Resources.Consumo1
 
     End Sub
+
+
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''''''''''CARGA DE COMBOBOX ''''''''''''''''''''''''''''''''''''
+    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 
 
 End Module

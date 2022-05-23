@@ -56,7 +56,7 @@ Partial Class MaestroInfraccion
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator1, Me.BotonSalir, Me.ToolStripSeparator3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -246,7 +246,7 @@ Partial Class MaestroInfraccion
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label7.Location = New System.Drawing.Point(12, 201)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(51, 15)
+        Me.Label7.Size = New System.Drawing.Size(50, 15)
         Me.Label7.TabIndex = 73
         Me.Label7.Text = "ESTADO"
         '
@@ -268,7 +268,7 @@ Partial Class MaestroInfraccion
         Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.RadioButton2.Location = New System.Drawing.Point(22, 245)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(60, 19)
+        Me.RadioButton2.Size = New System.Drawing.Size(59, 19)
         Me.RadioButton2.TabIndex = 75
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "VACIO"
@@ -294,7 +294,7 @@ Partial Class MaestroInfraccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(351, 366)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.TextBox7)

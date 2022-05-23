@@ -838,7 +838,7 @@ Public Class SeguimientoCarga
     Private Sub BotonBuscar2_Click(sender As Object, e As EventArgs) Handles BotonBuscar2.Click
         'Llama al formulario Listadositiocarga.
 
-        Listadositiocarga.ShowDialog()
+        ListadoSitioCarga.ShowDialog()
 
     End Sub
 
@@ -903,7 +903,7 @@ Public Class SeguimientoCarga
 
     End Sub
 
-    Private Sub BotonGuardar2_Click(sender As Object, e As EventArgs) Handles BotonGuardar2.Click
+    Private Sub botonguardar3_Click(sender As Object, e As EventArgs) Handles botonguardar3.Click
         'Boton guardar
 
         Try
@@ -1263,25 +1263,25 @@ Public Class SeguimientoCarga
 
             If DataGridView1.RowCount > 0 And DataGridView1.SelectedRows.Count = 1 Then
 
-                If Celda = "EN RUTA VACIO" Or Celda = "EN RUTA CARGADO" Or Celda = "DE REGRESO CARGADO" Or Celda = "DE REGRESO VACIO" Then
+                'If Celda = "EN RUTA VACIO" Or Celda = "EN RUTA CARGADO" Or Celda = "DE REGRESO CARGADO" Or Celda = "DE REGRESO VACIO" Then
 
-                    MaestroInfraccion.TextBox2.Text = TextBox1.Text
-                    MaestroInfraccion.TextBox4.Text = TextBox8.Text
-                    MaestroInfraccion.TextBox8.Text = TextBox5.Text
-                    MaestroInfraccion.BotonBuscar.Enabled = False
-                    MaestroInfraccion.BotonBuscar2.Enabled = False
+                MaestroInfraccion.TextBox2.Text = TextBox1.Text
+                MaestroInfraccion.TextBox4.Text = TextBox8.Text
+                MaestroInfraccion.TextBox8.Text = TextBox5.Text
+                MaestroInfraccion.BotonBuscar.Enabled = False
+                MaestroInfraccion.BotonBuscar2.Enabled = False
 
-                    ObtenerPersonalInfraccionCarga()
-                    MaestroInfraccion.ShowDialog()
+                ObtenerPersonalInfraccionCarga()
+                MaestroInfraccion.ShowDialog()
 
-                    'Posicionamos el currencell en el vehiculo que clickeamos anteriormente
-                    DataGridView1.CurrentCell = DataGridView1(Columna, Fila)
+                'Posicionamos el currencell en el vehiculo que clickeamos anteriormente
+                DataGridView1.CurrentCell = DataGridView1(Columna, Fila)
 
-                Else
+                'Else
 
-                    MsgBox("No puede registrar infracciones de velocidad a vehiculos que no esten en carretera.", MsgBoxStyle.Exclamation, "Error.")
+                ' MsgBox("No puede registrar infracciones de velocidad a vehiculos que no esten en carretera.", MsgBoxStyle.Exclamation, "Error.")
 
-                End If
+                'End If
 
             End If
 

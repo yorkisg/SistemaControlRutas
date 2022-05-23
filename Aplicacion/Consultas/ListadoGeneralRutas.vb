@@ -670,7 +670,7 @@ Public Class ListadoGeneralRutas
 
                     e.Value = ""
                     e.FormattingApplied = True
-                    e.CellStyle.BackColor = Color.LightBlue
+                    'e.CellStyle.BackColor = Color.LightBlue
 
                 End If
 

@@ -11,10 +11,11 @@
     <AssemblyName>Sistema de Gestión de Rutas</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Sistema de Gestion de Rutas\Actualizacion\</PublishUrl>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>W:\Actualizacion Sistema CECON-GPS\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -24,8 +25,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>//HAC-C-08088/Actualizacion/</InstallUrl>
-    <ApplicationRevision>3</ApplicationRevision>
+    <InstallUrl>\\172.16.1.145\PCP\Actualizacion Sistema CECON-GPS\</InstallUrl>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -69,27 +70,22 @@
     <ApplicationIcon>Icono.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>BD25CF572BD02DAA06C019D46EB7B8BB63A683D4</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>Aplicacion_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DataGridViewGrouper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\DataGridViewGrouper.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -198,10 +194,10 @@
     <Compile Include="Consultas\ReporteGeneral.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Estadisticas\EstadisticaGeneral.Designer.vb">
-      <DependentUpon>EstadisticaGeneral.vb</DependentUpon>
+    <Compile Include="Listados\ListadoGrupo.Designer.vb">
+      <DependentUpon>ListadoGrupo.vb</DependentUpon>
     </Compile>
-    <Compile Include="Estadisticas\EstadisticaGeneral.vb">
+    <Compile Include="Listados\ListadoGrupo.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Listados\ListadoPersonal.Designer.vb">
@@ -246,6 +242,12 @@
     <Compile Include="Listados\ListadoVehiculo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Maestros\MaestroGrupo.Designer.vb">
+      <DependentUpon>MaestroGrupo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maestros\MaestroGrupo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Maestros\MaestroPersonal.Designer.vb">
       <DependentUpon>MaestroPersonal.vb</DependentUpon>
     </Compile>
@@ -258,10 +260,10 @@
     <Compile Include="Maestros\MaestroEstado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maestros\MaestroFlota.Designer.vb">
-      <DependentUpon>MaestroFlota.vb</DependentUpon>
+    <Compile Include="Maestros\MaestroSubFlota.Designer.vb">
+      <DependentUpon>MaestroSubFlota.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maestros\MaestroFlota.vb">
+    <Compile Include="Maestros\MaestroSubFlota.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maestros\MaestroIncidencia.Designer.vb">
@@ -295,12 +297,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\ModuloConsulta.vb" />
-    <Compile Include="Modulos\ModuloEstadistica.vb" />
     <Compile Include="Modulos\ModuloGeneral.vb" />
     <Compile Include="Modulos\ModuloListado.vb" />
     <Compile Include="Modulos\ModuloSeguimientoCarga.vb" />
     <Compile Include="Modulos\ModuloSeguimientoLiviano.vb" />
-    <Compile Include="Modulos\ModuloSeguimientoTaller.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -328,28 +328,10 @@
     <Compile Include="Principal\MenuPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Seguimiento de Taller\ConsultaSeguimientoTaller.Designer.vb">
-      <DependentUpon>ConsultaSeguimientoTaller.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Seguimiento de Taller\ConsultaSeguimientoTaller.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Consultas\CuadroResumenMateriaPrima.Designer.vb">
       <DependentUpon>CuadroResumenMateriaPrima.vb</DependentUpon>
     </Compile>
     <Compile Include="Consultas\CuadroResumenMateriaPrima.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seguimiento de Taller\RegistrarReporteTaller.Designer.vb">
-      <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Seguimiento de Taller\RegistrarReporteTaller.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seguimiento de Taller\SeguimientoTaller.Designer.vb">
-      <DependentUpon>SeguimientoTaller.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Seguimiento de Taller\SeguimientoTaller.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Seguimiento de Vehiculos\SeguimientoCarga.Designer.vb">
@@ -388,8 +370,8 @@
     <EmbeddedResource Include="Consultas\ReporteGeneral.resx">
       <DependentUpon>ReporteGeneral.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas\EstadisticaGeneral.resx">
-      <DependentUpon>EstadisticaGeneral.vb</DependentUpon>
+    <EmbeddedResource Include="Listados\ListadoGrupo.resx">
+      <DependentUpon>ListadoGrupo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listados\ListadoPersonal.resx">
       <DependentUpon>ListadoPersonal.vb</DependentUpon>
@@ -413,14 +395,17 @@
       <DependentUpon>ListadoVehiculo.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Maestros\MaestroGrupo.resx">
+      <DependentUpon>MaestroGrupo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Maestros\MaestroPersonal.resx">
       <DependentUpon>MaestroPersonal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maestros\MaestroEstado.resx">
       <DependentUpon>MaestroEstado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maestros\MaestroFlota.resx">
-      <DependentUpon>MaestroFlota.vb</DependentUpon>
+    <EmbeddedResource Include="Maestros\MaestroSubFlota.resx">
+      <DependentUpon>MaestroSubFlota.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maestros\MaestroIncidencia.resx">
       <DependentUpon>MaestroIncidencia.vb</DependentUpon>
@@ -450,19 +435,8 @@
       <DependentUpon>MenuPrincipal.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Seguimiento de Taller\ConsultaSeguimientoTaller.resx">
-      <DependentUpon>ConsultaSeguimientoTaller.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CuadroResumenMateriaPrima.resx">
       <DependentUpon>CuadroResumenMateriaPrima.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguimiento de Taller\RegistrarReporteTaller.resx">
-      <DependentUpon>RegistrarReporteTaller.vb</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguimiento de Taller\SeguimientoTaller.resx">
-      <DependentUpon>SeguimientoTaller.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguimiento de Vehiculos\SeguimientoCarga.resx">
       <DependentUpon>SeguimientoCarga.vb</DependentUpon>
@@ -474,7 +448,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Aplicacion_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -646,6 +619,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

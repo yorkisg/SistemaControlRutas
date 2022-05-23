@@ -119,7 +119,7 @@ Partial Class AccesoAplicacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.HighlightText
         Me.ClientSize = New System.Drawing.Size(224, 136)
         Me.Controls.Add(Me.rolusuario)
         Me.Controls.Add(Me.BotonSalir)

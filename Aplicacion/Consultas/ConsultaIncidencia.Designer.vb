@@ -30,6 +30,9 @@ Partial Class ConsultaIncidencia
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BotonFiltrar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ComboTipo = New System.Windows.Forms.ToolStripComboBox()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonLimpiar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BotonExportar = New System.Windows.Forms.ToolStripButton()
@@ -37,6 +40,7 @@ Partial Class ConsultaIncidencia
         Me.BotonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -57,10 +61,6 @@ Partial Class ConsultaIncidencia
         Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.Contador = New System.Windows.Forms.ToolStripLabel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ComboTipo = New System.Windows.Forms.ToolStripComboBox()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -70,7 +70,7 @@ Partial Class ConsultaIncidencia
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.AliceBlue
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFiltrar, Me.ToolStripSeparator2, Me.ToolStripButton1, Me.ComboTipo, Me.ToolStripSeparator4, Me.BotonLimpiar, Me.ToolStripSeparator1, Me.BotonExportar, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator5})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -90,6 +90,29 @@ Partial Class ConsultaIncidencia
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(98, 22)
+        Me.ToolStripButton1.Text = "Tipo de Vehículo:"
+        '
+        'ComboTipo
+        '
+        Me.ComboTipo.BackColor = System.Drawing.Color.AliceBlue
+        Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboTipo.FlatStyle = System.Windows.Forms.FlatStyle.Standard
+        Me.ComboTipo.Items.AddRange(New Object() {"CARGA", "LIVIANO"})
+        Me.ComboTipo.Name = "ComboTipo"
+        Me.ComboTipo.Size = New System.Drawing.Size(130, 25)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
         '
         'BotonLimpiar
         '
@@ -132,7 +155,7 @@ Partial Class ConsultaIncidencia
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -149,6 +172,16 @@ Partial Class ConsultaIncidencia
         Me.GroupBox1.TabIndex = 80
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "SELECCIONAR PERÍODO DE FECHAS"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.TextBox2.Location = New System.Drawing.Point(63, 168)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(129, 22)
+        Me.TextBox2.TabIndex = 81
+        Me.TextBox2.Visible = False
         '
         'DateTimePicker1
         '
@@ -194,7 +227,7 @@ Partial Class ConsultaIncidencia
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label5.Location = New System.Drawing.Point(6, 65)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 15)
+        Me.Label5.Size = New System.Drawing.Size(44, 15)
         Me.Label5.TabIndex = 77
         Me.Label5.Text = "HASTA"
         '
@@ -365,44 +398,11 @@ Partial Class ConsultaIncidencia
         Me.Contador.Name = "Contador"
         Me.Contador.Size = New System.Drawing.Size(0, 22)
         '
-        'TextBox2
-        '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox2.Location = New System.Drawing.Point(63, 168)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(129, 22)
-        Me.TextBox2.TabIndex = 81
-        Me.TextBox2.Visible = False
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(99, 22)
-        Me.ToolStripButton1.Text = "Tipo de Vehículo:"
-        '
-        'ComboTipo
-        '
-        Me.ComboTipo.BackColor = System.Drawing.Color.AliceBlue
-        Me.ComboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboTipo.FlatStyle = System.Windows.Forms.FlatStyle.Standard
-        Me.ComboTipo.Items.AddRange(New Object() {"CARGA", "LIVIANO"})
-        Me.ComboTipo.Name = "ComboTipo"
-        Me.ComboTipo.Size = New System.Drawing.Size(130, 25)
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 25)
-        '
         'ConsultaIncidencia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(1045, 612)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ToolStrip2)

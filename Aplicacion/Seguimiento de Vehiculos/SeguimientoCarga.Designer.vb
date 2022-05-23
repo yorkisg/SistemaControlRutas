@@ -90,6 +90,7 @@ Partial Class SeguimientoCarga
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.TabControl()
         Me.Pagina1 = New System.Windows.Forms.TabPage()
+        Me.botonguardar3 = New System.Windows.Forms.Button()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox22 = New System.Windows.Forms.TextBox()
@@ -108,8 +109,6 @@ Partial Class SeguimientoCarga
         Me.BotonAgregar1 = New System.Windows.Forms.Button()
         Me.BotonBuscar2 = New System.Windows.Forms.Button()
         Me.BotonBuscar3 = New System.Windows.Forms.Button()
-        Me.ToolStrip3 = New System.Windows.Forms.ToolStrip()
-        Me.BotonGuardar2 = New System.Windows.Forms.ToolStripButton()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -178,7 +177,6 @@ Partial Class SeguimientoCarga
         Me.MenuRuta.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Pagina1.SuspendLayout()
-        Me.ToolStrip3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider4, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,7 +197,7 @@ Partial Class SeguimientoCarga
         Me.Arbol.Location = New System.Drawing.Point(6, 6)
         Me.Arbol.Name = "Arbol"
         Me.Arbol.ShowNodeToolTips = True
-        Me.Arbol.Size = New System.Drawing.Size(214, 264)
+        Me.Arbol.Size = New System.Drawing.Size(214, 301)
         Me.Arbol.TabIndex = 20
         '
         'DateTimePicker1
@@ -250,7 +248,7 @@ Partial Class SeguimientoCarga
         '
         'MenuPrincipal
         '
-        Me.MenuPrincipal.BackColor = System.Drawing.Color.AliceBlue
+        Me.MenuPrincipal.BackColor = System.Drawing.SystemColors.Control
         Me.MenuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar, Me.ToolStripSeparator1, Me.BotonGuiaTelefonica, Me.ToolStripSeparator8, Me.BotonListado, Me.ToolStripSeparator7, Me.BotonCuadroResumen, Me.ToolStripSeparator15, Me.BotonConsulta2, Me.ToolStripSeparator3, Me.BotonSalir, Me.ToolStripSeparator12})
         Me.MenuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.MenuPrincipal.Name = "MenuPrincipal"
@@ -278,7 +276,7 @@ Partial Class SeguimientoCarga
         Me.BotonGuiaTelefonica.Image = CType(resources.GetObject("BotonGuiaTelefonica.Image"), System.Drawing.Image)
         Me.BotonGuiaTelefonica.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BotonGuiaTelefonica.Name = "BotonGuiaTelefonica"
-        Me.BotonGuiaTelefonica.Size = New System.Drawing.Size(109, 22)
+        Me.BotonGuiaTelefonica.Size = New System.Drawing.Size(108, 22)
         Me.BotonGuiaTelefonica.Text = "Guía Telefónica"
         '
         'ToolStripSeparator8
@@ -555,7 +553,7 @@ Partial Class SeguimientoCarga
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(776, 285)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(168, 17)
+        Me.Label2.Size = New System.Drawing.Size(167, 17)
         Me.Label2.TabIndex = 81
         Me.Label2.Text = "Estado Actual del Vehiculo"
         Me.Label2.Visible = False
@@ -591,12 +589,14 @@ Partial Class SeguimientoCarga
         Me.Panel1.Location = New System.Drawing.Point(12, 28)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.SelectedIndex = 0
-        Me.Panel1.Size = New System.Drawing.Size(699, 328)
+        Me.Panel1.Size = New System.Drawing.Size(699, 341)
         Me.Panel1.TabIndex = 62
         '
         'Pagina1
         '
-        Me.Pagina1.BackColor = System.Drawing.Color.White
+        Me.Pagina1.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.Pagina1.Controls.Add(Me.botonguardar3)
+        Me.Pagina1.Controls.Add(Me.Arbol)
         Me.Pagina1.Controls.Add(Me.Label22)
         Me.Pagina1.Controls.Add(Me.Label21)
         Me.Pagina1.Controls.Add(Me.TextBox22)
@@ -616,7 +616,6 @@ Partial Class SeguimientoCarga
         Me.Pagina1.Controls.Add(Me.BotonAgregar1)
         Me.Pagina1.Controls.Add(Me.BotonBuscar2)
         Me.Pagina1.Controls.Add(Me.BotonBuscar3)
-        Me.Pagina1.Controls.Add(Me.ToolStrip3)
         Me.Pagina1.Controls.Add(Me.TextBox3)
         Me.Pagina1.Controls.Add(Me.Label1)
         Me.Pagina1.Controls.Add(Me.TextBox7)
@@ -628,15 +627,27 @@ Partial Class SeguimientoCarga
         Me.Pagina1.Controls.Add(Me.Label7)
         Me.Pagina1.Controls.Add(Me.Label6)
         Me.Pagina1.Controls.Add(Me.Label3)
-        Me.Pagina1.Controls.Add(Me.Arbol)
         Me.Pagina1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pagina1.ImageIndex = 0
         Me.Pagina1.Location = New System.Drawing.Point(4, 24)
         Me.Pagina1.Name = "Pagina1"
         Me.Pagina1.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina1.Size = New System.Drawing.Size(691, 300)
+        Me.Pagina1.Size = New System.Drawing.Size(691, 313)
         Me.Pagina1.TabIndex = 0
         Me.Pagina1.Text = "FLOTA DE VEHICULOS DE CARGA"
+        '
+        'botonguardar3
+        '
+        Me.botonguardar3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.botonguardar3.Image = Global.Aplicacion.My.Resources.Resources.Guardar
+        Me.botonguardar3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.botonguardar3.Location = New System.Drawing.Point(579, 281)
+        Me.botonguardar3.Name = "botonguardar3"
+        Me.botonguardar3.Size = New System.Drawing.Size(106, 26)
+        Me.botonguardar3.TabIndex = 124
+        Me.botonguardar3.Text = "Registrar Ruta"
+        Me.botonguardar3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.botonguardar3.UseVisualStyleBackColor = True
         '
         'Label22
         '
@@ -819,27 +830,6 @@ Partial Class SeguimientoCarga
         Me.BotonBuscar3.TabIndex = 92
         Me.BotonBuscar3.UseVisualStyleBackColor = True
         '
-        'ToolStrip3
-        '
-        Me.ToolStrip3.BackColor = System.Drawing.Color.AliceBlue
-        Me.ToolStrip3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonGuardar2})
-        Me.ToolStrip3.Location = New System.Drawing.Point(3, 272)
-        Me.ToolStrip3.Name = "ToolStrip3"
-        Me.ToolStrip3.Size = New System.Drawing.Size(685, 25)
-        Me.ToolStrip3.TabIndex = 113
-        Me.ToolStrip3.Text = "ToolStrip3"
-        '
-        'BotonGuardar2
-        '
-        Me.BotonGuardar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.BotonGuardar2.BackColor = System.Drawing.SystemColors.InactiveBorder
-        Me.BotonGuardar2.Image = CType(resources.GetObject("BotonGuardar2.Image"), System.Drawing.Image)
-        Me.BotonGuardar2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BotonGuardar2.Name = "BotonGuardar2"
-        Me.BotonGuardar2.Size = New System.Drawing.Size(100, 22)
-        Me.BotonGuardar2.Text = "Registrar Ruta"
-        '
         'TextBox3
         '
         Me.TextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
@@ -933,7 +923,7 @@ Partial Class SeguimientoCarga
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label7.Location = New System.Drawing.Point(251, 46)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(119, 15)
+        Me.Label7.Size = New System.Drawing.Size(118, 15)
         Me.Label7.TabIndex = 86
         Me.Label7.Text = "PRODUCTO / RUBRO"
         '
@@ -953,7 +943,7 @@ Partial Class SeguimientoCarga
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Label3.Location = New System.Drawing.Point(251, 218)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(118, 15)
+        Me.Label3.Size = New System.Drawing.Size(116, 15)
         Me.Label3.TabIndex = 83
         Me.Label3.Text = "ESTADO DE LA RUTA"
         '
@@ -1005,7 +995,7 @@ Partial Class SeguimientoCarga
         Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.ShowEditingIcon = False
-        Me.DataGridView1.Size = New System.Drawing.Size(608, 726)
+        Me.DataGridView1.Size = New System.Drawing.Size(608, 735)
         Me.DataGridView1.TabIndex = 6
         '
         'ColumnaID
@@ -1097,6 +1087,7 @@ Partial Class SeguimientoCarga
         Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnaID2, Me.ColunmaVehiculo, Me.ColumnaChofer, Me.ColumnaProducto, Me.ColumnaUbicacion, Me.ColumnaDestino, Me.ColumnaImagen, Me.ColumnaEstado, Me.ColumnaFecha, Me.ColumnaHora, Me.ColumnaImagen3, Me.ColumnaEstado2})
+        Me.DataGridView2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView2.GridColor = System.Drawing.SystemColors.InactiveBorder
         Me.DataGridView2.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView2.MultiSelect = False
@@ -1107,7 +1098,7 @@ Partial Class SeguimientoCarga
         DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(699, 367)
+        Me.DataGridView2.Size = New System.Drawing.Size(699, 363)
         Me.DataGridView2.TabIndex = 61
         '
         'ColumnaID2
@@ -1341,10 +1332,10 @@ Partial Class SeguimientoCarga
         '
         'ToolStrip2
         '
-        Me.ToolStrip2.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ToolStrip2.BackColor = System.Drawing.SystemColors.Control
         Me.ToolStrip2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.flota, Me.ToolStripLabel3, Me.vehiculo, Me.Tiempo, Me.ToolStripLabel4, Me.ToolStripSeparator4, Me.ToolStripLabel2, Me.Contador4})
-        Me.ToolStrip2.Location = New System.Drawing.Point(0, 757)
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 766)
         Me.ToolStrip2.Name = "ToolStrip2"
         Me.ToolStrip2.Size = New System.Drawing.Size(1337, 25)
         Me.ToolStrip2.TabIndex = 115
@@ -1354,7 +1345,7 @@ Partial Class SeguimientoCarga
         '
         Me.ToolStripLabel1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(50, 22)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(48, 22)
         Me.ToolStripLabel1.Text = "FLOTA:"
         '
         'flota
@@ -1401,7 +1392,7 @@ Partial Class SeguimientoCarga
         '
         Me.ToolStripLabel2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(259, 22)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(258, 22)
         Me.ToolStripLabel2.Text = "VEHÍCULOS REALIZANDO MOVIMIENTOS:"
         '
         'Contador4
@@ -1414,12 +1405,14 @@ Partial Class SeguimientoCarga
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BotonFinal, Me.BotonAnterior, Me.ToolStripSeparator2, Me.BotonSiguiente, Me.BotonInicio})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 345)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 363)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(699, 25)
         Me.ToolStrip1.TabIndex = 118
         Me.ToolStrip1.Text = "ToolStrip1"
+        Me.ToolStrip1.Visible = False
         '
         'BotonFinal
         '
@@ -1474,12 +1467,12 @@ Partial Class SeguimientoCarga
         'ToolStripContainer1.ContentPanel
         '
         Me.ToolStripContainer1.ContentPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.ToolStrip1)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DataGridView2)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(699, 370)
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(12, 359)
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.ToolStrip1)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(699, 363)
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(12, 375)
         Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(699, 395)
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(699, 388)
         Me.ToolStripContainer1.TabIndex = 119
         Me.ToolStripContainer1.Text = "ToolStripContainer1"
         '
@@ -1497,8 +1490,8 @@ Partial Class SeguimientoCarga
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(1337, 782)
+        Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ClientSize = New System.Drawing.Size(1337, 791)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.Panel1)
@@ -1549,8 +1542,6 @@ Partial Class SeguimientoCarga
         Me.Panel1.ResumeLayout(False)
         Me.Pagina1.ResumeLayout(False)
         Me.Pagina1.PerformLayout()
-        Me.ToolStrip3.ResumeLayout(False)
-        Me.ToolStrip3.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider4, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1654,8 +1645,6 @@ Partial Class SeguimientoCarga
     Friend WithEvents BotonConsulta2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
-    Friend WithEvents ToolStrip3 As System.Windows.Forms.ToolStrip
-    Friend WithEvents BotonGuardar2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ColumnaEstadoVehiculo2 As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaImagen2 As DataGridViewImageColumn
     Friend WithEvents ColumnaEstadoVehiculo As DataGridViewTextBoxColumn
@@ -1697,4 +1686,5 @@ Partial Class SeguimientoCarga
     Friend WithEvents ToolStripLabel2 As ToolStripLabel
     Friend WithEvents Contador4 As ToolStripLabel
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents botonguardar3 As Button
 End Class

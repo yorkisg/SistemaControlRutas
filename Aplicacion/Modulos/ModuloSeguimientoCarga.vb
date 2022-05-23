@@ -50,6 +50,7 @@ Module ModuloSeguimientoCarga
 
         Dim Hijos As New MySqlDataAdapter(" SELECT idgrupo, nombregrupo, subflota " _
                                         & " FROM grupo " _
+                                        & " WHERE idgrupo NOT IN ('000000003') " _
                                         & " ORDER BY idgrupo ASC", Conexion)
         Dim Dataset As New DataSet
 

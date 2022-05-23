@@ -1,14 +1,14 @@
 ﻿
-Public Class ListadoFlota
+Public Class ListadoGrupo
 
-    Private Sub ListadoFlota_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ListadoGrupo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Metodos que cargaran al momento de desplegar el formulario.
 
         'Se llama el metodo para alternar colores entre filas
         AlternarFilasGeneral(DataGridView)
 
         'Se llama al metodo en el Load del formulario para que el datagridview cargue los datos inmediatamente
-        CargarGridListadoFlota()
+        CargarGridListadoGrupo()
 
         'Se llama al metodo para que cargue rapido el datagridview
         EnableDoubleBuffered(DataGridView)
@@ -17,7 +17,7 @@ Public Class ListadoFlota
 
     End Sub
 
-    Private Sub ListadoFlota_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+    Private Sub ListadoGrupo_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'Cierre del formulario
 
         If DataGridView.RowCount > 0 Then
@@ -68,18 +68,17 @@ Public Class ListadoFlota
 
         If DataGridView.RowCount > 0 Then
 
-            If MaestroSubFlota.Visible = True Then
+            If MaestroGrupo.Visible = True Then
                 'si el formulario "MaestroFlota" esta activo, se carga la informacion seleccionada del datagridview.
 
-                MaestroSubFlota.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                MaestroSubFlota.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-                MaestroSubFlota.ComboFlota.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
-                MaestroSubFlota.ComboTipo.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value
+                MaestroGrupo.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                MaestroGrupo.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                MaestroGrupo.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
 
                 'Se activa el uso del boton modificar del formulario "MaestroFlota"
-                MaestroSubFlota.BotonModificar.Enabled = True
+                MaestroGrupo.BotonModificar.Enabled = True
                 'Se desactiva el uso del boton guardar del formulario "MaestroFlota"
-                MaestroSubFlota.BotonGuardar.Enabled = False
+                MaestroGrupo.BotonGuardar.Enabled = False
 
                 'Se cierra el formulario ListadoEstado.
                 Tabla.Clear()
@@ -158,10 +157,9 @@ Public Class ListadoFlota
     Function Filtrar(ByVal busqueda As String) As DataTable
         'Funcion que carga los datos de acuerdo a lo ingresado en el TextBox
 
-        Dim cmd As New MySqlCommand("SELECT idsubflota, nombresubflota, nombreflota, tiposubflota " _
-                                    & " FROM subflota, flota " _
-                                    & " WHERE subflota.flota = flota.idflota" _
-                                    & " AND nombresubflota LIKE '%" & busqueda & "%' ", Conexion)
+        Dim cmd As New MySqlCommand("SELECT idgrupo, nombregrupo, subflota " _
+                                    & " FROM grupo " _
+                                    & " WHERE nombregrupo LIKE '%" & busqueda & "%' ", Conexion)
 
         Dim Tabla As New DataTable
         Dim Adaptador As New MySqlDataAdapter(cmd)
@@ -178,18 +176,17 @@ Public Class ListadoFlota
 
         If DataGridView.RowCount > 0 Then
 
-            If MaestroSubFlota.Visible = True Then
+            If MaestroGrupo.Visible = True Then
                 'si el formulario "MaestroFlota" esta activo, se carga la informacion seleccionada del datagridview.
 
-                MaestroSubFlota.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                MaestroSubFlota.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-                MaestroSubFlota.ComboFlota.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
-                MaestroSubFlota.ComboTipo.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value
+                MaestroGrupo.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                MaestroGrupo.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                MaestroGrupo.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
 
                 'Se activa el uso del boton modificar del formulario "MaestroFlota"
-                MaestroSubFlota.BotonModificar.Enabled = True
+                MaestroGrupo.BotonModificar.Enabled = True
                 'Se desactiva el uso del boton guardar del formulario "MaestroFlota"
-                MaestroSubFlota.BotonGuardar.Enabled = False
+                MaestroGrupo.BotonGuardar.Enabled = False
 
                 'Se cierra el formulario ListadoEstado.
                 Tabla.Clear()
@@ -215,41 +212,6 @@ Public Class ListadoFlota
 
     End Sub
 
-    Private Sub DataGridView_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles DataGridView.CellFormatting
-        'CellFormatting: Evento del control DataGridview el cual permite cambiar 
-        'y dar formato a las celdas, bien sea por color de texto, fondo, etc.
-
-        Try
-
-            Dim TipoFlota As String
-
-            'Indicamos sobre cual columna trabajaremos.
-            If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaClasificacion") Then
-
-                TipoFlota = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
-
-                If TipoFlota = "CARGA" Then
-
-                    e.CellStyle.ForeColor = Color.Blue
-
-                End If
-
-                If TipoFlota = "LIVIANO" Then
-
-                    e.CellStyle.ForeColor = Color.Green
-
-                End If
-
-            End If
-
-        Catch ex As Exception
-
-            MsgBox("No se pudo completar la operación.", MsgBoxStyle.Exclamation, "Error.")
-
-        End Try
-
-    End Sub
-
     Private Sub TextBox_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox.KeyDown
         'Evento que permite enfocar el datagridview al presionar la flecha abajo
 
@@ -266,21 +228,19 @@ Public Class ListadoFlota
             'Evitamos q se salte una linea al teclear enter
             e.SuppressKeyPress = True
 
-
             If DataGridView.RowCount > 0 Then
 
-                If MaestroSubFlota.Visible = True Then
+                If MaestroGrupo.Visible = True Then
                     'si el formulario "MaestroFlota" esta activo, se carga la informacion seleccionada del datagridview.
 
-                    MaestroSubFlota.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                    MaestroSubFlota.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-                    MaestroSubFlota.ComboFlota.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
-                    MaestroSubFlota.ComboTipo.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value
+                    MaestroGrupo.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroGrupo.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                    MaestroGrupo.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
 
                     'Se activa el uso del boton modificar del formulario "MaestroFlota"
-                    MaestroSubFlota.BotonModificar.Enabled = True
+                    MaestroGrupo.BotonModificar.Enabled = True
                     'Se desactiva el uso del boton guardar del formulario "MaestroFlota"
-                    MaestroSubFlota.BotonGuardar.Enabled = False
+                    MaestroGrupo.BotonGuardar.Enabled = False
 
                     'Se cierra el formulario ListadoEstado.
                     Tabla.Clear()
@@ -304,21 +264,19 @@ Public Class ListadoFlota
             'Evitamos q se salte una linea al teclear enter
             e.SuppressKeyPress = True
 
-
             If DataGridView.RowCount > 0 Then
 
-                If MaestroSubFlota.Visible = True Then
+                If MaestroGrupo.Visible = True Then
                     'si el formulario "MaestroFlota" esta activo, se carga la informacion seleccionada del datagridview.
 
-                    MaestroSubFlota.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                    MaestroSubFlota.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-                    MaestroSubFlota.ComboFlota.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
-                    MaestroSubFlota.ComboTipo.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(3).Value
+                    MaestroGrupo.TextBox1.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
+                    MaestroGrupo.TextBox2.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
+                    MaestroGrupo.TextBox3.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(2).Value
 
                     'Se activa el uso del boton modificar del formulario "MaestroFlota"
-                    MaestroSubFlota.BotonModificar.Enabled = True
+                    MaestroGrupo.BotonModificar.Enabled = True
                     'Se desactiva el uso del boton guardar del formulario "MaestroFlota"
-                    MaestroSubFlota.BotonGuardar.Enabled = False
+                    MaestroGrupo.BotonGuardar.Enabled = False
 
                     'Se cierra el formulario ListadoEstado.
                     Tabla.Clear()
