@@ -211,7 +211,7 @@ Partial Class ConsultaConsumible
         '
         Me.TextBox2.Enabled = False
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!)
-        Me.TextBox2.Location = New System.Drawing.Point(61, 216)
+        Me.TextBox2.Location = New System.Drawing.Point(62, 243)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(129, 22)
         Me.TextBox2.TabIndex = 84
