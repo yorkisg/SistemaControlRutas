@@ -150,12 +150,12 @@
   <data name="BotonLimpiar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVDhPlZMJDoIwEEXRc2jiHSTc0xDCETgGt4GwhX1H
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEKSURBVDhPlZMJDoIwEEXRc2jiHSTc0xDCDbgGt4GwhX1H
         x/kNrSguOMkLpPQ/poVqcx2YM2P84MTsmVWdm6bJXNe9TtNE7+i6jkzTvPDctxID4aqqqK5rRZ7nlKYp
         BUEgJL7vk2VZK8mOMTChbVvq+15cQVmWlGUZhWEoBNwl4SW2bUuJKCVAWAIBAkVRUBRFT8sByMzZh2Ac
         RzUB91i3XEocx6ITz/M+C15ZStAJ9iNJku0CICVYDvYEIoxvFoBhGMS+QAIw9pcAXcjNRTcY+ylASIIO
-        AMJ/C2R4ySYBWHaxBM9WAsdxbq+CT+C3nwWqdP489bfDJJnPTMkZnF5VR0ZnYN0CwpzRtDuFJ4dDPk9h
-        wwAAAABJRU5ErkJggg==
+        AMJ/C2R4ySYBWHaxBM9WAsdxbq+CT+C3nwWqdP489bfDJJnPTMkZnF5VR0ZnYN0CwpzRtDuC/IdAl5X5
+        xwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="BotonExportar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

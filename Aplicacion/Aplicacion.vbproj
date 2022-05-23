@@ -87,6 +87,10 @@
       <HintPath>bin\Debug\DataGridViewGrouper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="GitHub, Version=1.34.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GitHub.1.34.0\lib\netstandard2.1\GitHub.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -466,6 +470,7 @@
     <Content Include="Recursos\Abierto2.png" />
     <Content Include="Recursos\Accidentado.png" />
     <Content Include="Recursos\Aceptar.png" />
+    <None Include="packages.config" />
     <None Include="Recursos\Activa.png" />
     <Content Include="Recursos\Advertencia.png" />
     <Content Include="Recursos\Agregar.png" />
