@@ -42,8 +42,7 @@ Module ModuloGeneral
                 Conexion.Open()
 
                 'Comprobamos si existen actualizaciones disponibles e iniciamos la aplicacion
-                'ComprobarActualizacion()
-                ComprobarActualizacion2()
+                ComprobarActualizacion()
 
                 MsgBox("Conexión Exitosa.", MsgBoxStyle.Information, "Exito.")
 
@@ -174,73 +173,6 @@ Module ModuloGeneral
     Public Sub ComprobarActualizacion()
         'Metodo empleado para actualizar la aplicacion, evalua si existe una version nueva y la actualiza
 
-        Dim info As UpdateCheckInfo = Nothing
-
-        If (ApplicationDeployment.IsNetworkDeployed) Then
-
-            Dim AD As ApplicationDeployment = ApplicationDeployment.CurrentDeployment
-
-            Try
-
-                info = AD.CheckForDetailedUpdate()
-
-            Catch dde As DeploymentDownloadException
-
-                MessageBox.Show("La nueva versión de la aplicación no puede ser descargada aun. " + ControlChars.Lf & ControlChars.Lf & "Por favor verifique su conexión, o intente mas tarde. Error: " + dde.Message)
-                Return
-
-            Catch ioe As InvalidOperationException
-
-                MsgBox("Esta aplicación no puede ser actualizada en este momento.", MsgBoxStyle.Exclamation, "Error.")
-                Return
-
-            End Try
-
-            If (info.UpdateAvailable) Then
-
-                Dim doUpdate As Boolean = True
-
-                If (Not info.IsUpdateRequired) Then
-
-                    Dim dr As DialogResult = MessageBox.Show("Una nueva actualización esta disponible. Le gustaria descargarla en este momento?", "Actualización disponible", MessageBoxButtons.OKCancel)
-
-                    If (Not System.Windows.Forms.DialogResult.OK = dr) Then
-                        doUpdate = False
-                    End If
-
-                Else
-
-                    'Muestra un mensaje que la aplicación DEBE reiniciar. Mostrar la versión mínima requerida.
-                    MessageBox.Show("Esta aplicación ha detectado una actualización obligatoria de su versión actual a la versión " & info.MinimumRequiredVersion.ToString() & ". La aplicación ahora instalará la actualización y reiniciará.", "Actualización disponible", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                End If
-
-                If (doUpdate) Then
-
-                    Try
-
-                        AD.Update()
-                        MsgBox("La aplicación a sido actualizada.", MsgBoxStyle.Information, "Exito.")
-                        Application.Restart()
-
-                    Catch dde As DeploymentDownloadException
-
-                        MessageBox.Show("La aplicación no a sido actualizada. " & ControlChars.Lf & ControlChars.Lf & "Por favor verifique su conexión, o intente mas tarde.")
-                        Return
-
-                    End Try
-
-                End If
-
-            End If
-
-        End If
-
-    End Sub
-
-    Public Sub ComprobarActualizacion2()
-        'Metodo empleado para actualizar la aplicacion, evalua si existe una version nueva y la actualiza
-
         If My.Application.IsNetworkDeployed() Then
 
             If My.Application.Deployment.CheckForUpdate() Then
@@ -248,14 +180,12 @@ Module ModuloGeneral
                 MsgBox("Una nueva actualización esta disponible. Le gustaria descargarla en este momento?", MsgBoxStyle.Information, "Exito.")
                 My.Application.Deployment.Update()
 
-            Else
-
-                MsgBox("No hay actualizaciones por el momento.", MsgBoxStyle.Information, "Exito.")
+                'Else
+                'MsgBox("No hay actualizaciones por el momento.", MsgBoxStyle.Information, "Exito.")
 
             End If
 
-            'Else
-
+            ' Else
             'MsgBox("Aplicacion no publicada.", MsgBoxStyle.Exclamation, "Error.")
 
         End If

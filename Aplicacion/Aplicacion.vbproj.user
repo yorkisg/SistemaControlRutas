@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>W:\Actualizacion Sistema CECON-GPS\|\\172.16.1.145\PCP\Actualizacion Sistema CECON-GPS\|\\domhac\PCP\Actualizacion Sistema CECON-GPS\|W:\Actualizacion Sistema CECON-GPS NO BORRAR NI TOCAR\|C:\Actualizacion\</PublishUrlHistory>
+    <InstallUrlHistory>\\172.16.1.145\PCP\Actualizacion Sistema CECON-GPS\|\\domhac\PCP\Actualizacion Sistema CECON-GPS\|\\172.16.1.145\PCP\Actualizacion Sistema CECON-GPS NO BORRAR NI TOCAR\|\\domhac.tunal.org\PCP\Actualizacion Sistema CECON-GPS\|\\domhac.tunal.org\PCP\Actualizacion Sistema CECON-GPS NO BORRAR NI TOCAR\</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

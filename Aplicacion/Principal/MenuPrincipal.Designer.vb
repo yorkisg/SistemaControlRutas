@@ -256,7 +256,6 @@ Partial Class MenuPrincipal
         '
         'MenuEstados
         '
-        Me.MenuEstados.Enabled = False
         Me.MenuEstados.Image = CType(resources.GetObject("MenuEstados.Image"), System.Drawing.Image)
         Me.MenuEstados.Name = "MenuEstados"
         Me.MenuEstados.Size = New System.Drawing.Size(162, 22)
