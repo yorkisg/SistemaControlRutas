@@ -35,9 +35,6 @@ Partial Class SeguimientoLiviano
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.MenuPrincipal = New System.Windows.Forms.ToolStrip()
         Me.BotonGuiaTelefonica = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
@@ -79,16 +76,6 @@ Partial Class SeguimientoLiviano
         Me.ColumnaClasificacion2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaFecha2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ColumnaHora2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Pagina7 = New System.Windows.Forms.TabPage()
-        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaChofer3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaDistancia = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ColumnaTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel4 = New System.Windows.Forms.TabControl()
         Me.Pagina1 = New System.Windows.Forms.TabPage()
         Me.Arbol = New System.Windows.Forms.TreeView()
@@ -119,27 +106,6 @@ Partial Class SeguimientoLiviano
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.BotonBuscar2 = New System.Windows.Forms.Button()
-        Me.Pagina6 = New System.Windows.Forms.TabPage()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.BotonBuscar3 = New System.Windows.Forms.Button()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
-        Me.BotonGuardar3 = New System.Windows.Forms.Button()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
@@ -157,7 +123,6 @@ Partial Class SeguimientoLiviano
         Me.MenuEditarVehiculo = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuAgregarInfracción = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuAgregarIncidencia = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip4 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
@@ -179,14 +144,11 @@ Partial Class SeguimientoLiviano
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Pagina5.SuspendLayout()
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Pagina7.SuspendLayout()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Pagina1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Pagina2.SuspendLayout()
         Me.Pagina3.SuspendLayout()
-        Me.Pagina6.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuOpciones.SuspendLayout()
@@ -413,7 +375,6 @@ Partial Class SeguimientoLiviano
         '
         Me.Panel6.Controls.Add(Me.Pagina4)
         Me.Panel6.Controls.Add(Me.Pagina5)
-        Me.Panel6.Controls.Add(Me.Pagina7)
         Me.Panel6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Panel6.ImageList = Me.ImagensList
         Me.Panel6.Location = New System.Drawing.Point(12, 326)
@@ -627,116 +588,6 @@ Partial Class SeguimientoLiviano
         Me.ColumnaHora2.Name = "ColumnaHora2"
         Me.ColumnaHora2.ReadOnly = True
         '
-        'Pagina7
-        '
-        Me.Pagina7.Controls.Add(Me.DataGridView4)
-        Me.Pagina7.ImageIndex = 7
-        Me.Pagina7.Location = New System.Drawing.Point(4, 24)
-        Me.Pagina7.Name = "Pagina7"
-        Me.Pagina7.Size = New System.Drawing.Size(683, 283)
-        Me.Pagina7.TabIndex = 3
-        Me.Pagina7.Text = "HISTORIAL DE CONSUMO"
-        Me.Pagina7.UseVisualStyleBackColor = True
-        '
-        'DataGridView4
-        '
-        Me.DataGridView4.AllowUserToAddRows = False
-        Me.DataGridView4.AllowUserToDeleteRows = False
-        Me.DataGridView4.AllowUserToResizeRows = False
-        Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke
-        Me.DataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.ButtonFace
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
-        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.ColumnaChofer3, Me.DataGridViewTextBoxColumn4, Me.ColumnaDistancia, Me.ColumnaTotal, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
-        Me.DataGridView4.GridColor = System.Drawing.SystemColors.Menu
-        Me.DataGridView4.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridView4.MultiSelect = False
-        Me.DataGridView4.Name = "DataGridView4"
-        Me.DataGridView4.ReadOnly = True
-        Me.DataGridView4.RowHeadersVisible = False
-        Me.DataGridView4.RowHeadersWidth = 45
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.DataGridView4.RowsDefaultCellStyle = DataGridViewCellStyle14
-        Me.DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView4.Size = New System.Drawing.Size(677, 277)
-        Me.DataGridView4.TabIndex = 65
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "idregistroconsumo"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "ID REGISTRO"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "vehiculo"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "VEHICULO"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.Visible = False
-        '
-        'ColumnaChofer3
-        '
-        Me.ColumnaChofer3.DataPropertyName = "nombrepersonal"
-        Me.ColumnaChofer3.HeaderText = "CHOFER"
-        Me.ColumnaChofer3.Name = "ColumnaChofer3"
-        Me.ColumnaChofer3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidadconsumida"
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewTextBoxColumn4.DefaultCellStyle = DataGridViewCellStyle13
-        Me.DataGridViewTextBoxColumn4.HeaderText = "CANTIDAD EQUIPADA (LITROS)"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'ColumnaDistancia
-        '
-        Me.ColumnaDistancia.DataPropertyName = "distancia"
-        Me.ColumnaDistancia.HeaderText = "RECORRIDO (KM)"
-        Me.ColumnaDistancia.Name = "ColumnaDistancia"
-        Me.ColumnaDistancia.ReadOnly = True
-        '
-        'ColumnaTotal
-        '
-        Me.ColumnaTotal.DataPropertyName = "consumototal"
-        Me.ColumnaTotal.HeaderText = "CONSUMO (LITROS)"
-        Me.ColumnaTotal.Name = "ColumnaTotal"
-        Me.ColumnaTotal.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "fecha"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "FECHA"
-        Me.DataGridViewTextBoxColumn6.MinimumWidth = 75
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.Width = 75
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "hora"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "HORA"
-        Me.DataGridViewTextBoxColumn7.MinimumWidth = 75
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
-        Me.DataGridViewTextBoxColumn7.ReadOnly = True
-        Me.DataGridViewTextBoxColumn7.Width = 75
-        '
         'Panel4
         '
         Me.Panel4.Controls.Add(Me.Pagina1)
@@ -779,7 +630,6 @@ Partial Class SeguimientoLiviano
         '
         Me.Panel5.Controls.Add(Me.Pagina2)
         Me.Panel5.Controls.Add(Me.Pagina3)
-        Me.Panel5.Controls.Add(Me.Pagina6)
         Me.Panel5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel5.ImageList = Me.ImagensList
         Me.Panel5.Location = New System.Drawing.Point(227, 28)
@@ -955,7 +805,7 @@ Partial Class SeguimientoLiviano
         Me.Pagina3.Location = New System.Drawing.Point(4, 24)
         Me.Pagina3.Name = "Pagina3"
         Me.Pagina3.Padding = New System.Windows.Forms.Padding(3)
-        Me.Pagina3.Size = New System.Drawing.Size(468, 229)
+        Me.Pagina3.Size = New System.Drawing.Size(468, 264)
         Me.Pagina3.TabIndex = 3
         Me.Pagina3.Text = "INCIDENCIAS"
         '
@@ -1084,245 +934,6 @@ Partial Class SeguimientoLiviano
         Me.BotonBuscar2.TabIndex = 119
         Me.BotonBuscar2.UseVisualStyleBackColor = True
         '
-        'Pagina6
-        '
-        Me.Pagina6.Controls.Add(Me.Label15)
-        Me.Pagina6.Controls.Add(Me.TextBox30)
-        Me.Pagina6.Controls.Add(Me.TextBox29)
-        Me.Pagina6.Controls.Add(Me.TextBox28)
-        Me.Pagina6.Controls.Add(Me.Label14)
-        Me.Pagina6.Controls.Add(Me.TextBox25)
-        Me.Pagina6.Controls.Add(Me.Label10)
-        Me.Pagina6.Controls.Add(Me.BotonBuscar3)
-        Me.Pagina6.Controls.Add(Me.TextBox24)
-        Me.Pagina6.Controls.Add(Me.BotonGuardar3)
-        Me.Pagina6.Controls.Add(Me.TextBox22)
-        Me.Pagina6.Controls.Add(Me.Label8)
-        Me.Pagina6.Controls.Add(Me.Label9)
-        Me.Pagina6.Controls.Add(Me.Label7)
-        Me.Pagina6.Controls.Add(Me.TextBox20)
-        Me.Pagina6.Controls.Add(Me.Label4)
-        Me.Pagina6.Controls.Add(Me.DateTimePicker3)
-        Me.Pagina6.Controls.Add(Me.Label5)
-        Me.Pagina6.Controls.Add(Me.TextBox21)
-        Me.Pagina6.Controls.Add(Me.Label6)
-        Me.Pagina6.ImageIndex = 10
-        Me.Pagina6.Location = New System.Drawing.Point(4, 24)
-        Me.Pagina6.Name = "Pagina6"
-        Me.Pagina6.Size = New System.Drawing.Size(468, 229)
-        Me.Pagina6.TabIndex = 4
-        Me.Pagina6.Text = "CONSUMIBLES"
-        Me.Pagina6.UseVisualStyleBackColor = True
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label15.Location = New System.Drawing.Point(275, 15)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(41, 15)
-        Me.Label15.TabIndex = 141
-        Me.Label15.Text = "TOTAL"
-        Me.Label15.Visible = False
-        '
-        'TextBox30
-        '
-        Me.TextBox30.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox30.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox30.Location = New System.Drawing.Point(325, 12)
-        Me.TextBox30.MaxLength = 50
-        Me.TextBox30.Name = "TextBox30"
-        Me.TextBox30.Size = New System.Drawing.Size(137, 23)
-        Me.TextBox30.TabIndex = 140
-        Me.TextBox30.Visible = False
-        '
-        'TextBox29
-        '
-        Me.TextBox29.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox29.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox29.Location = New System.Drawing.Point(278, 153)
-        Me.TextBox29.MaxLength = 50
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.Size = New System.Drawing.Size(184, 23)
-        Me.TextBox29.TabIndex = 139
-        '
-        'TextBox28
-        '
-        Me.TextBox28.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox28.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox28.Location = New System.Drawing.Point(278, 109)
-        Me.TextBox28.MaxLength = 50
-        Me.TextBox28.Name = "TextBox28"
-        Me.TextBox28.Size = New System.Drawing.Size(184, 23)
-        Me.TextBox28.TabIndex = 138
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label14.Location = New System.Drawing.Point(275, 91)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(130, 15)
-        Me.Label14.TabIndex = 137
-        Me.Label14.Text = "KILOMETRAJE ACTUAL"
-        '
-        'TextBox25
-        '
-        Me.TextBox25.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox25.Enabled = False
-        Me.TextBox25.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox25.Location = New System.Drawing.Point(6, 109)
-        Me.TextBox25.MaxLength = 50
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox25.TabIndex = 134
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label10.Location = New System.Drawing.Point(6, 91)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(173, 15)
-        Me.Label10.TabIndex = 133
-        Me.Label10.Text = "TASA DE CONSUMO (L/100KM)"
-        '
-        'BotonBuscar3
-        '
-        Me.BotonBuscar3.Image = CType(resources.GetObject("BotonBuscar3.Image"), System.Drawing.Image)
-        Me.BotonBuscar3.Location = New System.Drawing.Point(243, 62)
-        Me.BotonBuscar3.Name = "BotonBuscar3"
-        Me.BotonBuscar3.Size = New System.Drawing.Size(28, 28)
-        Me.BotonBuscar3.TabIndex = 132
-        Me.BotonBuscar3.UseVisualStyleBackColor = True
-        '
-        'TextBox24
-        '
-        Me.TextBox24.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox24.Enabled = False
-        Me.TextBox24.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox24.Location = New System.Drawing.Point(6, 65)
-        Me.TextBox24.MaxLength = 50
-        Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox24.TabIndex = 129
-        '
-        'BotonGuardar3
-        '
-        Me.BotonGuardar3.Enabled = False
-        Me.BotonGuardar3.Image = CType(resources.GetObject("BotonGuardar3.Image"), System.Drawing.Image)
-        Me.BotonGuardar3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BotonGuardar3.Location = New System.Drawing.Point(323, 197)
-        Me.BotonGuardar3.Name = "BotonGuardar3"
-        Me.BotonGuardar3.Size = New System.Drawing.Size(140, 23)
-        Me.BotonGuardar3.TabIndex = 127
-        Me.BotonGuardar3.Text = "Registrar Consumo"
-        Me.BotonGuardar3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.BotonGuardar3.UseVisualStyleBackColor = True
-        '
-        'TextBox22
-        '
-        Me.TextBox22.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox22.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox22.Location = New System.Drawing.Point(278, 65)
-        Me.TextBox22.MaxLength = 50
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(184, 23)
-        Me.TextBox22.TabIndex = 123
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label8.Location = New System.Drawing.Point(275, 47)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(173, 15)
-        Me.Label8.TabIndex = 122
-        Me.Label8.Text = "CANTIDAD CARGADA (LITROS)"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label9.Location = New System.Drawing.Point(275, 135)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(141, 15)
-        Me.Label9.TabIndex = 125
-        Me.Label9.Text = "KILOMETRAJE ANTERIOR"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label7.Location = New System.Drawing.Point(6, 47)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 15)
-        Me.Label7.TabIndex = 120
-        Me.Label7.Text = "CHOFER"
-        '
-        'TextBox20
-        '
-        Me.TextBox20.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox20.Enabled = False
-        Me.TextBox20.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TextBox20.Location = New System.Drawing.Point(6, 197)
-        Me.TextBox20.MaxLength = 50
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox20.TabIndex = 119
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label4.Location = New System.Drawing.Point(6, 179)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(40, 15)
-        Me.Label4.TabIndex = 118
-        Me.Label4.Text = "HORA"
-        '
-        'DateTimePicker3
-        '
-        Me.DateTimePicker3.CalendarMonthBackground = System.Drawing.SystemColors.GrayText
-        Me.DateTimePicker3.Checked = False
-        Me.DateTimePicker3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.DateTimePicker3.Location = New System.Drawing.Point(6, 153)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(229, 23)
-        Me.DateTimePicker3.TabIndex = 117
-        Me.DateTimePicker3.Value = New Date(2019, 4, 13, 0, 0, 0, 0)
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label5.Location = New System.Drawing.Point(6, 135)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(44, 15)
-        Me.Label5.TabIndex = 116
-        Me.Label5.Text = "FECHA"
-        '
-        'TextBox21
-        '
-        Me.TextBox21.BackColor = System.Drawing.Color.AliceBlue
-        Me.TextBox21.Enabled = False
-        Me.TextBox21.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox21.Location = New System.Drawing.Point(6, 21)
-        Me.TextBox21.MaxLength = 50
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(229, 23)
-        Me.TextBox21.TabIndex = 115
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Label6.Location = New System.Drawing.Point(6, 3)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 15)
-        Me.Label6.TabIndex = 114
-        Me.Label6.Text = "VEHÍCULO"
-        '
         'TextBox6
         '
         Me.TextBox6.BackColor = System.Drawing.Color.AliceBlue
@@ -1446,40 +1057,33 @@ Partial Class SeguimientoLiviano
         '
         'MenuOpciones
         '
-        Me.MenuOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuEditarVehiculo, Me.ToolStripSeparator11, Me.MenuAgregarInfracción, Me.MenuAgregarIncidencia, Me.ToolStripSeparator2})
+        Me.MenuOpciones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuEditarVehiculo, Me.ToolStripSeparator11, Me.MenuAgregarInfracción, Me.ToolStripSeparator2})
         Me.MenuOpciones.Name = "MenuNovedadesVehiculo"
-        Me.MenuOpciones.Size = New System.Drawing.Size(178, 82)
+        Me.MenuOpciones.Size = New System.Drawing.Size(177, 60)
         '
         'MenuEditarVehiculo
         '
         Me.MenuEditarVehiculo.Image = CType(resources.GetObject("MenuEditarVehiculo.Image"), System.Drawing.Image)
         Me.MenuEditarVehiculo.Name = "MenuEditarVehiculo"
-        Me.MenuEditarVehiculo.Size = New System.Drawing.Size(177, 22)
+        Me.MenuEditarVehiculo.Size = New System.Drawing.Size(176, 22)
         Me.MenuEditarVehiculo.Text = "Editar Vehículo"
         '
         'ToolStripSeparator11
         '
         Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
-        Me.ToolStripSeparator11.Size = New System.Drawing.Size(174, 6)
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(173, 6)
         '
         'MenuAgregarInfracción
         '
         Me.MenuAgregarInfracción.Image = CType(resources.GetObject("MenuAgregarInfracción.Image"), System.Drawing.Image)
         Me.MenuAgregarInfracción.Name = "MenuAgregarInfracción"
-        Me.MenuAgregarInfracción.Size = New System.Drawing.Size(177, 22)
+        Me.MenuAgregarInfracción.Size = New System.Drawing.Size(176, 22)
         Me.MenuAgregarInfracción.Text = "Registrar Infracción"
-        '
-        'MenuAgregarIncidencia
-        '
-        Me.MenuAgregarIncidencia.Image = CType(resources.GetObject("MenuAgregarIncidencia.Image"), System.Drawing.Image)
-        Me.MenuAgregarIncidencia.Name = "MenuAgregarIncidencia"
-        Me.MenuAgregarIncidencia.Size = New System.Drawing.Size(177, 22)
-        Me.MenuAgregarIncidencia.Text = "Registrar Incidencia"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(174, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(173, 6)
         '
         'ToolStrip4
         '
@@ -1610,8 +1214,6 @@ Partial Class SeguimientoLiviano
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Pagina5.ResumeLayout(False)
         CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Pagina7.ResumeLayout(False)
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Pagina1.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
@@ -1619,8 +1221,6 @@ Partial Class SeguimientoLiviano
         Me.Pagina2.PerformLayout()
         Me.Pagina3.ResumeLayout(False)
         Me.Pagina3.PerformLayout()
-        Me.Pagina6.ResumeLayout(False)
-        Me.Pagina6.PerformLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuOpciones.ResumeLayout(False)
@@ -1678,7 +1278,6 @@ Partial Class SeguimientoLiviano
     Friend WithEvents TextBox14 As System.Windows.Forms.TextBox
     Friend WithEvents MenuOpciones As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents MenuAgregarInfracción As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuAgregarIncidencia As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator11 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
     Friend WithEvents MenuEditarVehiculo As System.Windows.Forms.ToolStripMenuItem
@@ -1721,41 +1320,10 @@ Partial Class SeguimientoLiviano
     Friend WithEvents ColumnaChofer As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaVehiculo As DataGridViewTextBoxColumn
     Friend WithEvents ColumnaIDRegistro As DataGridViewTextBoxColumn
-    Friend WithEvents Pagina6 As TabPage
-    Friend WithEvents TextBox20 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker3 As DateTimePicker
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox22 As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents BotonGuardar3 As Button
-    Friend WithEvents Label9 As Label
     Friend WithEvents BotonGuardar1 As Button
     Friend WithEvents BotonGuardar2 As Button
     Friend WithEvents TextBox23 As TextBox
-    Friend WithEvents TextBox24 As TextBox
     Friend WithEvents TextBox26 As TextBox
-    Friend WithEvents BotonBuscar3 As Button
-    Friend WithEvents Pagina7 As TabPage
-    Friend WithEvents DataGridView4 As DataGridView
-    Friend WithEvents TextBox25 As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox29 As TextBox
-    Friend WithEvents TextBox28 As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox30 As TextBox
-    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaTotal As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaDistancia As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents ColumnaChofer3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents Tiempo As ToolStripLabel
     Friend WithEvents ToolStripLabel2 As ToolStripLabel

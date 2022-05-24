@@ -111,7 +111,7 @@ Module ModuloSeguimientoCarga
     Public Sub CargarArbolCarga2()
         'Metodo donde generamos un arbol proveniente de dos tablas, padre e hijo (Subflota y Grupo)
 
-        Dim Adaptador As New MySqlDataAdapter
+
         Dim Datatable = New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT nombresubflota FROM subflota " _
@@ -269,7 +269,7 @@ Module ModuloSeguimientoCarga
     Public Sub Siguiente()
         'Metodo que permite paginar hacia adelante
 
-        Iteracion = Iteracion - 15
+        Iteracion -= 15
 
         If Iteracion <= 0 Then
 
@@ -285,7 +285,7 @@ Module ModuloSeguimientoCarga
     Public Sub Anterior()
         'Metodo que permite paginar hacia atras
 
-        Iteracion = Iteracion + 15
+        Iteracion += 15
 
         DataSet.Clear()
         Adaptador.Fill(DataSet, Iteracion, 15, "historialvehiculos")
@@ -320,7 +320,6 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerRutaCarga()
         'Obtenemos el ID mas alto de la ruta por el vehiculo seleccionado y este mismo es actualizado como "completado"
 
-        Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT MAX(idruta) AS 'ID' FROM ruta WHERE vehiculo = '" & SeguimientoCarga.TextBox1.Text & "' ", Conexion)
@@ -335,7 +334,7 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerProductoRutaCarga()
         'Este metodo permite obtener el ID del producto
 
-        Dim Adaptador As New MySqlDataAdapter
+
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idproducto FROM producto WHERE nombreproducto = '" & SeguimientoCarga.TextBox6.Text & "' ", Conexion)
@@ -350,7 +349,7 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerSitioCargaRutaCarga()
         'Este metodo permite obtener el ID de la sitiocarga
 
-        Dim Adaptador As New MySqlDataAdapter
+
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idsitiocarga FROM sitiocarga WHERE nombresitiocarga = '" & SeguimientoCarga.TextBox3.Text & "' ", Conexion)
@@ -365,7 +364,7 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerDestinoRutaCarga()
         'Este metodo permite obtener el ID de la sitiocarga
 
-        Dim Adaptador As New MySqlDataAdapter
+
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT iddestino FROM destino WHERE nombredestino = '" & SeguimientoCarga.TextBox7.Text & "' ", Conexion)
@@ -380,7 +379,7 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerPersonalRutaCarga()
         'Este metodo permite obtener el ID del chofer
 
-        Dim Adaptador As New MySqlDataAdapter
+
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idpersonal, CONCAT(if(telefono1 <> 'N/A', (concat(LEFT(telefono1,4),' - ', RIGHT(telefono1,7))), 'N/A'), ' | ' , if(telefono2 <> 'N/A', (concat(LEFT(telefono2,4),' - ', RIGHT(telefono2,7))), 'N/A')) AS 'telefono' FROM personal WHERE nombrepersonal = '" & SeguimientoCarga.TextBox8.Text & "' ", Conexion)
@@ -397,7 +396,7 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerPersonalInfraccionCarga()
         'Este metodo permite obtener el ID del chofer
 
-        Dim Adaptador As New MySqlDataAdapter
+
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & MaestroInfraccion.TextBox4.Text & "' ", Conexion)
@@ -409,26 +408,11 @@ Module ModuloSeguimientoCarga
 
     End Sub
 
-    Public Sub ObtenerPersonaIncidenciaCarga()
-        'Este metodo permite obtener el ID del chofer
-
-        Dim Adaptador As New MySqlDataAdapter
-        Dim Tabla As New DataTable
-
-        Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & MaestroIncidencia.TextBox4.Text & "' ", Conexion)
-        Adaptador.Fill(Tabla)
-
-        For Each row As DataRow In Tabla.Rows
-            MaestroIncidencia.TextBox6.Text = row("idpersonal").ToString
-        Next
-
-    End Sub
-
     Public Sub ObtenerVehiculoCarga()
         'Este metodo permite obtener los estados de los vehiculos para luego ser modificados
         'Se despliega el formulario MaestroVehiculo
 
-        Dim Adaptador As New MySqlDataAdapter
+
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT nombregrupo, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
@@ -454,7 +438,7 @@ Module ModuloSeguimientoCarga
     Public Sub ObtenerCantidadVehiculos()
         'Este metodo permite obtener el ID del chofer y sus datos
 
-        Dim Adaptador As New MySqlDataAdapter
+
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT COUNT(idruta) AS 'Conteo' FROM ruta, estadoruta " _
@@ -543,10 +527,11 @@ Module ModuloSeguimientoCarga
 
         'El ID obtenido de la BD se incrementa.
         numero = Command.ExecuteScalar
-        numero = numero + 1
+        numero += 1
 
         'Se da formato al ID obtenido de la BD.
-        SeguimientoCarga.TextBox2.Text = Format(numero, "000000000")
+        'SeguimientoCarga.TextBox2.Text = Format(numero, "000000000")
+        SeguimientoCarga.TextBox2.Text = numero
 
     End Sub
 
@@ -554,7 +539,7 @@ Module ModuloSeguimientoCarga
         'Metodo que permite cargar el Combobox desde la BD.
 
         Dim Tabla As New DataTable
-        Dim Adaptador As New MySqlDataAdapter
+
 
         Adaptador = New MySqlDataAdapter("SELECT * FROM estadoruta ORDER BY nombreestado ASC", Conexion)
         Adaptador.Fill(Tabla)

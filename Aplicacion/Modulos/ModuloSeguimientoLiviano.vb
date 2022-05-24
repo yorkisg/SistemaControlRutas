@@ -150,41 +150,6 @@ Module ModuloSeguimientoLiviano
 
     End Sub
 
-    Public Sub CargarGridHistorialConsumoLiviano()
-        'Metodo que genera la carga de datos en el DataGridview2 usando la clausula LIKE y LIMIT
-
-        Dim sql As String = "SELECT idregistroconsumo, vehiculo, nombrepersonal, cantidadconsumida, (kilometrajeactual-kilometrajeanterior) AS 'distancia', consumototal, fecha, hora " _
-                       & " FROM registroconsumo, personal " _
-                       & " WHERE registroconsumo.personal = personal.idpersonal " _
-                       & " AND vehiculo = '" & SeguimientoLiviano.TextBox21.Text & "' " _
-                       & " ORDER BY idregistroconsumo DESC " _
-                       & " LIMIT 30 "
-
-        Dim connection As New MySqlConnection(ConnectionString)
-
-        'Instancia y uso de variables.
-        Command = New MySqlCommand(sql, connection)
-        Adaptador = New MySqlDataAdapter(Command)
-        DataSet = New DataSet()
-
-        'Llenado del datagridview
-        Adaptador.Fill(DataSet, "consumos")
-        Tabla = DataSet.Tables("consumos")
-        SeguimientoLiviano.DataGridView4.DataSource = Tabla
-
-        'Parametros para editar apariencia del datagridview.
-        With SeguimientoLiviano.DataGridView4
-            .DefaultCellStyle.Font = New Font("Segoe UI", 7) 'Fuente para celdas
-            .Font = New Font("Segoe UI", 8) 'Fuente para Headers
-        End With
-
-        'Llamada al metodo para cargar imagenes
-        'CargarImagenes()
-
-        SeguimientoLiviano.DataGridView4.ClearSelection()
-
-    End Sub
-
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''METODOS PARA OBTENER DATOS''''''''''''''''''''''''''''''''''''
     '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -193,7 +158,6 @@ Module ModuloSeguimientoLiviano
         'Este metodo permite obtener los estados de los vehiculos para luego ser modificados
         'Se despliega el formulario MaestroVehiculo
 
-        Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT nombregrupo, nombretipo, clasificacionvehiculo, condicionvehiculo, estadoactual " _
@@ -219,7 +183,6 @@ Module ModuloSeguimientoLiviano
     Public Sub ObtenerPersonalSeguimientoLivianoInfraccion()
         'Este metodo permite obtener el ID del chofer
 
-        Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & SeguimientoLiviano.TextBox16.Text & "' ", Conexion)
@@ -237,7 +200,6 @@ Module ModuloSeguimientoLiviano
     Public Sub ObtenerPersonalSeguimientoLivianoIncidencia()
         'Este metodo permite obtener el ID del chofer
 
-        Dim Adaptador As New MySqlDataAdapter
         Dim Tabla As New DataTable
 
         Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & SeguimientoLiviano.TextBox17.Text & "' ", Conexion)
@@ -247,24 +209,6 @@ Module ModuloSeguimientoLiviano
         For Each row As DataRow In Tabla.Rows
 
             SeguimientoLiviano.TextBox18.Text = row("idpersonal").ToString
-
-        Next
-
-    End Sub
-
-    Public Sub ObtenerPersonalSeguimientoLivianoConsumo()
-        'Este metodo permite obtener el ID del chofer
-
-        Dim Adaptador As New MySqlDataAdapter
-        Dim Tabla As New DataTable
-
-        Adaptador = New MySqlDataAdapter("SELECT idpersonal FROM personal WHERE nombrepersonal = '" & SeguimientoLiviano.TextBox24.Text & "' ", Conexion)
-
-        Adaptador.Fill(Tabla)
-
-        For Each row As DataRow In Tabla.Rows
-
-            SeguimientoLiviano.TextBox26.Text = row("idpersonal").ToString
 
         Next
 
@@ -284,44 +228,11 @@ Module ModuloSeguimientoLiviano
 
         'El ID obtenido de la BD se incrementa.
         numero = Command.ExecuteScalar
-        numero = numero + 1
+        numero += 1
 
         'Se da formato al ID obtenido de la BD.
-        SeguimientoLiviano.TextBox9.Text = Format(numero, ("000000000"))
-
-    End Sub
-
-    Public Sub SerieIncidenciaRutaLiviano()
-        'Metodo que permite generar una serie correlativa de numeros enteros. 
-        'Usado para generar automaticamente el ID.
-
-        'Se obtiene el ultimo ID.
-        Dim Command As New MySqlCommand("SELECT MAX(idregistroincidencia) FROM registroincidencia", Conexion)
-        Dim numero As Integer
-
-        'El ID obtenido de la BD se incrementa.
-        numero = Command.ExecuteScalar
-        numero = numero + 1
-
-        'Se da formato al ID obtenido de la BD.
-        SeguimientoLiviano.TextBox12.Text = Format(numero, ("000000000"))
-
-    End Sub
-
-    Public Sub SerieConsumoRutaLiviano()
-        'Metodo que permite generar una serie correlativa de numeros enteros. 
-        'Usado para generar automaticamente el ID.
-
-        'Se obtiene el ultimo ID.
-        Dim Command As New MySqlCommand("SELECT MAX(idregistroconsumo) FROM registroconsumo", Conexion)
-        Dim numero As Integer
-
-        'El ID obtenido de la BD se incrementa.
-        numero = Command.ExecuteScalar
-        numero = numero + 1
-
-        'Se da formato al ID obtenido de la BD.
-        SeguimientoLiviano.TextBox23.Text = Format(numero, ("000000000"))
+        'SeguimientoLiviano.TextBox9.Text = Format(numero, ("000000000"))
+        SeguimientoLiviano.TextBox9.Text = numero
 
     End Sub
 
@@ -390,36 +301,6 @@ Module ModuloSeguimientoLiviano
 
     End Function
 
-    Public Function ValidarComponentesConsumoLiviano() As Boolean
-        'Metodo que permite validar el ingreso de texto en los textbox
-
-        Dim Validar As Boolean = True
-
-        'Limpia todos los mensajes de error mostrados en la interfaz de usuario
-        SeguimientoLiviano.ErrorProvider2.Clear()
-
-        'Valida que el textbox no este nulo o vacio
-        If String.IsNullOrEmpty(SeguimientoLiviano.TextBox21.Text) Then
-            SeguimientoLiviano.ErrorProvider2.SetError(SeguimientoLiviano.TextBox21, "No puede dejar campos en blanco.")
-            Validar = False
-        End If
-
-        'Valida que el textbox no este nulo o vacio
-        If String.IsNullOrEmpty(SeguimientoLiviano.TextBox22.Text) Then
-            SeguimientoLiviano.ErrorProvider2.SetError(SeguimientoLiviano.TextBox22, "No puede dejar campos en blanco.")
-            Validar = False
-        End If
-
-        'Valida que el textbox no este nulo o vacio
-        If String.IsNullOrEmpty(SeguimientoLiviano.TextBox24.Text) Then
-            SeguimientoLiviano.ErrorProvider2.SetError(SeguimientoLiviano.Label7, "No puede dejar campos en blanco.")
-            Validar = False
-        End If
-
-        Return Validar
-
-    End Function
-
     Public Sub LimpiarComponentesInfraccionLiviano()
         'Metodo que permite borrar el contenido de los textbox
 
@@ -435,15 +316,6 @@ Module ModuloSeguimientoLiviano
         SeguimientoLiviano.TextBox7.Text = ""
         SeguimientoLiviano.TextBox17.Text = ""
         SeguimientoLiviano.TextBox18.Text = ""
-
-    End Sub
-
-    Public Sub LimpiarComponentesConsumoLiviano()
-        'Metodo que permite borrar el contenido de los textbox
-
-        SeguimientoLiviano.TextBox24.Text = ""
-        SeguimientoLiviano.TextBox26.Text = ""
-        SeguimientoLiviano.TextBox22.Text = ""
 
     End Sub
 

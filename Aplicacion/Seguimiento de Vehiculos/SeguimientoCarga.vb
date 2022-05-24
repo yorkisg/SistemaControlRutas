@@ -98,7 +98,7 @@ Public Class SeguimientoCarga
         'Control Timer: se lleva el tiempo para que la hora y la fecha pueda ser actualizada constantemente
 
         'Contamos y enviamos el tiempo al label
-        Contador = Contador + 1
+        Contador += 1
         Tiempo.Text = Contador
 
         'Si el tiempo llega a 300 seg (5min) se cierra la aplicacion
@@ -903,7 +903,7 @@ Public Class SeguimientoCarga
 
     End Sub
 
-    Private Sub botonguardar3_Click(sender As Object, e As EventArgs) Handles botonguardar3.Click
+    Private Sub Botonguardar3_Click(sender As Object, e As EventArgs) Handles botonguardar3.Click
         'Boton guardar
 
         Try
@@ -1282,35 +1282,6 @@ Public Class SeguimientoCarga
                 ' MsgBox("No puede registrar infracciones de velocidad a vehiculos que no esten en carretera.", MsgBoxStyle.Exclamation, "Error.")
 
                 'End If
-
-            End If
-
-        Catch ex As Exception
-
-            MsgBox("No se pudo completar la operación.17", MsgBoxStyle.Exclamation, "Error.")
-
-        End Try
-
-    End Sub
-
-    Private Sub MenuAgregarIncidencia_Click(sender As Object, e As EventArgs) Handles MenuAgregarIncidencia.Click
-        'Llamada al formulario MaestroInfraccion
-
-        Try
-
-            If DataGridView1.RowCount > 0 And DataGridView1.SelectedRows.Count = 1 Then
-
-                MaestroIncidencia.TextBox2.Text = TextBox1.Text
-                MaestroIncidencia.TextBox4.Text = TextBox8.Text
-                MaestroIncidencia.TextBox7.Text = TextBox5.Text
-                MaestroIncidencia.BotonBuscar.Enabled = False
-                MaestroIncidencia.BotonBuscar2.Enabled = False
-
-                ObtenerPersonaIncidenciaCarga()
-                MaestroIncidencia.ShowDialog()
-
-                'Posicionamos el currencell en el vehiculo que clickeamos anteriormente
-                DataGridView1.CurrentCell = DataGridView1(Columna, Fila)
 
             End If
 

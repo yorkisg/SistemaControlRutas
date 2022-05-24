@@ -36,10 +36,6 @@ Public Class MenuPrincipal
         CuadroResumenMateriaPrima.TextBox5.Text = DateTime.Now.ToShortTimeString()
         CuadroResumenMateriaPrima.DateTimePicker1.Value = Today
 
-        'Incidencias
-        MaestroIncidencia.TextBox5.Text = DateTime.Now.ToShortTimeString()
-        MaestroIncidencia.DateTimePicker1.Value = Today
-
     End Sub
 
     Private Sub ValidarRol()
@@ -157,13 +153,6 @@ Public Class MenuPrincipal
         'Formulario ConsultaInfraccion
 
         ConsultaInfraccion.ShowDialog()
-
-    End Sub
-
-    Private Sub MenuConsultarIncidencias_Click(sender As Object, e As EventArgs) Handles MenuConsultarIncidencias.Click
-        'Formulario ListadoReporteInfraccion
-
-        ConsultaIncidencia.ShowDialog()
 
     End Sub
 

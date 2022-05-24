@@ -135,7 +135,7 @@ Public Class MaestroInfraccion
         numero = numero + 1
 
         'Se da formato al ID obtenido de la BD.
-        TextBox1.Text = Format(numero, ("000000000"))
+        TextBox1.Text = numero
 
     End Sub
 

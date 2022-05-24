@@ -153,19 +153,6 @@ Public Class ListadoPersonal
 
             End If
 
-            If MaestroIncidencia.Visible = True Then
-                'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
-
-                MaestroIncidencia.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                MaestroIncidencia.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-
-                'Se cierra el formulario ListadoChofer
-                Tabla.Clear()
-                DataSet.Clear()
-                Dispose()
-
-            End If
-
             If SeguimientoLiviano.Visible = True Then
                 'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
 
@@ -184,7 +171,6 @@ Public Class ListadoPersonal
                 ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 2 Then
 
                     SeguimientoLiviano.TextBox26.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                    SeguimientoLiviano.TextBox24.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 End If
 
@@ -360,19 +346,6 @@ Public Class ListadoPersonal
 
             End If
 
-            If MaestroIncidencia.Visible = True Then
-                'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
-
-                MaestroIncidencia.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                MaestroIncidencia.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-
-                'Se cierra el formulario ListadoChofer
-                Tabla.Clear()
-                DataSet.Clear()
-                Dispose()
-
-            End If
-
             If SeguimientoLiviano.Visible = True Then
                 'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
 
@@ -391,7 +364,6 @@ Public Class ListadoPersonal
                 ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 2 Then
 
                     SeguimientoLiviano.TextBox26.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                    SeguimientoLiviano.TextBox24.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                 End If
 
@@ -567,19 +539,6 @@ Public Class ListadoPersonal
 
                 End If
 
-                If MaestroIncidencia.Visible = True Then
-                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
-
-                    MaestroIncidencia.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                    MaestroIncidencia.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-
-                    'Se cierra el formulario ListadoChofer
-                    Tabla.Clear()
-                    DataSet.Clear()
-                    Dispose()
-
-                End If
-
                 If SeguimientoLiviano.Visible = True Then
                     'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
 
@@ -598,7 +557,6 @@ Public Class ListadoPersonal
                     ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 2 Then
 
                         SeguimientoLiviano.TextBox26.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                        SeguimientoLiviano.TextBox24.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                     End If
 
@@ -698,19 +656,6 @@ Public Class ListadoPersonal
 
                 End If
 
-                If MaestroIncidencia.Visible = True Then
-                    'si el formulario "MaestroInfraccion" esta activo, se carga la informacion seleccionada del datagridview
-
-                    MaestroIncidencia.TextBox6.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                    MaestroIncidencia.TextBox4.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
-
-                    'Se cierra el formulario ListadoChofer
-                    Tabla.Clear()
-                    DataSet.Clear()
-                    Dispose()
-
-                End If
-
                 If SeguimientoLiviano.Visible = True Then
                     'si el formulario "MaestroChofer" esta activo, se carga la informacion seleccionada del datagridview
 
@@ -729,7 +674,6 @@ Public Class ListadoPersonal
                     ElseIf SeguimientoLiviano.Panel5.SelectedIndex = 2 Then
 
                         SeguimientoLiviano.TextBox26.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(0).Value
-                        SeguimientoLiviano.TextBox24.Text = DataGridView.Rows(DataGridView.CurrentRow.Index).Cells(1).Value
 
                     End If
 

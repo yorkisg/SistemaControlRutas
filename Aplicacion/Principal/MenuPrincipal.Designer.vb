@@ -40,7 +40,6 @@ Partial Class MenuPrincipal
         Me.MenuConsultas = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultarChofer = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultarInfracciones = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuConsultarIncidencias = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuConsultaConsumos = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuListadoDeInfractores = New System.Windows.Forms.ToolStripMenuItem()
@@ -155,7 +154,7 @@ Partial Class MenuPrincipal
         'MenuConsultas
         '
         Me.MenuConsultas.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.MenuConsultarInfracciones, Me.MenuConsultarIncidencias, Me.MenuConsultaConsumos, Me.ToolStripSeparator5, Me.MenuListadoDeInfractores, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
+        Me.MenuConsultas.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuConsultarChofer, Me.MenuConsultarInfracciones, Me.MenuConsultaConsumos, Me.ToolStripSeparator5, Me.MenuListadoDeInfractores, Me.ToolStripSeparator4, Me.MenuListadoCompelto, Me.MenuConsultaGrupoProducto, Me.ToolStripSeparator8, Me.MenuGuiaTelefonica})
         Me.MenuConsultas.Image = CType(resources.GetObject("MenuConsultas.Image"), System.Drawing.Image)
         Me.MenuConsultas.Name = "MenuConsultas"
         Me.MenuConsultas.Size = New System.Drawing.Size(87, 20)
@@ -174,13 +173,6 @@ Partial Class MenuPrincipal
         Me.MenuConsultarInfracciones.Name = "MenuConsultarInfracciones"
         Me.MenuConsultarInfracciones.Size = New System.Drawing.Size(262, 22)
         Me.MenuConsultarInfracciones.Text = "Consultar Infracciones de Velocidad"
-        '
-        'MenuConsultarIncidencias
-        '
-        Me.MenuConsultarIncidencias.Image = CType(resources.GetObject("MenuConsultarIncidencias.Image"), System.Drawing.Image)
-        Me.MenuConsultarIncidencias.Name = "MenuConsultarIncidencias"
-        Me.MenuConsultarIncidencias.Size = New System.Drawing.Size(262, 22)
-        Me.MenuConsultarIncidencias.Text = "Consultar Incidencias"
         '
         'MenuConsultaConsumos
         '
@@ -244,21 +236,22 @@ Partial Class MenuPrincipal
         '
         Me.MenuFlotas.Image = CType(resources.GetObject("MenuFlotas.Image"), System.Drawing.Image)
         Me.MenuFlotas.Name = "MenuFlotas"
-        Me.MenuFlotas.Size = New System.Drawing.Size(162, 22)
+        Me.MenuFlotas.Size = New System.Drawing.Size(180, 22)
         Me.MenuFlotas.Text = "Flotas"
         '
         'MenuGrupos
         '
         Me.MenuGrupos.Image = CType(resources.GetObject("MenuGrupos.Image"), System.Drawing.Image)
         Me.MenuGrupos.Name = "MenuGrupos"
-        Me.MenuGrupos.Size = New System.Drawing.Size(162, 22)
+        Me.MenuGrupos.Size = New System.Drawing.Size(180, 22)
         Me.MenuGrupos.Text = "Grupos"
         '
         'MenuEstados
         '
+        Me.MenuEstados.Enabled = False
         Me.MenuEstados.Image = CType(resources.GetObject("MenuEstados.Image"), System.Drawing.Image)
         Me.MenuEstados.Name = "MenuEstados"
-        Me.MenuEstados.Size = New System.Drawing.Size(162, 22)
+        Me.MenuEstados.Size = New System.Drawing.Size(180, 22)
         Me.MenuEstados.Text = "Estados de Rutas"
         '
         'MenuSalir
@@ -405,7 +398,6 @@ Partial Class MenuPrincipal
     Friend WithEvents MenuSeguimientoLiviano As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuListadoDeInfractores As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents MenuConsultarIncidencias As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
     Friend WithEvents MenuConsultaConsumos As ToolStripMenuItem
     Friend WithEvents MenuGrupos As ToolStripMenuItem

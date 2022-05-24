@@ -202,7 +202,7 @@ Public Class CuadroResumenMateriaPrima
     Private Sub BotonBuscar1_Click(sender As Object, e As EventArgs) Handles BotonBuscar1.Click
         'Boton buscar sitio de carga
 
-        Listadositiocarga.ShowDialog()
+        ListadoSitioCarga.ShowDialog()
 
     End Sub
 

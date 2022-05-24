@@ -77,7 +77,6 @@ Partial Class SeguimientoCarga
         Me.MenuCambiarEstado = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator13 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuAgregarInfracción = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuAgregarIncidencia = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
         Me.MenuRuta = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -449,40 +448,33 @@ Partial Class SeguimientoCarga
         '
         'MenuNovedadesVehiculo
         '
-        Me.MenuNovedadesVehiculo.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuCambiarEstado, Me.ToolStripSeparator13, Me.MenuAgregarInfracción, Me.MenuAgregarIncidencia, Me.ToolStripSeparator11})
+        Me.MenuNovedadesVehiculo.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuCambiarEstado, Me.ToolStripSeparator13, Me.MenuAgregarInfracción, Me.ToolStripSeparator11})
         Me.MenuNovedadesVehiculo.Name = "MenuNovedadesVehiculo"
-        Me.MenuNovedadesVehiculo.Size = New System.Drawing.Size(178, 82)
+        Me.MenuNovedadesVehiculo.Size = New System.Drawing.Size(177, 60)
         '
         'MenuCambiarEstado
         '
         Me.MenuCambiarEstado.Image = CType(resources.GetObject("MenuCambiarEstado.Image"), System.Drawing.Image)
         Me.MenuCambiarEstado.Name = "MenuCambiarEstado"
-        Me.MenuCambiarEstado.Size = New System.Drawing.Size(177, 22)
+        Me.MenuCambiarEstado.Size = New System.Drawing.Size(176, 22)
         Me.MenuCambiarEstado.Text = "Cambiar Estado"
         '
         'ToolStripSeparator13
         '
         Me.ToolStripSeparator13.Name = "ToolStripSeparator13"
-        Me.ToolStripSeparator13.Size = New System.Drawing.Size(174, 6)
+        Me.ToolStripSeparator13.Size = New System.Drawing.Size(173, 6)
         '
         'MenuAgregarInfracción
         '
         Me.MenuAgregarInfracción.Image = CType(resources.GetObject("MenuAgregarInfracción.Image"), System.Drawing.Image)
         Me.MenuAgregarInfracción.Name = "MenuAgregarInfracción"
-        Me.MenuAgregarInfracción.Size = New System.Drawing.Size(177, 22)
+        Me.MenuAgregarInfracción.Size = New System.Drawing.Size(176, 22)
         Me.MenuAgregarInfracción.Text = "Registrar Infracción"
-        '
-        'MenuAgregarIncidencia
-        '
-        Me.MenuAgregarIncidencia.Image = CType(resources.GetObject("MenuAgregarIncidencia.Image"), System.Drawing.Image)
-        Me.MenuAgregarIncidencia.Name = "MenuAgregarIncidencia"
-        Me.MenuAgregarIncidencia.Size = New System.Drawing.Size(177, 22)
-        Me.MenuAgregarIncidencia.Text = "Registrar Incidencia"
         '
         'ToolStripSeparator11
         '
         Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
-        Me.ToolStripSeparator11.Size = New System.Drawing.Size(174, 6)
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(173, 6)
         '
         'ImageList2
         '
@@ -576,7 +568,7 @@ Partial Class SeguimientoCarga
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(787, 141)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(75, 16)
+        Me.Label4.Size = New System.Drawing.Size(74, 16)
         Me.Label4.TabIndex = 107
         Me.Label4.Text = "id producto"
         Me.Label4.Visible = False
@@ -1252,7 +1244,7 @@ Partial Class SeguimientoCarga
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(791, 187)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(66, 16)
+        Me.Label5.Size = New System.Drawing.Size(65, 16)
         Me.Label5.TabIndex = 108
         Me.Label5.Text = "id destino"
         Me.Label5.Visible = False
@@ -1264,7 +1256,7 @@ Partial Class SeguimientoCarga
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(804, 233)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(41, 16)
+        Me.Label10.Size = New System.Drawing.Size(40, 16)
         Me.Label10.TabIndex = 109
         Me.Label10.Text = "fecha"
         Me.Label10.Visible = False
@@ -1276,7 +1268,7 @@ Partial Class SeguimientoCarga
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(807, 256)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(35, 16)
+        Me.Label11.Size = New System.Drawing.Size(34, 16)
         Me.Label11.TabIndex = 112
         Me.Label11.Text = "hora"
         Me.Label11.Visible = False
@@ -1288,7 +1280,7 @@ Partial Class SeguimientoCarga
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(795, 210)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(59, 16)
+        Me.Label18.Size = New System.Drawing.Size(58, 16)
         Me.Label18.TabIndex = 111
         Me.Label18.Text = "id chofer"
         Me.Label18.Visible = False
@@ -1300,7 +1292,7 @@ Partial Class SeguimientoCarga
         Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(776, 164)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(97, 16)
+        Me.Label19.Size = New System.Drawing.Size(96, 16)
         Me.Label19.TabIndex = 110
         Me.Label19.Text = "id sitiodecarga"
         Me.Label19.Visible = False
@@ -1312,7 +1304,7 @@ Partial Class SeguimientoCarga
         Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.Location = New System.Drawing.Point(790, 119)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(64, 16)
+        Me.Label20.Size = New System.Drawing.Size(63, 16)
         Me.Label20.TabIndex = 113
         Me.Label20.Text = "texto flota"
         Me.Label20.Visible = False
@@ -1615,7 +1607,6 @@ Partial Class SeguimientoCarga
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents MenuAgregarIncidencia As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ErrorProvider5 As System.Windows.Forms.ErrorProvider
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox

@@ -32,7 +32,6 @@ C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.SuggestedBindingRedirects.c
 C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.exe.config
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ConsultaConsumible.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ConsultaGeneralRuta.resources
-C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ConsultaIncidencia.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ConsultaInfraccion.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.GuiaTelefonica.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ListadoGeneralRutas.resources
@@ -46,11 +45,10 @@ C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ListadoProducto.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ListadoSitioCarga.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ListadoVehiculo.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroGrupo.resources
+C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroInfraccion.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroPersonal.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroEstado.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroSubFlota.resources
-C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroIncidencia.resources
-C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroInfraccion.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroProducto.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroSitioCarga.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MaestroVehiculo.resources
