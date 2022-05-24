@@ -26,7 +26,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\172.16.1.145\PCP\Actualizacion Sistema CECON-GPS\</InstallUrl>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -178,12 +178,6 @@
       <DependentUpon>ConsultaInfraccion.vb</DependentUpon>
     </Compile>
     <Compile Include="Consultas\ConsultaInfraccion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Consultas\Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Consultas\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\GuiaTelefonica.Designer.vb">
@@ -476,7 +470,6 @@
     <Content Include="Recursos\Abierto2.png" />
     <Content Include="Recursos\Accidentado.png" />
     <Content Include="Recursos\Aceptar.png" />
-    <None Include="packages.config" />
     <None Include="Recursos\Activa.png" />
     <Content Include="Recursos\Advertencia.png" />
     <Content Include="Recursos\Agregar.png" />

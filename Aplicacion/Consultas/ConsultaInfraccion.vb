@@ -69,7 +69,7 @@ Public Class ConsultaInfraccion
         Catch ex As Exception
 
         End Try
-        
+
     End Sub
 
     Private Sub BotonBuscar_Click(sender As Object, e As EventArgs) Handles BotonBuscar.Click

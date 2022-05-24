@@ -21,11 +21,15 @@ C:\Aplicacion\Aplicacion\bin\Debug\K4os.Compression.LZ4.Streams.dll
 C:\Aplicacion\Aplicacion\bin\Debug\BouncyCastle.Crypto.dll
 C:\Aplicacion\Aplicacion\bin\Debug\Ubiety.Dns.Core.dll
 C:\Aplicacion\Aplicacion\bin\Debug\Renci.SshNet.dll
+C:\Aplicacion\Aplicacion\bin\Debug\System.Memory.dll
 C:\Aplicacion\Aplicacion\bin\Debug\System.Buffers.dll
 C:\Aplicacion\Aplicacion\bin\Debug\K4os.Compression.LZ4.dll
 C:\Aplicacion\Aplicacion\bin\Debug\K4os.Hash.xxHash.dll
 C:\Aplicacion\Aplicacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Aplicacion\Aplicacion\bin\Debug\MySql.Data.xml
+C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.AssemblyReference.cache
+C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.SuggestedBindingRedirects.cache
+C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.exe.config
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ConsultaConsumible.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ConsultaGeneralRuta.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.ConsultaIncidencia.resources
@@ -56,17 +60,12 @@ C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.MenuPrincipal.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.CuadroResumenMateriaPrima.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.SeguimientoCarga.resources
 C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.SeguimientoLiviano.resources
-C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.GenerateResource.Cache
+C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.GenerateResource.cache
+C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.CoreCompileInputs.cache
 C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.TrustInfo.xml
 C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.exe.manifest
 C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.application
+C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.CopyComplete
 C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.exe
 C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.xml
 C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.pdb
-C:\Aplicacion\Aplicacion\bin\Debug\GitHub.dll
-C:\Aplicacion\Aplicacion\bin\Debug\System.Memory.dll
-C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.AssemblyReference.cache
-C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.SuggestedBindingRedirects.cache
-C:\Aplicacion\Aplicacion\obj\Debug\Sistema de Gestión de Rutas.exe.config
-C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.CoreCompileInputs.cache
-C:\Aplicacion\Aplicacion\obj\Debug\Aplicacion.vbproj.CopyComplete

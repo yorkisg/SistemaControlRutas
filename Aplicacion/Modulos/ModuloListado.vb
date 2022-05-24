@@ -205,16 +205,16 @@ Module ModuloListado
         'Llenado del datagridview.
         Adaptador.Fill(DataSet, "sitiocarga")
         Tabla = DataSet.Tables("sitiocarga")
-        Listadositiocarga.DataGridView.DataSource = Tabla
+        ListadoSitioCarga.DataGridView.DataSource = Tabla
 
         'Parametros para editar apariencia del datagridview.
-        With Listadositiocarga.DataGridView
+        With ListadoSitioCarga.DataGridView
             .DefaultCellStyle.Font = New Font("Segoe UI", 8) 'Fuente para celdas
             .Font = New Font("Segoe UI", 9) 'Fuente para Headers
         End With
 
         'Mostramos la cantidad de registros encontrados
-        Listadositiocarga.Contador.Text = Listadositiocarga.DataGridView.RowCount
+        ListadoSitioCarga.Contador.Text = ListadoSitioCarga.DataGridView.RowCount
 
     End Sub
 

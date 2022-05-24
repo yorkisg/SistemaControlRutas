@@ -59,11 +59,11 @@ Public Class CuadroResumenMateriaPrima
         'CellFormatting: Evento del control DataGridview el cual permite cambiar 
         'y dar formato a las celdas, bien sea por color de texto, fondo, etc.
 
-            Try
+        Try
 
-                Dim TipoEstado As String
+            Dim TipoEstado As String
 
-                'Indicamos sobre cual columna trabajaremos.
+            'Indicamos sobre cual columna trabajaremos.
             If DataGridView.Columns(e.ColumnIndex).Name.Equals("ColumnaEstado") Then
 
                 TipoEstado = (DataGridView.Rows(e.RowIndex).Cells(e.ColumnIndex).Value)
@@ -192,10 +192,10 @@ Public Class CuadroResumenMateriaPrima
 
             End If
 
-            Catch ex As Exception
+        Catch ex As Exception
 
 
-            End Try
+        End Try
 
     End Sub
 
